@@ -537,119 +537,107 @@ function WindArt({ value, size }: { value: string; size: { w: number; h: number 
 /* ───── Dragon ───── */
 function DragonArt({ value, size }: { value: string; size: { w: number; h: number } }) {
   if (value === "white") {
-    // The "Soap" tile — a clean rectangle outline with ornate border
-    const w = Math.round(size.w * 0.65);
-    const h = Math.round(size.h * 0.5);
+    // The "Soap" tile — a tall rectangle with a clear border
+    const w = Math.round(size.w * 0.7);
+    const h = Math.round(size.h * 0.85);
     return (
-      <svg viewBox="0 0 48 36" width={w} height={h} aria-hidden="true">
-        <rect x="2" y="2" width="44" height="32" rx="3" fill="none" stroke="#1A1A1A" strokeWidth="2.5" />
-        <rect x="6" y="6" width="36" height="24" rx="2" fill="none" stroke="#1A1A1A" strokeWidth="1" />
+      <svg viewBox="0 0 32 48" width={w} height={h} aria-hidden="true">
+        {/* Outer border */}
+        <rect x="1" y="1" width="30" height="46" rx="3" fill="none" stroke="#334155" strokeWidth="2.5" />
+        {/* Inner border */}
+        <rect x="5" y="5" width="22" height="38" rx="2" fill="none" stroke="#334155" strokeWidth="1" />
         {/* Corner ornaments */}
-        <circle cx="6" cy="6" r="1.5" fill="#1A1A1A" />
-        <circle cx="42" cy="6" r="1.5" fill="#1A1A1A" />
-        <circle cx="6" cy="30" r="1.5" fill="#1A1A1A" />
-        <circle cx="42" cy="30" r="1.5" fill="#1A1A1A" />
+        <circle cx="5" cy="5" r="1.5" fill="#334155" />
+        <circle cx="27" cy="5" r="1.5" fill="#334155" />
+        <circle cx="5" cy="43" r="1.5" fill="#334155" />
+        <circle cx="27" cy="43" r="1.5" fill="#334155" />
       </svg>
     );
   }
 
   const color = value === "red" ? "#C0392B" : "#1E8449";
-  const dragonSize = Math.round(size.h * 0.6);
+  const dragonSize = Math.round(size.h * 0.7);
 
   return (
-    <svg viewBox="0 0 64 64" width={dragonSize} height={dragonSize} aria-hidden="true">
-      {/* ─── Coiling serpentine body ─── */}
+    <svg viewBox="0 0 48 48" width={dragonSize} height={dragonSize} aria-hidden="true">
+      {/* ─── Body — bold S-curve, one clean stroke ─── */}
       <path
-        d="M 48 12 Q 56 18 52 28 Q 48 36 36 34 Q 24 32 18 40 Q 12 48 20 54 Q 30 60 40 56 Q 48 52 44 44"
+        d="M 34 8 C 40 14, 38 24, 28 26 C 18 28, 12 34, 14 42 C 16 48, 26 48, 30 44"
         stroke={color}
-        strokeWidth="6.5"
+        strokeWidth="5"
         fill="none"
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
 
-      {/* ─── Head (profile, facing right) ─── */}
-      {/* Skull */}
+      {/* ─── Head — solid triangular snout ─── */}
       <path
-        d="M 48 12 Q 54 8 58 4 Q 60 8 56 12 Q 54 14 50 14 Q 48 14 48 12"
+        d="M 34 8 L 42 4 L 44 10 L 38 12 Z"
         fill={color}
       />
-      {/* Open jaw */}
-      <path
-        d="M 50 14 Q 56 16 60 14"
-        stroke={color}
-        strokeWidth="2"
-        fill="none"
-        strokeLinecap="round"
-      />
+
       {/* Eye */}
-      <circle cx="53" cy="9" r="1.3" fill="#FAF7EC" />
-      <circle cx="53.3" cy="9.2" r="0.6" fill="#1A1A2E" />
+      <circle cx="38" cy="8" r="1.5" fill="#FAF7EC" />
+      <circle cx="38.3" cy="8" r="0.7" fill="#1E293B" />
 
       {/* Horn */}
       <path
-        d="M 50 6 Q 48 2 52 0"
+        d="M 38 4 L 36 1"
         stroke={color}
-        strokeWidth="1.8"
+        strokeWidth="2"
         strokeLinecap="round"
-        fill="none"
       />
 
-      {/* Whisker / beard */}
+      {/* ─── Wing — single clean swept shape ─── */}
       <path
-        d="M 56 12 Q 60 16 62 14"
+        d="M 32 14 C 24 6, 10 8, 8 16"
+        stroke={color}
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M 32 14 C 22 10, 12 12, 8 16"
         stroke={color}
         strokeWidth="1"
-        strokeLinecap="round"
-        fill="none"
-      />
-
-      {/* ─── Spine ridges ─── */}
-      <path
-        d="M 52 20 L 55 18 M 50 26 L 53 24 M 46 32 L 48 29"
-        stroke={color}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-
-      {/* ─── Front leg with claws ─── */}
-      <path
-        d="M 34 34 L 30 28 M 30 28 L 28 26 M 30 28 L 32 26"
-        stroke={color}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-
-      {/* ─── Rear leg with claws ─── */}
-      <path
-        d="M 26 50 L 22 56 M 22 56 L 20 58 M 22 56 L 24 58"
-        stroke={color}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-
-      {/* ─── Tail curl ─── */}
-      <path
-        d="M 44 44 Q 40 40 42 36"
-        stroke={color}
-        strokeWidth="3.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-      {/* Tail flame tip */}
-      <path
-        d="M 42 36 Q 40 32 42 30 Q 44 34 42 36"
         fill={color}
+        opacity="0.15"
       />
 
-      {/* ─── Scale texture ─── */}
+      {/* ─── Spine — 3 clean spikes ─── */}
       <path
-        d="M 52 22 Q 50 24 48 22 M 44 30 Q 42 32 40 30 M 30 36 Q 28 38 26 36 M 22 44 Q 20 46 18 44 M 26 52 Q 28 54 30 52 M 36 56 Q 38 54 40 56"
+        d="M 36 12 L 38 9 M 34 18 L 36 15 M 30 24 L 32 21"
         stroke={color}
-        strokeWidth="0.7"
+        strokeWidth="2"
         strokeLinecap="round"
+      />
+
+      {/* ─── Legs — simple strokes ─── */}
+      {/* Front */}
+      <path
+        d="M 24 28 L 20 24"
+        stroke={color}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+      {/* Rear */}
+      <path
+        d="M 16 40 L 12 44"
+        stroke={color}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+
+      {/* ─── Tail tip — arrow/flame ─── */}
+      <path
+        d="M 30 44 C 34 40, 36 36, 34 32"
+        stroke={color}
+        strokeWidth="3"
         fill="none"
-        opacity="0.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M 34 32 L 31 29 L 37 31 Z"
+        fill={color}
       />
     </svg>
   );
