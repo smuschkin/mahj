@@ -911,13 +911,13 @@ export default function Module11Glossary() {
                       {e.term}
                     </h3>
                     <span
-                      className={`rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${CATEGORY_COLORS[e.category]}`}
+                      className={`rounded-full border px-2 py-0.5 text-[13px] font-bold uppercase tracking-wider ${CATEGORY_COLORS[e.category]}`}
                     >
                       {e.category}
                     </span>
                   </header>
                   <p className="text-[14px] text-zinc-700">{e.definition}</p>
-                  <footer className="mt-2 flex flex-wrap gap-1.5 text-[11px] text-zinc-500">
+                  <footer className="mt-2 flex flex-wrap gap-1.5 text-[13px] text-zinc-500">
                     <span className="font-bold uppercase tracking-wider">
                       See:
                     </span>

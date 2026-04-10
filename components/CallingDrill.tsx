@@ -492,7 +492,7 @@ function ScenarioView({
 
   return (
     <>
-      <div className="mb-3 flex items-center justify-between text-[11px] uppercase tracking-wider">
+      <div className="mb-3 flex items-center justify-between text-[13px] uppercase tracking-wider">
         <span className="font-bold text-[var(--color-accent)]">
           Scenario {index + 1} of {total}
         </span>
@@ -503,7 +503,7 @@ function ScenarioView({
 
       {/* Discarded tile */}
       <div className="my-4 text-center">
-        <p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-[var(--color-red)]">
+        <p className="mb-2 text-[13px] font-bold uppercase tracking-wider text-[var(--color-red)]">
           Just discarded
         </p>
         <div className="inline-block rounded-xl border-2 border-[var(--color-red)] bg-[#FFF6F4] p-4 shadow-sm">
@@ -519,7 +519,7 @@ function ScenarioView({
       )}
 
       {/* Your hand */}
-      <p className="mb-1 text-center text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+      <p className="mb-1 text-center text-[13px] font-bold uppercase tracking-wider text-zinc-500">
         Your hand (13 tiles)
       </p>
       <div className="my-2 rounded-lg border border-dashed border-[var(--color-border)] bg-[var(--color-light)] p-3">

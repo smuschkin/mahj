@@ -52,10 +52,10 @@ export function WallPushAnimation() {
 
   return (
     <div className="my-6 rounded-xl border-2 border-[var(--color-border)] bg-white p-4 sm:p-5 shadow-sm">
-      <p className="mb-1 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+      <p className="mb-1 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
         Pushing Your Wall Out
       </p>
-      <p className="mb-3 text-center text-[10px] italic text-zinc-500">
+      <p className="mb-3 text-center text-[13px] italic text-zinc-500">
         When the current wall runs out, push yours toward the center
       </p>
 

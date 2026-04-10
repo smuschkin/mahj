@@ -41,7 +41,7 @@ function FakeHandLine({
 }) {
   return (
     <div className="my-3 rounded-xl border-2 border-[var(--color-border)] bg-white p-4 shadow-sm">
-      <div className="mb-2 text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+      <div className="mb-2 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
         {label}
       </div>
       <div className="flex flex-wrap items-center gap-4">
@@ -176,7 +176,7 @@ export default function Module2ReadingTheCard() {
 
           {/* Visual example of color coding */}
           <div className="my-4 rounded-xl border-2 border-[var(--color-border)] bg-white p-4 shadow-sm">
-            <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+            <p className="mb-3 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
               Example: how colors look on the card
             </p>
 

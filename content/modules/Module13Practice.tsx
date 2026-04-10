@@ -173,7 +173,7 @@ const PUZZLES: Puzzle[] = [
               <Tile type="crack" value={5} size="sm" />
               <Tile type="crack" value={5} size="sm" />
             </div>
-            <div className="mt-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+            <div className="mt-1 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
               Pair of 5C
             </div>
           </div>
@@ -182,7 +182,7 @@ const PUZZLES: Puzzle[] = [
               <Tile type="dot" value={4} size="sm" />
               <Tile type="dot" value={4} size="sm" />
             </div>
-            <div className="mt-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+            <div className="mt-1 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
               Pair of 4D (need Pung)
             </div>
           </div>
@@ -191,7 +191,7 @@ const PUZZLES: Puzzle[] = [
               <Tile type="bam" value={7} size="sm" />
               <Tile type="bam" value={7} size="sm" />
             </div>
-            <div className="mt-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+            <div className="mt-1 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
               Pair of 7B (need Pung)
             </div>
           </div>
@@ -1108,7 +1108,7 @@ function PuzzlePlaying({
 
   return (
     <PuzzleShell>
-      <div className="mb-3 flex items-center justify-between text-[11px] uppercase tracking-wider">
+      <div className="mb-3 flex items-center justify-between text-[13px] uppercase tracking-wider">
         <span className="font-bold text-[var(--color-accent)]">
           Puzzle {index + 1} of {total}
         </span>

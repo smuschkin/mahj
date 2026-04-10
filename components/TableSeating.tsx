@@ -61,7 +61,7 @@ export function TableSeating({
             >
               {LABELS[seat].letter}
             </div>
-            <div className="mt-1 text-[9px] font-bold uppercase tracking-wider text-zinc-500">
+            <div className="mt-1 text-[12px] font-bold uppercase tracking-wider text-zinc-500">
               {LABELS[seat].full}
             </div>
           </div>

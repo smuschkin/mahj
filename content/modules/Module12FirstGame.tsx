@@ -15,7 +15,7 @@ import { getAdjacentModules } from "@/lib/modules";
 
 function TurnBadge({ label }: { label: string }) {
   return (
-    <span className="mr-2 inline-block rounded bg-[var(--color-mid)] px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-white">
+    <span className="mr-2 inline-block rounded bg-[var(--color-mid)] px-2 py-0.5 text-[13px] font-black uppercase tracking-wider text-white">
       {label}
     </span>
   );
@@ -34,7 +34,7 @@ function HandState({
     <div className="my-3 rounded-xl border-2 border-[var(--color-border)] bg-[var(--color-light)] p-3">
       {exposed && (
         <>
-          <div className="mb-1 text-center text-[10px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+          <div className="mb-1 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
             Exposed (face-up on her rack)
           </div>
           <div className="mb-3 flex flex-wrap items-center justify-center gap-1.5 rounded bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-2">
@@ -42,7 +42,7 @@ function HandState({
           </div>
         </>
       )}
-      <div className="text-center text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+      <div className="text-center text-[13px] font-bold uppercase tracking-wider text-zinc-500">
         Concealed (in her rack)
       </div>
       <div className="mt-1 flex flex-wrap items-center justify-center gap-1.5">
@@ -579,31 +579,31 @@ export default function Module12FirstGame() {
 
           <div className="my-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
             <div className="rounded-md border-2 border-[var(--color-red)] bg-[#FFF6F4] p-2 text-center">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+              <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
                 Discarder
               </div>
               <div className="font-serif text-lg font-black text-[var(--color-red)]">
                 60¢
               </div>
-              <div className="text-[10px] italic text-zinc-500">2× hand value</div>
+              <div className="text-[13px] italic text-zinc-500">2× hand value</div>
             </div>
             <div className="rounded-md border-2 border-[var(--color-mid)] bg-white p-2 text-center">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+              <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
                 Other player
               </div>
               <div className="font-serif text-lg font-black text-[var(--color-mid)]">
                 30¢
               </div>
-              <div className="text-[10px] italic text-zinc-500">1× hand value</div>
+              <div className="text-[13px] italic text-zinc-500">1× hand value</div>
             </div>
             <div className="rounded-md border-2 border-[var(--color-mid)] bg-white p-2 text-center">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+              <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
                 Other player
               </div>
               <div className="font-serif text-lg font-black text-[var(--color-mid)]">
                 30¢
               </div>
-              <div className="text-[10px] italic text-zinc-500">1× hand value</div>
+              <div className="text-[13px] italic text-zinc-500">1× hand value</div>
             </div>
           </div>
 

@@ -330,7 +330,7 @@ export default function Module1TileTrainer() {
                 <div className="mt-1 font-serif text-sm font-black text-[var(--color-mid)]">
                   {f.name}
                 </div>
-                <div className="mt-0.5 text-[11px] font-bold text-[var(--color-accent)]">
+                <div className="mt-0.5 text-[13px] font-bold text-[var(--color-accent)]">
                   {f.count}
                 </div>
               </div>
@@ -351,10 +351,10 @@ export default function Module1TileTrainer() {
             <table className="w-full text-sm">
               <thead className="bg-[var(--color-mid)] text-[var(--color-accent)]">
                 <tr>
-                  <th className="px-3 py-2 text-left text-[11px] uppercase tracking-wider">
+                  <th className="px-3 py-2 text-left text-[13px] uppercase tracking-wider">
                     Term
                   </th>
-                  <th className="px-3 py-2 text-left text-[11px] uppercase tracking-wider">
+                  <th className="px-3 py-2 text-left text-[13px] uppercase tracking-wider">
                     Say it like
                   </th>
                 </tr>

@@ -300,14 +300,14 @@ export default function Module5JokersCalling() {
                   <Tile type="bam" value={3} size="sm" />
                   <Tile type="joker" size="sm" />
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-600">
+                <span className="text-[13px] font-bold uppercase tracking-wider text-zinc-600">
                   Their exposed Pung
                 </span>
               </div>
               <span className="text-3xl font-black text-[var(--color-red)]">⇄</span>
               <div className="flex flex-col items-center gap-2">
                 <Tile type="bam" value={3} size="sm" />
-                <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-600">
+                <span className="text-[13px] font-bold uppercase tracking-wider text-zinc-600">
                   Your real 3 Bam
                 </span>
               </div>

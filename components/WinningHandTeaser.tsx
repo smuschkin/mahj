@@ -31,7 +31,7 @@ export function WinningHandTeaser() {
                 <Tile key={ti} type="bam" value={value} size="sm" />
               ))}
             </div>
-            <span className="text-[10px] uppercase tracking-wider text-[#7D6608] font-bold">
+            <span className="text-[13px] uppercase tracking-wider text-[#7D6608] font-bold">
               {group.label}
             </span>
           </div>

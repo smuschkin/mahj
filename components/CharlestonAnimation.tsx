@@ -68,13 +68,13 @@ export function CharlestonAnimation() {
   return (
     <div className="my-5 rounded-xl border-2 border-[var(--color-border)] bg-white p-4 shadow-sm">
       <div className="mb-2 flex items-center justify-between">
-        <span className="text-[10px] font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
+        <span className="text-[13px] font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
           Charleston Flow
         </span>
         <button
           type="button"
           onClick={() => setPaused((p) => !p)}
-          className="rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-zinc-500 transition hover:bg-zinc-100"
+          className="rounded px-2 py-0.5 text-[13px] font-bold uppercase tracking-wider text-zinc-500 transition hover:bg-zinc-100"
         >
           {paused ? "▶ Play" : "⏸ Pause"}
         </button>
@@ -91,7 +91,7 @@ export function CharlestonAnimation() {
             <div className="font-serif text-xs font-black text-white">
               {pass.half === 1 ? "1st" : "2nd"}
             </div>
-            <div className="font-serif text-[10px] font-bold text-white/60">
+            <div className="font-serif text-[13px] font-bold text-white/60">
               Charleston
             </div>
           </div>
@@ -131,7 +131,7 @@ export function CharlestonAnimation() {
             key={i}
             type="button"
             onClick={() => jumpTo(i)}
-            className={`flex h-8 w-8 items-center justify-center rounded-full text-[11px] font-black transition hover:scale-110 ${
+            className={`flex h-8 w-8 items-center justify-center rounded-full text-[13px] font-black transition hover:scale-110 ${
               i === activePass
                 ? p.half === 1
                   ? "bg-[var(--color-mid)] text-white scale-110 shadow-md"
@@ -149,7 +149,7 @@ export function CharlestonAnimation() {
       {/* Current pass label */}
       <p className="mt-2 text-center text-[12px] font-bold text-[var(--color-mid)]">
         Pass {pass.label}
-        <span className="ml-1 text-[10px] font-normal text-zinc-500">
+        <span className="ml-1 text-[13px] font-normal text-zinc-500">
           ({pass.half === 1 ? "1st" : "2nd"} Charleston)
         </span>
       </p>
@@ -187,7 +187,7 @@ function SeatBadge({
       }}
     >
       <span
-        className={`text-[10px] font-black uppercase tracking-wider ${
+        className={`text-[13px] font-black uppercase tracking-wider ${
           isYou ? "text-[#B03030]" : active ? "text-[var(--color-green)]" : "text-[var(--color-mid)]"
         }`}
       >

@@ -185,10 +185,10 @@ export function DealingAnimation() {
 
   return (
     <div className="my-6 rounded-xl border-2 border-[var(--color-border)] bg-white p-3 sm:p-5 shadow-sm">
-      <p className="mb-1 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+      <p className="mb-1 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
         Dealing Flow
       </p>
-      <p className="mb-3 text-center text-[10px] italic text-zinc-500">
+      <p className="mb-3 text-center text-[13px] italic text-zinc-500">
         Walls deplete as tiles are dealt — watch the next wall push out
       </p>
 
@@ -490,12 +490,12 @@ export function DealingAnimation() {
               {cur.label}
             </p>
             {wallUsed[activeWall] > 0 && wallUsed[activeWall] < TILES_PER_WALL && (
-              <p className="text-[10px] text-zinc-400">
+              <p className="text-[13px] text-zinc-400">
                 Dealing from {SEAT_LABELS[activeWall]}&apos;s wall ({TILES_PER_WALL - wallUsed[activeWall]} tiles left)
               </p>
             )}
             {tilesDealt > 0 && tilesDealt % TILES_PER_WALL === 0 && tilesDealt < 152 && (
-              <p className="text-[10px] font-bold text-[var(--color-accent)]">
+              <p className="text-[13px] font-bold text-[var(--color-accent)]">
                 Wall empty — next wall pushes out!
               </p>
             )}
@@ -531,7 +531,7 @@ export function DealingAnimation() {
         <button type="button" onClick={reset} className="rounded-md border-2 border-zinc-300 bg-white px-3 py-2 text-sm font-bold uppercase tracking-wider text-zinc-400 transition hover:-translate-y-0.5">
           Reset
         </button>
-        <button type="button" onClick={() => setSpeed((s) => (s === "slow" ? "fast" : "slow"))} className="rounded-md border-2 border-zinc-300 bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-zinc-500 transition hover:-translate-y-0.5">
+        <button type="button" onClick={() => setSpeed((s) => (s === "slow" ? "fast" : "slow"))} className="rounded-md border-2 border-zinc-300 bg-white px-3 py-2 text-[13px] font-bold uppercase tracking-wider text-zinc-500 transition hover:-translate-y-0.5">
           {speed === "slow" ? "Fast" : "Slow"}
         </button>
       </div>

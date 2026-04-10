@@ -323,7 +323,7 @@ export function TileIDDrill() {
               onClick={() => answer(opt)}
               className={`rounded-lg border-2 px-3 py-3 text-sm font-bold transition disabled:cursor-default ${bg}`}
             >
-              <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[10px] font-black">
+              <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[13px] font-black">
                 {i + 1}
               </span>
               {opt}

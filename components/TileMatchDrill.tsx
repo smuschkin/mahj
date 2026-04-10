@@ -164,9 +164,9 @@ export function TileMatchDrill() {
           </p>
           <p className="mb-5 text-xs text-zinc-400">
             Tap a button or use{" "}
-            <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[10px]">←</kbd>{" "}
+            <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[13px]">←</kbd>{" "}
             and{" "}
-            <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[10px]">→</kbd>{" "}
+            <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[13px]">→</kbd>{" "}
             on your keyboard.
           </p>
           <button
@@ -235,7 +235,7 @@ export function TileMatchDrill() {
         <p className="mb-1 text-center font-serif text-2xl font-black text-[var(--color-mid)]">
           &ldquo;{card.claimedName}&rdquo;
         </p>
-        <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+        <p className="mb-4 text-center text-[13px] font-bold uppercase tracking-wider text-zinc-500">
           Does this match?
         </p>
         <div className="flex justify-center">{renderTile(card.tile)}</div>

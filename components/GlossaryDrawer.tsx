@@ -112,7 +112,7 @@ export function GlossaryDrawer() {
             placeholder="Search terms…"
             className="w-full rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 text-sm focus:border-[var(--color-accent)] focus:outline-none"
           />
-          <p className="mt-1 text-[11px] text-zinc-400">
+          <p className="mt-1 text-[13px] text-zinc-400">
             {filtered.length} term{filtered.length === 1 ? "" : "s"}
             {query && ` matching "${query}"`}
           </p>
@@ -134,7 +134,7 @@ export function GlossaryDrawer() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-zinc-100 px-5 py-2 text-center text-[10px] text-zinc-400">
+        <div className="border-t border-zinc-100 px-5 py-2 text-center text-[13px] text-zinc-400">
           Full glossary in Module 11
         </div>
       </div>
@@ -151,13 +151,13 @@ function EntryCard({ entry }: { entry: GlossaryEntry }) {
           {entry.term}
         </h3>
         <span
-          className={`rounded-full border px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider ${colors}`}
+          className={`rounded-full border px-1.5 py-0.5 text-[12px] font-bold uppercase tracking-wider ${colors}`}
         >
           {entry.category}
         </span>
       </div>
       <p className="text-[13px] leading-relaxed text-zinc-700">{entry.definition}</p>
-      <div className="mt-1.5 flex flex-wrap gap-1 text-[10px] text-zinc-400">
+      <div className="mt-1.5 flex flex-wrap gap-1 text-[13px] text-zinc-400">
         {entry.modules.map((m) => (
           <a
             key={m}

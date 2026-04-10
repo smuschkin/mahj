@@ -28,7 +28,7 @@ function PayCell({
           : "border-[var(--color-mid)] bg-white"
       }`}
     >
-      <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+      <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
         {who}
       </div>
       <div

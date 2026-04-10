@@ -169,7 +169,7 @@ export default function Module6HandStrategy() {
 
           <div className="my-4 grid gap-2 sm:grid-cols-3">
             <div className="rounded-lg border-2 border-[var(--color-green)] bg-[#F4FBF6] p-3 text-center">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-green)]">
+              <div className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-green)]">
                 After the deal
               </div>
               <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
@@ -180,7 +180,7 @@ export default function Module6HandStrategy() {
               </div>
             </div>
             <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-3 text-center">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+              <div className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
                 After Charleston
               </div>
               <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
@@ -191,7 +191,7 @@ export default function Module6HandStrategy() {
               </div>
             </div>
             <div className="rounded-lg border-2 border-[var(--color-red)] bg-[#FFF6F4] p-3 text-center">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-red)]">
+              <div className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-red)]">
                 After 5–6 draws
               </div>
               <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
@@ -254,21 +254,21 @@ export default function Module6HandStrategy() {
           {/* Single-card flowchart — enter at top, exit at the first YES */}
           <div className="my-4 mx-auto w-full max-w-sm overflow-hidden rounded-xl border-2 border-[var(--color-accent)] bg-white shadow-sm">
             {/* Header */}
-            <div className="bg-[var(--color-mid)] px-3 py-2 text-center text-[10px] font-bold uppercase tracking-wider text-white">
+            <div className="bg-[var(--color-mid)] px-3 py-2 text-center text-[13px] font-bold uppercase tracking-wider text-white">
               Pick up a tile — ask yourself:
             </div>
 
             {/* Question 1 */}
             <div className="border-b border-zinc-200 px-4 py-3">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[10px] font-black text-white">
+                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[13px] font-black text-white">
                   1
                 </div>
                 <div className="flex-1">
                   <p className="text-[13px] font-bold text-[var(--color-mid)]">
                     Does it fit any of my hands?
                   </p>
-                  <div className="mt-1.5 inline-block rounded-md border-2 border-[var(--color-green)] bg-[#E8F5E9] px-2.5 py-1 text-[11px] font-bold text-[var(--color-green)]">
+                  <div className="mt-1.5 inline-block rounded-md border-2 border-[var(--color-green)] bg-[#E8F5E9] px-2.5 py-1 text-[13px] font-bold text-[var(--color-green)]">
                     YES → Keep it ✓
                   </div>
                 </div>
@@ -278,21 +278,21 @@ export default function Module6HandStrategy() {
             {/* "No" connector */}
             <div className="flex items-center gap-2 px-4 py-1 bg-zinc-50">
               <div className="h-px flex-1 bg-zinc-300" />
-              <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-400">No? Keep going ↓</span>
+              <span className="text-[12px] font-bold uppercase tracking-wider text-zinc-400">No? Keep going ↓</span>
               <div className="h-px flex-1 bg-zinc-300" />
             </div>
 
             {/* Question 2 */}
             <div className="border-b border-zinc-200 px-4 py-3">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[10px] font-black text-white">
+                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[13px] font-black text-white">
                   2
                 </div>
                 <div className="flex-1">
                   <p className="text-[13px] font-bold text-[var(--color-mid)]">
                     Has it already been discarded?
                   </p>
-                  <div className="mt-1.5 inline-block rounded-md border-2 border-[var(--color-green)] bg-[#E8F5E9] px-2.5 py-1 text-[11px] font-bold text-[var(--color-green)]">
+                  <div className="mt-1.5 inline-block rounded-md border-2 border-[var(--color-green)] bg-[#E8F5E9] px-2.5 py-1 text-[13px] font-bold text-[var(--color-green)]">
                     YES → Safer to throw ✓
                   </div>
                 </div>
@@ -302,14 +302,14 @@ export default function Module6HandStrategy() {
             {/* "No" connector */}
             <div className="flex items-center gap-2 px-4 py-1 bg-zinc-50">
               <div className="h-px flex-1 bg-zinc-300" />
-              <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-400">No? Keep going ↓</span>
+              <span className="text-[12px] font-bold uppercase tracking-wider text-zinc-400">No? Keep going ↓</span>
               <div className="h-px flex-1 bg-zinc-300" />
             </div>
 
             {/* Question 3 */}
             <div className="px-4 py-3">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[10px] font-black text-white">
+                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[13px] font-black text-white">
                   3
                 </div>
                 <div className="flex-1">
@@ -317,10 +317,10 @@ export default function Module6HandStrategy() {
                     Are 3 copies already visible?
                   </p>
                   <div className="mt-1.5 flex flex-wrap gap-1.5">
-                    <span className="inline-block rounded-md border-2 border-[var(--color-green)] bg-[#E8F5E9] px-2.5 py-1 text-[11px] font-bold text-[var(--color-green)]">
+                    <span className="inline-block rounded-md border-2 border-[var(--color-green)] bg-[#E8F5E9] px-2.5 py-1 text-[13px] font-bold text-[var(--color-green)]">
                       YES → 100% safe ✓
                     </span>
-                    <span className="inline-block rounded-md border-2 border-[var(--color-accent)] bg-[#E8F5EC] px-2.5 py-1 text-[11px] font-bold text-[var(--color-accent)]">
+                    <span className="inline-block rounded-md border-2 border-[var(--color-accent)] bg-[#E8F5EC] px-2.5 py-1 text-[13px] font-bold text-[var(--color-accent)]">
                       NO → Risky ⚠ Be careful
                     </span>
                   </div>

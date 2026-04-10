@@ -24,7 +24,7 @@ export function BotIndicator({ bots, activeBotIndex }: BotIndicatorProps) {
             >
               <span className="font-serif font-bold">{bot.name}</span>
               <span
-                className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-black ${
+                className={`flex h-5 w-5 items-center justify-center rounded-full text-[13px] font-black ${
                   isActive
                     ? "bg-[#C8A951] text-[#0F3320]"
                     : "bg-white/20 text-white/80"
@@ -33,7 +33,7 @@ export function BotIndicator({ bots, activeBotIndex }: BotIndicatorProps) {
                 {bot.hand.length}
               </span>
               {bot.exposedGroups.length > 0 && (
-                <span className="text-[10px] text-white/50">
+                <span className="text-[13px] text-white/50">
                   +{bot.exposedGroups.length}
                 </span>
               )}

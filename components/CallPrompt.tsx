@@ -72,7 +72,7 @@ export function CallPrompt({
       </div>
 
       <div className="mb-3 text-center">
-        <p className="text-[10px] font-bold uppercase tracking-[3px] text-[#C8A951]">
+        <p className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
           Call Opportunity
         </p>
         <p className="mt-1 text-[12px] text-emerald-200/60">
@@ -140,7 +140,7 @@ export function CallPrompt({
       </div>
 
       {/* Coaching hint */}
-      <p className="mt-3 text-center text-[11px] text-emerald-200/50">
+      <p className="mt-3 text-center text-[13px] text-emerald-200/50">
         {validCalls.includes("mahjong")
           ? "This tile completes a winning pattern!"
           : validCalls.includes("quint")

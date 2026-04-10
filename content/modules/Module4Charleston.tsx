@@ -36,7 +36,7 @@ function PassStep({
       }`}
     >
       {hat && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[var(--color-red)] px-2.5 py-1 text-[10px] font-black uppercase tracking-wider text-white shadow">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[var(--color-red)] px-2.5 py-1 text-[13px] font-black uppercase tracking-wider text-white shadow">
           {hat}
         </span>
       )}
@@ -74,7 +74,7 @@ function DirCell({
       <div className="font-serif text-sm font-black uppercase tracking-wider text-[var(--color-mid)]">
         {name}
       </div>
-      <div className="mt-1 text-[11px] text-zinc-500">{who}</div>
+      <div className="mt-1 text-[13px] text-zinc-500">{who}</div>
     </div>
   );
 }
@@ -153,7 +153,7 @@ export default function Module4Charleston() {
             <strong>3 directions</strong>:
           </p>
 
-          <p className="mt-2 text-[11px] font-bold uppercase tracking-wider text-zinc-400">
+          <p className="mt-2 text-[13px] font-bold uppercase tracking-wider text-zinc-400">
             1st Charleston (mandatory)
           </p>
           <div className="my-2 grid grid-cols-3 gap-1.5 sm:gap-3">
@@ -162,7 +162,7 @@ export default function Module4Charleston() {
             <DirCell arrow="←" name="Left" who="Pass 3" tone="left" />
           </div>
 
-          <p className="mt-3 text-[11px] font-bold uppercase tracking-wider text-zinc-400">
+          <p className="mt-3 text-[13px] font-bold uppercase tracking-wider text-zinc-400">
             2nd Charleston (can be stopped before it starts)
           </p>
           <div className="my-2 grid grid-cols-3 gap-1.5 sm:gap-3">
@@ -339,7 +339,7 @@ export default function Module4Charleston() {
           </Callout>
 
           <div className="my-4 rounded-xl border-2 border-dashed border-[var(--color-border)] bg-[var(--color-light)] p-5">
-            <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-wider text-zinc-600">
+            <p className="mb-3 text-center text-[13px] font-bold uppercase tracking-wider text-zinc-600">
               Three valid blind-pass examples
             </p>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -349,7 +349,7 @@ export default function Module4Charleston() {
                   <Tile type="crack" value={5} size="sm" />
                   <BlindTile />
                 </div>
-                <p className="text-[9px] font-bold uppercase tracking-wider text-zinc-500">
+                <p className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
                   2 yours + 1 blind
                 </p>
               </div>
@@ -359,7 +359,7 @@ export default function Module4Charleston() {
                   <BlindTile />
                   <BlindTile />
                 </div>
-                <p className="text-[9px] font-bold uppercase tracking-wider text-zinc-500">
+                <p className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
                   1 yours + 2 blind
                 </p>
               </div>
@@ -369,12 +369,12 @@ export default function Module4Charleston() {
                   <BlindTile />
                   <BlindTile />
                 </div>
-                <p className="text-[9px] font-bold uppercase tracking-wider text-zinc-500">
+                <p className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
                   all 3 blind
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-center text-[11px] italic text-zinc-600">
+            <p className="mt-3 text-center text-[13px] italic text-zinc-600">
               All three are legal — you can pass anywhere from 1 to 3 tiles blind.
             </p>
           </div>

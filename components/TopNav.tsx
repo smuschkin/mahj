@@ -12,11 +12,11 @@ export function TopNav() {
 
   return (
     <nav className="sticky top-0 z-30 border-b border-[#C8A951]/20 bg-[var(--color-ivory)]/98 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-[820px] items-center justify-between px-5 py-2.5">
+      <div className="mx-auto flex max-w-[820px] items-center justify-between px-3 py-2 sm:px-5 sm:py-2.5">
         {/* Left: Home link */}
         <Link
           href="/"
-          className={`flex items-center gap-2 rounded-md px-2 py-1 text-sm font-bold transition hover:bg-white/60 ${
+          className={`flex items-center gap-1.5 rounded-md px-2 py-2 text-sm font-bold transition hover:bg-white/60 ${
             isHome
               ? "text-[var(--color-mid)]"
               : "text-[var(--color-accent)]"
@@ -28,28 +28,28 @@ export function TopNav() {
           </span>
         </Link>
 
-        {/* Center: Current location */}
-        <div className="text-center text-[13px] font-bold uppercase tracking-wider text-zinc-400">
+        {/* Center: Current location — hidden on very small screens */}
+        <div className="hidden sm:block text-center text-[13px] font-bold uppercase tracking-wider text-zinc-400">
           {isHome && "Home"}
           {moduleNum !== null && `Module ${moduleNum}`}
-          {pathname === "/play" && "Practice Table"}
-          {pathname === "/calculator" && "Scoring Calculator"}
+          {pathname === "/play" && "Practice"}
+          {pathname === "/calculator" && "Calculator"}
           {pathname === "/cheatsheet" && "Cheat Sheet"}
         </div>
 
         {/* Right: Quick links */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5 sm:gap-1">
           {!isHome && (
             <Link
               href="/"
-              className="rounded-md px-2.5 py-1.5 text-[13px] font-bold uppercase tracking-wider text-[var(--color-mid)] transition hover:bg-white/60"
+              className="rounded-md px-2 py-2 text-[13px] font-bold uppercase tracking-wider text-[var(--color-mid)] transition hover:bg-white/60 sm:px-2.5"
             >
               Modules
             </Link>
           )}
           <Link
             href="/play"
-            className={`rounded-md px-2.5 py-1.5 text-[13px] font-bold uppercase tracking-wider transition hover:bg-white/60 ${
+            className={`rounded-md px-2 py-2 text-[13px] font-bold uppercase tracking-wider transition hover:bg-white/60 sm:px-2.5 ${
               pathname === "/play"
                 ? "text-[var(--color-mid)]"
                 : "text-zinc-500"
@@ -59,7 +59,7 @@ export function TopNav() {
           </Link>
           <Link
             href="/calculator"
-            className={`rounded-md px-2.5 py-1.5 text-[13px] font-bold uppercase tracking-wider transition hover:bg-white/60 ${
+            className={`rounded-md px-2 py-2 text-[13px] font-bold uppercase tracking-wider transition hover:bg-white/60 sm:px-2.5 ${
               pathname === "/calculator"
                 ? "text-[var(--color-mid)]"
                 : "text-zinc-500"

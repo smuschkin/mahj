@@ -502,7 +502,7 @@ function ScenarioView({
 
   return (
     <>
-      <div className="mb-3 flex items-center justify-between text-[11px] uppercase tracking-wider">
+      <div className="mb-3 flex items-center justify-between text-[13px] uppercase tracking-wider">
         <span className="font-bold text-[var(--color-accent)]">
           Scenario {index + 1} of {total}
         </span>
@@ -518,7 +518,7 @@ function ScenarioView({
         <div className="mb-4 space-y-3">
           {scenario.exposures.map((exp, i) => (
             <div key={i} className="rounded-lg border border-zinc-200 bg-white p-3">
-              <div className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+              <div className="mb-1.5 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
                 {exp.player}
               </div>
               <div className="flex flex-wrap items-center justify-center gap-1.5 rounded bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-2">

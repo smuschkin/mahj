@@ -66,10 +66,10 @@ export function DiscardPool({
           return (
             <div key={seat} className={`rounded-md border-l-2 ${SEAT_BG_COLORS[seat]} py-1 pl-2`}>
               <div className="mb-0.5 flex items-center gap-1">
-                <span className={`text-[8px] font-black uppercase tracking-wider ${SEAT_COLORS[seat]}`}>
+                <span className={`text-[13px] font-black uppercase tracking-wider ${SEAT_COLORS[seat]}`}>
                   {SEAT_NAMES[seat]} ({SEAT_LABELS[seat]})
                 </span>
-                <span className="text-[8px] text-white/30">
+                <span className="text-[13px] text-white/30">
                   {entries.length} tile{entries.length !== 1 ? "s" : ""}
                 </span>
               </div>

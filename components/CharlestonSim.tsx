@@ -352,7 +352,7 @@ export function CharlestonSim({
             )}
           </p>
           {s.hand.some((t) => t.type === "joker") && (
-            <p className="mt-1 text-center text-[11px] font-bold text-[var(--color-red)]">
+            <p className="mt-1 text-center text-[13px] font-bold text-[var(--color-red)]">
               Jokers cannot be passed — they&apos;re disabled.
             </p>
           )}
@@ -383,7 +383,7 @@ export function CharlestonSim({
           )}
 
           <div className="my-4 rounded-lg border-2 border-dashed border-[var(--color-green)] bg-[#F4FBF6] p-4">
-            <p className="mb-2 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-green)]">
+            <p className="mb-2 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-green)]">
               3 tiles received
             </p>
             <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
@@ -394,7 +394,7 @@ export function CharlestonSim({
               ))}
             </div>
           </div>
-          <p className="mb-1 text-center text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+          <p className="mb-1 text-center text-[13px] font-bold uppercase tracking-wider text-zinc-500">
             Your updated hand
           </p>
           <TileGrid hand={s.hand} selected={new Set()} interactive={false} />
@@ -548,7 +548,7 @@ export function CharlestonSim({
           {/* Before / After comparison */}
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-3">
-              <p className="mb-2 text-center text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+              <p className="mb-2 text-center text-[13px] font-bold uppercase tracking-wider text-zinc-500">
                 Before Charleston
               </p>
               <div className="flex flex-wrap justify-center gap-1.5">
@@ -558,7 +558,7 @@ export function CharlestonSim({
               </div>
             </div>
             <div className="rounded-lg border-2 border-[var(--color-green)] bg-[#F4FBF6] p-3">
-              <p className="mb-2 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-green)]">
+              <p className="mb-2 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-green)]">
                 After Charleston
               </p>
               <div className="flex flex-wrap justify-center gap-1.5">
@@ -605,7 +605,7 @@ function Header({
   return (
     <div className="mb-4">
       {badge && (
-        <span className="mb-1 inline-block rounded bg-[var(--color-mid)] px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-white">
+        <span className="mb-1 inline-block rounded bg-[var(--color-mid)] px-2 py-0.5 text-[13px] font-black uppercase tracking-wider text-white">
           {badge}
         </span>
       )}
@@ -697,7 +697,7 @@ function HandStats({ before, after }: { before: TileData[]; after: TileData[] })
   return (
     <div className="mt-2 grid grid-cols-3 gap-3 text-center">
       <div>
-        <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+        <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
           Best suit
         </div>
         <div className="font-serif text-base font-black text-[var(--color-mid)]">
@@ -706,28 +706,28 @@ function HandStats({ before, after }: { before: TileData[]; after: TileData[] })
             : "—"}
         </div>
         {bestSuitBefore && (
-          <div className="text-[10px] text-zinc-400">
+          <div className="text-[13px] text-zinc-400">
             was {bestSuitBefore[1]} {bestSuitBefore[0]}s
           </div>
         )}
       </div>
       <div>
-        <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+        <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
           Jokers
         </div>
         <div className="font-serif text-base font-black text-[var(--color-mid)]">
           {aJokers}
         </div>
-        <div className="text-[10px] text-zinc-400">was {bJokers}</div>
+        <div className="text-[13px] text-zinc-400">was {bJokers}</div>
       </div>
       <div>
-        <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+        <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
           Pairs+
         </div>
         <div className="font-serif text-base font-black text-[var(--color-mid)]">
           {aPairs}
         </div>
-        <div className="text-[10px] text-zinc-400">was {bPairs}</div>
+        <div className="text-[13px] text-zinc-400">was {bPairs}</div>
       </div>
     </div>
   );
@@ -834,7 +834,7 @@ function HandPatternHints({
       }`}
     >
       <p
-        className={`mb-1 text-[10px] font-bold uppercase tracking-wider ${
+        className={`mb-1 text-[13px] font-bold uppercase tracking-wider ${
           isPreview
             ? "text-[#C8A951]"
             : hasNewPatterns

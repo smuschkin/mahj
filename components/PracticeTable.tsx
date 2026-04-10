@@ -113,10 +113,10 @@ export function PracticeTable() {
         >
           &larr; Home
         </Link>
-        <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#C8A951]">
+        <span className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
           Practice Round
         </span>
-        <span className="text-[11px] text-zinc-400">
+        <span className="text-[13px] text-zinc-400">
           {stepIndex + 1} / {STEPS.length}
         </span>
       </div>
@@ -223,7 +223,7 @@ function IntroCard() {
         American Mahjong round &mdash; from washing the tiles to completing the
         Charleston.
       </p>
-      <div className="mt-4 flex flex-wrap justify-center gap-3 text-[11px] font-bold uppercase tracking-wider text-white/50">
+      <div className="mt-4 flex flex-wrap justify-center gap-3 text-[13px] font-bold uppercase tracking-wider text-white/50">
         <span>Wash</span>
         <span>&rarr;</span>
         <span>Wall</span>

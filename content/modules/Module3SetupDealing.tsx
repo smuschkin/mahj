@@ -134,13 +134,13 @@ export default function Module3SetupDealing() {
           <div className="my-4 flex flex-wrap items-end justify-center gap-3">
             <div className="flex flex-col items-center gap-1.5">
               <Die value={3} size="md" />
-              <span className="text-[10px] uppercase tracking-wider text-zinc-500">
+              <span className="text-[13px] uppercase tracking-wider text-zinc-500">
                 Player 1
               </span>
             </div>
             <div className="flex flex-col items-center gap-1.5">
               <Die value={5} size="md" />
-              <span className="text-[10px] uppercase tracking-wider text-zinc-500">
+              <span className="text-[13px] uppercase tracking-wider text-zinc-500">
                 Player 2
               </span>
             </div>
@@ -148,13 +148,13 @@ export default function Module3SetupDealing() {
               <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-1">
                 <Die value={6} size="md" />
               </div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+              <span className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
                 ★ Becomes Dealer
               </span>
             </div>
             <div className="flex flex-col items-center gap-1.5">
               <Die value={2} size="md" />
-              <span className="text-[10px] uppercase tracking-wider text-zinc-500">
+              <span className="text-[13px] uppercase tracking-wider text-zinc-500">
                 Player 4
               </span>
             </div>
@@ -320,10 +320,10 @@ export default function Module3SetupDealing() {
 
           {/* Inline 1st-and-3rd diagram — 3 stacks, dealer leapfrogs across stack 2 */}
           <div className="my-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-5">
-            <p className="mb-1 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+            <p className="mb-1 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
               The 13th-tile round — who takes which
             </p>
-            <p className="mb-4 text-center text-[10px] italic text-zinc-600">
+            <p className="mb-4 text-center text-[13px] italic text-zinc-600">
               Numbers show the order tiles are dealt. The Dealer takes the top of stacks
               1 and 3 (the leapfrog), then dealing continues to the other players.
             </p>
@@ -363,7 +363,7 @@ export default function Module3SetupDealing() {
                         className={`flex h-16 w-14 flex-col items-center justify-center rounded-t-md border-2 font-serif font-black shadow-sm ${tileClass(stack.top.kind)}`}
                       >
                         <span className="text-lg leading-none">{stack.top.num}</span>
-                        <span className="mt-0.5 text-center text-[10px] font-bold uppercase tracking-wider leading-tight">
+                        <span className="mt-0.5 text-center text-[13px] font-bold uppercase tracking-wider leading-tight">
                           {stack.top.who}
                         </span>
                       </div>
@@ -371,19 +371,19 @@ export default function Module3SetupDealing() {
                         className={`flex h-16 w-14 flex-col items-center justify-center rounded-b-md border-2 border-t-0 font-serif font-black shadow-sm ${tileClass(stack.bottom.kind)}`}
                       >
                         <span className="text-lg leading-none">{stack.bottom.num}</span>
-                        <span className="mt-0.5 text-center text-[10px] font-bold uppercase tracking-tight leading-tight">
+                        <span className="mt-0.5 text-center text-[13px] font-bold uppercase tracking-tight leading-tight">
                           {stack.bottom.who}
                         </span>
                       </div>
                     </div>
-                    <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-500">
+                    <span className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
                       Stack {stack.col}
                     </span>
                   </div>
                 );
               })}
             </div>
-            <p className="mt-4 text-center text-[11px] italic text-zinc-600">
+            <p className="mt-4 text-center text-[13px] italic text-zinc-600">
               <strong>1</strong> + <strong>2</strong> = the Dealer&apos;s two leapfrog
               tiles (top of stacks 1 and 3). <strong>3</strong>, <strong>4</strong>,{" "}
               <strong>5</strong> = the other three players get one tile each. The
@@ -393,7 +393,7 @@ export default function Module3SetupDealing() {
 
           {/* Inline 4-rack deal pattern */}
           <div className="my-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-5">
-            <p className="mb-2 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+            <p className="mb-2 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
               Final tile counts after the deal
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -442,7 +442,7 @@ export default function Module3SetupDealing() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-center text-[11px] italic text-zinc-600">
+            <p className="mt-3 text-center text-[13px] italic text-zinc-600">
               East gets the highlighted &quot;extra&quot; tile because East starts the play
             </p>
           </div>

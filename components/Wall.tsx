@@ -53,7 +53,7 @@ export function Wall() {
             ))}
           </div>
           <div className="flex items-center justify-center">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+            <span className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
               Play Area
             </span>
           </div>
@@ -120,7 +120,7 @@ function Rack({
       aria-label={`${label} rack`}
     >
       <span
-        className="font-serif text-[10px] font-black leading-none text-[var(--color-accent)]"
+        className="font-serif text-[13px] font-black leading-none text-[var(--color-accent)]"
         style={{
           transform: orientation === "vertical" ? "rotate(180deg)" : undefined,
         }}

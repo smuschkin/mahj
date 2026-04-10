@@ -93,13 +93,13 @@ export function PlayRound() {
           <Link href="/" className="rounded-md px-2 py-1 text-sm text-[#2D8B5E] transition hover:underline">
             &larr; Home
           </Link>
-          <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#C8A951]">
+          <span className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
             Practice Game
           </span>
           <button
             type="button"
             onClick={() => dispatch({ type: "SKIP_CHARLESTON" })}
-            className="rounded-md px-2 py-1 text-[11px] text-zinc-400 transition hover:text-zinc-600"
+            className="rounded-md px-2 py-1 text-[13px] text-zinc-400 transition hover:text-zinc-600"
           >
             Skip Charleston
           </button>
@@ -124,7 +124,7 @@ export function PlayRound() {
           <Link href="/" className="rounded-md px-2 py-1 text-sm text-[#2D8B5E] transition hover:underline">
             &larr; Home
           </Link>
-          <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#C8A951]">
+          <span className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
             Pick Your Hand
           </span>
           <span />
@@ -141,7 +141,7 @@ export function PlayRound() {
 
         {/* Show current hand */}
         <div className="mb-5 rounded-xl bg-gradient-to-b from-[#1A4D2E] to-[#0F3320] p-4 shadow-lg">
-          <p className="mb-2 text-center text-[10px] font-bold uppercase tracking-[2px] text-[#C8A951]">
+          <p className="mb-2 text-center text-[13px] font-bold uppercase tracking-[2px] text-[#C8A951]">
             Your Hand
           </p>
           <PlayerHand
@@ -179,7 +179,7 @@ export function PlayRound() {
               >
                 <div className="flex items-start justify-between">
                   <div>
-                    <span className="inline-block rounded bg-[#2D8B5E]/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#2D8B5E]">
+                    <span className="inline-block rounded bg-[#2D8B5E]/10 px-2 py-0.5 text-[13px] font-bold uppercase tracking-wider text-[#2D8B5E]">
                       {CATEGORY_LABELS[p.category] ?? p.category}
                     </span>
                     <h3 className="mt-1 font-serif text-base font-black text-[var(--color-mid)]">
@@ -189,14 +189,14 @@ export function PlayRound() {
                   </div>
                   <div className="ml-3 text-right">
                     <div className="text-lg font-black text-[#2D8B5E]">{pct}%</div>
-                    <div className="text-[10px] text-zinc-400">fit</div>
+                    <div className="text-[13px] text-zinc-400">fit</div>
                   </div>
                 </div>
                 <div className="mt-2 flex items-center gap-2">
                   <code className="rounded bg-zinc-100 px-2 py-1 font-mono text-[12px] text-zinc-600">
                     {p.displayNotation}
                   </code>
-                  <span className="text-[10px] text-zinc-400">
+                  <span className="text-[13px] text-zinc-400">
                     {p.exposure === "closed" ? "Concealed" : "Open"} | {p.value} pts |{" "}
                     {"*".repeat(p.difficulty)}
                   </span>
@@ -227,7 +227,7 @@ export function PlayRound() {
         >
           &larr; Home
         </Link>
-        <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#C8A951]">
+        <span className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
           Practice Game
         </span>
         <div className="flex items-center gap-2">
@@ -245,7 +245,7 @@ export function PlayRound() {
               }}
             />
             <span
-              className={`text-[11px] font-bold ${
+              className={`text-[13px] font-bold ${
                 state.wall.length > 40
                   ? "text-zinc-400"
                   : state.wall.length > 20
@@ -264,10 +264,10 @@ export function PlayRound() {
         <div className="mb-3 flex items-center gap-3 rounded-lg border border-[#2D8B5E]/20 bg-[#E8F5EC] px-3 py-2">
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-[9px] font-bold uppercase tracking-wider text-[#2D8B5E]">
+              <span className="text-[12px] font-bold uppercase tracking-wider text-[#2D8B5E]">
                 Target
               </span>
-              <span className="rounded bg-[#2D8B5E]/10 px-1.5 py-0.5 text-[9px] font-bold text-[#2D8B5E]">
+              <span className="rounded bg-[#2D8B5E]/10 px-1.5 py-0.5 text-[12px] font-bold text-[#2D8B5E]">
                 {CATEGORY_LABELS[state.playerTargetHand.category] ?? state.playerTargetHand.category}
               </span>
             </div>
@@ -287,7 +287,7 @@ export function PlayRound() {
             <button
               type="button"
               onClick={() => dispatch({ type: "CHANGE_TARGET_HAND" })}
-              className="rounded px-2 py-1 text-[10px] text-[#2D8B5E] transition hover:bg-[#2D8B5E]/10"
+              className="rounded px-2 py-1 text-[13px] text-[#2D8B5E] transition hover:bg-[#2D8B5E]/10"
             >
               Change
             </button>
@@ -319,7 +319,7 @@ export function PlayRound() {
           className="mb-3 animate-fade-in rounded-lg border-l-4 border-[#2D8B5E] bg-[#E8F5EC] px-4 py-2.5 shadow-sm"
           key={state.botInsight}
         >
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[#2D8B5E]">
+          <p className="text-[13px] font-bold uppercase tracking-wider text-[#2D8B5E]">
             Table Read
           </p>
           <p className="text-[13px] text-zinc-600">{state.botInsight}</p>
@@ -328,7 +328,7 @@ export function PlayRound() {
 
       {/* Phase indicator */}
       <div className="mb-3 text-center">
-        <span className="text-[11px] font-bold uppercase tracking-[2px] text-zinc-400">
+        <span className="text-[13px] font-bold uppercase tracking-[2px] text-zinc-400">
           {state.phase === "player-draw" && "Draw a tile"}
           {state.phase === "player-discard" && "Select a tile to discard"}
           {state.phase === "bot-turn" &&
@@ -343,10 +343,10 @@ export function PlayRound() {
       {/* Discard pool */}
       <div className="mb-4">
         <div className="mb-1 flex items-center gap-2">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+          <span className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
             Discards
           </span>
-          <span className="flex items-center gap-1 text-[9px] text-zinc-500">
+          <span className="flex items-center gap-1 text-[12px] text-zinc-500">
             <span className="inline-block h-2 w-2 rounded-full bg-[#C8A951]" /> E
             <span className="ml-1 inline-block h-2 w-2 rounded-full bg-emerald-300" /> S
             <span className="ml-1 inline-block h-2 w-2 rounded-full bg-sky-300" /> W
@@ -405,11 +405,11 @@ export function PlayRound() {
       {/* Player hand area */}
       <div className="rounded-xl bg-gradient-to-b from-[#1A4D2E] to-[#0F3320] p-4 shadow-lg">
         <div className="mb-2 flex items-center justify-between">
-          <span className="text-[10px] font-bold uppercase tracking-[2px] text-[#C8A951]">
+          <span className="text-[13px] font-bold uppercase tracking-[2px] text-[#C8A951]">
             Your Hand ({state.playerHand.length} tiles)
           </span>
           {state.playerExposedGroups.length > 0 && (
-            <span className="text-[10px] text-emerald-200/50">
+            <span className="text-[13px] text-emerald-200/50">
               {state.playerExposedGroups.length} exposed
             </span>
           )}
@@ -466,7 +466,7 @@ export function PlayRound() {
         {/* Joker swap buttons */}
         {state.availableJokerSwaps.length > 0 && state.phase === "player-discard" && (
           <div className="mt-3 rounded-lg bg-[#C8A951]/10 px-3 py-2">
-            <p className="mb-1.5 text-center text-[10px] font-bold uppercase tracking-wider text-[#C8A951]">
+            <p className="mb-1.5 text-center text-[13px] font-bold uppercase tracking-wider text-[#C8A951]">
               Joker Swap Available
             </p>
             <div className="flex flex-wrap justify-center gap-2">
@@ -480,14 +480,14 @@ export function PlayRound() {
                     key={i}
                     type="button"
                     onClick={() => dispatch({ type: "JOKER_SWAP", swap })}
-                    className="rounded-lg border border-[#C8A951]/40 bg-[#0F3320] px-3 py-1.5 text-[11px] font-bold text-[#C8A951] transition hover:bg-[#1A4D2E] active:scale-[0.98]"
+                    className="rounded-lg border border-[#C8A951]/40 bg-[#0F3320] px-3 py-1.5 text-[13px] font-bold text-[#C8A951] transition hover:bg-[#1A4D2E] active:scale-[0.98]"
                   >
                     Swap {tileLabel(swap.naturalTile)} &rarr; {ownerName} group
                   </button>
                 );
               })}
             </div>
-            <p className="mt-1 text-center text-[10px] text-emerald-200/50">
+            <p className="mt-1 text-center text-[13px] text-emerald-200/50">
               Trade a natural tile for a joker from an exposed group
             </p>
           </div>
@@ -508,13 +508,13 @@ export function PlayRound() {
           {/* Show which pattern was completed */}
           {state.completedPattern && (
             <div className="mt-2 inline-block rounded-lg bg-white/10 px-3 py-1.5">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#C8A951]">
+              <span className="text-[13px] font-bold uppercase tracking-wider text-[#C8A951]">
                 {CATEGORY_LABELS[state.completedPattern.category]}
               </span>
               <p className="font-mono text-sm text-white">
                 {state.completedPattern.displayNotation}
               </p>
-              <p className="text-[11px] text-emerald-200/60">
+              <p className="text-[13px] text-emerald-200/60">
                 {state.completedPattern.name} &mdash; {state.completedPattern.value} pts
               </p>
             </div>
@@ -537,7 +537,7 @@ export function PlayRound() {
             <div className="mt-3 flex flex-wrap justify-center gap-2">
               {state.bots.map((bot) => (
                 bot.targetPattern && (
-                  <div key={bot.seatWind} className="rounded-md bg-white/10 px-2 py-1 text-[10px]">
+                  <div key={bot.seatWind} className="rounded-md bg-white/10 px-2 py-1 text-[13px]">
                     <span className="text-emerald-200/50">{bot.name}: </span>
                     <span className="text-white/80">
                       {CATEGORY_LABELS[bot.targetPattern.category]} &mdash; {bot.targetPattern.name}
@@ -576,7 +576,7 @@ export function PlayRound() {
       )}
 
       {/* Turn counter */}
-      <div className="mt-4 text-center text-[10px] text-zinc-400">
+      <div className="mt-4 text-center text-[13px] text-zinc-400">
         Turn {state.turnCount}
       </div>
     </div>

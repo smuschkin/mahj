@@ -47,7 +47,7 @@ export function CharlestonBigPicture() {
         style={{ borderColor: accentColor, background: `color-mix(in srgb, ${accentColor} 5%, white)` }}
       >
         {/* Half label */}
-        <div className="text-[10px] font-bold uppercase tracking-wider" style={{ color: accentColor }}>
+        <div className="text-[13px] font-bold uppercase tracking-wider" style={{ color: accentColor }}>
           {cur.half === 1 && "1st Charleston · mandatory"}
           {cur.half === 2 && "2nd Charleston · optional"}
           {cur.half === "courtesy" && "Courtesy · optional"}
@@ -74,7 +74,7 @@ export function CharlestonBigPicture() {
               {[0, 1, 2].map((i) => (
                 <div
                   key={i}
-                  className="flex h-7 w-5 items-center justify-center rounded-[3px] border-2 border-dashed text-[9px] font-bold"
+                  className="flex h-7 w-5 items-center justify-center rounded-[3px] border-2 border-dashed text-[12px] font-bold"
                   style={{ borderColor: accentColor, color: accentColor }}
                 >
                   ?
@@ -88,10 +88,10 @@ export function CharlestonBigPicture() {
               <div className="h-7 w-5 rounded-[3px] border border-[#C9BC8A] bg-[#FAF7EC] shadow-sm" />
               {/* Bottom: 2 tiles side by side */}
               <div className="flex gap-[2px]">
-                <div className="flex h-7 w-5 items-center justify-center rounded-[3px] border border-[#C9BC8A] bg-[#FAF7EC] text-[9px] font-black text-zinc-400 shadow-sm">
+                <div className="flex h-7 w-5 items-center justify-center rounded-[3px] border border-[#C9BC8A] bg-[#FAF7EC] text-[12px] font-black text-zinc-400 shadow-sm">
                   ?
                 </div>
-                <div className="flex h-7 w-5 items-center justify-center rounded-[3px] border border-[#C9BC8A] bg-[#FAF7EC] text-[9px] font-black text-zinc-400 shadow-sm">
+                <div className="flex h-7 w-5 items-center justify-center rounded-[3px] border border-[#C9BC8A] bg-[#FAF7EC] text-[12px] font-black text-zinc-400 shadow-sm">
                   ?
                 </div>
               </div>
@@ -111,7 +111,7 @@ export function CharlestonBigPicture() {
 
         {/* Blind pass note */}
         {cur.blind && (
-          <p className="mt-2 text-[10px] italic text-zinc-500">
+          <p className="mt-2 text-[13px] italic text-zinc-500">
             Stack your 3 tiles in a pyramid shape — 1 on top, 2 on the bottom.
             The bottom 2 can be tiles you received without looking (a blind pass).
           </p>
@@ -119,7 +119,7 @@ export function CharlestonBigPicture() {
 
         {/* Courtesy note */}
         {cur.half === "courtesy" && (
-          <p className="mt-2 text-[10px] italic text-zinc-500">
+          <p className="mt-2 text-[13px] italic text-zinc-500">
             Both players must agree on the count. Zero is fine!
           </p>
         )}
@@ -145,7 +145,7 @@ export function CharlestonBigPicture() {
             return (
               <span
                 key={i}
-                className={`inline-flex h-5 w-5 items-center justify-center rounded text-[9px] font-black transition-all ${
+                className={`inline-flex h-5 w-5 items-center justify-center rounded text-[12px] font-black transition-all ${
                   letter === "·"
                     ? "text-zinc-300"
                     : isCur
@@ -165,7 +165,7 @@ export function CharlestonBigPicture() {
           })}
           {/* Courtesy dot */}
           <span
-            className={`ml-0.5 inline-flex h-5 w-5 items-center justify-center rounded text-[9px] font-black transition-all ${
+            className={`ml-0.5 inline-flex h-5 w-5 items-center justify-center rounded text-[12px] font-black transition-all ${
               step === 6
                 ? "bg-[var(--color-green)] text-white scale-110"
                 : step > 6
@@ -188,7 +188,7 @@ export function CharlestonBigPicture() {
       </div>
 
       {/* Step counter */}
-      <p className="mt-1 text-center text-[10px] text-zinc-400">
+      <p className="mt-1 text-center text-[13px] text-zinc-400">
         Pass {cur.num} of 7
       </p>
     </div>

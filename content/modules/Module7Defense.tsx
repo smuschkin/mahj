@@ -64,13 +64,13 @@ function ThreatStage({
         : "text-[var(--color-green)]";
   return (
     <div className={`rounded-lg border-2 p-3 text-center ${colors}`}>
-      <div className={`text-[11px] font-bold uppercase tracking-wider ${labelColor}`}>
+      <div className={`text-[13px] font-bold uppercase tracking-wider ${labelColor}`}>
         {label}
       </div>
       <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
         {count}
       </div>
-      <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+      <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
         {status}
       </div>
       <div className="mt-1 text-[12px] text-zinc-600">{what}</div>

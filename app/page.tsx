@@ -17,7 +17,7 @@ export default function Home() {
         subtitle="Your path from absolute beginner to your first real game"
       />
 
-      <div className="mb-9 rounded-lg border-l-4 border-[#2D8B5E] bg-white px-6 py-5 shadow-sm">
+      <div className="mb-9 rounded-lg border-l-4 border-[#2D8B5E] bg-white px-4 py-4 sm:px-6 sm:py-5 shadow-sm">
         <p className="text-[15px] leading-relaxed text-zinc-600">
           Learn everything you need to sit down and play American Mahjong
           with confidence.{" "}

@@ -58,7 +58,7 @@ export default function ScoringCalculator() {
       <div className="mt-8 rounded-xl border-2 border-[var(--color-border)] bg-white p-6 shadow-sm sm:p-8">
         {/* ── Hand value ── */}
         <fieldset className="mb-6">
-          <legend className="mb-2 text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+          <legend className="mb-2 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
             Hand value
           </legend>
           <div className="flex flex-wrap gap-2">
@@ -91,7 +91,7 @@ export default function ScoringCalculator() {
 
         {/* ── Win type ── */}
         <fieldset className="mb-6">
-          <legend className="mb-2 text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+          <legend className="mb-2 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
             How did you win?
           </legend>
           <div className="flex gap-3">
@@ -119,7 +119,7 @@ export default function ScoringCalculator() {
 
         {/* ── Bonuses ── */}
         <fieldset className="mb-6">
-          <legend className="mb-2 text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+          <legend className="mb-2 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
             Bonuses
           </legend>
           <div className="space-y-2">
@@ -137,7 +137,7 @@ export default function ScoringCalculator() {
                 <div className="text-sm font-bold text-[var(--color-mid)]">
                   Jokerless hand
                 </div>
-                <div className="text-[11px] text-zinc-500">
+                <div className="text-[13px] text-zinc-500">
                   No jokers in the winning hand — all payments double
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function ScoringCalculator() {
                 <div className="text-sm font-bold text-[var(--color-mid)]">
                   Singles &amp; Pairs hand
                 </div>
-                <div className="text-[11px] text-zinc-500">
+                <div className="text-[13px] text-zinc-500">
                   Jokerless bonus already baked in — no extra doubling
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function ScoringCalculator() {
 
         {/* ── Results ── */}
         <div className="rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-5">
-          <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+          <p className="mb-3 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
             Payout breakdown
           </p>
 
@@ -213,13 +213,13 @@ export default function ScoringCalculator() {
           )}
 
           {jokerless && !singlesAndPairs && (
-            <p className="mt-2 text-center text-[11px] font-bold text-[var(--color-green)]">
+            <p className="mt-2 text-center text-[13px] font-bold text-[var(--color-green)]">
               Jokerless bonus applied — all amounts ×2
             </p>
           )}
 
           <div className="mt-4 rounded-lg bg-white p-3 text-center">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+            <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
               Winner collects
             </div>
             <div className="font-serif text-3xl font-black text-[var(--color-mid)]">
@@ -263,7 +263,7 @@ function PayoutCard({
           : "border-[var(--color-mid)] bg-white"
       }`}
     >
-      <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+      <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
         {who}
       </div>
       <div
@@ -273,7 +273,7 @@ function PayoutCard({
       >
         {amount}
       </div>
-      <div className="text-[10px] italic text-zinc-400">{note}</div>
+      <div className="text-[13px] italic text-zinc-400">{note}</div>
     </div>
   );
 }

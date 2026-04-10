@@ -81,7 +81,7 @@ export default function Module0Welcome() {
             gather your gear later.
           </p>
 
-          <h4 className="mb-2 text-[11px] font-bold uppercase tracking-wider text-[var(--color-red)]">
+          <h4 className="mb-2 text-[13px] font-bold uppercase tracking-wider text-[var(--color-red)]">
             Essentials
           </h4>
           <ul className="mb-5 space-y-2 text-[14px]">
@@ -93,13 +93,13 @@ export default function Module0Welcome() {
               ["About 2 hours for your first session", "Setup is slow at first and you'll have lots of questions. Pace yourself."],
             ] as const).map(([title, body], i) => (
               <li key={i} className="flex items-start gap-2.5">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-red)] text-[10px] font-black text-white">✓</span>
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-red)] text-[13px] font-black text-white">✓</span>
                 <span><strong className="text-[var(--color-mid)]">{title}</strong> — <span className="text-zinc-600">{body}</span></span>
               </li>
             ))}
           </ul>
 
-          <h4 className="mb-2 text-[11px] font-bold uppercase tracking-wider text-[var(--color-green)]">
+          <h4 className="mb-2 text-[13px] font-bold uppercase tracking-wider text-[var(--color-green)]">
             Optional but nice
           </h4>
           <ul className="space-y-2 text-[14px]">
@@ -113,7 +113,7 @@ export default function Module0Welcome() {
               ["This app on your phone", "The scoring calculator, glossary, and cheat sheet are designed for game-night reference."],
             ] as const).map(([title, body], i) => (
               <li key={i} className="flex items-start gap-2.5">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-200 text-[10px] font-black text-zinc-500">~</span>
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-200 text-[13px] font-black text-zinc-500">~</span>
                 <span><strong className="text-[var(--color-mid)]">{title}</strong> — <span className="text-zinc-600">{body}</span></span>
               </li>
             ))}

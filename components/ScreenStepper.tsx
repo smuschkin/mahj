@@ -54,21 +54,25 @@ export function ScreenStepper({
   return (
     <div>
       {/* Progress dots */}
-      <div className="mb-6 flex items-center justify-center gap-2">
+      <div className="mb-6 flex items-center justify-center gap-1">
         {screens.map((_, i) => (
           <button
             key={i}
             type="button"
             aria-label={`Go to step ${i + 1}`}
             onClick={() => setCurrent(i)}
-            className={`h-2.5 rounded-full transition-all ${
-              i === current
-                ? "w-8 bg-[#C8A951]"
-                : i < current
-                  ? "w-2.5 bg-[#1A4D2E]"
-                  : "w-2.5 bg-[#D6CFB8]"
-            }`}
-          />
+            className="flex items-center justify-center py-3"
+          >
+            <span
+              className={`block h-2.5 rounded-full transition-all ${
+                i === current
+                  ? "w-8 bg-[#C8A951]"
+                  : i < current
+                    ? "w-2.5 bg-[#1A4D2E]"
+                    : "w-2.5 bg-[#D6CFB8]"
+              }`}
+            />
+          </button>
         ))}
       </div>
 
@@ -86,7 +90,7 @@ export function ScreenStepper({
           type="button"
           onClick={() => setCurrent((c) => Math.max(0, c - 1))}
           disabled={isFirst}
-          className="rounded-xl border-2 border-[#1A4D2E] bg-white px-3 sm:px-5 py-2.5 text-[15px] font-bold uppercase tracking-wider text-[#1A4D2E] transition disabled:cursor-not-allowed disabled:opacity-30 enabled:hover:-translate-y-0.5"
+          className="rounded-xl border-2 border-[#1A4D2E] bg-white px-4 py-3 sm:px-5 text-[15px] font-bold uppercase tracking-wider text-[#1A4D2E] transition disabled:cursor-not-allowed disabled:opacity-30 enabled:hover:-translate-y-0.5"
         >
           &larr; Back
         </button>
@@ -97,7 +101,7 @@ export function ScreenStepper({
           <button
             type="button"
             onClick={() => router.push(nextModule.href)}
-            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-4 sm:px-6 py-2.5 text-[15px] font-bold uppercase tracking-wider text-[#C8A951] shadow-sm transition hover:-translate-y-0.5"
+            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-5 py-3 sm:px-6 text-[15px] font-bold uppercase tracking-wider text-[#C8A951] shadow-sm transition hover:-translate-y-0.5"
           >
             Next Module &rarr;
           </button>
@@ -106,7 +110,7 @@ export function ScreenStepper({
             type="button"
             onClick={() => setCurrent((c) => Math.min(total - 1, c + 1))}
             disabled={isLast}
-            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-4 sm:px-6 py-2.5 text-[15px] font-bold uppercase tracking-wider text-white shadow-sm transition disabled:cursor-not-allowed disabled:opacity-50 enabled:hover:-translate-y-0.5"
+            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-5 py-3 sm:px-6 text-[15px] font-bold uppercase tracking-wider text-white shadow-sm transition disabled:cursor-not-allowed disabled:opacity-50 enabled:hover:-translate-y-0.5"
           >
             {isLast ? "Done \u2713" : "Next \u2192"}
           </button>

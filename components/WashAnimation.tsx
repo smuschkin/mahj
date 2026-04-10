@@ -87,13 +87,13 @@ export function WashAnimation() {
   return (
     <div className="my-4 rounded-xl border-2 border-[var(--color-border)] bg-white p-4">
       <div className="mb-2 flex items-center justify-between">
-        <span className="text-[10px] font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
+        <span className="text-[13px] font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
           Washing the Tiles
         </span>
         <button
           type="button"
           onClick={() => setWashing((w) => !w)}
-          className="rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-zinc-500 transition hover:bg-zinc-100"
+          className="rounded px-2 py-0.5 text-[13px] font-bold uppercase tracking-wider text-zinc-500 transition hover:bg-zinc-100"
         >
           {washing ? "⏸ Pause" : "▶ Play"}
         </button>
