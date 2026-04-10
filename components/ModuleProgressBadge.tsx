@@ -26,7 +26,7 @@ export function ModuleProgressBadge({ moduleNum }: { moduleNum: number }) {
         title={`In progress · Step ${(progress.currentStep ?? 0) + 1}`}
       >
         <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" />
-        <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+        <span className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
           In progress
         </span>
       </span>

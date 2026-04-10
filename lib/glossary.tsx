@@ -745,10 +745,10 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
 
 export const CATEGORY_COLORS: Record<Category, string> = {
   Tiles: "bg-[#F4FBF6] text-[var(--color-green)] border-[var(--color-green)]",
-  Setup: "bg-[#F0F5FA] text-[var(--color-accent)] border-[var(--color-accent)]",
+  Setup: "bg-[#E8F5EC] text-[var(--color-accent)] border-[var(--color-accent)]",
   Charleston: "bg-[#FFFBEC] text-[var(--color-accent)] border-[var(--color-border)]",
   Calling: "bg-[#FFF6F4] text-[var(--color-red)] border-[var(--color-red)]",
-  Strategy: "bg-[#F0F5FA] text-[var(--color-accent)] border-[var(--color-accent)]",
+  Strategy: "bg-[#E8F5EC] text-[var(--color-accent)] border-[var(--color-accent)]",
   Etiquette: "bg-[#FFFBEC] text-[var(--color-accent)] border-[var(--color-border)]",
   Scoring: "bg-[#F4FBF6] text-[var(--color-green)] border-[var(--color-green)]",
   Mistakes: "bg-[#FFF6F4] text-[var(--color-red)] border-[var(--color-red)]",

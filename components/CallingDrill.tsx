@@ -478,7 +478,7 @@ function ScenarioView({
     const isPicked = opt === picked;
     if (!showFeedback) {
       if (opt === "call")
-        return "border-[var(--color-accent)] bg-[#F0F5FA] text-[var(--color-accent)] hover:-translate-y-0.5";
+        return "border-[var(--color-accent)] bg-[#E8F5EC] text-[var(--color-accent)] hover:-translate-y-0.5";
       if (opt === "mahjong")
         return "border-[var(--color-red)] bg-[#FFF6F4] text-[var(--color-red)] hover:-translate-y-0.5";
       return "border-zinc-300 bg-white text-zinc-600 hover:-translate-y-0.5";
@@ -555,7 +555,7 @@ function ScenarioView({
           <p className="text-center text-base font-bold">
             {correct ? "✓ Correct!" : "✗ Not quite."}
           </p>
-          <div className="mt-2 rounded-md bg-[#F0F5FA] p-3 text-center text-[13px] text-zinc-700">
+          <div className="mt-2 rounded-md bg-[#E8F5EC] p-3 text-center text-[13px] text-zinc-700">
             {scenario.explanation}
           </div>
           <div className="mt-4 text-center">

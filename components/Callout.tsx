@@ -5,7 +5,7 @@ type Variant = "tip" | "warn" | "info";
 const styles: Record<Variant, { bg: string; border: string; icon: string }> = {
   tip: { bg: "bg-[#E8F5E9]", border: "border-[var(--color-green)]", icon: "💡" },
   warn: { bg: "bg-[#FDECEA]", border: "border-[var(--color-red)]", icon: "⚠️" },
-  info: { bg: "bg-[#F0F5FA]", border: "border-[var(--color-accent)]", icon: "ℹ️" },
+  info: { bg: "bg-[#E8F5EC]", border: "border-[var(--color-accent)]", icon: "ℹ️" },
 };
 
 export function Callout({

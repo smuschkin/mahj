@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useState } from "react";
 import { Tile } from "@/components/Tile";
 import { Callout } from "@/components/Callout";
 import {
@@ -64,6 +64,8 @@ type SimState = {
   skippedSecond: boolean;
   /** Feedback from the last pass */
   lastRating: { rating: "great" | "good" | "risky"; feedback: string; suggestion: string | null } | null;
+  /** Patterns from before the last pass (for highlighting changes) */
+  previousPatterns: string[];
 };
 
 /** Draw n tiles from the pool, skipping jokers (can't be passed in Charleston). */
@@ -80,7 +82,31 @@ function dealNoJokers(pool: TileData[], n: number): TileData[] {
   return result;
 }
 
-function initState(): SimState {
+function initState(initialHand?: TileData[], initialPool?: TileData[]): SimState {
+  if (initialHand && initialPool) {
+    // Embedded mode: use provided hand and pool
+    // East has 14 tiles after deal but Charleston uses 13 (extra tile goes back)
+    const hand = initialHand.length === 14
+      ? sortHand(initialHand.slice(0, 13))
+      : sortHand(initialHand);
+    const pool = initialHand.length === 14
+      ? [...initialPool, initialHand[13]]
+      : [...initialPool];
+    return {
+      phase: "picking", // skip intro in embedded mode
+      hand,
+      selected: new Set(),
+      passIndex: 0,
+      justReceived: [],
+      pool,
+      startingHand: [...hand],
+      courtesyCount: 0,
+      skippedSecond: false,
+      lastRating: null,
+      previousPatterns: [],
+    };
+  }
+  // Standalone mode: deal fresh
   const deck = shuffle(buildDeck());
   const hand = sortHand(deal(deck, 13));
   return {
@@ -89,11 +115,12 @@ function initState(): SimState {
     selected: new Set(),
     passIndex: 0,
     justReceived: [],
-    pool: deck, // remaining ~139 tiles
+    pool: deck,
     startingHand: [...hand],
     courtesyCount: 0,
     skippedSecond: false,
     lastRating: null,
+    previousPatterns: [],
   };
 }
 
@@ -101,8 +128,29 @@ function initState(): SimState {
  * The component
  * ──────────────────────────────────────────────────────────────── */
 
-export function CharlestonSim() {
-  const [s, setS] = useState<SimState>(initState);
+type CharlestonSimProps = {
+  /** "standalone" = self-contained with own deck; "embedded" = receives hand from game */
+  mode?: "standalone" | "embedded";
+  /** Pre-dealt hand (embedded mode) */
+  initialHand?: TileData[];
+  /** Remaining wall tiles (embedded mode) */
+  initialPool?: TileData[];
+  /** Called when Charleston completes (embedded mode) */
+  onComplete?: (finalHand: TileData[], updatedPool: TileData[]) => void;
+};
+
+export function CharlestonSim({
+  mode = "standalone",
+  initialHand,
+  initialPool,
+  onComplete,
+}: CharlestonSimProps = {}) {
+  const [s, setS] = useState<SimState>(() =>
+    initState(
+      mode === "embedded" ? initialHand : undefined,
+      mode === "embedded" ? initialPool : undefined,
+    )
+  );
 
   const restart = useCallback(() => setS(initState()), []);
 
@@ -132,6 +180,9 @@ export function CharlestonSim() {
   // Confirm the pass: remove selected tiles, receive 3 from pool
   const confirmPass = useCallback(() => {
     setS((prev) => {
+      // Capture current patterns before the pass
+      const beforePatterns = analyzeHand(prev.hand).patterns;
+
       // Rate the pass before making it
       const rating = ratePass(prev.hand, prev.selected);
 
@@ -149,6 +200,7 @@ export function CharlestonSim() {
         justReceived: received,
         phase: "received",
         lastRating: rating,
+        previousPatterns: beforePatterns,
       };
     });
   }, []);
@@ -264,8 +316,22 @@ export function CharlestonSim() {
             badge={currentPass.isSecondCharleston ? "2nd Charleston" : "1st Charleston"}
           />
 
-          {/* Hand pattern hints */}
-          <HandPatternHints hand={s.hand} />
+          {/* Warn if hand has very few expendable tiles */}
+          <NothingToPassHint hand={s.hand} />
+
+          {/* Blind pass tip for last pass of each Charleston */}
+          {(s.passIndex === 2 || s.passIndex === 5) && (
+            <Callout variant="tip">
+              This is the <strong>last pass</strong> of the{" "}
+              {s.passIndex === 2 ? "first" : "second"} Charleston. At a real table,
+              you can do a <strong>blind pass</strong> — pass your 3 tiles left
+              before looking at what arrives from the right. This lets you pass junk
+              without accidentally seeing something good you&apos;d want to keep!
+            </Callout>
+          )}
+
+          {/* Hand pattern hints — previews hand after passing selected tiles */}
+          <HandPatternHints hand={s.hand} excludeIds={s.selected} />
 
           <TileGrid
             hand={s.hand}
@@ -333,8 +399,8 @@ export function CharlestonSim() {
           </p>
           <TileGrid hand={s.hand} selected={new Set()} interactive={false} />
 
-          {/* Hand pattern hints */}
-          <HandPatternHints hand={s.hand} />
+          {/* Hand pattern hints — highlights new patterns from received tiles */}
+          <HandPatternHints hand={s.hand} previousPatterns={s.previousPatterns} />
           <div className="mt-4 text-center">
             <button
               type="button"
@@ -445,14 +511,37 @@ export function CharlestonSim() {
       )}
 
       {/* ── COMPLETE ── */}
-      {s.phase === "complete" && (
+      {s.phase === "complete" && mode === "embedded" && onComplete && (
+        <>
+          <div className="text-center">
+            <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
+              Charleston complete
+            </p>
+            <h3 className="mb-3 font-serif text-xl font-black text-[var(--color-mid)]">
+              Your hand is ready!
+            </h3>
+          </div>
+          <TileGrid hand={s.hand} selected={new Set()} interactive={false} />
+          <div className="mt-4 text-center">
+            <button
+              type="button"
+              onClick={() => onComplete(s.hand, s.pool)}
+              className="rounded-md bg-[var(--color-mid)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+            >
+              Pick a hand →
+            </button>
+          </div>
+        </>
+      )}
+
+      {s.phase === "complete" && mode !== "embedded" && (
         <>
           <div className="text-center">
             <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
               Charleston complete
             </p>
             <h3 className="mb-4 font-serif text-2xl font-black text-[var(--color-mid)]">
-              🎉 Your hand is ready for play!
+              Your hand is ready for play!
             </h3>
           </div>
 
@@ -652,7 +741,7 @@ function PassFeedback({
 }) {
   const colors = {
     great: "border-[var(--color-green)] bg-[#F4FBF6] text-[var(--color-green)]",
-    good: "border-[var(--color-accent)] bg-[#F0F7FC] text-[var(--color-accent)]",
+    good: "border-[var(--color-accent)] bg-[#E8F5EC] text-[var(--color-accent)]",
     risky: "border-[var(--color-red)] bg-[#FFF6F4] text-[var(--color-red)]",
   };
   const icons = { great: "Nice!", good: "OK", risky: "Hmm..." };
@@ -669,20 +758,101 @@ function PassFeedback({
   );
 }
 
-/** Shows detected hand patterns as hints */
-function HandPatternHints({ hand }: { hand: TileData[] }) {
+/**
+ * Warns when the player's hand has very few expendable tiles.
+ * This is a common beginner frustration — "everything looks useful!"
+ */
+function NothingToPassHint({ hand }: { hand: TileData[] }) {
   const analysis = analyzeHand(hand);
-  if (analysis.patterns.length === 0) return null;
+  const bestSuit = analysis.bestSuit?.suit;
+
+  // Count tiles that are clearly expendable
+  let expendableCount = 0;
+  const keyCounts: Record<string, number> = {};
+  for (const t of hand) {
+    const k = `${t.type}-${t.value ?? ""}`;
+    keyCounts[k] = (keyCounts[k] ?? 0) + 1;
+  }
+
+  for (const t of hand) {
+    if (t.type === "joker" || t.type === "flower" || t.type === "season") continue;
+    const k = `${t.type}-${t.value ?? ""}`;
+    const count = keyCounts[k] ?? 1;
+    const isSuited = t.type === "bam" || t.type === "crack" || t.type === "dot";
+    const isOffSuit = isSuited && t.type !== bestSuit;
+    const isIsolatedHonor = (t.type === "wind" || t.type === "dragon") && count === 1;
+    if ((isOffSuit && count === 1) || isIsolatedHonor) expendableCount++;
+  }
+
+  if (expendableCount >= 3) return null;
 
   return (
-    <div className="my-3 rounded-lg border border-dashed border-[var(--color-accent)] bg-[#F0F5FA] px-3 py-2">
-      <p className="mb-1 text-[10px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
-        Hand hints
+    <Callout variant="info">
+      <strong>Tough hand to pass from!</strong> You don&apos;t have many obvious
+      throwaway tiles. When this happens at the table, consider passing your{" "}
+      <em>least useful</em> pairs (you only need one pair for your final hand) or
+      tiles from your second-best suit. Don&apos;t agonize — even experienced
+      players sometimes have to pass decent tiles.
+    </Callout>
+  );
+}
+
+/** Shows detected hand patterns as hints, with optional "after passing" preview */
+function HandPatternHints({
+  hand,
+  excludeIds,
+  previousPatterns,
+}: {
+  hand: TileData[];
+  /** Tile IDs being passed — show hints for the hand without these */
+  excludeIds?: Set<number>;
+  /** Patterns from the previous state, to highlight what changed */
+  previousPatterns?: string[];
+}) {
+  const effectiveHand =
+    excludeIds && excludeIds.size > 0
+      ? hand.filter((t) => !excludeIds.has(t.id))
+      : hand;
+  const analysis = analyzeHand(effectiveHand);
+  if (analysis.patterns.length === 0) return null;
+
+  const isPreview = excludeIds && excludeIds.size > 0;
+  const prevSet = new Set(previousPatterns ?? []);
+  const newPatterns = previousPatterns
+    ? analysis.patterns.filter((p) => !prevSet.has(p))
+    : [];
+  const hasNewPatterns = newPatterns.length > 0;
+
+  return (
+    <div
+      className={`my-3 rounded-lg border border-dashed px-3 py-2 transition-all ${
+        isPreview
+          ? "border-[#C8A951] bg-[#F5E6B8]/20"
+          : hasNewPatterns
+            ? "border-[var(--color-green)] bg-[#E8F5EC]"
+            : "border-[var(--color-accent)] bg-[#E8F5EC]"
+      }`}
+    >
+      <p
+        className={`mb-1 text-[10px] font-bold uppercase tracking-wider ${
+          isPreview
+            ? "text-[#C8A951]"
+            : hasNewPatterns
+              ? "text-[var(--color-green)]"
+              : "text-[var(--color-accent)]"
+        }`}
+      >
+        {isPreview ? "After this pass" : hasNewPatterns ? "Updated hints" : "Hand hints"}
       </p>
       <ul className="space-y-0.5 text-[12px] text-zinc-600">
-        {analysis.patterns.map((p, i) => (
-          <li key={i}>• {p}</li>
-        ))}
+        {analysis.patterns.map((p, i) => {
+          const isNew = previousPatterns && !prevSet.has(p);
+          return (
+            <li key={i} className={isNew ? "font-bold text-[var(--color-green)]" : ""}>
+              {isNew ? "NEW " : ""}• {p}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

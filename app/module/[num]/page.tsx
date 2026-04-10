@@ -98,7 +98,7 @@ function ComingSoon({
           ← Back to all modules
         </Link>
       </div>
-      <ModuleNav prev={adj.prev && { href: adj.prev.href, name: `Module ${adj.prev.num}: ${adj.prev.name}` }} next={adj.next && { href: adj.next.href, name: `Module ${adj.next.num}: ${adj.next.name}` }} />
+      <ModuleNav currentModuleNum={num} prev={adj.prev && { href: adj.prev.href, name: `Module ${adj.prev.num}: ${adj.prev.name}` }} next={adj.next && { href: adj.next.href, name: `Module ${adj.next.num}: ${adj.next.name}` }} />
     </PageWrap>
   );
 }

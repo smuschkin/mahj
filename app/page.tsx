@@ -17,10 +17,10 @@ export default function Home() {
         subtitle="Your path from absolute beginner to your first real game"
       />
 
-      <div className="mb-9 rounded-lg border-l-4 border-[var(--color-accent)] bg-white px-6 py-5 shadow-sm">
-        <p className="text-sm text-zinc-600">
-          MAHJ teaches American Mahjong from scratch — tiles, setup, the Charleston,
-          calling, jokers, strategy, etiquette, and more.{" "}
+      <div className="mb-9 rounded-lg border-l-4 border-[#2D8B5E] bg-white px-6 py-5 shadow-sm">
+        <p className="text-[15px] leading-relaxed text-zinc-600">
+          Learn everything you need to sit down and play American Mahjong
+          with confidence.{" "}
           <strong className="text-[var(--color-mid)]">No experience needed.</strong>
         </p>
       </div>
@@ -37,26 +37,38 @@ export default function Home() {
       </div>
 
       {/* ── Quick Tools ── */}
-      <div className="mb-9 grid grid-cols-2 gap-3">
-        <Link
-          href="/calculator"
-          className="flex flex-col items-center gap-1 rounded-xl border-2 border-[var(--color-accent)] bg-[#F0F5FA] px-4 py-4 text-center transition hover:-translate-y-0.5"
-        >
-          <span className="text-2xl">💰</span>
-          <span className="font-serif text-sm font-black text-[var(--color-mid)]">
-            Scoring Calculator
-          </span>
-          <span className="text-[10px] text-zinc-500">Who pays what?</span>
-        </Link>
+      <SectionHeader>Quick Tools</SectionHeader>
+
+      <div className="mb-9 grid grid-cols-2 gap-3 sm:grid-cols-3">
         <Link
           href="/cheatsheet"
-          className="flex flex-col items-center gap-1 rounded-xl border-2 border-[var(--color-border)] bg-[var(--color-light)] px-4 py-4 text-center transition hover:-translate-y-0.5"
+          className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
         >
-          <span className="text-2xl">🖨️</span>
+          <span className="text-2xl">{"\u{1F5A8}\uFE0F"}</span>
           <span className="font-serif text-sm font-black text-[var(--color-mid)]">
             Print Cheat Sheet
           </span>
-          <span className="text-[10px] text-zinc-500">Bring to game night</span>
+          <span className="text-[13px] text-zinc-500">Bring to game night</span>
+        </Link>
+        <Link
+          href="/play"
+          className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
+        >
+          <span className="text-2xl">{"\u{1F3B2}"}</span>
+          <span className="font-serif text-sm font-black text-[var(--color-mid)]">
+            Setup Walkthrough
+          </span>
+          <span className="text-[13px] text-zinc-500">Learn the flow</span>
+        </Link>
+        <Link
+          href="/calculator"
+          className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
+        >
+          <span className="text-2xl">{"\u{1F4B0}"}</span>
+          <span className="font-serif text-sm font-black text-[var(--color-mid)]">
+            Scoring Calculator
+          </span>
+          <span className="text-[13px] text-zinc-500">Who pays what?</span>
         </Link>
       </div>
 

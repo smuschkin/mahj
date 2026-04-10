@@ -145,7 +145,7 @@ export default function Module3SetupDealing() {
               </span>
             </div>
             <div className="flex flex-col items-center gap-1.5">
-              <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#F0F5FA] p-1">
+              <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-1">
                 <Die value={6} size="md" />
               </div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
@@ -319,7 +319,7 @@ export default function Module3SetupDealing() {
           </p>
 
           {/* Inline 1st-and-3rd diagram — 3 stacks, dealer leapfrogs across stack 2 */}
-          <div className="my-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#F0F5FA] p-5">
+          <div className="my-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-5">
             <p className="mb-1 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
               The 13th-tile round — who takes which
             </p>
@@ -347,7 +347,7 @@ export default function Module3SetupDealing() {
               ].map((stack) => {
                 const tileClass = (kind: "dealer" | "other" | "stays") => {
                   if (kind === "dealer")
-                    return "border-[var(--color-accent)] bg-[#E1ECF5] text-[var(--color-accent)]";
+                    return "border-[var(--color-accent)] bg-[#D0E8D6] text-[var(--color-accent)]";
                   if (kind === "stays")
                     return "border-zinc-300 bg-zinc-100 text-zinc-400";
                   return "border-[#C9BC8A] bg-[#FAF7EC] text-[var(--color-mid)]";
@@ -392,7 +392,7 @@ export default function Module3SetupDealing() {
           </div>
 
           {/* Inline 4-rack deal pattern */}
-          <div className="my-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#F0F5FA] p-5">
+          <div className="my-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-5">
             <p className="mb-2 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
               Final tile counts after the deal
             </p>
@@ -407,7 +407,7 @@ export default function Module3SetupDealing() {
                   key={rack.seat}
                   className={`rounded-lg border-2 p-3 text-center shadow-sm ${
                     rack.isEast
-                      ? "border-[var(--color-accent)] bg-[#F8FBFD]"
+                      ? "border-[var(--color-accent)] bg-[#F0F8F2]"
                       : "border-[var(--color-mid)] bg-white"
                   }`}
                 >
@@ -424,7 +424,7 @@ export default function Module3SetupDealing() {
                         key={i}
                         className={`h-3 w-2 rounded-sm border ${
                           rack.isEast && i === rack.count - 1
-                            ? "border-[var(--color-accent)] bg-[#A8C4E0]"
+                            ? "border-[var(--color-accent)] bg-[#8BB89A]"
                             : "border-[#C9BC8A] bg-[#FAF7EC]"
                         }`}
                       />
@@ -540,6 +540,7 @@ export default function Module3SetupDealing() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={3}
         prev={
           adj.prev && {
             href: adj.prev.href,

@@ -7,12 +7,11 @@ export function TopNav() {
   const pathname = usePathname();
   const isHome = pathname === "/";
 
-  // Extract module number from path like /module/5
   const moduleMatch = pathname.match(/^\/module\/(\d+)/);
   const moduleNum = moduleMatch ? parseInt(moduleMatch[1], 10) : null;
 
   return (
-    <nav className="sticky top-0 z-30 border-b border-zinc-200 bg-[var(--color-ivory)]/95 backdrop-blur-sm">
+    <nav className="sticky top-0 z-30 border-b border-[#C8A951]/20 bg-[var(--color-ivory)]/98 backdrop-blur-sm">
       <div className="mx-auto flex max-w-[820px] items-center justify-between px-5 py-2.5">
         {/* Left: Home link */}
         <Link
@@ -23,16 +22,17 @@ export function TopNav() {
               : "text-[var(--color-accent)]"
           }`}
         >
-          <span className="text-base">🀄</span>
+          <span className="text-base">{"\u{1F004}"}</span>
           <span className="font-serif text-base font-black tracking-wide text-[var(--color-mid)]">
             MAHJ
           </span>
         </Link>
 
         {/* Center: Current location */}
-        <div className="text-center text-[11px] font-bold uppercase tracking-wider text-zinc-400">
+        <div className="text-center text-[13px] font-bold uppercase tracking-wider text-zinc-400">
           {isHome && "Home"}
           {moduleNum !== null && `Module ${moduleNum}`}
+          {pathname === "/play" && "Practice Table"}
           {pathname === "/calculator" && "Scoring Calculator"}
           {pathname === "/cheatsheet" && "Cheat Sheet"}
         </div>
@@ -42,14 +42,24 @@ export function TopNav() {
           {!isHome && (
             <Link
               href="/"
-              className="rounded-md px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[var(--color-mid)] transition hover:bg-white/60"
+              className="rounded-md px-2.5 py-1.5 text-[13px] font-bold uppercase tracking-wider text-[var(--color-mid)] transition hover:bg-white/60"
             >
               Modules
             </Link>
           )}
           <Link
+            href="/play"
+            className={`rounded-md px-2.5 py-1.5 text-[13px] font-bold uppercase tracking-wider transition hover:bg-white/60 ${
+              pathname === "/play"
+                ? "text-[var(--color-mid)]"
+                : "text-zinc-500"
+            }`}
+          >
+            Practice
+          </Link>
+          <Link
             href="/calculator"
-            className={`rounded-md px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-wider transition hover:bg-white/60 ${
+            className={`rounded-md px-2.5 py-1.5 text-[13px] font-bold uppercase tracking-wider transition hover:bg-white/60 ${
               pathname === "/calculator"
                 ? "text-[var(--color-mid)]"
                 : "text-zinc-500"

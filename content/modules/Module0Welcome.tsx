@@ -182,6 +182,7 @@ export default function Module0Welcome() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={0}
         next={
           adj.next && {
             href: adj.next.href,

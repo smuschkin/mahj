@@ -432,6 +432,7 @@ export default function Module9Scoring() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={9}
         prev={
           adj.prev && {
             href: adj.prev.href,

@@ -22,6 +22,10 @@ type TileProps = {
   highlighted?: boolean;
   /** show the short table-name label beneath the tile (e.g. "3 Bam") */
   showLabel?: boolean;
+  /** callback when tile is tapped (for interactive modes) */
+  onClick?: () => void;
+  /** visual "selected for discard" state — tile lifts up with gold border */
+  selected?: boolean;
   className?: string;
 };
 
@@ -62,8 +66,8 @@ const DRAGON_LABELS: Record<string, { glyph: string; color: string; label: strin
   green: { glyph: "發", color: "#27AE60", label: "Green" },
   white: { glyph: "", color: "#2C3E50", label: "Soap" },
 };
-// Note: in American Mahjong all 8 flower-group tiles are called "Flowers" at the
-// table, even the 4 traditionally-named "seasons." We label them sequentially 1–8.
+// In American Mahjong all 8 flower-group tiles are just "Flower" at the table.
+// Each shows a different floral illustration but they are all functionally identical.
 
 // Bam stalk arrangements per value
 const BAM_LAYOUT: Record<number, number[]> = {
@@ -97,11 +101,12 @@ export function Tile({
   marked = false,
   highlighted = false,
   showLabel = false,
+  onClick,
+  selected = false,
   className = "",
 }: TileProps) {
   const dim = SIZES[size];
   const isJoker = type === "joker";
-  const isSeason = type === "season";
 
   const baseClasses =
     "relative inline-flex shrink-0 flex-col items-center justify-center rounded-md border-[1.5px] shadow-[0_2px_5px_rgba(0,0,0,0.12)] overflow-hidden";
@@ -110,17 +115,12 @@ export function Tile({
   let border = "border-[#C9BC8A]";
 
   if (isJoker) {
-    // Joker tile: hard-coded gold border (this is a *content* color from real mahjong sets,
-    // independent of the brand accent color)
-    bg = "bg-gradient-to-br from-[#FFFBEA] to-[#F5E9B8]";
     border = "border-[#D4AC0D]";
-  } else if (isSeason) {
-    bg = "bg-[#FFF6E0]";
-  } else if (type === "dragon" && value === "white") {
-    bg = "bg-white";
   }
 
-  if (highlighted) {
+  if (selected) {
+    border = "border-[#C8A951] border-2";
+  } else if (highlighted) {
     border = "border-[var(--color-red)] border-2";
   }
   if (marked) {
@@ -163,11 +163,29 @@ export function Tile({
     </div>
   );
 
-  if (!showLabel) return <span className={className}>{tile}</span>;
+  const wrappedTile = onClick ? (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`cursor-pointer transition-transform duration-150 ${selected ? "-translate-y-2" : "hover:-translate-y-0.5"} ${className}`}
+    >
+      {tile}
+    </button>
+  ) : (
+    <span className={className}>{tile}</span>
+  );
+
+  if (!showLabel) return wrappedTile;
 
   return (
-    <div className={`flex flex-col items-center gap-1.5 ${className}`}>
-      {tile}
+    <div className={`flex flex-col items-center gap-1.5 ${onClick ? "" : className}`}>
+      {onClick ? <button
+        type="button"
+        onClick={onClick}
+        className={`cursor-pointer transition-transform duration-150 ${selected ? "-translate-y-2" : "hover:-translate-y-0.5"}`}
+      >
+        {tile}
+      </button> : tile}
       <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 whitespace-nowrap">
         {shortLabel(type, value)}
       </span>
@@ -255,28 +273,61 @@ function BamArt({ value, size }: { value: number; size: { w: number; h: number }
   if (!layout) return null;
   const stalkH = Math.max(7, (size.h - 24) / (layout.length * 1.5));
   const stalkW = Math.max(3, size.w / 16);
+  // Each stalk has 3 segments separated by nodes, like real bamboo
+  const segH = stalkH / 3.6;
+  const nodeGap = stalkH * 0.06;
   return (
     <div className="flex flex-col items-center justify-center gap-1">
       {layout.map((count, ri) => (
         <div key={ri} className="flex gap-1">
           {Array.from({ length: count }).map((_, i) => {
-            // Center stalk in red when row has an odd count > 1 — gives the
-            // "red-accent" look of the photo set.
             const isOddRow = count % 2 === 1 && count > 1;
             const isCenter = i === Math.floor(count / 2);
             const isRed = isOddRow && isCenter;
+            const baseColor = isRed ? "#C0392B" : "#1E8449";
+            const lightColor = isRed ? "#E74C3C" : "#27AE60";
+            const darkColor = isRed ? "#922B21" : "#145A32";
+            const nodeColor = isRed ? "#7A1F1A" : "#0D3B1F";
             return (
-              <span
+              <svg
                 key={i}
-                className="rounded-sm shadow-sm"
-                style={{
-                  width: stalkW,
-                  height: stalkH,
-                  background: isRed
-                    ? "linear-gradient(180deg, #E74C3C, #922B21)"
-                    : "linear-gradient(180deg, #1E8449, #145A32)",
-                }}
-              />
+                width={stalkW}
+                height={stalkH}
+                viewBox={`0 0 ${stalkW} ${stalkH}`}
+              >
+                {/* Top segment */}
+                <rect
+                  x={0} y={0}
+                  width={stalkW} height={segH}
+                  rx={1}
+                  fill={lightColor}
+                />
+                {/* Top node */}
+                <rect
+                  x={-0.5} y={segH}
+                  width={stalkW + 1} height={nodeGap + 1}
+                  fill={nodeColor}
+                />
+                {/* Middle segment */}
+                <rect
+                  x={0} y={segH + nodeGap + 1}
+                  width={stalkW} height={segH}
+                  fill={baseColor}
+                />
+                {/* Bottom node */}
+                <rect
+                  x={-0.5} y={segH * 2 + nodeGap + 1}
+                  width={stalkW + 1} height={nodeGap + 1}
+                  fill={nodeColor}
+                />
+                {/* Bottom segment */}
+                <rect
+                  x={0} y={segH * 2 + nodeGap * 2 + 2}
+                  width={stalkW} height={segH}
+                  rx={1}
+                  fill={darkColor}
+                />
+              </svg>
             );
           })}
         </div>
@@ -286,12 +337,12 @@ function BamArt({ value, size }: { value: number; size: { w: number; h: number }
 }
 
 function BirdSVG({ size }: { size: number }) {
-  // Ornate red phoenix — body with spread wing, long flowing tail feathers,
-  // crest of plume feathers on the head, gold eye, orange beak, perched on
-  // a small branch. Inspired by traditional 1 Bam phoenix illustrations.
+  // Multicolored phoenix — red body, green wing, blue tail accents,
+  // gold eye, orange beak. Inspired by traditional 1 Bam illustrations
+  // on American Mahjong sets.
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      {/* ─── Long flowing tail feathers (3 layers, two-tone red) ─── */}
+      {/* ─── Long flowing tail feathers — red, blue, green ─── */}
       <path
         d="M 38 36 Q 52 30 60 16"
         stroke="#C0392B"
@@ -301,41 +352,50 @@ function BirdSVG({ size }: { size: number }) {
       />
       <path
         d="M 38 38 Q 54 38 62 28"
-        stroke="#E74C3C"
+        stroke="#2E86C1"
         strokeWidth="2.5"
         strokeLinecap="round"
         fill="none"
       />
       <path
         d="M 38 40 Q 52 44 58 38"
-        stroke="#C0392B"
+        stroke="#1E8449"
         strokeWidth="3"
         strokeLinecap="round"
         fill="none"
       />
-      {/* Tail tip ornaments — small circles like feather eyes */}
+      {/* Tail tip ornaments */}
       <circle cx="60" cy="16" r="1.5" fill="#F1C40F" />
       <circle cx="62" cy="28" r="1.5" fill="#F1C40F" />
       <circle cx="58" cy="38" r="1.5" fill="#F1C40F" />
 
-      {/* ─── Body — plump oval ─── */}
+      {/* ─── Body — plump red oval ─── */}
       <ellipse cx="26" cy="36" rx="13" ry="10" fill="#C0392B" />
-      {/* Belly highlight (lighter) */}
+      {/* Belly highlight */}
       <ellipse cx="24" cy="40" rx="9" ry="5" fill="#E74C3C" />
 
-      {/* ─── Wing — folded against the body with feather lines ─── */}
+      {/* ─── Wing — green with feather lines ─── */}
       <path
         d="M 16 28 Q 26 22 36 30 Q 30 40 18 38 Z"
-        fill="#922B21"
+        fill="#1E8449"
       />
+      {/* Feather detail lines */}
       <path
         d="M 20 30 Q 26 28 32 30 M 22 33 Q 28 31 32 33"
-        stroke="#E74C3C"
+        stroke="#27AE60"
         strokeWidth="0.6"
         fill="none"
       />
+      {/* Blue accent feather tips on wing edge */}
+      <path
+        d="M 16 28 Q 14 32 18 38"
+        stroke="#2E86C1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        fill="none"
+      />
 
-      {/* ─── Neck connecting body to head ─── */}
+      {/* ─── Neck ─── */}
       <path
         d="M 36 28 Q 40 22 42 18"
         stroke="#C0392B"
@@ -346,20 +406,19 @@ function BirdSVG({ size }: { size: number }) {
 
       {/* ─── Head ─── */}
       <circle cx="42" cy="16" r="6" fill="#C0392B" />
-      {/* Cheek highlight */}
       <circle cx="40" cy="18" r="2" fill="#E74C3C" />
 
-      {/* ─── Crest plumes on top of the head ─── */}
+      {/* ─── Crest plumes — red, blue, green ─── */}
       <path
         d="M 40 10 Q 38 4 34 2"
-        stroke="#C0392B"
+        stroke="#1E8449"
         strokeWidth="2"
         strokeLinecap="round"
         fill="none"
       />
       <path
         d="M 42 9 Q 42 2 38 0"
-        stroke="#E74C3C"
+        stroke="#2E86C1"
         strokeWidth="2"
         strokeLinecap="round"
         fill="none"
@@ -380,53 +439,19 @@ function BirdSVG({ size }: { size: number }) {
       <circle cx="44" cy="15" r="1.8" fill="#F1C40F" />
       <circle cx="44.5" cy="15" r="0.9" fill="#1A1A2E" />
 
-      {/* ─── Beak — pointing right ─── */}
+      {/* ─── Beak — orange ─── */}
       <path d="M 48 15 L 56 16 L 48 18 Z" fill="#F39C12" />
       <path d="M 48 16.5 L 55 16.5" stroke="#C0392B" strokeWidth="0.5" />
 
       {/* ─── Legs ─── */}
-      <line
-        x1="22"
-        y1="46"
-        x2="20"
-        y2="58"
-        stroke="#922B21"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-      />
-      <line
-        x1="28"
-        y1="46"
-        x2="30"
-        y2="58"
-        stroke="#922B21"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-      />
+      <line x1="22" y1="46" x2="20" y2="58" stroke="#922B21" strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="28" y1="46" x2="30" y2="58" stroke="#922B21" strokeWidth="2.2" strokeLinecap="round" />
       {/* Toes */}
-      <path
-        d="M 18 58 L 20 58 L 22 58 M 20 58 L 20 60"
-        stroke="#922B21"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M 28 58 L 30 58 L 32 58 M 30 58 L 30 60"
-        stroke="#922B21"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
+      <path d="M 18 58 L 20 58 L 22 58 M 20 58 L 20 60" stroke="#922B21" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M 28 58 L 30 58 L 32 58 M 30 58 L 30 60" stroke="#922B21" strokeWidth="1.4" strokeLinecap="round" />
 
-      {/* ─── Perch (small branch) ─── */}
-      <line
-        x1="14"
-        y1="60"
-        x2="36"
-        y2="60"
-        stroke="#7D3C0E"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
+      {/* ─── Perch ─── */}
+      <line x1="14" y1="60" x2="36" y2="60" stroke="#7D3C0E" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -495,22 +520,25 @@ function DotArt({ value, size }: { value: number; size: { w: number; h: number }
         gap,
       }}
     >
-      {cells.map(([row, col], i) => (
-        <span
-          key={i}
-          className="rounded-full"
-          style={{
-            width: dotSize,
-            height: dotSize,
-            // Red center inside a thin black ring
-            background:
-              "radial-gradient(circle at 35% 35%, #E74C3C 0%, #8B1F18 60%, #1A1A1A 65%, #1A1A1A 100%)",
-            gridRow: row,
-            gridColumn: col,
-            boxShadow: "0 1px 2px rgba(0,0,0,0.2)",
-          }}
-        />
-      ))}
+      {cells.map(([row, col], i) => {
+        const isGreen = i % 2 === 1;
+        return (
+          <span
+            key={i}
+            className="rounded-full"
+            style={{
+              width: dotSize,
+              height: dotSize,
+              background: isGreen
+                ? "radial-gradient(circle at 35% 35%, #27AE60 0%, #145A32 60%, #1A1A1A 65%, #1A1A1A 100%)"
+                : "radial-gradient(circle at 35% 35%, #E74C3C 0%, #8B1F18 60%, #1A1A1A 65%, #1A1A1A 100%)",
+              gridRow: row,
+              gridColumn: col,
+              boxShadow: "0 1px 2px rgba(0,0,0,0.2)",
+            }}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -555,91 +583,17 @@ function DragonArt({ value, size }: { value: string; size: { w: number; h: numbe
     );
   }
 
-  const color = value === "red" ? "#C0392B" : "#1E8449";
-  const dragonSize = Math.round(size.h * 0.7);
+  const dragonW = Math.round(size.w * 0.7);
+  const dragonH = Math.round(size.h * 0.9);
 
   return (
-    <svg viewBox="0 0 48 48" width={dragonSize} height={dragonSize} aria-hidden="true">
-      {/* ─── Body — bold S-curve, one clean stroke ─── */}
-      <path
-        d="M 34 8 C 40 14, 38 24, 28 26 C 18 28, 12 34, 14 42 C 16 48, 26 48, 30 44"
-        stroke={color}
-        strokeWidth="5"
-        fill="none"
-        strokeLinecap="round"
-      />
-
-      {/* ─── Head — solid triangular snout ─── */}
-      <path
-        d="M 34 8 L 42 4 L 44 10 L 38 12 Z"
-        fill={color}
-      />
-
-      {/* Eye */}
-      <circle cx="38" cy="8" r="1.5" fill="#FAF7EC" />
-      <circle cx="38.3" cy="8" r="0.7" fill="#1E293B" />
-
-      {/* Horn */}
-      <path
-        d="M 38 4 L 36 1"
-        stroke={color}
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-
-      {/* ─── Wing — single clean swept shape ─── */}
-      <path
-        d="M 32 14 C 24 6, 10 8, 8 16"
-        stroke={color}
-        strokeWidth="2.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M 32 14 C 22 10, 12 12, 8 16"
-        stroke={color}
-        strokeWidth="1"
-        fill={color}
-        opacity="0.15"
-      />
-
-      {/* ─── Spine — 3 clean spikes ─── */}
-      <path
-        d="M 36 12 L 38 9 M 34 18 L 36 15 M 30 24 L 32 21"
-        stroke={color}
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-
-      {/* ─── Legs — simple strokes ─── */}
-      {/* Front */}
-      <path
-        d="M 24 28 L 20 24"
-        stroke={color}
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      {/* Rear */}
-      <path
-        d="M 16 40 L 12 44"
-        stroke={color}
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-
-      {/* ─── Tail tip — arrow/flame ─── */}
-      <path
-        d="M 30 44 C 34 40, 36 36, 34 32"
-        stroke={color}
-        strokeWidth="3"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M 34 32 L 31 29 L 37 31 Z"
-        fill={color}
-      />
-    </svg>
+    <img
+      src={value === "red" ? "/tiles/red-dragon.png" : "/tiles/green-dragon.png"}
+      alt={value === "red" ? "Red Dragon" : "Green Dragon"}
+      width={dragonW}
+      height={dragonH}
+      style={{ objectFit: "contain" }}
+    />
   );
 }
 
@@ -669,171 +623,238 @@ function FlowerArt({
 /* ───── Flower SVGs ───── */
 
 function PlumSVG({ size }: { size: number }) {
+  // 梅 Plum blossom on a branch — 5-petal flowers with visible petal shapes
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      <g fill="#E91E63">
-        <circle cx="32" cy="18" r="9" />
-        <circle cx="48" cy="28" r="9" />
-        <circle cx="42" cy="46" r="9" />
-        <circle cx="22" cy="46" r="9" />
-        <circle cx="16" cy="28" r="9" />
+      {/* Branch */}
+      <path d="M4 58 Q18 44 32 32 Q42 24 50 18" stroke="#5D4037" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M24 40 Q18 48 14 54" stroke="#5D4037" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      {/* Large blossom — 5 petals with gaps */}
+      <g fill="#F48FB1" stroke="#E91E63" strokeWidth="0.8">
+        <ellipse cx="34" cy="22" rx="5" ry="7" transform="rotate(-15 34 22)" />
+        <ellipse cx="42" cy="28" rx="5" ry="7" transform="rotate(55 42 28)" />
+        <ellipse cx="40" cy="38" rx="5" ry="7" transform="rotate(125 40 38)" />
+        <ellipse cx="28" cy="38" rx="5" ry="7" transform="rotate(-125 28 38)" />
+        <ellipse cx="26" cy="28" rx="5" ry="7" transform="rotate(-55 26 28)" />
       </g>
-      <circle cx="32" cy="32" r="6" fill="#FFD700" />
+      <circle cx="34" cy="30" r="3.5" fill="#FFD700" />
+      {/* Small bud */}
+      <circle cx="48" cy="20" r="3.5" fill="#F8BBD0" />
+      <circle cx="48" cy="20" r="1.5" fill="#E91E63" />
+      {/* Character */}
+      <text x="54" y="60" textAnchor="middle" fontFamily="serif" fontSize="12" fontWeight="900" fill="#C0392B">梅</text>
     </svg>
   );
 }
 
 function OrchidSVG({ size }: { size: number }) {
+  // 蘭 Orchid — graceful filled petals on an arching stem with thin leaves
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      <ellipse cx="32" cy="20" rx="8" ry="14" fill="#9B59B6" />
-      <ellipse cx="18" cy="32" rx="14" ry="8" fill="#AF7AC5" />
-      <ellipse cx="46" cy="32" rx="14" ry="8" fill="#AF7AC5" />
-      <ellipse cx="32" cy="44" rx="8" ry="14" fill="#9B59B6" />
-      <circle cx="32" cy="32" r="5" fill="#F1C40F" />
+      {/* Arching stem */}
+      <path d="M12 58 Q16 40 28 30 Q36 24 40 18" stroke="#388E3C" strokeWidth="2" strokeLinecap="round" fill="none" />
+      {/* Long thin leaves */}
+      <path d="M14 56 Q4 42 2 28" stroke="#2E7D32" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M16 54 Q8 44 6 34" stroke="#43A047" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      {/* Orchid flower — filled petals */}
+      <g>
+        {/* Upper sepal — narrow upward petal */}
+        <ellipse cx="36" cy="8" rx="3" ry="10" fill="#CE93D8" stroke="#9C27B0" strokeWidth="0.6" transform="rotate(-8 36 8)" />
+        {/* Side petals — sweeping outward, filled */}
+        <ellipse cx="22" cy="14" rx="3.5" ry="10" fill="#AB47BC" stroke="#9C27B0" strokeWidth="0.5" transform="rotate(-50 22 14)" />
+        <ellipse cx="52" cy="14" rx="3.5" ry="10" fill="#AB47BC" stroke="#9C27B0" strokeWidth="0.5" transform="rotate(50 52 14)" />
+        {/* Lower petals — drooping */}
+        <ellipse cx="24" cy="30" rx="3" ry="9" fill="#CE93D8" stroke="#9C27B0" strokeWidth="0.5" transform="rotate(-30 24 30)" />
+        <ellipse cx="50" cy="30" rx="3" ry="9" fill="#CE93D8" stroke="#9C27B0" strokeWidth="0.5" transform="rotate(30 50 30)" />
+        {/* Lip (center petal) — the distinctive orchid lip */}
+        <ellipse cx="38" cy="24" rx="5" ry="7" fill="#E1BEE7" stroke="#9C27B0" strokeWidth="0.8" />
+        <circle cx="38" cy="22" r="2" fill="#FFD54F" />
+      </g>
+      {/* Character */}
+      <text x="54" y="60" textAnchor="middle" fontFamily="serif" fontSize="12" fontWeight="900" fill="#C0392B">蘭</text>
     </svg>
   );
 }
 
 function ChrysanthemumSVG({ size }: { size: number }) {
+  // 菊 Chrysanthemum — layered radiating petals on a stem
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      <g fill="#E67E22">
-        <ellipse cx="32" cy="10" rx="4" ry="10" />
-        <ellipse cx="32" cy="54" rx="4" ry="10" />
-        <ellipse cx="10" cy="32" rx="10" ry="4" />
-        <ellipse cx="54" cy="32" rx="10" ry="4" />
-        <ellipse cx="16" cy="16" rx="4" ry="9" transform="rotate(-45 16 16)" />
-        <ellipse cx="48" cy="16" rx="4" ry="9" transform="rotate(45 48 16)" />
-        <ellipse cx="16" cy="48" rx="4" ry="9" transform="rotate(45 16 48)" />
-        <ellipse cx="48" cy="48" rx="4" ry="9" transform="rotate(-45 48 48)" />
+      {/* Stem */}
+      <path d="M30 44 Q28 52 26 58" stroke="#388E3C" strokeWidth="2" strokeLinecap="round" fill="none" />
+      {/* Leaf */}
+      <path d="M28 50 Q20 46 14 42" stroke="#388E3C" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      {/* Outer petals — 12 radiating */}
+      <g fill="#E67E22" stroke="#D35400" strokeWidth="0.4">
+        <ellipse cx="30" cy="8" rx="3" ry="8" />
+        <ellipse cx="40" cy="10" rx="3" ry="8" transform="rotate(30 40 10)" />
+        <ellipse cx="48" cy="18" rx="3" ry="8" transform="rotate(60 48 18)" />
+        <ellipse cx="50" cy="28" rx="3" ry="8" transform="rotate(90 50 28)" />
+        <ellipse cx="48" cy="38" rx="3" ry="8" transform="rotate(120 48 38)" />
+        <ellipse cx="40" cy="44" rx="3" ry="8" transform="rotate(150 40 44)" />
+        <ellipse cx="30" cy="46" rx="3" ry="8" />
+        <ellipse cx="20" cy="44" rx="3" ry="8" transform="rotate(-150 20 44)" />
+        <ellipse cx="12" cy="38" rx="3" ry="8" transform="rotate(-120 12 38)" />
+        <ellipse cx="10" cy="28" rx="3" ry="8" transform="rotate(-90 10 28)" />
+        <ellipse cx="12" cy="18" rx="3" ry="8" transform="rotate(-60 12 18)" />
+        <ellipse cx="20" cy="10" rx="3" ry="8" transform="rotate(-30 20 10)" />
       </g>
-      <circle cx="32" cy="32" r="7" fill="#F39C12" />
-      <circle cx="32" cy="32" r="3" fill="#7D3C0E" />
+      {/* Inner petals — shorter, lighter */}
+      <g fill="#F39C12">
+        <ellipse cx="30" cy="16" rx="2.5" ry="5.5" />
+        <ellipse cx="38" cy="20" rx="2.5" ry="5.5" transform="rotate(50 38 20)" />
+        <ellipse cx="38" cy="34" rx="2.5" ry="5.5" transform="rotate(130 38 34)" />
+        <ellipse cx="30" cy="38" rx="2.5" ry="5.5" />
+        <ellipse cx="22" cy="34" rx="2.5" ry="5.5" transform="rotate(-130 22 34)" />
+        <ellipse cx="22" cy="20" rx="2.5" ry="5.5" transform="rotate(-50 22 20)" />
+      </g>
+      {/* Center */}
+      <circle cx="30" cy="27" r="4" fill="#F39C12" />
+      <circle cx="30" cy="27" r="2" fill="#7D3C0E" />
+      {/* Character */}
+      <text x="54" y="60" textAnchor="middle" fontFamily="serif" fontSize="12" fontWeight="900" fill="#C0392B">菊</text>
     </svg>
   );
 }
 
 function SunflowerSVG({ size }: { size: number }) {
+  // 花 Sunflower on a stem
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      {/* 12 yellow petals radiating from center */}
-      <g fill="#F1C40F">
-        <ellipse cx="32" cy="8" rx="3.5" ry="8" />
-        <ellipse cx="44" cy="11" rx="3.5" ry="8" transform="rotate(30 44 11)" />
-        <ellipse cx="53" cy="20" rx="3.5" ry="8" transform="rotate(60 53 20)" />
-        <ellipse cx="56" cy="32" rx="3.5" ry="8" transform="rotate(90 56 32)" />
-        <ellipse cx="53" cy="44" rx="3.5" ry="8" transform="rotate(120 53 44)" />
-        <ellipse cx="44" cy="53" rx="3.5" ry="8" transform="rotate(150 44 53)" />
-        <ellipse cx="32" cy="56" rx="3.5" ry="8" />
-        <ellipse cx="20" cy="53" rx="3.5" ry="8" transform="rotate(-150 20 53)" />
-        <ellipse cx="11" cy="44" rx="3.5" ry="8" transform="rotate(-120 11 44)" />
-        <ellipse cx="8" cy="32" rx="3.5" ry="8" transform="rotate(-90 8 32)" />
-        <ellipse cx="11" cy="20" rx="3.5" ry="8" transform="rotate(-60 11 20)" />
-        <ellipse cx="20" cy="11" rx="3.5" ry="8" transform="rotate(-30 20 11)" />
+      {/* Stem */}
+      <path d="M30 40 Q28 50 26 58" stroke="#388E3C" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      {/* Leaves */}
+      <path d="M28 48 Q18 44 12 38" stroke="#388E3C" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M27 52 Q36 50 42 46" stroke="#2E7D32" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      {/* Petals — 10 radiating */}
+      <g fill="#F1C40F" stroke="#F9A825" strokeWidth="0.4">
+        <ellipse cx="30" cy="6" rx="3.5" ry="8" />
+        <ellipse cx="40" cy="9" rx="3.5" ry="8" transform="rotate(36 40 9)" />
+        <ellipse cx="47" cy="18" rx="3.5" ry="8" transform="rotate(72 47 18)" />
+        <ellipse cx="47" cy="30" rx="3.5" ry="8" transform="rotate(108 47 30)" />
+        <ellipse cx="40" cy="37" rx="3.5" ry="8" transform="rotate(144 40 37)" />
+        <ellipse cx="30" cy="40" rx="3.5" ry="8" />
+        <ellipse cx="20" cy="37" rx="3.5" ry="8" transform="rotate(-144 20 37)" />
+        <ellipse cx="13" cy="30" rx="3.5" ry="8" transform="rotate(-108 13 30)" />
+        <ellipse cx="13" cy="18" rx="3.5" ry="8" transform="rotate(-72 13 18)" />
+        <ellipse cx="20" cy="9" rx="3.5" ry="8" transform="rotate(-36 20 9)" />
       </g>
-      {/* Dark brown seed-head center */}
-      <circle cx="32" cy="32" r="9" fill="#7D3C0E" />
-      <circle cx="32" cy="32" r="6" fill="#4E2509" />
+      {/* Seed head */}
+      <circle cx="30" cy="23" r="8" fill="#7D3C0E" />
+      <circle cx="30" cy="23" r="5" fill="#4E2509" />
+      {/* Character */}
+      <text x="54" y="60" textAnchor="middle" fontFamily="serif" fontSize="12" fontWeight="900" fill="#C0392B">花</text>
     </svg>
   );
 }
 
-function TulipSVG({ size }: { size: number }) {
+function SpringSVG({ size }: { size: number }) {
+  // 春 Spring — cherry/plum blossoms on a branch
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      {/* Tulip bud — closed 3-petal silhouette in magenta */}
-      <path
-        d="M22 38 Q22 14 32 10 Q42 14 42 38 Q42 46 32 46 Q22 46 22 38 Z"
-        fill="#C2185B"
-      />
-      {/* Petal separation lines */}
-      <path d="M32 10 L32 46" stroke="#7A0F37" strokeWidth="0.8" />
-      <path
-        d="M27 14 Q26 30 28 44"
-        stroke="#7A0F37"
-        strokeWidth="0.5"
-        fill="none"
-      />
-      <path
-        d="M37 14 Q38 30 36 44"
-        stroke="#7A0F37"
-        strokeWidth="0.5"
-        fill="none"
-      />
-      {/* Stem */}
-      <path
-        d="M32 46 L32 60"
-        stroke="#27AE60"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      {/* Leaf */}
-      <path
-        d="M32 52 Q22 52 18 44"
-        stroke="#27AE60"
-        strokeWidth="2.5"
-        fill="none"
-        strokeLinecap="round"
-      />
+      {/* Branch */}
+      <path d="M8 52 Q18 44 32 32 Q42 24 50 18" stroke="#5D4037" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M24 40 Q18 48 14 54" stroke="#5D4037" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      {/* Smaller blossom — 5 petals */}
+      <g fill="#F48FB1" stroke="#E91E63" strokeWidth="0.6">
+        <ellipse cx="17" cy="32" rx="3" ry="4.5" transform="rotate(-15 17 32)" />
+        <ellipse cx="22" cy="33" rx="3" ry="4.5" transform="rotate(55 22 33)" />
+        <ellipse cx="22" cy="39" rx="3" ry="4.5" transform="rotate(125 22 39)" />
+        <ellipse cx="16" cy="40" rx="3" ry="4.5" transform="rotate(-125 16 40)" />
+        <ellipse cx="14" cy="34" rx="3" ry="4.5" transform="rotate(-55 14 34)" />
+      </g>
+      <circle cx="18" cy="36" r="2" fill="#FFD700" />
+      {/* Larger blossom — 5 petals */}
+      <g fill="#F8BBD0" stroke="#EC407A" strokeWidth="0.5">
+        <ellipse cx="36" cy="22" rx="4.5" ry="6" transform="rotate(-15 36 22)" />
+        <ellipse cx="42" cy="24" rx="4.5" ry="6" transform="rotate(55 42 24)" />
+        <ellipse cx="40" cy="32" rx="4.5" ry="6" transform="rotate(125 40 32)" />
+        <ellipse cx="30" cy="32" rx="4.5" ry="6" transform="rotate(-125 30 32)" />
+        <ellipse cx="28" cy="24" rx="4.5" ry="6" transform="rotate(-55 28 24)" />
+      </g>
+      <circle cx="36" cy="27" r="3" fill="#FFD700" />
+      {/* Small bud */}
+      <circle cx="48" cy="20" r="3" fill="#F8BBD0" />
+      <circle cx="48" cy="20" r="1.2" fill="#E91E63" />
+      <text x="54" y="60" textAnchor="middle" fontFamily="serif" fontSize="12" fontWeight="900" fill="#C0392B">春</text>
     </svg>
   );
 }
 
 function SummerSVG({ size }: { size: number }) {
+  // 夏 Summer — lotus flower on a stem with a lily pad
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      <circle cx="32" cy="32" r="13" fill="#F39C12" />
-      <g stroke="#E67E22" strokeWidth="3" strokeLinecap="round">
-        <line x1="32" y1="6" x2="32" y2="14" />
-        <line x1="32" y1="50" x2="32" y2="58" />
-        <line x1="6" y1="32" x2="14" y2="32" />
-        <line x1="50" y1="32" x2="58" y2="32" />
-        <line x1="13" y1="13" x2="19" y2="19" />
-        <line x1="45" y1="45" x2="51" y2="51" />
-        <line x1="13" y1="51" x2="19" y2="45" />
-        <line x1="45" y1="19" x2="51" y2="13" />
+      {/* Stem */}
+      <path d="M32 38 Q30 48 28 56" stroke="#388E3C" strokeWidth="2" strokeLinecap="round" fill="none" />
+      {/* Lily pad */}
+      <ellipse cx="22" cy="52" rx="10" ry="4" fill="#388E3C" />
+      <path d="M22 48 L22 52" stroke="#2E7D32" strokeWidth="0.6" />
+      {/* Lotus — layered petals */}
+      <g fill="#F8BBD0" stroke="#F06292" strokeWidth="0.5">
+        <ellipse cx="20" cy="30" rx="5" ry="10" transform="rotate(-30 20 30)" />
+        <ellipse cx="44" cy="30" rx="5" ry="10" transform="rotate(30 44 30)" />
       </g>
+      <g fill="#F06292" stroke="#E91E63" strokeWidth="0.5">
+        <ellipse cx="24" cy="22" rx="4.5" ry="12" transform="rotate(-12 24 22)" />
+        <ellipse cx="40" cy="22" rx="4.5" ry="12" transform="rotate(12 40 22)" />
+        <ellipse cx="32" cy="20" rx="4" ry="13" />
+      </g>
+      <circle cx="32" cy="28" r="3" fill="#FFD54F" />
+      <text x="54" y="60" textAnchor="middle" fontFamily="serif" fontSize="12" fontWeight="900" fill="#C0392B">夏</text>
     </svg>
   );
 }
 
 function AutumnSVG({ size }: { size: number }) {
+  // 秋 Autumn — maple leaves on a branch
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      <path
-        d="M32 8 L36 18 L46 14 L42 26 L54 28 L44 36 L52 46 L38 44 L36 56 L32 48 L28 56 L26 44 L12 46 L20 36 L10 28 L22 26 L18 14 L28 18 Z"
-        fill="#C0392B"
-      />
-      <line x1="32" y1="32" x2="32" y2="56" stroke="#7D3C0E" strokeWidth="2" />
+      {/* Branch */}
+      <path d="M8 54 Q24 40 40 26 Q50 18 56 12" stroke="#5D4037" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M30 36 Q26 44 22 50" stroke="#5D4037" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      {/* Maple leaves */}
+      <path d="M30 22 L28 14 L32 18 L36 12 L34 20 L40 18 L36 24 L38 30 L32 26 L26 30 L28 24 L22 20 Z" fill="#E53935" />
+      <path d="M46 16 L44 10 L48 13 L50 8 L49 14 L54 14 L50 18 L52 22 L47 19 L44 22 L45 18 L40 16 Z" fill="#FF7043" />
+      <path d="M18 38 L16 32 L20 35 L22 30 L21 36 L26 36 L22 40 L24 44 L19 41 L16 44 L17 40 L12 38 Z" fill="#FFA726" />
+      <path d="M40 36 L39 32 L42 34 L44 30 L43 35 L46 34 L44 38 L45 42 L41 39 L38 42 L39 38 L36 36 Z" fill="#EF5350" transform="rotate(20 40 36)" />
+      <text x="54" y="60" textAnchor="middle" fontFamily="serif" fontSize="12" fontWeight="900" fill="#C0392B">秋</text>
     </svg>
   );
 }
 
 function WinterSVG({ size }: { size: number }) {
+  // 冬 Winter — bare branch with snow and a plum blossom
   return (
     <svg viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
-      <g stroke="#3498DB" strokeWidth="3" strokeLinecap="round" fill="none">
-        <line x1="32" y1="6" x2="32" y2="58" />
-        <line x1="6" y1="32" x2="58" y2="32" />
-        <line x1="13" y1="13" x2="51" y2="51" />
-        <line x1="13" y1="51" x2="51" y2="13" />
-        <line x1="32" y1="10" x2="28" y2="14" />
-        <line x1="32" y1="10" x2="36" y2="14" />
-        <line x1="32" y1="54" x2="28" y2="50" />
-        <line x1="32" y1="54" x2="36" y2="50" />
-        <line x1="10" y1="32" x2="14" y2="28" />
-        <line x1="10" y1="32" x2="14" y2="36" />
-        <line x1="54" y1="32" x2="50" y2="28" />
-        <line x1="54" y1="32" x2="50" y2="36" />
+      {/* Bare branch */}
+      <path d="M6 54 Q20 42 34 30 Q46 20 56 12" stroke="#5D4037" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M26 38 Q22 46 16 52" stroke="#5D4037" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M42 22 Q48 26 52 34" stroke="#5D4037" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      {/* Snow on branches */}
+      <ellipse cx="20" cy="42" rx="6" ry="2.5" fill="white" stroke="#B0BEC5" strokeWidth="0.5" />
+      <ellipse cx="40" cy="24" rx="5" ry="2" fill="white" stroke="#B0BEC5" strokeWidth="0.5" />
+      <ellipse cx="52" cy="14" rx="4" ry="1.5" fill="white" stroke="#B0BEC5" strokeWidth="0.5" />
+      {/* Single plum blossom — winter bloomer */}
+      <g fill="#F8BBD0" stroke="#E91E63" strokeWidth="0.5">
+        <ellipse cx="32" cy="25" rx="3" ry="4.5" transform="rotate(-15 32 25)" />
+        <ellipse cx="37" cy="28" rx="3" ry="4.5" transform="rotate(55 37 28)" />
+        <ellipse cx="36" cy="34" rx="3" ry="4.5" transform="rotate(125 36 34)" />
+        <ellipse cx="30" cy="34" rx="3" ry="4.5" transform="rotate(-125 30 34)" />
+        <ellipse cx="29" cy="28" rx="3" ry="4.5" transform="rotate(-55 29 28)" />
       </g>
-      <circle cx="32" cy="32" r="3" fill="#3498DB" />
+      <circle cx="33" cy="30" r="2" fill="#E91E63" />
+      {/* Snowflakes */}
+      <circle cx="10" cy="12" r="1.5" fill="#B0BEC5" opacity="0.6" />
+      <circle cx="28" cy="8" r="1" fill="#B0BEC5" opacity="0.5" />
+      <circle cx="48" cy="42" r="1.2" fill="#B0BEC5" opacity="0.5" />
+      <text x="54" y="60" textAnchor="middle" fontFamily="serif" fontSize="12" fontWeight="900" fill="#C0392B">冬</text>
     </svg>
   );
 }
 
 const FLOWER_SVGS = [PlumSVG, OrchidSVG, ChrysanthemumSVG, SunflowerSVG];
-const SEASON_SVGS = [TulipSVG, SummerSVG, AutumnSVG, WinterSVG];
+const SEASON_SVGS = [SpringSVG, SummerSVG, AutumnSVG, WinterSVG];
 
 /* ───── Joker ───── */
 // Joker = "JOKER" red wordmark on top + ornate "J" letter inside a starburst.

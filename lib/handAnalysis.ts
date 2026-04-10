@@ -1,4 +1,5 @@
 import type { TileData, TileType } from "./tiles";
+import { tileKey } from "./tiles";
 
 /** Suit counts in a hand */
 export type SuitCounts = { bam: number; crack: number; dot: number };
@@ -207,10 +208,6 @@ export function ratePass(
     feedback: "Reasonable pass. Keep refining as you see what comes back.",
     suggestion: null,
   };
-}
-
-function tileKey(t: TileData): string {
-  return `${t.type}-${t.value ?? ""}`;
 }
 
 function capitalize(s: string): string {

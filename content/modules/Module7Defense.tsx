@@ -54,7 +54,7 @@ function ThreatStage({
     tone === "alarm"
       ? "border-[var(--color-red)] bg-[#FFF6F4]"
       : tone === "alert"
-        ? "border-[var(--color-accent)] bg-[#F0F7FC]"
+        ? "border-[var(--color-accent)] bg-[#E8F5EC]"
         : "border-[var(--color-green)] bg-[#F4FBF6]";
   const labelColor =
     tone === "alarm"
@@ -345,7 +345,7 @@ export default function Module7Defense() {
                 read. Normal play.
               </p>
             </div>
-            <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#F0F7FC] p-3">
+            <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-3">
               <div className="font-serif text-sm font-black text-[var(--color-accent)]">
                 1 exposure
               </div>
@@ -599,6 +599,7 @@ export default function Module7Defense() {
       <TileCountingDrill />
 
       <ModuleNav
+        currentModuleNum={7}
         prev={
           adj.prev && {
             href: adj.prev.href,

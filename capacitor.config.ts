@@ -5,9 +5,8 @@ const config: CapacitorConfig = {
   appName: "MAHJ",
   webDir: "out",
   server: {
-    // In production, the app loads from the bundled files
-    // During development, you can point to your dev server:
-    // url: "http://localhost:3000",
+    // Point to dev server for live testing
+    url: "http://localhost:3000",
   },
   ios: {
     contentInset: "automatic",

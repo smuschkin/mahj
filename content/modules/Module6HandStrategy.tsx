@@ -29,7 +29,7 @@ function PriorityRow({
     tone === "never"
       ? "border-[var(--color-red)] bg-[#FFF6F4]"
       : tone === "danger"
-        ? "border-[var(--color-accent)] bg-[#F0F7FC]"
+        ? "border-[var(--color-accent)] bg-[#E8F5EC]"
         : "border-[var(--color-green)] bg-[#F4FBF6]";
   return (
     <div className={`grid grid-cols-[60px_1fr] gap-3 rounded-lg border-l-4 p-3 ${colors}`}>
@@ -179,7 +179,7 @@ export default function Module6HandStrategy() {
                 Stay open. Pass tiles that fit none of them.
               </div>
             </div>
-            <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#F0F7FC] p-3 text-center">
+            <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-3 text-center">
               <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
                 After Charleston
               </div>
@@ -320,7 +320,7 @@ export default function Module6HandStrategy() {
                     <span className="inline-block rounded-md border-2 border-[var(--color-green)] bg-[#E8F5E9] px-2.5 py-1 text-[11px] font-bold text-[var(--color-green)]">
                       YES → 100% safe ✓
                     </span>
-                    <span className="inline-block rounded-md border-2 border-[var(--color-accent)] bg-[#F0F7FC] px-2.5 py-1 text-[11px] font-bold text-[var(--color-accent)]">
+                    <span className="inline-block rounded-md border-2 border-[var(--color-accent)] bg-[#E8F5EC] px-2.5 py-1 text-[11px] font-bold text-[var(--color-accent)]">
                       NO → Risky ⚠ Be careful
                     </span>
                   </div>
@@ -570,6 +570,7 @@ export default function Module6HandStrategy() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={6}
         prev={
           adj.prev && {
             href: adj.prev.href,

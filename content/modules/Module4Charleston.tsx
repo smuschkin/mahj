@@ -603,6 +603,7 @@ export default function Module4Charleston() {
       <CharlestonSim />
 
       <ModuleNav
+        currentModuleNum={4}
         prev={
           adj.prev && {
             href: adj.prev.href,

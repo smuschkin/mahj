@@ -162,7 +162,7 @@ export default function Module2ReadingTheCard() {
                 choose which suit.
               </p>
             </div>
-            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-[#F0F5FA] p-4">
+            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-[#E8F5EC] p-4">
               <h4 className="mb-1 font-serif text-sm font-black text-[var(--color-mid)]">
                 Multiple colors
               </h4>
@@ -661,6 +661,7 @@ export default function Module2ReadingTheCard() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={2}
         prev={
           adj.prev && {
             href: adj.prev.href,

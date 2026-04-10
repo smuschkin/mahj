@@ -116,6 +116,11 @@ export function sortHand(hand: TileData[]): TileData[] {
   });
 }
 
+/** Unique key for matching tiles by type+value (not instance ID). */
+export function tileKey(t: TileData): string {
+  return `${t.type}-${t.value ?? ""}`;
+}
+
 /** Human-readable label for a tile. */
 export function tileLabel(t: TileData): string {
   switch (t.type) {
@@ -130,9 +135,8 @@ export function tileLabel(t: TileData): string {
     case "dragon":
       return `${String(t.value).charAt(0).toUpperCase()}${String(t.value).slice(1)} Dragon`;
     case "flower":
-      return `Flower ${t.value}`;
     case "season":
-      return `Season ${t.value}`;
+      return "Flower";
     case "joker":
       return "Joker";
   }

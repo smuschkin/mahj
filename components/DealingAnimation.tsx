@@ -18,7 +18,7 @@ const SEAT_LABELS: Record<Seat, string> = {
   North: "Left",
 };
 const SEAT_COLORS: Record<Seat, string> = {
-  East: "#6594C0",
+  East: "#2D8B5E",
   South: "#27AE60",
   West: "#E67E22",
   North: "#8E44AD",

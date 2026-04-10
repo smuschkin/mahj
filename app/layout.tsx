@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   description:
     "An independent educational app for learning American Mahjong from scratch. Not affiliated with the National Mah Jongg League.",
   manifest: "/manifest.json",
+  icons: {
+    icon: { url: "/favicon.svg?v=9", type: "image/svg+xml" },
+    apple: "/icons/icon-192.png",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -39,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable} h-full antialiased`}>
       <head>
-        <meta name="theme-color" content="#334155" />
+        <meta name="theme-color" content="#1A4D2E" />
       </head>
       <body className="min-h-full flex flex-col">
         <TopNav />

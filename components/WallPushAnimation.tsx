@@ -42,9 +42,9 @@ export function WallPushAnimation() {
 
   // Wall color
   const wallFill =
-    phase === "pushing" || phase === "pushed" ? "#E1ECF5" : "#FAF7EC";
+    phase === "pushing" || phase === "pushed" ? "#D0E8D6" : "#FAF7EC";
   const wallStroke =
-    phase === "pushing" || phase === "pushed" ? "#6594C0" : "#C9BC8A";
+    phase === "pushing" || phase === "pushed" ? "#5A9E72" : "#C9BC8A";
 
   // Hand position — follows the right end of the wall
   const handX = phase === "pushing" || phase === "pushed" ? 168 : 190;
@@ -107,7 +107,7 @@ export function WallPushAnimation() {
           cx={20}
           cy={58}
           r={3}
-          fill="#6594C0"
+          fill="#5A9E72"
           style={{
             opacity: phase === "pushing" || phase === "pushed" ? 1 : 0.3,
             transition: "opacity 0.3s",
@@ -136,17 +136,17 @@ export function WallPushAnimation() {
         {/* Arrow showing push direction */}
         {(phase === "pushing" || phase === "pushed") && (
           <g opacity={0.6}>
-            <line x1={175} y1={55} x2={170} y2={30} stroke="#6594C0" strokeWidth={1.5} markerEnd="url(#arrowhead)" />
+            <line x1={175} y1={55} x2={170} y2={30} stroke="#5A9E72" strokeWidth={1.5} markerEnd="url(#arrowhead)" />
             <defs>
               <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
-                <polygon points="0 0, 6 2, 0 4" fill="#6594C0" />
+                <polygon points="0 0, 6 2, 0 4" fill="#5A9E72" />
               </marker>
             </defs>
           </g>
         )}
 
         {/* Labels */}
-        <text x={16} y={42} fontSize="7" fontWeight="bold" fill="#6594C0" fontFamily="sans-serif">
+        <text x={16} y={42} fontSize="7" fontWeight="bold" fill="#5A9E72" fontFamily="sans-serif">
           L (pivot)
         </text>
         <text
@@ -154,7 +154,7 @@ export function WallPushAnimation() {
           y={42}
           fontSize="7"
           fontWeight="bold"
-          fill="#6594C0"
+          fill="#5A9E72"
           fontFamily="sans-serif"
           style={{
             transition: "all 0.6s ease-in-out",
@@ -166,7 +166,7 @@ export function WallPushAnimation() {
 
         {/* Status text */}
         <text x={110} y={108} textAnchor="middle" fontSize="9" fontWeight="bold" fontFamily="sans-serif"
-          fill={phase === "pushed" ? "#27AE60" : phase === "pushing" ? "#6594C0" : "#71717a"}
+          fill={phase === "pushed" ? "#27AE60" : phase === "pushing" ? "#5A9E72" : "#71717a"}
         >
           {phase === "waiting" || phase === "resetting"
             ? "Wall sitting against your rack"

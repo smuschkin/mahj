@@ -576,7 +576,7 @@ function ScenarioView({
           <p className="text-center text-base font-bold">
             {picked === scenario.correctIndex ? "✓ Correct!" : "✗ Not quite."}
           </p>
-          <div className="mt-2 rounded-md bg-[#F0F5FA] p-3 text-center text-[13px] text-zinc-700">
+          <div className="mt-2 rounded-md bg-[#E8F5EC] p-3 text-center text-[13px] text-zinc-700">
             {scenario.explanation}
           </div>
           <div className="mt-4 text-center">

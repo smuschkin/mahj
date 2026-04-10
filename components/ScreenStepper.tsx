@@ -14,7 +14,6 @@ export function ScreenStepper({
   moduleNum,
 }: {
   children: ReactNode;
-  /** If provided, progress is tracked in localStorage under this module number. */
   moduleNum?: number;
 }) {
   const screens = Children.toArray(children);
@@ -26,7 +25,6 @@ export function ScreenStepper({
   const isLast = current === total - 1;
   const nextModule = moduleNum !== undefined ? getAdjacentModules(moduleNum).next : undefined;
 
-  // Restore saved step on mount
   useEffect(() => {
     if (moduleNum === undefined) {
       setRestored(true);
@@ -45,7 +43,6 @@ export function ScreenStepper({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [moduleNum]);
 
-  // Save step + mark complete whenever step changes (after restore)
   useEffect(() => {
     if (moduleNum === undefined || !restored) return;
     setModuleStep(moduleNum, current);
@@ -66,9 +63,9 @@ export function ScreenStepper({
             onClick={() => setCurrent(i)}
             className={`h-2.5 rounded-full transition-all ${
               i === current
-                ? "w-8 bg-[var(--color-accent)]"
+                ? "w-8 bg-[#C8A951]"
                 : i < current
-                  ? "w-2.5 bg-[var(--color-mid)]"
+                  ? "w-2.5 bg-[#1A4D2E]"
                   : "w-2.5 bg-[#D6CFB8]"
             }`}
           />
@@ -76,7 +73,7 @@ export function ScreenStepper({
       </div>
 
       {/* Step indicator */}
-      <p className="mb-3 text-center text-xs uppercase tracking-[2px] text-zinc-500 font-bold">
+      <p className="mb-3 text-center text-[13px] uppercase tracking-[2px] text-zinc-500 font-bold">
         Step {current + 1} of {total}
       </p>
 
@@ -89,29 +86,29 @@ export function ScreenStepper({
           type="button"
           onClick={() => setCurrent((c) => Math.max(0, c - 1))}
           disabled={isFirst}
-          className="rounded-md border-2 border-[var(--color-mid)] bg-white px-3 sm:px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-[var(--color-mid)] transition disabled:cursor-not-allowed disabled:opacity-30 enabled:hover:-translate-y-0.5"
+          className="rounded-xl border-2 border-[#1A4D2E] bg-white px-3 sm:px-5 py-2.5 text-[15px] font-bold uppercase tracking-wider text-[#1A4D2E] transition disabled:cursor-not-allowed disabled:opacity-30 enabled:hover:-translate-y-0.5"
         >
-          ← Back
+          &larr; Back
         </button>
-        <span className="text-xs text-zinc-400">
+        <span className="text-[13px] text-zinc-400">
           {current + 1} / {total}
         </span>
         {isLast && nextModule ? (
           <button
             type="button"
             onClick={() => router.push(nextModule.href)}
-            className="rounded-md border-2 border-[var(--color-mid)] bg-[var(--color-mid)] px-4 sm:px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-[var(--color-accent)] transition hover:-translate-y-0.5"
+            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-4 sm:px-6 py-2.5 text-[15px] font-bold uppercase tracking-wider text-[#C8A951] shadow-sm transition hover:-translate-y-0.5"
           >
-            Next Module →
+            Next Module &rarr;
           </button>
         ) : (
           <button
             type="button"
             onClick={() => setCurrent((c) => Math.min(total - 1, c + 1))}
             disabled={isLast}
-            className="rounded-md border-2 border-[var(--color-mid)] bg-[var(--color-mid)] px-4 sm:px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-[var(--color-accent)] transition disabled:cursor-not-allowed disabled:opacity-50 enabled:hover:-translate-y-0.5"
+            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-4 sm:px-6 py-2.5 text-[15px] font-bold uppercase tracking-wider text-white shadow-sm transition disabled:cursor-not-allowed disabled:opacity-50 enabled:hover:-translate-y-0.5"
           >
-            {isLast ? "Done ✓" : "Next →"}
+            {isLast ? "Done \u2713" : "Next \u2192"}
           </button>
         )}
       </div>

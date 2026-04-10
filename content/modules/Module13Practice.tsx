@@ -1062,6 +1062,7 @@ export default function Module13Practice() {
       </Callout>
 
       <ModuleNav
+        currentModuleNum={13}
         prev={
           adj.prev && {
             href: adj.prev.href,
@@ -1147,7 +1148,7 @@ function PuzzlePlaying({
           <p className="text-center text-base font-bold">
             {correct ? "✓ Correct!" : "✗ Not quite."}
           </p>
-          <div className="mt-2 rounded-md bg-[#F0F5FA] p-3 text-center text-[13px] text-zinc-700">
+          <div className="mt-2 rounded-md bg-[#E8F5EC] p-3 text-center text-[13px] text-zinc-700">
             {puzzle.explanation}
           </div>
           <div className="mt-4 text-center">

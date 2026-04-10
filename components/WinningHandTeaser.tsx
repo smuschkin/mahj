@@ -10,7 +10,7 @@ export function WinningHandTeaser() {
   ];
 
   return (
-    <div className="my-6 rounded-2xl border-2 border-[var(--color-accent)] bg-gradient-to-br from-[#F0F5FA] to-[#E1ECF5] p-7 shadow-[0_6px_18px_rgba(101,148,192,0.2)]">
+    <div className="my-6 rounded-2xl border-2 border-[var(--color-accent)] bg-gradient-to-br from-[#E8F5EC] to-[#D0E8D6] p-7 shadow-[0_6px_18px_rgba(45,139,94,0.15)]">
       <h3 className="font-serif text-xl md:text-2xl font-black text-[var(--color-mid)]">
         🏆 What a winning hand looks like
       </h3>

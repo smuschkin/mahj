@@ -373,7 +373,7 @@ function CountingView({
         <p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
           How many {s.targetLabel}s are still unseen?
         </p>
-        <div className="inline-block rounded-xl border-2 border-[var(--color-accent)] bg-[#F0F5FA] p-4 shadow-sm">
+        <div className="inline-block rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-4 shadow-sm">
           <Tile type={s.targetTile.type} value={s.targetTile.value} size="md" showLabel />
         </div>
         <p className="mt-1 text-[10px] text-zinc-400">
@@ -464,7 +464,7 @@ function CountingView({
               ? "✓ Correct!"
               : `✗ Not quite — ${s.remaining} remain.`}
           </p>
-          <div className="mt-2 rounded-md bg-[#F0F5FA] p-3 text-center text-[13px] text-zinc-700">
+          <div className="mt-2 rounded-md bg-[#E8F5EC] p-3 text-center text-[13px] text-zinc-700">
             <strong>{s.totalCopies} total</strong>{" "}copies exist.{" "}
             <strong>{s.visibleCount}</strong>{" "}are visible (discards + exposures).{" "}
             <strong>{s.remaining}</strong>{" "}are still unseen in players&apos; hands

@@ -518,6 +518,7 @@ export default function Module5JokersCalling() {
       <CallingDrill />
 
       <ModuleNav
+        currentModuleNum={5}
         prev={
           adj.prev && {
             href: adj.prev.href,

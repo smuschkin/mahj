@@ -28,7 +28,7 @@ function MistakeCard({
 }) {
   const costColors =
     costTone === "warn"
-      ? "border-[var(--color-accent)] bg-[#F0F7FC]"
+      ? "border-[var(--color-accent)] bg-[#E8F5EC]"
       : "border-[var(--color-red)] bg-[#FFF6F4]";
   return (
     <div className="my-3 rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
@@ -557,6 +557,7 @@ export default function Module10Mistakes() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={10}
         prev={
           adj.prev && {
             href: adj.prev.href,

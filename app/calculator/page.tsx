@@ -165,7 +165,7 @@ export default function ScoringCalculator() {
         </fieldset>
 
         {/* ── Results ── */}
-        <div className="rounded-xl border-2 border-[var(--color-accent)] bg-[#F0F5FA] p-5">
+        <div className="rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-5">
           <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
             Payout breakdown
           </p>

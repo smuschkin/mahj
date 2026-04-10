@@ -761,6 +761,7 @@ export default function Module12FirstGame() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={12}
         prev={
           adj.prev && {
             href: adj.prev.href,

@@ -419,6 +419,7 @@ export default function Module8Etiquette() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={8}
         prev={
           adj.prev && {
             href: adj.prev.href,

@@ -270,9 +270,10 @@ export default function Module1TileTrainer() {
             <Tile type="season" value={4} size="md" />
           </TileRow>
           <Callout variant="tip">
-            Since there&apos;s only 1 of each flower, you&apos;ll need{" "}
-            <strong>jokers to complete a group of 3 or 4</strong>{" "}flowers. For
-            example, 1 real flower + 2 jokers = a valid group of 3.
+            At the table, all 8 flower-group tiles (flowers and seasons) are
+            interchangeable — they&apos;re all just called{" "}
+            <strong>&quot;Flowers.&quot;</strong>{" "}Any combination of them counts
+            as matching when building a group.
           </Callout>
         </LessonScreen>
 
@@ -482,6 +483,7 @@ export default function Module1TileTrainer() {
       </ScreenStepper>
 
       <ModuleNav
+        currentModuleNum={1}
         prev={
           adj.prev && {
             href: adj.prev.href,
