@@ -156,7 +156,7 @@ export default function Module4Charleston() {
           <p className="mt-2 text-[11px] font-bold uppercase tracking-wider text-zinc-400">
             1st Charleston (mandatory)
           </p>
-          <div className="my-2 grid grid-cols-3 gap-3">
+          <div className="my-2 grid grid-cols-3 gap-1.5 sm:gap-3">
             <DirCell arrow="→" name="Right" who="Pass 1" tone="right" />
             <DirCell arrow="↑" name="Across" who="Pass 2" tone="across" />
             <DirCell arrow="←" name="Left" who="Pass 3" tone="left" />
@@ -165,7 +165,7 @@ export default function Module4Charleston() {
           <p className="mt-3 text-[11px] font-bold uppercase tracking-wider text-zinc-400">
             2nd Charleston (can be stopped before it starts)
           </p>
-          <div className="my-2 grid grid-cols-3 gap-3">
+          <div className="my-2 grid grid-cols-3 gap-1.5 sm:gap-3">
             <DirCell arrow="←" name="Left" who="Pass 4" tone="left" />
             <DirCell arrow="↑" name="Across" who="Pass 5" tone="across" />
             <DirCell arrow="→" name="Right" who="Pass 6" tone="right" />
@@ -219,7 +219,7 @@ export default function Module4Charleston() {
             </div>
             <div className="rounded-md border-l-4 border-[var(--color-green)] bg-white p-3 text-[13px]">
               <div className="font-black text-[var(--color-mid)]">✅ Keep — pair of 5 Cracks</div>
-              Pairs are valuable — they can grow into pungs or stay as the final pair.
+              Pairs are valuable — they can grow into groups of 3 or stay as the final pair.
             </div>
             <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
               <div className="font-black text-[var(--color-mid)]">❌ Pass — lone 1 Crack</div>

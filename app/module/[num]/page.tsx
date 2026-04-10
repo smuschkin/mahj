@@ -1,5 +1,10 @@
 import { notFound } from "next/navigation";
-import { getModule, getAdjacentModules } from "@/lib/modules";
+import { getModule, getAdjacentModules, modules } from "@/lib/modules";
+import { ModuleLockGuard } from "@/components/ModuleLockGuard";
+
+export function generateStaticParams() {
+  return modules.map((m) => ({ num: String(m.num) }));
+}
 import Module0Welcome from "@/content/modules/Module0Welcome";
 import Module1TileTrainer from "@/content/modules/Module1TileTrainer";
 import Module2ReadingTheCard from "@/content/modules/Module2ReadingTheCard";
@@ -48,7 +53,11 @@ export default async function ModulePage({
     return <ComingSoon name={mod.name} num={moduleNum} prev={adj.prev} />;
   }
 
-  return <Component />;
+  return (
+    <ModuleLockGuard moduleNum={moduleNum} moduleName={mod.name}>
+      <Component />
+    </ModuleLockGuard>
+  );
 }
 
 import Link from "next/link";

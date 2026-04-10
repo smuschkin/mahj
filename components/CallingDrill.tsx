@@ -523,7 +523,7 @@ function ScenarioView({
         Your hand (13 tiles)
       </p>
       <div className="my-2 rounded-lg border border-dashed border-[var(--color-border)] bg-[var(--color-light)] p-3">
-        <div className="flex flex-wrap items-end justify-center gap-1.5">
+        <div className="flex flex-wrap items-end justify-center gap-1 sm:gap-1.5">
           {scenario.hand.map((t, i) => (
             <Tile key={i} type={t.type} value={t.value} size="sm" />
           ))}

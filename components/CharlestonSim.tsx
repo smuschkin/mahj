@@ -320,7 +320,7 @@ export function CharlestonSim() {
             <p className="mb-2 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--color-green)]">
               3 tiles received
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-2">
+            <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
               {s.justReceived.map((t) => (
                 <div key={t.id} className="rounded-md ring-2 ring-[var(--color-green)] ring-offset-2">
                   <Tile type={t.type} value={t.value} size="sm" showLabel />
@@ -541,7 +541,7 @@ function TileGrid({
 }) {
   return (
     <div className="my-3 rounded-lg border border-dashed border-[var(--color-border)] bg-[var(--color-light)] p-4">
-      <div className="flex flex-wrap items-end justify-center gap-2">
+      <div className="flex flex-wrap items-end justify-center gap-1 sm:gap-2">
         {hand.map((t) => {
           const isSel = selected.has(t.id);
           const isJoker = t.type === "joker";

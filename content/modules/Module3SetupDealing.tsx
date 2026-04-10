@@ -365,7 +365,7 @@ export default function Module3SetupDealing() {
                         className={`flex h-16 w-14 flex-col items-center justify-center rounded-t-md border-2 font-serif font-black shadow-sm ${tileClass(stack.top.kind)}`}
                       >
                         <span className="text-lg leading-none">{stack.top.num}</span>
-                        <span className="mt-0.5 text-center text-[8px] font-bold uppercase tracking-wider leading-tight">
+                        <span className="mt-0.5 text-center text-[10px] font-bold uppercase tracking-wider leading-tight">
                           {stack.top.who}
                         </span>
                       </div>
@@ -373,7 +373,7 @@ export default function Module3SetupDealing() {
                         className={`flex h-16 w-14 flex-col items-center justify-center rounded-b-md border-2 border-t-0 font-serif font-black shadow-sm ${tileClass(stack.bottom.kind)}`}
                       >
                         <span className="text-lg leading-none">{stack.bottom.num}</span>
-                        <span className="mt-0.5 text-center text-[8px] font-bold uppercase tracking-tight leading-tight">
+                        <span className="mt-0.5 text-center text-[10px] font-bold uppercase tracking-tight leading-tight">
                           {stack.bottom.who}
                         </span>
                       </div>

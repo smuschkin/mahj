@@ -15,7 +15,7 @@ export function TileRow({
       : "bg-[var(--color-light)] border border-dashed border-[var(--color-border)]";
   return (
     <div className={`my-4 rounded-lg ${bg} p-4`}>
-      <div className="flex flex-wrap items-end justify-center gap-3">{children}</div>
+      <div className="flex flex-wrap items-end justify-center gap-1.5 sm:gap-3">{children}</div>
       {caption && (
         <p className="mt-3 text-center text-[13px] italic text-zinc-600">{caption}</p>
       )}

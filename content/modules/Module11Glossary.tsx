@@ -615,10 +615,7 @@ const ENTRIES: Entry[] = [
     modules: [4],
     definition: (
       <>
-        Mnemonic for the Charleston sequence: <strong>R</strong>ight →{" "}
-        <strong>O</strong>ver (across) → <strong>L</strong>eft → <strong>L</strong>
-        eft → <strong>O</strong>ver → <strong>R</strong>ight → optional courtesy.
-        The two halves mirror each other around the &quot;LL&quot; in the middle.
+        Mnemonic for the Charleston sequence: <strong>R</strong>ight → <strong>O</strong>ver (across) → <strong>L</strong>eft → <strong>L</strong>eft → <strong>O</strong>ver → <strong>R</strong>ight → optional courtesy. The two halves mirror each other around the &quot;LL&quot; in the middle.
       </>
     ),
   },

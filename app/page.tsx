@@ -2,11 +2,10 @@ import Link from "next/link";
 import { Cover } from "@/components/Cover";
 import { PageWrap } from "@/components/PageWrap";
 import { SectionHeader } from "@/components/SectionHeader";
-import { ModuleProgressBadge } from "@/components/ModuleProgressBadge";
 import { ResetProgressButton } from "@/components/ResetProgressButton";
 import { DailyPuzzle } from "@/components/DailyPuzzle";
 import { ProgressDashboard } from "@/components/ProgressDashboard";
-import { modules } from "@/lib/modules";
+import { ModuleList } from "@/components/ModuleList";
 
 export default function Home() {
   return (
@@ -30,21 +29,7 @@ export default function Home() {
 
       <SectionHeader>Pick Your Lesson</SectionHeader>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {modules.map((m) => (
-          <Link
-            key={m.num}
-            href={m.href}
-            className="flex items-center gap-3 rounded-lg border-l-4 border-[var(--color-accent)] bg-white px-4 py-3 text-sm shadow-sm transition-transform hover:-translate-y-0.5"
-          >
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-mid)] text-xs font-black text-white">
-              {m.num}
-            </span>
-            <span className="font-serif font-bold text-[var(--color-dark)]">{m.name}</span>
-            <ModuleProgressBadge moduleNum={m.num} />
-          </Link>
-        ))}
-      </div>
+      <ModuleList />
 
       {/* ── Daily Puzzle ── */}
       <div className="mt-9 mb-9">

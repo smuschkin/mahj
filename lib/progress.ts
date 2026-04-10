@@ -80,6 +80,15 @@ export function resetProgress(): void {
   }
 }
 
+/* ───── Module locking ───── */
+
+/** Module 0 is always unlocked. Every other module requires the previous one to be completed. */
+export function isModuleUnlocked(num: number): boolean {
+  if (num === 0) return true;
+  const p = readProgress();
+  return p[num - 1]?.status === "completed";
+}
+
 /* ───── React hooks ───── */
 
 /**

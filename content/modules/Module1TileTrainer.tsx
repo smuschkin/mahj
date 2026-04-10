@@ -272,8 +272,8 @@ export default function Module1TileTrainer() {
           </TileRow>
           <Callout variant="tip">
             Since there&apos;s only 1 of each flower, you&apos;ll need{" "}
-            <strong>jokers to complete a pung or kong</strong> of flowers. For
-            example, 1 real flower + 2 jokers = a valid pung.
+            <strong>jokers to complete a group of 3 or 4</strong> flowers. For
+            example, 1 real flower + 2 jokers = a valid group of 3.
           </Callout>
         </LessonScreen>
 
@@ -292,9 +292,10 @@ export default function Module1TileTrainer() {
             ))}
           </TileRow>
           <Callout variant="warn">
-            <strong>Big rule:</strong> Jokers <strong>cannot</strong> be used in pairs.
-            We&apos;ll explain why in Module 5. For now, just remember:{" "}
-            <strong>Jokers in pungs and kongs — never in pairs.</strong>
+            <strong>Big rule:</strong> Jokers can only fill in for groups of{" "}
+            <strong>3 or more identical tiles</strong>. They{" "}
+            <strong>cannot</strong> be used in pairs (groups of 2). More on
+            this in Module 5.
           </Callout>
         </LessonScreen>
 
@@ -442,9 +443,9 @@ export default function Module1TileTrainer() {
               {
                 question: "Jokers can be used in…",
                 options: [
-                  "Pairs only",
-                  "Pungs and pairs",
-                  "Pungs and Kongs (3 or more of a kind)",
+                  "Pairs (2 of a kind) only",
+                  "Pairs and groups of 3",
+                  "Groups of 3 or more identical tiles",
                   "Anywhere",
                 ],
                 correct: 2,

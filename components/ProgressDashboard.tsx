@@ -6,13 +6,7 @@ import { modules } from "@/lib/modules";
 export function ProgressDashboard() {
   const { progress, mounted } = useProgress();
 
-  if (!mounted) {
-    return (
-      <div className="mb-6 rounded-xl border-2 border-[var(--color-border)] bg-[var(--color-light)] p-5">
-        <div className="h-16 animate-pulse rounded-lg bg-zinc-200" />
-      </div>
-    );
-  }
+  if (!mounted) return null;
 
   const total = modules.length;
   const completed = modules.filter(

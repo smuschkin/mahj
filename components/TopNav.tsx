@@ -44,7 +44,7 @@ export function TopNav() {
               href="/"
               className="rounded-md px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[var(--color-mid)] transition hover:bg-white/60"
             >
-              All Modules
+              Modules
             </Link>
           )}
           <Link
