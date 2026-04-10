@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-red: #DC5044;
+  --color-green: #3DAA6D;
+  /* Brand accent — brighter sky blue for good contrast on dark + mid backgrounds. */
+  --color-accent: #7CB4D8;
+  --color-ivory: #FDF6E3;
+  --color-dark: #334155;
+  --color-mid: #475569;
+  --color-light: #F5F0E8;
+  /* Border/chrome uses the accent blue — gold only stays on physical tile artwork */
+  --color-border: #7CB4D8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-mahj-red: var(--color-red);
+  --color-mahj-green: var(--color-green);
+  --color-mahj-accent: var(--color-accent);
+  --color-mahj-ivory: var(--color-ivory);
+  --color-mahj-dark: var(--color-dark);
+  --color-mahj-mid: var(--color-mid);
+  --color-mahj-light: var(--color-light);
+  --color-mahj-border: var(--color-border);
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-lato), -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  background: var(--color-ivory);
+  color: var(--color-dark);
+  font-family: var(--font-lato), -apple-system, sans-serif;
+  line-height: 1.7;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
 }
