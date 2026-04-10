@@ -100,8 +100,7 @@ export default function Module10Mistakes() {
           </p>
           <Callout variant="tip">
             <strong>The single most useful sentence at the table:</strong>{" "}
-            <em>&quot;Hold on — I think I made a mistake. Can we pause?&quot;</em>{" "}
-            Saying this <em>before</em> the next player draws is the difference
+            <em>&quot;Hold on — I think I made a mistake. Can we pause?&quot;</em> Saying this <em>before</em>{" "}the next player draws is the difference
             between a fixable hiccup and a dead hand. We&apos;ll come back to it on
             the last screen.
           </Callout>
@@ -114,25 +113,25 @@ export default function Module10Mistakes() {
             title="Wrong number of tiles in your hand"
             what={
               <>
-                You should have <strong>13 tiles</strong> at all times, and{" "}
-                <strong>14 tiles</strong> only when it&apos;s your turn (after drawing,
+                You should have <strong>13 tiles</strong>{" "}at all times, and{" "}
+                <strong>14 tiles</strong>{" "}only when it&apos;s your turn (after drawing,
                 before discarding). If you ever notice you&apos;ve got 12 or 15, you
                 miscounted.
               </>
             }
             cost={
               <>
-                <strong>Dead hand</strong> if it&apos;s noticed during play. You
+                <strong>Dead hand</strong>{" "}if it&apos;s noticed during play. You
                 can&apos;t win the round but you keep playing and still pay the eventual
                 winner.
               </>
             }
             recover={
               <>
-                <strong>During the Charleston:</strong> the entire hand is{" "}
+                <strong>During the Charleston:</strong>{" "}the entire hand is{" "}
                 <strong>thrown back in and redealt</strong> — no penalty. (Dead-hand
                 penalties don&apos;t apply during the Charleston.) <strong>During
-                play:</strong> if you catch it before anyone else, say so immediately
+                play:</strong>{" "}if you catch it before anyone else, say so immediately
                 and ask the table to pause. Some groups will let you fix it; many will
                 rule the hand dead. Either way, owning it fast is the right move.
               </>
@@ -150,7 +149,7 @@ export default function Module10Mistakes() {
             }
             cost={
               <>
-                <strong>Dead hand.</strong> Picking a tile out of turn is treated as a
+                <strong>Dead hand.</strong>{" "}Picking a tile out of turn is treated as a
                 serious error in NMJL rules.
               </>
             }
@@ -158,9 +157,9 @@ export default function Module10Mistakes() {
               <>
                 <strong>If your fingers are still on the wall</strong>, freeze and ask
                 immediately — most groups will let you put the tile back without
-                penalty. <strong>If you&apos;ve already racked it,</strong> the hand is
+                penalty. <strong>If you&apos;ve already racked it,</strong>{" "}the hand is
                 dead. The fix: wait for the previous player to fully discard{" "}
-                <em>and</em> name their tile before you reach.
+                <em>and</em>{" "}name their tile before you reach.
               </>
             }
           />
@@ -180,7 +179,7 @@ export default function Module10Mistakes() {
               <>
                 Nothing to recover — the call window has closed. The fix is
                 preventative: <strong>always look at every discard the moment it
-                lands</strong>, and call <em>before</em> the next player&apos;s tile
+                lands</strong>, and call <em>before</em>{" "}the next player&apos;s tile
                 touches their rack.
               </>
             }
@@ -196,21 +195,21 @@ export default function Module10Mistakes() {
             what={
               <>
                 You say &quot;Call!&quot; on a discard, expose your group, and then
-                realize the resulting tiles can&apos;t complete <em>any</em> valid hand
+                realize the resulting tiles can&apos;t complete <em>any</em>{" "}valid hand
                 on the card.
               </>
             }
             cost={
               <>
-                <strong>Dead hand.</strong> Once the group is exposed, you cannot take
+                <strong>Dead hand.</strong>{" "}Once the group is exposed, you cannot take
                 it back.
               </>
             }
             recover={
               <>
-                <strong>None after exposure.</strong> The fix is preventative: before
+                <strong>None after exposure.</strong>{" "}The fix is preventative: before
                 you call, mentally check, &quot;If I take this tile and expose it, can
-                my remaining tiles still complete <em>some</em> hand on the card?&quot;
+                my remaining tiles still complete <em>some</em>{" "}hand on the card?&quot;
                 If you can&apos;t answer yes in 2 seconds, don&apos;t call.
               </>
             }
@@ -227,7 +226,7 @@ export default function Module10Mistakes() {
             }
             cost={
               <>
-                Your hand is <strong>dead</strong> for the rest of the round.
+                Your hand is <strong>dead</strong>{" "}for the rest of the round.
                 You keep playing (draw and discard) but can&apos;t win, and you
                 pay the winner normally at the end. Some groups add an extra
                 penalty, but that&apos;s a house rule.
@@ -235,7 +234,7 @@ export default function Module10Mistakes() {
             }
             recover={
               <>
-                <strong>None — pay up gracefully.</strong> The fix: before you call
+                <strong>None — pay up gracefully.</strong>{" "}The fix: before you call
                 Mahjong, check your tiles against the specific hand on the card,{" "}
                 <em>tile by tile</em>. When in doubt, keep playing — you&apos;ll
                 usually get another chance.
@@ -265,7 +264,7 @@ export default function Module10Mistakes() {
             }
             recover={
               <>
-                <strong>None.</strong> A discarded Joker is gone. Beginners discard
+                <strong>None.</strong>{" "}A discarded Joker is gone. Beginners discard
                 Jokers more often than they think — develop the muscle-memory rule:{" "}
                 <em>look for the joker pattern every single time before you let go of
                 a tile</em>.
@@ -286,7 +285,7 @@ export default function Module10Mistakes() {
             cost={
               <>
                 Per NMJL guidance, the tile you placed becomes a regular discard —
-                <strong> dead for exchanging</strong> and now available for any other
+                <strong> dead for exchanging</strong>{" "}and now available for any other
                 player to call as a Pung or Kong. Worst case, an opponent calls it and
                 gets a free exposure.
               </>
@@ -294,8 +293,8 @@ export default function Module10Mistakes() {
             recover={
               <>
                 Always announce the exchange clearly: <em>&quot;Joker exchange — I&apos;ll
-                trade my [tile] for the Joker in your exposed group.&quot;</em> Hand
-                the tile <strong>to the player whose rack holds the joker</strong> and
+                trade my [tile] for the Joker in your exposed group.&quot;</em>{" "}Hand
+                the tile <strong>to the player whose rack holds the joker</strong>{" "}and
                 let them do the swap. Never reach onto someone else&apos;s rack.
               </>
             }
@@ -318,7 +317,7 @@ export default function Module10Mistakes() {
                 If another player calls Mahjong on the misnamed tile, the Mahjong is
                 valid and <strong>you alone pay the winner the full amount all three
                 losers would have paid combined</strong>. If they call it for an
-                exposure instead, <em>their</em> hand is dead but you owe nothing.
+                exposure instead, <em>their</em>{" "}hand is dead but you owe nothing.
               </>
             }
             recover={
@@ -326,7 +325,7 @@ export default function Module10Mistakes() {
                 The instant you realize the misname, <strong>say so immediately</strong>{" "}
                 — &quot;Sorry, I misspoke, that&apos;s actually [correct name].&quot; If
                 you correct it before any player acts on the wrong name, you escape
-                clean. Slow down and look at the tile <em>before</em> you say its name.
+                clean. Slow down and look at the tile <em>before</em>{" "}you say its name.
               </>
             }
           />
@@ -344,7 +343,7 @@ export default function Module10Mistakes() {
             }
             cost={
               <>
-                <strong>That moment is gone.</strong> Once you discard (or the
+                <strong>That moment is gone.</strong>{" "}Once you discard (or the
                 next player racks a discard you needed), you can&apos;t go back.
               </>
             }
@@ -353,7 +352,7 @@ export default function Module10Mistakes() {
                 <strong>Your hand is still alive</strong> — keep playing and look
                 for another path to Mahjong. The fix is preventative: every time
                 you draw a tile, check your hand against the card{" "}
-                <em>before</em> you discard.
+                <em>before</em>{" "}you discard.
               </>
             }
           />
@@ -369,7 +368,7 @@ export default function Module10Mistakes() {
             }
             cost={
               <>
-                <strong>Technically a rule violation</strong> (Jokers cannot be passed
+                <strong>Technically a rule violation</strong>{" "}(Jokers cannot be passed
                 in the Charleston). If noticed before the receiving player picks up
                 the pass, the pass can usually be redone. If noticed later, results
                 vary by group — some declare a dead hand for the passer.
@@ -378,7 +377,7 @@ export default function Module10Mistakes() {
             recover={
               <>
                 Speak up the instant you realize: <em>&quot;Stop — I passed a Joker by
-                mistake.&quot;</em> Most groups will allow you to swap it back. The
+                mistake.&quot;</em>{" "}Most groups will allow you to swap it back. The
                 rule is simple and absolute: <strong>never pass a Joker</strong>,
                 ever, regardless of how confused you are.
               </>
@@ -395,11 +394,11 @@ export default function Module10Mistakes() {
 
           <ol className="ml-6 list-decimal space-y-3 text-[14px] text-zinc-700">
             <li>
-              <strong>Stop everything.</strong> Don&apos;t draw, don&apos;t discard,
+              <strong>Stop everything.</strong>{" "}Don&apos;t draw, don&apos;t discard,
               don&apos;t rack. Put your hands flat on the table.
             </li>
             <li>
-              <strong>Speak up immediately.</strong> Say out loud: &quot;Hold on — I
+              <strong>Speak up immediately.</strong>{" "}Say out loud: &quot;Hold on — I
               think I made a mistake.&quot; Don&apos;t try to fix it silently, and
               don&apos;t hope nobody noticed. Both of those make things worse.
             </li>
@@ -409,19 +408,19 @@ export default function Module10Mistakes() {
               Crack.&quot; No excuses, no panic — just the facts.
             </li>
             <li>
-              <strong>Let the table decide.</strong> Most groups are forgiving with
+              <strong>Let the table decide.</strong>{" "}Most groups are forgiving with
               beginners, especially when you catch and report errors before they
               affect anyone else. Accept whatever the group decides without arguing.
             </li>
           </ol>
 
           <Callout variant="tip">
-            <strong>The honesty rule:</strong> A mistake you reported yourself will
+            <strong>The honesty rule:</strong>{" "}A mistake you reported yourself will
             almost always be handled gracefully. A mistake you tried to hide and got
             caught on will not. Mahjong groups remember which one you are.
           </Callout>
           <Callout variant="warn">
-            <strong>One thing NOT to do:</strong> Don&apos;t apologize ten times.
+            <strong>One thing NOT to do:</strong>{" "}Don&apos;t apologize ten times.
             One brief &quot;sorry, my fault&quot; is plenty. Excessive apologizing
             slows the game down more than the original mistake did.
           </Callout>
@@ -436,28 +435,27 @@ export default function Module10Mistakes() {
 
           <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
             <li>
-              <strong>Saying &quot;zero&quot; on the courtesy.</strong> Not optional —
+              <strong>Saying &quot;zero&quot; on the courtesy.</strong>{" "}Not optional —
               encouraged for beginners. The courtesy is a tool, not a requirement.
             </li>
             <li>
-              <strong>Stopping the second Charleston.</strong> You don&apos;t need a
+              <strong>Stopping the second Charleston.</strong>{" "}You don&apos;t need a
               reason. &quot;Stop&quot; is a complete sentence.
             </li>
             <li>
-              <strong>Passing on a tile you could call.</strong> Just because you{" "}
-              <em>can</em> call doesn&apos;t mean you should. Module 5 covered this.
+              <strong>Passing on a tile you could call.</strong>{" "}Just because you{" "}
+              <em>can</em>{" "}call doesn&apos;t mean you should. Module 5 covered this.
             </li>
             <li>
-              <strong>Changing your target hand mid-game.</strong> Flexibility is
+              <strong>Changing your target hand mid-game.</strong>{" "}Flexibility is
               skill, not failure. Switching from a hand you can&apos;t finish to one
               you can is exactly the right move.
             </li>
             <li>
-              <strong>Asking the table to confirm what was just discarded.</strong>{" "}
-              No shame. People mishear all the time.
+              <strong>Asking the table to confirm what was just discarded.</strong> No shame. People mishear all the time.
             </li>
             <li>
-              <strong>Not winning a hand.</strong> Wall games happen all the time.
+              <strong>Not winning a hand.</strong>{" "}Wall games happen all the time.
               Many hands have no winner.
             </li>
           </ul>
@@ -551,7 +549,7 @@ export default function Module10Mistakes() {
             decide.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 11 is the{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 11 is the{" "}
             <strong>Glossary</strong> — every term you&apos;ve learned, defined and
             cross-linked, always one tap away from any screen in the app.
           </p>

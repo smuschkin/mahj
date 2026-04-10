@@ -112,16 +112,15 @@ export default function Module6HandStrategy() {
             to work.
           </p>
           <p>
-            American Mahjong is a <strong>target-matching</strong> game. Your job
+            American Mahjong is a <strong>target-matching</strong>{" "}game. Your job
             every turn is to ask:{" "}
             <em>which hand on the card am I building, and is this tile getting me
             closer or farther?</em>
           </p>
           <Callout variant="info">
-            <strong>Bring your own card.</strong> MAHJ teaches you the{" "}
+            <strong>Bring your own card.</strong>{" "}MAHJ teaches you the{" "}
             <em>thinking</em>; it doesn&apos;t reproduce any year&apos;s official
-            hands. To play a real game you&apos;ll need the current card from{" "}
-            nationalmahjonggleague.org.
+            hands. To play a real game you&apos;ll need the current card from nationalmahjonggleague.org.
           </Callout>
         </LessonScreen>
 
@@ -130,30 +129,30 @@ export default function Module6HandStrategy() {
           <p>
             As soon as you&apos;re dealt, sort your tiles on your rack and scan the
             card. Don&apos;t commit to anything yet — instead, find the{" "}
-            <strong>2 or 3 hands you&apos;re closest to</strong> and treat them as
+            <strong>2 or 3 hands you&apos;re closest to</strong>{" "}and treat them as
             candidates.
           </p>
           <p>How to look quickly:</p>
           <ol className="ml-6 list-decimal space-y-1 text-[14px]">
             <li>
-              <strong>Count your suits.</strong> Are you heavy in one suit? Look at
+              <strong>Count your suits.</strong>{" "}Are you heavy in one suit? Look at
               same-suit hands first.
             </li>
             <li>
-              <strong>Spot pairs and triples.</strong> Two of the same tile is a
+              <strong>Spot pairs and triples.</strong>{" "}Two of the same tile is a
               pung-in-progress; three of the same is gold.
             </li>
             <li>
-              <strong>Notice your honors.</strong> A few winds or dragons can point you
+              <strong>Notice your honors.</strong>{" "}A few winds or dragons can point you
               toward winds/dragons hands.
             </li>
             <li>
-              <strong>Check the year hand.</strong> If you have any of that year&apos;s
+              <strong>Check the year hand.</strong>{" "}If you have any of that year&apos;s
               digits, it&apos;s often the easiest place to start.
             </li>
           </ol>
           <Callout variant="warn">
-            <strong>Why 2–3, not 1?</strong> If you commit to one hand on Turn 1,
+            <strong>Why 2–3, not 1?</strong>{" "}If you commit to one hand on Turn 1,
             you&apos;ll fight every bad draw. With 2–3 candidates, almost every tile
             you draw is useful for <em>something</em>. The Charleston will help you
             narrow down further.
@@ -214,32 +213,31 @@ export default function Module6HandStrategy() {
         {/* ── 5. Joker strategy ── */}
         <LessonScreen title="⭐ Joker Strategy">
           <p>
-            You already know the joker <em>rules</em> from Module 5. Strategy is about
-            where to actually <em>spend</em> them.
+            You already know the joker <em>rules</em>{" "}from Module 5. Strategy is about
+            where to actually <em>spend</em>{" "}them.
           </p>
           <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
             <li>
-              <strong>Save jokers for the hardest-to-find tiles.</strong> Say
+              <strong>Save jokers for the hardest-to-find tiles.</strong>{" "}Say
               your hand needs a pung of 7 Cracks and a pung of 3 Bams. Two
               3-Bams have already been discarded, so only two remain in the
               wall — use the joker there, not on the 7 Cracks that nobody has
               touched yet.
             </li>
             <li>
-              <strong>Don&apos;t waste a joker on a tile you&apos;ll easily draw.</strong>{" "}
-              Common middle-suit tiles (4s, 5s, 6s) come around often.
+              <strong>Don&apos;t waste a joker on a tile you&apos;ll easily draw.</strong> Common middle-suit tiles (4s, 5s, 6s) come around often.
             </li>
             <li>
-              <strong>Hold jokers as long as possible.</strong> An unspent joker keeps
+              <strong>Hold jokers as long as possible.</strong>{" "}An unspent joker keeps
               your options open. The moment you expose it, opponents can try to
               exchange it away from you.
             </li>
             <li>
-              <strong>Never plan around a joker for a pair.</strong> If your target
-              hand has a pair, you need <em>two real tiles</em> for it — full stop.
+              <strong>Never plan around a joker for a pair.</strong>{" "}If your target
+              hand has a pair, you need <em>two real tiles</em>{" "}for it — full stop.
             </li>
             <li>
-              <strong>Scan exposed groups every turn</strong> for a joker you could
+              <strong>Scan exposed groups every turn</strong>{" "}for a joker you could
               exchange for. Beginners forget this rule constantly. It&apos;s free
               value.
             </li>
@@ -249,7 +247,7 @@ export default function Module6HandStrategy() {
         {/* ── 6. What to discard — decision tree ── */}
         <LessonScreen title="🤔 What Should I Discard?">
           <p>
-            Deciding what to throw away is the <strong>core skill</strong> of American
+            Deciding what to throw away is the <strong>core skill</strong>{" "}of American
             Mahjong. Follow this flowchart every turn until it becomes instinct.
           </p>
 
@@ -335,7 +333,7 @@ export default function Module6HandStrategy() {
         {/* ── 7. Discard priority list ── */}
         <LessonScreen title="📜 Discard Priority — in Order">
           <p>
-            When you have multiple tiles that <em>could</em> go, throw them in this
+            When you have multiple tiles that <em>could</em>{" "}go, throw them in this
             order:
           </p>
           <div className="my-3 space-y-2">
@@ -376,18 +374,18 @@ export default function Module6HandStrategy() {
           </div>
 
           <Callout variant="tip">
-            <strong>Example:</strong> You&apos;re eyeing two candidate hands — one
+            <strong>Example:</strong>{" "}You&apos;re eyeing two candidate hands — one
             uses Bams and Cracks, the other uses Bams and Winds. You have a{" "}
-            <strong>6 Dot</strong> sitting on your rack. Neither candidate needs
+            <strong>6 Dot</strong>{" "}sitting on your rack. Neither candidate needs
             Dots, so the 6 Dot is &quot;in none of your candidate hands.&quot;
             Discard it first — you&apos;re giving up nothing no matter which hand
             you end up choosing.
           </Callout>
 
           <Callout variant="warn">
-            <strong>Read the wall.</strong> Once <strong>3 of a tile</strong> are in
+            <strong>Read the wall.</strong>{" "}Once <strong>3 of a tile</strong>{" "}are in
             the discard pile or in exposed groups, no one can ever make a Pung or Kong
-            of it again. That tile is now <em>completely safe</em> to discard. Train
+            of it again. That tile is now <em>completely safe</em>{" "}to discard. Train
             yourself to notice this.
           </Callout>
         </LessonScreen>
@@ -396,8 +394,8 @@ export default function Module6HandStrategy() {
         <LessonScreen title="🧠 Worked Example: What Would You Discard?">
           <p>
             You just drew your 14th tile. Your candidate hands are{" "}
-            <strong>&quot;Even Bams&quot;</strong> (a practice hand: pairs and pungs of
-            2-4-6-8 Bam) and a <strong>backup Dragons</strong> hand. Here&apos;s your
+            <strong>&quot;Even Bams&quot;</strong>{" "}(a practice hand: pairs and pungs of
+            2-4-6-8 Bam) and a <strong>backup Dragons</strong>{" "}hand. Here&apos;s your
             rack:
           </p>
 
@@ -443,7 +441,7 @@ export default function Module6HandStrategy() {
           </ul>
 
           <Callout variant="tip">
-            <strong>The answer:</strong> discard the <strong>5 Crack</strong>. It fits
+            <strong>The answer:</strong>{" "}discard the <strong>5 Crack</strong>. It fits
             no candidate hand, and it&apos;s the tile that costs you the least to lose.
             The marked tile in the rack above is the one to throw.
           </Callout>
@@ -463,7 +461,7 @@ export default function Module6HandStrategy() {
         <LessonScreen title="🧭 Five Principles to Take with You">
           <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
             <li>
-              <strong>Target a hand, don&apos;t collect tiles.</strong> Every tile is
+              <strong>Target a hand, don&apos;t collect tiles.</strong>{" "}Every tile is
               either getting you closer to a specific hand on the card, or it&apos;s
               not.
             </li>
@@ -471,15 +469,15 @@ export default function Module6HandStrategy() {
               <strong>Wide early, narrow late.</strong> 3 → 2 → 1 candidates.
             </li>
             <li>
-              <strong>Read the wall.</strong> Track which tiles are gone. Safe
+              <strong>Read the wall.</strong>{" "}Track which tiles are gone. Safe
               discards come from awareness.
             </li>
             <li>
-              <strong>Jokers are for hard-to-find tiles.</strong> Not for tiles
+              <strong>Jokers are for hard-to-find tiles.</strong>{" "}Not for tiles
               you&apos;ll naturally draw.
             </li>
             <li>
-              <strong>When in doubt, don&apos;t call.</strong> Concealed flexibility
+              <strong>When in doubt, don&apos;t call.</strong>{" "}Concealed flexibility
               beats exposed commitment.
             </li>
           </ol>
@@ -564,7 +562,7 @@ export default function Module6HandStrategy() {
             framework instead of guessing.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 7 covers <strong>Defense</strong>{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 7 covers <strong>Defense</strong>{" "}
             — how to read the discards and exposures coming from your opponents, and
             how to avoid feeding them the tile that wins them the game.
           </p>

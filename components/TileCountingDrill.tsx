@@ -465,9 +465,9 @@ function CountingView({
               : `✗ Not quite — ${s.remaining} remain.`}
           </p>
           <div className="mt-2 rounded-md bg-[#F0F5FA] p-3 text-center text-[13px] text-zinc-700">
-            <strong>{s.totalCopies} total</strong> copies exist.{" "}
-            <strong>{s.visibleCount}</strong> are visible (discards + exposures).{" "}
-            <strong>{s.remaining}</strong> are still unseen in players&apos; hands
+            <strong>{s.totalCopies} total</strong>{" "}copies exist.{" "}
+            <strong>{s.visibleCount}</strong>{" "}are visible (discards + exposures).{" "}
+            <strong>{s.remaining}</strong>{" "}are still unseen in players&apos; hands
             or the wall.
             {s.remaining === 0 && (
               <span className="mt-1 block font-bold text-[var(--color-green)]">

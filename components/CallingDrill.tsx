@@ -52,7 +52,7 @@ const SCENARIOS: Scenario[] = [
     correct: "call",
     explanation: (
       <>
-        <strong>Call.</strong> You have two 5 Bams, you&apos;re committed to Bams,
+        <strong>Call.</strong>{" "}You have two 5 Bams, you&apos;re committed to Bams,
         and this completes a Pung you need. Mid-game + committed = take it.
       </>
     ),
@@ -82,7 +82,7 @@ const SCENARIOS: Scenario[] = [
     correct: "pass",
     explanation: (
       <>
-        <strong>Pass.</strong> It&apos;s Turn 1 and your hand is scattered across
+        <strong>Pass.</strong>{" "}It&apos;s Turn 1 and your hand is scattered across
         Bams, Dots, and Cracks. Calling now would lock you into a Cracks exposure
         before you know which hand to build. Stay flexible early.
       </>
@@ -113,7 +113,7 @@ const SCENARIOS: Scenario[] = [
     correct: "call",
     explanation: (
       <>
-        <strong>Call.</strong> You have three 3 Dots and the hand needs a Kong.
+        <strong>Call.</strong>{" "}You have three 3 Dots and the hand needs a Kong.
         This is the 4th copy — take it. You&apos;re committed to Dots and this
         directly fills a requirement.
       </>
@@ -144,7 +144,7 @@ const SCENARIOS: Scenario[] = [
     correct: "mahjong",
     explanation: (
       <>
-        <strong>Mahjong!</strong> The 2 Bam completes your Kong of 2s. Your hand
+        <strong>Mahjong!</strong>{" "}The 2 Bam completes your Kong of 2s. Your hand
         is now 14 tiles matching a valid hand on the card. Say &quot;wait,&quot;
         verify, then call Mahjong. Don&apos;t hesitate.
       </>
@@ -175,8 +175,8 @@ const SCENARIOS: Scenario[] = [
     correct: "pass",
     explanation: (
       <>
-        <strong>Pass.</strong> You only have one Green Dragon. To call a Pung you
-        need <em>two</em> already in your hand (plus the discarded 3rd). One tile
+        <strong>Pass.</strong>{" "}You only have one Green Dragon. To call a Pung you
+        need <em>two</em>{" "}already in your hand (plus the discarded 3rd). One tile
         isn&apos;t enough — that&apos;s just a pair, and you can&apos;t call for
         a pair (unless it completes Mahjong).
       </>
@@ -208,7 +208,7 @@ const SCENARIOS: Scenario[] = [
     correct: "pass",
     explanation: (
       <>
-        <strong>Pass.</strong> Calling locks you into the winds-and-dragons
+        <strong>Pass.</strong>{" "}Calling locks you into the winds-and-dragons
         direction, but your Bams are actually stronger (4 pairs vs 1 wind
         triple). Exposing the Winds now would kill your Bam option. Stay
         flexible until you&apos;ve committed.
@@ -240,7 +240,7 @@ const SCENARIOS: Scenario[] = [
     correct: "pass",
     explanation: (
       <>
-        <strong>Pass — you have no choice.</strong> A discarded Joker is{" "}
+        <strong>Pass — you have no choice.</strong>{" "}A discarded Joker is{" "}
         <strong>dead</strong>. No one can call it, no one can claim it. It sits
         in the discard pile forever. This is why nobody ever discards Jokers.
       </>
@@ -271,7 +271,7 @@ const SCENARIOS: Scenario[] = [
     correct: "call",
     explanation: (
       <>
-        <strong>Call.</strong> Late game, you&apos;re committed, and this is a tile
+        <strong>Call.</strong>{" "}Late game, you&apos;re committed, and this is a tile
         you specifically need. The wall is running out — pass on this and you may
         never see another 6 Crack. Calling is the right move here.
       </>
@@ -303,9 +303,9 @@ const SCENARIOS: Scenario[] = [
     correct: "pass",
     explanation: (
       <>
-        <strong>Pass.</strong> Your hand is concealed (marked C on the card).
+        <strong>Pass.</strong>{" "}Your hand is concealed (marked C on the card).
         You cannot call any tiles during play — every tile must come from the
-        wall or the Charleston. The only exception: you <em>can</em> call a
+        wall or the Charleston. The only exception: you <em>can</em>{" "}call a
         discarded tile if it completes Mahjong. But this 7 Dot only completes
         a Pung, not your entire hand.
       </>
@@ -337,8 +337,8 @@ const SCENARIOS: Scenario[] = [
     correct: "mahjong",
     explanation: (
       <>
-        <strong>Mahjong!</strong> This is the special case: Mahjong is the{" "}
-        <em>only</em> time you can claim a discard for a pair (or even a single).
+        <strong>Mahjong!</strong>{" "}This is the special case: Mahjong is the{" "}
+        <em>only</em>{" "}time you can claim a discard for a pair (or even a single).
         The 9 Bam completes your pair and your entire 14-tile hand. Say
         &quot;wait,&quot; verify, then call Mahjong.
       </>

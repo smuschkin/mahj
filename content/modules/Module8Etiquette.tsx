@@ -67,18 +67,17 @@ export default function Module8Etiquette() {
         {/* ── 1. Why etiquette ── */}
         <LessonScreen title="🤝 Why Etiquette Matters">
           <p>
-            American Mahjong is a deeply <strong>social</strong> game. People play in
+            American Mahjong is a deeply <strong>social</strong>{" "}game. People play in
             the same groups for years — sometimes decades. Etiquette isn&apos;t
             optional polish; it&apos;s the reason people enjoy the game enough to come
             back.
           </p>
           <p>
-            A few of the things in this module are <strong>official NMJL rules</strong>{" "}
-            with real penalties. Most are <strong>customs</strong> that vary slightly
+            A few of the things in this module are <strong>official NMJL rules</strong> with real penalties. Most are <strong>customs</strong>{" "}that vary slightly
             from group to group. We&apos;ll mark which is which.
           </p>
           <Callout variant="tip">
-            <strong>Reframe:</strong> Etiquette in mahjong isn&apos;t about being
+            <strong>Reframe:</strong>{" "}Etiquette in mahjong isn&apos;t about being
             formal. It&apos;s about not slowing down the game and not making other
             players uncomfortable. Both come naturally once you know the basics.
           </Callout>
@@ -87,13 +86,13 @@ export default function Module8Etiquette() {
         {/* ── 2. Naming your discard ── */}
         <LessonScreen title='🗣️ Name Every Discard Out Loud (NMJL Rule)'>
           <p>
-            Every discard must be <strong>named out loud</strong> as you place it in
+            Every discard must be <strong>named out loud</strong>{" "}as you place it in
             the center of the table. This is an official rule, not just a politeness.
           </p>
           <p>
             Say the tile clearly: <strong>&quot;Four Bam.&quot;</strong>{" "}
             <strong>&quot;Red Dragon.&quot;</strong>{" "}
-            <strong>&quot;West.&quot;</strong> Then place it face-up where everyone can
+            <strong>&quot;West.&quot;</strong>{" "}Then place it face-up where everyone can
             see.
           </p>
 
@@ -107,7 +106,7 @@ export default function Module8Etiquette() {
           />
 
           <Callout variant="info">
-            <strong>Why it&apos;s a rule:</strong> Players who want to call need to
+            <strong>Why it&apos;s a rule:</strong>{" "}Players who want to call need to
             hear what was thrown. A silent discard can rob someone of a legitimate
             call.
           </Callout>
@@ -126,17 +125,16 @@ export default function Module8Etiquette() {
             </h4>
             <ul className="ml-5 list-disc space-y-1 text-[13px] text-zinc-700">
               <li>
-                <strong>A tile cannot be claimed until it is correctly named.</strong>{" "}
-                If a player calls it based on the wrong name, the call is invalid.
+                <strong>A tile cannot be claimed until it is correctly named.</strong> If a player calls it based on the wrong name, the call is invalid.
               </li>
               <li>
-                If another player makes an <strong>exposure</strong> (Pung/Kong) based
+                If another player makes an <strong>exposure</strong>{" "}(Pung/Kong) based
                 on a misnamed tile, <strong>that player&apos;s hand is dead</strong>.
-                The misnamer is <em>not</em> penalized — the error belongs to whoever
+                The misnamer is <em>not</em>{" "}penalized — the error belongs to whoever
                 called.
               </li>
               <li>
-                If a player calls <strong>Mahjong</strong> on a misnamed tile, the
+                If a player calls <strong>Mahjong</strong>{" "}on a misnamed tile, the
                 Mahjong claim is <strong>still valid</strong> — and the misnamer pays
                 the winner the <strong>full amount all three losers would
                 have paid combined</strong>. The other two players don&apos;t pay
@@ -146,14 +144,14 @@ export default function Module8Etiquette() {
           </div>
 
           <Callout variant="warn">
-            <strong>Translation for beginners:</strong> Slow down and name your
+            <strong>Translation for beginners:</strong>{" "}Slow down and name your
             discards correctly. Misnaming a tile that someone else uses to win the game
             is the single most expensive mistake in American Mahjong — you pay for
             everyone.
           </Callout>
           <Callout variant="tip">
-            <strong>Beginner habit to build:</strong> Look at the tile, say its name,{" "}
-            <em>then</em> let go. Never the other way around.
+            <strong>Beginner habit to build:</strong>{" "}Look at the tile, say its name,{" "}
+            <em>then</em>{" "}let go. Never the other way around.
           </Callout>
         </LessonScreen>
 
@@ -166,14 +164,14 @@ export default function Module8Etiquette() {
           </p>
           <p>
             That pause is the window where any other player can call the{" "}
-            <em>previous</em> player&apos;s discard. The official rule:{" "}
+            <em>previous</em>{" "}player&apos;s discard. The official rule:{" "}
             <strong>once a tile is racked, the previous discard can no longer be
-            called.</strong> Racking too quickly can rob a player of a legitimate call
+            called.</strong>{" "}Racking too quickly can rob a player of a legitimate call
             — and you&apos;ll annoy your table fast.
           </p>
 
           <Callout variant="info">
-            <strong>The official definition:</strong> A tile is &quot;racked&quot; when
+            <strong>The official definition:</strong>{" "}A tile is &quot;racked&quot; when
             it&apos;s placed on the sloped part of your rack with your other tiles.
             Just touching or tapping the rack doesn&apos;t count.
           </Callout>
@@ -192,14 +190,14 @@ export default function Module8Etiquette() {
         <LessonScreen title='🏆 Calling Mahjong — The Window'>
           <p>
             When the tile that completes your hand is drawn or discarded, say{" "}
-            <strong>&quot;wait&quot;</strong> first to pause the game so the next
+            <strong>&quot;wait&quot;</strong>{" "}first to pause the game so the next
             player doesn&apos;t draw. Take a second to verify your hand against the
-            card, and then call <strong>&quot;Mahjong&quot;</strong> to claim the
+            card, and then call <strong>&quot;Mahjong&quot;</strong>{" "}to claim the
             win.
           </p>
           <p>
             The window for claiming a discard is the same as for any other call: you
-            must speak up <strong>before the next player has racked</strong> their
+            must speak up <strong>before the next player has racked</strong>{" "}their
             drawn tile. Once that tile is racked, the discard is gone forever — so
             the &quot;wait&quot; needs to come out the moment you see the winning
             tile.
@@ -211,7 +209,7 @@ export default function Module8Etiquette() {
           />
 
           <Callout variant="warn">
-            <strong>Don&apos;t false-call.</strong> If you call &quot;Mahjong&quot; and
+            <strong>Don&apos;t false-call.</strong>{" "}If you call &quot;Mahjong&quot; and
             your hand turns out not to be valid, your hand is dead — you keep
             playing but can&apos;t win. Some groups add an extra penalty, but
             per NMJL rules you just pay the eventual winner like any other
@@ -223,7 +221,7 @@ export default function Module8Etiquette() {
         <LessonScreen title="⏱️ Pace of Play">
           <p>
             Mahjong has a rhythm. Beginners are usually slower than the table — that
-            is normal and forgiven. What is <em>not</em> forgiven is people who never
+            is normal and forgiven. What is <em>not</em>{" "}forgiven is people who never
             speed up.
           </p>
 
@@ -246,7 +244,7 @@ export default function Module8Etiquette() {
           </p>
 
           <Callout variant="tip">
-            <strong>Permission to be slow at first:</strong> For your first 5 games,
+            <strong>Permission to be slow at first:</strong>{" "}For your first 5 games,
             you will be the slow one. That&apos;s fine. Tell your group at the
             start — &quot;I&apos;m new, I&apos;ll be slow today&quot; — and almost
             every group will be patient. Most mahjong players love teaching beginners.
@@ -287,41 +285,40 @@ export default function Module8Etiquette() {
 
           <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
             <li>
-              <strong>No comments on other players&apos; hands during play.</strong>{" "}
-              Don&apos;t say &quot;ooh, you&apos;re close&quot; or &quot;why did you
+              <strong>No comments on other players&apos; hands during play.</strong> Don&apos;t say &quot;ooh, you&apos;re close&quot; or &quot;why did you
               throw that?&quot; even helpfully.
             </li>
             <li>
-              <strong>Phones away from the table.</strong> Most groups consider phones
+              <strong>Phones away from the table.</strong>{" "}Most groups consider phones
               at the playing surface rude. Step away if you need to take a call.
             </li>
             <li>
-              <strong>Food and drinks well clear of the tiles.</strong> Spilled coffee
+              <strong>Food and drinks well clear of the tiles.</strong>{" "}Spilled coffee
               on a friend&apos;s NMJL card is a real way to lose friends. Use a side
               table.
             </li>
             <li>
-              <strong>Say thank you for a courtesy.</strong> If someone gives you 1–3
+              <strong>Say thank you for a courtesy.</strong>{" "}If someone gives you 1–3
               tiles in the courtesy pass, a quiet &quot;thanks&quot; is standard.
             </li>
             <li>
-              <strong>No coaching mid-hand.</strong> Even teaching a beginner usually
+              <strong>No coaching mid-hand.</strong>{" "}Even teaching a beginner usually
               waits until between rounds. Mid-hand advice changes the game.
             </li>
             <li>
-              <strong>Compliment a good hand.</strong> When someone wins a hard hand,{" "}
+              <strong>Compliment a good hand.</strong>{" "}When someone wins a hard hand,{" "}
               <em>say so</em>. The social joy of mahjong is half the point.
             </li>
             <li>
-              <strong>Don&apos;t gloat. Don&apos;t sulk.</strong> The game has lots of
+              <strong>Don&apos;t gloat. Don&apos;t sulk.</strong>{" "}The game has lots of
               luck. The same player won&apos;t win every night, and everyone knows it.
             </li>
           </ul>
 
           <Callout variant="tip">
-            <strong>The single best etiquette move</strong> for a new player: say{" "}
+            <strong>The single best etiquette move</strong>{" "}for a new player: say{" "}
             <em>&quot;I&apos;m still learning — please tell me if I do something
-            wrong.&quot;</em> at the start of your first game with any group. People
+            wrong.&quot;</em>{" "}at the start of your first game with any group. People
             will love you for it.
           </Callout>
         </LessonScreen>
@@ -413,7 +410,7 @@ export default function Module8Etiquette() {
             ones that just make the game pleasant.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 9 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 9 covers{" "}
             <strong>Scoring &amp; Payouts</strong> — how the money actually moves at
             the end of a hand: who pays whom, how doubles work, what concealed hands
             are worth, and the dead-hand penalty.

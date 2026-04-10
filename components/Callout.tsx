@@ -20,7 +20,7 @@ export function Callout({
   const s = styles[variant];
   return (
     <div className={`my-4 rounded-md border-l-4 ${s.border} ${s.bg} px-4 py-3 text-sm`}>
-      {showIcon && <span className="mr-1">{s.icon}</span>}
+      {showIcon && <>{s.icon}{" "}</>}
       {children}
     </div>
   );

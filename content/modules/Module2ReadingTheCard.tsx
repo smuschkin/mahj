@@ -96,27 +96,25 @@ export default function Module2ReadingTheCard() {
         {/* ── 1. What is the card? ── */}
         <LessonScreen title="🃏 What Is the NMJL Card?">
           <p>
-            Every year, the <strong>National Mah Jongg League</strong> publishes a
+            Every year, the <strong>National Mah Jongg League</strong>{" "}publishes a
             small card that lists every legal winning hand for that year. To win a
             round of American Mahjong, your 14 tiles must{" "}
-            <strong>exactly match</strong> one of the hands on the card.
+            <strong>exactly match</strong>{" "}one of the hands on the card.
           </p>
           <p>
             No card = no game. It&apos;s the single most important item at the
             table.
           </p>
           <Callout variant="info">
-            <strong>The card changes every April</strong> (typically the second
-            Tuesday). Last year&apos;s hands are no longer legal — you&apos;ll buy a
-            fresh card each spring from the NMJL for about $14. Think of it like a
-            new season in a video game.
+            <strong>The card changes every April</strong>
+            {" (typically the second Tuesday). Last year's hands are no longer legal — you'll buy a fresh card each spring from the NMJL for about $14. Think of it like a new season in a video game."}
           </Callout>
         </LessonScreen>
 
         {/* ── 2. Card layout overview ── */}
         <LessonScreen title="📋 Card Layout — The Big Picture">
           <p>
-            The card is organized into <strong>categories</strong> running down the
+            The card is organized into <strong>categories</strong>{" "}running down the
             left side. Each category groups hands that share a theme:
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
@@ -134,7 +132,7 @@ export default function Module2ReadingTheCard() {
           <p className="mt-2 text-[14px] text-zinc-700">
             Within each category, you&apos;ll see one or more{" "}
             <strong>hand lines</strong> — each line is a different winning
-            combination. The <strong>number on the right</strong> is the hand&apos;s
+            combination. The <strong>number on the right</strong>{" "}is the hand&apos;s
             point value (the payout in cents).
           </p>
           <Callout variant="tip">
@@ -149,10 +147,10 @@ export default function Module2ReadingTheCard() {
           <p>
             Tiles on the card are printed in <strong>three colors</strong> — one
             color per suit (Bams, Cracks, Dots). The specific color-to-suit
-            assignment doesn&apos;t matter — <strong>you pick</strong> which suit
+            assignment doesn&apos;t matter — <strong>you pick</strong>{" "}which suit
             goes with which color when you build the hand.
           </p>
-          <p>What matters is whether the colors <em>match</em> or <em>differ</em>:</p>
+          <p>What matters is whether the colors <em>match</em>{" "}or <em>differ</em>:</p>
 
           <div className="my-3 grid gap-2 sm:grid-cols-2">
             <div className="rounded-lg border-l-4 border-[var(--color-green)] bg-[#F4FBF6] p-4">
@@ -169,7 +167,7 @@ export default function Module2ReadingTheCard() {
                 Multiple colors
               </h4>
               <p className="text-[13px] text-zinc-700">
-                Groups printed in <strong>different colors</strong> must be in{" "}
+                Groups printed in <strong>different colors</strong>{" "}must be in{" "}
                 <strong>different suits</strong>. Groups that share a color share a
                 suit.
               </p>
@@ -215,16 +213,16 @@ export default function Module2ReadingTheCard() {
 
             <p className="mt-3 text-[13px] text-zinc-700">
               Reading this line: <strong>3 Flowers</strong>, then a{" "}
-              <strong>kong of 1s in one suit</strong> (blue), a{" "}
-              <strong>kong of 1s in a different suit</strong> (red), and a{" "}
-              <strong>pair of 1s in the third suit</strong> (green). You choose
+              <strong>kong of 1s in one suit</strong>{" "}(blue), a{" "}
+              <strong>kong of 1s in a different suit</strong>{" "}(red), and a{" "}
+              <strong>pair of 1s in the third suit</strong>{" "}(green). You choose
               which real suit goes with which color — e.g. blue = Bams, red = Cracks,
               green = Dots.
             </p>
           </div>
 
           <Callout variant="warn">
-            <strong>The color on the card is NOT the actual tile color.</strong> A
+            <strong>The color on the card is NOT the actual tile color.</strong>{" "}A
             blue &quot;3&quot; on the card doesn&apos;t mean &quot;3 Bam.&quot; It
             means &quot;a 3 in whichever suit you assigned to blue.&quot; This trips
             up every beginner at first.
@@ -258,7 +256,7 @@ export default function Module2ReadingTheCard() {
           </div>
 
           <Callout variant="tip">
-            <strong>C vs. X is critical.</strong> If a hand is marked C (concealed),
+            <strong>C vs. X is critical.</strong>{" "}If a hand is marked C (concealed),
             you cannot call a single tile for it — everything must be self-drawn.
             Concealed hands are harder but usually worth more points.
           </Callout>
@@ -267,7 +265,7 @@ export default function Module2ReadingTheCard() {
         {/* ── 5. Groupings ── */}
         <LessonScreen title="🧩 Groupings — What the Clusters Mean">
           <p>
-            Tiles printed <strong>next to each other</strong> on the card form a{" "}
+            Tiles printed <strong>next to each other</strong>{" "}on the card form a{" "}
             <strong>group</strong>. Count how many tiles are clustered together:
           </p>
 
@@ -311,9 +309,9 @@ export default function Module2ReadingTheCard() {
           </p>
 
           <Callout variant="info">
-            <strong>Jokers</strong> can substitute for any tile in a group of{" "}
-            <strong>3 or more</strong> (pungs, kongs, quints, sextets). They{" "}
-            <strong>cannot</strong> substitute in pairs or singles. You&apos;ll learn
+            <strong>Jokers</strong>{" "}can substitute for any tile in a group of{" "}
+            <strong>3 or more</strong>{" "}(pungs, kongs, quints, sextets). They{" "}
+            <strong>cannot</strong>{" "}substitute in pairs or singles. You&apos;ll learn
             more about jokers in Module 5.
           </Callout>
         </LessonScreen>
@@ -322,9 +320,9 @@ export default function Module2ReadingTheCard() {
         <LessonScreen title="🔢 Numbers Are Patterns, Not Always Exact">
           <p>
             This is the part that confuses beginners most. The numbers on the card
-            don&apos;t always mean those <em>exact</em> tiles. Depending on the{" "}
+            don&apos;t always mean those <em>exact</em>{" "}tiles. Depending on the{" "}
             <strong>category</strong>, the numbers represent a{" "}
-            <strong>pattern</strong> you fill in:
+            <strong>pattern</strong>{" "}you fill in:
           </p>
 
           <div className="my-3 space-y-3">
@@ -354,8 +352,8 @@ export default function Module2ReadingTheCard() {
                 Even / Odd
               </h4>
               <p className="text-[13px] text-zinc-700">
-                <strong>2468</strong> hands → pick from 2, 4, 6, or 8.{" "}
-                <strong>13579</strong> hands → pick from 1, 3, 5, 7, or 9. The card
+                <strong>2468</strong>{" "}hands → pick from 2, 4, 6, or 8.{" "}
+                <strong>13579</strong>{" "}hands → pick from 1, 3, 5, 7, or 9. The card
                 shows one example, you plug in any valid even or odd numbers.
               </p>
             </div>
@@ -365,7 +363,7 @@ export default function Module2ReadingTheCard() {
                 Year hand
               </h4>
               <p className="text-[13px] text-zinc-700">
-                These <strong>are</strong> literal. The 2026 year hand needs tiles
+                These <strong>are</strong>{" "}literal. The 2026 year hand needs tiles
                 matching the digits 2, 0, 2, and 6 — and 0 means the White Dragon
                 (Soap).
               </p>
@@ -383,8 +381,7 @@ export default function Module2ReadingTheCard() {
           </div>
 
           <Callout variant="warn">
-            <strong>How do you know if numbers are literal or a pattern?</strong>{" "}
-            The <em>category name</em> tells you. &quot;Consecutive run&quot; means
+            <strong>How do you know if numbers are literal or a pattern?</strong> The <em>category name</em>{" "}tells you. &quot;Consecutive run&quot; means
             the numbers represent a sequence you shift. &quot;Year hand&quot; means
             the numbers are exact. Read the category first, then the hand.
           </Callout>
@@ -393,7 +390,7 @@ export default function Module2ReadingTheCard() {
         {/* ── 7. Fake hand walkthrough ── */}
         <LessonScreen title="🧠 Walkthrough: Decoding a Hand Line">
           <p>
-            Let&apos;s decode a <strong>made-up</strong> hand step by step. (We
+            Let&apos;s decode a <strong>made-up</strong>{" "}hand step by step. (We
             can&apos;t show real NMJL hands, but the reading skill is the same.)
           </p>
 
@@ -434,12 +431,12 @@ export default function Module2ReadingTheCard() {
             <strong>Tile count check:</strong> 2 + 3 + 3 + 4 = 12. Wait — that&apos;s
             only 12, not 14. Some hands include additional groups, pairs, or single
             tiles that bring the total to 14. If our example also had a{" "}
-            <strong>DD</strong> (pair of dragons), that would be 12 + 2 = 14. Always
+            <strong>DD</strong>{" "}(pair of dragons), that would be 12 + 2 = 14. Always
             count to 14.
           </p>
 
           <Callout variant="tip">
-            <strong>Practice this.</strong> Every time you look at a hand line, decode
+            <strong>Practice this.</strong>{" "}Every time you look at a hand line, decode
             it: &quot;That&apos;s a pair + pung + pung + kong = 14. The category is
             consecutive run, so I need three numbers in a row. Got it.&quot;
           </Callout>
@@ -449,7 +446,7 @@ export default function Module2ReadingTheCard() {
         <LessonScreen title="🌀 One Line on the Card = Many Possible Hands">
           <p>
             Because numbers are often patterns and you choose the suits, a single
-            line on the card can represent <strong>dozens</strong> of valid tile
+            line on the card can represent <strong>dozens</strong>{" "}of valid tile
             combinations.
           </p>
 
@@ -469,14 +466,14 @@ export default function Module2ReadingTheCard() {
             <li>...any number from 1–9 works</li>
           </ul>
           <p className="mt-2 text-[14px] text-zinc-700">
-            That&apos;s <strong>9 different number choices</strong> from just one
+            That&apos;s <strong>9 different number choices</strong>{" "}from just one
             line. Add in different suit assignments and the combinations multiply
             further. This flexibility is what makes hand selection strategic — you&apos;re
             pattern-matching your tiles against these flexible templates.
           </p>
 
           <Callout variant="info">
-            <strong>This is why you keep 2–3 candidate hands.</strong> The same tiles
+            <strong>This is why you keep 2–3 candidate hands.</strong>{" "}The same tiles
             in your rack might fit different lines on the card. You don&apos;t have to
             pick one immediately — more on this in Module 6 (Hand Strategy).
           </Callout>
@@ -495,29 +492,29 @@ export default function Module2ReadingTheCard() {
               flowers on one end.
             </li>
             <li>
-              <strong>Look at your biggest cluster.</strong> Got four Bams? Start
+              <strong>Look at your biggest cluster.</strong>{" "}Got four Bams? Start
               with categories that use a lot of one suit. Got mostly even numbers?
               Check 2468.
             </li>
             <li>
-              <strong>Spot pairs and triples.</strong> Two of the same tile is
+              <strong>Spot pairs and triples.</strong>{" "}Two of the same tile is
               a pair; three is a pung-in-progress. Hands that use those numbers are
               good candidates.
             </li>
             <li>
-              <strong>Check the year hand.</strong> If you happen to have tiles
+              <strong>Check the year hand.</strong>{" "}If you happen to have tiles
               matching this year&apos;s digits, it&apos;s often one of the easiest
               places to start.
             </li>
             <li>
-              <strong>Pick 2–3 candidates</strong> and mentally note which tiles fit
+              <strong>Pick 2–3 candidates</strong>{" "}and mentally note which tiles fit
               all of them and which fit none. The ones that fit none are your first
               discards.
             </li>
           </ol>
 
           <Callout variant="tip">
-            <strong>Speed comes with practice.</strong> Your first few games,
+            <strong>Speed comes with practice.</strong>{" "}Your first few games,
             scanning the card will feel painfully slow. By game 10, you&apos;ll
             glance at your tiles and see candidates immediately. Don&apos;t rush
             yourself early on — the table will wait.
@@ -538,7 +535,7 @@ export default function Module2ReadingTheCard() {
               </h4>
               <p className="text-[13px] text-zinc-700">
                 You call a tile for a hand marked C (concealed) — and your hand is
-                now dead. <strong>Always check C vs. X</strong> before you call.
+                now dead. <strong>Always check C vs. X</strong>{" "}before you call.
               </p>
             </div>
             <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
@@ -546,8 +543,7 @@ export default function Module2ReadingTheCard() {
                 Treating pattern numbers as literal
               </h4>
               <p className="text-[13px] text-zinc-700">
-                The card shows &quot;111 222&quot; and you think you <em>must</em>{" "}
-                use 1s and 2s. You don&apos;t — those numbers represent a pattern.
+                The card shows &quot;111 222&quot; and you think you <em>must</em> use 1s and 2s. You don&apos;t — those numbers represent a pattern.
                 Read the category name to know if the numbers are flexible.
               </p>
             </div>
@@ -556,7 +552,7 @@ export default function Module2ReadingTheCard() {
                 Confusing a kong for two pairs
               </h4>
               <p className="text-[13px] text-zinc-700">
-                Four tiles clustered together is a <strong>kong</strong> (one group of
+                Four tiles clustered together is a <strong>kong</strong>{" "}(one group of
                 4), not two pairs. A space between them would mean two separate
                 pairs. Spacing matters.
               </p>
@@ -657,7 +653,7 @@ export default function Module2ReadingTheCard() {
             symbols, the patterns, the groupings. That&apos;s a huge step.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 3 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 3 covers{" "}
             <strong>Setup &amp; Dealing</strong> — how to build the walls, pick the
             dealer, and deal tiles so you can start playing.
           </p>

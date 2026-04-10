@@ -16,7 +16,7 @@ export function WinningHandTeaser() {
       </h3>
       <p className="mt-1 mb-4 text-sm text-zinc-600">
         You don&apos;t need to understand this yet — just so you have a target in mind. A
-        winning hand is <strong>14 tiles</strong> arranged in groups. Here&apos;s one
+        winning hand is <strong>14 tiles</strong>{" "}arranged in groups. Here&apos;s one
         example:
       </p>
 

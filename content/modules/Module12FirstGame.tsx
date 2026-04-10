@@ -182,7 +182,7 @@ export default function Module12FirstGame() {
 
           <Callout variant="tip">
             Sara&apos;s rule of thumb from Module 6: pass tiles that fit{" "}
-            <em>none</em> of your candidate hands first. The 5 Crack, 9 Dot, and Green
+            <em>none</em>{" "}of your candidate hands first. The 5 Crack, 9 Dot, and Green
             Dragon don&apos;t fit any all-Bam hand on the card.
           </Callout>
         </LessonScreen>
@@ -192,7 +192,7 @@ export default function Module12FirstGame() {
           <p>
             Sara does all 6 passes (right, across, left, then left, across, right).
             By the end of the Charleston she also dropped the East Wind, picked up an
-            extra 4-Bam, gained a <strong>Joker</strong> (gold!), and ended up with
+            extra 4-Bam, gained a <strong>Joker</strong>{" "}(gold!), and ended up with
             two filler tiles she didn&apos;t want (a 6 Crack and a 7 Crack).
           </p>
 
@@ -225,8 +225,7 @@ export default function Module12FirstGame() {
           </ul>
 
           <Callout variant="tip">
-            <strong>She needs 4 more meaningful tiles + the Joker substitution.</strong>{" "}
-            She&apos;s in great shape. Time to play.
+            <strong>She needs 4 more meaningful tiles + the Joker substitution.</strong> She&apos;s in great shape. Time to play.
           </Callout>
         </LessonScreen>
 
@@ -281,7 +280,7 @@ export default function Module12FirstGame() {
             That single word pauses the game so the next player won&apos;t draw. Now
             she has a few seconds to do the mental check from Module 5:{" "}
             <em>&quot;If I take this and expose four 1-Bams, can my remaining tiles
-            still complete a valid hand on the card?&quot;</em> Yes — her all-Bam hand
+            still complete a valid hand on the card?&quot;</em>{" "}Yes — her all-Bam hand
             is still very much alive. Safe to take.
           </p>
           <p>
@@ -316,7 +315,7 @@ export default function Module12FirstGame() {
           />
 
           <Callout variant="warn">
-            <strong>The exposure is irreversible.</strong> From this moment on, Sara
+            <strong>The exposure is irreversible.</strong>{" "}From this moment on, Sara
             cannot switch to a different hand category. Every other player at the
             table can see she&apos;s building a Bam-heavy hand. They will start
             withholding Bams from her.
@@ -329,7 +328,7 @@ export default function Module12FirstGame() {
             <TurnBadge label="Sara's turn 5" />
             Sara&apos;s turn comes around. Before she draws, she does what every
             experienced player does: she{" "}
-            <strong>scans every exposed group on the table</strong> for jokers (the
+            <strong>scans every exposed group on the table</strong>{" "}for jokers (the
             Module 5 habit).
           </p>
           <p>
@@ -369,8 +368,8 @@ export default function Module12FirstGame() {
           <p>
             Sara announces clearly:{" "}
             <em>&quot;Joker exchange — I&apos;ll trade my 3 Bam for the Joker in
-            your group.&quot;</em> She hands her real 3 Bam <strong>to the player
-            whose rack holds the joker</strong> (Module 8 etiquette: never reach onto
+            your group.&quot;</em>{" "}She hands her real 3 Bam <strong>to the player
+            whose rack holds the joker</strong>{" "}(Module 8 etiquette: never reach onto
             someone else&apos;s rack). They make the swap and hand her the Joker.
           </p>
           <p>
@@ -411,14 +410,14 @@ export default function Module12FirstGame() {
             A few uneventful turns pass. The wall is shrinking. Sara still needs:
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>One more <strong>2 Bam</strong> for her Kong (she has 3 of 4)</li>
-            <li>Two more <strong>3 Bams</strong> for her Pung — but she has 2 Jokers</li>
+            <li>One more <strong>2 Bam</strong>{" "}for her Kong (she has 3 of 4)</li>
+            <li>Two more <strong>3 Bams</strong>{" "}for her Pung — but she has 2 Jokers</li>
             <li>4-Bam Pung is already complete (3 of 3)</li>
             <li>1-Bam Kong is already exposed and complete</li>
           </ul>
           <p>
             With both Jokers in play as 3-Bams, she only actually needs to draw{" "}
-            <strong>one more 2 Bam</strong> to complete the entire hand.
+            <strong>one more 2 Bam</strong>{" "}to complete the entire hand.
           </p>
 
           <p>
@@ -442,7 +441,7 @@ export default function Module12FirstGame() {
             <TurnBadge label="Sara's turn 9" />
             Sara draws — nothing useful, a 9 Bam she doesn&apos;t need (her hand
             doesn&apos;t use 9s). She discards it. She is now <strong>exactly one
-            tile</strong> from Mahjong.
+            tile</strong>{" "}from Mahjong.
           </p>
 
           <HandState
@@ -481,7 +480,7 @@ export default function Module12FirstGame() {
           </ul>
 
           <p>
-            <strong>That&apos;s it.</strong> Any 2 Bam — drawn or discarded — is the
+            <strong>That&apos;s it.</strong>{" "}Any 2 Bam — drawn or discarded — is the
             winning tile. She quietly mouths the words to make sure she&apos;ll be
             ready: <em>&quot;Mahjong.&quot;</em>
           </p>
@@ -495,8 +494,7 @@ export default function Module12FirstGame() {
             <strong>&quot;Two Bam.&quot;</strong>
           </p>
           <p>
-            Sara&apos;s eyes lock onto the tile. She says <strong>&quot;wait&quot;</strong>{" "}
-            to pause the game, takes one more second to verify against the card —
+            Sara&apos;s eyes lock onto the tile. She says <strong>&quot;wait&quot;</strong> to pause the game, takes one more second to verify against the card —
             yes, every group is accounted for — and then:
           </p>
           <p className="font-serif text-2xl font-black text-[var(--color-red)]">
@@ -559,7 +557,7 @@ export default function Module12FirstGame() {
         <LessonScreen title="💰 The Payout">
           <p>
             Time to do the math from Module 9. Suppose Sara&apos;s practice hand is
-            worth <strong>30¢</strong> on the card (a moderate value).
+            worth <strong>30¢</strong>{" "}on the card (a moderate value).
           </p>
 
           <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
@@ -614,9 +612,9 @@ export default function Module12FirstGame() {
           </p>
 
           <Callout variant="tip">
-            <strong>What if Sara had self-drawn instead?</strong> All three other
+            <strong>What if Sara had self-drawn instead?</strong>{" "}All three other
             players would pay 60¢ each = $1.80 total. <strong>What if her hand had
-            also been jokerless?</strong> Double again: $1.20 each × 3 = $3.60
+            also been jokerless?</strong>{" "}Double again: $1.20 each × 3 = $3.60
             total. Sara&apos;s win is solid but not spectacular — and that&apos;s
             totally normal for a beginner game.
           </Callout>
@@ -631,22 +629,21 @@ export default function Module12FirstGame() {
 
           <ol className="ml-6 list-decimal space-y-3 text-[14px] text-zinc-700">
             <li>
-              <strong>Committed to a hand early.</strong> She picked her all-Bam
+              <strong>Committed to a hand early.</strong>{" "}She picked her all-Bam
               candidate during the deal and never wavered. Module 6.
             </li>
             <li>
-              <strong>Passed her junk in the Charleston.</strong> She got rid of
+              <strong>Passed her junk in the Charleston.</strong>{" "}She got rid of
               tiles that fit zero of her candidates and held the East Wind one extra
               pass &quot;just in case,&quot; which is exactly the right caution level.
               Module 4.
             </li>
             <li>
-              <strong>Said &quot;wait,&quot; thought it through, then called</strong>{" "}
-              when the right tile came along — but not before doing the 2-second
+              <strong>Said &quot;wait,&quot; thought it through, then called</strong> when the right tile came along — but not before doing the 2-second
               &quot;can I still finish a valid hand?&quot; check. Module 5.
             </li>
             <li>
-              <strong>Spotted and executed the joker exchange.</strong> Most beginners
+              <strong>Spotted and executed the joker exchange.</strong>{" "}Most beginners
               forget exposed jokers exist. Sara scanned every turn. Modules 5 + 10.
             </li>
             <li>
@@ -657,7 +654,7 @@ export default function Module12FirstGame() {
           </ol>
 
           <Callout variant="info">
-            <strong>What about defense?</strong> This walkthrough focused on offense
+            <strong>What about defense?</strong>{" "}This walkthrough focused on offense
             for clarity, but in a real game Sara would also have been reading the
             other players&apos; exposures. By Turn 7 she would have noted that the
             player to her right was building Cracks (so Crack discards were safe to
@@ -666,8 +663,8 @@ export default function Module12FirstGame() {
           </Callout>
 
           <Callout variant="tip">
-            <strong>Your turn next.</strong> The next module — Practice Hands Library
-            — gives you puzzles where <em>you</em> make the calls Sara made here.
+            <strong>Your turn next.</strong>{" "}The next module — Practice Hands Library
+            — gives you puzzles where <em>you</em>{" "}make the calls Sara made here.
             That&apos;s where the real learning sticks.
           </Callout>
         </LessonScreen>
@@ -755,7 +752,7 @@ export default function Module12FirstGame() {
             module in this app.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 13 is the{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 13 is the{" "}
             <strong>Practice Hands Library</strong>. Now you sit in Sara&apos;s seat.
             You get a hand, you make the calls, and the app tells you whether you
             chose the best move and why.

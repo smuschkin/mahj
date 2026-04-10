@@ -49,9 +49,8 @@ const SCENARIOS: Scenario[] = [
         <strong>6 Dot</strong> — two in the discard pile plus you&apos;re holding
         the 3rd (or the 4th). Actually only 2 are visible here. Let&apos;s
         re-check: 2 in the discard pile + if you hold the 3rd, only 1 remains.
-        But <strong>9 Crack</strong> only has 1 discarded. <strong>Wait —</strong>{" "}
-        none of these are 3-visible yet. The safest choice is{" "}
-        <strong>6 Dot</strong> because 2 are already gone (fewest remain) and
+        But <strong>9 Crack</strong>{" "}only has 1 discarded. <strong>Wait —</strong> none of these are 3-visible yet. The safest choice is{" "}
+        <strong>6 Dot</strong>{" "}because 2 are already gone (fewest remain) and
         no player has shown Dot exposures. Player A is on Bams — any Bam is
         dangerous.
       </>
@@ -155,7 +154,7 @@ const SCENARIOS: Scenario[] = [
     correctIndex: 0,
     explanation: (
       <>
-        <strong>5 Bam</strong> is extremely dangerous. Player C has Pungs of 5
+        <strong>5 Bam</strong>{" "}is extremely dangerous. Player C has Pungs of 5
         Crack and 5 Dot — they&apos;re almost certainly on a like-numbers hand
         built around 5s. The missing group is probably 5 Bam. Feeding them
         a 5 Bam could hand them Mahjong.
@@ -266,7 +265,7 @@ const SCENARIOS: Scenario[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Cracks are hot.</strong> The complete absence of Crack discards
+        <strong>Cracks are hot.</strong>{" "}The complete absence of Crack discards
         means at least one player is collecting them. Any Crack you throw could
         be called instantly. Bams and Dots are cold — everyone is dumping them.
       </>
@@ -291,10 +290,10 @@ const SCENARIOS: Scenario[] = [
     explanation: (
       <>
         <strong>Avoid Dots.</strong> 0 exposures doesn&apos;t mean no info —
-        their <em>discards</em> are a tell. They&apos;ve dumped every suit
+        their <em>discards</em>{" "}are a tell. They&apos;ve dumped every suit
         except Dots, plus all their honors. They&apos;re almost certainly on
         a concealed Dots hand. The smile confirms it. Track what&apos;s{" "}
-        <em>not</em> being thrown.
+        <em>not</em>{" "}being thrown.
       </>
     ),
   },
@@ -365,7 +364,7 @@ const SCENARIOS: Scenario[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Yes, exchange.</strong> Their Pung is already complete with or
+        <strong>Yes, exchange.</strong>{" "}Their Pung is already complete with or
         without the Joker — swapping changes nothing for them. But you gain
         a Joker, which is the most flexible tile in the game. Even if
         you&apos;re playing defense, a Joker in hand gives you options.

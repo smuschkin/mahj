@@ -103,22 +103,22 @@ export default function Module9Scoring() {
         {/* ── 1. The big picture ── */}
         <LessonScreen title="💰 How Scoring Works">
           <p>
-            Every hand on the card has a <strong>value</strong> printed next to
+            Every hand on the card has a <strong>value</strong>{" "}printed next to
             it — something like 25¢ or 30¢. When someone wins, the other three
             players pay them based on that value.
           </p>
           <p>
-            There are only <strong>3 things</strong> that change what you pay:
+            There are only <strong>3 things</strong>{" "}that change what you pay:
           </p>
           <ol className="ml-6 list-decimal space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>Who threw the winning tile?</strong> (the discarder pays more)
+              <strong>Who threw the winning tile?</strong>{" "}(the discarder pays more)
             </li>
             <li>
-              <strong>Did the winner draw it themselves?</strong> (everyone pays more)
+              <strong>Did the winner draw it themselves?</strong>{" "}(everyone pays more)
             </li>
             <li>
-              <strong>Did the winner use any jokers?</strong> (no jokers = everyone pays more)
+              <strong>Did the winner use any jokers?</strong>{" "}(no jokers = everyone pays more)
             </li>
           </ol>
           <p className="mt-2 text-[14px] text-zinc-700">
@@ -206,7 +206,7 @@ export default function Module9Scoring() {
           />
 
           <Callout variant="warn">
-            <strong>Singles &amp; Pairs exception:</strong> These hands can&apos;t
+            <strong>Singles &amp; Pairs exception:</strong>{" "}These hands can&apos;t
             use jokers at all, so the jokerless bonus is already included in the
             printed value. Don&apos;t double it again.
           </Callout>
@@ -215,7 +215,7 @@ export default function Module9Scoring() {
         {/* ── 5. Quick reference ── */}
         <LessonScreen title="📋 Quick Reference Table">
           <p>
-            Here&apos;s every scenario on a <strong>25¢ hand</strong> at a
+            Here&apos;s every scenario on a <strong>25¢ hand</strong>{" "}at a
             glance:
           </p>
 
@@ -259,7 +259,7 @@ export default function Module9Scoring() {
           </div>
 
           <Callout variant="tip">
-            <strong>The pattern is simple:</strong> start with the hand value.
+            <strong>The pattern is simple:</strong>{" "}start with the hand value.
             Discarder pays 2×, self-draw means everyone pays 2×, jokerless
             doubles everything again. That&apos;s it.
           </Callout>
@@ -329,7 +329,7 @@ export default function Module9Scoring() {
         {/* ── 9. Worked example ── */}
         <LessonScreen title="🧠 Worked Example">
           <p>
-            Sara wins a <strong>30¢</strong> hand. She drew the winning tile
+            Sara wins a <strong>30¢</strong>{" "}hand. She drew the winning tile
             herself (self-draw) and has no jokers.
           </p>
 
@@ -424,7 +424,7 @@ export default function Module9Scoring() {
             situations.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 10 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 10 covers{" "}
             <strong>Common Mistakes</strong> — the errors every beginner
             makes, and how to recover from them gracefully.
           </p>

@@ -234,7 +234,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     definition: (
       <>
         A tile placed face-up in the center of the table at the end of a turn. You
-        must <strong>name it out loud</strong> as you place it. Other players may
+        must <strong>name it out loud</strong>{" "}as you place it. Other players may
         call it before the next player racks.
       </>
     ),
@@ -395,7 +395,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
       <>
         The wild-card tile. There are 8 in the set. Jokers may substitute in any
         group of 3+ identical tiles (Pungs, Kongs, Quints), but{" "}
-        <strong>never</strong> in a pair or single. Cannot be passed in the
+        <strong>never</strong>{" "}in a pair or single. Cannot be passed in the
         Charleston, cannot be called from the discard pile.
       </>
     ),
@@ -420,7 +420,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     definition: (
       <>
         A winning hand with no jokers pays double. Stacks with the discarder /
-        self-draw bonus. <strong>Exception:</strong> Singles &amp; Pairs hands
+        self-draw bonus. <strong>Exception:</strong>{" "}Singles &amp; Pairs hands
         already have the bonus baked into the printed value — don&apos;t double them
         again.
       </>
@@ -462,7 +462,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     definition: (
       <>
         The win declaration. You say &quot;Mahjong!&quot; the moment your 14 tiles
-        match a hand on the card. Must be called <em>before</em> the next player
+        match a hand on the card. Must be called <em>before</em>{" "}the next player
         racks their drawn tile.
       </>
     ),
@@ -625,7 +625,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     definition: (
       <>
         The optional second round of three passes (left → across → right) that
-        happens after the first Charleston. <strong>Any single player</strong> can
+        happens after the first Charleston. <strong>Any single player</strong>{" "}can
         call &quot;stop&quot; to skip it without explanation.
       </>
     ),
@@ -660,7 +660,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     definition: (
       <>
         A hand category made entirely of pairs and single tiles. <strong>Jokers
-        cannot be used anywhere</strong> in a Singles &amp; Pairs hand. The
+        cannot be used anywhere</strong>{" "}in a Singles &amp; Pairs hand. The
         jokerless bonus is already baked into the printed value, so don&apos;t
         double these at payout.
       </>
@@ -700,7 +700,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     definition: (
       <>
         A hand where the wall runs out before anyone calls Mahjong. <strong>No
-        payments are made.</strong> Reshuffle and redeal.
+        payments are made.</strong>{" "}Reshuffle and redeal.
       </>
     ),
   },

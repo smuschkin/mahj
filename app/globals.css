@@ -35,10 +35,6 @@ html, body {
   font-family: var(--font-playfair), Georgia, serif;
 }
 
-/* Prevent bold text from visually colliding with surrounding text */
-strong {
-  word-spacing: 0.05em;
-}
 
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(6px); }

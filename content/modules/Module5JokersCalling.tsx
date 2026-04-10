@@ -111,8 +111,8 @@ export default function Module5JokersCalling() {
             of the table.
           </p>
           <p>
-            But sometimes, a discarded tile is exactly what <em>you</em> need. When that
-            happens, you can <strong>call</strong> for it — say it out loud and grab it
+            But sometimes, a discarded tile is exactly what <em>you</em>{" "}need. When that
+            happens, you can <strong>call</strong>{" "}for it — say it out loud and grab it
             before the next player draws.
           </p>
           <p>
@@ -142,25 +142,25 @@ export default function Module5JokersCalling() {
               You have 5 of a tile (using jokers). Someone discards a 6th. Rare!
             </CallCard>
             <CallCard num="14" title="MAHJONG" highlight>
-              The discard completes your <em>entire</em> hand — you win the round.
+              The discard completes your <em>entire</em>{" "}hand — you win the round.
             </CallCard>
           </div>
 
           <Callout variant="tip">
-            For all of these, just say <strong>&quot;Call!&quot;</strong> (or{" "}
-            <strong>&quot;Mahjong!&quot;</strong> if it wins). You don&apos;t
+            For all of these, just say <strong>&quot;Call!&quot;</strong>{" "}(or{" "}
+            <strong>&quot;Mahjong!&quot;</strong>{" "}if it wins). You don&apos;t
             need to say &quot;Pung&quot; or &quot;Kong&quot; — the exposure
             shows what you made.
           </Callout>
 
           <Callout variant="warn">
-            <strong>Anyone</strong> can call a Pung or Kong, no matter whose turn it
-            is — calling skips the turn order. But you must call <em>before</em> the
+            <strong>Anyone</strong>{" "}can call a Pung or Kong, no matter whose turn it
+            is — calling skips the turn order. But you must call <em>before</em>{" "}the
             next player picks up a tile from the wall, or it&apos;s too late.
           </Callout>
           <Callout variant="tip">
-            <strong>One special case:</strong> a <strong>Mahjong</strong> call is the
-            <em>only</em> time you can claim a discard for a <strong>pair</strong> or a{" "}
+            <strong>One special case:</strong>{" "}a <strong>Mahjong</strong>{" "}call is the
+            <em>only</em>{" "}time you can claim a discard for a <strong>pair</strong>{" "}or a{" "}
             <strong>single</strong> — and only if that one tile completes your entire
             winning hand. Otherwise, calls are always for groups of 3 or more.
           </Callout>
@@ -171,32 +171,31 @@ export default function Module5JokersCalling() {
           <p>A call has a few quick steps:</p>
           <ol className="ml-6 list-decimal space-y-2 text-[15px]">
             <li>
-              <strong>Say &quot;wait.&quot;</strong> The instant a discard hits the
+              <strong>Say &quot;wait.&quot;</strong>{" "}The instant a discard hits the
               table that you might want, just say <strong>&quot;wait&quot;</strong> —
               that pauses the game so the next player doesn&apos;t draw. Take a few
               seconds to think it through.
             </li>
             <li>
-              <strong>Then call if you want it.</strong> If you decide to take the
-              tile, take it and say <strong>&quot;Call!&quot;</strong> (or{" "}
-              <strong>&quot;Mahjong!&quot;</strong> if it completes your hand). You
+              <strong>Then call if you want it.</strong>{" "}If you decide to take the
+              tile, take it and say <strong>&quot;Call!&quot;</strong>{" "}(or{" "}
+              <strong>&quot;Mahjong!&quot;</strong>{" "}if it completes your hand). You
               don&apos;t need to say &quot;Pung&quot; or &quot;Kong&quot; — the
               exposure shows what you made. If you decide you don&apos;t want it
               after all, just say so and play continues.
             </li>
             <li>
-              <strong>Expose your group.</strong> If you took it for a Pung or Kong,
+              <strong>Expose your group.</strong>{" "}If you took it for a Pung or Kong,
               lay all the matching tiles face-up at the front of your rack so
               everyone can see them.
             </li>
             <li>
-              <strong>Discard one tile</strong> from your hand to keep your tile count
+              <strong>Discard one tile</strong>{" "}from your hand to keep your tile count
               correct. Then play continues with the player to your right.
             </li>
           </ol>
           <Callout variant="tip">
-            <strong>&quot;Wait&quot; is the most useful word at the table.</strong>{" "}
-            You don&apos;t have to commit the instant a tile lands. Pause the game,
+            <strong>&quot;Wait&quot; is the most useful word at the table.</strong> You don&apos;t have to commit the instant a tile lands. Pause the game,
             think, and then decide. Nobody will rush you as long as you said
             &quot;wait&quot; first.
           </Callout>
@@ -205,7 +204,7 @@ export default function Module5JokersCalling() {
         {/* ── 4. Exposing ── */}
         <LessonScreen title="👀 Exposing: Showing Your Tiles">
           <p>
-            When you call a Pung or Kong, you have to <strong>expose</strong> the
+            When you call a Pung or Kong, you have to <strong>expose</strong>{" "}the
             group — lay all the matching tiles face-up at the front of your rack.
           </p>
           <p>
@@ -242,10 +241,10 @@ export default function Module5JokersCalling() {
                 ✅ Jokers CAN substitute in:
               </h4>
               <ul className="ml-5 list-disc space-y-0.5 text-[13px] text-zinc-700">
-                <li><strong>Pungs</strong> (3 of a kind)</li>
-                <li><strong>Kongs</strong> (4 of a kind)</li>
-                <li><strong>Quints</strong> (5 of a kind)</li>
-                <li><strong>Sextets</strong> (6 of a kind)</li>
+                <li><strong>Pungs</strong>{" "}(3 of a kind)</li>
+                <li><strong>Kongs</strong>{" "}(4 of a kind)</li>
+                <li><strong>Quints</strong>{" "}(5 of a kind)</li>
+                <li><strong>Sextets</strong>{" "}(6 of a kind)</li>
                 <li>Any group of <strong>3 or more identical tiles</strong></li>
               </ul>
             </div>
@@ -254,11 +253,11 @@ export default function Module5JokersCalling() {
                 ❌ Jokers CANNOT substitute in:
               </h4>
               <ul className="ml-5 list-disc space-y-0.5 text-[13px] text-zinc-700">
-                <li><strong>Pairs</strong> (2 of a kind)</li>
-                <li><strong>Singles</strong> (1 specific tile)</li>
+                <li><strong>Pairs</strong>{" "}(2 of a kind)</li>
+                <li><strong>Singles</strong>{" "}(1 specific tile)</li>
                 <li>Any &quot;Singles &amp; Pairs&quot; hand (no jokers anywhere)</li>
-                <li>Hands like <strong>NEWS</strong> (N-E-W-S singles)</li>
-                <li><strong>Year hands</strong> that use single digits (e.g. 2-0-2-6)</li>
+                <li>Hands like <strong>NEWS</strong>{" "}(N-E-W-S singles)</li>
+                <li><strong>Year hands</strong>{" "}that use single digits (e.g. 2-0-2-6)</li>
               </ul>
             </div>
           </div>
@@ -270,7 +269,7 @@ export default function Module5JokersCalling() {
           </TileRow>
 
           <Callout variant="warn">
-            <strong>The pair rule trips everyone up.</strong> If your hand needs a pair
+            <strong>The pair rule trips everyone up.</strong>{" "}If your hand needs a pair
             of 5 Cracks, you need <em>two real</em> 5 Cracks. A joker won&apos;t work.
           </Callout>
         </LessonScreen>
@@ -282,9 +281,9 @@ export default function Module5JokersCalling() {
             features.
           </p>
           <p>
-            If <em>any player</em> (including you) has an exposed group containing a
-            joker, and <em>you</em> have the real tile that joker is standing in for,
-            you can <strong>swap</strong> your real tile for their joker. This happens
+            If <em>any player</em>{" "}(including you) has an exposed group containing a
+            joker, and <em>you</em>{" "}have the real tile that joker is standing in for,
+            you can <strong>swap</strong>{" "}your real tile for their joker. This happens
             on <em>your turn</em>, after you draw from the wall and before you
             discard. You can do multiple exchanges in a single turn.
           </p>
@@ -322,7 +321,7 @@ export default function Module5JokersCalling() {
           </p>
 
           <Callout variant="tip">
-            <strong>Why this is awesome:</strong> Jokers are the most powerful tile in
+            <strong>Why this is awesome:</strong>{" "}Jokers are the most powerful tile in
             the game. Stealing one from another player is one of the best moves you can
             make.
           </Callout>
@@ -341,15 +340,15 @@ export default function Module5JokersCalling() {
             </li>
             <li>You must give a <strong>real tile</strong> — not another joker</li>
             <li>
-              You can do <strong>multiple exchanges</strong> on the same turn if you
+              You can do <strong>multiple exchanges</strong>{" "}on the same turn if you
               have the right tiles
             </li>
             <li>
-              You <strong>cannot</strong> exchange with tiles still in someone&apos;s
+              You <strong>cannot</strong>{" "}exchange with tiles still in someone&apos;s
               hand — only exposed groups
             </li>
             <li>
-              If you <em>called</em> a discard this turn, the called exposure itself
+              If you <em>called</em>{" "}a discard this turn, the called exposure itself
               must be completed from tiles already in your hand —{" "}
               <strong>you can&apos;t use a joker exchange to make the call legal</strong>.
               You can still do an exchange afterward, though.
@@ -360,7 +359,7 @@ export default function Module5JokersCalling() {
         {/* ── 7. When to call — courtesy-style judgment ── */}
         <LessonScreen title="🤔 When SHOULD You Call? (The Judgment Call)">
           <p>
-            Just because you <em>can</em> call doesn&apos;t mean you should. Calling
+            Just because you <em>can</em>{" "}call doesn&apos;t mean you should. Calling
             has real costs.
           </p>
 
@@ -385,13 +384,13 @@ export default function Module5JokersCalling() {
           </DecisionBox>
 
           <Callout variant="warn">
-            <strong>The hidden cost of calling:</strong> Once you expose tiles, you
+            <strong>The hidden cost of calling:</strong>{" "}Once you expose tiles, you
             can&apos;t change which hand you&apos;re building toward. Some hands require{" "}
-            <em>concealed</em> tiles (no calls). Calling early can lock you out of
+            <em>concealed</em>{" "}tiles (no calls). Calling early can lock you out of
             better options later.
           </Callout>
           <Callout variant="tip">
-            <strong>Permission to be cautious:</strong> When in doubt, don&apos;t call.
+            <strong>Permission to be cautious:</strong>{" "}When in doubt, don&apos;t call.
             Beginners almost always over-call. Pass on the tile, draw next turn, and
             keep your options open.
           </Callout>
@@ -410,7 +409,7 @@ export default function Module5JokersCalling() {
             playing (you must still discard each turn) but you can&apos;t win.
             You still pay the winner at the end like any other loser. Some
             groups add an extra penalty, but that&apos;s a house rule.{" "}
-            <strong>Always</strong> check before you call.
+            <strong>Always</strong>{" "}check before you call.
           </DecisionBox>
 
           <DecisionBox title="2. Jokers CANNOT be called from the discard pile" bad>
@@ -507,7 +506,7 @@ export default function Module5JokersCalling() {
             confident players from nervous ones.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 6 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 6 covers{" "}
             <strong>Hand Strategy</strong> — picking which hand to build toward,
             staying flexible, and the all-important &quot;what would you discard?&quot;
             thinking.

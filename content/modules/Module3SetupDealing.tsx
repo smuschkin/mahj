@@ -58,7 +58,7 @@ export default function Module3SetupDealing() {
               <strong>Build</strong> — stack the tiles into 4 walls
             </li>
             <li>
-              <strong>Pick the Dealer (East)</strong> (optional) — usually the host is
+              <strong>Pick the Dealer (East)</strong>{" "}(optional) — usually the host is
               the Dealer by default; otherwise roll dice
             </li>
             <li>
@@ -74,7 +74,7 @@ export default function Module3SetupDealing() {
         {/* ── 2. Wash ── */}
         <LessonScreen title="🌀 Step 1: Wash the Tiles">
           <p>
-            Put <strong>all 152 tiles face-down</strong> on the table and gently swirl
+            Put <strong>all 152 tiles face-down</strong>{" "}on the table and gently swirl
             them around with your hands.
           </p>
           <p>
@@ -111,7 +111,7 @@ export default function Module3SetupDealing() {
             should be touching, but not crooked.
           </Callout>
           <Callout variant="info">
-            <strong>Coming from Riichi or Asian mahjong?</strong> American Mahjong
+            <strong>Coming from Riichi or Asian mahjong?</strong>{" "}American Mahjong
             has <strong>no dead wall</strong> — every tile in the wall is playable.
             You deal and draw until the wall is empty or someone wins.
           </Callout>
@@ -120,8 +120,8 @@ export default function Module3SetupDealing() {
         {/* ── 4. Pick Dealer (East) — optional ── */}
         <LessonScreen title="🎲 Step 3: Pick the Dealer (Optional)">
           <p>
-            <strong>The Dealer (East) deals first</strong> and is the most important
-            seat. The <strong>NMJL standard</strong> is to{" "}
+            <strong>The Dealer (East) deals first</strong>{" "}and is the most important
+            seat. The <strong>NMJL standard</strong>{" "}is to{" "}
             <strong>roll dice to pick East</strong> — each player throws, and
             the highest roll becomes the Dealer (re-roll any ties).
           </p>
@@ -129,8 +129,7 @@ export default function Module3SetupDealing() {
             Some casual groups use a house shortcut: &quot;the host of the
             night is just East by default.&quot; That&apos;s not the official
             rule, but it&apos;s common at friendly tables. If you and your
-            group prefer that, you can <strong>skip this step entirely</strong>{" "}
-            and move on to taking your seats.
+            group prefer that, you can <strong>skip this step entirely</strong> and move on to taking your seats.
           </p>
           <div className="my-4 flex flex-wrap items-end justify-center gap-3">
             <div className="flex flex-col items-center gap-1.5">
@@ -168,7 +167,7 @@ export default function Module3SetupDealing() {
             The Dealer (East) has the best odds of winning the first hand, so it&apos;s
             worth picking fairly when there&apos;s no natural host. After each{" "}
             <strong>hand</strong>, the Dealer position passes to the next player
-            counter-clockwise — <em>unless</em> the Dealer wins or the hand ends
+            counter-clockwise — <em>unless</em>{" "}the Dealer wins or the hand ends
             in a wall game (no one wins), in which case the Dealer stays for the
             next hand.
           </Callout>
@@ -181,7 +180,7 @@ export default function Module3SetupDealing() {
             dealing — that person is called <strong>East</strong>.
           </p>
           <p>
-            Turns go to the <strong>right</strong> around the table (the player
+            Turns go to the <strong>right</strong>{" "}around the table (the player
             on your right goes after you).
           </p>
           <TableSeating highlight="east" />
@@ -196,7 +195,7 @@ export default function Module3SetupDealing() {
             right end of the Dealer&apos;s wall.
           </p>
           <Callout variant="tip">
-            <strong>First time playing?</strong> Skip the wall break. Just start
+            <strong>First time playing?</strong>{" "}Skip the wall break. Just start
             dealing from the right end of the Dealer&apos;s wall. You can always
             add it later.
           </Callout>
@@ -206,19 +205,19 @@ export default function Module3SetupDealing() {
           </h4>
           <ol className="ml-6 list-decimal space-y-2 text-[15px]">
             <li>
-              <strong>The Dealer rolls 2 dice</strong> and adds them up
+              <strong>The Dealer rolls 2 dice</strong>{" "}and adds them up
               (example: 4 + 3 = 7).
             </li>
             <li>
-              <strong>Count that many stacks from the right end</strong> of the
+              <strong>Count that many stacks from the right end</strong>{" "}of the
               Dealer&apos;s wall.
             </li>
             <li>
-              <strong>Push those counted stacks forward</strong> toward the
+              <strong>Push those counted stacks forward</strong>{" "}toward the
               center of the table, out of the way.
             </li>
             <li>
-              <strong>Start dealing from the left side of the gap</strong> you
+              <strong>Start dealing from the left side of the gap</strong>{" "}you
               just made. The pushed-out tiles stay in the wall and get dealt
               last.
             </li>
@@ -246,7 +245,7 @@ export default function Module3SetupDealing() {
         <LessonScreen title="🃏 Step 6: Deal the Tiles">
           <p>
             Starting from where you broke the wall, deal tiles{" "}
-            <strong>counter-clockwise</strong> in groups of 4. From the Dealer&apos;s
+            <strong>counter-clockwise</strong>{" "}in groups of 4. From the Dealer&apos;s
             perspective, the order is:
           </p>
           <p className="my-3 text-center font-serif text-[15px] font-bold text-[var(--color-mid)]">
@@ -258,10 +257,10 @@ export default function Module3SetupDealing() {
               across, and left
             </li>
             <li>
-              <strong>Round 2:</strong> Another 4 tiles to each
+              <strong>Round 2:</strong>{" "}Another 4 tiles to each
             </li>
             <li>
-              <strong>Round 3:</strong> Another 4 to each — everyone now has{" "}
+              <strong>Round 3:</strong>{" "}Another 4 to each — everyone now has{" "}
               <strong>12 tiles</strong>
             </li>
           </ul>
@@ -269,18 +268,17 @@ export default function Module3SetupDealing() {
           <DealingAnimation />
 
           <Callout variant="warn">
-            <strong>You&apos;ll run out of tiles mid-deal — that&apos;s normal.</strong>{" "}
-            Each player&apos;s wall only holds <strong>38 tiles</strong> (19 stacks × 2
-            high), but the deal hands out <strong>53 tiles</strong> total. When you
+            <strong>You&apos;ll run out of tiles mid-deal — that&apos;s normal.</strong> Each player&apos;s wall only holds <strong>38 tiles</strong>{" "}(19 stacks × 2
+            high), but the deal hands out <strong>53 tiles</strong>{" "}total. When you
             exhaust the wall you&apos;re dealing from, the{" "}
-            <strong>next player to the left</strong> physically{" "}
-            <strong>pushes their own wall forward</strong> toward the center of the
+            <strong>next player to the left</strong>{" "}physically{" "}
+            <strong>pushes their own wall forward</strong>{" "}toward the center of the
             table — this is called <strong>&quot;curtsying&quot; the wall</strong> —
             and dealing continues from there.
           </Callout>
 
           <Callout variant="tip">
-            <strong>When a wall runs out:</strong> the next player to the left
+            <strong>When a wall runs out:</strong>{" "}the next player to the left
             pushes their wall toward the center of the table. Keep dealing from
             there. This keeps happening around the table until the deal is done.
           </Callout>
@@ -290,25 +288,25 @@ export default function Module3SetupDealing() {
           </h4>
           <p>
             For the final round, the Dealer (East) takes{" "}
-            <strong>two</strong> tiles first in a special leapfrog pattern. From
+            <strong>two</strong>{" "}tiles first in a special leapfrog pattern. From
             the next 3 stacks of 2 on top of the wall:
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[15px]">
             <li>
-              <strong>Tile 1</strong> (top of stack 1) → the Dealer
+              <strong>Tile 1</strong>{" "}(top of stack 1) → the Dealer
             </li>
             <li>
-              <strong>Tile 2</strong> (top of stack 3) → the Dealer <em>again</em>{" "}
+              <strong>Tile 2</strong>{" "}(top of stack 3) → the Dealer <em>again</em>{" "}
               — leapfrogging over stack 2
             </li>
             <li>
-              <strong>Tile 3</strong> (bottom of stack 1) → the player on the right
+              <strong>Tile 3</strong>{" "}(bottom of stack 1) → the player on the right
             </li>
             <li>
-              <strong>Tile 4</strong> (top of stack 2) → the player across
+              <strong>Tile 4</strong>{" "}(top of stack 2) → the player across
             </li>
             <li>
-              <strong>Tile 5</strong> (bottom of stack 2) → the player on the left
+              <strong>Tile 5</strong>{" "}(bottom of stack 2) → the player on the left
             </li>
           </ul>
           <p className="text-[14px] text-zinc-600">
@@ -316,8 +314,8 @@ export default function Module3SetupDealing() {
             drawn during play.
           </p>
           <p>
-            Now the Dealer (East) has <strong>14 tiles</strong> (12 + 2), and the other
-            three players each have <strong>13 tiles</strong> (12 + 1).
+            Now the Dealer (East) has <strong>14 tiles</strong>{" "}(12 + 2), and the other
+            three players each have <strong>13 tiles</strong>{" "}(12 + 1).
           </p>
 
           {/* Inline 1st-and-3rd diagram — 3 stacks, dealer leapfrogs across stack 2 */}
@@ -534,9 +532,9 @@ export default function Module3SetupDealing() {
             most apps don&apos;t even try to teach.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 4 covers the{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 4 covers the{" "}
             <strong>Charleston</strong> — the unique tile-trading ritual that happens{" "}
-            <em>before</em> the game really starts.
+            <em>before</em>{" "}the game really starts.
           </p>
         </LessonScreen>
       </ScreenStepper>

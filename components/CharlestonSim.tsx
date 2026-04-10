@@ -411,7 +411,7 @@ export function CharlestonSim() {
           {s.courtesyCount > 0 && (
             <>
               <p className="mb-2 text-center text-[12px] text-zinc-600">
-                Select <strong>{s.courtesyCount}</strong> tile
+                Select <strong>{s.courtesyCount}</strong>{" "}tile
                 {s.courtesyCount > 1 ? "s" : ""} to send across.
               </p>
               <TileGrid

@@ -76,7 +76,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 12,
     explanation: (
       <>
-        The <strong>9 Dot</strong> is the only tile that fits neither of your forming
+        The <strong>9 Dot</strong>{" "}is the only tile that fits neither of your forming
         suits. Module 6: discard tiles that fit none of your candidate hands first.
         It&apos;s isolated and useless to you.
       </>
@@ -115,10 +115,10 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 0,
     explanation: (
       <>
-        The <strong>East Wind and 3 Cracks</strong> are all dead weight — none fit
+        The <strong>East Wind and 3 Cracks</strong>{" "}are all dead weight — none fit
         a Bam hand. Discard the East Wind first (lone honors are dangerous to hold),
         then the Cracks over the next turns. The Green Dragon pair has potential
-        (dragons pair with suits). The Joker is <strong>never</strong> a discard.
+        (dragons pair with suits). The Joker is <strong>never</strong>{" "}a discard.
       </>
     ),
   },
@@ -134,14 +134,14 @@ const PUZZLES: Puzzle[] = [
         <p>Mid-game. The table situation:</p>
         <ul className="ml-5 list-disc space-y-1 text-[13px] text-zinc-700">
           <li>
-            <strong>Player across:</strong> Pung of 3 Bam + Pung of 6 Bam exposed
+            <strong>Player across:</strong>{" "}Pung of 3 Bam + Pung of 6 Bam exposed
           </li>
           <li>
-            <strong>Player on your right:</strong> Pung of West Wind exposed
+            <strong>Player on your right:</strong>{" "}Pung of West Wind exposed
           </li>
           <li>
-            <strong>The discard pile</strong> already contains{" "}
-            <strong>three Red Dragons</strong> from earlier turns
+            <strong>The discard pile</strong>{" "}already contains{" "}
+            <strong>three Red Dragons</strong>{" "}from earlier turns
           </li>
         </ul>
       </>
@@ -150,7 +150,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Red Dragon</strong> is completely safe. Three are already in the
+        <strong>Red Dragon</strong>{" "}is completely safe. Three are already in the
         discard pile, so no one can ever Pung or Kong the 4th — Module 7&apos;s
         3-of-a-tile safe rule. The Bams are dangerous (player across is on Bams).
         East Wind is dangerous too (right player is on winds-and-dragons).
@@ -209,7 +209,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Jokers can substitute in any group of <strong>3 or more identical tiles</strong>{" "}
         — so either of the Pungs-in-progress works, completing them at 3 tiles. Jokers{" "}
-        <strong>can never</strong> be used in a pair, full stop. Module 5&apos;s pair
+        <strong>can never</strong>{" "}be used in a pair, full stop. Module 5&apos;s pair
         rule.
       </>
     ),
@@ -247,10 +247,10 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 0,
     explanation: (
       <>
-        <strong>East Wind + 2 Cracks.</strong> The East Wind is a lone honor
+        <strong>East Wind + 2 Cracks.</strong>{" "}The East Wind is a lone honor
         (dead weight) and the Cracks don&apos;t fit your Bam direction. The
         Green Dragon pair has value (dragons pair with Bams). The Joker is{" "}
-        <strong>never</strong> passed. Never pass Bams when you&apos;re building Bams.
+        <strong>never</strong>{" "}passed. Never pass Bams when you&apos;re building Bams.
       </>
     ),
   },
@@ -282,7 +282,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Yes — perfectly legal. A Pung is 3 of a kind, and Jokers can substitute in
         any group of 3+ identical tiles (Pungs, Kongs, Quints). Module 5. The only
-        place a Joker <em>cannot</em> go is a pair or single.
+        place a Joker <em>cannot</em>{" "}go is a pair or single.
       </>
     ),
   },
@@ -381,7 +381,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 0,
     explanation: (
       <>
-        <strong>Both the 3 Crack and 7 Dot</strong> are junk — neither fits your
+        <strong>Both the 3 Crack and 7 Dot</strong>{" "}are junk — neither fits your
         all-Bam hand. Discard them over your next two turns (the hotter tile
         first). Never discard a Joker, and don&apos;t break your Bam groups.
       </>
@@ -398,9 +398,9 @@ const PUZZLES: Puzzle[] = [
       <>
         <p>Late game. Two opponents have exposures:</p>
         <ul className="ml-5 list-disc space-y-1 text-[13px] text-zinc-700">
-          <li><strong>Player A:</strong> Pung of 5 Crack + Pung of 5 Dot exposed</li>
-          <li><strong>Player B:</strong> Pung of Green Dragon exposed</li>
-          <li><strong>Discard pile:</strong> two 8 Bams already discarded</li>
+          <li><strong>Player A:</strong>{" "}Pung of 5 Crack + Pung of 5 Dot exposed</li>
+          <li><strong>Player B:</strong>{" "}Pung of Green Dragon exposed</li>
+          <li><strong>Discard pile:</strong>{" "}two 8 Bams already discarded</li>
         </ul>
       </>
     ),
@@ -413,11 +413,11 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 3,
     explanation: (
       <>
-        <strong>North Wind</strong> is safest. Player A is on a like-numbers 5s
+        <strong>North Wind</strong>{" "}is safest. Player A is on a like-numbers 5s
         hand — 5 Bam is extremely dangerous. Player B has dragons exposed — Red
         Dragon could help them. 8 Bam has 2 discarded but 2 still live. North
         Wind hasn&apos;t appeared in any exposure or pattern. Module 7: read
-        what&apos;s <em>not</em> being collected.
+        what&apos;s <em>not</em>{" "}being collected.
       </>
     ),
   },
@@ -444,7 +444,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Never pass a Joker.</strong> Jokers are the most valuable tiles in
+        <strong>Never pass a Joker.</strong>{" "}Jokers are the most valuable tiles in
         the game and cannot legally be passed in the Charleston. The North Wind and
         9 Dot are both fine junk to pass. Module 4.
       </>
@@ -461,7 +461,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        Self-draw = all three opponents pay <strong>double</strong> the hand value.
+        Self-draw = all three opponents pay <strong>double</strong>{" "}the hand value.
         25¢ × 2 = 50¢ each. Jokerless bonus does NOT apply because you have jokers.
         Module 9.
       </>
@@ -498,7 +498,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 9,
     explanation: (
       <>
-        The <strong>6 Dot</strong> is 100% safe. Three copies are already in the
+        The <strong>6 Dot</strong>{" "}is 100% safe. Three copies are already in the
         discard pile, so no one can ever Pung or Kong it. Module 7: once 3 of a
         tile are visible, the 4th is always safe.
       </>
@@ -582,7 +582,7 @@ const PUZZLES: Puzzle[] = [
         3 exposures = full defense mode. Stop trying to win and start
         discarding only guaranteed-safe tiles. Break your own forming groups
         if needed — your pairs are now a source of safe discards, not future
-        Pungs. <strong>Never</strong> discard a Joker. Module 7.
+        Pungs. <strong>Never</strong>{" "}discard a Joker. Module 7.
       </>
     ),
   },
@@ -619,7 +619,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 0,
     explanation: (
       <>
-        <strong>Soap first.</strong> Both are junk, but a lone honor is more
+        <strong>Soap first.</strong>{" "}Both are junk, but a lone honor is more
         dangerous to hold — someone building a winds-and-dragons hand could call
         it. The 8 Crack goes next turn. Both need to go, but order matters.
       </>
@@ -712,7 +712,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 12,
     explanation: (
       <>
-        <strong>Never discard a Joker.</strong> A discarded Joker is dead —
+        <strong>Never discard a Joker.</strong>{" "}A discarded Joker is dead —
         no one can call it, no one can use it. It&apos;s the most valuable tile
         in the game, always. Even when you&apos;re folding, even when you&apos;re
         frustrated. Module 5 + 6 discard priority: Jokers are permanently at
@@ -737,7 +737,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         Mahjong is the one exception to the &quot;calls are for groups of 3+&quot;
-        rule. If that one tile completes your <em>entire</em> winning hand — even
+        rule. If that one tile completes your <em>entire</em>{" "}winning hand — even
         if it&apos;s just completing a pair — you can call it. Module 5.
       </>
     ),
@@ -798,11 +798,11 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 0,
     explanation: (
       <>
-        <strong>Commit to Bams.</strong> You have a triple (3s), two pairs (5s
+        <strong>Commit to Bams.</strong>{" "}You have a triple (3s), two pairs (5s
         and 7s), plus 2 Jokers — a strong foundation. The Cracks are scattered
-        singles with no pairs. Drop the <strong>Red Dragon first</strong> (lone
+        singles with no pairs. Drop the <strong>Red Dragon first</strong>{" "}(lone
         honor, fits neither direction), then the Cracks over the next turns.
-        Jokers are <strong>never</strong> discarded.
+        Jokers are <strong>never</strong>{" "}discarded.
       </>
     ),
   },
@@ -822,7 +822,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 3,
     explanation: (
       <>
-        <strong>Zero is the right default</strong> when you&apos;re unsure.
+        <strong>Zero is the right default</strong>{" "}when you&apos;re unsure.
         The courtesy is a tool for when you&apos;re one specific tile away
         from a shape. If you don&apos;t know what you need, trading blindly
         could give away something you&apos;ll regret. Module 4.
@@ -885,7 +885,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 2,
     explanation: (
       <>
-        The <strong>4 Crack</strong> is the safest choice. Two are already in
+        The <strong>4 Crack</strong>{" "}is the safest choice. Two are already in
         the discard pile (only 2 remain), and the threat player is on Bams —
         they have zero interest in Cracks. Any Bam is extremely dangerous.
         The 8 Dot has only 1 copy discarded (3 still live). The honors are
@@ -910,7 +910,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>No.</strong> The pair rule is absolute: Jokers can never
+        <strong>No.</strong>{" "}The pair rule is absolute: Jokers can never
         substitute in a pair. You need <em>two real</em> 9 Dots. This is
         the #1 Joker mistake beginners make. Module 5.
       </>
@@ -1000,8 +1000,7 @@ export default function Module13Practice() {
               isn&apos;t), and move on.
             </p>
             <p className="mb-5 text-xs italic text-zinc-500">
-              Suggested target: get at least <strong>{passThreshold} of {total}</strong>{" "}
-              right. You can replay anytime.
+              Suggested target: get at least <strong>{passThreshold} of {total}</strong> right. You can replay anytime.
             </p>
             <button
               type="button"
@@ -1057,7 +1056,7 @@ export default function Module13Practice() {
       )}
 
       <Callout variant="info">
-        <strong>This is the end of MAHJ&apos;s curriculum.</strong> When you can
+        <strong>This is the end of MAHJ&apos;s curriculum.</strong>{" "}When you can
         complete this library confidently, you&apos;re ready to sit down at a real
         table. From there, the only remaining teacher is playing actual games.
       </Callout>

@@ -47,12 +47,12 @@ export default function Module0Welcome() {
 
         <LessonScreen title="🀄 What Is American Mahjong?">
           <p>
-            American Mahjong is a <strong>tile game</strong> played by{" "}
-            <strong>4 people</strong> around a table.
+            American Mahjong is a <strong>tile game</strong>{" "}played by{" "}
+            <strong>4 people</strong>{" "}around a table.
           </p>
           <p>
             Think of it like rummy — but with beautiful tiles instead of cards, a unique
-            trading ritual, and <em>wild jokers</em> that make every hand exciting.
+            trading ritual, and <em>wild jokers</em>{" "}that make every hand exciting.
           </p>
           <p>
             Each game takes about <strong>15–30 minutes</strong>. You&apos;ll usually play
@@ -62,15 +62,14 @@ export default function Module0Welcome() {
 
         <LessonScreen title="🏆 How You Win">
           <p>
-            Your goal: be the first to build a complete <strong>&quot;hand&quot;</strong>{" "}
-            of 14 tiles that matches one of the official winning patterns.
+            Your goal: be the first to build a complete <strong>&quot;hand&quot;</strong> of 14 tiles that matches one of the official winning patterns.
           </p>
           <p>
             You&apos;ll draw tiles, swap tiles, and watch what others discard — slowly
             working toward your target hand.
           </p>
           <p>
-            When you complete it, you call <strong>&quot;Mahjong!&quot;</strong> and you
+            When you complete it, you call <strong>&quot;Mahjong!&quot;</strong>{" "}and you
             win the round.
           </p>
           <WinningHandTeaser />

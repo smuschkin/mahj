@@ -130,7 +130,7 @@ export default function Module4Charleston() {
         {/* ── 1. What is the Charleston? ── */}
         <LessonScreen title="🔄 What Is the Charleston?">
           <p>
-            Right after the deal — but <em>before</em> the game starts — players do
+            Right after the deal — but <em>before</em>{" "}the game starts — players do
             something unique to American Mahjong: they{" "}
             <strong>trade tiles with each other</strong>.
           </p>
@@ -148,7 +148,7 @@ export default function Module4Charleston() {
         {/* ── 2. Passing directions + animation ── */}
         <LessonScreen title="👁️ The Big Picture">
           <p>
-            Each pass: pick <strong>3 tiles</strong> you don&apos;t want, slide
+            Each pass: pick <strong>3 tiles</strong>{" "}you don&apos;t want, slide
             them face-down to another player, get 3 back. There are only{" "}
             <strong>3 directions</strong>:
           </p>
@@ -191,8 +191,8 @@ export default function Module4Charleston() {
             <strong>3 you don&apos;t want</strong> — your &quot;junk.&quot;
           </p>
           <p>
-            Slide them <strong>face-down</strong> to the player on your right. At the
-            same time, the player on your <em>left</em> slides 3 face-down tiles to
+            Slide them <strong>face-down</strong>{" "}to the player on your right. At the
+            same time, the player on your <em>left</em>{" "}slides 3 face-down tiles to
             you. Pick them up, look, and add them to your hand.
           </p>
 
@@ -236,7 +236,7 @@ export default function Module4Charleston() {
           </div>
 
           <Callout variant="warn">
-            <strong>Never pass a Joker.</strong> Jokers are gold — you&apos;d be giving
+            <strong>Never pass a Joker.</strong>{" "}Jokers are gold — you&apos;d be giving
             away your single most valuable tile.
           </Callout>
         </LessonScreen>
@@ -244,7 +244,7 @@ export default function Module4Charleston() {
         {/* ── 5. Pass 2 — First Across ── */}
         <LessonScreen title="↔️ Pass 2: First Across">
           <p>
-            Pass 3 more tiles — this time to the player <strong>across</strong> from
+            Pass 3 more tiles — this time to the player <strong>across</strong>{" "}from
             you. They pass 3 to you in return.
           </p>
           <p>
@@ -261,7 +261,7 @@ export default function Module4Charleston() {
         <LessonScreen title="👈 Pass 3: First Left">
           <p>
             Pass 3 to the player on your <strong>left</strong>. This completes the{" "}
-            <em>first</em> Charleston.
+            <em>first</em>{" "}Charleston.
           </p>
           <Callout variant="tip">
             By now you may be starting to see what hand-shape your tiles support. Use
@@ -276,7 +276,7 @@ export default function Module4Charleston() {
             <strong>do we continue?</strong>
           </p>
           <p>
-            If <strong>any one player says &quot;stop,&quot;</strong> the second
+            If <strong>any one player says &quot;stop,&quot;</strong>{" "}the second
             Charleston doesn&apos;t happen and play begins. Otherwise, you do the
             second Charleston in reverse order:
           </p>
@@ -287,7 +287,7 @@ export default function Module4Charleston() {
           </ol>
           <Callout variant="warn">
             <strong>Once the second Charleston starts, you must finish all 3
-            passes.</strong> The only chance to stop is <em>before</em> it begins —
+            passes.</strong>{" "}The only chance to stop is <em>before</em>{" "}it begins —
             between the first and second Charlestons. You can&apos;t quit mid-way
             through.
           </Callout>
@@ -302,17 +302,17 @@ export default function Module4Charleston() {
         <LessonScreen title="🙈 The Blind Pass">
           <p>
             Sometimes by the late passes you don&apos;t have 3 tiles you want to
-            give up. A <strong>blind pass</strong> lets you pass along tiles you
+            give up. A <strong>blind pass</strong>{" "}lets you pass along tiles you
             just received from another player <em>without looking at them</em>.
           </p>
 
           <Callout variant="warn">
-            <strong>When can you blind pass?</strong> Only on two specific passes:
+            <strong>When can you blind pass?</strong>{" "}Only on two specific passes:
             <ul className="mt-1 ml-5 list-disc space-y-0.5">
-              <li>The <strong>first left</strong> (pass 3 — the last pass of the first Charleston)</li>
-              <li>The <strong>last right</strong> (pass 6 — the last pass of the second Charleston)</li>
+              <li>The <strong>first left</strong>{" "}(pass 3 — the last pass of the first Charleston)</li>
+              <li>The <strong>last right</strong>{" "}(pass 6 — the last pass of the second Charleston)</li>
             </ul>
-            You <strong>cannot</strong> blind pass on any other pass, including the courtesy.
+            You <strong>cannot</strong>{" "}blind pass on any other pass, including the courtesy.
           </Callout>
 
           <p>Here&apos;s how it works:</p>
@@ -322,19 +322,19 @@ export default function Module4Charleston() {
               at them yet</strong>
             </li>
             <li>
-              Decide how many of your <em>own</em> tiles you want to pass (0, 1,
+              Decide how many of your <em>own</em>{" "}tiles you want to pass (0, 1,
               2, or 3)
             </li>
             <li>
               Pass your chosen tiles plus enough unseen tiles to make 3 total
             </li>
             <li>
-              <em>Then</em> look at whatever unseen tiles you kept
+              <em>Then</em>{" "}look at whatever unseen tiles you kept
             </li>
           </ol>
 
           <Callout variant="info">
-            <strong>No peeking.</strong> You must decide before looking. Peeking
+            <strong>No peeking.</strong>{" "}You must decide before looking. Peeking
             at the incoming tiles and then deciding to pass them is cheating.
           </Callout>
 
@@ -388,7 +388,7 @@ export default function Module4Charleston() {
         {/* ── 9. The Courtesy — courtesy-style deep dive ── */}
         <LessonScreen title="🤝 The Courtesy Pass (Optional)">
           <p>
-            After both Charlestons, you and the player <strong>across</strong> from
+            After both Charlestons, you and the player <strong>across</strong>{" "}from
             you can do one last optional trade. This is the <strong>courtesy</strong>{" "}
             — and it&apos;s the only &quot;private&quot; trade in the entire game.
           </p>
@@ -399,7 +399,7 @@ export default function Module4Charleston() {
           <ol className="ml-6 list-decimal space-y-1 text-[14px]">
             <li>
               Turn to the player across and ask:{" "}
-              <em>&quot;How many can you do?&quot;</em> (or just{" "}
+              <em>&quot;How many can you do?&quot;</em>{" "}(or just{" "}
               <em>&quot;Courtesy?&quot;</em>)
             </li>
             <li>
@@ -415,7 +415,7 @@ export default function Module4Charleston() {
           </ol>
 
           <Callout variant="tip">
-            <strong>&quot;Zero&quot; is a perfectly fine answer.</strong> Most beginners
+            <strong>&quot;Zero&quot; is a perfectly fine answer.</strong>{" "}Most beginners
             say zero on their first few games and that&apos;s totally normal. The
             courtesy is a tool, not a requirement.
           </Callout>
@@ -424,8 +424,7 @@ export default function Module4Charleston() {
             Worked example — when to actually use it
           </h4>
           <p>
-            The courtesy is powerful when you&apos;re <strong>one tile away</strong>{" "}
-            from a specific shape:
+            The courtesy is powerful when you&apos;re <strong>one tile away</strong> from a specific shape:
           </p>
 
           <TileRow caption="Going for even-numbered Bams. You just need one more 8 Bam.">
@@ -455,12 +454,12 @@ export default function Module4Charleston() {
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>Both players must agree</strong> on the count. If they want 2 and
+              <strong>Both players must agree</strong>{" "}on the count. If they want 2 and
               you want 0, you do 0.
             </li>
             <li><strong>No jokers</strong> — same as every other Charleston pass.</li>
             <li>
-              You <strong>can&apos;t see</strong> what they&apos;re sending you until
+              You <strong>can&apos;t see</strong>{" "}what they&apos;re sending you until
               you&apos;ve sent yours. It&apos;s a blind trade.
             </li>
             <li>
@@ -472,7 +471,7 @@ export default function Module4Charleston() {
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
             When to skip it
           </h4>
-          <p>Say <strong>&quot;zero&quot;</strong> if:</p>
+          <p>Say <strong>&quot;zero&quot;</strong>{" "}if:</p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>You&apos;re not sure what hand you&apos;re building yet</li>
             <li>You don&apos;t have any obvious junk left to trade</li>
@@ -486,7 +485,7 @@ export default function Module4Charleston() {
           <Callout variant="tip">
             <strong>Permission to be cautious:</strong> &quot;Zero&quot; is the right
             default for your first 5–10 games. You will not lose by skipping the
-            courtesy. You <em>can</em> lose by trading away a tile you didn&apos;t
+            courtesy. You <em>can</em>{" "}lose by trading away a tile you didn&apos;t
             realize you needed.
           </Callout>
         </LessonScreen>
@@ -593,7 +592,7 @@ export default function Module4Charleston() {
             Mahjong unique. You know what to pass, how to pass, and when to stop.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 5 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 5 covers{" "}
             <strong>Jokers &amp; Calling</strong> — when you can grab a discarded tile,
             expose tiles to the table, and use those precious jokers to your advantage.
           </p>

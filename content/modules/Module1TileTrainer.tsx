@@ -75,11 +75,11 @@ export default function Module1TileTrainer() {
         {/* ── Bams ── */}
         <LessonScreen title="🎋 Bams (Bamboo)">
           <p>
-            <strong>Bams</strong> look like little stalks of bamboo.
+            <strong>Bams</strong>{" "}look like little stalks of bamboo.
           </p>
           <p>
-            There are <strong>9 of them</strong> (numbered 1 through 9), and{" "}
-            <strong>4 of each</strong> in the set — so <strong>36 Bam tiles</strong> total.
+            There are <strong>9 of them</strong>{" "}(numbered 1 through 9), and{" "}
+            <strong>4 of each</strong>{" "}in the set — so <strong>36 Bam tiles</strong>{" "}total.
           </p>
           <TileRow caption="All 9 Bams (1 through 9). Note the bird!">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
@@ -87,16 +87,15 @@ export default function Module1TileTrainer() {
             ))}
           </TileRow>
           <Callout variant="warn">
-            The <strong>1 Bam</strong> is special — it&apos;s almost always drawn as a{" "}
-            <strong>bird</strong> instead of a bamboo stalk. Don&apos;t let it fool you.
+            The <strong>1 Bam</strong>{" "}is special — it&apos;s almost always drawn as a{" "}
+            <strong>bird</strong>{" "}instead of a bamboo stalk. Don&apos;t let it fool you.
           </Callout>
         </LessonScreen>
 
         {/* ── Cracks ── */}
         <LessonScreen title="🈶 Cracks (Characters)">
           <p>
-            <strong>Cracks</strong> have a <strong>small red number in the top corner</strong>{" "}
-            and <strong>black Chinese characters</strong> stacked in the middle.
+            <strong>Cracks</strong>{" "}have a <strong>small red number in the top corner</strong> and <strong>black Chinese characters</strong>{" "}stacked in the middle.
           </p>
           <p>
             Their full name is &quot;Characters,&quot; but everyone at the table calls
@@ -113,7 +112,7 @@ export default function Module1TileTrainer() {
           </TileRow>
           <Callout variant="tip">
             You don&apos;t need to read the Chinese characters — just look at the small
-            <strong> red digit in the top-left corner</strong> and you&apos;ll know which
+            <strong> red digit in the top-left corner</strong>{" "}and you&apos;ll know which
             Crack it is.
           </Callout>
         </LessonScreen>
@@ -121,7 +120,7 @@ export default function Module1TileTrainer() {
         {/* ── Dots ── */}
         <LessonScreen title="🔵 Dots (Circles)">
           <p>
-            <strong>Dots</strong> are exactly what they sound like: circles arranged in
+            <strong>Dots</strong>{" "}are exactly what they sound like: circles arranged in
             patterns.
           </p>
           <p>
@@ -152,13 +151,13 @@ export default function Module1TileTrainer() {
         {/* ── Winds ── */}
         <LessonScreen title="🌬️ Honor Tiles, Part 1: Winds">
           <p>
-            <strong>Honor tiles</strong> are special — they don&apos;t have numbers.
+            <strong>Honor tiles</strong>{" "}are special — they don&apos;t have numbers.
           </p>
           <p>
             There are <strong>4 winds</strong>:{" "}
             <strong>North, East, West, and South</strong>. With{" "}
-            <strong>4 of each</strong> in the set, that&apos;s{" "}
-            <strong>16 Wind tiles</strong> total.
+            <strong>4 of each</strong>{" "}in the set, that&apos;s{" "}
+            <strong>16 Wind tiles</strong>{" "}total.
           </p>
           <TileRow>
             <Tile type="wind" value="N" size="md" showLabel />
@@ -181,14 +180,14 @@ export default function Module1TileTrainer() {
           </p>
           <ul className="ml-5 list-disc space-y-1 text-[15px]">
             <li>
-              <strong>Red Dragon</strong> — connected to the <strong>Crack</strong> suit
+              <strong>Red Dragon</strong> — connected to the <strong>Crack</strong>{" "}suit
             </li>
             <li>
-              <strong>Green Dragon</strong> — connected to the <strong>Bam</strong> suit
+              <strong>Green Dragon</strong> — connected to the <strong>Bam</strong>{" "}suit
             </li>
             <li>
-              <strong>White Dragon</strong> (also called &quot;
-              <strong>Soap</strong>&quot;) — connected to the <strong>Dot</strong> suit
+              <strong>White Dragon</strong>{" "}(also called &quot;
+              <strong>Soap</strong>&quot;) — connected to the <strong>Dot</strong>{" "}suit
             </li>
           </ul>
           <p>
@@ -207,9 +206,9 @@ export default function Module1TileTrainer() {
           <Callout variant="tip">
             <strong>How to remember which dragon goes with which suit:</strong>
             <ul className="mt-1 ml-5 list-disc space-y-0.5">
-              <li><strong>Green</strong> Dragon → <strong>Bams</strong> — think green bamboo</li>
-              <li><strong>White</strong> Dragon (Soap) → <strong>Dots</strong> — both are shapes (the Soap is a square, Dots are circles)</li>
-              <li><strong>Red</strong> Dragon → <strong>Cracks</strong> — think red blood from a crack</li>
+              <li><strong>Green</strong>{" "}Dragon → <strong>Bams</strong> — think green bamboo</li>
+              <li><strong>White</strong>{" "}Dragon (Soap) → <strong>Dots</strong> — both are shapes (the Soap is a square, Dots are circles)</li>
+              <li><strong>Red</strong>{" "}Dragon → <strong>Cracks</strong> — think red blood from a crack</li>
             </ul>
           </Callout>
         </LessonScreen>
@@ -248,12 +247,12 @@ export default function Module1TileTrainer() {
         {/* ── Flowers ── */}
         <LessonScreen title="🌸 Flowers">
           <p>
-            <strong>Flowers</strong> are decorative tiles. There are{" "}
-            <strong>8 unique designs</strong> with <strong>only 1 of each</strong> in the
-            set, for <strong>8 Flower tiles</strong> total.
+            <strong>Flowers</strong>{" "}are decorative tiles. There are{" "}
+            <strong>8 unique designs</strong>{" "}with <strong>only 1 of each</strong>{" "}in the
+            set, for <strong>8 Flower tiles</strong>{" "}total.
           </p>
           <Callout variant="info">
-            <strong>All 8 of these are called &quot;Flowers&quot;</strong> at the table,
+            <strong>All 8 of these are called &quot;Flowers&quot;</strong>{" "}at the table,
             even the four traditionally-named &quot;season&quot; tiles. Real flower tiles
             do have small numbers on them (1–4 for the flowers, 1–4 for the seasons),
             but <strong>those numbers aren&apos;t used in the game</strong>. Every flower
@@ -272,7 +271,7 @@ export default function Module1TileTrainer() {
           </TileRow>
           <Callout variant="tip">
             Since there&apos;s only 1 of each flower, you&apos;ll need{" "}
-            <strong>jokers to complete a group of 3 or 4</strong> flowers. For
+            <strong>jokers to complete a group of 3 or 4</strong>{" "}flowers. For
             example, 1 real flower + 2 jokers = a valid group of 3.
           </Callout>
         </LessonScreen>
@@ -280,10 +279,10 @@ export default function Module1TileTrainer() {
         {/* ── Jokers ── */}
         <LessonScreen title="⭐ Jokers — The Wild Card">
           <p>
-            <strong>Jokers</strong> are American Mahjong&apos;s secret weapon.
+            <strong>Jokers</strong>{" "}are American Mahjong&apos;s secret weapon.
           </p>
           <p>
-            There are <strong>8 Jokers</strong> in the set, and they can stand in for{" "}
+            There are <strong>8 Jokers</strong>{" "}in the set, and they can stand in for{" "}
             <strong>any tile in a group of 3 or more identical tiles</strong>.
           </p>
           <TileRow caption="All 8 Jokers in the set">
@@ -292,9 +291,9 @@ export default function Module1TileTrainer() {
             ))}
           </TileRow>
           <Callout variant="warn">
-            <strong>Big rule:</strong> Jokers can only fill in for groups of{" "}
+            <strong>Big rule:</strong>{" "}Jokers can only fill in for groups of{" "}
             <strong>3 or more identical tiles</strong>. They{" "}
-            <strong>cannot</strong> be used in pairs (groups of 2). More on
+            <strong>cannot</strong>{" "}be used in pairs (groups of 2). More on
             this in Module 5.
           </Callout>
         </LessonScreen>
@@ -475,7 +474,7 @@ export default function Module1TileTrainer() {
             foundation everything else is built on.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> in Module 2, you&apos;ll learn how to{" "}
+            <strong>What&apos;s next:</strong>{" "}in Module 2, you&apos;ll learn how to{" "}
             <strong>read the NMJL card</strong> — the blueprint for every winning hand,
             including the symbols, colors, and patterns you&apos;ll use every game.
           </p>

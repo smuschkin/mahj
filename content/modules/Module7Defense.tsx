@@ -127,8 +127,8 @@ export default function Module7Defense() {
             gifts go to people who can&apos;t use them.
           </p>
           <Callout variant="tip">
-            <strong>Beginner reframe:</strong> Don&apos;t think of defense as
-            &quot;playing scared.&quot; Think of it as <em>not paying</em> the player
+            <strong>Beginner reframe:</strong>{" "}Don&apos;t think of defense as
+            &quot;playing scared.&quot; Think of it as <em>not paying</em>{" "}the player
             across from you because you discarded their winning tile.
           </Callout>
         </LessonScreen>
@@ -136,14 +136,14 @@ export default function Module7Defense() {
         {/* ── 2. Exposures are tells ── */}
         <LessonScreen title="👁️ Every Exposure Is a Tell">
           <p>
-            When an opponent calls a tile, they have to <strong>expose</strong> the
+            When an opponent calls a tile, they have to <strong>expose</strong>{" "}the
             whole group face-up. That&apos;s the law (you learned this in Module 5).
             For you, it&apos;s a free peek into their hand.
           </p>
           <p>
             Read every exposure like a sentence. It tells you their{" "}
             <strong>suit focus</strong>, their <strong>number focus</strong>, and often
-            which <em>family</em> of hands they&apos;re building.
+            which <em>family</em>{" "}of hands they&apos;re building.
           </p>
 
           <ReadCard
@@ -161,8 +161,8 @@ export default function Module7Defense() {
             }
             tells={
               <>
-                <strong>Read:</strong> they&apos;re probably building a{" "}
-                <em>same-suit Bams</em> hand (or a 369 hand). Other Bams — especially
+                <strong>Read:</strong>{" "}they&apos;re probably building a{" "}
+                <em>same-suit Bams</em>{" "}hand (or a 369 hand). Other Bams — especially
                 3, 6, and 9 — are now <strong>dangerous discards</strong>. Cracks and
                 Dots are likely safer.
               </>
@@ -184,9 +184,8 @@ export default function Module7Defense() {
             }
             tells={
               <>
-                <strong>Read:</strong> they&apos;re building a{" "}
-                <em>winds-and-dragons</em> hand. <strong>Stop discarding honors.</strong>{" "}
-                Every Wind and every Dragon you throw could be the tile that wins them
+                <strong>Read:</strong>{" "}they&apos;re building a{" "}
+                <em>winds-and-dragons</em>{" "}hand. <strong>Stop discarding honors.</strong> Every Wind and every Dragon you throw could be the tile that wins them
                 the game.
               </>
             }
@@ -207,8 +206,8 @@ export default function Module7Defense() {
             }
             tells={
               <>
-                <strong>Read:</strong> two different suits, same number — almost
-                certainly a <em>like-numbers</em> hand built around 5s. The third group
+                <strong>Read:</strong>{" "}two different suits, same number — almost
+                certainly a <em>like-numbers</em>{" "}hand built around 5s. The third group
                 is probably 5 Bams. <strong>Never discard a 5 Bam to this player.</strong>
               </>
             }
@@ -223,26 +222,25 @@ export default function Module7Defense() {
           </p>
           <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
             <li>
-              <strong>What is each player throwing?</strong> If a player has discarded
+              <strong>What is each player throwing?</strong>{" "}If a player has discarded
               three Cracks in a row, Cracks are probably safe to throw at them.
             </li>
             <li>
-              <strong>What are they NOT throwing?</strong> A player who hasn&apos;t
+              <strong>What are they NOT throwing?</strong>{" "}A player who hasn&apos;t
               discarded a single Bam all game is probably collecting Bams.
             </li>
             <li>
-              <strong>Track the &quot;hot&quot; suit.</strong> The suit nobody is
+              <strong>Track the &quot;hot&quot; suit.</strong>{" "}The suit nobody is
               discarding is the one someone is hoarding. Avoid feeding it.
             </li>
             <li>
-              <strong>Honors are early reads.</strong> If a player throws their Winds
+              <strong>Honors are early reads.</strong>{" "}If a player throws their Winds
               and Dragons in the first 3 turns, they&apos;re NOT on a winds-and-dragons
               hand. You can throw honors at them safely.
             </li>
           </ul>
           <Callout variant="tip">
-            You don&apos;t have to memorize every tile. Just notice <em>patterns</em>{" "}
-            and <em>absences</em>. &quot;What hasn&apos;t been discarded?&quot; is the
+            You don&apos;t have to memorize every tile. Just notice <em>patterns</em> and <em>absences</em>. &quot;What hasn&apos;t been discarded?&quot; is the
             single most useful defensive question.
           </Callout>
         </LessonScreen>
@@ -280,9 +278,9 @@ export default function Module7Defense() {
           </div>
 
           <Callout variant="warn">
-            <strong>The 3-copies rule is your best friend.</strong> Once 3 of a tile
+            <strong>The 3-copies rule is your best friend.</strong>{" "}Once 3 of a tile
             are visible — in discards, in exposed groups, or both — the 4th copy is{" "}
-            <em>always</em> safe to discard. Train yourself to notice this. Players who
+            <em>always</em>{" "}safe to discard. Train yourself to notice this. Players who
             track it carefully discard with confidence in the late game; players who
             don&apos;t end up frozen.
           </Callout>
@@ -334,7 +332,7 @@ export default function Module7Defense() {
         <LessonScreen title="🚨 How Dangerous Is Each Opponent?">
           <p>
             Not every opponent is equally close to winning. Use their{" "}
-            <strong>number of exposures</strong> as a quick threat gauge.
+            <strong>number of exposures</strong>{" "}as a quick threat gauge.
           </p>
 
           <div className="my-4 space-y-2">
@@ -370,8 +368,8 @@ export default function Module7Defense() {
                 3+ exposures
               </div>
               <p className="text-[13px] text-zinc-600">
-                One tile from winning. <strong>Full defense.</strong> Only discard
-                tiles you are <em>certain</em> they cannot use.
+                One tile from winning. <strong>Full defense.</strong>{" "}Only discard
+                tiles you are <em>certain</em>{" "}they cannot use.
               </p>
             </div>
           </div>
@@ -400,7 +398,7 @@ export default function Module7Defense() {
           </h4>
           <ol className="ml-6 list-decimal space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>Stop calling.</strong> Don&apos;t expose any more — you&apos;d
+              <strong>Stop calling.</strong>{" "}Don&apos;t expose any more — you&apos;d
               just leak more information.
             </li>
             <li>
@@ -408,25 +406,25 @@ export default function Module7Defense() {
               has been dumping, dead honors.
             </li>
             <li>
-              <strong>Break your own forming groups</strong> if needed to throw safe
+              <strong>Break your own forming groups</strong>{" "}if needed to throw safe
               tiles. A pair you don&apos;t need anymore is a great safe discard source.
             </li>
             <li>
-              <strong>Don&apos;t panic-discard a Joker.</strong> Even folding, your
+              <strong>Don&apos;t panic-discard a Joker.</strong>{" "}Even folding, your
               Joker stays in your hand. It&apos;s never a defensive sacrifice.
             </li>
           </ol>
 
           <Callout variant="tip">
-            <strong>Permission to be cautious:</strong> Folding feels like giving up.
+            <strong>Permission to be cautious:</strong>{" "}Folding feels like giving up.
             It isn&apos;t. A round where you didn&apos;t win <em>but didn&apos;t pay
-            anyone</em> is a tie — and ties are a great outcome when you were
+            anyone</em>{" "}is a tie — and ties are a great outcome when you were
             outplayed. Beginners almost always under-fold and over-pay.
           </Callout>
           <Callout variant="warn">
-            One opponent winning costs you a single payment. <em>You</em> being the one
+            One opponent winning costs you a single payment. <em>You</em>{" "}being the one
             who discards their winning tile is much worse — in most house rules, the
-            discarder pays <strong>double</strong> or pays for the whole table. Folding
+            discarder pays <strong>double</strong>{" "}or pays for the whole table. Folding
             saves real money.
           </Callout>
         </LessonScreen>
@@ -493,11 +491,11 @@ export default function Module7Defense() {
               <strong>Red Dragon</strong> — the player across already has an exposed
               Pung of Red Dragons (3 out of 4). That means no one else can pung
               or kong it — they already have their group. The 4th Red Dragon is
-              actually <strong>pretty safe</strong> to throw.
+              actually <strong>pretty safe</strong>{" "}to throw.
             </li>
             <li>
               <strong>3 Crack</strong> — the left player has been dumping Cracks all
-              game. The other two have no Crack exposures. <strong>Safe.</strong> Throw
+              game. The other two have no Crack exposures. <strong>Safe.</strong>{" "}Throw
               it.
             </li>
           </ul>
@@ -588,7 +586,7 @@ export default function Module7Defense() {
             instead of fight. That makes you a real defensive player.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 8 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 8 covers{" "}
             <strong>Etiquette &amp; Table Culture</strong> — the unwritten rules that
             make you welcome at any mahjong table: how to call your discards, how to
             keep pace, and the social customs that turn a game into a tradition.
