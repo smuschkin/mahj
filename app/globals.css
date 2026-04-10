@@ -3,13 +3,11 @@
 :root {
   --color-red: #DC5044;
   --color-green: #3DAA6D;
-  /* Brand accent — brighter sky blue for good contrast on dark + mid backgrounds. */
   --color-accent: #7CB4D8;
   --color-ivory: #FDF6E3;
-  --color-dark: #334155;
-  --color-mid: #475569;
+  --color-dark: #1E293B;
+  --color-mid: #334155;
   --color-light: #F5F0E8;
-  /* Border/chrome uses the accent blue — gold only stays on physical tile artwork */
   --color-border: #7CB4D8;
 }
 

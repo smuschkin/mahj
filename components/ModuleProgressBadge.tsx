@@ -9,7 +9,7 @@ export function ModuleProgressBadge({ moduleNum }: { moduleNum: number }) {
   if (progress.status === "completed") {
     return (
       <span
-        className="ml-auto flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-green)] text-[11px] font-black text-white"
+        className="ml-auto flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-[11px] font-black text-white"
         aria-label="Completed"
         title="Completed"
       >

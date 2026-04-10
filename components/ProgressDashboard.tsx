@@ -49,7 +49,7 @@ export function ProgressDashboard() {
       {/* Progress bar */}
       <div className="mt-3 h-3 overflow-hidden rounded-full bg-[var(--color-light)]">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-green)] transition-all duration-500"
+          className="h-full rounded-full bg-[#3B6BA5] transition-all duration-500"
           style={{ width: `${pct}%` }}
         />
       </div>
@@ -60,7 +60,7 @@ export function ProgressDashboard() {
           const s = progress[m.num]?.status;
           const bg =
             s === "completed"
-              ? "bg-[var(--color-green)]"
+              ? "bg-[#3B6BA5]"
               : s === "in-progress"
                 ? "bg-[var(--color-accent)]"
                 : "bg-zinc-200";
@@ -85,7 +85,7 @@ export function ProgressDashboard() {
       )}
 
       {completed === total && (
-        <p className="mt-3 text-center text-sm font-bold text-[var(--color-green)]">
+        <p className="mt-3 text-center text-sm font-bold text-[#3B6BA5]">
           You completed every module — nice work!
         </p>
       )}

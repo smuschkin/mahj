@@ -35,12 +35,12 @@ export default function Home() {
           <Link
             key={m.num}
             href={m.href}
-            className="flex items-center gap-3 rounded-lg border-l-4 border-[var(--color-accent)] bg-[var(--color-light)] px-4 py-3 text-sm transition-transform hover:-translate-y-0.5"
+            className="flex items-center gap-3 rounded-lg border-l-4 border-[var(--color-accent)] bg-white px-4 py-3 text-sm shadow-sm transition-transform hover:-translate-y-0.5"
           >
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-mid)] text-xs font-black text-[var(--color-accent)]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-mid)] text-xs font-black text-white">
               {m.num}
             </span>
-            <span className="font-serif font-bold text-[var(--color-mid)]">{m.name}</span>
+            <span className="font-serif font-bold text-[var(--color-dark)]">{m.name}</span>
             <ModuleProgressBadge moduleNum={m.num} />
           </Link>
         ))}
