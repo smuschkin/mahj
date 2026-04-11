@@ -4,10 +4,8 @@ const config: CapacitorConfig = {
   appId: "com.mahj.learn",
   appName: "MAHJ",
   webDir: "out",
-  server: {
-    // Point to dev server for live testing
-    url: "http://localhost:3000",
-  },
+  // Uncomment for live dev testing:
+  // server: { url: "http://localhost:3000" },
   ios: {
     contentInset: "automatic",
     preferredContentMode: "mobile",
@@ -16,7 +14,7 @@ const config: CapacitorConfig = {
   plugins: {
     SplashScreen: {
       launchAutoHide: true,
-      backgroundColor: "#334155",
+      backgroundColor: "#1A4D2E",
       showSpinner: false,
     },
   },

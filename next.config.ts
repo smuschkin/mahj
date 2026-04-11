@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Uncomment "output: export" when building for Capacitor (iOS app)
-  // output: "export",
+  // output: "export", // Enable for Capacitor iOS builds
 };
 
 export default nextConfig;
