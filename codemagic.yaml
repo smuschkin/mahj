@@ -31,12 +31,12 @@ workflows:
       - name: Set up code signing
         script: |
           keychain initialize
-          # Create a fresh distribution certificate (saves private key locally)
-          app-store-connect certificates create \
-            --type IOS_DISTRIBUTION \
-            --save || echo "Certificate may already exist, continuing..."
-          # Fetch existing certificates and provisioning profiles, create profile if missing
+          # Register the bundle ID first (idempotent)
+          app-store-connect bundle-ids register "$BUNDLE_ID" \
+            --name "MAHJ" || echo "Bundle ID already registered"
+          # Fetch all signing files for iOS App Store distribution
           app-store-connect fetch-signing-files "$BUNDLE_ID" \
+            --platform IOS \
             --type IOS_APP_STORE \
             --create
           keychain add-certificates
