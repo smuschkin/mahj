@@ -13,7 +13,7 @@ workflows:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"
         BUNDLE_ID: "com.mahj.learn"
-        APP_STORE_APPLE_ID: 1234567890 # TODO: replace with your App Store Connect app ID
+        APP_STORE_APPLE_ID: 6762031478
       node: 20
       xcode: latest
       cocoapods: default
