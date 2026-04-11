@@ -36,7 +36,9 @@ workflows:
           keychain initialize
 
           # 2. Decode the .p12 certificate from base64 and import it
-          echo "$CERTIFICATE_P12_BASE64" | base64 --decode > /tmp/MAHJ_distribution.p12
+          printf '%s' "$CERTIFICATE_P12_BASE64" | base64 --decode > /tmp/MAHJ_distribution.p12
+          ls -la /tmp/MAHJ_distribution.p12
+          file /tmp/MAHJ_distribution.p12
           keychain add-certificates \
             --certificate /tmp/MAHJ_distribution.p12 \
             --certificate-password "$CERTIFICATE_PASSWORD"
@@ -44,7 +46,7 @@ workflows:
           # 3. Decode the provisioning profile from base64 and install it
           PROFILE_DIR="$HOME/Library/MobileDevice/Provisioning Profiles"
           mkdir -p "$PROFILE_DIR"
-          echo "$PROVISIONING_PROFILE_BASE64" | base64 --decode > "$PROFILE_DIR/MAHJ_App_Store.mobileprovision"
+          printf '%s' "$PROVISIONING_PROFILE_BASE64" | base64 --decode > "$PROFILE_DIR/MAHJ_App_Store.mobileprovision"
 
           # 4. Apply profiles to the Xcode project
           xcode-project use-profiles
