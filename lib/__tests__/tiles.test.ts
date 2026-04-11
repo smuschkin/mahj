@@ -171,7 +171,11 @@ describe("tileLabel", () => {
 
   it("labels dragons with capitalized color", () => {
     expect(tileLabel({ id: 1, type: "dragon", value: "red" })).toBe("Red Dragon");
-    expect(tileLabel({ id: 2, type: "dragon", value: "white" })).toBe("White Dragon");
+    expect(tileLabel({ id: 2, type: "dragon", value: "green" })).toBe("Green Dragon");
+  });
+
+  it("labels white dragon as Soap (White Dragon)", () => {
+    expect(tileLabel({ id: 1, type: "dragon", value: "white" })).toBe("Soap (White Dragon)");
   });
 
   it("labels winds", () => {

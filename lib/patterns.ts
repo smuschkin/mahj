@@ -294,23 +294,56 @@ export function matchesPattern(
   return false;
 }
 
-/** Generate all valid suit assignments. Labels can map to any suit, but different labels CAN map to the same suit. */
+/**
+ * Generate valid suit assignments for a pattern's suit group labels.
+ *
+ * Rule: different suit group labels should map to DIFFERENT suits whenever
+ * possible. If there are more labels than suits (4+), we fall back to allowing
+ * repeats since 3 suits can't cover more than 3 distinct labels.
+ *
+ * This ensures a pattern like "Three-Suit 2468" (A/B/C) can never be matched
+ * with all three labels as the same suit — which would be an impossible suit
+ * requirement in real play.
+ */
 function generateSuitAssignments(
   labels: string[],
   suits: TileType[]
 ): SuitAssignment[] {
   if (labels.length === 0) return [{}];
 
+  // If there are 1-3 labels, enforce distinct suits (permutations only)
+  if (labels.length <= suits.length) {
+    return generatePermutations(labels, suits);
+  }
+
+  // For 4+ labels, we need to allow repeats (more labels than suits).
+  // Still prefer variety by using all combinations.
   const results: SuitAssignment[] = [];
   const [first, ...rest] = labels;
-
   for (const s of suits) {
     const subAssignments = generateSuitAssignments(rest, suits);
     for (const sub of subAssignments) {
       results.push({ ...sub, [first]: s });
     }
   }
+  return results;
+}
 
+/** Generate suit permutations — each label gets a distinct suit. */
+function generatePermutations(
+  labels: string[],
+  availableSuits: TileType[]
+): SuitAssignment[] {
+  if (labels.length === 0) return [{}];
+  const results: SuitAssignment[] = [];
+  const [first, ...rest] = labels;
+  for (const s of availableSuits) {
+    const remainingSuits = availableSuits.filter((x) => x !== s);
+    const subAssignments = generatePermutations(rest, remainingSuits);
+    for (const sub of subAssignments) {
+      results.push({ ...sub, [first]: s });
+    }
+  }
   return results;
 }
 

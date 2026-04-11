@@ -156,6 +156,32 @@ describe("matchesPattern", () => {
     expect(matchesPattern(hand, [], pattern)).toBe(true);
   });
 
+  it("three-suit pattern rejects all-one-suit hand", () => {
+    // "Even Three-Suit" pattern requires 3 different suits (labels A, B, C)
+    // A hand with all bams should NOT match this pattern
+    const pattern = PRACTICE_PATTERNS.find((p) => p.id === "2468-c")!;
+    const hand: TileData[] = [
+      flower(1, 1), flower(2, 2),
+      bam(2, 3), bam(2, 4), bam(2, 5), bam(2, 6),
+      bam(4, 7), bam(4, 8), bam(4, 9), bam(4, 10),
+      bam(6, 11), bam(6, 12), bam(6, 13), bam(6, 14),
+    ];
+    // This has 4 bam-2, 4 bam-4, 4 bam-6 — perfect if A=B=C=bam
+    // But pattern says different suits, so it should FAIL
+    expect(matchesPattern(hand, [], pattern)).toBe(false);
+  });
+
+  it("three-suit pattern matches when suits are actually different", () => {
+    const pattern = PRACTICE_PATTERNS.find((p) => p.id === "2468-c")!;
+    const hand: TileData[] = [
+      flower(1, 1), flower(2, 2),
+      bam(2, 3), bam(2, 4), bam(2, 5), bam(2, 6),
+      crack(4, 7), crack(4, 8), crack(4, 9), crack(4, 10),
+      dot(6, 11), dot(6, 12), dot(6, 13), dot(6, 14),
+    ];
+    expect(matchesPattern(hand, [], pattern)).toBe(true);
+  });
+
   it("matches seven pairs (S&P)", () => {
     const pattern = PRACTICE_PATTERNS.find((p) => p.id === "sp-a")!;
     const hand: TileData[] = [

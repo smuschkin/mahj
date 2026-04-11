@@ -205,7 +205,7 @@ function shortLabel(type: TileType, value?: number | string): string {
     case "wind":
       return WIND_LABELS[String(value)]?.full ?? String(value);
     case "dragon":
-      return value === "white" ? "Soap" : `${DRAGON_LABELS[String(value)]?.label ?? ""} Dragon`;
+      return value === "white" ? "Soap (White Dragon)" : `${DRAGON_LABELS[String(value)]?.label ?? ""} Dragon`;
     case "flower":
     case "season":
       return "Flower";
@@ -254,7 +254,7 @@ function tileLabel(type: TileType, value?: number | string): string {
     case "wind":
       return `${WIND_LABELS[String(value)]?.full ?? value} Wind`;
     case "dragon":
-      return `${DRAGON_LABELS[String(value)]?.label ?? value} Dragon`;
+      return value === "white" ? "Soap (White Dragon)" : `${DRAGON_LABELS[String(value)]?.label ?? value} Dragon`;
     case "flower":
     case "season":
       return "Flower";
@@ -565,9 +565,11 @@ function WindArt({ value, size }: { value: string; size: { w: number; h: number 
 /* ───── Dragon ───── */
 function DragonArt({ value, size }: { value: string; size: { w: number; h: number } }) {
   if (value === "white") {
-    // The "Soap" tile — a tall rectangle with a clear border
-    const w = Math.round(size.w * 0.7);
-    const h = Math.round(size.h * 0.85);
+    // The "Soap" tile — a rectangle with a clear border.
+    // Sized to match the visible content height of other tiles (~0.65 of tile height)
+    // so it aligns properly when tiles sit side-by-side in a hand.
+    const w = Math.round(size.w * 0.55);
+    const h = Math.round(size.h * 0.65);
     return (
       <svg viewBox="0 0 32 48" width={w} height={h} aria-hidden="true">
         {/* Outer border */}
@@ -583,8 +585,9 @@ function DragonArt({ value, size }: { value: string; size: { w: number; h: numbe
     );
   }
 
+  // Match the visible content height of other tiles for consistent alignment
   const dragonW = Math.round(size.w * 0.7);
-  const dragonH = Math.round(size.h * 0.9);
+  const dragonH = Math.round(size.h * 0.7);
 
   return (
     <img

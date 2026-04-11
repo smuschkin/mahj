@@ -61,12 +61,20 @@ export function CallPrompt({
     onPass();
   }
 
+  const isUrgent = remaining <= 2000 && remaining > 0;
+
   return (
-    <div className="animate-fade-in rounded-2xl border-2 border-[#C8A951] bg-gradient-to-b from-[#1A4D2E] to-[#0F3320] p-5 shadow-xl">
+    <div
+      className={`animate-fade-in rounded-2xl border-2 bg-gradient-to-b from-[#1A4D2E] to-[#0F3320] p-5 shadow-xl ${
+        isUrgent ? "animate-pulse border-[#DC5044]" : "border-[#C8A951]"
+      }`}
+    >
       {/* Timer bar */}
-      <div className="mb-4 h-1 overflow-hidden rounded-full bg-white/10">
+      <div className="mb-4 h-1.5 overflow-hidden rounded-full bg-white/10">
         <div
-          className="h-full rounded-full bg-[#C8A951] transition-all duration-100"
+          className={`h-full rounded-full transition-all duration-100 ${
+            isUrgent ? "bg-[#DC5044]" : "bg-[#C8A951]"
+          }`}
           style={{ width: `${pct}%` }}
         />
       </div>

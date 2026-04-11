@@ -133,6 +133,7 @@ export function tileLabel(t: TileData): string {
     case "wind":
       return `${t.value} Wind`;
     case "dragon":
+      if (t.value === "white") return "Soap (White Dragon)";
       return `${String(t.value).charAt(0).toUpperCase()}${String(t.value).slice(1)} Dragon`;
     case "flower":
     case "season":

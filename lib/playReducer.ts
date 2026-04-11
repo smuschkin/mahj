@@ -101,6 +101,7 @@ export type PlayAction =
   | { type: "PICK_TARGET_HAND"; patternId: string }
   | { type: "CHANGE_TARGET_HAND" }
   | { type: "SELECT_TILE"; tileId: number }
+  | { type: "REORDER_HAND"; fromIndex: number; toIndex: number }
   | { type: "CONFIRM_DISCARD" }
   | { type: "PLAYER_DRAW" }
   | { type: "BOT_TURN_COMPLETE"; botIndex: 1 | 2 | 3 }
@@ -478,6 +479,24 @@ export function playReducer(state: PlayState, action: PlayAction): PlayState {
       return { ...state, selectedTileId: toggled };
     }
 
+    case "REORDER_HAND": {
+      // Allow reordering anytime the hand is visible (not during bot turns)
+      const { fromIndex, toIndex } = action;
+      if (
+        fromIndex < 0 ||
+        toIndex < 0 ||
+        fromIndex >= state.playerHand.length ||
+        toIndex >= state.playerHand.length ||
+        fromIndex === toIndex
+      ) {
+        return state;
+      }
+      const newHand = [...state.playerHand];
+      const [moved] = newHand.splice(fromIndex, 1);
+      newHand.splice(toIndex, 0, moved);
+      return { ...state, playerHand: newHand };
+    }
+
     case "CONFIRM_DISCARD": {
       if (state.phase !== "player-discard" || state.selectedTileId === null)
         return state;
@@ -485,9 +504,8 @@ export function playReducer(state: PlayState, action: PlayAction): PlayState {
         (t) => t.id === state.selectedTileId
       );
       if (!discarded) return state;
-      const newHand = sortHand(
-        state.playerHand.filter((t) => t.id !== state.selectedTileId)
-      );
+      // Preserve player's manual ordering — just remove the discarded tile
+      const newHand = state.playerHand.filter((t) => t.id !== state.selectedTileId);
       const entry: DiscardEntry = { tile: discarded, by: 0 };
 
       const progress = state.playerTargetHand
@@ -621,13 +639,14 @@ export function playReducer(state: PlayState, action: PlayAction): PlayState {
       );
 
       const newExposed = [...state.playerExposedGroups, group];
+      // Preserve player's manual ordering
       const progress = state.playerTargetHand
-        ? patternProgress(sortHand(remainingHand), newExposed, state.playerTargetHand)
+        ? patternProgress(remainingHand, newExposed, state.playerTargetHand)
         : null;
 
       return {
         ...state,
-        playerHand: sortHand(remainingHand),
+        playerHand: remainingHand,
         playerExposedGroups: newExposed,
         discardPile: state.discardPile.slice(0, -1),
         discardLog: state.discardLog.slice(0, -1),
@@ -646,7 +665,9 @@ export function playReducer(state: PlayState, action: PlayAction): PlayState {
       if (state.phase !== "player-call-prompt" || !state.lastDiscard)
         return state;
 
-      const fullHand = sortHand([...state.playerHand, state.lastDiscard.tile]);
+      // Preserve player ordering — append the winning tile to their arrangement
+      const fullHand = [...state.playerHand, state.lastDiscard.tile];
+      // Pattern matcher works on unordered tiles, so no sort needed for validation
       const winPattern = matchesAnyPattern(fullHand, state.playerExposedGroups);
 
       return {
@@ -705,7 +726,8 @@ export function playReducer(state: PlayState, action: PlayAction): PlayState {
       }
       const newWall = [...state.wall];
       const drawn = newWall.shift()!;
-      const newHand = sortHand([...state.playerHand, drawn]);
+      // Append drawn tile to the end — preserve player's manual ordering
+      const newHand = [...state.playerHand, drawn];
 
       const canWin = checkSelfDrawWin(newHand, state.playerExposedGroups);
       const tempState = { ...state, wall: newWall, playerHand: newHand };
@@ -758,7 +780,8 @@ export function playReducer(state: PlayState, action: PlayAction): PlayState {
       const handWithoutNatural = state.playerHand.filter(
         (t) => t.id !== swap.naturalTile.id
       );
-      const newPlayerHand = sortHand([...handWithoutNatural, swap.jokerTile]);
+      // Append joker to the end — preserve player's manual ordering
+      const newPlayerHand = [...handWithoutNatural, swap.jokerTile];
 
       if (swap.groupOwner === 0) {
         const newGroups = [...state.playerExposedGroups];
