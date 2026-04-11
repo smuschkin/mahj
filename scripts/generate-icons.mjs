@@ -10,8 +10,8 @@ const svgPath = join(root, "public", "favicon.svg");
 const svg = readFileSync(svgPath);
 
 const tasks = [
-  { size: 192, out: join(root, "public", "icons", "icon-192.png") },
-  { size: 512, out: join(root, "public", "icons", "icon-512.png") },
+  { size: 192, out: join(root, "public", "icons", "icon-192.png"), flatten: true },
+  { size: 512, out: join(root, "public", "icons", "icon-512.png"), flatten: true },
   {
     size: 1024,
     out: join(
@@ -23,10 +23,16 @@ const tasks = [
       "AppIcon.appiconset",
       "AppIcon-512@2x.png"
     ),
+    flatten: true,
   },
 ];
 
-for (const { size, out } of tasks) {
-  await sharp(svg).resize(size, size).png().toFile(out);
+for (const { size, out, flatten } of tasks) {
+  let pipeline = sharp(svg).resize(size, size);
+  if (flatten) {
+    // App Store requires no alpha channel on the 1024x1024 icon
+    pipeline = pipeline.flatten({ background: "#1A4D2E" });
+  }
+  await pipeline.png().toFile(out);
   console.log(`wrote ${out} (${size}x${size})`);
 }
