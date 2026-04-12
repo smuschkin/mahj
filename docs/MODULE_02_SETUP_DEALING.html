@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MAHJ — Module 2: Setup & Dealing (Draft)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap');
+  :root{
+    --red:#C0392B; --green:#27AE60; --gold:#D4AC0D;
+    --ivory:#FDF6E3; --dark:#1A1A2E; --mid:#2C3E50;
+    --light:#F5F0E8; --border:#8B6914;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Lato',sans-serif;background:var(--ivory);color:var(--dark);line-height:1.7;font-size:16px}
+  .wrap{max-width:820px;margin:0 auto;padding:50px 28px 80px}
+
+  header.cover{
+    background:linear-gradient(145deg,#1A1A2E 0%,#16213E 50%,#0F3460 100%);
+    color:#fff;text-align:center;padding:60px 30px;border-radius:14px;margin-bottom:40px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.2);
+  }
+  header.cover .eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-bottom:14px}
+  header.cover h1{font-family:'Playfair Display',serif;font-size:46px;font-weight:900;margin-bottom:10px}
+  header.cover h1 span{color:var(--gold)}
+  header.cover .sub{color:#BDC3C7;font-size:15px;font-style:italic}
+
+  .meta{
+    background:#fff;border-left:5px solid var(--gold);
+    padding:18px 22px;border-radius:8px;margin-bottom:36px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  }
+  .meta p{margin:4px 0;font-size:14px;color:#555}
+  .meta strong{color:var(--mid)}
+
+  h2.section{
+    font-family:'Playfair Display',serif;color:var(--mid);font-size:26px;
+    border-bottom:3px solid var(--gold);padding-bottom:8px;margin:48px 0 18px;
+  }
+
+  .screen{
+    background:#fff;border-radius:12px;padding:32px 36px;margin-bottom:22px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.06);border:1px solid #EFE8D6;
+  }
+  .screen .tag{
+    display:inline-block;background:var(--mid);color:var(--gold);
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    padding:4px 10px;border-radius:4px;margin-bottom:14px;font-weight:700;
+  }
+  .screen h3{font-family:'Playfair Display',serif;color:var(--dark);font-size:26px;margin-bottom:14px}
+  .screen p{margin-bottom:12px;font-size:15px}
+  .screen p:last-of-type{margin-bottom:0}
+  .cta{
+    display:inline-block;margin-top:16px;background:var(--mid);color:var(--gold);
+    padding:11px 24px;border-radius:6px;font-weight:700;font-size:14px;
+    letter-spacing:1px;text-transform:uppercase;
+  }
+
+  .callout{
+    background:#FFF8E1;border-left:4px solid var(--gold);
+    padding:14px 18px;border-radius:6px;margin:16px 0;font-size:14px;
+  }
+  .callout.warn{background:#FDECEA;border-left-color:var(--red)}
+  .callout.tip{background:#E8F5E9;border-left-color:var(--green)}
+
+  /* ── Visual: the wall ── */
+  .wall-diagram{
+    background:linear-gradient(135deg,#1A4D2E,#0F3320);
+    border-radius:12px;padding:30px;margin:18px 0;
+    display:flex;align-items:center;justify-content:center;
+    min-height:280px;position:relative;
+  }
+  .wall-table{
+    display:grid;grid-template-columns:auto auto auto;gap:14px;
+    align-items:center;justify-items:center;
+  }
+  .wall-row{display:flex;gap:2px}
+  .wall-col{display:flex;flex-direction:column;gap:2px}
+  .wall-tile{
+    width:14px;height:10px;background:#FAF7EC;
+    border:1px solid #C9BC8A;border-radius:1.5px;
+    box-shadow:0 1px 1px rgba(0,0,0,0.3);
+  }
+  .wall-tile-tall{
+    width:10px;height:14px;background:#FAF7EC;
+    border:1px solid #C9BC8A;border-radius:1.5px;
+    box-shadow:0 1px 1px rgba(0,0,0,0.3);
+  }
+  .wall-label{
+    color:var(--gold);font-family:'Playfair Display',serif;
+    font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+  }
+
+  /* ── Dice ── */
+  .dice-row{display:flex;gap:18px;justify-content:center;margin:20px 0}
+  .die{
+    width:64px;height:64px;background:#fff;border:2px solid var(--mid);
+    border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);
+    padding:10px;
+  }
+  .die span{
+    width:10px;height:10px;border-radius:50%;background:var(--dark);
+    align-self:center;justify-self:center;
+  }
+  .die.d3 span:nth-child(1){grid-column:1;grid-row:1}
+  .die.d3 span:nth-child(2){grid-column:2;grid-row:2}
+  .die.d3 span:nth-child(3){grid-column:3;grid-row:3}
+  .die.d4 span:nth-child(1){grid-column:1;grid-row:1}
+  .die.d4 span:nth-child(2){grid-column:3;grid-row:1}
+  .die.d4 span:nth-child(3){grid-column:1;grid-row:3}
+  .die.d4 span:nth-child(4){grid-column:3;grid-row:3}
+
+  /* ── Module nav ── */
+  .module-nav{
+    display:flex;justify-content:space-between;align-items:stretch;gap:14px;
+    margin-top:40px;
+  }
+  .module-nav a{
+    flex:1;background:#fff;border:2px solid var(--mid);border-radius:10px;
+    padding:16px 20px;text-decoration:none;color:var(--mid);
+    display:flex;flex-direction:column;gap:4px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+    transition:transform 0.15s;
+  }
+  .module-nav a:hover{transform:translateY(-2px)}
+  .module-nav a.next{background:var(--mid);color:var(--gold);text-align:right;border-color:var(--mid)}
+  .module-nav .dir{font-size:11px;letter-spacing:1px;text-transform:uppercase;opacity:0.7;font-weight:700}
+  .module-nav .name{font-family:'Playfair Display',serif;font-size:18px;font-weight:900}
+  /* ── Deal pattern (4 racks) ── */
+  .deal-pattern{
+    background:#FFF8E1;border:2px solid var(--gold);border-radius:12px;
+    padding:24px 22px;margin:18px 0;
+  }
+  .rack-row{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px;
+  }
+  .rack{
+    background:#fff;border:2px solid var(--mid);border-radius:8px;
+    padding:14px 8px 10px;text-align:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+  }
+  .rack.east{border-color:var(--gold);background:#FFFBEC}
+  .rack .seat{
+    font-family:'Playfair Display',serif;font-size:18px;color:var(--mid);
+    font-weight:900;margin-bottom:8px;
+  }
+  .rack.east .seat{color:var(--gold)}
+  .rack .tiles-mini{
+    display:grid;grid-template-columns:repeat(7,1fr);gap:2px;
+    margin:8px 0;justify-items:center;
+  }
+  .rack .mt{
+    width:8px;height:12px;background:#FAF7EC;border:1px solid #C9BC8A;
+    border-radius:1.5px;
+  }
+  .rack.east .mt.extra{background:#FFE99A;border-color:var(--gold)}
+  .rack .count-badge{
+    display:inline-block;background:var(--mid);color:var(--gold);
+    padding:4px 12px;border-radius:14px;font-size:14px;font-weight:900;
+    font-family:'Playfair Display',serif;
+  }
+  .rack.east .count-badge{background:var(--gold);color:var(--dark)}
+  /* ── Break-the-wall diagram ── */
+  .break-diagram{
+    background:linear-gradient(135deg,#1A4D2E,#0F3320);
+    border-radius:12px;padding:26px 20px;margin:18px 0;
+  }
+  .break-dice{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    color:var(--gold);font-family:'Playfair Display',serif;font-size:14px;
+    font-weight:700;margin-bottom:18px;
+  }
+  .break-dice .pip{
+    width:36px;height:36px;background:#fff;border:2px solid var(--mid);border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--dark);
+  }
+  .break-wall{
+    display:flex;justify-content:center;gap:3px;flex-wrap:nowrap;
+    padding:14px 8px;background:rgba(0,0,0,0.2);border-radius:8px;
+    overflow-x:auto;
+  }
+  .break-tile{
+    width:18px;height:24px;background:#FAF7EC;border:1px solid #C9BC8A;
+    border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,0.3);flex-shrink:0;
+    position:relative;
+  }
+  .break-tile.lifted{
+    background:#FFF8E1;border-color:var(--gold);
+    transform:translateY(-12px);
+    box-shadow:0 4px 8px rgba(212,172,13,0.4);
+  }
+  .break-tile.break-here{
+    border-color:var(--red);border-width:2px;
+  }
+  .break-tile.break-here::after{
+    content:"↓";position:absolute;top:-22px;left:50%;transform:translateX(-50%);
+    color:var(--red);font-size:18px;font-weight:900;
+  }
+  .break-legend{
+    display:flex;gap:18px;justify-content:center;margin-top:14px;
+    color:#ECF0F1;font-size:12px;
+  }
+  .break-legend .item{display:flex;align-items:center;gap:6px}
+  .break-legend .swatch{width:12px;height:12px;border-radius:2px}
+  .break-legend .swatch.lifted{background:#FFF8E1;border:1px solid var(--gold)}
+  .break-legend .swatch.break{background:#FAF7EC;border:2px solid var(--red)}
+
+  /* ── Seating diagram ── */
+  .table-diagram{
+    width:280px;height:280px;margin:20px auto;position:relative;
+  }
+  .table-felt{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:160px;height:160px;border-radius:50%;
+    background:radial-gradient(circle at 50% 40%,#196F3D,#0E4F26);
+    box-shadow:inset 0 0 20px rgba(0,0,0,0.4),0 6px 14px rgba(0,0,0,0.2);
+  }
+  .seat{
+    position:absolute;width:74px;height:64px;border-radius:10px;
+    background:#FAF7EC;border:2px solid var(--mid);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+  }
+  .seat .pos{
+    font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:var(--mid);line-height:1;
+  }
+  .seat .lbl{font-size:9px;letter-spacing:1px;color:#666;font-weight:700;text-transform:uppercase;margin-top:2px}
+  .seat.east{top:108px;right:0;border-color:var(--gold);background:#FFF8E1}
+  .seat.east .pos{color:var(--gold)}
+  .seat.south{top:0;left:50%;transform:translateX(-50%)}
+  .seat.west{top:108px;left:0}
+  .seat.north{bottom:0;left:50%;transform:translateX(-50%)}
+  .east-arrow{
+    position:absolute;top:120px;right:80px;color:var(--gold);
+    font-size:18px;font-weight:900;
+  }
+
+  /* ── Drills ── */
+  .drill{
+    background:linear-gradient(135deg,#2C3E50,#1A1A2E);color:#fff;
+    border-radius:12px;padding:30px 36px;margin:24px 0;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  }
+  .drill .tag{background:var(--gold);color:var(--dark)}
+  .drill h3{font-family:'Playfair Display',serif;color:var(--gold);font-size:24px;margin-bottom:10px}
+  .drill p,.drill li{color:#ECF0F1;font-size:14px}
+  .drill ul,.drill ol{margin-left:22px;margin-top:8px}
+  .drill li{margin-bottom:6px}
+
+  /* ── Quiz ── */
+  .quiz{
+    background:#fff;border:2px solid var(--gold);border-radius:12px;
+    padding:30px 36px;margin:24px 0;
+  }
+  .quiz h3{font-family:'Playfair Display',serif;color:var(--mid);font-size:24px;margin-bottom:14px}
+  .quiz ol{margin-left:22px}
+  .quiz li{margin-bottom:14px;font-size:14px}
+  .quiz .ans{color:var(--green);font-weight:700}
+
+  .complete{
+    background:linear-gradient(135deg,#27AE60,#16A085);color:#fff;
+    border-radius:14px;padding:36px;text-align:center;margin-top:30px;
+  }
+  .complete h3{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:12px}
+  .complete p{font-size:15px;margin-bottom:8px}
+
+  footer.disclaimer{
+    margin-top:50px;padding:20px;background:#fff;border-radius:8px;
+    font-size:11px;color:#777;text-align:center;border:1px solid #E0D9C0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="cover">
+    <div class="eyebrow">MAHJ — Module 2 Draft</div>
+    <h1>Setup &amp; <span>Dealing</span></h1>
+    <div class="sub">From a pile of tiles to "Charleston, ready?"</div>
+  </header>
+
+  <div class="meta">
+    <p><strong>Goal:</strong> By the end, you can confidently set up a fresh game from scratch — wash, build the wall, roll for East, take seats, break the wall, and deal.</p>
+    <p><strong>Estimated time:</strong> 7–9 minutes</p>
+    <p><strong>Prerequisite:</strong> Module 1 (Tile Trainer)</p>
+    <p><strong>Unlocks:</strong> Module 3 (The Charleston)</p>
+    <p><strong>Why this matters:</strong> Setup is where new players feel the most lost. After this module, you'll be able to <em>set up the table</em> — something even some intermediate players get wrong.</p>
+  </div>
+
+  <h2 class="section">Lesson Screens</h2>
+
+  <div class="screen">
+    <div class="tag">Screen 1 of 8</div>
+    <h3>🪑 Where we're going</h3>
+    <p>Before you can play a hand, four things have to happen:</p>
+    <ol style="margin-left:22px;margin-top:8px">
+      <li><strong>Wash</strong> — mix all 152 tiles face-down</li>
+      <li><strong>Build</strong> — stack the tiles into 4 walls</li>
+      <li><strong>Sit</strong> — roll dice to decide who's East</li>
+      <li><strong>Break &amp; Deal</strong> — open the wall and pass out 13 tiles each</li>
+    </ol>
+    <p style="margin-top:12px">Sounds like a lot, but each step takes seconds once you've done it. We'll walk through them one at a time.</p>
+    <span class="cta">Step 1: Wash →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 2 of 8</div>
+    <h3>🌀 Step 1: Wash the tiles</h3>
+    <p>Put <strong>all 152 tiles face-down</strong> on the table and gently swirl them around with your hands.</p>
+    <p>Everyone helps. The goal is just to <strong>thoroughly mix them</strong> — this is your "shuffle."</p>
+    <p>You'll hear the satisfying clack of tiles. That sound is half the reason people love mahjong.</p>
+    <div class="callout tip">💡 Don't flip tiles face-up while washing — keep them all face-down so nobody sees what's coming.</div>
+    <span class="cta">Step 2: Build →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 3 of 8</div>
+    <h3>🧱 Step 2: Build the wall</h3>
+    <p>Each player builds a wall in front of themselves: <strong>19 tiles long</strong>, stacked <strong>2 tiles high</strong>.</p>
+    <p>4 players × 19 × 2 = <strong>152 tiles</strong> — exactly the whole set.</p>
+    <p>The four walls form a square in the middle of the table. This is "the wall" you'll draw from all game.</p>
+
+    <div class="wall-diagram">
+      <div class="wall-table">
+        <div></div>
+        <div>
+          <div class="wall-label" style="margin-bottom:6px;text-align:center">North wall</div>
+          <div class="wall-row">
+            <span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span>
+          </div>
+        </div>
+        <div></div>
+
+        <div>
+          <div class="wall-label" style="margin-right:6px;writing-mode:vertical-rl;transform:rotate(180deg)">West wall</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.2);width:120px;height:80px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:10px;letter-spacing:1px">PLAY AREA</div>
+        <div>
+          <div class="wall-label" style="margin-left:6px;writing-mode:vertical-rl">East wall</div>
+        </div>
+
+        <div></div>
+        <div>
+          <div class="wall-row">
+            <span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span><span class="wall-tile"></span>
+          </div>
+          <div class="wall-label" style="margin-top:6px;text-align:center">South wall</div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="callout tip">💡 Build the bottom row first, then stack the top row directly on top. Tiles should be touching, but not crooked.</div>
+    <span class="cta">Step 3: Sit →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 4 of 8</div>
+    <h3>🎲 Step 3: Roll for East</h3>
+    <p><strong>East deals first</strong> and is the most important seat — so you need to fairly decide who gets it.</p>
+    <p>Have someone roll <strong>two dice</strong>. The highest roll becomes East. (Re-roll any ties.)</p>
+
+    <div class="dice-row">
+      <div class="die d4"><span></span><span></span><span></span><span></span></div>
+      <div class="die d3"><span></span><span></span><span></span></div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:#666;font-style:italic">Example roll: 4 + 3 = 7</p>
+
+    <div class="callout tip">💡 East has the best odds of winning the first hand, so it's worth a fair roll. After each round, the East seat passes to the next player.</div>
+    <span class="cta">Take seats →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 5 of 8</div>
+    <h3>🧭 Step 4: Take your seats</h3>
+    <p>The four winds sit around the table in a specific order. Going <strong>counter-clockwise</strong> from East:</p>
+    <p style="text-align:center;font-size:18px;font-family:'Playfair Display',serif;color:var(--mid);font-weight:700;margin:14px 0">East → South → West → North</p>
+
+    <div class="table-diagram">
+      <div class="table-felt"></div>
+      <div class="seat south"><div class="pos">S</div><div class="lbl">South</div></div>
+      <div class="seat east"><div class="pos">E</div><div class="lbl">East · Dealer</div></div>
+      <div class="seat north"><div class="pos">N</div><div class="lbl">North</div></div>
+      <div class="seat west"><div class="pos">W</div><div class="lbl">West</div></div>
+    </div>
+
+    <div class="callout warn">⚠️ Note: South sits to East's <strong>physical right</strong>, not to East's left. The mahjong "compass" doesn't match a geographic map — the seats are labeled by <em>play order</em>, not by north/south on a real compass.</div>
+    <span class="cta">Step 5: Break the wall →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 6 of 8</div>
+    <h3>🔨 Step 5: Break the wall</h3>
+    <p>This is the trickiest part for beginners — but the rule is simple once you see it.</p>
+    <p><strong>East rolls the two dice again.</strong> The total tells you <em>which wall</em> to break, and <em>where</em> to break it.</p>
+    <ol style="margin-left:22px;margin-top:8px">
+      <li><strong>Count players counter-clockwise from East</strong>, starting at 1 with East. The number you land on is the player whose wall you'll break.</li>
+      <li><strong>From the right end of that wall, count in stacks equal to the dice total.</strong> Lift those stacks aside — that's where the deal starts.</li>
+    </ol>
+
+    <div class="break-diagram">
+      <div class="break-dice">
+        Example roll:
+        <div class="pip">4</div>
+        <span>+</span>
+        <div class="pip">3</div>
+        <span>=</span>
+        <strong style="font-size:18px">7</strong>
+      </div>
+      <div class="break-wall">
+        <span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile"></span><span class="break-tile break-here"></span><span class="break-tile lifted"></span><span class="break-tile lifted"></span><span class="break-tile lifted"></span><span class="break-tile lifted"></span><span class="break-tile lifted"></span><span class="break-tile lifted"></span><span class="break-tile lifted"></span>
+      </div>
+      <div class="break-legend">
+        <div class="item"><div class="swatch lifted"></div>7 stacks lifted from the right end</div>
+        <div class="item"><div class="swatch break"></div>Deal starts here</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:#666;font-style:italic;margin-top:8px">Counted 7 from the right. The next tile to the left is where the deal begins.</p>
+
+    <div class="callout tip">💡 Don't worry about memorizing this perfectly. After 2–3 games, it becomes muscle memory. We'll drill it in a moment.</div>
+    <span class="cta">Step 6: Deal →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 7 of 8</div>
+    <h3>🃏 Step 6: Deal the tiles</h3>
+    <p>Starting from where you broke the wall, deal tiles <strong>counter-clockwise</strong> in groups of 4, going around the table:</p>
+    <ul style="margin-left:22px;margin-top:8px">
+      <li>East gets <strong>4 tiles</strong>, then South, West, North</li>
+      <li>Repeat: another 4 to each player</li>
+      <li>Repeat once more — everyone now has <strong>12</strong></li>
+      <li>Then deal <strong>1 tile each</strong> around the table — everyone has <strong>13</strong></li>
+      <li>East gets <strong>one extra tile</strong> — East has <strong>14</strong> (because East starts the play)</li>
+    </ul>
+
+    <div class="deal-pattern">
+      <p style="text-align:center;font-size:13px;color:#7D6608;margin-bottom:6px;font-weight:700;letter-spacing:1px;text-transform:uppercase">Final tile counts after the deal</p>
+      <div class="rack-row">
+        <div class="rack"><div class="seat">N</div><div class="tiles-mini"><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span></div><div class="count-badge">13</div></div>
+        <div class="rack east"><div class="seat">E</div><div class="tiles-mini"><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt extra"></span></div><div class="count-badge">14</div></div>
+        <div class="rack"><div class="seat">S</div><div class="tiles-mini"><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span></div><div class="count-badge">13</div></div>
+        <div class="rack"><div class="seat">W</div><div class="tiles-mini"><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span><span class="mt"></span></div><div class="count-badge">13</div></div>
+      </div>
+      <p style="text-align:center;font-size:12px;color:#7D6608;margin-top:12px;font-style:italic">East gets the gold "extra" tile because East starts the play</p>
+    </div>
+
+    <div class="callout tip">💡 At the end: 3 players have <strong>13 tiles</strong>, East has <strong>14</strong>. Everyone places their tiles on their rack, hidden from other players.</div>
+    <span class="cta">Almost there →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 8 of 8</div>
+    <h3>✨ You're set up!</h3>
+    <p>The wall is built, seats are taken, tiles are dealt. Everyone is looking at their 13 (or 14) tiles, sorting them on the rack.</p>
+    <p>Next comes the <strong>Charleston</strong> — the unique trading ritual that happens before any play begins. We'll cover that in Module 3.</p>
+    <p>But first, let's lock in what you just learned.</p>
+    <span class="cta">Practice time →</span>
+  </div>
+
+  <div class="drill">
+    <div class="tag">Practice Drill 1</div>
+    <h3>🎲 Roll &amp; Break</h3>
+    <p>Interactive setup walkthrough:</p>
+    <ul>
+      <li>Tap to <strong>roll the dice</strong> — see the total</li>
+      <li>App highlights <strong>which wall</strong> to break (counter-clockwise from East)</li>
+      <li>App highlights <strong>where</strong> on that wall to break</li>
+      <li>Try 5 different rolls to build intuition</li>
+    </ul>
+    <p style="margin-top:12px;font-style:italic;color:var(--gold)">→ "Nice — you're getting the hang of it."</p>
+  </div>
+
+  <div class="drill">
+    <div class="tag">Practice Drill 2</div>
+    <h3>🪑 Set the Table</h3>
+    <p>Drag-and-drop walkthrough:</p>
+    <ol>
+      <li>Wash the tiles (animated tap-and-swirl)</li>
+      <li>Build your wall (drag 19 tiles into a row, then stack)</li>
+      <li>Roll for East (tap to roll)</li>
+      <li>Place all 4 players in NESW positions</li>
+      <li>Deal the tiles (animated, with counts shown)</li>
+    </ol>
+    <p style="margin-top:12px;font-style:italic;color:var(--gold)">→ "You just set up your first game."</p>
+  </div>
+
+  <div class="quiz">
+    <h3>Confidence Check (5 questions)</h3>
+    <p style="font-size:13px;color:#666;margin-bottom:14px">Multiple choice. Must get 4/5 to unlock Module 3.</p>
+    <ol>
+      <li><strong>How many tiles long is each player's wall?</strong><br>
+        13 · <span class="ans">19 ✓</span> · 24 · 36</li>
+      <li><strong>How many tiles high is the wall?</strong><br>
+        1 · <span class="ans">2 ✓</span> · 3 · 4</li>
+      <li><strong>What direction do players sit relative to East?</strong><br>
+        Clockwise · <span class="ans">Counter-clockwise ✓</span> · Random · Doesn't matter</li>
+      <li><strong>How many tiles does East start with?</strong><br>
+        13 · <span class="ans">14 ✓</span> · 15 · 16</li>
+      <li><strong>Who decides where to break the wall?</strong><br>
+        North · South · West · <span class="ans">East rolls the dice ✓</span></li>
+    </ol>
+  </div>
+
+  <div class="complete">
+    <h3>Module 2 complete</h3>
+    <p>You can now set up a fresh game of American Mahjong from scratch — something most apps don't even try to teach.</p>
+    <p style="margin-top:10px"><strong>What's next:</strong> Module 3 covers the <strong>Charleston</strong> — the unique tile-trading ritual that happens <em>before</em> the game really starts. It's one of the most distinctive parts of American Mahjong.</p>
+  </div>
+
+  <div class="module-nav">
+    <a href="MODULE_01_TILE_TRAINER.html">
+      <div class="dir">← Previous</div>
+      <div class="name">Module 1: Tile Trainer</div>
+    </a>
+    <a class="next" href="MODULE_03_CHARLESTON.html">
+      <div class="dir">Next →</div>
+      <div class="name">Module 3: The Charleston</div>
+    </a>
+  </div>
+
+  <footer class="disclaimer">
+    MAHJ is an independent educational tool. Not affiliated with, endorsed by, or sponsored by the National Mah Jongg League (NMJL®). To play official games, purchase the current year's card from nationalmahjonggleague.org.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --color-red: #DC5044;
+  --color-green: #3DAA6D;
+  --color-accent: #2D8B5E;
+  --color-ivory: #FDF6E3;
+  --color-dark: #1E293B;
+  --color-mid: #334155;
+  --color-light: #F5F0E8;
+  --color-border: #A3C4A9;
+  --color-gold: #C8A951;
+  --color-gold-light: #F5E6B8;
+  --color-jade: #2D8B5E;
+  --color-jade-light: #E8F5EC;
+  --color-felt: #1A4D2E;
+  --color-felt-dark: #0F3320;
+}
+
+@theme inline {
+  --color-mahj-red: var(--color-red);
+  --color-mahj-green: var(--color-green);
+  --color-mahj-accent: var(--color-accent);
+  --color-mahj-ivory: var(--color-ivory);
+  --color-mahj-dark: var(--color-dark);
+  --color-mahj-mid: var(--color-mid);
+  --color-mahj-light: var(--color-light);
+  --color-mahj-border: var(--color-border);
+  --color-mahj-gold: var(--color-gold);
+  --color-mahj-gold-light: var(--color-gold-light);
+  --color-mahj-jade: var(--color-jade);
+  --color-mahj-jade-light: var(--color-jade-light);
+  --color-mahj-felt: var(--color-felt);
+  --color-mahj-felt-dark: var(--color-felt-dark);
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-lato), -apple-system, sans-serif;
+}
+
+html, body {
+  background: var(--color-ivory);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 169, 81, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(45, 139, 94, 0.03) 0%, transparent 50%);
+  color: var(--color-dark);
+  font-family: var(--font-lato), -apple-system, sans-serif;
+  line-height: 1.7;
+}
+
+.font-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slide-up 0.35s ease-out;
+}

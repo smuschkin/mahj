@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MAHJ — Module 3: The Charleston (Draft)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap');
+  :root{
+    --red:#C0392B; --green:#27AE60; --gold:#D4AC0D;
+    --ivory:#FDF6E3; --dark:#1A1A2E; --mid:#2C3E50;
+    --light:#F5F0E8; --border:#8B6914;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Lato',sans-serif;background:var(--ivory);color:var(--dark);line-height:1.7;font-size:16px}
+  .wrap{max-width:820px;margin:0 auto;padding:50px 28px 80px}
+
+  header.cover{
+    background:linear-gradient(145deg,#1A1A2E 0%,#16213E 50%,#0F3460 100%);
+    color:#fff;text-align:center;padding:60px 30px;border-radius:14px;margin-bottom:40px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.2);
+  }
+  header.cover .eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-bottom:14px}
+  header.cover h1{font-family:'Playfair Display',serif;font-size:46px;font-weight:900;margin-bottom:10px}
+  header.cover h1 span{color:var(--gold)}
+  header.cover .sub{color:#BDC3C7;font-size:15px;font-style:italic}
+
+  .meta{
+    background:#fff;border-left:5px solid var(--gold);
+    padding:18px 22px;border-radius:8px;margin-bottom:36px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  }
+  .meta p{margin:4px 0;font-size:14px;color:#555}
+  .meta strong{color:var(--mid)}
+
+  h2.section{
+    font-family:'Playfair Display',serif;color:var(--mid);font-size:26px;
+    border-bottom:3px solid var(--gold);padding-bottom:8px;margin:48px 0 18px;
+  }
+
+  .screen{
+    background:#fff;border-radius:12px;padding:32px 36px;margin-bottom:22px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.06);border:1px solid #EFE8D6;
+  }
+  .screen .tag{
+    display:inline-block;background:var(--mid);color:var(--gold);
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    padding:4px 10px;border-radius:4px;margin-bottom:14px;font-weight:700;
+  }
+  .screen h3{font-family:'Playfair Display',serif;color:var(--dark);font-size:26px;margin-bottom:14px}
+  .screen p{margin-bottom:12px;font-size:15px}
+  .screen p:last-of-type{margin-bottom:0}
+  .cta{
+    display:inline-block;margin-top:16px;background:var(--mid);color:var(--gold);
+    padding:11px 24px;border-radius:6px;font-weight:700;font-size:14px;
+    letter-spacing:1px;text-transform:uppercase;
+  }
+
+  .callout{
+    background:#FFF8E1;border-left:4px solid var(--gold);
+    padding:14px 18px;border-radius:6px;margin:16px 0;font-size:14px;
+  }
+  .callout.warn{background:#FDECEA;border-left-color:var(--red)}
+  .callout.tip{background:#E8F5E9;border-left-color:var(--green)}
+
+  /* ── Charleston pass diagram ── */
+  .pass-diagram{
+    width:300px;height:300px;margin:24px auto;position:relative;
+  }
+  .pass-table{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:160px;height:160px;border-radius:50%;
+    background:radial-gradient(circle at 50% 40%,#196F3D,#0E4F26);
+    box-shadow:inset 0 0 20px rgba(0,0,0,0.4),0 6px 14px rgba(0,0,0,0.2);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-family:'Playfair Display',serif;font-size:13px;
+    text-align:center;letter-spacing:1px;
+  }
+  .seat{
+    position:absolute;width:74px;height:64px;border-radius:10px;
+    background:#FAF7EC;border:2px solid var(--mid);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+  }
+  .seat .pos{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--mid);line-height:1}
+  .seat .lbl{font-size:9px;letter-spacing:1px;color:#666;font-weight:700;text-transform:uppercase;margin-top:2px}
+  .seat.east{top:118px;right:0;border-color:var(--gold);background:#FFF8E1}
+  .seat.east .pos{color:var(--gold)}
+  .seat.south{top:0;left:50%;transform:translateX(-50%)}
+  .seat.west{top:118px;left:0}
+  .seat.north{bottom:0;left:50%;transform:translateX(-50%)}
+  /* Arrows */
+  .arrow{position:absolute;color:var(--red);font-size:24px;font-weight:900}
+  .arrow.to-right{top:46px;right:104px;font-size:28px}
+  .arrow.to-across{top:142px;left:90px;font-size:28px}
+  .arrow.to-left{bottom:46px;right:104px;font-size:28px}
+
+  /* ── Mini hand display ── */
+  .mini-hand{
+    background:var(--light);border:1px dashed var(--border);
+    border-radius:8px;padding:14px;margin:12px 0;
+    display:flex;gap:6px;flex-wrap:wrap;justify-content:center;
+  }
+  .mini-tile{
+    width:36px;height:48px;border-radius:5px;background:#FAF7EC;
+    border:1.5px solid #C9BC8A;box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display',serif;font-size:14px;font-weight:900;
+    color:var(--mid);
+  }
+  .mini-tile.bam{color:#196F3D}
+  .mini-tile.crack{color:#C0392B}
+  .mini-tile.dot{color:#1B4F72}
+  .mini-tile.honor{color:#8B6914;background:#FFF8E1}
+  .mini-tile.joker{background:linear-gradient(145deg,#FFFBEA,#F5E9B8);border-color:var(--gold);color:#8B6914}
+  .mini-tile.pass{opacity:0.5;border-style:dashed;border-color:var(--red)}
+  .mini-tile.unseen{
+    background:repeating-linear-gradient(45deg,#8B6914,#8B6914 4px,#A0791A 4px,#A0791A 8px);
+    color:transparent;border-color:#8B6914;
+  }
+  /* ── Module nav ── */
+  .module-nav{
+    display:flex;justify-content:space-between;align-items:stretch;gap:14px;
+    margin-top:40px;
+  }
+  .module-nav a{
+    flex:1;background:#fff;border:2px solid var(--mid);border-radius:10px;
+    padding:16px 20px;text-decoration:none;color:var(--mid);
+    display:flex;flex-direction:column;gap:4px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+    transition:transform 0.15s;
+  }
+  .module-nav a:hover{transform:translateY(-2px)}
+  .module-nav a.next{background:var(--mid);color:var(--gold);text-align:right;border-color:var(--mid)}
+  .module-nav .dir{font-size:11px;letter-spacing:1px;text-transform:uppercase;opacity:0.7;font-weight:700}
+  .module-nav .name{font-family:'Playfair Display',serif;font-size:18px;font-weight:900}
+  /* ── Pass annotations ── */
+  .pass-annotated{
+    background:var(--light);border:1.5px solid var(--border);border-radius:12px;
+    padding:18px;margin:14px 0;
+  }
+  .annotated-label{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;
+  }
+  .ann-box{
+    background:#fff;border-radius:8px;padding:12px 14px;font-size:13px;
+    border-left:4px solid var(--green);color:#444;
+  }
+  .ann-box.bad{border-left-color:var(--red)}
+  .ann-box .ann-title{font-weight:900;color:var(--mid);margin-bottom:4px;font-size:13px}
+  /* ── Blind pass diagram ── */
+  .blind-diagram{
+    background:var(--light);border:2px dashed var(--border);border-radius:12px;
+    padding:20px;margin:18px 0;
+  }
+  .blind-row{
+    display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  }
+  .blind-group{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .blind-group .tiles{display:flex;gap:4px}
+  .blind-group .lbl{
+    font-size:10px;letter-spacing:1px;text-transform:uppercase;
+    color:#666;font-weight:700;text-align:center;
+  }
+  .blind-arrow{
+    font-size:24px;color:var(--red);font-weight:900;
+  }
+
+  /* ── Pass step list ── */
+  .pass-steps{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:18px 0;
+  }
+  .pass-step{
+    background:var(--light);border-radius:10px;padding:18px;
+    border-left:4px solid var(--gold);position:relative;
+  }
+  .pass-step .num{
+    display:inline-block;width:26px;height:26px;border-radius:50%;
+    background:var(--mid);color:var(--gold);
+    text-align:center;line-height:26px;font-weight:900;font-size:13px;
+    margin-bottom:6px;
+  }
+  .pass-step h4{font-family:'Playfair Display',serif;color:var(--mid);font-size:16px;margin-bottom:4px}
+  .pass-step p{font-size:13px;color:#555;margin:0}
+  /* Little hat marker for "Second Charleston starts here" */
+  .pass-step.hat{border-left-color:var(--red);background:#FFF8F5}
+  .pass-step .hat-mark{
+    position:absolute;top:-18px;left:50%;transform:translateX(-50%);
+    background:var(--red);color:#fff;font-size:10px;font-weight:900;
+    letter-spacing:1px;text-transform:uppercase;
+    padding:5px 12px 5px;border-radius:4px 4px 0 0;
+    box-shadow:0 -2px 6px rgba(0,0,0,0.15);
+    white-space:nowrap;
+  }
+  .pass-step .hat-mark::before{
+    content:"";position:absolute;top:-8px;left:50%;transform:translateX(-50%);
+    width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;
+    border-bottom:8px solid var(--red);
+  }
+  .pass-step .hat-mark::after{
+    content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    width:30px;height:4px;background:var(--gold);border-radius:2px;
+  }
+
+  /* ── Direction guide (Screen 3 reinforcement) ── */
+  .dir-guide{
+    background:var(--light);border:2px solid var(--mid);
+    border-radius:12px;padding:20px;margin:18px 0;
+  }
+  .dir-guide h4{
+    font-family:'Playfair Display',serif;color:var(--mid);
+    font-size:16px;margin-bottom:12px;text-align:center;
+  }
+  .dir-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}
+  .dir-cell{
+    background:#fff;border-radius:8px;padding:14px 10px;
+    border:1.5px solid #C9BC8A;
+  }
+  .dir-cell .arrow{
+    font-size:28px;color:var(--red);font-weight:900;display:block;margin-bottom:6px;
+    position:static;
+  }
+  .dir-cell .name{
+    font-family:'Playfair Display',serif;font-size:14px;color:var(--mid);
+    font-weight:900;text-transform:uppercase;letter-spacing:1px;
+  }
+  .dir-cell .who{font-size:11px;color:#888;margin-top:4px}
+  .dir-cell.right{border-color:var(--red);background:#FFF6F4}
+  .dir-cell.left{border-color:var(--green);background:#F4FBF6}
+  .dir-cell.across{border-color:var(--gold);background:#FFFBEC}
+
+  /* ── Drills ── */
+  .drill{
+    background:linear-gradient(135deg,#2C3E50,#1A1A2E);color:#fff;
+    border-radius:12px;padding:30px 36px;margin:24px 0;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  }
+  .drill .tag{background:var(--gold);color:var(--dark)}
+  .drill h3{font-family:'Playfair Display',serif;color:var(--gold);font-size:24px;margin-bottom:10px}
+  .drill p,.drill li{color:#ECF0F1;font-size:14px}
+  .drill ul,.drill ol{margin-left:22px;margin-top:8px}
+  .drill li{margin-bottom:6px}
+
+  .quiz{
+    background:#fff;border:2px solid var(--gold);border-radius:12px;
+    padding:30px 36px;margin:24px 0;
+  }
+  .quiz h3{font-family:'Playfair Display',serif;color:var(--mid);font-size:24px;margin-bottom:14px}
+  .quiz ol{margin-left:22px}
+  .quiz li{margin-bottom:14px;font-size:14px}
+  .quiz .ans{color:var(--green);font-weight:700}
+
+  .complete{
+    background:linear-gradient(135deg,#27AE60,#16A085);color:#fff;
+    border-radius:14px;padding:36px;text-align:center;margin-top:30px;
+  }
+  .complete h3{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:12px}
+  .complete p{font-size:15px;margin-bottom:8px}
+
+  footer.disclaimer{
+    margin-top:50px;padding:20px;background:#fff;border-radius:8px;
+    font-size:11px;color:#777;text-align:center;border:1px solid #E0D9C0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="cover">
+    <div class="eyebrow">MAHJ — Module 3 Draft</div>
+    <h1>The <span>Charleston</span></h1>
+    <div class="sub">The trading ritual that makes American Mahjong unique</div>
+  </header>
+
+  <div class="meta">
+    <p><strong>Goal:</strong> By the end, you'll understand the full Charleston sequence, what to pass, and how to handle the tricky bits like blind passes and the courtesy.</p>
+    <p><strong>Estimated time:</strong> 7–9 minutes</p>
+    <p><strong>Prerequisite:</strong> Module 2 (Setup &amp; Dealing)</p>
+    <p><strong>Unlocks:</strong> Module 4 (Jokers &amp; Calling)</p>
+    <p><strong>Why this matters:</strong> The Charleston is unique to American Mahjong and confuses every newcomer. Master it here and you'll feel ready at any table.</p>
+  </div>
+
+  <h2 class="section">Lesson Screens</h2>
+
+  <div class="screen">
+    <div class="tag">Screen 1 of 8</div>
+    <h3>🔄 What is the Charleston?</h3>
+    <p>Right after the deal — but <em>before</em> the game starts — players do something unique to American Mahjong: they <strong>trade tiles with each other</strong>.</p>
+    <p>This is the <strong>Charleston</strong>. You pass tiles you don't want, and receive tiles other players don't want. The idea is that everyone has a chance to improve their starting hand before play begins.</p>
+    <p>It's the most distinctive ritual in American Mahjong. It's also the part that confuses brand-new players the most — so we'll go slow.</p>
+    <span class="cta">How does it work? →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 2 of 8</div>
+    <h3>🧭 The big picture</h3>
+    <p>The Charleston is a sequence of <strong>passes</strong>. Each pass: you choose <strong>3 tiles</strong> from your hand, slide them face-down to another player, and they slide 3 to you.</p>
+    <p>The full Charleston is <strong>up to 7 passes</strong>:</p>
+
+    <div class="pass-steps">
+      <div class="pass-step"><span class="num">1</span><h4>First Right</h4><p>Pass 3 tiles to the player on your right.</p></div>
+      <div class="pass-step"><span class="num">2</span><h4>First Across</h4><p>Pass 3 tiles to the player across from you.</p></div>
+      <div class="pass-step"><span class="num">3</span><h4>First Left</h4><p>Pass 3 tiles to the player on your left.</p></div>
+      <div class="pass-step hat"><div class="hat-mark">2nd Charleston starts</div><span class="num">4</span><h4>Second Left</h4><p>Repeat — pass 3 to the left. (Optional — any one player can stop here.)</p></div>
+      <div class="pass-step"><span class="num">5</span><h4>Second Across</h4><p>Pass 3 across again.</p></div>
+      <div class="pass-step"><span class="num">6</span><h4>Second Right</h4><p>Pass 3 to the right again.</p></div>
+      <div class="pass-step"><span class="num">7</span><h4>Courtesy</h4><p>Optional — trade 0–3 tiles with the player across.</p></div>
+    </div>
+
+    <div class="callout tip">💡 Notice the symmetry: the second Charleston goes in <em>reverse</em> order (left → across → right). Easy to remember if you think of it as "out and back."</div>
+    <span class="cta">See it on the table →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 3 of 8</div>
+    <h3>👁️ Visual: passing directions</h3>
+    <p>From your seat (let's say you're East), here's where each pass goes:</p>
+
+    <div class="pass-diagram">
+      <div class="pass-table">YOU<br>(East)</div>
+      <div class="seat south"><div class="pos">S</div><div class="lbl">S · Right</div></div>
+      <div class="seat east"><div class="pos">E</div><div class="lbl">You</div></div>
+      <div class="seat north"><div class="pos">N</div><div class="lbl">N · Left</div></div>
+      <div class="seat west"><div class="pos">W</div><div class="lbl">W · Across</div></div>
+      <span class="arrow to-right">↗</span>
+      <span class="arrow to-across">←</span>
+      <span class="arrow to-left">↘</span>
+    </div>
+
+    <div class="dir-guide">
+      <h4>From your seat — exactly who is who</h4>
+      <div class="dir-grid">
+        <div class="dir-cell right">
+          <span class="arrow">→</span>
+          <div class="name">Right</div>
+          <div class="who">The player on your physical right</div>
+        </div>
+        <div class="dir-cell across">
+          <span class="arrow">↑</span>
+          <div class="name">Across</div>
+          <div class="who">The player facing you</div>
+        </div>
+        <div class="dir-cell left">
+          <span class="arrow">←</span>
+          <div class="name">Left</div>
+          <div class="who">The player on your physical left</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout warn">⚠️ <strong>Important:</strong> "Right" and "Left" mean your <em>physical</em> right and left — the same as in everyday life. If you raise your right hand, the player it's pointing at is "right." Don't overthink it.</div>
+    <div class="callout tip">💡 Mahjong seating happens to be <strong>counter-clockwise</strong> by wind order (East → South → West → North), but for the Charleston you don't need to think about winds — just look left, right, and across.</div>
+    <span class="cta">First pass →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 4 of 8</div>
+    <h3>👉 Pass 1: First Right</h3>
+    <p>The Charleston begins. Look at your 13 tiles and pick <strong>3 you don't want</strong> — your "junk."</p>
+    <p>Slide them <strong>face-down</strong> to the player on your right. At the same time, the player on your <em>left</em> slides 3 face-down tiles to you.</p>
+    <p>Pick up the 3 new tiles, look at them, and add them to your hand.</p>
+
+    <div class="pass-annotated">
+      <div class="mini-hand">
+        <div class="mini-tile bam">2</div>
+        <div class="mini-tile bam">3</div>
+        <div class="mini-tile bam">4</div>
+        <div class="mini-tile crack">5</div>
+        <div class="mini-tile crack">5</div>
+        <div class="mini-tile dot">7</div>
+        <div class="mini-tile dot">8</div>
+        <div class="mini-tile honor">E</div>
+        <div class="mini-tile honor">N</div>
+        <div class="mini-tile honor">D</div>
+        <div class="mini-tile pass crack">1</div>
+        <div class="mini-tile pass dot">9</div>
+        <div class="mini-tile pass honor">W</div>
+      </div>
+      <p style="text-align:center;font-size:13px;color:#666;font-style:italic;margin:6px 0 0">Dashed red = the 3 tiles you'd pass. Why?</p>
+
+      <div class="annotated-label">
+        <div class="ann-box">
+          <div class="ann-title">✅ KEEP — 2-3-4 Bam</div>
+          A potential consecutive run. These three tiles work together — never break a forming group.
+        </div>
+        <div class="ann-box">
+          <div class="ann-title">✅ KEEP — pair of 5 Cracks</div>
+          Pairs are valuable starting points — they can grow into pungs (3) or stay as the final pair.
+        </div>
+        <div class="ann-box bad">
+          <div class="ann-title">❌ PASS — lone 1 Crack</div>
+          Isolated, far from your other Cracks (5, 5). Hard to use without a lot of luck.
+        </div>
+        <div class="ann-box bad">
+          <div class="ann-title">❌ PASS — lone 9 Dot</div>
+          You have a 7-8 Dot pair forming, but a 9 sits at the edge. Sacrifice it for something better.
+        </div>
+        <div class="ann-box bad">
+          <div class="ann-title">❌ PASS — lone West Wind</div>
+          One honor tile by itself is dead weight. You'd need two more Wests to make it useful.
+        </div>
+        <div class="ann-box">
+          <div class="ann-title">🤔 KEEP (for now) — E, N, D honors</div>
+          Three different honors. Risky to pass them all on Pass 1 — they might pair up later. Re-evaluate after the next pass.
+        </div>
+      </div>
+    </div>
+
+    <div class="callout warn">⚠️ <strong>Never pass a Joker.</strong> Jokers are gold — you'd be giving away your single most valuable tile.</div>
+    <span class="cta">Pass 2 →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 5 of 8</div>
+    <h3>↔️ Pass 2: First Across</h3>
+    <p>Pass 3 more tiles — this time to the player <strong>across</strong> from you. They pass 3 to you in return.</p>
+    <p>You can pass any 3 tiles, including ones you just received from the right. The only hard rule: <strong>no jokers</strong>.</p>
+    <div class="callout tip">💡 By now you may be starting to see what hand-shape your tiles support. Use this pass to dump tiles that don't fit.</div>
+    <span class="cta">Pass 3 →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 6 of 8</div>
+    <h3>👈 Pass 3: First Left + the "blind pass"</h3>
+    <p>Pass 3 to the player on your <strong>left</strong>. This completes the <em>first</em> Charleston (3 passes done).</p>
+    <p>But here's a wrinkle: by the third pass, you may not have 3 tiles you want to give up. That's where the <strong>blind pass</strong> comes in.</p>
+    <p>You can pass 1 or 2 of your own tiles plus 1 or 2 of the tiles you just received <em>without looking at them</em> — pushing them along sight-unseen.</p>
+
+    <div class="blind-diagram">
+      <div class="blind-row">
+        <div class="blind-group">
+          <div class="tiles">
+            <div class="mini-tile bam">2</div>
+          </div>
+          <div class="lbl">1 of yours</div>
+        </div>
+        <div style="font-size:24px;color:#8B6914;font-weight:900">+</div>
+        <div class="blind-group">
+          <div class="tiles">
+            <div class="mini-tile unseen">?</div>
+            <div class="mini-tile unseen">?</div>
+          </div>
+          <div class="lbl">2 unseen<br>(just received)</div>
+        </div>
+        <div class="blind-arrow">→</div>
+        <div class="blind-group">
+          <div class="tiles">
+            <div class="mini-tile bam">2</div>
+            <div class="mini-tile unseen">?</div>
+            <div class="mini-tile unseen">?</div>
+          </div>
+          <div class="lbl">Pass to next player</div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:#666;font-style:italic;margin-top:-4px">Example: 1 tile from your hand + 2 tiles you never even looked at = a "blind pass"</p>
+
+    <div class="callout tip">💡 Blind passes are a normal, accepted move. You're not "cheating" — everyone does it eventually.</div>
+    <span class="cta">The second Charleston →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 7 of 8</div>
+    <h3>🔁 The Second Charleston (optional)</h3>
+    <p>After the first 3 passes, the table decides: <strong>do we continue?</strong></p>
+    <p>If <strong>any one player says "stop,"</strong> the Charleston ends and play begins. Otherwise, you do the second Charleston in reverse order:</p>
+    <ol style="margin-left:22px;margin-top:8px">
+      <li><strong>Second Left</strong> — pass 3 to your left</li>
+      <li><strong>Second Across</strong> — pass 3 across</li>
+      <li><strong>Second Right</strong> — pass 3 to your right</li>
+    </ol>
+    <div class="callout tip">💡 If your hand is already shaping up nicely, calling "stop" after the first Charleston is a smart move — you don't want to give other players more chances to improve.</div>
+    <span class="cta">The courtesy →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 8 of 8</div>
+    <h3>🤝 The Courtesy Pass (optional)</h3>
+    <p>After both Charlestons, you and the player <strong>across</strong> from you can do one last optional trade. This is the <strong>courtesy</strong> — and it's the only "private" trade in the entire game.</p>
+
+    <h4 style="font-family:'Playfair Display',serif;color:var(--mid);margin:18px 0 8px;font-size:18px">How it works</h4>
+    <ol style="margin-left:22px">
+      <li>You turn to the player across and ask: <em>"Courtesy?"</em></li>
+      <li>You both agree on a number: <strong>0, 1, 2, or 3 tiles</strong>. <em>Both players must agree on the same number.</em></li>
+      <li>You each select that many tiles, slide them face-down to each other, and pick up your new tiles.</li>
+      <li>Done. Play begins.</li>
+    </ol>
+
+    <div class="callout tip">💡 <strong>"Zero" is a perfectly fine answer.</strong> Most beginners say zero on their first few games and that's totally normal. The courtesy is a tool, not a requirement.</div>
+
+    <h4 style="font-family:'Playfair Display',serif;color:var(--mid);margin:22px 0 8px;font-size:18px">When to actually use it</h4>
+    <p>The courtesy is powerful when you're <strong>one tile away</strong> from a specific shape. Example:</p>
+
+    <div class="mini-hand">
+      <div class="mini-tile bam">2</div>
+      <div class="mini-tile bam">2</div>
+      <div class="mini-tile bam">4</div>
+      <div class="mini-tile bam">4</div>
+      <div class="mini-tile bam">6</div>
+      <div class="mini-tile bam">6</div>
+      <div class="mini-tile bam">8</div>
+      <div class="mini-tile bam">8</div>
+      <div class="mini-tile crack">2</div>
+      <div class="mini-tile crack">4</div>
+      <div class="mini-tile dot">6</div>
+      <div class="mini-tile honor">D</div>
+      <div class="mini-tile honor">D</div>
+    </div>
+    <p style="font-size:14px;color:#555;margin-top:8px">You're going for "even-numbered Bams" and your hand is <em>almost there</em>. You just need <strong>one more 8 Bam</strong>. The player across has been discarding Cracks all Charleston — they probably don't want yours either. <strong>Ask for a 1-tile courtesy</strong>: trade your useless 4 Crack for whatever they don't want. You might get lucky.</p>
+
+    <div class="callout warn">⚠️ <strong>Rules to remember:</strong></div>
+    <ul style="margin-left:22px;font-size:14px;color:#555">
+      <li><strong>Both players must agree</strong> on the count. If they want 2 and you want 0, you do 0.</li>
+      <li><strong>No jokers</strong> — same as every other Charleston pass.</li>
+      <li>You <strong>can't see</strong> what they're sending you until you've sent yours. It's a blind trade.</li>
+      <li>The courtesy is <strong>only with the player across</strong> — never with the player to your left or right.</li>
+    </ul>
+
+    <h4 style="font-family:'Playfair Display',serif;color:var(--mid);margin:22px 0 8px;font-size:18px">When to skip it</h4>
+    <p>Say <strong>"zero"</strong> if:</p>
+    <ul style="margin-left:22px;font-size:14px;color:#555">
+      <li>You're not sure what hand you're building yet</li>
+      <li>You don't have any obvious "junk" left to trade</li>
+      <li>The player across has been making lots of exposures (they may know your tiles too well)</li>
+      <li>You're new and overwhelmed — there's no shame in "zero"</li>
+    </ul>
+
+    <span class="cta">Practice time →</span>
+  </div>
+
+  <div class="drill">
+    <div class="tag">Practice Drill 1</div>
+    <h3>🎯 What would you pass?</h3>
+    <p>You'll see a starting hand of 13 tiles. Pick the 3 you'd pass.</p>
+    <ul>
+      <li>Hand appears with all 13 tiles</li>
+      <li>Tap 3 tiles to mark them for passing</li>
+      <li>App explains <em>why</em> each is a good (or bad) pass</li>
+      <li>5 different hands, increasing in difficulty</li>
+    </ul>
+    <p style="margin-top:12px;font-style:italic;color:var(--gold)">→ "You're starting to think like a mahjong player."</p>
+  </div>
+
+  <div class="drill">
+    <div class="tag">Practice Drill 2</div>
+    <h3>🔄 Full Charleston Walkthrough</h3>
+    <p>Play through a complete Charleston with a sample hand:</p>
+    <ol>
+      <li>You're dealt 13 tiles</li>
+      <li>Pass right → see what you receive</li>
+      <li>Pass across → see what you receive</li>
+      <li>Pass left → choice point (continue or stop)</li>
+      <li>If continuing: second Charleston in reverse</li>
+      <li>Optional courtesy with the player across</li>
+      <li>Final hand revealed — see how it improved</li>
+    </ol>
+    <p style="margin-top:12px;font-style:italic;color:var(--gold)">→ "You just completed your first Charleston."</p>
+  </div>
+
+  <div class="quiz">
+    <h3>Confidence Check (5 questions)</h3>
+    <p style="font-size:13px;color:#666;margin-bottom:14px">Multiple choice. Must get 4/5 to unlock Module 4.</p>
+    <ol>
+      <li><strong>How many tiles do you pass in each Charleston pass?</strong><br>
+        1 · 2 · <span class="ans">3 ✓</span> · 4</li>
+      <li><strong>What's the order of the FIRST Charleston?</strong><br>
+        Left, across, right · <span class="ans">Right, across, left ✓</span> · Across, right, left · Random</li>
+      <li><strong>Can you pass a joker?</strong><br>
+        Yes, anytime · Only on the last pass · <span class="ans">Never ✓</span> · Only with permission</li>
+      <li><strong>What is a "blind pass"?</strong><br>
+        Passing with your eyes closed · Passing tiles you didn't choose · <span class="ans">Passing tiles you received without looking at them ✓</span> · Skipping a pass</li>
+      <li><strong>Can the second Charleston be skipped?</strong><br>
+        No, never · Only by East · <span class="ans">Yes, if any one player says "stop" after the first Charleston ✓</span> · Only if everyone agrees to skip</li>
+    </ol>
+  </div>
+
+  <div class="complete">
+    <h3>Module 3 complete</h3>
+    <p>You now understand the Charleston — the trading ritual that makes American Mahjong unique. You know what to pass, how to pass, and when to stop.</p>
+    <p style="margin-top:10px"><strong>What's next:</strong> Module 4 covers <strong>Jokers &amp; Calling</strong> — when you can grab a discarded tile, expose tiles to the table, and use those precious jokers to your advantage.</p>
+  </div>
+
+  <div class="module-nav">
+    <a href="MODULE_02_SETUP_DEALING.html">
+      <div class="dir">← Previous</div>
+      <div class="name">Module 2: Setup &amp; Dealing</div>
+    </a>
+    <a class="next" href="MODULE_04_JOKERS_CALLING.html">
+      <div class="dir">Next →</div>
+      <div class="name">Module 4: Jokers &amp; Calling</div>
+    </a>
+  </div>
+
+  <footer class="disclaimer">
+    MAHJ is an independent educational tool. Not affiliated with, endorsed by, or sponsored by the National Mah Jongg League (NMJL®). To play official games, purchase the current year's card from nationalmahjonggleague.org.
+  </footer>
+
+</div>
+</body>
+</html>

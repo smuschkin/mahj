@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MAHJ — Module 4: Jokers & Calling (Draft)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap');
+  :root{
+    --red:#C0392B; --green:#27AE60; --gold:#D4AC0D;
+    --ivory:#FDF6E3; --dark:#1A1A2E; --mid:#2C3E50;
+    --light:#F5F0E8; --border:#8B6914;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Lato',sans-serif;background:var(--ivory);color:var(--dark);line-height:1.7;font-size:16px}
+  .wrap{max-width:820px;margin:0 auto;padding:50px 28px 80px}
+
+  header.cover{
+    background:linear-gradient(145deg,#1A1A2E 0%,#16213E 50%,#0F3460 100%);
+    color:#fff;text-align:center;padding:60px 30px;border-radius:14px;margin-bottom:40px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.2);
+  }
+  header.cover .eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-bottom:14px}
+  header.cover h1{font-family:'Playfair Display',serif;font-size:46px;font-weight:900;margin-bottom:10px}
+  header.cover h1 span{color:var(--gold)}
+  header.cover .sub{color:#BDC3C7;font-size:15px;font-style:italic}
+
+  .meta{
+    background:#fff;border-left:5px solid var(--gold);
+    padding:18px 22px;border-radius:8px;margin-bottom:36px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  }
+  .meta p{margin:4px 0;font-size:14px;color:#555}
+  .meta strong{color:var(--mid)}
+
+  h2.section{
+    font-family:'Playfair Display',serif;color:var(--mid);font-size:26px;
+    border-bottom:3px solid var(--gold);padding-bottom:8px;margin:48px 0 18px;
+  }
+
+  .screen{
+    background:#fff;border-radius:12px;padding:32px 36px;margin-bottom:22px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.06);border:1px solid #EFE8D6;
+  }
+  .screen .tag{
+    display:inline-block;background:var(--mid);color:var(--gold);
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    padding:4px 10px;border-radius:4px;margin-bottom:14px;font-weight:700;
+  }
+  .screen h3{font-family:'Playfair Display',serif;color:var(--dark);font-size:26px;margin-bottom:14px}
+  .screen p{margin-bottom:12px;font-size:15px}
+  .screen p:last-of-type{margin-bottom:0}
+  .cta{
+    display:inline-block;margin-top:16px;background:var(--mid);color:var(--gold);
+    padding:11px 24px;border-radius:6px;font-weight:700;font-size:14px;
+    letter-spacing:1px;text-transform:uppercase;
+  }
+
+  .callout{
+    background:#FFF8E1;border-left:4px solid var(--gold);
+    padding:14px 18px;border-radius:6px;margin:16px 0;font-size:14px;
+  }
+  .callout.warn{background:#FDECEA;border-left-color:var(--red)}
+  .callout.tip{background:#E8F5E9;border-left-color:var(--green)}
+
+  /* ── Mini tiles ── */
+  .mini-hand{
+    background:var(--light);border:1px dashed var(--border);
+    border-radius:8px;padding:14px;margin:12px 0;
+    display:flex;gap:6px;flex-wrap:wrap;justify-content:center;
+  }
+  .mini-tile{
+    width:36px;height:48px;border-radius:5px;background:#FAF7EC;
+    border:1.5px solid #C9BC8A;box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display',serif;font-size:14px;font-weight:900;
+    color:var(--mid);position:relative;
+  }
+  .mini-tile.bam{color:#196F3D}
+  .mini-tile.crack{color:#C0392B}
+  .mini-tile.dot{color:#1B4F72}
+  .mini-tile.honor{color:#8B6914;background:#FFF8E1}
+  .mini-tile.joker{
+    background:linear-gradient(145deg,#FFFBEA,#F5E9B8);
+    border-color:var(--gold);color:#8B6914;
+  }
+  .mini-tile.exposed{
+    background:#FFFBEC;border-color:var(--gold);border-width:2px;
+  }
+  .mini-tile.exposed::after{
+    content:"↑";position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+    color:var(--gold);font-size:12px;font-weight:900;
+  }
+  .mini-tile.discarded{opacity:0.7}
+  .mini-tile.target{
+    border-color:var(--red);border-width:2px;
+    box-shadow:0 0 8px rgba(192,57,43,0.4);
+  }
+
+  /* ── Call types grid ── */
+  .call-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0;
+  }
+  .call-card{
+    background:var(--light);border-radius:10px;padding:18px;
+    border-top:4px solid var(--gold);text-align:center;
+  }
+  .call-card h4{font-family:'Playfair Display',serif;color:var(--mid);font-size:18px;margin-bottom:6px}
+  .call-card .num{
+    display:block;font-family:'Playfair Display',serif;font-size:36px;
+    color:var(--gold);font-weight:900;line-height:1;margin-bottom:6px;
+  }
+  .call-card p{font-size:13px;color:#555;margin:0}
+  .call-card.mahj{border-top-color:var(--red);background:#FFF6F4}
+  .call-card.mahj .num{color:var(--red)}
+
+  /* ── Joker rules table ── */
+  .joker-rules{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;
+  }
+  .joker-rule{
+    background:#fff;border-radius:10px;padding:18px;
+    border:2px solid var(--green);
+  }
+  .joker-rule.no{border-color:var(--red)}
+  .joker-rule h4{
+    font-family:'Playfair Display',serif;color:var(--green);
+    font-size:16px;margin-bottom:8px;
+  }
+  .joker-rule.no h4{color:var(--red)}
+  .joker-rule ul{margin-left:18px;font-size:13px;color:#555}
+  .joker-rule li{margin-bottom:4px}
+
+  /* ── Joker exchange diagram ── */
+  .exchange-diagram{
+    background:var(--light);border:2px dashed var(--border);border-radius:12px;
+    padding:20px;margin:18px 0;
+  }
+  .exchange-row{
+    display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  }
+  .exchange-group{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .exchange-group .tiles{display:flex;gap:4px}
+  .exchange-group .lbl{
+    font-size:10px;letter-spacing:1px;text-transform:uppercase;
+    color:#666;font-weight:700;text-align:center;
+  }
+  .exchange-arrow{font-size:24px;color:var(--gold);font-weight:900}
+
+  /* ── Decision deep-dive ── */
+  .decision-box{
+    background:#fff;border-radius:10px;padding:18px 20px;margin:14px 0;
+    border-left:4px solid var(--mid);
+  }
+  .decision-box h4{font-family:'Playfair Display',serif;color:var(--mid);font-size:17px;margin-bottom:8px}
+  .decision-box ul{margin-left:18px;font-size:14px;color:#555}
+  .decision-box li{margin-bottom:6px}
+
+  /* ── Drills / Quiz / Complete ── */
+  .drill{
+    background:linear-gradient(135deg,#2C3E50,#1A1A2E);color:#fff;
+    border-radius:12px;padding:30px 36px;margin:24px 0;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  }
+  .drill .tag{background:var(--gold);color:var(--dark);
+    display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    padding:4px 10px;border-radius:4px;margin-bottom:14px;font-weight:700;}
+  .drill h3{font-family:'Playfair Display',serif;color:var(--gold);font-size:24px;margin-bottom:10px}
+  .drill p,.drill li{color:#ECF0F1;font-size:14px}
+  .drill ul,.drill ol{margin-left:22px;margin-top:8px}
+  .drill li{margin-bottom:6px}
+
+  .quiz{
+    background:#fff;border:2px solid var(--gold);border-radius:12px;
+    padding:30px 36px;margin:24px 0;
+  }
+  .quiz h3{font-family:'Playfair Display',serif;color:var(--mid);font-size:24px;margin-bottom:14px}
+  .quiz ol{margin-left:22px}
+  .quiz li{margin-bottom:14px;font-size:14px}
+  .quiz .ans{color:var(--green);font-weight:700}
+
+  .complete{
+    background:linear-gradient(135deg,#27AE60,#16A085);color:#fff;
+    border-radius:14px;padding:36px;text-align:center;margin-top:30px;
+  }
+  .complete h3{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:12px}
+  .complete p{font-size:15px;margin-bottom:8px}
+
+  /* ── Module nav ── */
+  .module-nav{
+    display:flex;justify-content:space-between;align-items:stretch;gap:14px;
+    margin-top:40px;
+  }
+  .module-nav a{
+    flex:1;background:#fff;border:2px solid var(--mid);border-radius:10px;
+    padding:16px 20px;text-decoration:none;color:var(--mid);
+    display:flex;flex-direction:column;gap:4px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+    transition:transform 0.15s;
+  }
+  .module-nav a:hover{transform:translateY(-2px)}
+  .module-nav a.next{background:var(--mid);color:var(--gold);text-align:right;border-color:var(--mid)}
+  .module-nav .dir{font-size:11px;letter-spacing:1px;text-transform:uppercase;opacity:0.7;font-weight:700}
+  .module-nav .name{font-family:'Playfair Display',serif;font-size:18px;font-weight:900}
+
+  footer.disclaimer{
+    margin-top:50px;padding:20px;background:#fff;border-radius:8px;
+    font-size:11px;color:#777;text-align:center;border:1px solid #E0D9C0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="cover">
+    <div class="eyebrow">MAHJ — Module 4 Draft</div>
+    <h1>Jokers &amp; <span>Calling</span></h1>
+    <div class="sub">Grabbing tiles, exposing groups, and using your wild cards</div>
+  </header>
+
+  <div class="meta">
+    <p><strong>Goal:</strong> By the end, you'll know when you can grab a discarded tile, what you have to do when you grab one, and how jokers really work — including the famous joker exchange.</p>
+    <p><strong>Estimated time:</strong> 8–10 minutes</p>
+    <p><strong>Prerequisite:</strong> Module 3 (The Charleston)</p>
+    <p><strong>Unlocks:</strong> Module 5 (Hand Strategy)</p>
+    <p><strong>Why this matters:</strong> "Calling" and joker rules are where most beginners get embarrassed at the table. After this module, you'll know when to speak up and when to stay quiet.</p>
+  </div>
+
+  <h2 class="section">Lesson Screens</h2>
+
+  <div class="screen">
+    <div class="tag">Screen 1 of 8</div>
+    <h3>📣 What does "calling" mean?</h3>
+    <p>During the game, players take turns drawing tiles and discarding ones they don't want. Normally, a discarded tile is gone — it sits in the middle of the table.</p>
+    <p>But sometimes, a discarded tile is exactly what <em>you</em> need. When that happens, you can <strong>call</strong> for it — say it out loud and grab it before the next player draws.</p>
+    <p>Calling is how you complete groups faster than just drawing from the wall. It's also one of the most exciting parts of the game.</p>
+    <span class="cta">What can you call? →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 2 of 8</div>
+    <h3>🔔 The 3 things you can call</h3>
+    <p>Unlike Asian mahjong, American Mahjong only has <strong>three</strong> things you can call. No sequences (no 1-2-3 grabs).</p>
+
+    <div class="call-grid">
+      <div class="call-card">
+        <span class="num">3</span>
+        <h4>PUNG</h4>
+        <p>You already have 2 of a tile. Someone discards a 3rd. Call <strong>"Pung!"</strong></p>
+      </div>
+      <div class="call-card">
+        <span class="num">4</span>
+        <h4>KONG</h4>
+        <p>You already have 3 of a tile. Someone discards a 4th. Call <strong>"Kong!"</strong></p>
+      </div>
+      <div class="call-card mahj">
+        <span class="num">14</span>
+        <h4>MAHJONG</h4>
+        <p>The discard completes your <em>entire</em> hand. Call <strong>"Mahjong!"</strong> — you win the round.</p>
+      </div>
+    </div>
+
+    <div class="callout warn">⚠️ <strong>Anyone</strong> can call a Pung or Kong, no matter whose turn it is — calling skips the turn order. But you must call <em>before</em> the next player picks up a tile from the wall, or it's too late.</div>
+    <span class="cta">How calling works →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 3 of 8</div>
+    <h3>🗣️ How a call works</h3>
+    <p>A call has 4 quick steps:</p>
+    <ol style="margin-left:22px;margin-top:8px">
+      <li><strong>Say it out loud.</strong> Just the word: "Pung!" or "Kong!" or "Mahjong!" Don't be shy — at the table, the call has to be heard before it counts.</li>
+      <li><strong>Take the discarded tile.</strong> Reach in and grab it. The other players will wait.</li>
+      <li><strong>Expose your group.</strong> Lay your matching tiles face-up at the front of your rack so everyone can see them. (More on this next.)</li>
+      <li><strong>Discard one tile</strong> from your hand to keep your tile count correct. Then play continues with the player to your right.</li>
+    </ol>
+    <div class="callout tip">💡 You don't need to be loud or dramatic — just clearly say the word so others hear it before someone else moves on.</div>
+    <span class="cta">What "exposing" means →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 4 of 8</div>
+    <h3>👀 Exposing: showing your tiles</h3>
+    <p>When you call a Pung or Kong, you have to <strong>expose</strong> the group — lay all the matching tiles face-up at the front of your rack.</p>
+    <p>This means your opponents can see exactly what you took. It's a trade-off: you got the tile you needed, but now everyone knows part of your hand.</p>
+
+    <div class="mini-hand">
+      <div class="mini-tile bam exposed">5</div>
+      <div class="mini-tile bam exposed">5</div>
+      <div class="mini-tile bam exposed">5</div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:#666;font-style:italic">Example: an exposed Pung of 5 Bam — laid face-up where everyone can see it</p>
+
+    <div class="callout warn">⚠️ Once a group is exposed, you can't take it back. Make sure you actually want the tile before you call.</div>
+    <span class="cta">Now: jokers →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 5 of 8</div>
+    <h3>⭐ Jokers: where they CAN go</h3>
+    <p>You met jokers in Module 1 — the gold wild-card tiles. Now let's get specific about what they can and can't do.</p>
+
+    <div class="joker-rules">
+      <div class="joker-rule">
+        <h4>✅ Jokers CAN substitute in:</h4>
+        <ul>
+          <li><strong>Pungs</strong> (3 of a kind)</li>
+          <li><strong>Kongs</strong> (4 of a kind)</li>
+          <li><strong>Quints</strong> (5 of a kind — yes, that's a thing on some hands)</li>
+          <li>Any group of <strong>3 or more identical tiles</strong></li>
+        </ul>
+      </div>
+      <div class="joker-rule no">
+        <h4>❌ Jokers CANNOT substitute in:</h4>
+        <ul>
+          <li><strong>Pairs</strong> (2 of a kind)</li>
+          <li><strong>Singles</strong> (1 specific tile)</li>
+          <li>Any "Singles &amp; Pairs" hand (no jokers <em>anywhere</em>)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini-hand">
+      <div class="mini-tile bam">7</div>
+      <div class="mini-tile bam">7</div>
+      <div class="mini-tile joker">JOKER</div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:#666;font-style:italic;margin-top:-4px">Example: 2 real 7 Bams + 1 Joker = a valid Pung of three 7 Bams</p>
+
+    <div class="callout warn">⚠️ <strong>The pair rule trips everyone up.</strong> If your hand needs a pair of 5 Cracks, you need <em>two real</em> 5 Cracks. A joker won't work.</div>
+    <span class="cta">The joker exchange →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 6 of 8</div>
+    <h3>🔄 The Joker Exchange (the magic move)</h3>
+    <p>Here's a rule unique to American Mahjong — and one of its coolest features.</p>
+    <p>If <em>another player</em> has an exposed group containing a joker, and <em>you</em> have the real tile that joker is standing in for, you can <strong>swap</strong> your real tile for their joker. On <em>your turn</em>, before you discard.</p>
+
+    <h4 style="font-family:'Playfair Display',serif;color:var(--mid);margin:18px 0 8px;font-size:18px">Walk-through</h4>
+
+    <div class="exchange-diagram">
+      <div class="exchange-row">
+        <div class="exchange-group">
+          <div class="tiles">
+            <div class="mini-tile bam">3</div>
+            <div class="mini-tile bam">3</div>
+            <div class="mini-tile joker">J</div>
+          </div>
+          <div class="lbl">Their exposed Pung<br>(of 3 Bams)</div>
+        </div>
+        <div class="exchange-arrow">⇄</div>
+        <div class="exchange-group">
+          <div class="tiles">
+            <div class="mini-tile bam">3</div>
+          </div>
+          <div class="lbl">Your real 3 Bam</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:14px;color:#555;margin-top:8px">You hand them your <strong>real 3 Bam</strong>. They give you their <strong>Joker</strong>. Now you have a Joker in your hand to use however you want, and their Pung is now made of 3 real tiles.</p>
+
+    <div class="callout tip">💡 <strong>Why this is awesome:</strong> Jokers are the most powerful tile in the game. Stealing one from another player is one of the best moves you can make.</div>
+
+    <h4 style="font-family:'Playfair Display',serif;color:var(--mid);margin:18px 0 8px;font-size:18px">Rules for the exchange</h4>
+    <ul style="margin-left:22px;font-size:14px;color:#555">
+      <li>Only on <strong>your turn</strong>, after you draw and before you discard</li>
+      <li>You can exchange with <strong>any player's exposed group</strong>, including your own</li>
+      <li>You must give a <strong>real tile</strong> — not another joker</li>
+      <li>You can do <strong>multiple exchanges</strong> on the same turn if you have the right tiles</li>
+      <li>You <strong>cannot</strong> exchange with tiles that are still in someone's hand — only exposed groups</li>
+    </ul>
+
+    <span class="cta">When to call vs not call →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 7 of 8</div>
+    <h3>🤔 When SHOULD you call? (the judgment call)</h3>
+    <p>Just because you <em>can</em> call doesn't mean you should. Calling has real costs.</p>
+
+    <div class="decision-box">
+      <h4>✅ Good reasons to call</h4>
+      <ul>
+        <li>The tile completes a group you actually need for your target hand</li>
+        <li>It's late in the game and you're racing to finish</li>
+        <li>You're "calling for mahjong" — the discard wins you the game (always call!)</li>
+        <li>You can use the call to grab a joker via the exchange rule</li>
+      </ul>
+    </div>
+
+    <div class="decision-box" style="border-left-color:var(--red)">
+      <h4>❌ Bad reasons to call</h4>
+      <ul>
+        <li>You "might" need it eventually — wait until you're committed</li>
+        <li>It commits you to a hand you're not sure about (exposing locks you in)</li>
+        <li>You're early in the game and still flexible — keep your options open</li>
+        <li>It would expose information that lets opponents read your hand</li>
+      </ul>
+    </div>
+
+    <div class="callout warn">⚠️ <strong>The hidden cost of calling:</strong> Once you expose tiles, you can't change which hand you're building toward. Some hands require <em>concealed</em> tiles (no calls). Calling early can lock you out of better options later.</div>
+    <span class="cta">One more thing →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 8 of 8</div>
+    <h3>🚨 Three rules beginners forget</h3>
+    <p>These are the calling/joker mistakes that trip up almost everyone in their first 10 games. Burn them in:</p>
+
+    <div class="decision-box" style="border-left-color:var(--red)">
+      <h4>1. You can't call a tile you don't actually need</h4>
+      <p style="font-size:14px;color:#555;margin:0">If you call a Pung but realize you can't actually complete a valid hand, your hand becomes <strong>"dead"</strong> — you keep playing but can't win, and you owe each player a penalty at the end. <strong>Always</strong> check before you call.</p>
+    </div>
+
+    <div class="decision-box" style="border-left-color:var(--red)">
+      <h4>2. Jokers CANNOT be called from the discard pile</h4>
+      <p style="font-size:14px;color:#555;margin:0">If someone (foolishly) discards a joker, no one can grab it. The joker is dead. This is why nobody discards jokers.</p>
+    </div>
+
+    <div class="decision-box" style="border-left-color:var(--red)">
+      <h4>3. You have to expose your call IMMEDIATELY</h4>
+      <p style="font-size:14px;color:#555;margin:0">Don't grab the tile and slide it into your rack — that's not allowed. The whole group goes face-up at the front of your rack right away.</p>
+    </div>
+
+    <span class="cta">Practice time →</span>
+  </div>
+
+  <div class="drill">
+    <div class="tag">Practice Drill 1</div>
+    <h3>🔔 Can you call this?</h3>
+    <p>You'll see your current hand + a tile someone just discarded. Decide: <strong>call or pass?</strong></p>
+    <ul>
+      <li>10 scenarios of increasing difficulty</li>
+      <li>Tap "Pung," "Kong," "Mahjong," or "Pass"</li>
+      <li>App explains <em>why</em> the right answer is right</li>
+      <li>Includes trick scenarios — like a discard you could call but shouldn't</li>
+    </ul>
+    <p style="margin-top:12px;font-style:italic;color:var(--gold)">→ "Now you have calling instincts."</p>
+  </div>
+
+  <div class="drill">
+    <div class="tag">Practice Drill 2</div>
+    <h3>⭐ Joker Exchange Spotter</h3>
+    <p>An exposed group is shown with a joker in it. You see your hand. Decide if you can exchange.</p>
+    <ul>
+      <li>5 scenarios — some valid, some invalid (e.g. wrong tile, joker in a pair, etc.)</li>
+      <li>Drag your real tile onto the joker to swap</li>
+      <li>App walks through why each exchange is or isn't legal</li>
+    </ul>
+    <p style="margin-top:12px;font-style:italic;color:var(--gold)">→ "You just stole 5 jokers. Nice work."</p>
+  </div>
+
+  <div class="quiz">
+    <h3>Confidence Check (5 questions)</h3>
+    <p style="font-size:13px;color:#666;margin-bottom:14px">Multiple choice. Must get 4/5 to unlock Module 5.</p>
+    <ol>
+      <li><strong>Which of these CAN you call in American Mahjong?</strong><br>
+        Sequences (1-2-3) · <span class="ans">Pungs, Kongs, and Mahjong ✓</span> · Only Mahjong · Anything you want</li>
+      <li><strong>Where CAN you use a joker?</strong><br>
+        In a pair · As a single · <span class="ans">In a group of 3 or more identical tiles ✓</span> · Anywhere</li>
+      <li><strong>Can you call a joker from the discard pile?</strong><br>
+        Yes, anytime · Only on your turn · <span class="ans">No, never ✓</span> · Only with permission</li>
+      <li><strong>When can you do a Joker Exchange?</strong><br>
+        Anytime · Only after a Pung · <span class="ans">On your turn, before you discard ✓</span> · Only when an opponent is winning</li>
+      <li><strong>What happens if you call a Pung but can't complete a valid hand?</strong><br>
+        You lose the tile · Nothing · <span class="ans">Your hand is "dead" — keep playing but you can't win ✓</span> · You start over</li>
+    </ol>
+  </div>
+
+  <div class="complete">
+    <h3>Module 4 complete</h3>
+    <p>You now know the trickiest mechanical rules in American Mahjong: calling, exposing, and the joker exchange. These are the rules that separate confident players from nervous ones.</p>
+    <p style="margin-top:10px"><strong>What's next:</strong> Module 5 covers <strong>Hand Strategy</strong> — picking which hand to build toward, staying flexible, and the all-important "what would you discard?" thinking.</p>
+  </div>
+
+  <div class="module-nav">
+    <a href="MODULE_03_CHARLESTON.html">
+      <div class="dir">← Previous</div>
+      <div class="name">Module 3: The Charleston</div>
+    </a>
+    <a class="next" href="MODULE_05_COMING_SOON.html">
+      <div class="dir">Next →</div>
+      <div class="name">Module 5: Hand Strategy</div>
+    </a>
+  </div>
+
+  <footer class="disclaimer">
+    MAHJ is an independent educational tool. Not affiliated with, endorsed by, or sponsored by the National Mah Jongg League (NMJL®). To play official games, purchase the current year's card from nationalmahjonggleague.org.
+  </footer>
+
+</div>
+</body>
+</html>

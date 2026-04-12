@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+
+# Signing keys and certificates — NEVER commit these
+MAHJ-signing-files/
+
+# iOS build artifacts
+build/
+
+# Claude local settings
+.claude/

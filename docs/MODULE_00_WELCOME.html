@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MAHJ — Module 0: Welcome (Draft)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap');
+  :root{
+    --red:#C0392B; --green:#27AE60; --gold:#D4AC0D;
+    --ivory:#FDF6E3; --dark:#1A1A2E; --mid:#2C3E50;
+    --light:#F5F0E8; --border:#8B6914;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Lato',sans-serif;background:var(--ivory);color:var(--dark);line-height:1.7;font-size:16px}
+  .wrap{max-width:820px;margin:0 auto;padding:50px 28px 80px}
+
+  header.cover{
+    background:linear-gradient(145deg,#1A1A2E 0%,#16213E 50%,#0F3460 100%);
+    color:#fff;text-align:center;padding:60px 30px;border-radius:14px;margin-bottom:40px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.2);
+  }
+  header.cover .eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-bottom:14px}
+  header.cover h1{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;margin-bottom:10px}
+  header.cover h1 span{color:var(--gold)}
+  header.cover .sub{color:#BDC3C7;font-size:15px;font-style:italic}
+
+  .meta{
+    background:#fff;border-left:5px solid var(--gold);
+    padding:18px 22px;border-radius:8px;margin-bottom:36px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  }
+  .meta p{margin:4px 0;font-size:14px;color:#555}
+  .meta strong{color:var(--mid)}
+
+  h2.section{
+    font-family:'Playfair Display',serif;color:var(--mid);font-size:26px;
+    border-bottom:3px solid var(--gold);padding-bottom:8px;margin:48px 0 18px;
+  }
+
+  .screen{
+    background:#fff;border-radius:12px;padding:32px 36px;margin-bottom:22px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.06);border:1px solid #EFE8D6;
+  }
+  .screen .tag{
+    display:inline-block;background:var(--mid);color:var(--gold);
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    padding:4px 10px;border-radius:4px;margin-bottom:14px;font-weight:700;
+  }
+  .screen h3{font-family:'Playfair Display',serif;color:var(--dark);font-size:26px;margin-bottom:14px}
+  .screen p{margin-bottom:12px;font-size:15px}
+  .screen p:last-of-type{margin-bottom:0}
+  .cta{
+    display:inline-block;margin-top:16px;background:var(--mid);color:var(--gold);
+    padding:11px 24px;border-radius:6px;font-weight:700;font-size:14px;
+    letter-spacing:1px;text-transform:uppercase;
+  }
+
+  /* ── Before You Start checklist ── */
+  .checklist{
+    background:linear-gradient(135deg,#FFF8E1,#FAF0C8);
+    border:2px solid var(--gold);border-radius:14px;
+    padding:32px 36px;margin:24px 0;
+    box-shadow:0 6px 18px rgba(212,172,13,0.2);
+  }
+  .checklist h2{
+    font-family:'Playfair Display',serif;color:var(--mid);
+    font-size:26px;margin-bottom:6px;
+  }
+  .checklist .sub{font-size:13px;color:#7D6608;font-style:italic;margin-bottom:22px}
+  .checklist ul{list-style:none;margin:0}
+  .checklist li{
+    display:flex;align-items:flex-start;gap:14px;
+    padding:14px 0;border-bottom:1px dashed #D4AC0D;font-size:14.5px;
+  }
+  .checklist li:last-child{border-bottom:none;padding-bottom:4px}
+  .checklist .check{
+    flex-shrink:0;width:26px;height:26px;border-radius:50%;
+    background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:14px;margin-top:1px;
+  }
+  .checklist li strong{color:var(--mid)}
+
+  /* ── Learning path ── */
+  .path{
+    background:#fff;border-radius:12px;padding:28px 32px;margin:24px 0;
+    border:1px solid #EFE8D6;box-shadow:0 4px 14px rgba(0,0,0,0.05);
+  }
+  .path h3{font-family:'Playfair Display',serif;color:var(--mid);font-size:24px;margin-bottom:6px}
+  .path .sub{font-size:13px;color:#666;font-style:italic;margin-bottom:20px}
+  .path-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+  .path-item{
+    display:flex;align-items:center;gap:12px;
+    padding:12px 14px;background:var(--light);border-radius:8px;
+    border-left:4px solid var(--gold);font-size:14px;
+  }
+  .path-item .num{
+    flex-shrink:0;width:28px;height:28px;border-radius:50%;
+    background:var(--mid);color:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:13px;
+  }
+  .path-item .name{color:var(--mid);font-weight:700}
+  .path-item.current{background:#FFF8E1;border-left-color:var(--green)}
+  .path-item.current .num{background:var(--green);color:#fff}
+  .path-callout{
+    margin-top:18px;padding:14px 18px;background:#E8F5E9;
+    border-left:4px solid var(--green);border-radius:6px;font-size:14px;
+  }
+
+  /* ── Module nav ── */
+  .module-nav{
+    display:flex;justify-content:space-between;align-items:stretch;gap:14px;
+    margin-top:40px;
+  }
+  .module-nav a{
+    flex:1;background:#fff;border:2px solid var(--mid);border-radius:10px;
+    padding:16px 20px;text-decoration:none;color:var(--mid);
+    display:flex;flex-direction:column;gap:4px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+    transition:transform 0.15s;
+  }
+  .module-nav a:hover{transform:translateY(-2px)}
+  .module-nav a.next{background:var(--mid);color:var(--gold);text-align:right;border-color:var(--mid)}
+  .module-nav .dir{font-size:11px;letter-spacing:1px;text-transform:uppercase;opacity:0.7;font-weight:700}
+  .module-nav .name{font-family:'Playfair Display',serif;font-size:18px;font-weight:900}
+  .module-nav .placeholder{flex:1}
+  /* ── Winning hand teaser ── */
+  .hand-teaser{
+    background:linear-gradient(135deg,#FFF8E1,#FAF0C8);
+    border:2px solid var(--gold);border-radius:14px;
+    padding:28px 32px;margin:24px 0;
+  }
+  .hand-teaser h3{font-family:'Playfair Display',serif;color:var(--mid);font-size:22px;margin-bottom:10px}
+  .hand-teaser .tiles{
+    display:flex;gap:6px;justify-content:center;margin:16px 0;flex-wrap:wrap;
+  }
+  .hand-teaser .group{display:flex;gap:3px;padding:8px;background:rgba(255,255,255,0.5);border-radius:6px}
+  .hand-teaser .ht{
+    width:30px;height:42px;border-radius:4px;background:#FAF7EC;
+    border:1.5px solid #C9BC8A;box-shadow:0 1px 3px rgba(0,0,0,0.15);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display',serif;font-size:13px;font-weight:900;color:var(--mid);
+  }
+  .hand-teaser .ht.bam{color:#196F3D}
+  .hand-teaser .ht.crack{color:#C0392B}
+  .hand-teaser .lbls{display:flex;justify-content:space-around;gap:6px;font-size:11px;color:#7D6608;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+  footer.disclaimer{
+    margin-top:50px;padding:20px;background:#fff;border-radius:8px;
+    font-size:11px;color:#777;text-align:center;border:1px solid #E0D9C0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="cover">
+    <div class="eyebrow">MAHJ — Module 0 Draft</div>
+    <h1>Welcome to <span>MAHJ</span></h1>
+    <div class="sub">Your path from absolute beginner to your first real game</div>
+  </header>
+
+  <div class="meta">
+    <p><strong>Goal:</strong> Set expectations, show the learning path, and get you ready to start Module 1 with confidence.</p>
+    <p><strong>Estimated time:</strong> 3–4 minutes</p>
+    <p><strong>Prerequisite:</strong> None — start here!</p>
+    <p><strong>Unlocks:</strong> Module 1 (Tile Trainer)</p>
+    <p><strong>Structure:</strong> 3 welcome screens · 1 reality-check checklist · learning path preview</p>
+  </div>
+
+  <h2 class="section">Welcome Screens</h2>
+
+  <div class="screen">
+    <div class="tag">Screen 1 of 3</div>
+    <h3>👋 Welcome to MAHJ</h3>
+    <p>You're about to learn <strong>American Mahjong</strong> — a 4-player tile game that's part strategy, part luck, and all fun.</p>
+    <p>By the end of this app, you'll be able to sit down at a real game and hold your own.</p>
+    <p><strong>No experience needed. We start from zero.</strong></p>
+    <span class="cta">Let's go →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 2 of 3</div>
+    <h3>🀄 What is American Mahjong?</h3>
+    <p>American Mahjong is a <strong>tile game</strong> played by <strong>4 people</strong> around a table.</p>
+    <p>Think of it like rummy — but with beautiful tiles instead of cards, a unique trading ritual, and <em>wild jokers</em> that make every hand exciting.</p>
+    <p>Each game takes about <strong>15–30 minutes</strong>. You'll usually play several in an evening with friends.</p>
+    <span class="cta">Next →</span>
+  </div>
+
+  <div class="screen">
+    <div class="tag">Screen 3 of 3</div>
+    <h3>🏆 How you win</h3>
+    <p>Your goal: be the first to build a complete <strong>"hand"</strong> of 14 tiles that matches one of the official winning patterns.</p>
+    <p>You'll draw tiles, swap tiles, and watch what others discard — slowly working toward your target hand.</p>
+    <p>When you complete it, you call <strong>"Mahjong!"</strong> and you win the round.</p>
+    <span class="cta">Next: a quick reality check →</span>
+  </div>
+
+  <h2 class="section">Reality Check</h2>
+
+  <div class="checklist">
+    <h2>📋 Before you start</h2>
+    <p class="sub">A 60-second look at what you're getting into. No surprises.</p>
+    <ul>
+      <li><span class="check">✓</span><div><strong>You'll need 3 friends to play a real game.</strong> Don't have them yet? No problem — practice on the app first, then we'll show you where to find local groups.</div></li>
+      <li><span class="check">✓</span><div><strong>You'll need a set, racks, and dice for live play.</strong> A starter set runs about $40–80. The official card is $14/year from the National Mah Jongg League (we'll link you when you're ready).</div></li>
+      <li><span class="check">✓</span><div><strong>The first few games will feel slow and confusing.</strong> That's completely normal. Mahjong has a longer learning curve than most card games — and it's worth it.</div></li>
+      <li><span class="check">✓</span><div><strong>Don't try to memorize the card on day one.</strong> Nobody does. You'll pick it up by playing.</div></li>
+      <li><span class="check">✓</span><div><strong>Plan about 2 hours for your first real session.</strong> Setup is slow at first, and you'll have lots of questions. Pace yourself.</div></li>
+      <li><span class="check">✓</span><div><strong>You probably won't win your first 3–5 games.</strong> That's not a failure — that's the learning curve. Trust the process.</div></li>
+      <li><span class="check">✓</span><div><strong>This app teaches you the game, not the card.</strong> When you're ready for real play, you'll buy the official card separately.</div></li>
+    </ul>
+  </div>
+
+  <h2 class="section">A Sneak Peek</h2>
+
+  <div class="hand-teaser">
+    <h3>🏆 What a winning hand looks like</h3>
+    <p style="font-size:14px;color:#555;margin-bottom:6px">You don't need to understand this yet — just so you have a target in mind. A winning hand is <strong>14 tiles</strong> arranged in groups. Here's one example:</p>
+    <div class="tiles">
+      <div class="group"><div class="ht bam">1</div><div class="ht bam">1</div><div class="ht bam">1</div></div>
+      <div class="group"><div class="ht bam">2</div><div class="ht bam">2</div><div class="ht bam">2</div></div>
+      <div class="group"><div class="ht bam">3</div><div class="ht bam">3</div><div class="ht bam">3</div></div>
+      <div class="group"><div class="ht bam">4</div><div class="ht bam">4</div><div class="ht bam">4</div></div>
+      <div class="group"><div class="ht bam">5</div><div class="ht bam">5</div></div>
+    </div>
+    <div class="lbls">
+      <span>Group of 3</span><span>Group of 3</span><span>Group of 3</span><span>Group of 3</span><span>Pair</span>
+    </div>
+    <p style="font-size:13px;color:#7D6608;margin-top:14px;text-align:center;font-style:italic">Four groups of three identical tiles, plus one pair. We'll dive into the details in Module 5.</p>
+  </div>
+
+  <h2 class="section">Your Learning Path</h2>
+
+  <div class="path">
+    <h3>🛤 12 modules, ~5 minutes each</h3>
+    <p class="sub">After modules 1–4 (about 30 minutes total), you'll know enough to play your first real game.</p>
+    <div class="path-grid">
+      <div class="path-item current"><div class="num">0</div><div class="name">Welcome (you are here)</div></div>
+      <div class="path-item"><div class="num">1</div><div class="name">Tile Trainer</div></div>
+      <div class="path-item"><div class="num">2</div><div class="name">Setup & Dealing</div></div>
+      <div class="path-item"><div class="num">3</div><div class="name">The Charleston</div></div>
+      <div class="path-item"><div class="num">4</div><div class="name">Jokers & Calling</div></div>
+      <div class="path-item"><div class="num">5</div><div class="name">Hand Strategy</div></div>
+      <div class="path-item"><div class="num">6</div><div class="name">Defense</div></div>
+      <div class="path-item"><div class="num">7</div><div class="name">Table Etiquette</div></div>
+      <div class="path-item"><div class="num">8</div><div class="name">Scoring & Payouts</div></div>
+      <div class="path-item"><div class="num">9</div><div class="name">Common Mistakes</div></div>
+      <div class="path-item"><div class="num">10</div><div class="name">Glossary</div></div>
+      <div class="path-item"><div class="num">11</div><div class="name">Your First Full Game</div></div>
+      <div class="path-item"><div class="num">12</div><div class="name">Practice Puzzles</div></div>
+    </div>
+    <div class="path-callout">
+      ✨ <strong>Ready?</strong> Module 1 is about meeting the tiles — the foundation of everything else. It takes about 6–8 minutes.
+    </div>
+    <span class="cta">Start Module 1: Tile Trainer →</span>
+  </div>
+
+  <div class="module-nav">
+    <div class="placeholder"></div>
+    <a class="next" href="MODULE_01_TILE_TRAINER.html">
+      <div class="dir">Next →</div>
+      <div class="name">Module 1: Tile Trainer</div>
+    </a>
+  </div>
+
+  <footer class="disclaimer">
+    MAHJ is an independent educational tool. Not affiliated with, endorsed by, or sponsored by the National Mah Jongg League (NMJL®). To play official games, purchase the current year's card from nationalmahjonggleague.org.
+  </footer>
+
+</div>
+</body>
+</html>

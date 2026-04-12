@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Tile face — clean ivory with subtle warmth -->
+    <linearGradient id="tileFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFEF7"/>
+      <stop offset="100%" stop-color="#F8F1D5"/>
+    </linearGradient>
+    <!-- The center red ball — the ONLY 3D element -->
+    <radialGradient id="centerBall" cx="0.30" cy="0.26" r="0.85">
+      <stop offset="0%" stop-color="#FF8276"/>
+      <stop offset="20%" stop-color="#F25445"/>
+      <stop offset="55%" stop-color="#C0392B"/>
+      <stop offset="100%" stop-color="#3A0804"/>
+    </radialGradient>
+    <!-- Drop shadow under medallion -->
+    <filter id="medShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="3" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <!-- Tile body — squarer corners (rx=80), warmer border -->
+  <rect width="512" height="512" rx="80" fill="url(#tileFace)" stroke="#B5985A" stroke-width="6"/>
+
+  <!-- Subtle top highlight on the tile -->
+  <rect x="40" y="32" width="432" height="3" rx="1.5" fill="#fff" opacity="0.7"/>
+
+  <!-- Corner number — closer to corner, matched to ring red -->
+  <text x="58" y="126" font-family="Georgia,serif" font-weight="900" font-size="76" fill="#C0392B">1</text>
+
+  <!-- Medallion — slightly smaller (r=160) for more breathing room -->
+  <g filter="url(#medShadow)">
+    <!-- Outer red ring -->
+    <circle cx="256" cy="266" r="160" fill="#C0392B"/>
+    <!-- Ivory gap -->
+    <circle cx="256" cy="266" r="138" fill="#FAF7EC"/>
+    <!-- Black ring (softer charcoal, not pure black) -->
+    <circle cx="256" cy="266" r="122" fill="#2A2A2A"/>
+    <!-- Inner ivory fill -->
+    <circle cx="256" cy="266" r="100" fill="#FAF7EC"/>
+    <!-- Center 3D ball -->
+    <circle cx="256" cy="266" r="56" fill="url(#centerBall)"/>
+  </g>
+</svg>
