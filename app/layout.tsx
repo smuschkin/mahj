@@ -44,6 +44,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${lato.variable} h-full antialiased`}>
       <head>
         <meta name="theme-color" content="#1A4D2E" />
+        <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
       <body className="min-h-full flex flex-col">
         <TopNav />
