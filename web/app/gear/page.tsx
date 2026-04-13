@@ -46,6 +46,24 @@ const ESSENTIALS: GearItem[] = [
     tag: "Alternative",
   },
   {
+    name: "Yellow Mountain Imports Mahjong Set",
+    emoji: "\u{26F0}\uFE0F",
+    description:
+      "From one of the most trusted names in mahjong gear. Yellow Mountain Imports is known for quality tiles and complete sets. A reliable choice.",
+    price: "$50-90",
+    href: "https://www.amazon.com/dp/B07SJB92SM?tag=welcome2mahj-20",
+    tag: "Top brand",
+  },
+  {
+    name: "Melamine American Mahjong Tiles",
+    emoji: "\u{1F48E}",
+    description:
+      "Durable melamine tiles with a premium feel. Melamine is heavier and more satisfying to play with than standard plastic tiles.",
+    price: "$30-60",
+    href: "https://www.amazon.com/dp/B0GGHH7VH5?tag=welcome2mahj-20",
+    tag: "Quality pick",
+  },
+  {
     name: "Marllifenney American Mahjong Set",
     emoji: "\u{1F3B2}",
     description:
