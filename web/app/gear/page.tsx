@@ -114,6 +114,42 @@ const FUN_SETS: GearItem[] = [
     href: "https://www.amazon.com/dp/B0GC61TPLX?tag=welcome2mahj-20",
     tag: "Gift idea",
   },
+  {
+    name: "Turquoise Mahjong Set with Butterfly Artwork",
+    emoji: "\u{1F98B}",
+    description:
+      "A stunning turquoise set with butterfly-themed artwork. Eye-catching and unique — perfect for players who want something different.",
+    price: "$40-70",
+    href: "https://www.amazon.com/dp/B0F8M9RG13?tag=welcome2mahj-20",
+    tag: "Fun pick",
+  },
+  {
+    name: "Designer American Mahjong Set",
+    emoji: "\u{1F48E}",
+    description:
+      "A beautifully designed American Mahjong set that stands out from the crowd. Great for players who appreciate style at the table.",
+    price: "$40-70",
+    href: "https://www.amazon.com/dp/B0FJ8TQ69B?tag=welcome2mahj-20",
+    tag: "Gift idea",
+  },
+  {
+    name: "ChamThingzeal Premium Mahjong Tiles",
+    emoji: "\u{1F3AF}",
+    description:
+      "Quality American Mahjong tiles with a premium feel. Good weight and durability for regular game nights.",
+    price: "$30-60",
+    href: "https://www.amazon.com/dp/B0G1K4MSVF?tag=welcome2mahj-20",
+    tag: "Quality pick",
+  },
+  {
+    name: "Stylish American Mahjong Set with Case",
+    emoji: "\u{1F45C}",
+    description:
+      "A complete American Mahjong set with a stylish carrying case. Looks great and travels well — bring it to game night in style.",
+    price: "$40-70",
+    href: "https://www.amazon.com/dp/B0FHXGBRR1?tag=welcome2mahj-20",
+    tag: "Fun pick",
+  },
 ];
 
 const BOOKS: GearItem[] = [
