@@ -344,7 +344,7 @@ async function main() {
     <div class="cover">
       <h1 class="cover-title">MAHJ</h1>
       <p class="cover-subtitle">${TITLE} &mdash; ${SUBTITLE}</p>
-      <div class="cover-url">https://web-nine-nu-qqd4wog6yi.vercel.app</div>
+      <div class="cover-url">https://welcome2mahj.com</div>
     </div>
   `;
 

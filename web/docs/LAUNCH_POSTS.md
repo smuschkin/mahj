@@ -2,8 +2,7 @@
 
 Attention-grabbing posts for sharing MAHJ in different communities.
 
-**Current URL**: https://web-nine-nu-qqd4wog6yi.vercel.app
-(Update to https://welcome2mahj.com once DNS is working)
+**Current URL**: https://welcome2mahj.com
 
 ---
 
@@ -36,7 +35,7 @@ So I built **MAHJ** — the tool I wish I'd had before that first game.
 
 **Important:** Not affiliated with NMJL. The practice hands are original patterns that represent the real card's categories (2468, Consecutive Run, Like Numbers, 369, Winds & Dragons, Singles & Pairs, Quints, etc). You still need the real NMJL card for official play — I'm not replacing it, I'm helping you understand it.
 
-👉 **https://web-nine-nu-qqd4wog6yi.vercel.app**
+👉 **https://welcome2mahj.com**
 
 Works on phones, tablets, computers. No signup. Installable as a PWA on iPhone (Safari → Share → Add to Home Screen).
 
@@ -53,7 +52,7 @@ I built something for American Mahjong beginners that I wish I'd had when I star
 MAHJ is a learning app with 14 lessons, a practice game against bots, and a printable cheat sheet you can bring to your first game night. It covers everything — Charleston, calling, jokers, strategy, scoring, etiquette.
 
 If you know someone learning (or you're learning yourself), give it a try:
-👉 https://web-nine-nu-qqd4wog6yi.vercel.app
+👉 https://welcome2mahj.com
 
 (Not affiliated with NMJL — you still need the official card.)
 
@@ -67,7 +66,7 @@ I've heard this at every beginner game I've been to. And honestly? I asked it my
 
 American Mahjong is one of the best games in the world, but it's HARD to learn. The card looks like a secret code. Nobody quite agrees on what to pass. You're terrified of passing a Joker by accident.
 
-So I built **MAHJ** — a free learning app that takes you from "what's a bam?" to "I can play my first real game" without embarrassing yourself.
+So I built **MAHJ** — a learning app that takes you from "what's a bam?" to "I can play my first real game" without embarrassing yourself.
 
 **Here's what's inside:** 🀄
 
@@ -81,7 +80,7 @@ It's designed to be *approachable* — short lessons, instant feedback, and no c
 
 **Important note:** This is NOT affiliated with the National Mah Jongg League, and it doesn't reproduce the card. The practice hands are original examples of the real categories. You still need to buy the official NMJL card for actual games — this just helps you learn how to use it.
 
-👉 **https://web-nine-nu-qqd4wog6yi.vercel.app**
+👉 **https://welcome2mahj.com**
 
 If you know someone who's trying to learn, or you're learning yourself, please share it! And if you're an experienced player who spots something I should fix, please tell me — I want this to be right.
 
@@ -94,9 +93,9 @@ If you know someone who's trying to learn, or you're learning yourself, please s
 >
 > I passed a Joker in the Charleston. (You never pass a Joker.)
 >
-> So I built the learning tool I wish I'd had. Free. No signup.
+> So I built the learning tool I wish I'd had. No signup. No ads.
 >
-> 👉 https://web-nine-nu-qqd4wog6yi.vercel.app
+> 👉 https://welcome2mahj.com
 
 **Post 2 — The problem:**
 > American Mahjong has one of the steepest learning curves in gaming:
@@ -105,18 +104,18 @@ If you know someone who's trying to learn, or you're learning yourself, please s
 > — A 7-pass tile-trading ritual
 > — Specific rules about jokers, calling, scoring
 >
-> I built a free tool that walks you through all of it.
+> I built a tool that walks you through all of it. No signup. No ads.
 >
-> https://web-nine-nu-qqd4wog6yi.vercel.app
+> https://welcome2mahj.com
 
 **Post 3 — The cheat sheet:**
 > Bringing someone to their first American Mahjong game night?
 >
-> This free printable cheat sheet has everything they need on two pages: turn flow, calling, jokers, card notation, strategy, payouts.
+> This printable cheat sheet has everything they need on two pages: turn flow, calling, jokers, card notation, strategy, payouts.
 >
 > Print it. Bring it. Survive.
 >
-> 🀄 https://web-nine-nu-qqd4wog6yi.vercel.app/cheatsheet
+> 🀄 https://welcome2mahj.com/cheatsheet
 
 **Post 4 — Practice game:**
 > Most mahj tutorials tell you what the rules are.
@@ -125,7 +124,7 @@ If you know someone who's trying to learn, or you're learning yourself, please s
 >
 > Full Charleston. Pick a target hand. Play against 3 smart bots that call your discards and pursue real hand patterns. You'll learn more in one practice round than reading for an hour.
 >
-> https://web-nine-nu-qqd4wog6yi.vercel.app
+> https://welcome2mahj.com
 
 ---
 
@@ -153,7 +152,7 @@ So I built **MAHJ** — an interactive, beginner-first learning tool for America
 
 If you know someone who plays, or who's trying to learn, I'd love for them to try it.
 
-👉 https://web-nine-nu-qqd4wog6yi.vercel.app
+👉 https://welcome2mahj.com
 
 Feedback welcome — especially from anyone who teaches mahj or runs a club.
 
@@ -163,11 +162,11 @@ Feedback welcome — especially from anyone who teaches mahj or runs a club.
 
 **For anyone learning American Mahjong — or who knows someone who is**
 
-I made a free learning app for American Mahjong and I wanted to share it with neighbors who might find it useful.
+I made a learning app for American Mahjong and I wanted to share it with neighbors who might find it useful.
 
 If you've ever been curious about joining a mahj group but felt intimidated by the card, the Charleston, or all the rules around jokers and calling — **MAHJ** walks you through everything from the beginning. It has interactive lessons, a practice game against bots, and a printable cheat sheet to bring to your first game night.
 
-👉 https://web-nine-nu-qqd4wog6yi.vercel.app
+👉 https://welcome2mahj.com
 
 Please feel free to share with anyone in your mahj group or club who might want it. No signup required.
 
@@ -177,21 +176,23 @@ Please feel free to share with anyone in your mahj group or club who might want 
 
 ## Instagram Caption
 
-🀄 Learn American Mahjong the easy way.
+I was completely lost at my first American Mahjong game.
 
-MAHJ walks you from "what's a bam?" to your first real game night:
+So I built the app I wish someone had handed me before I sat down at that table.
 
-✨ 14 interactive lessons
-🎮 Practice game vs smart bots
-📄 Printable cheat sheet
+MAHJ walks you from "what are all these tiles?" to playing with confidence:
+
+✨ 14 bite-sized interactive lessons
+🎮 Practice game against smart bots
+📄 A printable cheat sheet you can bring to game night
 🔢 Scoring calculator
 📖 90+ term glossary
 
-Built by a beginner, for beginners.
+No ads. No accounts. No data tracking. Just learn at your own pace.
 
-Link in bio 👆 or visit https://web-nine-nu-qqd4wog6yi.vercel.app
+Link in bio 🀄
 
-#AmericanMahjong #Mahjong #MahJongg #MahjongClub #LearnMahjong #NMJL #TileGames #MahjongForBeginners #MahjongGirls #MahjongLife
+#americanmahjong #mahjong #mahjongg #nmjl #mahj #gamenight #learnmahjong #mahjonglife #charleston #mahjongtiles #learnsomethingnew #tilegame #boardgames #tabletop
 
 ---
 
@@ -203,7 +204,7 @@ Hi [name],
 
 Remember how overwhelming mahj was when you first tried it? [Or: I know you've wanted to learn American Mahjong...]
 
-I built something that might help. It's called **MAHJ** — a free web app that walks beginners through everything from identifying tiles to playing their first game. It has:
+I built something that might help. It's called **MAHJ** — a web app that walks beginners through everything from identifying tiles to playing their first game. It has:
 
 - 14 interactive lessons (the tiles, the Charleston, calling, jokers, strategy, scoring)
 - A practice game against bots so you can play a full round before a real one
@@ -211,7 +212,7 @@ I built something that might help. It's called **MAHJ** — a free web app that 
 
 It's designed for absolute beginners — no assumed knowledge, no condescension, just a step-by-step path from "I have no idea what this is" to "I can sit down at a table."
 
-👉 https://web-nine-nu-qqd4wog6yi.vercel.app
+👉 https://welcome2mahj.com
 
 Works on your phone, tablet, or computer. No account needed.
 
@@ -223,13 +224,13 @@ If you try it, I'd love to hear what you think — especially anything that's co
 
 ## Mahj Club / Teacher Outreach Email
 
-**Subject:** Free learning tool for your American Mahjong beginners
+**Subject:** Learning tool for your American Mahjong beginners
 
 Hello,
 
 I'm reaching out because you teach or run a group for American Mahjong players, and I built something that might help with your beginners.
 
-**MAHJ** is an interactive web app designed to take absolute beginners from zero to their first game. It covers:
+**MAHJ** is an interactive web app designed to take absolute beginners from zero to their first game. No signup required. It covers:
 
 - Tile recognition (all 152 tiles, identified by sight and sound)
 - Setup, wall building, and dealing
@@ -246,7 +247,7 @@ It's designed for self-study between lessons, or as a companion to in-person tea
 
 If you think this could help your students, please share it with them. I'd also deeply appreciate any feedback from you as an experienced teacher — what's missing, what's unclear, what I got wrong.
 
-👉 https://web-nine-nu-qqd4wog6yi.vercel.app
+👉 https://welcome2mahj.com
 
 Thank you for keeping American Mahjong alive and welcoming new players to the table.
 
