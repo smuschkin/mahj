@@ -72,6 +72,15 @@ const ESSENTIALS: GearItem[] = [
     href: "https://www.amazon.com/dp/B0G13KW3L8?tag=welcome2mahj-20",
     tag: "Alternative",
   },
+  {
+    name: "Arrowbash Beginner Mahjong Set",
+    emoji: "\u{1F331}",
+    description:
+      "Designed specifically for beginners. Melamine tiles with clear markings that are easy to read while you're still learning. Great first set.",
+    price: "$30-50",
+    href: "https://www.amazon.com/dp/B0FS719Y7D?tag=welcome2mahj-20",
+    tag: "Best for beginners",
+  },
 ];
 
 const NICE_TO_HAVE: GearItem[] = [
