@@ -22,7 +22,7 @@ const ESSENTIALS: GearItem[] = [
     description:
       "You need this to play. The National Mah Jongg League releases a new card every year with the official hands. This is the one thing you cannot play without.",
     price: "~$15",
-    href: "https://www.amazon.com/s?k=NMJL+mah+jongg+card+2026&tag=YOUR_AFFILIATE_TAG",
+    href: "https://www.amazon.com/s?k=NMJL+mah+jongg+card+2026&tag=welcome2mahj-20",
     tag: "Essential",
   },
   {
@@ -30,7 +30,7 @@ const ESSENTIALS: GearItem[] = [
     description:
       "A full American Mahjong set with 166 tiles (152 game tiles + extras), 4 racks, dice, and a carrying case. Look for sets that include Jokers — not all sets do.",
     price: "$30-80",
-    href: "https://www.amazon.com/s?k=american+mahjong+set+166+tiles&tag=YOUR_AFFILIATE_TAG",
+    href: "https://www.amazon.com/s?k=american+mahjong+set+166+tiles&tag=welcome2mahj-20",
     tag: "Essential",
   },
 ];
@@ -41,7 +41,7 @@ const NICE_TO_HAVE: GearItem[] = [
     description:
       "A felt mat that goes on top of any table. Keeps tiles from sliding, reduces noise, and makes the game feel official. Most experienced players have one.",
     price: "$15-30",
-    href: "https://www.amazon.com/s?k=mahjong+table+cover+felt+mat&tag=YOUR_AFFILIATE_TAG",
+    href: "https://www.amazon.com/s?k=mahjong+table+cover+felt+mat&tag=welcome2mahj-20",
     tag: "Recommended",
   },
   {
@@ -49,7 +49,7 @@ const NICE_TO_HAVE: GearItem[] = [
     description:
       "Longer racks that let you push your wall toward the center more easily. A quality-of-life upgrade that experienced players swear by.",
     price: "$20-40",
-    href: "https://www.amazon.com/s?k=mahjong+tile+pushers+rack&tag=YOUR_AFFILIATE_TAG",
+    href: "https://www.amazon.com/s?k=mahjong+tile+pushers+rack&tag=welcome2mahj-20",
     tag: "Nice to have",
   },
   {
@@ -57,7 +57,7 @@ const NICE_TO_HAVE: GearItem[] = [
     description:
       "If your set didn't come with one, a good carrying case protects your tiles and makes it easy to bring to game night.",
     price: "$15-30",
-    href: "https://www.amazon.com/s?k=mahjong+carrying+case&tag=YOUR_AFFILIATE_TAG",
+    href: "https://www.amazon.com/s?k=mahjong+carrying+case&tag=welcome2mahj-20",
     tag: "Nice to have",
   },
   {
@@ -65,7 +65,7 @@ const NICE_TO_HAVE: GearItem[] = [
     description:
       "A small stand that holds your NMJL card upright so you can reference it without picking it up every turn. Small but handy.",
     price: "$5-10",
-    href: "https://www.amazon.com/s?k=mahjong+card+holder+stand&tag=YOUR_AFFILIATE_TAG",
+    href: "https://www.amazon.com/s?k=mahjong+card+holder+stand&tag=welcome2mahj-20",
     tag: "Nice to have",
   },
 ];
@@ -76,7 +76,7 @@ const BOOKS: GearItem[] = [
     description:
       "A popular book for learning the basics. Good companion to MAHJ if you like learning from physical books too.",
     price: "~$15",
-    href: "https://www.amazon.com/s?k=beginners+guide+american+mah+jongg&tag=YOUR_AFFILIATE_TAG",
+    href: "https://www.amazon.com/s?k=beginners+guide+american+mah+jongg&tag=welcome2mahj-20",
     tag: "Book",
   },
   {
@@ -84,7 +84,7 @@ const BOOKS: GearItem[] = [
     description:
       "A beautiful coffee-table book about the history and art of mahjong. Makes a great gift for any mahj player.",
     price: "~$25",
-    href: "https://www.amazon.com/s?k=mah+jongg+art+of+the+game&tag=YOUR_AFFILIATE_TAG",
+    href: "https://www.amazon.com/s?k=mah+jongg+art+of+the+game&tag=welcome2mahj-20",
     tag: "Gift idea",
   },
 ];
