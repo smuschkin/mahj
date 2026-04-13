@@ -76,12 +76,21 @@ const NICE_TO_HAVE: GearItem[] = [
     tag: "Nice to have",
   },
   {
-    name: "Mahjong Carrying Case",
+    name: "Waterproof Mahjong Bag",
     emoji: "\u{1F4BC}",
     description:
-      "If your set didn't come with one, a good carrying case protects your tiles and makes it easy to bring to game night.",
+      "A waterproof bag designed specifically for American Mahjong sets. Protects your tiles from spills and rain on the way to game night.",
     price: "$15-30",
-    href: "https://www.amazon.com/s?k=mahjong+carrying+case&tag=welcome2mahj-20",
+    href: "https://www.amazon.com/dp/B0FPCX6CRZ?tag=welcome2mahj-20",
+    tag: "Nice to have",
+  },
+  {
+    name: "Empty Mahjong Case",
+    emoji: "\u{1F9F3}",
+    description:
+      "A quality empty case perfect for American Mahjong. Great if your set didn't come with one or you need an upgrade.",
+    price: "$15-30",
+    href: "https://www.amazon.com/dp/B0GH5W8X9C?tag=welcome2mahj-20",
     tag: "Nice to have",
   },
   {
