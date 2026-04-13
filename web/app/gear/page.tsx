@@ -58,13 +58,31 @@ const ESSENTIALS: GearItem[] = [
 
 const NICE_TO_HAVE: GearItem[] = [
   {
-    name: "Mahjong Table Cover (felt mat)",
+    name: "Chinoiserie Mahjong Table Mat",
     emoji: "\u{1F7E9}",
     description:
-      "A felt mat that goes on top of any table. Keeps tiles from sliding, reduces noise, and makes the game feel official. Most experienced players have one.",
-    price: "$15-30",
-    href: "https://www.amazon.com/s?k=mahjong+table+cover+felt+mat&tag=welcome2mahj-20",
+      "A beautiful 31.5\" square mat with traditional chinoiserie design. Keeps tiles from sliding, reduces noise, and makes the table look stunning.",
+    price: "$20-40",
+    href: "https://www.amazon.com/dp/B0GFDFX12V?tag=welcome2mahj-20",
     tag: "Recommended",
+  },
+  {
+    name: "NMJL Card Protector (transparent cover)",
+    emoji: "\u{1F6E1}\uFE0F",
+    description:
+      "A durable transparent cover that protects your NMJL card from spills, smudges, and wear. Your card costs $15/year — this keeps it in perfect shape.",
+    price: "$5-10",
+    href: "https://www.amazon.com/dp/B0FKH1KV9T?tag=welcome2mahj-20",
+    tag: "Smart buy",
+  },
+  {
+    name: "Leather NMJL Card Case",
+    emoji: "\u{1F45D}",
+    description:
+      "A premium leather case to store and protect your NMJL card. Looks elegant and keeps your card safe between game nights.",
+    price: "$10-20",
+    href: "https://www.amazon.com/dp/B0FSRMWLCP?tag=welcome2mahj-20",
+    tag: "Nice to have",
   },
   {
     name: "Tile Pushers / Rack Extensions",
