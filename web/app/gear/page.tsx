@@ -15,50 +15,69 @@ type GearItem = {
   price: string;
   href: string;
   tag: string;
+  featured?: boolean;
 };
 
-const ESSENTIALS: GearItem[] = [
+/* ───── THE ESSENTIALS ───── */
+
+const MUST_HAVE: GearItem[] = [
   {
     name: "NMJL Official Card (2026)",
-    emoji: "\u{1F4CB}",
+    emoji: "\u{1F004}",
     description:
       "You need this to play. The National Mah Jongg League releases a new card every year with the official hands. This is the one thing you cannot play without.",
     price: "~$15",
     href: "https://www.amazon.com/dp/B0GWCVL23K?tag=welcome2mahj-20",
     tag: "Essential",
   },
+];
+
+const OUR_PICKS: GearItem[] = [
   {
     name: "GUSTARIA American Mahjong Set",
-    emoji: "\u{1F004}",
+    emoji: "\u{2B50}",
     description:
-      "A complete American Mahjong set with tiles, racks, dice, and a carrying case. Great starter set with everything you need.",
+      "Our top pick for beginners. A complete American Mahjong set with quality tiles, racks, dice, and a carrying case. Everything you need in one box — great reviews and great value.",
     price: "$30-50",
     href: "https://www.amazon.com/dp/B0D2RC4PWJ?tag=welcome2mahj-20",
-    tag: "Essential",
+    tag: "Our #1 Pick",
+    featured: true,
   },
   {
-    name: "Topmahjing American Mahjong Tile Set",
-    emoji: "\u{1F3B4}",
+    name: "Arrowbash Beginner Mahjong Set",
+    emoji: "\u{1F331}",
     description:
-      "Another great option with quality tiles and a complete American Mahjong setup. Compare prices and reviews to find the set that fits your budget.",
-    price: "$30-60",
-    href: "https://www.amazon.com/dp/B0GL95VB3L?tag=welcome2mahj-20",
-    tag: "Alternative",
+      "Best for brand-new players. Melamine tiles with clear, easy-to-read markings while you're still learning. Affordable and beginner-friendly.",
+    price: "$30-50",
+    href: "https://www.amazon.com/dp/B0FS719Y7D?tag=welcome2mahj-20",
+    tag: "Budget pick",
   },
   {
     name: "Yellow Mountain Imports Mahjong Set",
     emoji: "\u{26F0}\uFE0F",
     description:
-      "From one of the most trusted names in mahjong gear. Yellow Mountain Imports is known for quality tiles and complete sets. A reliable choice.",
+      "From the most trusted name in mahjong gear. Premium quality tiles with a satisfying weight. For players who want the best and don't mind paying a bit more.",
     price: "$50-90",
     href: "https://www.amazon.com/dp/B07SJB92SM?tag=welcome2mahj-20",
-    tag: "Top brand",
+    tag: "Premium pick",
+  },
+];
+
+const MORE_SETS: GearItem[] = [
+  {
+    name: "Topmahjing American Mahjong Tile Set",
+    emoji: "\u{1F3B4}",
+    description:
+      "Quality tiles with a complete American Mahjong setup. A solid alternative at a competitive price.",
+    price: "$30-60",
+    href: "https://www.amazon.com/dp/B0GL95VB3L?tag=welcome2mahj-20",
+    tag: "Alternative",
   },
   {
     name: "Melamine American Mahjong Tiles",
     emoji: "\u{1F48E}",
     description:
-      "Durable melamine tiles with a premium feel. Melamine is heavier and more satisfying to play with than standard plastic tiles.",
+      "Durable melamine tiles with a premium feel. Heavier and more satisfying than standard plastic.",
     price: "$30-60",
     href: "https://www.amazon.com/dp/B0GGHH7VH5?tag=welcome2mahj-20",
     tag: "Quality pick",
@@ -67,64 +86,57 @@ const ESSENTIALS: GearItem[] = [
     name: "Marllifenney American Mahjong Set",
     emoji: "\u{1F3B2}",
     description:
-      "A colorful American Mahjong set with a carrying case. Multiple color options available — pick one that matches your style.",
+      "A colorful set with a carrying case. Multiple color options — pick one that matches your style.",
     price: "$30-60",
     href: "https://www.amazon.com/dp/B0G13KW3L8?tag=welcome2mahj-20",
     tag: "Alternative",
   },
-  {
-    name: "Arrowbash Beginner Mahjong Set",
-    emoji: "\u{1F331}",
-    description:
-      "Designed specifically for beginners. Melamine tiles with clear markings that are easy to read while you're still learning. Great first set.",
-    price: "$30-50",
-    href: "https://www.amazon.com/dp/B0FS719Y7D?tag=welcome2mahj-20",
-    tag: "Best for beginners",
-  },
 ];
 
-const NICE_TO_HAVE: GearItem[] = [
+/* ───── ACCESSORIES ───── */
+
+const ACCESSORIES: GearItem[] = [
   {
     name: "Chinoiserie Mahjong Table Mat",
     emoji: "\u{1F7E9}",
     description:
-      "A beautiful 31.5\" square mat with traditional chinoiserie design. Keeps tiles from sliding, reduces noise, and makes the table look stunning.",
+      "A beautiful 31.5\" square mat with traditional design. Keeps tiles from sliding, reduces noise, and makes the table look stunning.",
     price: "$20-40",
     href: "https://www.amazon.com/dp/B0GFDFX12V?tag=welcome2mahj-20",
     tag: "Recommended",
   },
   {
-    name: "NMJL Card Protector (transparent cover)",
+    name: "NMJL Card Protector",
     emoji: "\u{1F6E1}\uFE0F",
     description:
-      "A durable transparent cover that protects your NMJL card from spills, smudges, and wear. Your card costs $15/year — this keeps it in perfect shape.",
+      "A transparent cover that protects your NMJL card from spills and wear. Your card costs $15/year — this keeps it perfect.",
     price: "$5-10",
     href: "https://www.amazon.com/dp/B0FKH1KV9T?tag=welcome2mahj-20",
     tag: "Smart buy",
   },
   {
-    name: "Leather NMJL Card Case",
-    emoji: "\u{1F45D}",
+    name: "Mahjong Card Holder / Reader",
+    emoji: "\u{1F4D0}",
     description:
-      "A premium leather case to store and protect your NMJL card. Looks elegant and keeps your card safe between game nights.",
-    price: "$10-20",
-    href: "https://www.amazon.com/dp/B0FSRMWLCP?tag=welcome2mahj-20",
+      "Holds your NMJL card upright so you can reference it without picking it up every turn. Small but handy.",
+    price: "$5-10",
+    href: "https://www.amazon.com/dp/B0FCRMXB9N?tag=welcome2mahj-20",
     tag: "Nice to have",
   },
   {
-    name: "Tile Pushers / Rack Extensions",
-    emoji: "\u{1F9F1}",
+    name: "Leather NMJL Card Case",
+    emoji: "\u{1F45D}",
     description:
-      "Longer racks that let you push your wall toward the center more easily. A quality-of-life upgrade that experienced players swear by.",
-    price: "$20-40",
-    href: "https://www.amazon.com/s?k=mahjong+tile+pushers+rack&tag=welcome2mahj-20",
+      "A premium leather case to store your NMJL card. Looks elegant and keeps it safe between game nights.",
+    price: "$10-20",
+    href: "https://www.amazon.com/dp/B0FSRMWLCP?tag=welcome2mahj-20",
     tag: "Nice to have",
   },
   {
     name: "Waterproof Mahjong Bag",
     emoji: "\u{1F4BC}",
     description:
-      "A waterproof bag designed specifically for American Mahjong sets. Protects your tiles from spills and rain on the way to game night.",
+      "Protects your tiles from spills and rain on the way to game night. Designed specifically for American Mahjong sets.",
     price: "$15-30",
     href: "https://www.amazon.com/dp/B0FPCX6CRZ?tag=welcome2mahj-20",
     tag: "Nice to have",
@@ -133,46 +145,48 @@ const NICE_TO_HAVE: GearItem[] = [
     name: "Empty Mahjong Case",
     emoji: "\u{1F9F3}",
     description:
-      "A quality empty case perfect for American Mahjong. Great if your set didn't come with one or you need an upgrade.",
+      "A quality case for American Mahjong. Great if your set didn't come with one or you need an upgrade.",
     price: "$15-30",
     href: "https://www.amazon.com/dp/B0GH5W8X9C?tag=welcome2mahj-20",
     tag: "Nice to have",
   },
   {
-    name: "Card Holder / Card Stand",
-    emoji: "\u{1F4D0}",
+    name: "Tile Pushers / Rack Extensions",
+    emoji: "\u{1F9F1}",
     description:
-      "A small stand that holds your NMJL card upright so you can reference it without picking it up every turn. Small but handy.",
-    price: "$5-10",
-    href: "https://www.amazon.com/dp/B0FCRMXB9N?tag=welcome2mahj-20",
+      "Longer racks that let you push your wall toward the center more easily. A quality-of-life upgrade experienced players swear by.",
+    price: "$20-40",
+    href: "https://www.amazon.com/s?k=mahjong+tile+pushers+rack&tag=welcome2mahj-20",
     tag: "Nice to have",
   },
 ];
+
+/* ───── FUN / GIFT SETS ───── */
 
 const FUN_SETS: GearItem[] = [
   {
     name: "Pet-Themed American Mahjong Set",
     emoji: "\u{1F43E}",
     description:
-      "Adorable pet-themed tile illustrations make this set a conversation starter at game night. A fun gift for any animal-loving mahj player.",
+      "Adorable pet-themed tile illustrations. A conversation starter at game night and a fun gift for animal lovers.",
     price: "$40-60",
     href: "https://www.amazon.com/dp/B0FTRVMY6S?tag=welcome2mahj-20",
     tag: "Fun pick",
   },
   {
-    name: "Vintage-Inspired American Mahjong Set",
+    name: "Vintage-Inspired Mahjong Set",
     emoji: "\u{2728}",
     description:
-      "Beautiful vintage-inspired designs with meaningful illustrations. Feels like playing with a piece of art. Makes an incredible gift.",
+      "Beautiful vintage-inspired designs with meaningful illustrations. Feels like playing with a piece of art.",
     price: "$50-80",
     href: "https://www.amazon.com/dp/B0GC61TPLX?tag=welcome2mahj-20",
     tag: "Gift idea",
   },
   {
-    name: "Turquoise Mahjong Set with Butterfly Artwork",
+    name: "Turquoise Butterfly Mahjong Set",
     emoji: "\u{1F98B}",
     description:
-      "A stunning turquoise set with butterfly-themed artwork. Eye-catching and unique — perfect for players who want something different.",
+      "A stunning turquoise set with butterfly-themed artwork. Eye-catching and unique.",
     price: "$40-70",
     href: "https://www.amazon.com/dp/B0F8M9RG13?tag=welcome2mahj-20",
     tag: "Fun pick",
@@ -181,30 +195,32 @@ const FUN_SETS: GearItem[] = [
     name: "Designer American Mahjong Set",
     emoji: "\u{1F48E}",
     description:
-      "A beautifully designed American Mahjong set that stands out from the crowd. Great for players who appreciate style at the table.",
+      "A beautifully designed set that stands out from the crowd. For players who appreciate style at the table.",
     price: "$40-70",
     href: "https://www.amazon.com/dp/B0FJ8TQ69B?tag=welcome2mahj-20",
     tag: "Gift idea",
   },
   {
-    name: "ChamThingzeal Premium Mahjong Tiles",
+    name: "ChamThingzeal Premium Tiles",
     emoji: "\u{1F3AF}",
     description:
-      "Quality American Mahjong tiles with a premium feel. Good weight and durability for regular game nights.",
+      "Quality tiles with a premium feel. Good weight and durability for regular game nights.",
     price: "$30-60",
     href: "https://www.amazon.com/dp/B0G1K4MSVF?tag=welcome2mahj-20",
     tag: "Quality pick",
   },
   {
-    name: "Stylish American Mahjong Set with Case",
+    name: "Stylish Mahjong Set with Case",
     emoji: "\u{1F45C}",
     description:
-      "A complete American Mahjong set with a stylish carrying case. Looks great and travels well — bring it to game night in style.",
+      "A complete set with a stylish carrying case. Looks great and travels well.",
     price: "$40-70",
     href: "https://www.amazon.com/dp/B0FHXGBRR1?tag=welcome2mahj-20",
     tag: "Fun pick",
   },
 ];
+
+/* ───── BOOKS ───── */
 
 const BOOKS: GearItem[] = [
   {
@@ -227,16 +243,32 @@ const BOOKS: GearItem[] = [
   },
 ];
 
+/* ───── CARD COMPONENT ───── */
+
 function GearCard({ item }: { item: GearItem }) {
+  const isFeatured = item.featured;
   return (
     <a
       href={item.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="block rounded-xl border-2 border-[#C8A951]/30 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      className={`block rounded-xl border-2 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${
+        isFeatured
+          ? "border-[#C8A951] ring-2 ring-[#C8A951]/20"
+          : "border-[#C8A951]/30"
+      }`}
     >
+      {isFeatured && (
+        <div className="mb-3 rounded-lg bg-gradient-to-r from-[#C8A951] to-[#D4B85A] px-3 py-1.5 text-center text-[14px] font-black uppercase tracking-wider text-white">
+          Recommended for beginners
+        </div>
+      )}
       <div className="mb-3 flex items-center justify-between">
-        <span className="rounded-full bg-[#1A4D2E] px-3 py-1 text-[13px] font-bold uppercase tracking-wider text-white">
+        <span
+          className={`rounded-full px-3 py-1 text-[13px] font-bold uppercase tracking-wider text-white ${
+            isFeatured ? "bg-[#C8A951]" : "bg-[#1A4D2E]"
+          }`}
+        >
           {item.tag}
         </span>
         <span className="font-serif text-[17px] font-black text-[#C8A951]">
@@ -255,13 +287,21 @@ function GearCard({ item }: { item: GearItem }) {
         </div>
       </div>
       <div className="mt-4">
-        <span className="inline-block rounded-lg bg-[#1A4D2E] px-4 py-2 text-[14px] font-bold text-white transition hover:bg-[#0F3320]">
+        <span
+          className={`inline-block rounded-lg px-4 py-2 text-[14px] font-bold text-white transition ${
+            isFeatured
+              ? "bg-[#C8A951] hover:bg-[#B89840]"
+              : "bg-[#1A4D2E] hover:bg-[#0F3320]"
+          }`}
+        >
           View on Amazon &rarr;
         </span>
       </div>
     </a>
   );
 }
+
+/* ───── PAGE ───── */
 
 export default function GearPage() {
   return (
@@ -283,27 +323,53 @@ export default function GearPage() {
         </p>
       </div>
 
-      <SectionHeader>The Essentials</SectionHeader>
+      {/* ── Must-Have ── */}
+      <SectionHeader>You Need This</SectionHeader>
       <div className="space-y-4">
-        {ESSENTIALS.map((item) => (
+        {MUST_HAVE.map((item) => (
           <GearCard key={item.name} item={item} />
         ))}
       </div>
 
-      <SectionHeader>Nice to Have</SectionHeader>
+      {/* ── Our Picks ── */}
+      <SectionHeader>Pick Your First Set</SectionHeader>
+      <p className="mb-4 text-[15px] text-zinc-500">
+        We tested the options so you don&apos;t have to. Here are our top 3:
+      </p>
       <div className="space-y-4">
-        {NICE_TO_HAVE.map((item) => (
+        {OUR_PICKS.map((item) => (
           <GearCard key={item.name} item={item} />
         ))}
       </div>
 
+      {/* ── More Sets ── */}
+      <SectionHeader>More Sets to Compare</SectionHeader>
+      <div className="space-y-4">
+        {MORE_SETS.map((item) => (
+          <GearCard key={item.name} item={item} />
+        ))}
+      </div>
+
+      {/* ── Accessories ── */}
+      <SectionHeader>Accessories</SectionHeader>
+      <div className="space-y-4">
+        {ACCESSORIES.map((item) => (
+          <GearCard key={item.name} item={item} />
+        ))}
+      </div>
+
+      {/* ── Fun Sets ── */}
       <SectionHeader>Fun and Gift Sets</SectionHeader>
+      <p className="mb-4 text-[15px] text-zinc-500">
+        Looking for something special? These sets make great gifts.
+      </p>
       <div className="space-y-4">
         {FUN_SETS.map((item) => (
           <GearCard key={item.name} item={item} />
         ))}
       </div>
 
+      {/* ── Books ── */}
       <SectionHeader>Books</SectionHeader>
       <div className="space-y-4">
         {BOOKS.map((item) => (
