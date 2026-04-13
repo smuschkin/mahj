@@ -39,7 +39,7 @@ export default function Home() {
       {/* ── Quick Tools ── */}
       <SectionHeader>Quick Tools</SectionHeader>
 
-      <div className="mb-9 grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <div className="mb-9 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Link
           href="/cheatsheet"
           className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
@@ -69,6 +69,16 @@ export default function Home() {
             Scoring Calculator
           </span>
           <span className="text-[13px] text-zinc-500">Who pays what?</span>
+        </Link>
+        <Link
+          href="/gear"
+          className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
+        >
+          <span className="text-2xl">{"\u{1F3B4}"}</span>
+          <span className="font-serif text-sm font-black text-[var(--color-mid)]">
+            Recommended Gear
+          </span>
+          <span className="text-[13px] text-zinc-500">Tiles, sets, books</span>
         </Link>
       </div>
 
