@@ -95,6 +95,27 @@ const NICE_TO_HAVE: GearItem[] = [
   },
 ];
 
+const FUN_SETS: GearItem[] = [
+  {
+    name: "Pet-Themed American Mahjong Set",
+    emoji: "\u{1F43E}",
+    description:
+      "Adorable pet-themed tile illustrations make this set a conversation starter at game night. A fun gift for any animal-loving mahj player.",
+    price: "$40-60",
+    href: "https://www.amazon.com/dp/B0FTRVMY6S?tag=welcome2mahj-20",
+    tag: "Fun pick",
+  },
+  {
+    name: "Vintage-Inspired American Mahjong Set",
+    emoji: "\u{2728}",
+    description:
+      "Beautiful vintage-inspired designs with meaningful illustrations. Feels like playing with a piece of art. Makes an incredible gift.",
+    price: "$50-80",
+    href: "https://www.amazon.com/dp/B0GC61TPLX?tag=welcome2mahj-20",
+    tag: "Gift idea",
+  },
+];
+
 const BOOKS: GearItem[] = [
   {
     name: "A Beginner's Guide to American Mah Jongg",
@@ -182,6 +203,13 @@ export default function GearPage() {
       <SectionHeader>Nice to Have</SectionHeader>
       <div className="space-y-4">
         {NICE_TO_HAVE.map((item) => (
+          <GearCard key={item.name} item={item} />
+        ))}
+      </div>
+
+      <SectionHeader>Fun and Gift Sets</SectionHeader>
+      <div className="space-y-4">
+        {FUN_SETS.map((item) => (
           <GearCard key={item.name} item={item} />
         ))}
       </div>
