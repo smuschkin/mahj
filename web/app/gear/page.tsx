@@ -369,14 +369,6 @@ export default function GearPage() {
         ))}
       </div>
 
-      {/* ── Books ── */}
-      <SectionHeader>Books</SectionHeader>
-      <div className="space-y-4">
-        {BOOKS.map((item) => (
-          <GearCard key={item.name} item={item} />
-        ))}
-      </div>
-
       <div className="mt-12 rounded-xl bg-zinc-50 p-6 text-center">
         <p className="text-[14px] text-zinc-500">
           MAHJ is a participant in the Amazon Associates Program. As an Amazon
