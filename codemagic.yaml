@@ -1,0 +1,71 @@
+workflows:
+  ios-app-store:
+    name: iOS App Store Release
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      groups:
+        - app_store_credentials # APP_STORE_CONNECT_PRIVATE_KEY, KEY_IDENTIFIER, ISSUER_ID
+        - ios_signing # CERTIFICATE_P12_BASE64, CERTIFICATE_PASSWORD, PROVISIONING_PROFILE_BASE64
+      vars:
+        XCODE_WORKSPACE: "ios/App/App.xcworkspace"
+        XCODE_SCHEME: "App"
+        BUNDLE_ID: "com.mahj.learn"
+        APP_STORE_APPLE_ID: 6762031478
+      node: 20
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Install npm dependencies
+        script: |
+          npm ci
+      - name: Build Next.js static export
+        script: |
+          npm run build
+      - name: Capacitor sync
+        script: |
+          npx cap sync ios
+      - name: Install iOS pods
+        script: |
+          cd ios/App
+          pod install
+      - name: Set up code signing
+        script: |
+          set -e
+          # 1. Initialize the keychain
+          keychain initialize
+
+          # 2. Decode the .p12 certificate from base64 and import it
+          printf '%s' "$CERTIFICATE_P12_BASE64" | base64 --decode > /tmp/MAHJ_distribution.p12
+          ls -la /tmp/MAHJ_distribution.p12
+          file /tmp/MAHJ_distribution.p12
+          keychain add-certificates \
+            --certificate /tmp/MAHJ_distribution.p12 \
+            --certificate-password "$CERTIFICATE_PASSWORD"
+
+          # 3. Decode the provisioning profile from base64 and install it
+          PROFILE_DIR="$HOME/Library/MobileDevice/Provisioning Profiles"
+          mkdir -p "$PROFILE_DIR"
+          printf '%s' "$PROVISIONING_PROFILE_BASE64" | base64 --decode > "$PROFILE_DIR/MAHJ_App_Store.mobileprovision"
+
+          # 4. Apply profiles to the Xcode project
+          xcode-project use-profiles
+      - name: Set build number
+        script: |
+          cd ios/App
+          agvtool new-version -all $(($BUILD_NUMBER + 100))
+      - name: Build ipa
+        script: |
+          xcode-project build-ipa \
+            --workspace "$XCODE_WORKSPACE" \
+            --scheme "$XCODE_SCHEME"
+      - name: Upload to App Store Connect
+        script: |
+          APP_FILE=$(find $CM_BUILD_DIR/build/ios/ipa -name "*.ipa")
+          app-store-connect publish \
+            --path "$APP_FILE"
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
