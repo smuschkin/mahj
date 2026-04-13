@@ -24,17 +24,35 @@ const ESSENTIALS: GearItem[] = [
     description:
       "You need this to play. The National Mah Jongg League releases a new card every year with the official hands. This is the one thing you cannot play without.",
     price: "~$15",
-    href: "https://www.amazon.com/s?k=NMJL+mah+jongg+card+2026&tag=welcome2mahj-20",
+    href: "https://www.amazon.com/dp/B0GWCVL23K?tag=welcome2mahj-20",
     tag: "Essential",
   },
   {
-    name: "American Mahjong Tile Set (166 tiles)",
+    name: "GUSTARIA American Mahjong Set",
     emoji: "\u{1F004}",
     description:
-      "A full American Mahjong set with 166 tiles (152 game tiles + extras), 4 racks, dice, and a carrying case. Look for sets that include Jokers — not all sets do.",
-    price: "$30-80",
-    href: "https://www.amazon.com/s?k=american+mahjong+set+166+tiles&tag=welcome2mahj-20",
+      "A complete American Mahjong set with tiles, racks, dice, and a carrying case. Great starter set with everything you need.",
+    price: "$30-50",
+    href: "https://www.amazon.com/dp/B0D2RC4PWJ?tag=welcome2mahj-20",
     tag: "Essential",
+  },
+  {
+    name: "Topmahjing American Mahjong Tile Set",
+    emoji: "\u{1F3B4}",
+    description:
+      "Another great option with quality tiles and a complete American Mahjong setup. Compare prices and reviews to find the set that fits your budget.",
+    price: "$30-60",
+    href: "https://www.amazon.com/dp/B0GL95VB3L?tag=welcome2mahj-20",
+    tag: "Alternative",
+  },
+  {
+    name: "Marllifenney American Mahjong Set",
+    emoji: "\u{1F3B2}",
+    description:
+      "A colorful American Mahjong set with a carrying case. Multiple color options available — pick one that matches your style.",
+    price: "$30-60",
+    href: "https://www.amazon.com/dp/B0G13KW3L8?tag=welcome2mahj-20",
+    tag: "Alternative",
   },
 ];
 
@@ -72,7 +90,7 @@ const NICE_TO_HAVE: GearItem[] = [
     description:
       "A small stand that holds your NMJL card upright so you can reference it without picking it up every turn. Small but handy.",
     price: "$5-10",
-    href: "https://www.amazon.com/s?k=mahjong+card+holder+stand&tag=welcome2mahj-20",
+    href: "https://www.amazon.com/dp/B0FCRMXB9N?tag=welcome2mahj-20",
     tag: "Nice to have",
   },
 ];
