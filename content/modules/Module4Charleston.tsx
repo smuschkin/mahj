@@ -218,12 +218,12 @@ export default function Module4Charleston() {
               These fit many &quot;consecutive number&quot; hands on the card. Keep tiles that work together.
             </div>
             <div className="rounded-md border-l-4 border-[var(--color-green)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">✅ Keep — pair of 5 Cracks</div>
+              <div className="font-black text-[var(--color-mid)]">✅ Keep — pair of 5 Craks</div>
               Pairs are valuable — they can grow into groups of 3 or stay as the final pair.
             </div>
             <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">❌ Pass — lone 1 Crack</div>
-              Isolated, far from your other Cracks. Hard to use.
+              <div className="font-black text-[var(--color-mid)]">❌ Pass — lone 1 Crak</div>
+              Isolated, far from your other Craks. Hard to use.
             </div>
             <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
               <div className="font-black text-[var(--color-mid)]">❌ Pass — lone 9 Dot</div>
@@ -444,9 +444,9 @@ export default function Module4Charleston() {
           </TileRow>
 
           <p className="text-[14px] text-zinc-600">
-            The player across has been discarding Cracks all Charleston — they probably
+            The player across has been discarding Craks all Charleston — they probably
             don&apos;t want yours either. Ask for a 1-tile courtesy: trade your useless
-            4 Crack for whatever they don&apos;t want. You might get lucky.
+            4 Crak for whatever they don&apos;t want. You might get lucky.
           </p>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">

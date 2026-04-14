@@ -55,7 +55,7 @@ const PUZZLES: Puzzle[] = [
     context: (
       <p>
         You&apos;re on an early turn. You&apos;re building toward an all-suits hand
-        — Bams or Cracks look strongest. Pick the tile that fits the <em>least</em>.
+        — Bams or Craks look strongest. Pick the tile that fits the <em>least</em>.
       </p>
     ),
     tiles: [
@@ -107,7 +107,7 @@ const PUZZLES: Puzzle[] = [
       </div>
     ),
     options: [
-      "The East Wind and the Cracks — they don't fit a Bam hand",
+      "The East Wind and the Craks — they don't fit a Bam hand",
       "The Green Dragons — they're honors, not Bams",
       "The Joker — it doesn't match anything",
       "The pair of 5 Bams — too common",
@@ -115,9 +115,9 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 0,
     explanation: (
       <>
-        The <strong>East Wind and 3 Cracks</strong>{" "}are all dead weight — none fit
+        The <strong>East Wind and 3 Craks</strong>{" "}are all dead weight — none fit
         a Bam hand. Discard the East Wind first (lone honors are dangerous to hold),
-        then the Cracks over the next turns. The Green Dragon pair has potential
+        then the Craks over the next turns. The Green Dragon pair has potential
         (dragons pair with suits). The Joker is <strong>never</strong>{" "}a discard.
       </>
     ),
@@ -199,7 +199,7 @@ const PUZZLES: Puzzle[] = [
       </>
     ),
     options: [
-      "Into the pair of 5 Crack",
+      "Into the pair of 5 Crak",
       "Into the 4 Dot group (becoming a Pung)",
       "Into the 7 Bam group (becoming a Pung)",
       "Either of the two Pung groups, but never the pair",
@@ -239,16 +239,16 @@ const PUZZLES: Puzzle[] = [
       </div>
     ),
     options: [
-      "East Wind + 2 Cracks — pass the junk that doesn't fit your Bam direction",
-      "The Joker + 2 Cracks — get rid of the wild card early",
+      "East Wind + 2 Craks — pass the junk that doesn't fit your Bam direction",
+      "The Joker + 2 Craks — get rid of the wild card early",
       "The Green Dragon pair + East Wind — honors aren't useful",
       "3 Bams — pass what you have the most of",
     ],
     correctIndex: 0,
     explanation: (
       <>
-        <strong>East Wind + 2 Cracks.</strong>{" "}The East Wind is a lone honor
-        (dead weight) and the Cracks don&apos;t fit your Bam direction. The
+        <strong>East Wind + 2 Craks.</strong>{" "}The East Wind is a lone honor
+        (dead weight) and the Craks don&apos;t fit your Bam direction. The
         Green Dragon pair has value (dragons pair with Bams). The Joker is{" "}
         <strong>never</strong>{" "}passed. Never pass Bams when you&apos;re building Bams.
       </>
@@ -295,8 +295,8 @@ const PUZZLES: Puzzle[] = [
     prompt: "Should you call this tile?",
     context: (
       <p>
-        It&apos;s <strong>Turn 2</strong> — very early. You have 2 of the 5 Crack in
-        your rack and the player on your left just discarded a 5 Crack. You haven&apos;t
+        It&apos;s <strong>Turn 2</strong> — very early. You have 2 of the 5 Crak in
+        your rack and the player on your left just discarded a 5 Crak. You haven&apos;t
         committed to a single candidate hand yet — you&apos;re still flexible
         between two or three.
       </p>
@@ -311,7 +311,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         Module 5 + 6: calling commits you. Once the Pung is exposed, you can&apos;t
-        rebuild toward a hand that doesn&apos;t use 5 Crack. Early in the game,
+        rebuild toward a hand that doesn&apos;t use 5 Crak. Early in the game,
         flexibility beats commitment. Wait until you&apos;ve narrowed down to one
         primary candidate before calling.
       </>
@@ -328,12 +328,12 @@ const PUZZLES: Puzzle[] = [
       <p>
         You just announced &quot;Four Bam&quot; as you placed a discarded tile, but
         the moment you let go you realize you actually placed a <strong>Four
-        Crack</strong>. The next player is reaching for the wall.
+        Crak</strong>. The next player is reaching for the wall.
       </p>
     ),
     options: [
       "Stay quiet and hope nobody noticed",
-      "Stop everything immediately and say 'Hold on — I misnamed that, it's actually 4 Crack'",
+      "Stop everything immediately and say 'Hold on — I misnamed that, it's actually 4 Crak'",
       "Pick the tile back up and re-name it",
       "Apologize over and over until the table forgets",
     ],
@@ -354,7 +354,7 @@ const PUZZLES: Puzzle[] = [
     kind: "choice",
     id: "p9",
     tag: "Discard · Suit commitment",
-    prompt: "You've committed to an all-Bam hand. Your hand has 10 Bams, a Joker, a 3 Crack, and a 7 Dot. Which tiles do you discard first?",
+    prompt: "You've committed to an all-Bam hand. Your hand has 10 Bams, a Joker, a 3 Crak, and a 7 Dot. Which tiles do you discard first?",
     context: (
       <div className="flex flex-wrap items-end justify-center gap-1.5">
         <Tile type="bam" value={1} size="sm" />
@@ -373,7 +373,7 @@ const PUZZLES: Puzzle[] = [
       </div>
     ),
     options: [
-      "The 3 Crack and 7 Dot — both are junk, discard them over the next two turns",
+      "The 3 Crak and 7 Dot — both are junk, discard them over the next two turns",
       "The Joker — it's not a Bam",
       "A pair of Bams to stay flexible",
       "The 3 Bam — it's a lonely single",
@@ -381,7 +381,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 0,
     explanation: (
       <>
-        <strong>Both the 3 Crack and 7 Dot</strong>{" "}are junk — neither fits your
+        <strong>Both the 3 Crak and 7 Dot</strong>{" "}are junk — neither fits your
         all-Bam hand. Discard them over your next two turns (the hotter tile
         first). Never discard a Joker, and don&apos;t break your Bam groups.
       </>
@@ -398,7 +398,7 @@ const PUZZLES: Puzzle[] = [
       <>
         <p>Late game. Two opponents have exposures:</p>
         <ul className="ml-5 list-disc space-y-1 text-[13px] text-zinc-700">
-          <li><strong>Player A:</strong>{" "}Pung of 5 Crack + Pung of 5 Dot exposed</li>
+          <li><strong>Player A:</strong>{" "}Pung of 5 Crak + Pung of 5 Dot exposed</li>
           <li><strong>Player B:</strong>{" "}Pung of Green Dragon exposed</li>
           <li><strong>Discard pile:</strong>{" "}two 8 Bams already discarded</li>
         </ul>
@@ -546,7 +546,7 @@ const PUZZLES: Puzzle[] = [
     kind: "choice",
     id: "p15",
     tag: "Calling · Timing",
-    prompt: "It's Turn 14 (late game). You have 2 of the 3 Crack and need a Pung for your hand. Someone discards a 3 Crack. Call?",
+    prompt: "It's Turn 14 (late game). You have 2 of the 3 Crak and need a Pung for your hand. Someone discards a 3 Crak. Call?",
     options: [
       "No — calling always exposes too much",
       "Yes — it's late, you need it, and your hand is committed. Take it.",
@@ -592,7 +592,7 @@ const PUZZLES: Puzzle[] = [
     kind: "choice",
     id: "p17",
     tag: "Discard · Junk tiles",
-    prompt: "Your hand has 2 junk tiles — a lone Soap and a lone 8 Crack. Which do you discard first?",
+    prompt: "Your hand has 2 junk tiles — a lone Soap and a lone 8 Crak. Which do you discard first?",
     context: (
       <div className="flex flex-wrap items-end justify-center gap-1.5">
         <Tile type="bam" value={2} size="sm" />
@@ -612,7 +612,7 @@ const PUZZLES: Puzzle[] = [
     ),
     options: [
       "Soap first — lone honors are more dangerous to hold (someone might need it for a dragons hand)",
-      "8 Crack first — middle numbers are hotter",
+      "8 Crak first — middle numbers are hotter",
       "Either one — doesn't matter",
       "Neither — keep them both as defense",
     ],
@@ -621,7 +621,7 @@ const PUZZLES: Puzzle[] = [
       <>
         <strong>Soap first.</strong>{" "}Both are junk, but a lone honor is more
         dangerous to hold — someone building a winds-and-dragons hand could call
-        it. The 8 Crack goes next turn. Both need to go, but order matters.
+        it. The 8 Crak goes next turn. Both need to go, but order matters.
       </>
     ),
   },
@@ -653,11 +653,11 @@ const PUZZLES: Puzzle[] = [
     kind: "choice",
     id: "p19",
     tag: "Defense · Hot suit",
-    prompt: "Nobody at the table has discarded a single Dot all game. Three players have discarded Cracks freely. What does this tell you?",
+    prompt: "Nobody at the table has discarded a single Dot all game. Three players have discarded Craks freely. What does this tell you?",
     options: [
       "Nothing — it's random",
       "Dots are the 'hot' suit — at least one player is hoarding them. Avoid discarding Dots.",
-      "Cracks are the hot suit",
+      "Craks are the hot suit",
       "You should collect Dots too",
     ],
     correctIndex: 1,
@@ -665,7 +665,7 @@ const PUZZLES: Puzzle[] = [
       <>
         The suit nobody is discarding is the <strong>hot suit</strong> —
         someone is collecting it. Discarding Dots is risky because you could
-        be feeding that player exactly what they need. Cracks are the cold
+        be feeding that player exactly what they need. Craks are the cold
         suit: everyone is dumping them, so they&apos;re safer. Module 7.
       </>
     ),
@@ -771,7 +771,7 @@ const PUZZLES: Puzzle[] = [
     kind: "choice",
     id: "p24",
     tag: "Strategy · Commit to a hand",
-    prompt: "After 6 draws you're split between Bams and Cracks. Which direction do you commit to, and what goes first?",
+    prompt: "After 6 draws you're split between Bams and Craks. Which direction do you commit to, and what goes first?",
     context: (
       <div className="flex flex-wrap items-end justify-center gap-1.5">
         <Tile type="bam" value={3} size="sm" />
@@ -790,8 +790,8 @@ const PUZZLES: Puzzle[] = [
       </div>
     ),
     options: [
-      "Commit to Bams — drop the Red Dragon first, then the Cracks over the next turns",
-      "Commit to Cracks — drop the Bam triples",
+      "Commit to Bams — drop the Red Dragon first, then the Craks over the next turns",
+      "Commit to Craks — drop the Bam triples",
       "Stay flexible — keep everything",
       "Commit to Bams — drop the Jokers first since they're not Bams",
     ],
@@ -799,9 +799,9 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         <strong>Commit to Bams.</strong>{" "}You have a triple (3s), two pairs (5s
-        and 7s), plus 2 Jokers — a strong foundation. The Cracks are scattered
+        and 7s), plus 2 Jokers — a strong foundation. The Craks are scattered
         singles with no pairs. Drop the <strong>Red Dragon first</strong>{" "}(lone
-        honor, fits neither direction), then the Cracks over the next turns.
+        honor, fits neither direction), then the Craks over the next turns.
         Jokers are <strong>never</strong>{" "}discarded.
       </>
     ),
@@ -863,7 +863,7 @@ const PUZZLES: Puzzle[] = [
       <>
         <p>Their exposures are all Bams. You need to discard something safe.</p>
         <p className="mt-1 text-[12px] italic text-zinc-500">
-          The discard pile already has: two 4 Cracks and one 8 Dot.
+          The discard pile already has: two 4 Craks and one 8 Dot.
         </p>
       </>
     ),
@@ -885,9 +885,9 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 2,
     explanation: (
       <>
-        The <strong>4 Crack</strong>{" "}is the safest choice. Two are already in
+        The <strong>4 Crak</strong>{" "}is the safest choice. Two are already in
         the discard pile (only 2 remain), and the threat player is on Bams —
-        they have zero interest in Cracks. Any Bam is extremely dangerous.
+        they have zero interest in Craks. Any Bam is extremely dangerous.
         The 8 Dot has only 1 copy discarded (3 still live). The honors are
         unknown. Module 7: combine &quot;already discarded&quot; with
         &quot;wrong suit for the threat.&quot;

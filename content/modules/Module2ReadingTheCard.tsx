@@ -107,7 +107,7 @@ export default function Module2ReadingTheCard() {
           </p>
           <Callout variant="info">
             <strong>The card changes every April</strong>
-            {" (typically the second Tuesday). Last year's hands are no longer legal — you'll buy a fresh card each spring from the NMJL for about $14. Think of it like a new season in a video game."}
+            {" (typically the second Tuesday). Last year's hands are no longer legal — you'll buy a fresh card each spring from the NMJL for about $15. Think of it like a new season in a video game."}
           </Callout>
         </LessonScreen>
 
@@ -118,16 +118,15 @@ export default function Module2ReadingTheCard() {
             left side. Each category groups hands that share a theme:
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li><strong>Year hand</strong> — built around the digits of the current year</li>
+            <li><strong>2025</strong> — built around the digits of the current year</li>
             <li><strong>2468</strong> — even-numbered tiles only</li>
-            <li><strong>Any like numbers</strong> — same number across suits</li>
-            <li><strong>Addition hands</strong> — tile numbers that add up</li>
+            <li><strong>Any Like Numbers</strong> — same number across suits</li>
             <li><strong>Quints</strong> — groups of 5 identical tiles</li>
-            <li><strong>Consecutive run</strong> — tiles in numerical order</li>
+            <li><strong>Consecutive Run</strong> — tiles in numerical order</li>
             <li><strong>13579</strong> — odd-numbered tiles only</li>
-            <li><strong>Winds &amp; Dragons</strong> — honor tiles</li>
+            <li><strong>Winds - Dragons</strong> — honor tiles</li>
             <li><strong>369</strong> — only 3s, 6s, and 9s</li>
-            <li><strong>Singles &amp; Pairs</strong> — no groups of 3 or more</li>
+            <li><strong>Singles and Pairs</strong> — no groups of 3 or more</li>
           </ul>
           <p className="mt-2 text-[14px] text-zinc-700">
             Within each category, you&apos;ll see one or more{" "}
@@ -140,13 +139,16 @@ export default function Module2ReadingTheCard() {
             stays the same. Once you learn how to read one card, you can read any
             card.
           </Callout>
+          <Callout variant="info">
+            <strong>Soap = zero.</strong> The White Dragon (&quot;Soap&quot;) is used as the number 0 on the card. It can be used with any suit. You&apos;ll see this in the year hands (e.g. 2-0-2-5).
+          </Callout>
         </LessonScreen>
 
         {/* ── 3. Colors = suits ── */}
         <LessonScreen title="🎨 Colors = Suits">
           <p>
             Tiles on the card are printed in <strong>three colors</strong> — one
-            color per suit (Bams, Cracks, Dots). The specific color-to-suit
+            color per suit (Bams, Craks, Dots). The specific color-to-suit
             assignment doesn&apos;t matter — <strong>you pick</strong>{" "}which suit
             goes with which color when you build the hand.
           </p>
@@ -181,14 +183,14 @@ export default function Module2ReadingTheCard() {
             </p>
 
             {/* Mock card line */}
-            <div className="mb-3 flex items-center justify-center gap-2 rounded-md bg-[#FAF7EC] px-4 py-3 font-mono text-lg font-black tracking-widest">
+            <div className="mb-3 flex flex-wrap items-center justify-center gap-1 sm:gap-2 rounded-md bg-[#FAF7EC] px-3 py-3 font-mono text-base sm:text-lg font-black tracking-wider sm:tracking-widest">
               <span className="text-blue-600">FFF</span>
-              <span className="mx-1 text-zinc-300">·</span>
+              <span className="text-zinc-300">·</span>
               <span className="text-blue-600">1111</span>
-              <span className="mx-1 text-zinc-300">·</span>
+              <span className="text-zinc-300">·</span>
               <span className="text-red-600">1111</span>
-              <span className="mx-1 text-zinc-300">·</span>
-              <span className="text-green-600">11</span>
+              <span className="text-zinc-300">·</span>
+              <span className="text-green-600">111</span>
             </div>
 
             <p className="mb-2 text-center text-[12px] italic text-zinc-500">
@@ -212,11 +214,11 @@ export default function Module2ReadingTheCard() {
             </div>
 
             <p className="mt-3 text-[13px] text-zinc-700">
-              Reading this line: <strong>3 Flowers</strong>, then a{" "}
-              <strong>kong of 1s in one suit</strong>{" "}(blue), a{" "}
-              <strong>kong of 1s in a different suit</strong>{" "}(red), and a{" "}
-              <strong>pair of 1s in the third suit</strong>{" "}(green). You choose
-              which real suit goes with which color — e.g. blue = Bams, red = Cracks,
+              Reading this line: <strong>3 Flowers</strong>, then{" "}
+              <strong>four 1s in one suit</strong>{" "}(blue),{" "}
+              <strong>four 1s in a different suit</strong>{" "}(red), and{" "}
+              <strong>three 1s in the third suit</strong>{" "}(green). You choose
+              which real suit goes with which color — e.g. blue = Bams, red = Craks,
               green = Dots.
             </p>
           </div>
@@ -247,7 +249,7 @@ export default function Module2ReadingTheCard() {
                 <SymbolRow symbol="1–9" meaning="A tile's face value in that suit" />
                 <SymbolRow symbol="F" meaning="Flower — any of the 8 flower tiles (all interchangeable)" />
                 <SymbolRow symbol="D" meaning="Dragon — Red, Green, or White (context tells you which)" />
-                <SymbolRow symbol="0" meaning='White Dragon ("Soap") — the zero/blank tile' />
+                <SymbolRow symbol="O" meaning='White Dragon ("Soap") — the zero/blank tile' />
                 <SymbolRow symbol="N E W S" meaning="Wind tiles — North, East, West, South" />
                 <SymbolRow symbol="C" meaning="Concealed — no calling allowed; every tile must come from the wall or Charleston" />
                 <SymbolRow symbol="X" meaning="Exposed — you may call tiles from other players' discards" />
@@ -460,9 +462,9 @@ export default function Module2ReadingTheCard() {
             could be built as:
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>Three 5-Bams + three 5-Cracks + three 5-Dots</li>
-            <li>Three 2-Bams + three 2-Cracks + three 2-Dots</li>
-            <li>Three 9-Bams + three 9-Cracks + three 9-Dots</li>
+            <li>Three 5-Bams + three 5-Craks + three 5-Dots</li>
+            <li>Three 2-Bams + three 2-Craks + three 2-Dots</li>
+            <li>Three 9-Bams + three 9-Craks + three 9-Dots</li>
             <li>...any number from 1–9 works</li>
           </ul>
           <p className="mt-2 text-[14px] text-zinc-700">
@@ -488,7 +490,7 @@ export default function Module2ReadingTheCard() {
           <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
             <li>
               <strong>Sort your rack by suit</strong> — group all your Bams together,
-              all your Cracks, all your Dots. Put honors (winds, dragons) and
+              all your Craks, all your Dots. Put honors (winds, dragons) and
               flowers on one end.
             </li>
             <li>
@@ -592,7 +594,7 @@ export default function Module2ReadingTheCard() {
                 question:
                   "On the NMJL card, what does a \"C\" next to a hand mean?",
                 options: [
-                  "The hand uses Cracks",
+                  "The hand uses Craks",
                   "The hand is concealed — no calling allowed",
                   "The hand is common and easy",
                   "The hand uses consecutive numbers",

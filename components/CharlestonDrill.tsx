@@ -33,9 +33,9 @@ const SCENARIOS: Scenario[] = [
       { type: "crack", value: 7 }, { type: "dot", value: 3 }, { type: "wind", value: "N" },
       { type: "dragon", value: "white" },
     ],
-    bestPasses: [9, 10, 11], // 7 Crack, 3 Dot, North
+    bestPasses: [9, 10, 11], // 7 Crak, 3 Dot, North
     explanation:
-      "The 7 Crack, 3 Dot, and North Wind fit nothing in an all-Bam hand. The White Dragon (Soap) also doesn't fit, but passing it is riskier — it could help an opponent's year hand. Any 3 of those 4 is a good pass.",
+      "The 7 Crak, 3 Dot, and North Wind fit nothing in an all-Bam hand. The White Dragon (Soap) also doesn't fit, but passing it is riskier — it could help an opponent's year hand. Any 3 of those 4 is a good pass.",
   },
   {
     handHint: "Going for Winds & Dragons (pungs of winds + pair of Red Dragons)",
@@ -47,9 +47,9 @@ const SCENARIOS: Scenario[] = [
       { type: "bam", value: 3 }, { type: "bam", value: 7 },
       { type: "crack", value: 5 }, { type: "dot", value: 9 }, { type: "dot", value: 2 },
     ],
-    bestPasses: [8, 9, 10, 11, 12], // Any 3 of: 3 Bam, 7 Bam, 5 Crack, 9 Dot, 2 Dot
+    bestPasses: [8, 9, 10, 11, 12], // Any 3 of: 3 Bam, 7 Bam, 5 Crak, 9 Dot, 2 Dot
     explanation:
-      "All 5 suited tiles (3 Bam, 7 Bam, 5 Crack, 9 Dot, 2 Dot) are useless for a Winds & Dragons hand. Pass any 3 of them — keep the winds, dragons, and joker.",
+      "All 5 suited tiles (3 Bam, 7 Bam, 5 Crak, 9 Dot, 2 Dot) are useless for a Winds & Dragons hand. Pass any 3 of them — keep the winds, dragons, and joker.",
   },
   {
     handHint: "Eyeing a 2468 Dots hand (pairs and pungs of even Dots)",
@@ -61,12 +61,12 @@ const SCENARIOS: Scenario[] = [
       { type: "crack", value: 9 }, { type: "wind", value: "W" },
       { type: "dragon", value: "green" },
     ],
-    bestPasses: [8, 9, 10], // 1 Bam, 5 Bam, 9 Crack
+    bestPasses: [8, 9, 10], // 1 Bam, 5 Bam, 9 Crak
     explanation:
-      "The odd-numbered suited tiles (1 Bam, 5 Bam, 9 Crack) are completely useless for a 2468 Dots hand. The West Wind and Green Dragon also don't fit, but honors are less dangerous to hold for one more pass.",
+      "The odd-numbered suited tiles (1 Bam, 5 Bam, 9 Crak) are completely useless for a 2468 Dots hand. The West Wind and Green Dragon also don't fit, but honors are less dangerous to hold for one more pass.",
   },
   {
-    handHint: "Building a consecutive run in Cracks (pungs of 3-4-5 Crack + flowers)",
+    handHint: "Building a consecutive run in Craks (pungs of 3-4-5 Crak + flowers)",
     tiles: [
       { type: "crack", value: 3 }, { type: "crack", value: 3 }, { type: "crack", value: 4 },
       { type: "crack", value: 4 }, { type: "crack", value: 5 }, { type: "crack", value: 5 },
@@ -77,7 +77,7 @@ const SCENARIOS: Scenario[] = [
     ],
     bestPasses: [9, 10, 11], // 9 Bam, 1 Dot, East
     explanation:
-      "The 9 Bam, 1 Dot, East Wind, and South Wind are all useless for a consecutive Cracks hand. Any 3 of those 4 are a good pass — keep your Cracks, flowers, and joker.",
+      "The 9 Bam, 1 Dot, East Wind, and South Wind are all useless for a consecutive Craks hand. Any 3 of those 4 are a good pass — keep your Craks, flowers, and joker.",
   },
   {
     handHint: "Year hand 2026 — need 2s, Soaps (0), and 6s",
@@ -89,9 +89,9 @@ const SCENARIOS: Scenario[] = [
       { type: "crack", value: 7 }, { type: "bam", value: 3 },
       { type: "dot", value: 9 }, { type: "wind", value: "N" },
     ],
-    bestPasses: [9, 10, 11], // 7 Crack, 3 Bam, 9 Dot
+    bestPasses: [9, 10, 11], // 7 Crak, 3 Bam, 9 Dot
     explanation:
-      "The 7 Crack, 3 Bam, and 9 Dot don't match any digit in 2026. The North Wind also doesn't fit, but honors are usually safer to hold. Pass the suited junk first.",
+      "The 7 Crak, 3 Bam, and 9 Dot don't match any digit in 2026. The North Wind also doesn't fit, but honors are usually safer to hold. Pass the suited junk first.",
   },
 ];
 
@@ -103,7 +103,7 @@ const PASS_THRESHOLD = 2;
 function nameOf(t: TileSpec): string {
   switch (t.type) {
     case "bam": return `${t.value} Bam`;
-    case "crack": return `${t.value} Crack`;
+    case "crack": return `${t.value} Crak`;
     case "dot": return `${t.value} Dot`;
     case "wind": return ({ N: "North", E: "East", W: "West", S: "South" } as const)[t.value];
     case "dragon":

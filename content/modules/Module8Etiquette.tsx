@@ -97,7 +97,7 @@ export default function Module8Etiquette() {
           </p>
 
           <DoDontRow
-            doText='Say the tile by name before or as it touches the table — "Six Crack."'
+            doText='Say the tile by name before or as it touches the table — "Six Crak."'
             dontText="Slide a tile silently into the center. Other players may miss a tile they need."
           />
           <DoDontRow
@@ -214,6 +214,9 @@ export default function Module8Etiquette() {
             playing but can&apos;t win. Some groups add an extra penalty, but
             per NMJL rules you just pay the eventual winner like any other
             loser. Always check before you call.
+          </Callout>
+          <Callout variant="info">
+            <strong>Don&apos;t throw in your hand until Mahjong is verified.</strong>{" "}When someone calls Mahjong, keep your tiles on your rack until the table confirms the winning hand is valid. If the call was wrong, play continues — but only if everyone&apos;s hand is still intact.
           </Callout>
         </LessonScreen>
 

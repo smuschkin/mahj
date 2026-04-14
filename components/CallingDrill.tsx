@@ -83,7 +83,7 @@ const SCENARIOS: Scenario[] = [
     explanation: (
       <>
         <strong>Pass.</strong>{" "}It&apos;s Turn 1 and your hand is scattered across
-        Bams, Dots, and Cracks. Calling now would lock you into a Cracks exposure
+        Bams, Dots, and Craks. Calling now would lock you into a Craks exposure
         before you know which hand to build. Stay flexible early.
       </>
     ),
@@ -267,13 +267,13 @@ const SCENARIOS: Scenario[] = [
       { type: "joker" },
       { type: "joker" },
     ],
-    context: "Turn 12 (late game). You're fully committed to Cracks. Your hand needs a Pung of 6 Crack.",
+    context: "Turn 12 (late game). You're fully committed to Craks. Your hand needs a Pung of 6 Crak.",
     correct: "call",
     explanation: (
       <>
         <strong>Call.</strong>{" "}Late game, you&apos;re committed, and this is a tile
         you specifically need. The wall is running out — pass on this and you may
-        never see another 6 Crack. Calling is the right move here.
+        never see another 6 Crak. Calling is the right move here.
       </>
     ),
   },

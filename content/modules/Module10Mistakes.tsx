@@ -226,18 +226,17 @@ export default function Module10Mistakes() {
             }
             cost={
               <>
-                Your hand is <strong>dead</strong>{" "}for the rest of the round.
-                You keep playing (draw and discard) but can&apos;t win, and you
-                pay the winner normally at the end. Some groups add an extra
-                penalty, but that&apos;s a house rule.
+                It depends on what happened:
+                <ul className="ml-5 mt-1 list-disc space-y-1">
+                  <li>If you didn&apos;t expose your hand and everyone else&apos;s hand is intact — no penalty, play continues.</li>
+                  <li>If you exposed part or all of your hand — your hand is dead. You keep playing but can&apos;t win.</li>
+                  <li>If another player also exposed their hand because of your call — their hand is dead too. The remaining players with intact hands continue. You pay double the hand&apos;s value to any player whose hand is still intact.</li>
+                </ul>
               </>
             }
             recover={
               <>
-                <strong>None — pay up gracefully.</strong>{" "}The fix: before you call
-                Mahjong, check your tiles against the specific hand on the card,{" "}
-                <em>tile by tile</em>. When in doubt, keep playing — you&apos;ll
-                usually get another chance.
+                The fix is preventative: before you call Mahjong, check your tiles against the specific hand on the card, tile by tile. And remember: players should not throw in their hands until Mahjong is verified. Wait for the table to confirm the win before anyone mixes their tiles.
               </>
             }
           />
@@ -405,7 +404,7 @@ export default function Module10Mistakes() {
             <li>
               <strong>Describe what happened factually.</strong> &quot;I think I drew
               out of turn,&quot; or &quot;I just said 4 Bam but it&apos;s actually 4
-              Crack.&quot; No excuses, no panic — just the facts.
+              Crak.&quot; No excuses, no panic — just the facts.
             </li>
             <li>
               <strong>Let the table decide.</strong>{" "}Most groups are forgiving with

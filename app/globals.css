@@ -36,6 +36,10 @@
   --font-sans: var(--font-lato), -apple-system, sans-serif;
 }
 
+html {
+  overflow-x: clip;
+}
+
 html, body {
   background: var(--color-ivory);
   background-image:

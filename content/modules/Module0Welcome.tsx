@@ -88,7 +88,7 @@ export default function Module0Welcome() {
             {([
               ["2–3 friends (3 or 4 players)", "4 players is standard, but you can play with 3 in a pinch. Until you have a group, the app's drills let you practice solo."],
               ["A 152-tile American Mahjong set", "A starter set runs $40–80. Look for one labeled \"American\" — it should include 8 jokers, 4 racks, and 2 dice."],
-              ["The official NMJL card", "About $14/year from the National Mah Jongg League. Lists all legal winning hands, updated every spring."],
+              ["The official NMJL card", "About $15/year from the National Mah Jongg League. Lists all legal winning hands, updated every spring."],
               ["A real table", "Card table or kitchen table. Coffee tables are too small for 4 walls + racks + a play area."],
               ["About 2 hours for your first session", "Setup is slow at first and you'll have lots of questions. Pace yourself."],
             ] as const).map(([title, body], i) => (
@@ -108,7 +108,7 @@ export default function Module0Welcome() {
               ["A table cover or mat", "Protects the table and quiets the tile noise. Felt or neoprene mats are ideal."],
               ["A tile pusher", "A flat bar that helps you push your wall forward neatly."],
               ["Card holders / stands", "Small stands to prop up the NMJL card so your hands stay free."],
-              ["Pencil and paper (or a scoring app)", "Someone has to track the score. A small notepad works fine."],
+              ["Pencil and paper (or a scoring app)", "If you want to keep score. A small notepad works fine."],
               ["Snacks & drinks", "On a side table, away from the tiles. Mahjong is a social game — food is traditional."],
               ["This app on your phone", "The scoring calculator, glossary, and cheat sheet are designed for game-night reference."],
             ] as const).map(([title, body], i) => (
@@ -164,7 +164,7 @@ export default function Module0Welcome() {
                 </span>
                 <div>
                   <strong className="text-[var(--color-mid)]">{title}</strong>
-                  <span className="text-zinc-600"> — {body}</span>
+                  <span className="text-zinc-600"> {body}</span>
                 </div>
               </li>
             ))}

@@ -27,12 +27,12 @@ const PASS_THRESHOLD = 16; // 80%
 function nameOf(tile: TileSpec): string {
   switch (tile.type) {
     case "bam": return `${tile.value} Bam`;
-    case "crack": return `${tile.value} Crack`;
+    case "crack": return `${tile.value} Crak`;
     case "dot": return `${tile.value} Dot`;
     case "wind":
       return ({ N: "North", E: "East", W: "West", S: "South" } as const)[tile.value];
     case "dragon":
-      return tile.value === "red" ? "Red Dragon" : tile.value === "green" ? "Green Dragon" : "Soap";
+      return tile.value === "red" ? "Red" : tile.value === "green" ? "Green" : "Soap";
     case "flower": return "Flower";
     case "joker": return "Joker";
   }
@@ -73,19 +73,20 @@ function wrongAnswers(correct: string, tile: TileSpec): string[] {
 
   if (tile.type === "bam" || tile.type === "crack" || tile.type === "dot") {
     // Same number, different suits
+    const suitLabels: Record<Suit, string> = { bam: "Bam", crack: "Crak", dot: "Dot" };
     const suits: Suit[] = ["bam", "crack", "dot"];
     for (const s of suits) {
-      const name = `${tile.value} ${s.charAt(0).toUpperCase() + s.slice(1)}`;
+      const name = `${tile.value} ${suitLabels[s]}`;
       if (name !== correct) wrongs.push(name);
     }
     // Same suit, nearby numbers
     const v = tile.value as number;
-    if (v > 1) wrongs.push(`${v - 1} ${tile.type.charAt(0).toUpperCase() + tile.type.slice(1)}`);
-    if (v < 9) wrongs.push(`${v + 1} ${tile.type.charAt(0).toUpperCase() + tile.type.slice(1)}`);
+    if (v > 1) wrongs.push(`${v - 1} ${suitLabels[tile.type]}`);
+    if (v < 9) wrongs.push(`${v + 1} ${suitLabels[tile.type]}`);
   } else if (tile.type === "wind") {
     wrongs.push("North", "East", "West", "South");
   } else if (tile.type === "dragon") {
-    wrongs.push("Red Dragon", "Green Dragon", "Soap");
+    wrongs.push("Red", "Green", "Soap");
   } else {
     // Flower or joker — mix in other special tiles
     wrongs.push("Flower", "Joker", "Soap", "North");
@@ -118,6 +119,8 @@ export function TileIDDrill() {
   const [picked, setPicked] = useState<string | null>(null);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
+  const [reviewing, setReviewing] = useState(false);
+  const [answers, setAnswers] = useState<(string | null)[]>([]);
 
   function start() {
     setQuestions(generateQuestions(ROUND_COUNT));
@@ -126,6 +129,8 @@ export function TileIDDrill() {
     setPicked(null);
     setStreak(0);
     setBestStreak(0);
+    setReviewing(false);
+    setAnswers([]);
     setPhase("playing");
   }
 
@@ -144,15 +149,38 @@ export function TileIDDrill() {
       } else {
         setStreak(0);
       }
+      setAnswers((prev) => {
+        const copy = [...prev];
+        copy[index] = name;
+        return copy;
+      });
     },
     [picked, questions, index]
   );
 
   function next() {
+    setReviewing(false);
     if (index + 1 >= ROUND_COUNT) {
       setPhase("complete");
     } else {
       setIndex((i) => i + 1);
+      setPicked(null);
+    }
+  }
+
+  function goBack() {
+    if (index <= 0) return;
+    setReviewing(true);
+    setIndex((i) => i - 1);
+    setPicked(answers[index - 1] ?? null);
+  }
+
+  function goForward() {
+    setIndex((i) => i + 1);
+    setPicked(answers[index + 1] ?? null);
+    // If we're back to the current unanswered question, exit review
+    if (answers[index + 1] === undefined) {
+      setReviewing(false);
       setPicked(null);
     }
   }
@@ -171,9 +199,9 @@ export function TileIDDrill() {
     return () => window.removeEventListener("keydown", handler);
   }, [phase, picked, answer, questions, index]);
 
-  // Auto-advance after correct answer
+  // Auto-advance after correct answer (not when reviewing)
   useEffect(() => {
-    if (picked === null) return;
+    if (picked === null || reviewing) return;
     const correct = picked === questions[index]?.correctName;
     if (correct) {
       const t = setTimeout(next, 600);
@@ -181,7 +209,7 @@ export function TileIDDrill() {
     }
     // Wrong answer: wait for manual click
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [picked]);
+  }, [picked, reviewing]);
 
   /* ── INTRO ── */
   if (phase === "intro") {
@@ -197,10 +225,6 @@ export function TileIDDrill() {
           <p className="mb-2 text-sm text-zinc-300">
             We&apos;ll show you {ROUND_COUNT} tiles one at a time. Pick the
             correct name from 4 choices.
-          </p>
-          <p className="mb-2 text-xs text-zinc-400">
-            Correct answers advance automatically. Wrong answers show the right
-            name so you can learn.
           </p>
           <p className="mb-5 text-xs text-zinc-500">
             Get {PASS_THRESHOLD} out of {ROUND_COUNT} right to pass.
@@ -277,7 +301,7 @@ export function TileIDDrill() {
         </div>
       </div>
 
-      {/* The tile — big and centered */}
+      {/* The tile — centered */}
       <div className="mb-5 flex justify-center">
         <div
           className={`rounded-lg p-2 transition-all duration-300 ${
@@ -289,9 +313,9 @@ export function TileIDDrill() {
           }`}
         >
           {q.tile.type === "joker" ? (
-            <Tile type="joker" size="lg" />
+            <Tile type="joker" size="md" />
           ) : (
-            <Tile type={q.tile.type} value={q.tile.value} size="lg" />
+            <Tile type={q.tile.type} value={q.tile.value} size="md" />
           )}
         </div>
       </div>
@@ -323,9 +347,6 @@ export function TileIDDrill() {
               onClick={() => answer(opt)}
               className={`rounded-lg border-2 px-3 py-3 text-sm font-bold transition disabled:cursor-default ${bg}`}
             >
-              <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[13px] font-black">
-                {i + 1}
-              </span>
               {opt}
             </button>
           );
@@ -338,7 +359,7 @@ export function TileIDDrill() {
           <p className="mb-3 text-[13px] text-zinc-300">
             This is <strong className="text-[var(--color-green)]">{q.correctName}</strong>.
             {q.tile.type === "bam" && " Bams have green bamboo stalks."}
-            {q.tile.type === "crack" && " Cracks have Chinese characters."}
+            {q.tile.type === "crack" && " Craks have Chinese characters."}
             {q.tile.type === "dot" && " Dots have circle patterns."}
             {q.tile.type === "wind" && " Wind tiles show a single Chinese character."}
             {q.tile.type === "dragon" && q.tile.value === "white" && " The blank/framed tile is Soap (White Dragon)."}
@@ -353,8 +374,29 @@ export function TileIDDrill() {
         </div>
       )}
 
+      {/* Navigation */}
+      <div className="mt-4 flex items-center justify-between">
+        <button
+          type="button"
+          onClick={goBack}
+          disabled={index <= 0}
+          className="rounded-md px-3 py-1.5 text-xs font-bold text-zinc-400 transition hover:text-white disabled:invisible"
+        >
+          ← Back
+        </button>
+        {reviewing && (
+          <button
+            type="button"
+            onClick={goForward}
+            className="rounded-md px-3 py-1.5 text-xs font-bold text-zinc-400 transition hover:text-white"
+          >
+            Forward →
+          </button>
+        )}
+      </div>
+
       {/* Progress bar */}
-      <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/10">
+      <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
         <div
           className="h-full rounded-full bg-[var(--color-accent)] transition-all duration-300"
           style={{ width: `${((index + 1) / ROUND_COUNT) * 100}%` }}

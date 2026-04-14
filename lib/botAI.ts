@@ -273,7 +273,7 @@ export function generateBotInsight(
   }
 
   if (isSuited) {
-    const suitName = discardTile.type === "bam" ? "Bams" : discardTile.type === "crack" ? "Cracks" : "Dots";
+    const suitName = discardTile.type === "bam" ? "Bams" : discardTile.type === "crack" ? "Craks" : "Dots";
     return `${botName} discarded a ${suitName.slice(0, -1).toLowerCase()} — probably not collecting ${suitName}.`;
   }
 

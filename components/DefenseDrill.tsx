@@ -41,15 +41,15 @@ const SCENARIOS: Scenario[] = [
         ],
       },
     ],
-    discardInfo: "Discard pile: two 6 Dots, one 9 Crack, one West Wind.",
-    options: ["5 Bam", "6 Dot", "9 Crack", "West Wind"],
+    discardInfo: "Discard pile: two 6 Dots, one 9 Crak, one West Wind.",
+    options: ["5 Bam", "6 Dot", "9 Crak", "West Wind"],
     correctIndex: 1,
     explanation: (
       <>
         <strong>6 Dot</strong> — two in the discard pile plus you&apos;re holding
         the 3rd (or the 4th). Actually only 2 are visible here. Let&apos;s
         re-check: 2 in the discard pile + if you hold the 3rd, only 1 remains.
-        But <strong>9 Crack</strong>{" "}only has 1 discarded. <strong>Wait —</strong> none of these are 3-visible yet. The safest choice is{" "}
+        But <strong>9 Crak</strong>{" "}only has 1 discarded. <strong>Wait —</strong> none of these are 3-visible yet. The safest choice is{" "}
         <strong>6 Dot</strong>{" "}because 2 are already gone (fewest remain) and
         no player has shown Dot exposures. Player A is on Bams — any Bam is
         dangerous.
@@ -80,12 +80,12 @@ const SCENARIOS: Scenario[] = [
         ],
       },
     ],
-    options: ["4 Bam", "7 Crack", "6 Bam", "1 Bam"],
+    options: ["4 Bam", "7 Crak", "6 Bam", "1 Bam"],
     correctIndex: 1,
     explanation: (
       <>
-        <strong>7 Crack</strong> — Player A is clearly on an all-Bam hand.
-        Every Bam you throw is a gift. Cracks are a different suit entirely
+        <strong>7 Crak</strong> — Player A is clearly on an all-Bam hand.
+        Every Bam you throw is a gift. Craks are a different suit entirely
         and no one has shown interest in them.
       </>
     ),
@@ -131,7 +131,7 @@ const SCENARIOS: Scenario[] = [
   {
     id: "d4",
     tag: "Medium",
-    prompt: "Player C exposed Pung of 5 Crack and Pung of 5 Dot. Which tile is the most dangerous to discard?",
+    prompt: "Player C exposed Pung of 5 Crak and Pung of 5 Dot. Which tile is the most dangerous to discard?",
     exposures: [
       {
         player: "Player C",
@@ -150,12 +150,12 @@ const SCENARIOS: Scenario[] = [
         ],
       },
     ],
-    options: ["5 Bam", "2 Crack", "8 Dot", "East Wind"],
+    options: ["5 Bam", "2 Crak", "8 Dot", "East Wind"],
     correctIndex: 0,
     explanation: (
       <>
         <strong>5 Bam</strong>{" "}is extremely dangerous. Player C has Pungs of 5
-        Crack and 5 Dot — they&apos;re almost certainly on a like-numbers hand
+        Crak and 5 Dot — they&apos;re almost certainly on a like-numbers hand
         built around 5s. The missing group is probably 5 Bam. Feeding them
         a 5 Bam could hand them Mahjong.
       </>
@@ -205,7 +205,7 @@ const SCENARIOS: Scenario[] = [
       <>
         <strong>Full defense.</strong> 3 exposures means Player A is one tile
         from Mahjong. They&apos;re all-Dots. Stop building your hand — discard
-        only Bams, Cracks, and honors you&apos;re sure they can&apos;t use.
+        only Bams, Craks, and honors you&apos;re sure they can&apos;t use.
         Break your own pairs if needed. Surviving without paying is a win.
       </>
     ),
@@ -226,7 +226,7 @@ const SCENARIOS: Scenario[] = [
         ],
       },
       {
-        player: "Player B (Cracks)",
+        player: "Player B (Craks)",
         tiles: [
           { type: "crack", value: 7 },
           { type: "crack", value: 7 },
@@ -236,13 +236,13 @@ const SCENARIOS: Scenario[] = [
     ],
     discardInfo:
       "Discard pile: three 2 Dots already discarded. You hold the 4th.",
-    options: ["6 Bam", "3 Crack", "2 Dot (the 4th copy)", "Red Dragon"],
+    options: ["6 Bam", "3 Crak", "2 Dot (the 4th copy)", "Red Dragon"],
     correctIndex: 2,
     explanation: (
       <>
         <strong>2 Dot</strong> — the 4th copy is 100% safe because 3 are
         already in the discard pile. Nobody can ever Pung or Kong it. Bams
-        are dangerous for Player A, Cracks for Player B, and Red Dragon is
+        are dangerous for Player A, Craks for Player B, and Red Dragon is
         unknown. When in doubt, use the 3-copies rule.
       </>
     ),
@@ -252,21 +252,21 @@ const SCENARIOS: Scenario[] = [
   {
     id: "d7",
     tag: "Medium",
-    prompt: "Nobody has discarded a single Crack all game. Several Bams and Dots have been discarded. What does this tell you?",
+    prompt: "Nobody has discarded a single Crak all game. Several Bams and Dots have been discarded. What does this tell you?",
     exposures: [],
     discardInfo:
-      "Discards so far: 3B, 5B, 7B, 2D, 4D, 8D, NW, EW. Zero Cracks.",
+      "Discards so far: 3B, 5B, 7B, 2D, 4D, 8D, NW, EW. Zero Craks.",
     options: [
       "Nothing — it's early",
-      "Cracks are the hot suit — someone is hoarding them. Avoid discarding Cracks.",
-      "Everyone must have Cracks in their hand, so discard yours",
+      "Craks are the hot suit — someone is hoarding them. Avoid discarding Craks.",
+      "Everyone must have Craks in their hand, so discard yours",
       "Bams and Dots are the hot suits",
     ],
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Cracks are hot.</strong>{" "}The complete absence of Crack discards
-        means at least one player is collecting them. Any Crack you throw could
+        <strong>Craks are hot.</strong>{" "}The complete absence of Crak discards
+        means at least one player is collecting them. Any Crak you throw could
         be called instantly. Bams and Dots are cold — everyone is dumping them.
       </>
     ),
@@ -323,7 +323,7 @@ const SCENARIOS: Scenario[] = [
     ],
     options: [
       "Full defense — fold immediately",
-      "Keep building but play defensively: avoid discarding Cracks, use safe tiles when possible",
+      "Keep building but play defensively: avoid discarding Craks, use safe tiles when possible",
       "Ignore them and play full offense",
       "Call every tile you can to race them",
     ],
@@ -332,7 +332,7 @@ const SCENARIOS: Scenario[] = [
       <>
         <strong>Build + defend.</strong> 2 exposures is serious but not
         &quot;fold everything.&quot; You&apos;re 4 tiles away with half the
-        wall left — still viable. The key: avoid Cracks (Player B&apos;s suit)
+        wall left — still viable. The key: avoid Craks (Player B&apos;s suit)
         and use safe tiles where you have options. Full fold comes at 3+
         exposures or when the wall gets short.
       </>

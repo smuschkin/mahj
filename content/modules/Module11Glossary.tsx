@@ -204,7 +204,7 @@ const ENTRIES: Entry[] = [
     aliases: ["curtsying"],
   },
   {
-    term: "Crack (Character)",
+    term: "Crak (Character)",
     category: "Tiles",
     modules: [1],
     definition: (
@@ -463,7 +463,7 @@ const ENTRIES: Entry[] = [
     definition: (
       <>
         A hand category built around the same number across multiple suits (e.g.
-        groups of 5 Crack, 5 Bam, 5 Dot). Usually visible on the card under
+        groups of 5 Crak, 5 Bam, 5 Dot). Usually visible on the card under
         &quot;Like Numbers.&quot;
       </>
     ),
@@ -628,7 +628,7 @@ const ENTRIES: Entry[] = [
     definition: (
       <>
         A hand category that requires all groups to be in a single suit (all Bams,
-        all Cracks, or all Dots). Listed on the card as &quot;Same Color&quot; or
+        all Craks, or all Dots). Listed on the card as &quot;Same Color&quot; or
         similar.
       </>
     ),

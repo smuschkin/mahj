@@ -127,7 +127,7 @@ export function tileLabel(t: TileData): string {
     case "bam":
       return `${t.value} Bam`;
     case "crack":
-      return `${t.value} Crack`;
+      return `${t.value} Crak`;
     case "dot":
       return `${t.value} Dot`;
     case "wind":

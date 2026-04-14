@@ -42,10 +42,10 @@ const SCENARIOS: Scenario[] = [
       { type: "crack", value: 5 },
       { type: "wind", value: "N" },
     ],
-    goodDiscards: [12, 13], // 5 Crack or North Wind
-    bestDiscard: 12, // 5 Crack
+    goodDiscards: [12, 13], // 5 Crak or North Wind
+    bestDiscard: 12, // 5 Crak
     explanation:
-      "The 5 Crack and North Wind both fit neither candidate hand — either one is a good discard. The 5 Crack is slightly better to dump first because middle-suit tiles are more useful to opponents.",
+      "The 5 Crak and North Wind both fit neither candidate hand — either one is a good discard. The 5 Crak is slightly better to dump first because middle-suit tiles are more useful to opponents.",
     tip: "Look for tiles that don't fit ANY of your candidate hands. Those go first.",
   },
   {
@@ -60,10 +60,10 @@ const SCENARIOS: Scenario[] = [
       { type: "wind", value: "E" },
       { type: "crack", value: 1 },
     ],
-    goodDiscards: [11, 12, 13], // 9 Dot, East Wind, 1 Crack
+    goodDiscards: [11, 12, 13], // 9 Dot, East Wind, 1 Crak
     bestDiscard: 11, // 9 Dot
     explanation:
-      "The 9 Dot, East Wind, and 1 Crack all fit nothing in a Consecutive Bams hand. Any of them is a good discard. The 9 Dot is slightly riskier to hold since it's a suited tile opponents may want.",
+      "The 9 Dot, East Wind, and 1 Crak all fit nothing in a Consecutive Bams hand. Any of them is a good discard. The 9 Dot is slightly riskier to hold since it's a suited tile opponents may want.",
     tip: "When multiple tiles are equally useless, dump suited tiles before honors — they're more dangerous to hold.",
   },
   {
@@ -86,7 +86,7 @@ const SCENARIOS: Scenario[] = [
     tip: "Before discarding, ask: does this tile fit ANY of my candidate hands? If not, it can go.",
   },
   {
-    handHint: "Going for 2468 Cracks (kongs of even Cracks + pair of flowers)",
+    handHint: "Going for 2468 Craks (kongs of even Craks + pair of flowers)",
     tiles: [
       { type: "crack", value: 2 }, { type: "crack", value: 2 }, { type: "crack", value: 2 },
       { type: "crack", value: 4 }, { type: "crack", value: 4 }, { type: "crack", value: 4 },
@@ -100,7 +100,7 @@ const SCENARIOS: Scenario[] = [
     goodDiscards: [12, 13], // 3 Bam, West Wind
     bestDiscard: 12, // 3 Bam
     explanation:
-      "The 3 Bam and West Wind both fit nothing in a 2468 Cracks hand. Either is a good discard. The 3 Bam is a middle-suit tile that's more likely to help an opponent, so dump it first.",
+      "The 3 Bam and West Wind both fit nothing in a 2468 Craks hand. Either is a good discard. The 3 Bam is a middle-suit tile that's more likely to help an opponent, so dump it first.",
     tip: "Odd-numbered tiles are useless for a 2468 hand. Wrong-suit tiles are useless too. Both can go.",
   },
   {
@@ -116,10 +116,10 @@ const SCENARIOS: Scenario[] = [
       { type: "wind", value: "S" },
       { type: "dragon", value: "white" },
     ],
-    goodDiscards: [10, 11, 12, 13], // 7 Crack, 1 Bam, South, Soap
-    bestDiscard: 10, // 7 Crack
+    goodDiscards: [10, 11, 12, 13], // 7 Crak, 1 Bam, South, Soap
+    bestDiscard: 10, // 7 Crak
     explanation:
-      "The 7 Crack, 1 Bam, South Wind, and Soap all fit nothing in a 369 Dots hand. Any of them is correct! Dump suited tiles first since they're more dangerous to hold.",
+      "The 7 Crak, 1 Bam, South Wind, and Soap all fit nothing in a 369 Dots hand. Any of them is correct! Dump suited tiles first since they're more dangerous to hold.",
     tip: "When you have 4 junk tiles and only need to discard 1, pick the one most likely to help an opponent.",
   },
   {
@@ -136,10 +136,10 @@ const SCENARIOS: Scenario[] = [
       { type: "wind", value: "N" },
       { type: "bam", value: 5 },
     ],
-    goodDiscards: [11, 12, 13], // 8 Crack, North Wind, 5 Bam
+    goodDiscards: [11, 12, 13], // 8 Crak, North Wind, 5 Bam
     bestDiscard: 13, // 5 Bam
     explanation:
-      "The 8 Crack, North Wind, and 5 Bam don't match any digit in 2026 (which needs 2s, 0s, and 6s). Any of the three is a fine discard.",
+      "The 8 Crak, North Wind, and 5 Bam don't match any digit in 2026 (which needs 2s, 0s, and 6s). Any of the three is a fine discard.",
     tip: "For a year hand, check each tile: is this number one of the year's digits? If not, it can go.",
   },
 ];
@@ -152,7 +152,7 @@ const PASS_THRESHOLD = 3;
 function nameOf(t: TileSpec): string {
   switch (t.type) {
     case "bam": return `${t.value} Bam`;
-    case "crack": return `${t.value} Crack`;
+    case "crack": return `${t.value} Crak`;
     case "dot": return `${t.value} Dot`;
     case "wind": return ({ N: "North", E: "East", W: "West", S: "South" } as const)[t.value];
     case "dragon":

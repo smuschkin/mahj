@@ -270,7 +270,7 @@ export default function Module5JokersCalling() {
 
           <Callout variant="warn">
             <strong>The pair rule trips everyone up.</strong>{" "}If your hand needs a pair
-            of 5 Cracks, you need <em>two real</em> 5 Cracks. A joker won&apos;t work.
+            of 5 Craks, you need <em>two real</em> 5 Craks. A joker won&apos;t work.
           </Callout>
         </LessonScreen>
 
@@ -397,7 +397,7 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── 8. Three rules beginners forget ── */}
-        <LessonScreen title="🚨 Three Rules Beginners Forget">
+        <LessonScreen title="🚨 Rules Beginners Forget">
           <p>
             These are the calling/joker mistakes that trip up almost everyone in their
             first 10 games. Burn them in:
@@ -414,12 +414,24 @@ export default function Module5JokersCalling() {
 
           <DecisionBox title="2. Jokers CANNOT be called from the discard pile" bad>
             If someone (foolishly) discards a joker, no one can grab it. The joker is
-            dead. This is why nobody discards jokers.
+            dead. This is why nobody discards jokers. When you discard a joker, you can name it &quot;Joker,&quot; &quot;same,&quot; or the name of the previous discard.
           </DecisionBox>
 
           <DecisionBox title="3. You have to expose your call IMMEDIATELY" bad>
             Don&apos;t grab the tile and slide it into your rack — that&apos;s not
             allowed. The whole group goes face-up at the front of your rack right away.
+          </DecisionBox>
+
+          <DecisionBox title="4. Any tile EXCEPT a Joker can be called for Mahjong" bad>
+            You can call any discarded tile to complete your winning hand — except a Joker. Jokers in the discard pile are always dead.
+          </DecisionBox>
+
+          <DecisionBox title="5. Some tiles can ONLY be called for Mahjong" bad>
+            Tiles in groupings like NEWS, 1122, or year digits (e.g. 2-0-2-6) can only be called to complete Mahjong — not for regular exposures.
+          </DecisionBox>
+
+          <DecisionBox title="6. You can change an exposure until you discard" bad>
+            If you called a tile and exposed a group, you can still change the number and type of tiles in that exposure — but only before you discard. Once you discard, it&apos;s locked in.
           </DecisionBox>
         </LessonScreen>
 

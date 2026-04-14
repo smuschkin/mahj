@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="centerBall" cx="0.35" cy="0.35" r="0.65">
+      <stop offset="0%" stop-color="#E74C3C"/>
+      <stop offset="100%" stop-color="#8B1F18"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Full ivory circle background (fills Instagram's circle crop) -->
+  <circle cx="256" cy="256" r="256" fill="#FAF7EC"/>
+  <!-- Gold border ring (simulates tile edge) -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="#C9BC8A" stroke-width="6"/>
+
+  <!-- Corner number "1" — tucked above medallion -->
+  <text x="118" y="138" font-family="Georgia,serif" font-weight="900" font-size="72" fill="#C0392B">1</text>
+
+  <!-- 1 Dot medallion — vertically centered in circle -->
+  <circle cx="256" cy="268" r="140" fill="#C0392B"/>
+  <circle cx="256" cy="268" r="124" fill="#FAF7EC"/>
+  <circle cx="256" cy="268" r="108" fill="#1A1A1A"/>
+  <circle cx="256" cy="268" r="92" fill="#FAF7EC"/>
+  <circle cx="256" cy="268" r="48" fill="url(#centerBall)"/>
+</svg>

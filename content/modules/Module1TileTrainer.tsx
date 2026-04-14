@@ -68,7 +68,7 @@ export default function Module1TileTrainer() {
             different look.
           </p>
           <p>
-            The three suits are: <strong>Bams, Cracks, Dots.</strong>
+            The three suits are: <strong>Bams, Craks, Dots.</strong>
           </p>
         </LessonScreen>
 
@@ -93,19 +93,19 @@ export default function Module1TileTrainer() {
         </LessonScreen>
 
         {/* ── Cracks ── */}
-        <LessonScreen title="🈶 Cracks (Characters)">
+        <LessonScreen title="🈶 Craks (Characters)">
           <p>
-            <strong>Cracks</strong>{" "}have a <strong>small red number in the top corner</strong> and <strong>black Chinese characters</strong>{" "}stacked in the middle.
+            <strong>Craks</strong>{" "}(pronounced &quot;cracks&quot;) have a <strong>small red number in the top corner</strong> and <strong>black Chinese characters</strong>{" "}stacked in the middle.
           </p>
           <p>
             Their full name is &quot;Characters,&quot; but everyone at the table calls
-            them &quot;Cracks.&quot;
+            them &quot;Craks.&quot;
           </p>
           <p>
             Same as Bams: numbered <strong>1 through 9</strong>, with{" "}
-            <strong>4 of each</strong> = <strong>36 Crack tiles</strong>.
+            <strong>4 of each</strong> = <strong>36 Crak tiles</strong>.
           </p>
-          <TileRow caption="All 9 Cracks (1 through 9)">
+          <TileRow caption="All 9 Craks (1 through 9)">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
               <Tile key={n} type="crack" value={n} size="sm" showLabel />
             ))}
@@ -113,7 +113,7 @@ export default function Module1TileTrainer() {
           <Callout variant="tip">
             You don&apos;t need to read the Chinese characters — just look at the small
             <strong> red digit in the top-left corner</strong>{" "}and you&apos;ll know which
-            Crack it is.
+            Crak it is.
           </Callout>
         </LessonScreen>
 
@@ -134,7 +134,7 @@ export default function Module1TileTrainer() {
             ))}
           </TileRow>
           <Callout variant="tip">
-            That&apos;s all 3 number suits. Bams + Cracks + Dots ={" "}
+            That&apos;s all 3 number suits. Bams + Craks + Dots ={" "}
             <strong>108 tiles total</strong>.
           </Callout>
         </LessonScreen>
@@ -166,10 +166,8 @@ export default function Module1TileTrainer() {
             <Tile type="wind" value="S" size="md" showLabel />
           </TileRow>
           <Callout variant="tip">
-            Easy to remember as <strong>NEWS</strong>. In the game, these winds
-            are assigned to each player&apos;s seat — the Dealer is always{" "}
-            <strong>East</strong>. Wind tiles show up in certain hands on the
-            card, so you&apos;ll want to recognize them quickly.
+            Easy to remember as <strong>NEWS</strong>. The Dealer is always{" "}
+            <strong>East</strong>.
           </Callout>
         </LessonScreen>
 
@@ -180,7 +178,7 @@ export default function Module1TileTrainer() {
           </p>
           <ul className="ml-5 list-disc space-y-1 text-[15px]">
             <li>
-              <strong>Red Dragon</strong> — connected to the <strong>Crack</strong>{" "}suit
+              <strong>Red Dragon</strong> — connected to the <strong>Crak</strong>{" "}suit
             </li>
             <li>
               <strong>Green Dragon</strong> — connected to the <strong>Bam</strong>{" "}suit
@@ -190,11 +188,6 @@ export default function Module1TileTrainer() {
               <strong>Soap</strong>&quot;) — connected to the <strong>Dot</strong>{" "}suit
             </li>
           </ul>
-          <p>
-            Each dragon is paired with a suit. You&apos;ll see them grouped
-            together on certain hands on the card — knowing which dragon goes
-            with which suit helps you spot those patterns faster.
-          </p>
           <p>
             <strong>4 of each</strong> = <strong>12 Dragon tiles</strong>.
           </p>
@@ -206,11 +199,16 @@ export default function Module1TileTrainer() {
           <Callout variant="tip">
             <strong>How to remember which dragon goes with which suit:</strong>
             <ul className="mt-1 ml-5 list-disc space-y-0.5">
-              <li><strong>Green</strong>{" "}Dragon → <strong>Bams</strong> — think green bamboo</li>
-              <li><strong>White</strong>{" "}Dragon (Soap) → <strong>Dots</strong> — both are shapes (the Soap is a square, Dots are circles)</li>
-              <li><strong>Red</strong>{" "}Dragon → <strong>Cracks</strong> — think red blood from a crack</li>
+              <li><strong>Green</strong> → <strong>Bams</strong> — think green bamboo</li>
+              <li><strong>Soap</strong> → <strong>Dots</strong> — both are shapes (square and circles)</li>
+              <li><strong>Red</strong> → <strong>Craks</strong> — think red blood from a crack</li>
             </ul>
           </Callout>
+          <p>
+            At the table, players just call them Red, Green, and Soap. Each is
+            paired with a suit — knowing which helps you spot patterns on the
+            card faster.
+          </p>
         </LessonScreen>
 
         {/* ── Mini quiz: Dragon-suit pairings ── */}
@@ -224,19 +222,19 @@ export default function Module1TileTrainer() {
             questions={[
               {
                 question: "Which suit is the Red Dragon connected to?",
-                options: ["Bams", "Cracks", "Dots", "Winds"],
+                options: ["Bams", "Craks", "Dots", "Winds"],
                 correct: 1,
-                explanation: "Red Dragon goes with Cracks.",
+                explanation: "Red Dragon goes with Craks.",
               },
               {
                 question: "Which suit is the Green Dragon connected to?",
-                options: ["Dots", "Cracks", "Bams", "Flowers"],
+                options: ["Dots", "Craks", "Bams", "Flowers"],
                 correct: 2,
                 explanation: "Green Dragon goes with Bams.",
               },
               {
                 question: "Which suit is the White Dragon (Soap) connected to?",
-                options: ["Bams", "Cracks", "Dots", "None"],
+                options: ["Bams", "Craks", "Dots", "None"],
                 correct: 2,
                 explanation: "White Dragon (Soap) goes with Dots.",
               },
@@ -247,19 +245,11 @@ export default function Module1TileTrainer() {
         {/* ── Flowers ── */}
         <LessonScreen title="🌸 Flowers">
           <p>
-            <strong>Flowers</strong>{" "}are decorative tiles. There are{" "}
-            <strong>8 unique designs</strong>{" "}with <strong>only 1 of each</strong>{" "}in the
-            set, for <strong>8 Flower tiles</strong>{" "}total.
+            There are <strong>8 Flower tiles</strong>, each with a unique design.
+            They&apos;re all interchangeable — at the table, everyone just calls
+            them &quot;Flowers.&quot; Ignore any numbers printed on them.
           </p>
-          <Callout variant="info">
-            <strong>All 8 of these are called &quot;Flowers&quot;</strong>{" "}at the table,
-            even the four traditionally-named &quot;season&quot; tiles. Real flower tiles
-            do have small numbers on them (1–4 for the flowers, 1–4 for the seasons),
-            but <strong>those numbers aren&apos;t used in the game</strong>. Every flower
-            hand treats all 8 tiles the same way, so you&apos;ll just hear them all
-            called <em>flowers</em>.
-          </Callout>
-          <TileRow caption="The 8 flower tiles — each unique, all called &quot;Flower&quot;">
+          <TileRow caption="The 8 Flowers">
             <Tile type="flower" value={1} size="md" />
             <Tile type="flower" value={2} size="md" />
             <Tile type="flower" value={3} size="md" />
@@ -269,34 +259,29 @@ export default function Module1TileTrainer() {
             <Tile type="season" value={3} size="md" />
             <Tile type="season" value={4} size="md" />
           </TileRow>
-          <Callout variant="tip">
-            At the table, all 8 flower-group tiles (flowers and seasons) are
-            interchangeable — they&apos;re all just called{" "}
-            <strong>&quot;Flowers.&quot;</strong>{" "}Any combination of them counts
-            as matching when building a group.
-          </Callout>
         </LessonScreen>
 
         {/* ── Jokers ── */}
         <LessonScreen title="⭐ Jokers — The Wild Card">
           <p>
-            <strong>Jokers</strong>{" "}are American Mahjong&apos;s secret weapon.
+            There are <strong>8 Jokers</strong>. They can substitute for any tile
+            in a group of 3 or more — but never in pairs. You&apos;ll learn the
+            full joker rules in Module 5.
           </p>
-          <p>
-            There are <strong>8 Jokers</strong>{" "}in the set, and they can stand in for{" "}
-            <strong>any tile in a group of 3 or more identical tiles</strong>.
-          </p>
-          <TileRow caption="All 8 Jokers in the set">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <Tile key={i} type="joker" size="sm" />
-            ))}
+          <TileRow caption="The 8 Jokers">
+            <div className="flex flex-wrap justify-center gap-2">
+              <Tile type="joker" size="md" />
+              <Tile type="joker" size="md" />
+              <Tile type="joker" size="md" />
+              <Tile type="joker" size="md" />
+            </div>
+            <div className="flex flex-wrap justify-center gap-2">
+              <Tile type="joker" size="md" />
+              <Tile type="joker" size="md" />
+              <Tile type="joker" size="md" />
+              <Tile type="joker" size="md" />
+            </div>
           </TileRow>
-          <Callout variant="warn">
-            <strong>Big rule:</strong>{" "}Jokers can only fill in for groups of{" "}
-            <strong>3 or more identical tiles</strong>. They{" "}
-            <strong>cannot</strong>{" "}be used in pairs (groups of 2). More on
-            this in Module 5.
-          </Callout>
         </LessonScreen>
 
         {/* ── Drill: Tile Match (after Jokers) ── */}
@@ -315,7 +300,7 @@ export default function Module1TileTrainer() {
           <div className="my-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
               { icon: "🎋", name: "Bams", count: "9 × 4 = 36" },
-              { icon: "🈶", name: "Cracks", count: "9 × 4 = 36" },
+              { icon: "🈶", name: "Craks", count: "9 × 4 = 36" },
               { icon: "🔵", name: "Dots", count: "9 × 4 = 36" },
               { icon: "🌬️", name: "Winds", count: "4 × 4 = 16" },
               { icon: "🐉", name: "Dragons", count: "3 × 4 = 12" },
@@ -363,7 +348,7 @@ export default function Module1TileTrainer() {
                 {[
                   ["Mahjong", `"mah-zhong"`, `Soft "j" — like the "s" in "treasure"`],
                   ["Bam", `"bam"`, "What everyone calls Bamboo"],
-                  ["Crack", `"crak"`, `Table name for "Character" tiles`],
+                  ["Crak", `"crack"`, `Table name for "Character" tiles — spelled "Crak," pronounced "crack"`],
                   ["Pung", `"puhng"`, "Three of a kind. Rhymes with 'lung'"],
                   ["Kong", `"kahng"`, "Four of a kind. Rhymes with 'song'"],
                   ["Joker", `"JOH-ker"`, "Same as in cards"],
@@ -396,7 +381,7 @@ export default function Module1TileTrainer() {
         <LessonScreen title="🀄 Practice: Name That Tile">
           <p>
             Ready for a bigger challenge? 20 tiles, 4 choices each. See how many
-            you can name correctly — correct answers advance automatically.
+            you can name correctly.
           </p>
           <TileIDDrill />
         </LessonScreen>
@@ -421,10 +406,10 @@ export default function Module1TileTrainer() {
               },
               {
                 question: "Which of these is NOT a suit?",
-                options: ["Bams", "Cracks", "Dots", "Stars"],
+                options: ["Bams", "Craks", "Dots", "Stars"],
                 correct: 3,
                 explanation:
-                  "The three number suits are Bams (bamboo), Cracks (characters), and Dots (circles).",
+                  "The three number suits are Bams (bamboo), Craks (characters), and Dots (circles).",
               },
               {
                 question: "The 1 Bam tile looks like…",
@@ -441,16 +426,11 @@ export default function Module1TileTrainer() {
                   "There are 8 Jokers, and they're the most powerful tiles in the game.",
               },
               {
-                question: "Jokers can be used in…",
-                options: [
-                  "Pairs (2 of a kind) only",
-                  "Pairs and groups of 3",
-                  "Groups of 3 or more identical tiles",
-                  "Anywhere",
-                ],
+                question: "How many Flower tiles are in the set?",
+                options: ["4", "6", "8", "12"],
                 correct: 2,
                 explanation:
-                  "Jokers can substitute in any group of 3 or more identical tiles — never in pairs.",
+                  "There are 8 Flowers — each unique, but all interchangeable at the table.",
               },
               {
                 question: "Which dragon is connected to the Bam suit?",
@@ -462,7 +442,7 @@ export default function Module1TileTrainer() {
                 ],
                 correct: 2,
                 explanation:
-                  "Green Dragon goes with Bams, Red Dragon goes with Cracks, and White Dragon (Soap) goes with Dots. You'll see these pairings on the card.",
+                  "Green Dragon goes with Bams, Red Dragon goes with Craks, and White Dragon (Soap) goes with Dots. You'll see these pairings on the card.",
               },
             ]}
           />

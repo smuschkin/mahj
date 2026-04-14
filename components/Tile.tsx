@@ -155,7 +155,7 @@ export function Tile({
       <div
         className="flex flex-1 items-center justify-center w-full"
         style={{
-          paddingTop: corner ? dim.cornerSize * 0.35 : 0,
+          paddingTop: corner ? dim.cornerSize * 0.6 : 0,
         }}
       >
         {renderArt({ type, value, size: dim })}
@@ -199,7 +199,7 @@ function shortLabel(type: TileType, value?: number | string): string {
     case "bam":
       return `${value} Bam`;
     case "crack":
-      return `${value} Crack`;
+      return `${value} Crak`;
     case "dot":
       return `${value} Dot`;
     case "wind":
@@ -268,18 +268,18 @@ function tileLabel(type: TileType, value?: number | string): string {
 // 2–9 Bams are vertical bamboo stalks in dark forest green, with the center stalk
 // in red on odd-count rows (matching the photo set's red-accent style).
 function BamArt({ value, size }: { value: number; size: { w: number; h: number } }) {
-  if (value === 1) return <BirdSVG size={size.w * 0.72} />;
+  if (value === 1) return <BirdSVG size={size.w * 0.82} />;
   const layout = BAM_LAYOUT[value];
   if (!layout) return null;
   const stalkH = Math.max(7, (size.h - 24) / (layout.length * 1.5));
-  const stalkW = Math.max(3, size.w / 16);
+  const stalkW = Math.max(3, size.w / 14);
   // Each stalk has 3 segments separated by nodes, like real bamboo
   const segH = stalkH / 3.6;
   const nodeGap = stalkH * 0.06;
   return (
-    <div className="flex flex-col items-center justify-center gap-1">
+    <div className="flex flex-col items-center justify-center gap-1.5">
       {layout.map((count, ri) => (
-        <div key={ri} className="flex gap-1">
+        <div key={ri} className="flex gap-1.5">
           {Array.from({ length: count }).map((_, i) => {
             const isOddRow = count % 2 === 1 && count > 1;
             const isCenter = i === Math.floor(count / 2);
@@ -480,37 +480,33 @@ function CrackArt({ value, size }: { value: number; size: { w: number; h: number
 function DotArt({ value, size }: { value: number; size: { w: number; h: number } }) {
   // Special case: 1 Dot = single oversized ornate medallion
   if (value === 1) {
-    const big = Math.round(size.w * 0.55);
+    const big = Math.round(size.w * 0.7);
     return (
-      <div
-        className="rounded-full"
-        style={{
-          width: big,
-          height: big,
-          background: "#FAF7EC",
-          border: "2.5px solid #1A1A1A",
-          boxShadow: "0 0 0 3px #FAF7EC, 0 0 0 4.5px #C0392B",
-          position: "relative",
-        }}
-      >
-        <div
-          className="absolute left-1/2 top-1/2 rounded-full"
-          style={{
-            width: big * 0.45,
-            height: big * 0.45,
-            background:
-              "radial-gradient(circle at 35% 35%, #E74C3C, #8B1F18)",
-            transform: "translate(-50%, -50%)",
-          }}
-        />
-      </div>
+      <svg viewBox="0 0 100 100" width={big} height={big} aria-hidden="true">
+        <defs>
+          <radialGradient id="dot1ball" cx="0.35" cy="0.35" r="0.65">
+            <stop offset="0%" stopColor="#E74C3C"/>
+            <stop offset="100%" stopColor="#8B1F18"/>
+          </radialGradient>
+        </defs>
+        {/* Outer red ring */}
+        <circle cx="50" cy="50" r="48" fill="#C0392B"/>
+        {/* Ivory gap */}
+        <circle cx="50" cy="50" r="42" fill="#FAF7EC"/>
+        {/* Black ring */}
+        <circle cx="50" cy="50" r="36" fill="#1A1A1A"/>
+        {/* Inner ivory */}
+        <circle cx="50" cy="50" r="30" fill="#FAF7EC"/>
+        {/* Center ball */}
+        <circle cx="50" cy="50" r="16" fill="url(#dot1ball)"/>
+      </svg>
     );
   }
 
   // 2-9: dice-pattern grid of small medallion dots
   const cells = DOT_LAYOUT[value] ?? [];
-  const dotSize = Math.max(6, size.w / 7.5);
-  const gap = Math.max(2, size.w / 14);
+  const dotSize = Math.max(6, size.w / 6);
+  const gap = Math.max(1, size.w / 30);
   return (
     <div
       className="grid"
@@ -568,8 +564,8 @@ function DragonArt({ value, size }: { value: string; size: { w: number; h: numbe
     // The "Soap" tile — a rectangle with a clear border.
     // Sized to match the visible content height of other tiles (~0.65 of tile height)
     // so it aligns properly when tiles sit side-by-side in a hand.
-    const w = Math.round(size.w * 0.55);
-    const h = Math.round(size.h * 0.65);
+    const w = Math.round(size.w * 0.65);
+    const h = Math.round(size.h * 0.75);
     return (
       <svg viewBox="0 0 32 48" width={w} height={h} aria-hidden="true">
         {/* Outer border */}
@@ -586,8 +582,8 @@ function DragonArt({ value, size }: { value: string; size: { w: number; h: numbe
   }
 
   // Match the visible content height of other tiles for consistent alignment
-  const dragonW = Math.round(size.w * 0.7);
-  const dragonH = Math.round(size.h * 0.7);
+  const dragonW = Math.round(size.w * 0.8);
+  const dragonH = Math.round(size.h * 0.8);
 
   return (
     <img
@@ -863,7 +859,7 @@ const SEASON_SVGS = [SpringSVG, SummerSVG, AutumnSVG, WinterSVG];
 // Joker = "JOKER" red wordmark on top + ornate "J" letter inside a starburst.
 function JokerArt({ size }: { size: { w: number; h: number } }) {
   const wordH = Math.round(size.h * 0.18);
-  const starSize = Math.round(size.w * 0.65);
+  const starSize = Math.round(size.w * 0.75);
   return (
     <div className="flex flex-col items-center justify-center" style={{ gap: 1 }}>
       {/* "JOKER" wordmark in red */}
@@ -917,7 +913,7 @@ function JokerArt({ size }: { size: { w: number; h: number } }) {
         {/* Ornate serif "J" */}
         <text
           x="32"
-          y="42"
+          y="38"
           textAnchor="middle"
           fontFamily="Playfair Display, serif"
           fontSize="22"

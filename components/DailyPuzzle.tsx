@@ -62,10 +62,10 @@ const POOL: DailyPuzzleData[] = [
     explanation: "3+ exposures = one tile from Mahjong. Full defense: discard only tiles you KNOW they can't use.",
   },
   {
-    prompt: "Nobody has discarded a single Crack all game. What does this mean?",
-    options: ["Nothing", "Cracks are the hot suit — someone is collecting them", "Cracks are safe to discard", "The wall has all the Cracks"],
+    prompt: "Nobody has discarded a single Crak all game. What does this mean?",
+    options: ["Nothing", "Craks are the hot suit — someone is collecting them", "Craks are safe to discard", "The wall has all the Craks"],
     correctIndex: 1,
-    explanation: "The suit nobody discards is the hot suit. At least one player is hoarding Cracks. Avoid feeding them.",
+    explanation: "The suit nobody discards is the hot suit. At least one player is hoarding Craks. Avoid feeding them.",
   },
   {
     prompt: "An opponent exposes a Pung of East Winds. What do you know?",
@@ -258,7 +258,7 @@ const POOL: DailyPuzzleData[] = [
     prompt: "How many copies of each suited tile are in the set?",
     options: ["2", "3", "4", "It varies"],
     correctIndex: 2,
-    explanation: "Every suited tile (1\u20139 of Bam, Crack, and Dot) has exactly 4 copies. Same for each Wind and Dragon.",
+    explanation: "Every suited tile (1\u20139 of Bam, Crak, and Dot) has exactly 4 copies. Same for each Wind and Dragon.",
   },
   {
     prompt: "What makes Flowers and Seasons different from other tiles?",

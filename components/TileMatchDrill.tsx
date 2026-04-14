@@ -27,17 +27,17 @@ function nameOf(tile: TileSpec): string {
     case "bam":
       return `${tile.value} Bam`;
     case "crack":
-      return `${tile.value} Crack`;
+      return `${tile.value} Crak`;
     case "dot":
       return `${tile.value} Dot`;
     case "wind":
       return { N: "North", E: "East", W: "West", S: "South" }[tile.value];
     case "dragon":
       return tile.value === "red"
-        ? "Red Dragon"
+        ? "Red"
         : tile.value === "green"
-          ? "Green Dragon"
-          : "White Dragon";
+          ? "Green"
+          : "Soap (White Dragon)";
     case "flower":
     case "season":
       return "Flower";
@@ -127,7 +127,7 @@ export function TileMatchDrill() {
           setIndex((i) => i + 1);
           setFeedback(null);
         }
-      }, 900);
+      }, correct ? 900 : 2000);
     },
     [cards, index, feedback]
   );
@@ -162,8 +162,8 @@ export function TileMatchDrill() {
             We&apos;ll show you 10 tiles, each with a name. Tell us if the name
             matches the tile.
           </p>
-          <p className="mb-5 text-xs text-zinc-400">
-            Tap a button or use{" "}
+          <p className="mb-5 hidden sm:block text-xs text-zinc-400">
+            You can also use{" "}
             <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[13px]">←</kbd>{" "}
             and{" "}
             <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[13px]">→</kbd>{" "}

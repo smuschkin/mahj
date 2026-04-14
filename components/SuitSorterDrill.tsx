@@ -9,6 +9,7 @@ type Question = { type: Suit; value: number };
 const QUESTION_COUNT = 5;
 const PASS_THRESHOLD = 4;
 const SUITS: Suit[] = ["bam", "crack", "dot"];
+const SUIT_LABELS: Record<Suit, string> = { bam: "Bam", crack: "Crak", dot: "Dot" };
 
 function generateQuestions(): Question[] {
   return Array.from({ length: QUESTION_COUNT }, () => ({
@@ -141,7 +142,7 @@ export function SuitSorterDrill() {
               disabled={showFeedback}
               className={`rounded-md px-4 py-3 text-sm font-bold uppercase tracking-wider transition disabled:cursor-default ${style}`}
             >
-              {suit}
+              {SUIT_LABELS[suit]}
             </button>
           );
         })}
@@ -150,7 +151,7 @@ export function SuitSorterDrill() {
       {showFeedback && (
         <div className="mt-5 text-center">
           <p className="text-base font-bold">
-            {correct ? "✓ Correct!" : `✗ That was a ${current.type}`}
+            {correct ? "✓ Correct!" : `✗ That was a ${SUIT_LABELS[current.type]}`}
           </p>
           <button
             type="button"

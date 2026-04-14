@@ -165,7 +165,7 @@ describe("tileKey", () => {
 describe("tileLabel", () => {
   it("labels suited tiles correctly", () => {
     expect(tileLabel({ id: 1, type: "bam", value: 7 })).toBe("7 Bam");
-    expect(tileLabel({ id: 2, type: "crack", value: 1 })).toBe("1 Crack");
+    expect(tileLabel({ id: 2, type: "crack", value: 1 })).toBe("1 Crak");
     expect(tileLabel({ id: 3, type: "dot", value: 9 })).toBe("9 Dot");
   });
 

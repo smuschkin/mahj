@@ -49,7 +49,7 @@ const SCENARIOS: Scenario[] = [
     id: "tc2",
     tag: "Beginner",
     targetTile: { type: "crack", value: 3 },
-    targetLabel: "3 Crack",
+    targetLabel: "3 Crak",
     discards: [
       { type: "crack", value: 3 },
       { type: "crack", value: 3 },
@@ -59,7 +59,7 @@ const SCENARIOS: Scenario[] = [
     totalCopies: 4,
     visibleCount: 3,
     remaining: 1,
-    context: "Three 3 Cracks are in the discard pile.",
+    context: "Three 3 Craks are in the discard pile.",
   },
   {
     id: "tc3",
@@ -186,14 +186,14 @@ const SCENARIOS: Scenario[] = [
     id: "tc8",
     tag: "Advanced",
     targetTile: { type: "crack", value: 6 },
-    targetLabel: "6 Crack",
+    targetLabel: "6 Crak",
     discards: [{ type: "crack", value: 6 }],
     exposures: [],
     totalCopies: 4,
     visibleCount: 1,
     remaining: 3,
     context:
-      "Only one 6 Crack is visible (in the discard pile). You also have one in your own hand. How many are truly unaccounted for?",
+      "Only one 6 Crak is visible (in the discard pile). You also have one in your own hand. How many are truly unaccounted for?",
   },
   {
     id: "tc9",

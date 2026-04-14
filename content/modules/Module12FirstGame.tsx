@@ -140,7 +140,7 @@ export default function Module12FirstGame() {
               4-Bams. That&apos;s a strong start toward an all-Bam hand.
             </li>
             <li>
-              <strong>Four junk tiles</strong> — 5 Crack, 9 Dot, East Wind, Green
+              <strong>Four junk tiles</strong> — 5 Crak, 9 Dot, East Wind, Green
               Dragon. None of them fit her target.
             </li>
             <li>
@@ -182,7 +182,7 @@ export default function Module12FirstGame() {
 
           <Callout variant="tip">
             Sara&apos;s rule of thumb from Module 6: pass tiles that fit{" "}
-            <em>none</em>{" "}of your candidate hands first. The 5 Crack, 9 Dot, and Green
+            <em>none</em>{" "}of your candidate hands first. The 5 Crak, 9 Dot, and Green
             Dragon don&apos;t fit any all-Bam hand on the card.
           </Callout>
         </LessonScreen>
@@ -193,7 +193,7 @@ export default function Module12FirstGame() {
             Sara does all 6 passes (right, across, left, then left, across, right).
             By the end of the Charleston she also dropped the East Wind, picked up an
             extra 4-Bam, gained a <strong>Joker</strong>{" "}(gold!), and ended up with
-            two filler tiles she didn&apos;t want (a 6 Crack and a 7 Crack).
+            two filler tiles she didn&apos;t want (a 6 Crak and a 7 Crak).
           </p>
 
           <TileRow caption="Sara's hand after the Charleston (13 tiles)">
@@ -221,7 +221,7 @@ export default function Module12FirstGame() {
             <li>3-Bam: 2 of 3 needed for the Pung (need 1 more)</li>
             <li>4-Bam: 3 of 3 needed for the Pung (✓ done!)</li>
             <li>Joker: can substitute for any 1 missing Bam in a Pung or Kong</li>
-            <li>Junk: 6 Crack, 7 Crack (will be discarded over the next few turns)</li>
+            <li>Junk: 6 Crak, 7 Crak (will be discarded over the next few turns)</li>
           </ul>
 
           <Callout variant="tip">
@@ -237,11 +237,11 @@ export default function Module12FirstGame() {
             now <strong>three 2-Bams</strong>, getting closer to her Kong.
           </p>
           <p>
-            She has 14 tiles now and must discard one. Easy choice: the 6 Crack — it
+            She has 14 tiles now and must discard one. Easy choice: the 6 Crak — it
             fits no candidate hand.
           </p>
 
-          <TileRow caption="Sara's hand after drawing — the 6 Crack is going.">
+          <TileRow caption="Sara's hand after drawing — the 6 Crak is going.">
             <Tile type="bam" value={1} size="sm" />
             <Tile type="bam" value={1} size="sm" />
             <Tile type="bam" value={1} size="sm" />
@@ -260,7 +260,7 @@ export default function Module12FirstGame() {
 
           <p className="text-[14px] text-zinc-700">
             She announces clearly:{" "}
-            <strong>&quot;Six Crack.&quot;</strong> — and places it face-up in the
+            <strong>&quot;Six Crak.&quot;</strong> — and places it face-up in the
             center. Then she pauses (Module 8) before her hand returns to her rack.
           </p>
         </LessonScreen>
@@ -286,7 +286,7 @@ export default function Module12FirstGame() {
           <p>
             She decides — yes. She says <strong>&quot;Call!&quot;</strong>, takes
             the 1 Bam, and lays all four 1-Bams face-up at the front of her rack, and discards her remaining junk:{" "}
-            <strong>7 Crack</strong>.
+            <strong>7 Crak</strong>.
           </p>
 
           <HandState
@@ -657,7 +657,7 @@ export default function Module12FirstGame() {
             <strong>What about defense?</strong>{" "}This walkthrough focused on offense
             for clarity, but in a real game Sara would also have been reading the
             other players&apos; exposures. By Turn 7 she would have noted that the
-            player to her right was building Cracks (so Crack discards were safe to
+            player to her right was building Craks (so Crak discards were safe to
             them) while the player across had a Dragons hand (so dragon discards were
             dangerous). Module 7.
           </Callout>

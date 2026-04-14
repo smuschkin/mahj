@@ -163,7 +163,7 @@ export default function Module7Defense() {
               <>
                 <strong>Read:</strong>{" "}they&apos;re probably building a{" "}
                 <em>same-suit Bams</em>{" "}hand (or a 369 hand). Other Bams — especially
-                3, 6, and 9 — are now <strong>dangerous discards</strong>. Cracks and
+                3, 6, and 9 — are now <strong>dangerous discards</strong>. Craks and
                 Dots are likely safer.
               </>
             }
@@ -192,7 +192,7 @@ export default function Module7Defense() {
           />
 
           <ReadCard
-            title="Pung of 5 Crack + Pung of 5 Dot"
+            title="Pung of 5 Crak + Pung of 5 Dot"
             exposure={
               <>
                 <Tile type="crack" value={5} size="sm" />
@@ -223,7 +223,7 @@ export default function Module7Defense() {
           <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
             <li>
               <strong>What is each player throwing?</strong>{" "}If a player has discarded
-              three Cracks in a row, Cracks are probably safe to throw at them.
+              three Craks in a row, Craks are probably safe to throw at them.
             </li>
             <li>
               <strong>What are they NOT throwing?</strong>{" "}A player who hasn&apos;t
@@ -465,7 +465,7 @@ export default function Module7Defense() {
                 Player on your left — 0 exposures (concealed?)
               </div>
               <p className="text-[12px] italic text-zinc-500">
-                Nothing to read. Discards have been mostly Cracks.
+                Nothing to read. Discards have been mostly Craks.
               </p>
             </div>
           </div>
@@ -494,14 +494,14 @@ export default function Module7Defense() {
               actually <strong>pretty safe</strong>{" "}to throw.
             </li>
             <li>
-              <strong>3 Crack</strong> — the left player has been dumping Cracks all
-              game. The other two have no Crack exposures. <strong>Safe.</strong>{" "}Throw
+              <strong>3 Crak</strong> — the left player has been dumping Craks all
+              game. The other two have no Crak exposures. <strong>Safe.</strong>{" "}Throw
               it.
             </li>
           </ul>
 
           <Callout variant="tip">
-            <strong>Answer:</strong> 3 Crack is the safest — Cracks are clearly
+            <strong>Answer:</strong> 3 Crak is the safest — Craks are clearly
             unwanted. The Red Dragon is also a reasonable discard since 3 of the
             4 are already exposed. The 6 Dot is the one to avoid — it could
             complete someone&apos;s hand.

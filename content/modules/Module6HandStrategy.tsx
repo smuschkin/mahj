@@ -219,9 +219,9 @@ export default function Module6HandStrategy() {
           <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
             <li>
               <strong>Save jokers for the hardest-to-find tiles.</strong>{" "}Say
-              your hand needs a pung of 7 Cracks and a pung of 3 Bams. Two
+              your hand needs a pung of 7 Craks and a pung of 3 Bams. Two
               3-Bams have already been discarded, so only two remain in the
-              wall — use the joker there, not on the 7 Cracks that nobody has
+              wall — use the joker there, not on the 7 Craks that nobody has
               touched yet.
             </li>
             <li>
@@ -375,7 +375,7 @@ export default function Module6HandStrategy() {
 
           <Callout variant="tip">
             <strong>Example:</strong>{" "}You&apos;re eyeing two candidate hands — one
-            uses Bams and Cracks, the other uses Bams and Winds. You have a{" "}
+            uses Bams and Craks, the other uses Bams and Winds. You have a{" "}
             <strong>6 Dot</strong>{" "}sitting on your rack. Neither candidate needs
             Dots, so the 6 Dot is &quot;in none of your candidate hands.&quot;
             Discard it first — you&apos;re giving up nothing no matter which hand
@@ -421,12 +421,12 @@ export default function Module6HandStrategy() {
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>5 Crack</strong> — fits neither candidate. Wrong suit for Even
+              <strong>5 Crak</strong> — fits neither candidate. Wrong suit for Even
               Bams, wrong tile for Dragons. <strong>Step 1 says discard.</strong>
             </li>
             <li>
               <strong>North Wind</strong> — also fits neither. Honors are
-              usually a fine discard, but dump the 5 Crack first — middle-suit
+              usually a fine discard, but dump the 5 Crak first — middle-suit
               tiles are live for more opponents, so you want it gone before
               someone can call it.
             </li>
@@ -441,7 +441,7 @@ export default function Module6HandStrategy() {
           </ul>
 
           <Callout variant="tip">
-            <strong>The answer:</strong>{" "}discard the <strong>5 Crack</strong>. It fits
+            <strong>The answer:</strong>{" "}discard the <strong>5 Crak</strong>. It fits
             no candidate hand, and it&apos;s the tile that costs you the least to lose.
             The marked tile in the rack above is the one to throw.
           </Callout>
