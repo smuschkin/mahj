@@ -287,7 +287,7 @@ export function TileMatchDrill() {
 
 function DrillShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="my-6 rounded-xl bg-gradient-to-br from-[#475569] to-[#334155] p-6 sm:p-9 text-white shadow-[0_6px_20px_rgba(0,0,0,0.15)]">
+    <div className="my-6 rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-6 sm:p-9 text-white shadow-[0_6px_20px_rgba(0,0,0,0.15)]">
       {children}
     </div>
   );

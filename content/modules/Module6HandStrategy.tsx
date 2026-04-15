@@ -263,52 +263,22 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── 7. Discard priority list ── */}
-        <LessonScreen title="📜 Discard Priority — in Order">
+        <LessonScreen title="📜 What to Discard First">
           <p>
-            When you have multiple tiles that <em>could</em>{" "}go, throw them in this
-            order:
+            When multiple tiles could go, discard in this order:
           </p>
-          <div className="my-3 space-y-2">
-            <PriorityRow
-              rank="1st"
-              what="Tiles that fit NONE of your hands"
-              why="No value to you — dump them first"
-            />
-            <PriorityRow
-              rank="2nd"
-              what="Tiles already in the discard pile"
-              why="Safe — fewer players can use them"
-            />
-            <PriorityRow
-              rank="3rd"
-              what="Winds/Dragons you don't need"
-              why="Usually safe — others often don't need them either"
-              tone="danger"
-            />
-            <PriorityRow
-              rank="4th"
-              what="Tiles from your weaker backup hand"
-              why="Time to commit to your primary"
-              tone="danger"
-            />
-            <PriorityRow
-              rank="Last"
-              what="Tiles opponents seem to need"
-              why="Only if you have no other choice"
-              tone="danger"
-            />
-            <PriorityRow
-              rank="Never"
-              what="Jokers"
-              why="Always keep them"
-              tone="never"
-            />
-          </div>
+          <ol className="ml-6 list-decimal space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Tiles that fit none of your hands</strong> — dump first</li>
+            <li><strong>Tiles already in the discard pile</strong> — safe</li>
+            <li><strong>Winds/Dragons you don&apos;t need</strong> — usually safe</li>
+            <li><strong>Tiles from your backup hand</strong> — time to commit</li>
+            <li><strong>Tiles opponents seem to need</strong> — last resort</li>
+            <li><strong>Jokers</strong> — never discard</li>
+          </ol>
 
           <Callout variant="tip">
-            <strong>Safe tile tip:</strong>{" "}If 3 copies of a tile are already
-            visible (discards + exposures), it&apos;s completely safe to throw —
-            no one can use it.
+            If 3 copies of a tile are already visible (discards + exposures),
+            it&apos;s <strong>completely safe</strong> to throw — no one can use it.
           </Callout>
         </LessonScreen>
 
@@ -370,12 +340,7 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── 9. Interactive drill ── */}
-        <LessonScreen title="🗑️ Practice: What Would You Discard?">
-          <p>
-            Time to put the decision tree into practice. We&apos;ll show you 5
-            hands — each with 14 tiles and a target hand. Tap the tile you&apos;d
-            throw away.
-          </p>
+        <LessonScreen title="">
           <DiscardDrill />
         </LessonScreen>
 

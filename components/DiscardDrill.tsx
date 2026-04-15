@@ -237,22 +237,16 @@ export function DiscardDrill() {
     return (
       <DrillShell>
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Practice Drill
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black">
-            🗑️ What Would You Discard?
+          <h3 className="mb-3 font-serif text-xl font-black">
+            🤔 What Would You Discard?
           </h3>
           <p className="mb-2 text-sm text-zinc-300">
-            We&apos;ll show you {ROUND_COUNT} hands with 14 tiles and a target
-            hand. Tap the tile you&apos;d throw away.
+            {ROUND_COUNT}{" "}hands with 14 tiles each and a target hand.
+            Tap the tile you&apos;d throw away.
           </p>
-          <p className="mb-2 text-xs text-zinc-400">
-            Most hands have <strong>more than one good answer</strong> — just
-            like at a real table. We&apos;ll accept any reasonable discard.
-          </p>
-          <p className="mb-5 text-xs text-zinc-500">
-            Get {PASS_THRESHOLD} out of {ROUND_COUNT} right to pass.
+          <p className="mb-5 text-xs text-zinc-400">
+            Most hands have more than one good answer — we&apos;ll accept
+            any reasonable discard.
           </p>
           <button
             type="button"
@@ -401,7 +395,7 @@ export function DiscardDrill() {
 
 function DrillShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="my-6 rounded-xl bg-gradient-to-br from-[#475569] to-[#334155] p-6 sm:p-9 text-white shadow-[0_6px_20px_rgba(0,0,0,0.15)]">
+    <div className="my-6 rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-6 sm:p-9 text-white shadow-[0_6px_20px_rgba(0,0,0,0.15)]">
       {children}
     </div>
   );
