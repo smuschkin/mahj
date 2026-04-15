@@ -163,42 +163,17 @@ export default function Module8Etiquette() {
         </LessonScreen>
 
         {/* ── 8. Social customs ── */}
-        <LessonScreen title="☕ Social Customs (The Unwritten Rules)">
+        <LessonScreen title="☕ Social Customs">
           <p>
-            These vary by group, but they&apos;re close to universal. Following them
-            will make you welcome at any new table.
+            These vary by group but are close to universal:
           </p>
-
-          <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>No comments on other players&apos; hands during play.</strong> Don&apos;t say &quot;ooh, you&apos;re close&quot; or &quot;why did you
-              throw that?&quot; even helpfully.
-            </li>
-            <li>
-              <strong>Phones away from the table.</strong>{" "}Most groups consider phones
-              at the playing surface rude. Step away if you need to take a call.
-            </li>
-            <li>
-              <strong>Food and drinks well clear of the tiles.</strong>{" "}Spilled coffee
-              on a friend&apos;s NMJL card is a real way to lose friends. Use a side
-              table.
-            </li>
-            <li>
-              <strong>Say thank you for a courtesy.</strong>{" "}If someone gives you 1–3
-              tiles in the courtesy pass, a quiet &quot;thanks&quot; is standard.
-            </li>
-            <li>
-              <strong>No coaching mid-hand.</strong>{" "}Even teaching a beginner usually
-              waits until between rounds. Mid-hand advice changes the game.
-            </li>
-            <li>
-              <strong>Compliment a good hand.</strong>{" "}When someone wins a hard hand,{" "}
-              <em>say so</em>. The social joy of mahjong is half the point.
-            </li>
-            <li>
-              <strong>Don&apos;t gloat. Don&apos;t sulk.</strong>{" "}The game has lots of
-              luck. The same player won&apos;t win every night, and everyone knows it.
-            </li>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>No commenting on hands</strong> during play</li>
+            <li><strong>Phones away</strong> from the table</li>
+            <li><strong>Food and drinks</strong> on a side table, away from tiles</li>
+            <li><strong>No coaching mid-hand</strong> — save advice for between rounds</li>
+            <li><strong>Compliment a good hand</strong> — say so when someone wins</li>
+            <li><strong>Don&apos;t gloat or sulk</strong> — the game has lots of luck</li>
           </ul>
 
         </LessonScreen>
