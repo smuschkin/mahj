@@ -205,7 +205,7 @@ function shortLabel(type: TileType, value?: number | string): string {
     case "wind":
       return WIND_LABELS[String(value)]?.full ?? String(value);
     case "dragon":
-      return value === "white" ? "Soap (White Dragon)" : `${DRAGON_LABELS[String(value)]?.label ?? ""} Dragon`;
+      return value === "white" ? "Soap" : DRAGON_LABELS[String(value)]?.label ?? "";
     case "flower":
     case "season":
       return "Flower";
@@ -271,15 +271,16 @@ function BamArt({ value, size }: { value: number; size: { w: number; h: number }
   if (value === 1) return <BirdSVG size={size.w * 0.82} />;
   const layout = BAM_LAYOUT[value];
   if (!layout) return null;
-  const stalkH = Math.max(7, (size.h - 30) / (layout.length * 1.7));
+  const stalkH = Math.max(7, (size.h - 30) / (layout.length * 1.8));
   const stalkW = Math.max(3, size.w / 14);
+  const rowGap = layout.length >= 3 ? "gap-0.5" : "gap-1";
   // Each stalk has 3 segments separated by nodes, like real bamboo
   const segH = stalkH / 3.6;
   const nodeGap = stalkH * 0.06;
   return (
-    <div className="flex flex-col items-center justify-center gap-1.5">
+    <div className={`flex flex-col items-center justify-center ${rowGap}`}>
       {layout.map((count, ri) => (
-        <div key={ri} className="flex gap-1.5">
+        <div key={ri} className="flex gap-1">
           {Array.from({ length: count }).map((_, i) => {
             const isOddRow = count % 2 === 1 && count > 1;
             const isCenter = i === Math.floor(count / 2);
@@ -564,8 +565,8 @@ function DragonArt({ value, size }: { value: string; size: { w: number; h: numbe
     // The "Soap" tile — a rectangle with a clear border.
     // Sized to match the visible content height of other tiles (~0.65 of tile height)
     // so it aligns properly when tiles sit side-by-side in a hand.
-    const w = Math.round(size.w * 0.65);
-    const h = Math.round(size.h * 0.75);
+    const w = Math.round(size.w * 0.7);
+    const h = Math.round(size.h * 0.8);
     return (
       <svg viewBox="0 0 32 48" width={w} height={h} aria-hidden="true">
         {/* Outer border */}

@@ -536,13 +536,13 @@ export default function Module3SetupDealing() {
         prev={
           adj.prev && {
             href: adj.prev.href,
-            name: `Module ${adj.prev.num}: ${adj.prev.name}`,
+            name: `Lesson ${adj.prev.num + 1}: ${adj.prev.name}`,
           }
         }
         next={
           adj.next && {
             href: adj.next.href,
-            name: `Module ${adj.next.num}: ${adj.next.name}`,
+            name: `Lesson ${adj.next.num + 1}: ${adj.next.name}`,
           }
         }
       />

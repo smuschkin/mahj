@@ -184,7 +184,7 @@ export default function Module0Welcome() {
         next={
           adj.next && {
             href: adj.next.href,
-            name: `Module ${adj.next.num}: ${adj.next.name}`,
+            name: `Lesson ${adj.next.num + 1}: ${adj.next.name}`,
           }
         }
       />

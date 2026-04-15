@@ -78,9 +78,18 @@ export default function Module1TileTrainer() {
             <strong>4 of each</strong>{" "}in the set — so <strong>36 Bam tiles</strong>{" "}total.
           </p>
           <TileRow caption="All 9 Bams (1 through 9). Note the bird!">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
-              <Tile key={n} type="bam" value={n} size="sm" showLabel />
-            ))}
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <Tile key={n} type="bam" value={n} size="sm" showLabel />
+                ))}
+              </div>
+              <div className="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+                {[6, 7, 8, 9].map((n) => (
+                  <Tile key={n} type="bam" value={n} size="sm" showLabel />
+                ))}
+              </div>
+            </div>
           </TileRow>
           <Callout variant="warn">
             The <strong>1 Bam</strong>{" "}is special — it&apos;s almost always drawn as a{" "}
@@ -102,9 +111,18 @@ export default function Module1TileTrainer() {
             <strong>4 of each</strong> = <strong>36 Crak tiles</strong>.
           </p>
           <TileRow caption="All 9 Craks (1 through 9)">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
-              <Tile key={n} type="crack" value={n} size="sm" showLabel />
-            ))}
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <Tile key={n} type="crack" value={n} size="sm" showLabel />
+                ))}
+              </div>
+              <div className="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+                {[6, 7, 8, 9].map((n) => (
+                  <Tile key={n} type="crack" value={n} size="sm" showLabel />
+                ))}
+              </div>
+            </div>
           </TileRow>
           <Callout variant="tip">
             You don&apos;t need to read the Chinese characters — just look at the small
@@ -125,9 +143,18 @@ export default function Module1TileTrainer() {
             <strong>36 Dot tiles</strong>.
           </p>
           <TileRow caption="All 9 Dots (1 through 9)">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
-              <Tile key={n} type="dot" value={n} size="sm" showLabel />
-            ))}
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <Tile key={n} type="dot" value={n} size="sm" showLabel />
+                ))}
+              </div>
+              <div className="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+                {[6, 7, 8, 9].map((n) => (
+                  <Tile key={n} type="dot" value={n} size="sm" showLabel />
+                ))}
+              </div>
+            </div>
           </TileRow>
           <Callout variant="tip">
             That&apos;s all 3 number suits. Bams + Craks + Dots ={" "}
@@ -136,11 +163,7 @@ export default function Module1TileTrainer() {
         </LessonScreen>
 
         {/* ── Drill: Suit Sorter ── */}
-        <LessonScreen title="Quick Check: Suit Sorter">
-          <p>
-            You&apos;ve met all 3 number suits. Let&apos;s make sure you can tell them
-            apart at a glance.
-          </p>
+        <LessonScreen title="">
           <SuitSorterDrill />
         </LessonScreen>
 
@@ -208,10 +231,7 @@ export default function Module1TileTrainer() {
         </LessonScreen>
 
         {/* ── Mini quiz: Dragon-suit pairings ── */}
-        <LessonScreen title="🎯 Quick Check: Dragons & Suits">
-          <p className="text-sm text-zinc-600">
-            3 quick questions before we move on. Match each dragon to its suit.
-          </p>
+        <LessonScreen title="">
           <Quiz
             title="Dragon-Suit Check"
             passThreshold={2}
@@ -246,14 +266,20 @@ export default function Module1TileTrainer() {
             them &quot;Flowers.&quot; Ignore any numbers printed on them.
           </p>
           <TileRow caption="The 8 Flowers">
-            <Tile type="flower" value={1} size="md" />
-            <Tile type="flower" value={2} size="md" />
-            <Tile type="flower" value={3} size="md" />
-            <Tile type="flower" value={4} size="md" />
-            <Tile type="season" value={1} size="md" />
-            <Tile type="season" value={2} size="md" />
-            <Tile type="season" value={3} size="md" />
-            <Tile type="season" value={4} size="md" />
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex gap-1.5">
+                <Tile type="flower" value={1} size="md" />
+                <Tile type="flower" value={2} size="md" />
+                <Tile type="flower" value={3} size="md" />
+                <Tile type="flower" value={4} size="md" />
+              </div>
+              <div className="flex gap-1.5">
+                <Tile type="season" value={1} size="md" />
+                <Tile type="season" value={2} size="md" />
+                <Tile type="season" value={3} size="md" />
+                <Tile type="season" value={4} size="md" />
+              </div>
+            </div>
           </TileRow>
         </LessonScreen>
 
@@ -281,12 +307,7 @@ export default function Module1TileTrainer() {
         </LessonScreen>
 
         {/* ── Drill: Tile Match (after Jokers) ── */}
-        <LessonScreen title="🃏 Tile Match">
-          <p>
-            You&apos;ve now seen every tile type. Let&apos;s see if you can
-            recognize them fast — we&apos;ll show you 10 tiles with names,
-            decide if each name matches.
-          </p>
+        <LessonScreen title="">
           <TileMatchDrill />
         </LessonScreen>
 
@@ -374,11 +395,7 @@ export default function Module1TileTrainer() {
         </LessonScreen>
 
         {/* ── Extended practice: Name That Tile ── */}
-        <LessonScreen title="🀄 Practice: Name That Tile">
-          <p>
-            Ready for a bigger challenge? 20 tiles, 4 choices each. See how many
-            you can name correctly.
-          </p>
+        <LessonScreen title="">
           <TileIDDrill />
         </LessonScreen>
 
@@ -459,13 +476,13 @@ export default function Module1TileTrainer() {
         prev={
           adj.prev && {
             href: adj.prev.href,
-            name: `Module ${adj.prev.num}: ${adj.prev.name}`,
+            name: `Lesson ${adj.prev.num + 1}: ${adj.prev.name}`,
           }
         }
         next={
           adj.next && {
             href: adj.next.href,
-            name: `Module ${adj.next.num}: ${adj.next.name}`,
+            name: `Lesson ${adj.next.num + 1}: ${adj.next.name}`,
           }
         }
       />

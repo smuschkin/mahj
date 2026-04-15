@@ -1048,7 +1048,7 @@ export default function Module13Practice() {
         prev={
           adj.prev && {
             href: adj.prev.href,
-            name: `Module ${adj.prev.num}: ${adj.prev.name}`,
+            name: `Lesson ${adj.prev.num + 1}: ${adj.prev.name}`,
           }
         }
       />

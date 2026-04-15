@@ -13,6 +13,82 @@ import { Tile } from "@/components/Tile";
 import { CharlestonAnimation } from "@/components/CharlestonAnimation";
 import { getAdjacentModules } from "@/lib/modules";
 
+function FaceDownTile() {
+  return (
+    <div className="relative" style={{ width: 40, height: 56 }}>
+      {/* Bottom edge — gives thickness */}
+      <div
+        className="absolute rounded-md"
+        style={{
+          width: 40, height: 56,
+          top: 3, left: 0,
+          background: "#B5985A",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.3)",
+        }}
+      />
+      {/* Tile back */}
+      <div
+        className="absolute rounded-md"
+        style={{
+          width: 40, height: 56,
+          top: 0, left: 0,
+          background: "linear-gradient(135deg, #1E6B3A, #145A32)",
+          border: "1.5px solid #C9BC8A",
+        }}
+      >
+        <div className="flex h-full items-center justify-center">
+          <div
+            className="rounded-sm"
+            style={{
+              width: 26, height: 40,
+              border: "1px solid rgba(200,169,81,0.25)",
+              background: "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(0,0,0,0.05))",
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PyramidTiles() {
+  return (
+    <svg viewBox="0 0 200 160" width={200} height={160} aria-hidden="true">
+      {/* Bottom-left tile */}
+      <g transform="translate(35, 60)">
+        {/* Thickness */}
+        <rect x="0" y="5" width="70" height="90" rx="6" fill="#B5985A" />
+        {/* Back */}
+        <rect x="0" y="0" width="70" height="90" rx="6" fill="url(#tileBack)" stroke="#C9BC8A" strokeWidth="1.5" />
+        {/* Inner pattern */}
+        <rect x="12" y="12" width="46" height="66" rx="3" fill="none" stroke="rgba(200,169,81,0.25)" strokeWidth="1" />
+      </g>
+      {/* Bottom-right tile */}
+      <g transform="translate(95, 60)">
+        <rect x="0" y="5" width="70" height="90" rx="6" fill="#B5985A" />
+        <rect x="0" y="0" width="70" height="90" rx="6" fill="url(#tileBack)" stroke="#C9BC8A" strokeWidth="1.5" />
+        <rect x="12" y="12" width="46" height="66" rx="3" fill="none" stroke="rgba(200,169,81,0.25)" strokeWidth="1" />
+      </g>
+      {/* Top tile — centered, overlapping */}
+      <g transform="translate(65, 0)">
+        <rect x="0" y="5" width="70" height="90" rx="6" fill="#B5985A" />
+        <rect x="0" y="0" width="70" height="90" rx="6" fill="url(#tileBackTop)" stroke="#C9BC8A" strokeWidth="1.5" />
+        <rect x="12" y="12" width="46" height="66" rx="3" fill="none" stroke="rgba(200,169,81,0.3)" strokeWidth="1" />
+      </g>
+      <defs>
+        <linearGradient id="tileBack" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#1E6B3A" />
+          <stop offset="100%" stopColor="#145A32" />
+        </linearGradient>
+        <linearGradient id="tileBackTop" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#22804A" />
+          <stop offset="100%" stopColor="#1A6B3A" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
 /* ─── Local helpers (only used by this module) ─── */
 
 function PassStep({
@@ -187,10 +263,10 @@ export default function Module4Charleston() {
             designated player. You receive 3 face-down tiles back.
           </p>
 
-          <div className="my-4 flex justify-center gap-2">
-            <div className="h-[48px] w-[36px] rounded-md bg-[#1A4D2E] shadow-sm" />
-            <div className="h-[48px] w-[36px] rounded-md bg-[#1A4D2E] shadow-sm" />
-            <div className="h-[48px] w-[36px] rounded-md bg-[#1A4D2E] shadow-sm" />
+          <div className="my-4 flex justify-center gap-1.5">
+            {[0, 1, 2].map((i) => (
+              <FaceDownTile key={i} />
+            ))}
           </div>
           <p className="text-center text-[12px] italic text-zinc-500">
             3 tiles, face-down, in a row
@@ -217,21 +293,48 @@ export default function Module4Charleston() {
             Charleston doesn&apos;t happen and play begins. Otherwise, you do the
             second Charleston in reverse order:
           </p>
-          <ol className="ml-6 list-decimal space-y-1 text-[15px]">
-            <li><strong>Second Left</strong> — pass 3 face down in a <strong>pyramid</strong> (2 on bottom, 1 on top) to your left — this signals it&apos;s the second Charleston</li>
+          <ol className="ml-6 list-decimal space-y-3 text-[15px]">
+            <li>
+              <strong>Second Left</strong> — pass 3 face down in a{" "}
+              <strong>pyramid</strong>{" "}to your left — this signals
+              it&apos;s the second Charleston
+            </li>
+          </ol>
+
+          <div className="my-3 rounded-lg bg-[var(--color-light)] border border-dashed border-[var(--color-border)] p-4">
+            <p className="mb-3 text-center text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+              Pyramid pass (second Charleston)
+            </p>
+            <div className="flex justify-center">
+              <div className="relative" style={{ width: 90, height: 110 }}>
+                {/* Bottom-left tile */}
+                <div className="absolute" style={{ left: 0, top: 40 }}>
+                  <FaceDownTile />
+                </div>
+                {/* Bottom-right tile */}
+                <div className="absolute" style={{ left: 44, top: 40 }}>
+                  <FaceDownTile />
+                </div>
+                {/* Top tile — overlapping, centered */}
+                <div className="absolute" style={{ left: 22, top: 0, zIndex: 1 }}>
+                  <FaceDownTile />
+                </div>
+              </div>
+            </div>
+            <p className="mt-2 text-center text-[12px] italic text-zinc-500">
+              1 on top, 2 on bottom — face down
+            </p>
+          </div>
+
+          <ol className="ml-6 list-decimal space-y-3 text-[15px]" start={2}>
             <li><strong>Second Across</strong> — pass 3 face down in a row across</li>
             <li><strong>Last Right</strong> — pass 3 face down in a row to your right</li>
           </ol>
           <Callout variant="warn">
             <strong>Once the second Charleston starts, you must finish all 3
-            passes.</strong>{" "}The only chance to stop is <em>before</em>{" "}it begins —
-            between the first and second Charlestons. You can&apos;t quit mid-way
-            through.
-          </Callout>
-          <Callout variant="tip">
-            If your hand is already shaping up nicely, calling &quot;stop&quot; after
-            the first Charleston is a smart move — you don&apos;t want to give other
-            players more chances to improve.
+            passes.</strong>{" "}The only chance to stop is <em>before</em>{" "}it
+            begins. If your hand is shaping up nicely, say &quot;stop&quot;
+            after the first Charleston.
           </Callout>
         </LessonScreen>
 
@@ -443,13 +546,13 @@ export default function Module4Charleston() {
         prev={
           adj.prev && {
             href: adj.prev.href,
-            name: `Module ${adj.prev.num}: ${adj.prev.name}`,
+            name: `Lesson ${adj.prev.num + 1}: ${adj.prev.name}`,
           }
         }
         next={
           adj.next && {
             href: adj.next.href,
-            name: `Module ${adj.next.num}: ${adj.next.name}`,
+            name: `Lesson ${adj.next.num + 1}: ${adj.next.name}`,
           }
         }
       />
