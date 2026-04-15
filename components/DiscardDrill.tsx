@@ -30,7 +30,7 @@ type Scenario = {
 
 const SCENARIOS: Scenario[] = [
   {
-    handHint: "You're working toward Even Bams (pairs + pungs of 2-4-6-8 Bam) or a Dragons hand",
+    handHint: "Even Bams or Dragons hand",
     tiles: [
       { type: "bam", value: 2 }, { type: "bam", value: 2 },
       { type: "bam", value: 4 }, { type: "bam", value: 4 },
@@ -49,7 +49,7 @@ const SCENARIOS: Scenario[] = [
     tip: "Look for tiles that don't fit ANY of your candidate hands. Those go first.",
   },
   {
-    handHint: "Going for Consecutive Bams (pungs of 3-4-5 Bam + flowers)",
+    handHint: "Consecutive Bams + Flowers",
     tiles: [
       { type: "bam", value: 3 }, { type: "bam", value: 3 }, { type: "bam", value: 3 },
       { type: "bam", value: 4 }, { type: "bam", value: 4 },
@@ -67,7 +67,7 @@ const SCENARIOS: Scenario[] = [
     tip: "When multiple tiles are equally useless, dump suited tiles before honors — they're more dangerous to hold.",
   },
   {
-    handHint: "Going for Winds & Dragons (pungs of winds + pair of dragons) or Like 7s (pungs of 7s across 3 suits)",
+    handHint: "Winds & Dragons or Like 7s",
     tiles: [
       { type: "wind", value: "N" }, { type: "wind", value: "N" },
       { type: "wind", value: "S" }, { type: "wind", value: "S" },
@@ -83,10 +83,10 @@ const SCENARIOS: Scenario[] = [
     bestDiscard: 12, // 2 Dot
     explanation:
       "The 2 Dot and 9 Bam fit neither candidate hand. Both are good discards. Everything else — the winds, dragons, 7s, and joker — could be useful.",
-    tip: "Before discarding, ask: does this tile fit ANY of my candidate hands? If not, it can go.",
+    tip: "When torn between two candidates, discard tiles from the hand you're least likely to complete.",
   },
   {
-    handHint: "Going for 2468 Craks (kongs of even Craks + pair of flowers)",
+    handHint: "2468 Craks",
     tiles: [
       { type: "crack", value: 2 }, { type: "crack", value: 2 }, { type: "crack", value: 2 },
       { type: "crack", value: 4 }, { type: "crack", value: 4 }, { type: "crack", value: 4 },
@@ -104,7 +104,7 @@ const SCENARIOS: Scenario[] = [
     tip: "Odd-numbered tiles are useless for a 2468 hand. Wrong-suit tiles are useless too. Both can go.",
   },
   {
-    handHint: "Going for 369 Dots (pungs of 3-6-9 Dot) or Quint of 3 Dots + pairs",
+    handHint: "369 Dots or Quint of 3 Dots",
     tiles: [
       { type: "dot", value: 3 }, { type: "dot", value: 3 }, { type: "dot", value: 3 },
       { type: "dot", value: 6 }, { type: "dot", value: 6 },
@@ -120,10 +120,10 @@ const SCENARIOS: Scenario[] = [
     bestDiscard: 10, // 7 Crak
     explanation:
       "The 7 Crak, 1 Bam, South Wind, and Soap all fit nothing in a 369 Dots hand. Any of them is correct! Dump suited tiles first since they're more dangerous to hold.",
-    tip: "When you have 4 junk tiles and only need to discard 1, pick the one most likely to help an opponent.",
+    tip: "Dump dangerous junk (middle-suit tiles) early — they become riskier to discard later in the game.",
   },
   {
-    handHint: "Going for Year Hand 2026 (needs 2s, Soaps (0), and 6s)",
+    handHint: "Year Hand 2026 — needs 2s, 0s (Soap), and 6s",
     tiles: [
       { type: "bam", value: 2 }, { type: "bam", value: 2 },
       { type: "crack", value: 2 }, { type: "crack", value: 2 },
