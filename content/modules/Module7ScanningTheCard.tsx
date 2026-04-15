@@ -130,27 +130,15 @@ export default function Module7ScanningTheCard() {
           <p>
             Now look for <strong>duplicates</strong> in your sorted rack:
           </p>
-          <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>Two of the same tile = a pair.</strong>{" "}This is a
-              head start on any hand that needs a pair of that tile.
-            </li>
-            <li>
-              <strong>Three of the same tile = a pung-in-progress.</strong>{" "}
-              This is gold. Hands that need a pung of this number are
-              immediately promising.
-            </li>
-            <li>
-              <strong>Four of the same tile = a kong.</strong>{" "}Even rarer,
-              and it massively narrows your candidates to hands with kongs.
-            </li>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>2 of the same = a pair</strong> — head start on any hand needing that tile</li>
+            <li><strong>3 of the same = a group</strong> — look for hands that use this number</li>
+            <li><strong>4 of the same = a kong</strong> — narrows your search to hands with kongs</li>
           </ul>
-          <p>
-            Pairs and triples are the strongest signals you have. A hand that
-            already uses two or three of your existing tiles is far more
-            realistic than one where you&apos;d need to find everything from
-            scratch.
-          </p>
+          <Callout variant="tip">
+            Duplicates are your strongest signals. Start with hands that
+            already use tiles you have.
+          </Callout>
         </LessonScreen>
 
         {/* ── 6. Step 4 — Check the year hand ── */}
