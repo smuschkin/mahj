@@ -301,7 +301,7 @@ export default function Module9Scoring() {
             Misnamed discard (Article 67)
           </h4>
           <p className="text-[14px] text-zinc-700">
-            Same rule covered in Lesson 12: the win is valid and the misnamer alone pays for all three losers.
+            Same rule covered in Lesson 12: the win is valid and the misnamer alone pays the full amount for all three other players.
           </p>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
