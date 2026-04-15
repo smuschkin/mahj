@@ -673,63 +673,6 @@ export default function Module2ReadingTheCard() {
           </Callout>
         </LessonScreen>
 
-        {/* ── 9. Common beginner misreads ── */}
-        <LessonScreen title="⚠️ Common Beginner Misreads">
-          <p>
-            Almost every new player makes these mistakes. Knowing them in advance
-            saves embarrassment at the table.
-          </p>
-
-          <div className="my-3 space-y-3">
-            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
-                Ignoring the C
-              </h4>
-              <p className="text-[13px] text-zinc-700">
-                You call a tile for a hand marked C (concealed) — and your hand is
-                now dead. <strong>Always check C vs. X</strong>{" "}before you call.
-              </p>
-            </div>
-            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
-                Treating pattern numbers as literal
-              </h4>
-              <p className="text-[13px] text-zinc-700">
-                The card shows &quot;111 222&quot; and you think you <em>must</em> use 1s and 2s. You don&apos;t — those numbers represent a pattern.
-                Read the category name to know if the numbers are flexible.
-              </p>
-            </div>
-            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
-                Confusing a kong for two pairs
-              </h4>
-              <p className="text-[13px] text-zinc-700">
-                Four tiles clustered together is a <strong>kong</strong>{" "}(one group of
-                4), not two pairs. A space between them would mean two separate
-                pairs. Spacing matters.
-              </p>
-            </div>
-            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
-                Using a joker in a pair
-              </h4>
-              <p className="text-[13px] text-zinc-700">
-                Jokers only work in groups of 3 or more. If the hand has a pair, you
-                need <strong>two real tiles</strong> — no joker shortcut.
-              </p>
-            </div>
-            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
-                Miscounting to 14
-              </h4>
-              <p className="text-[13px] text-zinc-700">
-                If your tiles don&apos;t add up to 14, you&apos;ve misread a group.
-                Re-check the spacing between clusters on the card.
-              </p>
-            </div>
-          </div>
-        </LessonScreen>
-
         {/* ── C, X, and Hand Values ── */}
         <LessonScreen title="💰 C, X, and Hand Values">
           <p>
@@ -814,6 +757,63 @@ export default function Module2ReadingTheCard() {
             the easiest to complete since you can call tiles. You&apos;ll
             learn more about payouts in Lesson 12 (Scoring).
           </Callout>
+        </LessonScreen>
+
+        {/* ── Common beginner misreads ── */}
+        <LessonScreen title="⚠️ Common Beginner Misreads">
+          <p>
+            Almost every new player makes these mistakes. Knowing them in advance
+            saves embarrassment at the table.
+          </p>
+
+          <div className="my-3 space-y-3">
+            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
+              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
+                Ignoring the C
+              </h4>
+              <p className="text-[13px] text-zinc-700">
+                You call a tile for a hand marked C (concealed) — and your hand is
+                now dead. <strong>Always check C vs. X</strong>{" "}before you call.
+              </p>
+            </div>
+            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
+              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
+                Treating pattern numbers as literal
+              </h4>
+              <p className="text-[13px] text-zinc-700">
+                The card shows &quot;111 222&quot; and you think you <em>must</em> use 1s and 2s. You don&apos;t — those numbers represent a pattern.
+                Read the category name to know if the numbers are flexible.
+              </p>
+            </div>
+            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
+              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
+                Confusing a kong for two pairs
+              </h4>
+              <p className="text-[13px] text-zinc-700">
+                Four tiles clustered together is a <strong>kong</strong>{" "}(one group of
+                4), not two pairs. A space between them would mean two separate
+                pairs. Spacing matters.
+              </p>
+            </div>
+            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
+              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
+                Using a joker in a pair
+              </h4>
+              <p className="text-[13px] text-zinc-700">
+                Jokers only work in groups of 3 or more. If the hand has a pair, you
+                need <strong>two real tiles</strong> — no joker shortcut.
+              </p>
+            </div>
+            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
+              <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
+                Miscounting to 14
+              </h4>
+              <p className="text-[13px] text-zinc-700">
+                If your tiles don&apos;t add up to 14, you&apos;ve misread a group.
+                Re-check the spacing between clusters on the card.
+              </p>
+            </div>
+          </div>
         </LessonScreen>
 
         {/* ── Quiz ── */}
