@@ -142,10 +142,27 @@ export default function Module5JokersCalling() {
             </CallCard>
           </div>
 
+        </LessonScreen>
+
+        {/* ── 3. How a call works ── */}
+        <LessonScreen title="🗣️ How a Call Works">
+          <ol className="ml-6 list-decimal space-y-2 text-[15px]">
+            <li>
+              Say <strong>&quot;wait&quot;</strong>{" "}to pause the game
+            </li>
+            <li>
+              Say <strong>&quot;Call!&quot;</strong>{" "}(or <strong>&quot;Mahjong!&quot;</strong>)
+              and take the tile
+            </li>
+            <li>
+              <strong>Expose</strong>{" "}the group face-up on your rack
+            </li>
+            <li>
+              <strong>Discard</strong>{" "}one tile, play continues to your right
+            </li>
+          </ol>
           <Callout variant="tip">
-            Just say <strong>&quot;Call!&quot;</strong>{" "}(or{" "}
-            <strong>&quot;Mahjong!&quot;</strong>{" "}if it wins). Anyone can
-            call on anyone&apos;s turn — but you must call{" "}
+            Anyone can call on anyone&apos;s turn — but you must call{" "}
             <strong>before</strong>{" "}the next player picks up a tile, or
             it&apos;s too late.
           </Callout>
@@ -153,30 +170,6 @@ export default function Module5JokersCalling() {
             <strong>Mahjong is the only time</strong>{" "}you can claim a
             discard for a pair or single tile. All other calls require
             groups of 3 or more.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 3. How a call works ── */}
-        <LessonScreen title="🗣️ How a Call Works">
-          <ol className="ml-6 list-decimal space-y-2 text-[15px]">
-            <li>
-              Say <strong>&quot;wait&quot;</strong> to pause the game
-            </li>
-            <li>
-              Say <strong>&quot;Call!&quot;</strong> (or <strong>&quot;Mahjong!&quot;</strong>)
-              and take the tile
-            </li>
-            <li>
-              <strong>Expose</strong> the group face-up on your rack
-            </li>
-            <li>
-              <strong>Discard</strong> one tile, play continues to your right
-            </li>
-          </ol>
-          <Callout variant="tip">
-            <strong>&quot;Wait&quot;</strong>{" "}is the most useful word at the
-            table. You don&apos;t have to commit instantly — pause, think,
-            then decide.
           </Callout>
         </LessonScreen>
 
