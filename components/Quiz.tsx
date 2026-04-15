@@ -82,7 +82,7 @@ export function Quiz({
           <button
             type="button"
             onClick={start}
-            className="rounded-md bg-[var(--color-mid)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-[var(--color-accent)] transition hover:-translate-y-0.5"
+            className="rounded-md bg-[var(--color-accent)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
           >
             Start →
           </button>
@@ -116,7 +116,7 @@ export function Quiz({
           <button
             type="button"
             onClick={start}
-            className="rounded-md bg-[var(--color-mid)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-[var(--color-accent)] transition hover:-translate-y-0.5"
+            className="rounded-md bg-[var(--color-accent)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
           >
             {passed ? "Retake quiz" : "Try again"}
           </button>
@@ -189,7 +189,7 @@ export function Quiz({
             <button
               type="button"
               onClick={next}
-              className="rounded-md bg-[var(--color-mid)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-[var(--color-accent)] transition hover:-translate-y-0.5"
+              className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
             >
               {index + 1 >= total ? "See results →" : "Next question →"}
             </button>

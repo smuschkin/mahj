@@ -46,7 +46,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1A4D2E" />
         <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col overflow-x-clip">
         <TopNav />
         <main className="flex-1">{children}</main>
         <Disclaimer />

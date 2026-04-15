@@ -371,7 +371,7 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={8}
             title="Module 8 Check"

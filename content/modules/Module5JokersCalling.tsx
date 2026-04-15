@@ -402,7 +402,7 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={6}
             title="Module 6 Check"

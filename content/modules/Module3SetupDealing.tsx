@@ -450,7 +450,7 @@ export default function Module3SetupDealing() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={3}
             title="Module 3 Check"

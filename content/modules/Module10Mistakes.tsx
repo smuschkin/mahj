@@ -453,7 +453,7 @@ export default function Module10Mistakes() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={12}
             title="Module 12 Check"

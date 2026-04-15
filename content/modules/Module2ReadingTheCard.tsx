@@ -817,7 +817,7 @@ export default function Module2ReadingTheCard() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={2}
             title="Module 2 Check"

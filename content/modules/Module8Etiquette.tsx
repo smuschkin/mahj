@@ -308,7 +308,7 @@ export default function Module8Etiquette() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={10}
             title="Module 10 Check"

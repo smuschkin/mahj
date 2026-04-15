@@ -492,7 +492,7 @@ export default function Module7Defense() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={9}
             title="Module 9 Check"

@@ -337,7 +337,7 @@ export default function Module7ScanningTheCard() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={7}
             title="Module 7 Check"

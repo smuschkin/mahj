@@ -337,7 +337,7 @@ export default function Module5CharlestonStrategy() {
         </LessonScreen>
 
         {/* ── 8. Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={5}
             title="Module 5 Check"

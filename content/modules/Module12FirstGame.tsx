@@ -668,7 +668,7 @@ export default function Module12FirstGame() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={14}
             title="Module 14 Check"

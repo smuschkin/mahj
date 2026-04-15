@@ -342,7 +342,7 @@ export default function Module9Scoring() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Quiz">
+        <LessonScreen title="">
           <Quiz
             moduleNum={11}
             title="Module 11 Check"
