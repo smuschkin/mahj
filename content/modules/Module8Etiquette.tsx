@@ -36,14 +36,14 @@ export default function Module8Etiquette() {
   const adj = getAdjacentModules(8);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={8} coverProps={{ eyebrow: "MAHJ — Module 8", title: "Etiquette &", highlight: "Table Culture", subtitle: "The unwritten (and a few written) rules that make you welcome at any mahjong table" }} header={<><Cover
         eyebrow="MAHJ — Module 8"
         title="Etiquette &"
         highlight="Table Culture"
         subtitle="The unwritten (and a few written) rules that make you welcome at any mahjong table"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -59,11 +59,7 @@ export default function Module8Etiquette() {
               "Etiquette is the difference between being invited back and not. Most beginner missteps aren't strategy mistakes — they're table-culture mistakes.",
           },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={8}>
+      /></>}>
         {/* ── 1. Why etiquette ── */}
         <LessonScreen title="🤝 Why Etiquette Matters">
           <p>

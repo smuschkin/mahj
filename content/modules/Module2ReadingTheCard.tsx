@@ -36,26 +36,32 @@ function FakeHandLine({
   value,
 }: {
   label: string;
-  groups: string[];
-  value: string;
+  groups: { text: string; color?: string }[] | string[];
+  value?: string;
 }) {
+  const normalizedGroups = groups.map((g) =>
+    typeof g === "string" ? { text: g, color: "var(--color-mid)" } : g
+  );
   return (
     <div className="my-3 rounded-xl border-2 border-[var(--color-border)] bg-white p-4 shadow-sm">
-      <div className="mb-2 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
+      <div className="mb-2 text-center text-[13px] font-bold uppercase tracking-wider text-zinc-500">
         {label}
       </div>
-      <div className="flex flex-wrap items-center gap-4">
-        {groups.map((g, i) => (
+      <div className="flex flex-wrap items-center justify-center gap-2">
+        {normalizedGroups.map((g, i) => (
           <span
             key={i}
-            className="rounded-md bg-[var(--color-light)] px-3 py-1.5 font-serif text-lg font-black tracking-wider text-[var(--color-mid)]"
+            className="rounded-md bg-[var(--color-light)] px-2 py-1 font-serif text-base font-black tracking-wider"
+            style={{ color: g.color }}
           >
-            {g}
+            {g.text}
           </span>
         ))}
-        <span className="ml-auto font-serif text-sm font-black text-[var(--color-accent)]">
-          {value}
-        </span>
+        {value && (
+          <span className="ml-auto font-serif text-sm font-black text-[var(--color-accent)]">
+            {value}
+          </span>
+        )}
       </div>
     </div>
   );
@@ -65,14 +71,14 @@ export default function Module2ReadingTheCard() {
   const adj = getAdjacentModules(2);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={2} coverProps={{ eyebrow: "MAHJ — Module 2", title: "Reading the", highlight: "Card", subtitle: "How to decode the NMJL card — the blueprint for every winning hand" }} header={<><Cover
         eyebrow="MAHJ — Module 2"
         title="Reading the"
         highlight="Card"
         subtitle="How to decode the NMJL card — the blueprint for every winning hand"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -88,11 +94,7 @@ export default function Module2ReadingTheCard() {
               "The card IS the game. Every decision you make — what to keep, what to pass, what to call — comes back to the hand you're building from the card.",
           },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={2}>
+      /></>}>
         {/* ── 1. What is the card? ── */}
         <LessonScreen title="🃏 What Is the NMJL Card?">
           <p>
@@ -138,9 +140,6 @@ export default function Module2ReadingTheCard() {
             Categories change slightly from year to year, but the overall structure
             stays the same. Once you learn how to read one card, you can read any
             card.
-          </Callout>
-          <Callout variant="info">
-            <strong>Soap = zero.</strong> The White Dragon (&quot;Soap&quot;) is used as the number 0 on the card. It can be used with any suit. You&apos;ll see this in the year hands (e.g. 2-0-2-5).
           </Callout>
         </LessonScreen>
 
@@ -318,78 +317,146 @@ export default function Module2ReadingTheCard() {
           </Callout>
         </LessonScreen>
 
-        {/* ── 6. Numbers are patterns ── */}
-        <LessonScreen title="🔢 Numbers Are Patterns, Not Always Exact">
+        {/* ── 6. Parenthetical rules ── */}
+        <LessonScreen title="📝 The Rules at the End of Each Hand">
           <p>
-            This is the part that confuses beginners most. The numbers on the card
-            don&apos;t always mean those <em>exact</em>{" "}tiles. Depending on the{" "}
-            <strong>category</strong>, the numbers represent a{" "}
-            <strong>pattern</strong>{" "}you fill in:
+            Every hand line on the card ends with a short note in
+            parentheses. <strong>This tells you exactly how to build
+            that hand.</strong>{" "}Don&apos;t skip it — it&apos;s the most
+            important part.
           </p>
 
-          <div className="my-3 space-y-3">
-            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-white p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-mid)]">
-                Like numbers
-              </h4>
+          <div className="my-3 space-y-2">
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                Card shows <strong>111 222</strong> → means &quot;pung of one
-                number + pung of another.&quot; Could be 555 + 888, or 333 + 777,
-                etc. You pick the numbers.
+                <strong>&quot;Any 2 or 3 Suits&quot;</strong> — use tiles
+                from 2 or 3 different suits (you pick which)
               </p>
             </div>
-
-            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-white p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-mid)]">
-                Consecutive run
-              </h4>
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                Card shows <strong>11 222 333 44</strong> → means a sequence of four
-                consecutive numbers. Could be 22 333 444 55, or 55 666 777 88, etc.
+                <strong>&quot;Any 1 Suit&quot;</strong> — the entire hand
+                must be built from a single suit
               </p>
             </div>
-
-            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-white p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-mid)]">
-                Even / Odd
-              </h4>
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                <strong>2468</strong>{" "}hands → pick from 2, 4, 6, or 8.{" "}
-                <strong>13579</strong>{" "}hands → pick from 1, 3, 5, 7, or 9. The card
-                shows one example, you plug in any valid even or odd numbers.
+                <strong>&quot;These Nos. Only&quot;</strong> — use the exact
+                numbers shown on the card, no substituting
               </p>
             </div>
-
-            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-white p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-mid)]">
-                Year hand
-              </h4>
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                These <strong>are</strong>{" "}literal. The 2026 year hand needs tiles
-                matching the digits 2, 0, 2, and 6 — and 0 means the White Dragon
-                (Soap).
+                <strong>&quot;Any 3 Consec. Nos.&quot;</strong> — pick any
+                3 numbers in a row (like 3-4-5 or 6-7-8)
               </p>
             </div>
-
-            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-white p-3">
-              <h4 className="font-serif text-sm font-black text-[var(--color-mid)]">
-                369
-              </h4>
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                Only tiles numbered 3, 6, or 9. The card shows one arrangement, but
-                you choose which 3s, 6s, and 9s to use and from which suits.
+                <strong>&quot;Like Pungs Any Even No.&quot;</strong> — groups
+                of 3 matching tiles, using any even numbers (2, 4, 6, or 8)
+              </p>
+            </div>
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
+              <p className="text-[13px] text-zinc-700">
+                <strong>&quot;Any Dragon&quot;</strong> or{" "}
+                <strong>&quot;Matching Dragons&quot;</strong> — use any dragon
+                tile(s), or dragons that match the suit(s) in your hand
+              </p>
+            </div>
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
+              <p className="text-[13px] text-zinc-700">
+                <strong>&quot;Pairs Must Be Same Suit&quot;</strong> — both
+                tiles in the pair must come from the same suit
               </p>
             </div>
           </div>
 
-          <Callout variant="warn">
-            <strong>How do you know if numbers are literal or a pattern?</strong> The <em>category name</em>{" "}tells you. &quot;Consecutive run&quot; means
-            the numbers represent a sequence you shift. &quot;Year hand&quot; means
-            the numbers are exact. Read the category first, then the hand.
+          <Callout variant="tip">
+            Always read the parenthetical <strong>before</strong>{" "}you
+            start building the hand. It tells you how many suits to use,
+            whether numbers are flexible, and any special constraints.
           </Callout>
         </LessonScreen>
 
-        {/* ── 7. Fake hand walkthrough ── */}
+        {/* ── 7. Numbers are patterns ── */}
+        <LessonScreen title="🔢 Numbers on the Card Are Flexible">
+          <p>
+            This confuses every beginner: the numbers on the card don&apos;t
+            always mean those <em>exact</em>{" "}tiles. The{" "}
+            <strong>category name</strong>{" "}tells you whether the numbers are
+            flexible or literal.
+          </p>
+
+          <div className="my-3 space-y-4">
+            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-white p-4">
+              <h4 className="mb-2 font-serif text-sm font-black text-[var(--color-accent)]">
+                ✅ Flexible — you pick the numbers
+              </h4>
+              <div className="space-y-3 text-[13px]">
+                <div>
+                  <p className="mb-1 font-bold text-zinc-600">Like Numbers:</p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">111 222</span>
+                    <span className="text-zinc-400">→</span>
+                    <span className="font-bold text-[var(--color-accent)]">333 444</span>
+                    <span className="text-zinc-400">or</span>
+                    <span className="font-bold text-[var(--color-accent)]">777 888</span>
+                  </div>
+                </div>
+                <div>
+                  <p className="mb-1 font-bold text-zinc-600">Consecutive Run:</p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">11 222 333 44</span>
+                    <span className="text-zinc-400">→</span>
+                    <span className="font-bold text-[var(--color-accent)]">22 333 444 55</span>
+                  </div>
+                </div>
+                <p className="text-zinc-500">
+                  Most categories let you pick the numbers — check the
+                  parenthetical rules to know exactly what&apos;s allowed.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-white p-4">
+              <h4 className="mb-2 font-serif text-sm font-black text-[var(--color-red)]">
+                🔒 Literal — use these exact numbers
+              </h4>
+              <div className="space-y-3 text-[13px]">
+                <div>
+                  <p className="mb-1 font-bold text-zinc-600">Year hand:</p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">2025</span>
+                    <span className="text-zinc-400">→</span>
+                    <span className="font-bold text-[var(--color-red)]">2 · 0 · 2 · 5</span>
+                    <span className="text-zinc-500">(exactly)</span>
+                  </div>
+                  <p className="mt-1 text-zinc-500">
+                    0 = White Dragon (Soap). It can be used with any suit.
+                  </p>
+                </div>
+                <div>
+                  <p className="mb-1 font-bold text-zinc-600">&quot;These Nos. Only&quot;:</p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">333 666 999</span>
+                    <span className="text-zinc-400">→</span>
+                    <span className="font-bold text-[var(--color-red)]">333 666 999</span>
+                    <span className="text-zinc-500">(no substituting)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Callout variant="tip">
+            <strong>When in doubt, read the category name first.</strong>{" "}
+            It tells you whether the numbers are a pattern you fill in
+            or the exact tiles you need.
+          </Callout>
+        </LessonScreen>
+
+        {/* ── 8. Fake hand walkthrough ── */}
         <LessonScreen title="🧠 Walkthrough: Decoding a Hand Line">
           <p>
             Let&apos;s decode a <strong>made-up</strong>{" "}hand step by step. (We
@@ -398,86 +465,177 @@ export default function Module2ReadingTheCard() {
 
           <FakeHandLine
             label="Consecutive Run (example — not a real NMJL hand)"
-            groups={["FF", "111", "222", "3333"]}
-            value="25¢"
+            groups={["FF", "11", "222", "333", "4444"]}
           />
 
           <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            Breaking it down
+            How to read it
           </h4>
           <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
             <li>
-              <strong>FF</strong> — a pair of Flowers (2 tiles). Any two flower
-              tiles work since all 8 are interchangeable.
+              <strong>How many colors?</strong>{" "}One color = <strong>one suit</strong>.
             </li>
             <li>
-              <strong>111</strong> — a pung of the first number (3 tiles). Since
-              this is a &quot;consecutive run,&quot; the 1-2-3 is a pattern. If you
-              pick 5-6-7, this group becomes three 5s.
+              <strong>Check the parentheses</strong> — &quot;(Any 1 Suit,
+              Any 3 Consec. Nos.)&quot; → one suit, pick any 3 consecutive numbers.
             </li>
             <li>
-              <strong>222</strong> — a pung of the next consecutive number (3 tiles).
-              In our 5-6-7 example, this is three 6s.
-            </li>
-            <li>
-              <strong>3333</strong> — a kong of the third consecutive number (4
-              tiles). Three 7s + 1 joker, or four real 7s.
-            </li>
-            <li>
-              <strong>25¢</strong> — the hand value. The discarder pays 50¢, the
-              other two pay 25¢ each.
+              <strong>FF</strong> = Flowers. The rest are consecutive
+              number groups in your chosen suit.
             </li>
           </ol>
 
-          <p className="mt-3 text-[14px] text-zinc-700">
-            <strong>Tile count check:</strong> 2 + 3 + 3 + 4 = 12. Wait — that&apos;s
-            only 12, not 14. Some hands include additional groups, pairs, or single
-            tiles that bring the total to 14. If our example also had a{" "}
-            <strong>DD</strong>{" "}(pair of dragons), that would be 12 + 2 = 14. Always
-            count to 14.
-          </p>
+          <div className="my-4 rounded-lg bg-[var(--color-light)] border border-dashed border-[var(--color-border)] p-4">
+            <p className="mb-3 text-center text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+              You choose the numbers
+            </p>
+            <div className="space-y-1.5 text-[14px] text-center">
+              <div className="font-mono font-bold text-zinc-400">FF 11 222 333 4444</div>
+              <div className="my-1 text-xs font-bold text-zinc-400">could be</div>
+              <div className="font-mono font-bold text-[var(--color-accent)]">FF 55 666 777 8888</div>
+              <div className="text-xs font-bold text-zinc-400">or</div>
+              <div className="font-mono font-bold text-[var(--color-accent)]">FF 22 333 444 5555</div>
+              <div className="text-xs text-zinc-400">...any consecutive numbers work</div>
+            </div>
+            <p className="mt-3 text-center text-[13px] text-zinc-600">
+              You pick the suit too — this hand works in Bams, Craks, or Dots.
+            </p>
+          </div>
 
           <Callout variant="tip">
-            <strong>Practice this.</strong>{" "}Every time you look at a hand line, decode
-            it: &quot;That&apos;s a pair + pung + pung + kong = 14. The category is
-            consecutive run, so I need three numbers in a row. Got it.&quot;
+            Always count to 14: 2 + 2 + 3 + 3 + 4 = 14. ✓
           </Callout>
         </LessonScreen>
 
-        {/* ── 8. One line = many hands ── */}
-        <LessonScreen title="🌀 One Line on the Card = Many Possible Hands">
+        {/* ── Multi-suit example ── */}
+        <LessonScreen title="🎨 When Colors Mean Different Suits">
           <p>
-            Because numbers are often patterns and you choose the suits, a single
-            line on the card can represent <strong>dozens</strong>{" "}of valid tile
-            combinations.
+            Some hands use <strong>multiple suits</strong>. Each color on the
+            card represents a different suit — you choose which.
           </p>
+
+          <FakeHandLine
+            label="Like Numbers (example — not a real NMJL hand)"
+            groups={[
+              { text: "FF", color: "#16a34a" },
+              { text: "111", color: "#2563eb" },
+              { text: "111", color: "#dc2626" },
+              { text: "111", color: "#16a34a" },
+              { text: "11", color: "#2563eb" },
+            ]}
+          />
 
           <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            Example: a &quot;like numbers&quot; hand
+            How to read it
           </h4>
-          <p className="text-[14px] text-zinc-700">
-            Imagine the card shows a hand that needs{" "}
-            <strong>a pung of one number in three different suits</strong>. The card
-            might show &quot;111 111 111&quot; in three colors. That single line
-            could be built as:
-          </p>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>Three 5-Bams + three 5-Craks + three 5-Dots</li>
-            <li>Three 2-Bams + three 2-Craks + three 2-Dots</li>
-            <li>Three 9-Bams + three 9-Craks + three 9-Dots</li>
-            <li>...any number from 1–9 works</li>
-          </ul>
-          <p className="mt-2 text-[14px] text-zinc-700">
-            That&apos;s <strong>9 different number choices</strong>{" "}from just one
-            line. Add in different suit assignments and the combinations multiply
-            further. This flexibility is what makes hand selection strategic — you&apos;re
-            pattern-matching your tiles against these flexible templates.
-          </p>
+          <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
+            <li>
+              <strong>How many colors?</strong>{" "}Three colors = <strong>three suits</strong>.
+            </li>
+            <li>
+              <strong>Same color = same suit.</strong>{" "}The two{" "}
+              <strong className="text-[#2563eb]">blue</strong>{" "}groups
+              use the same suit. You pick which.
+            </li>
+            <li>
+              <strong>FF</strong> = Flowers. The rest are groups of the
+              same number across different suits.
+            </li>
+          </ol>
+
+          <div className="my-4 rounded-lg bg-[var(--color-light)] border border-dashed border-[var(--color-border)] p-4">
+            <p className="mb-3 text-center text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+              You assign the suits
+            </p>
+            <div className="space-y-3 text-[13px]">
+              <div className="rounded-md bg-white p-3">
+                <div className="mb-3 text-center text-xs text-zinc-400">
+                  <span className="font-bold text-[#2563eb]">Blue</span> = Bams,{" "}
+                  <span className="font-bold text-[#dc2626]">Red</span> = Craks,{" "}
+                  <span className="font-bold text-[#16a34a]">Green</span> = Dots
+                </div>
+                <div className="flex justify-center gap-3 font-mono text-[13px] font-bold">
+                  <div className="text-center text-[#16a34a]">
+                    <div>FF</div>
+                    <div className="text-[10px] font-sans">Flower</div>
+                  </div>
+                  <div className="text-center text-[#2563eb]">
+                    <div>555</div>
+                    <div className="text-[10px] font-sans">Bam</div>
+                  </div>
+                  <div className="text-center text-[#dc2626]">
+                    <div>555</div>
+                    <div className="text-[10px] font-sans">Crak</div>
+                  </div>
+                  <div className="text-center text-[#16a34a]">
+                    <div>555</div>
+                    <div className="text-[10px] font-sans">Dot</div>
+                  </div>
+                  <div className="text-center text-[#2563eb]">
+                    <div>55</div>
+                    <div className="text-[10px] font-sans">Bam</div>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center text-xs font-bold text-zinc-400">or swap the suits</div>
+
+              <div className="rounded-md bg-white p-3">
+                <div className="mb-3 text-center text-xs text-zinc-400">
+                  <span className="font-bold text-[#2563eb]">Blue</span> = Dots,{" "}
+                  <span className="font-bold text-[#dc2626]">Red</span> = Bams,{" "}
+                  <span className="font-bold text-[#16a34a]">Green</span> = Craks
+                </div>
+                <div className="flex justify-center gap-3 font-mono text-[13px] font-bold">
+                  <div className="text-center text-[#16a34a]">
+                    <div>FF</div>
+                    <div className="text-[10px] font-sans">Flower</div>
+                  </div>
+                  <div className="text-center text-[#2563eb]">
+                    <div>333</div>
+                    <div className="text-[10px] font-sans">Dot</div>
+                  </div>
+                  <div className="text-center text-[#dc2626]">
+                    <div>333</div>
+                    <div className="text-[10px] font-sans">Bam</div>
+                  </div>
+                  <div className="text-center text-[#16a34a]">
+                    <div>333</div>
+                    <div className="text-[10px] font-sans">Crak</div>
+                  </div>
+                  <div className="text-center text-[#2563eb]">
+                    <div>33</div>
+                    <div className="text-[10px] font-sans">Dot</div>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-center text-xs text-zinc-400">
+                ...any combination works
+              </p>
+            </div>
+          </div>
 
           <Callout variant="info">
-            <strong>This is why you keep 2–3 candidate hands.</strong>{" "}The same tiles
-            in your rack might fit different lines on the card. You don&apos;t have to
-            pick one immediately — more on this in Module 6 (Hand Strategy).
+            Flowers never belong to a suit — they&apos;re always wild and work
+            with any hand regardless of suit.
+          </Callout>
+        </LessonScreen>
+
+        {/* ── One line = many hands ── */}
+        <LessonScreen title="🌀 One Line = Many Possible Hands">
+          <p>
+            Because you choose the numbers <em>and</em>{" "}the suits, a single
+            line on the card can be built <strong>many different ways</strong>.
+          </p>
+          <p>
+            This is what makes hand selection strategic — the same tiles in
+            your rack might fit several different lines on the card.
+          </p>
+
+          <Callout variant="tip">
+            <strong>Keep 2–3 candidate hands in mind</strong>{" "}as you play.
+            You don&apos;t have to commit to one right away — more on this
+            in Module 6 (Hand Strategy).
           </Callout>
         </LessonScreen>
 

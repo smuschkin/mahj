@@ -12,25 +12,23 @@ export default function Module0Welcome() {
   const adj = getAdjacentModules(0);
   return (
     <PageWrap>
-      <Cover
+      <SectionHeader>Welcome</SectionHeader>
+
+      <ScreenStepper moduleNum={0} coverProps={{ eyebrow: "MAHJ — Module 0", title: "Welcome to", highlight: "MAHJ", subtitle: "Your path from absolute beginner to your first real game" }} header={<><Cover
         eyebrow="MAHJ — Module 0"
         title="Welcome to"
         highlight="MAHJ"
         subtitle="Your path from absolute beginner to your first real game"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           { label: "Goal", value: "Set expectations and get you ready for Module 1." },
           { label: "Estimated time", value: "3–4 minutes" },
           { label: "Prerequisite", value: "None — start here" },
           { label: "Unlocks", value: "Module 1 (Tile Trainer)" },
         ]}
-      />
-
-      <SectionHeader>Welcome</SectionHeader>
-
-      <ScreenStepper moduleNum={0}>
+      /></>}>
         <LessonScreen title="👋 Welcome to MAHJ">
           <p>
             You&apos;re about to learn <strong>American Mahjong</strong> — a 4-player tile

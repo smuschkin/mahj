@@ -76,14 +76,14 @@ export default function Module6HandStrategy() {
   const adj = getAdjacentModules(6);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={6} coverProps={{ eyebrow: "MAHJ — Module 6", title: "Hand", highlight: "Strategy" }} header={<><Cover
         eyebrow="MAHJ — Module 6"
         title="Hand"
         highlight="Strategy"
         subtitle='Picking a hand, staying flexible, and the all-important "what would you discard?"'
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -99,11 +99,7 @@ export default function Module6HandStrategy() {
               "This is where Mahjong stops being mechanical and becomes a real game. Strategy is the skill that separates someone who knows the rules from someone who actually plays.",
           },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={6}>
+      /></>}>
         {/* ── 1. Quick recap ── */}
         <LessonScreen title="🎯 Quick Recap: The Card Is the Game">
           <p>

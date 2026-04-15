@@ -59,14 +59,16 @@ export default function Module12FirstGame() {
   const adj = getAdjacentModules(12);
   return (
     <PageWrap>
-      <Cover
+      <SectionHeader>Walkthrough</SectionHeader>
+
+      <ScreenStepper moduleNum={12} coverProps={{ eyebrow: "MAHJ — Module 12", title: "Your First", highlight: "Game", subtitle: "A complete guided walkthrough — from the deal to Mahjong" }} header={<><Cover
         eyebrow="MAHJ — Module 12"
         title="Your First"
         highlight="Game"
         subtitle="A complete guided walkthrough — from the deal to Mahjong"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -82,11 +84,7 @@ export default function Module12FirstGame() {
               "Knowing the rules and seeing the rules played are different things. This module bridges the gap.",
           },
         ]}
-      />
-
-      <SectionHeader>Walkthrough</SectionHeader>
-
-      <ScreenStepper moduleNum={12}>
+      /></>}>
         {/* ── 1. Meet Sara ── */}
         <LessonScreen title="👋 Meet Sara">
           <p>

@@ -57,14 +57,14 @@ export default function Module10Mistakes() {
   const adj = getAdjacentModules(10);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={10} coverProps={{ eyebrow: "MAHJ — Module 10", title: "Common Mistakes &", highlight: "Recovery", subtitle: "The dozen errors every beginner makes — and how to handle them gracefully" }} header={<><Cover
         eyebrow="MAHJ — Module 10"
         title="Common Mistakes &"
         highlight="Recovery"
         subtitle="The dozen errors every beginner makes — and how to handle them gracefully"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -80,11 +80,7 @@ export default function Module10Mistakes() {
               "Mistakes are inevitable. What separates a confident beginner from a flustered one is knowing the recovery move. After this you'll never freeze at the table.",
           },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={10}>
+      /></>}>
         {/* ── 1. Reframe ── */}
         <LessonScreen title="🧘 Mistakes Are Normal — Recovery Is the Skill">
           <p>

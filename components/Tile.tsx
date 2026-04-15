@@ -271,7 +271,7 @@ function BamArt({ value, size }: { value: number; size: { w: number; h: number }
   if (value === 1) return <BirdSVG size={size.w * 0.82} />;
   const layout = BAM_LAYOUT[value];
   if (!layout) return null;
-  const stalkH = Math.max(7, (size.h - 24) / (layout.length * 1.5));
+  const stalkH = Math.max(7, (size.h - 28) / (layout.length * 1.6));
   const stalkW = Math.max(3, size.w / 14);
   // Each stalk has 3 segments separated by nodes, like real bamboo
   const segH = stalkH / 3.6;

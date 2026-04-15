@@ -99,14 +99,14 @@ export default function Module4Charleston() {
   const adj = getAdjacentModules(4);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={4} coverProps={{ eyebrow: "MAHJ — Module 4", title: "The", highlight: "Charleston", subtitle: "The trading ritual that makes American Mahjong unique" }} header={<><Cover
         eyebrow="MAHJ — Module 4"
         title="The"
         highlight="Charleston"
         subtitle="The trading ritual that makes American Mahjong unique"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -122,11 +122,7 @@ export default function Module4Charleston() {
               "The Charleston is unique to American Mahjong and confuses every newcomer. Master it here and you'll feel ready at any table.",
           },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={4}>
+      /></>}>
         {/* ── 1. What is the Charleston? ── */}
         <LessonScreen title="🔄 What Is the Charleston?">
           <p>

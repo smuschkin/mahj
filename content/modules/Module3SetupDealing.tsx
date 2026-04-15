@@ -19,14 +19,14 @@ export default function Module3SetupDealing() {
   const adj = getAdjacentModules(3);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={3} coverProps={{ eyebrow: "MAHJ — Module 3", title: "Setup &", highlight: "Dealing" }} header={<><Cover
         eyebrow="MAHJ — Module 3"
         title="Setup &"
         highlight="Dealing"
         subtitle='From a pile of tiles to "Charleston, ready?"'
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -42,11 +42,7 @@ export default function Module3SetupDealing() {
               "Setup is where new players feel the most lost. After this module you'll be able to set up the table — something even some intermediate players get wrong.",
           },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={3}>
+      /></>}>
         {/* ── 1. Overview ── */}
         <LessonScreen title="🪑 Where We're Going">
           <p>Before you can play a hand, four things have to happen:</p>

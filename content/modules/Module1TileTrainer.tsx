@@ -18,14 +18,14 @@ export default function Module1TileTrainer() {
   const adj = getAdjacentModules(1);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={1} coverProps={{ eyebrow: "MAHJ — Module 1", title: "Tile", highlight: "Trainer", subtitle: "Recognize all 152 tiles in an American Mahjong set" }} header={<><Cover
         eyebrow="MAHJ — Module 1"
         title="Tile"
         highlight="Trainer"
         subtitle="Recognize all 152 tiles in an American Mahjong set"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -36,11 +36,7 @@ export default function Module1TileTrainer() {
           { label: "Prerequisite", value: "Module 0 (Welcome)" },
           { label: "Unlocks", value: "Module 2 (Reading the Card)" },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={1}>
+      /></>}>
         {/* ── Intro ── */}
         <LessonScreen title="Meet the Tiles">
           <p>

@@ -831,18 +831,6 @@ export default function Module11Glossary() {
         subtitle="Every term, defined and cross-linked. Always one tap away."
       />
 
-      <MetaBox
-        items={[
-          {
-            label: "What this is",
-            value:
-              "A searchable reference for every term used across Modules 0–10. Filter by category or search by name.",
-          },
-          { label: "How to use it", value: "Search, browse, or jump to a category." },
-          { label: "Total terms", value: `${ENTRIES.length}` },
-        ]}
-      />
-
       <SectionHeader>Search & Browse</SectionHeader>
 
       {/* ── Search box ── */}

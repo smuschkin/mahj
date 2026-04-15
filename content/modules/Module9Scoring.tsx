@@ -77,14 +77,14 @@ export default function Module9Scoring() {
   const adj = getAdjacentModules(9);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={9} coverProps={{ eyebrow: "MAHJ — Module 9", title: "Scoring &", highlight: "Payouts", subtitle: "Who pays whom and how much — made simple" }} header={<><Cover
         eyebrow="MAHJ — Module 9"
         title="Scoring &"
         highlight="Payouts"
         subtitle="Who pays whom and how much — made simple"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -95,11 +95,7 @@ export default function Module9Scoring() {
           { label: "Prerequisite", value: "Module 8 (Etiquette)" },
           { label: "Unlocks", value: "Module 10 (Common Mistakes & Recovery)" },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={9}>
+      /></>}>
         {/* ── 1. The big picture ── */}
         <LessonScreen title="💰 How Scoring Works">
           <p>

@@ -965,24 +965,6 @@ export default function Module13Practice() {
         subtitle="Now you make the calls. Real puzzles, instant feedback."
       />
 
-      <MetaBox
-        items={[
-          {
-            label: "Goal",
-            value:
-              "Apply everything from Modules 0–12 to live decision puzzles. Make the call, see the answer, learn the why.",
-          },
-          { label: "Estimated time", value: "10–15 minutes" },
-          { label: "Prerequisite", value: "Modules 0–12" },
-          { label: "Total puzzles", value: `${total}` },
-          {
-            label: "Why it matters",
-            value:
-              "Active practice is where the rules become instincts. Reading is half the work — this is the other half.",
-          },
-        ]}
-      />
-
       <SectionHeader>Practice</SectionHeader>
 
       {phase === "intro" && (

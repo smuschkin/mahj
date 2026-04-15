@@ -82,14 +82,14 @@ export default function Module7Defense() {
   const adj = getAdjacentModules(7);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={7} coverProps={{ eyebrow: "MAHJ — Module 7", title: "Defense &", highlight: "Wall Awareness", subtitle: "Reading the table, tracking discards, and not feeding the win" }} header={<><Cover
         eyebrow="MAHJ — Module 7"
         title="Defense &"
         highlight="Wall Awareness"
         subtitle="Reading the table, tracking discards, and not feeding the win"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -105,11 +105,7 @@ export default function Module7Defense() {
               "The hardest game to lose is the one where you hand the winning tile to your opponent. Defense is how you stop being that player.",
           },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={7}>
+      /></>}>
         {/* ── 1. What is defense? ── */}
         <LessonScreen title="🛡️ What Does Defense Even Mean?">
           <p>

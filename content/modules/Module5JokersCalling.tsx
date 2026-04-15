@@ -75,14 +75,14 @@ export default function Module5JokersCalling() {
   const adj = getAdjacentModules(5);
   return (
     <PageWrap>
-      <Cover
+      <ScreenStepper moduleNum={5} coverProps={{ eyebrow: "MAHJ — Module 5", title: "Jokers &", highlight: "Calling", subtitle: "Grabbing tiles, exposing groups, and using your wild cards" }} header={<><Cover
         eyebrow="MAHJ — Module 5"
         title="Jokers &"
         highlight="Calling"
         subtitle="Grabbing tiles, exposing groups, and using your wild cards"
       />
-
-      <MetaBox
+      <SectionHeader>Lesson</SectionHeader>
+<MetaBox
         items={[
           {
             label: "Goal",
@@ -98,11 +98,7 @@ export default function Module5JokersCalling() {
               "Calling and joker rules are where most beginners get embarrassed at the table. After this module, you'll know when to speak up and when to stay quiet.",
           },
         ]}
-      />
-
-      <SectionHeader>Lesson</SectionHeader>
-
-      <ScreenStepper moduleNum={5}>
+      /></>}>
         {/* ── 1. What is calling? ── */}
         <LessonScreen title='📣 What Does "Calling" Mean?'>
           <p>

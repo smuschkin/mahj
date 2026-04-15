@@ -8,13 +8,25 @@ import {
   setModuleStep,
 } from "@/lib/progress";
 import { getAdjacentModules } from "@/lib/modules";
+import { Cover } from "@/components/Cover";
+
+type CoverProps = {
+  eyebrow?: string;
+  title: string;
+  highlight?: string;
+  subtitle?: string;
+};
 
 export function ScreenStepper({
   children,
   moduleNum,
+  header,
+  coverProps,
 }: {
   children: ReactNode;
   moduleNum?: number;
+  header?: ReactNode;
+  coverProps?: CoverProps;
 }) {
   const screens = Children.toArray(children);
   const total = screens.length;
@@ -53,8 +65,16 @@ export function ScreenStepper({
 
   return (
     <div>
+      {/* Step 1: full header (Cover + SectionHeader + MetaBox) */}
+      {header && current === 0 && <div className="mb-6">{header}</div>}
+
+      {/* Steps 2+: compact cover */}
+      {coverProps && current > 0 && (
+        <Cover {...coverProps} compact />
+      )}
+
       {/* Progress dots */}
-      <div className="mb-6 flex items-center justify-center gap-1">
+      <div className="mb-1 flex items-center justify-center gap-1">
         {screens.map((_, i) => (
           <button
             key={i}
