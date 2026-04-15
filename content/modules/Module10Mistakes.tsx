@@ -214,16 +214,16 @@ export default function Module10Mistakes() {
               },
               {
                 question:
-                  "You called on a discarded 4 Bam, exposed three 4 Bams — and then realized none of the hands on the card actually let you finish from here. What happens?",
+                  "You called on a discarded 4 Bam and exposed three 4 Bams — but then realized your original target hand won't work. What should you do?",
                 options: [
                   "Take the call back and pretend it didn't happen",
-                  "Your hand is dead — you keep playing but can't win",
-                  "The discarder pays you",
+                  "Your hand is automatically dead",
+                  "Check if the exposure fits a different hand on the card",
                   "The dealer rules on it",
                 ],
-                correct: 1,
+                correct: 2,
                 explanation:
-                  "Once you've exposed, you can't take it back. Your hand is dead. You keep drawing and discarding and pay the eventual winner. The fix is preventative: always check before calling.",
+                  "Don't panic — your exposure might fit a different hand. Check the card. Your hand is only dead if the exposed group doesn't work for ANY valid hand.",
               },
               {
                 question:
