@@ -253,7 +253,7 @@ export default function Module5JokersCalling() {
           <div className="my-3 rounded-xl border-2 border-dashed border-[var(--color-border)] bg-[var(--color-light)] p-5">
             <div className="flex flex-wrap items-center justify-center gap-4">
               <div className="flex flex-col items-center gap-2">
-                <div className="flex gap-1">
+                <div className="flex items-center gap-1">
                   <Tile type="bam" value={3} size="sm" />
                   <Tile type="bam" value={3} size="sm" />
                   <Tile type="joker" size="sm" />
