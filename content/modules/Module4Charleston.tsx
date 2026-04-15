@@ -346,56 +346,27 @@ export default function Module4Charleston() {
             — and it&apos;s the only &quot;private&quot; trade in the entire game.
           </p>
 
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            How it works
-          </h4>
           <ol className="ml-6 list-decimal space-y-1 text-[14px]">
             <li>
-              Turn to the player across and ask:{" "}
-              <em>&quot;How many can you do?&quot;</em>{" "}(or just{" "}
-              <em>&quot;Courtesy?&quot;</em>)
+              Ask the player across: <em>&quot;Courtesy?&quot;</em>
             </li>
             <li>
-              You both agree on a number: <strong>0, 1, 2, or 3</strong>. It
-              has to be the same number — if they want 2 and you want 0, you
-              do 0.
+              Agree on <strong>0, 1, 2, or 3</strong> tiles — lowest number wins
             </li>
             <li>
-              You each select that many tiles, slide them face-down to each
-              other, and pick up your new tiles.
+              Slide tiles face-down to each other. Pick up your new tiles.
             </li>
-            <li>Done. Play begins.</li>
+            <li>Done — play begins.</li>
           </ol>
 
-          <Callout variant="tip">
-            <strong>&quot;Zero&quot; is a perfectly fine answer.</strong>{" "}Most beginners
-            say zero on their first few games and that&apos;s totally normal. The
-            courtesy is a tool, not a requirement.
-          </Callout>
-
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            Rules to remember
-          </h4>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>
-              <strong>Both players must agree</strong>{" "}on the count. If they want 2 and
-              you want 0, you do 0.
-            </li>
-            <li><strong>No jokers</strong> — same as every other Charleston pass.</li>
-            <li>
-              You <strong>can&apos;t see</strong>{" "}what they&apos;re sending you until
-              you&apos;ve sent yours. It&apos;s a blind trade.
-            </li>
-            <li>
-              The courtesy is <strong>only with the player across</strong> — never with
-              the player to your left or right.
-            </li>
-          </ul>
-
-          <Callout variant="info">
-            <strong>When should you use it?</strong>{" "}Module 5 covers courtesy
-            strategy — including when to trade, when to say zero, and worked examples.
-          </Callout>
+          <div className="mt-3 rounded-lg bg-[var(--color-light)] border border-dashed border-[var(--color-border)] p-4">
+            <ul className="ml-5 list-disc space-y-1 text-[14px] text-zinc-700">
+              <li><strong>Only with the player across</strong> — not left or right</li>
+              <li><strong>No jokers</strong> — same as every pass</li>
+              <li>It&apos;s a <strong>blind trade</strong> — you can&apos;t see what they send until yours is sent</li>
+              <li><strong>&quot;Zero&quot; is fine</strong> — most beginners say zero their first few games</li>
+            </ul>
+          </div>
         </LessonScreen>
 
         {/* ── 9. Blind pass (advanced) ── */}
