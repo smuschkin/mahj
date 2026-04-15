@@ -375,6 +375,7 @@ export default function Module7Defense() {
                 <Tile type="dot" value={2} size="sm" />
                 <Tile type="dot" value={2} size="sm" />
                 <Tile type="dot" value={2} size="sm" />
+                <span className="mx-2" />
                 <Tile type="dot" value={4} size="sm" />
                 <Tile type="dot" value={4} size="sm" />
                 <Tile type="dot" value={4} size="sm" />
