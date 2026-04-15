@@ -328,50 +328,34 @@ export default function Module7Defense() {
         </LessonScreen>
 
         {/* ── 7. When to fold (courtesy-style) ── */}
-        <LessonScreen title="🏳️ When to Fold (and What Folding Means)">
+        <LessonScreen title="🏳️ When to Fold">
           <p>
-            Folding in American Mahjong doesn&apos;t mean you stop playing — there are
-            no bets to fold on, and you can still self-draw your way to a win. It means
-            you <strong>shift from playing to win to playing not to lose</strong>.
+            Folding means you <strong>stop trying to win</strong>{" "}and
+            focus on not feeding the winner. You still draw and discard
+            — but safety comes first.
           </p>
 
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            Signs it&apos;s time to fold
+          <h4 className="mt-3 font-serif text-sm font-black text-[var(--color-red)]">
+            Fold when:
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>An opponent has 2+ exposures and you have 0 or 1</li>
-            <li>Your hand is still 5+ tiles away from completion in the late game</li>
-            <li>The wall is short (under 20 tiles left) and you don&apos;t see your win</li>
-            <li>You&apos;ve been forced to break your own pairs to discard safely</li>
+            <li>An opponent has 2+ exposures and you&apos;re far from finishing</li>
+            <li>The wall is short and you don&apos;t see your win</li>
           </ul>
 
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            How to fold
+          <h4 className="mt-3 font-serif text-sm font-black text-[var(--color-accent)]">
+            How to fold:
           </h4>
-          <ol className="ml-6 list-decimal space-y-1 text-[14px] text-zinc-700">
-            <li>
-              <strong>Stop calling.</strong>{" "}Don&apos;t expose any more — you&apos;d
-              just leak more information.
-            </li>
-            <li>
-              <strong>Discard safest first.</strong> 4th-copy tiles, suits the threat
-              has been dumping, dead honors.
-            </li>
-            <li>
-              <strong>Break your own forming groups</strong>{" "}if needed to throw safe
-              tiles. A pair you don&apos;t need anymore is a great safe discard source.
-            </li>
-            <li>
-              <strong>Don&apos;t panic-discard a Joker.</strong>{" "}Even folding, your
-              Joker stays in your hand. It&apos;s never a defensive sacrifice.
-            </li>
-          </ol>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li><strong>Stop calling</strong> — don&apos;t expose anything</li>
+            <li><strong>Discard the safest tiles</strong> — tiles they&apos;ve been dumping, 4th copies</li>
+            <li><strong>Break your own groups</strong>{" "}if needed for safe discards</li>
+            <li><strong>Never discard a Joker</strong> — even when folding</li>
+          </ul>
 
           <Callout variant="warn">
-            One opponent winning costs you a single payment. <em>You</em>{" "}being the one
-            who discards their winning tile is much worse — in most house rules, the
-            discarder pays <strong>double</strong>{" "}or pays for the whole table. Folding
-            saves real money.
+            Feeding the winning tile costs you{" "}
+            <strong>double</strong>. Folding saves real money.
           </Callout>
         </LessonScreen>
 
