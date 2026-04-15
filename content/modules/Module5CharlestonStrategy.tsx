@@ -380,7 +380,11 @@ export default function Module5CharlestonStrategy() {
           />
         </LessonScreen>
 
-        {/* ── 9. Completion ── */}
+        <LessonScreen title="">
+          <CharlestonSim />
+        </LessonScreen>
+
+        {/* ── Completion ── */}
         <LessonScreen title="🎉 Lesson 6 Complete">
           <p>
             You now have a strategic framework for the Charleston. You know how
@@ -388,14 +392,10 @@ export default function Module5CharlestonStrategy() {
             when the courtesy is worth it.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Lesson 7 takes you deeper into
+            <strong>What&apos;s next:</strong>{" "}Lesson 7 takes you deeper into
             the game itself — building your hand, reading the card, and making
             smart choices during play.
           </p>
-        </LessonScreen>
-
-        <LessonScreen title="">
-          <CharlestonSim />
         </LessonScreen>
       </ScreenStepper>
 
