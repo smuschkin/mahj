@@ -144,23 +144,13 @@ export default function Module7ScanningTheCard() {
         {/* ── 6. Step 4 — Check the year hand ── */}
         <LessonScreen title="📅 Step 4: Check the Year Hand">
           <p>
-            Every card has at least one hand built around the current year&apos;s
-            digits. If the year is 2026, look for tiles with 2, 0, 2, 6 (and
-            since there&apos;s no 0 tile, the card uses creative substitutions
-            like dragons or flowers).
+            Quick check: do you have tiles matching this year&apos;s digits
+            (2, 0, 2, 6)? Remember, 0 = Soap (White Dragon).
           </p>
           <p>
-            <strong>Why check early?</strong>{" "}The year hand is often one of
-            the most popular and most achievable hands on the card. If you
-            happen to have tiles matching those digits, it&apos;s worth
-            investigating right away.
+            Year hands are popular but competitive — lots of players go for
+            them. Keep it as a candidate, not your only option.
           </p>
-          <Callout variant="warn">
-            <strong>Popular doesn&apos;t mean easy.</strong>{" "}Because many
-            players chase the year hand, the tiles it needs get called and
-            discarded aggressively. Keep it as a candidate, but don&apos;t fall
-            in love with it.
-          </Callout>
         </LessonScreen>
 
         {/* ── 7. Step 5 — Pick 2–3 candidates ── */}
