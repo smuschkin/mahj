@@ -25,7 +25,7 @@ type Scenario = {
 
 const SCENARIOS: Scenario[] = [
   {
-    handHint: "You're aiming for an all-Bam hand (pungs and kongs of Bams + pair of flowers)",
+    handHint: "All-Bam hand",
     tiles: [
       { type: "bam", value: 2 }, { type: "bam", value: 2 }, { type: "bam", value: 4 },
       { type: "bam", value: 4 }, { type: "bam", value: 6 }, { type: "bam", value: 6 },
@@ -38,7 +38,7 @@ const SCENARIOS: Scenario[] = [
       "The 7 Crak, 3 Dot, North Wind, and Soap all fit nothing in an all-Bam hand. Any 3 of those 4 are a good pass.",
   },
   {
-    handHint: "Going for Winds & Dragons (pungs of winds + pair of Red Dragons)",
+    handHint: "Winds & Dragons hand",
     tiles: [
       { type: "wind", value: "N" }, { type: "wind", value: "N" }, { type: "wind", value: "S" },
       { type: "wind", value: "S" }, { type: "wind", value: "E" },
@@ -52,7 +52,7 @@ const SCENARIOS: Scenario[] = [
       "All 5 suited tiles (3 Bam, 7 Bam, 5 Crak, 9 Dot, 2 Dot) are useless for a Winds & Dragons hand. Pass any 3 of them — keep the winds, dragons, and joker.",
   },
   {
-    handHint: "Eyeing a 2468 Dots hand (pairs and pungs of even Dots)",
+    handHint: "2468 Dots hand",
     tiles: [
       { type: "dot", value: 2 }, { type: "dot", value: 2 }, { type: "dot", value: 4 },
       { type: "dot", value: 4 }, { type: "dot", value: 6 }, { type: "dot", value: 8 },
@@ -61,12 +61,12 @@ const SCENARIOS: Scenario[] = [
       { type: "crack", value: 9 }, { type: "wind", value: "W" },
       { type: "dragon", value: "green" },
     ],
-    bestPasses: [8, 9, 10], // 1 Bam, 5 Bam, 9 Crak
+    bestPasses: [8, 9, 10, 11, 12], // 1 Bam, 5 Bam, 9 Crak, West, Green Dragon
     explanation:
-      "The odd-numbered suited tiles (1 Bam, 5 Bam, 9 Crak) are completely useless for a 2468 Dots hand. The West Wind and Green Dragon also don't fit, but honors are less dangerous to hold for one more pass.",
+      "The 1 Bam, 5 Bam, 9 Crak, West Wind, and Green Dragon all fit nothing in a 2468 Dots hand. Any 3 of those 5 are a good pass.",
   },
   {
-    handHint: "Building a consecutive run in Craks (pungs of 3-4-5 Crak + flowers)",
+    handHint: "Consecutive run in Craks",
     tiles: [
       { type: "crack", value: 3 }, { type: "crack", value: 3 }, { type: "crack", value: 4 },
       { type: "crack", value: 4 }, { type: "crack", value: 5 }, { type: "crack", value: 5 },
@@ -180,8 +180,7 @@ export function CharlestonDrill() {
             🔄 Charleston Pass Picker
           </h3>
           <p className="mb-5 text-sm text-zinc-300">
-            {ROUND_COUNT}{" "}hands with a target hand. Pick the 3 tiles
-            you&apos;d pass in the Charleston.
+            Pick the 3 tiles you&apos;d pass.
           </p>
           <button
             type="button"

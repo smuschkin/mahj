@@ -313,7 +313,7 @@ export default function Module5CharlestonStrategy() {
             questions={[
               {
                 question:
-                  "You have a pair of 5 Craks and a Lone 1 Crak. What should you do with the 1 Crak?",
+                  "You have a pair of 5 Craks and a single 1 Crak. What should you do with the 1 Crak?",
                 options: [
                   "Keep it — same suit as the pair",
                   "Pass it — it's too far from the 5s to be useful",
@@ -322,7 +322,7 @@ export default function Module5CharlestonStrategy() {
                 ],
                 correct: 1,
                 explanation:
-                  "A Lone 1 Crak is far from a pair of 5 Craks. It's isolated and unlikely to help. Pass it and keep tiles that connect.",
+                  "A single 1 Crak is far from your 5s. It's isolated and unlikely to help. Pass it and keep tiles that connect.",
               },
               {
                 question:
