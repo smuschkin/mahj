@@ -153,28 +153,13 @@ export default function Module8Etiquette() {
         </LessonScreen>
 
         {/* ── 7. Hands, racks, walls ── */}
-        <LessonScreen title="🙅 Hands Off Other People's Stuff">
-          <p>
-            A few physical-touch rules that everyone takes seriously, even when nobody
-            states them out loud:
-          </p>
-
-          <DoDontRow
-            doText="Keep your tiles on your own rack, hidden from other players."
-            dontText="Lift your rack to show your hand, even to a partner. Even between rounds."
-          />
-          <DoDontRow
-            doText="Reach into the wall only when it is your turn."
-            dontText="Reach for your tile before the previous player has discarded and named it."
-          />
-          <DoDontRow
-            doText="Hand a Joker exchange tile to the player whose rack it&apos;s on, and let them swap it."
-            dontText="Reach across the table and place the swap tile on someone else's rack yourself. That's rude."
-          />
-          <DoDontRow
-            doText="Push your wall forward when the dealer needs more tiles mid-deal."
-            dontText="Touch another player's wall or rearrange the table without asking."
-          />
+        <LessonScreen title="🙅 Hands Off Other People&apos;s Stuff">
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Keep your tiles hidden</strong> — never show your hand, even between rounds</li>
+            <li><strong>Only touch the wall on your turn</strong> — don&apos;t reach early</li>
+            <li><strong>Joker exchange?</strong>{" "}Hand the tile to the player — don&apos;t touch their rack</li>
+            <li><strong>Don&apos;t touch another player&apos;s wall</strong> — push your own when asked</li>
+          </ul>
         </LessonScreen>
 
         {/* ── 8. Social customs ── */}
