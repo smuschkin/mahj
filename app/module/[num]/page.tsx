@@ -17,8 +17,8 @@ import Module8StartingTheGame from "@/content/modules/Module8StartingTheGame";
 import Module9HandStrategy from "@/content/modules/Module6HandStrategy";
 import Module10Defense from "@/content/modules/Module7Defense";
 import Module11Etiquette from "@/content/modules/Module8Etiquette";
-import Module12Scoring from "@/content/modules/Module9Scoring";
-import Module13Mistakes from "@/content/modules/Module10Mistakes";
+import Module12Mistakes from "@/content/modules/Module10Mistakes";
+import Module13Scoring from "@/content/modules/Module9Scoring";
 import Module14Glossary from "@/content/modules/Module11Glossary";
 import Module15FirstGame from "@/content/modules/Module12FirstGame";
 import Module16Practice from "@/content/modules/Module13Practice";
@@ -36,8 +36,8 @@ const moduleComponents: Record<number, () => React.ReactNode> = {
   9: Module9HandStrategy,
   10: Module10Defense,
   11: Module11Etiquette,
-  12: Module12Scoring,
-  13: Module13Mistakes,
+  12: Module12Mistakes,
+  13: Module13Scoring,
   14: Module14Glossary,
   15: Module15FirstGame,
   16: Module16Practice,

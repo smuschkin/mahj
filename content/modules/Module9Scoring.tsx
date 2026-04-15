@@ -74,11 +74,11 @@ function PayoutBox({
 }
 
 export default function Module9Scoring() {
-  const adj = getAdjacentModules(12);
+  const adj = getAdjacentModules(13);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={12} coverProps={{ eyebrow: "MAHJ — Lesson 13", title: "Scoring &", highlight: "Payouts", subtitle: "Who pays whom and how much — made simple" }} header={<><Cover
-        eyebrow="MAHJ — Lesson 13"
+      <ScreenStepper moduleNum={13} coverProps={{ eyebrow: "MAHJ — Lesson 14", title: "Scoring &", highlight: "Payouts", subtitle: "Who pays whom and how much — made simple" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 14"
         title="Scoring &"
         highlight="Payouts"
         subtitle="Who pays whom and how much — made simple"
@@ -92,8 +92,8 @@ export default function Module9Scoring() {
               "Know exactly who pays whom after every hand. Once you see the pattern, it's easy.",
           },
           { label: "Estimated time", value: "6–8 minutes" },
-          { label: "Prerequisite", value: "Lesson 12 (Etiquette)" },
-          { label: "Unlocks", value: "Lesson 14 (Common Mistakes & Recovery)" },
+          { label: "Prerequisite", value: "Lesson 13 (Common Mistakes)" },
+          { label: "Unlocks", value: "Lesson 15 (Glossary)" },
         ]}
       /></>}>
         {/* ── 1. The big picture ── */}
@@ -344,8 +344,8 @@ export default function Module9Scoring() {
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
-            moduleNum={12}
-            title="Lesson 13 Check"
+            moduleNum={13}
+            title="Lesson 14 Check"
             passThreshold={4}
             questions={[
               {
@@ -402,7 +402,7 @@ export default function Module9Scoring() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Lesson 13 Complete">
+        <LessonScreen title="🎉 Lesson 14 Complete">
           <p>
             You now know exactly who pays whom and how much. The pattern is
             simple: start with the hand value, double for discarder or
@@ -410,15 +410,15 @@ export default function Module9Scoring() {
             situations.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 14 covers{" "}
-            <strong>Common Mistakes</strong> — the errors every beginner
-            makes, and how to recover from them gracefully.
+            <strong>What&apos;s next:</strong>{" "}Lesson 15 is the{" "}
+            <strong>Glossary</strong> — every term you&apos;ve learned, defined and
+            cross-linked, always one tap away from any screen in the app.
           </p>
         </LessonScreen>
       </ScreenStepper>
 
       <ModuleNav
-        currentModuleNum={12}
+        currentModuleNum={13}
         prev={
           adj.prev && {
             href: adj.prev.href,

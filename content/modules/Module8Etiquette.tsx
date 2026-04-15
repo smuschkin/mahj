@@ -52,7 +52,7 @@ export default function Module8Etiquette() {
           },
           { label: "Estimated time", value: "6–8 minutes" },
           { label: "Prerequisite", value: "Lesson 11 (Defense & Wall Awareness)" },
-          { label: "Unlocks", value: "Lesson 13 (Scoring & Payouts)" },
+          { label: "Unlocks", value: "Lesson 13 (Common Mistakes)" },
           {
             label: "Why it matters",
             value:
@@ -263,9 +263,8 @@ export default function Module8Etiquette() {
           </p>
           <p>
             <strong>What&apos;s next:</strong>{" "}Lesson 13 covers{" "}
-            <strong>Scoring &amp; Payouts</strong> — how the money actually moves at
-            the end of a hand: who pays whom, how doubles work, what concealed hands
-            are worth, and the dead-hand penalty.
+            <strong>Common Mistakes &amp; Recovery</strong> — the errors every beginner
+            makes, and how to recover from them gracefully.
           </p>
         </LessonScreen>
       </ScreenStepper>

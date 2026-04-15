@@ -54,11 +54,11 @@ function MistakeCard({
 }
 
 export default function Module10Mistakes() {
-  const adj = getAdjacentModules(13);
+  const adj = getAdjacentModules(12);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={13} coverProps={{ eyebrow: "MAHJ — Lesson 14", title: "Common Mistakes &", highlight: "Recovery", subtitle: "The dozen errors every beginner makes — and how to handle them gracefully" }} header={<><Cover
-        eyebrow="MAHJ — Lesson 14"
+      <ScreenStepper moduleNum={12} coverProps={{ eyebrow: "MAHJ — Lesson 13", title: "Common Mistakes &", highlight: "Recovery", subtitle: "The dozen errors every beginner makes — and how to handle them gracefully" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 13"
         title="Common Mistakes &"
         highlight="Recovery"
         subtitle="The dozen errors every beginner makes — and how to handle them gracefully"
@@ -72,8 +72,8 @@ export default function Module10Mistakes() {
               "Recognize the most common beginner mistakes before they happen, and know exactly what to do when they happen anyway.",
           },
           { label: "Estimated time", value: "8–10 minutes" },
-          { label: "Prerequisite", value: "Lesson 13 (Scoring & Payouts)" },
-          { label: "Unlocks", value: "Lesson 15 (Glossary)" },
+          { label: "Prerequisite", value: "Lesson 12 (Table Etiquette)" },
+          { label: "Unlocks", value: "Lesson 14 (Scoring & Payouts)" },
           {
             label: "Why it matters",
             value:
@@ -455,8 +455,8 @@ export default function Module10Mistakes() {
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
-            moduleNum={13}
-            title="Lesson 14 Check"
+            moduleNum={12}
+            title="Lesson 13 Check"
             passThreshold={4}
             questions={[
               {
@@ -529,7 +529,7 @@ export default function Module10Mistakes() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Lesson 14 Complete">
+        <LessonScreen title="🎉 Lesson 13 Complete">
           <p>
             You now know the most common errors that derail beginners — and exactly
             what happens when each one occurs. More importantly, you know the 4-step
@@ -537,7 +537,7 @@ export default function Module10Mistakes() {
             decide.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 15 is the{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 14 is the{" "}
             <strong>Glossary</strong> — every term you&apos;ve learned, defined and
             cross-linked, always one tap away from any screen in the app.
           </p>
@@ -545,7 +545,7 @@ export default function Module10Mistakes() {
       </ScreenStepper>
 
       <ModuleNav
-        currentModuleNum={13}
+        currentModuleNum={12}
         prev={
           adj.prev && {
             href: adj.prev.href,
