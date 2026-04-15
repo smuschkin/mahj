@@ -402,40 +402,37 @@ export default function Module7Defense() {
           </div>
 
           <p>
-            Now your turn. You have to discard one of these:
+            You have these 3 tiles to choose from.{" "}
+            <strong>Which one should you avoid discarding?</strong>
           </p>
-          <TileRow caption="Pick your discard.">
+          <TileRow caption="Which tile is the most dangerous?">
             <Tile type="dot" value={6} size="sm" />
             <Tile type="dragon" value="red" size="sm" />
-            <Tile type="crack" value={3} size="sm" marked />
+            <Tile type="crack" value={3} size="sm" />
           </TileRow>
 
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            Walking through it
-          </h4>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
             <li>
-              <strong>6 Dot</strong> — the player to your right has TWO Dot exposures
-              and is one tile from a same-suit Dots hand. <strong>Hot. Don&apos;t.</strong>
+              <strong>6 Dot</strong> — player to your right has TWO Dot
+              exposures. This could complete their hand.{" "}
+              <strong className="text-[var(--color-red)]">Dangerous.</strong>
             </li>
             <li>
-              <strong>Red Dragon</strong> — the player across already has an exposed
-              Pung of Red Dragons (3 out of 4). That means no one else can pung
-              or kong it — they already have their group. The 4th Red Dragon is
-              actually <strong>pretty safe</strong>{" "}to throw.
+              <strong>Red</strong> — 3 of 4 Red Dragons are already exposed
+              by the player across. The 4th is actually{" "}
+              <strong className="text-[var(--color-green)]">safe</strong>.
             </li>
             <li>
-              <strong>3 Crak</strong> — the left player has been dumping Craks all
-              game. The other two have no Crak exposures. <strong>Safe.</strong>{" "}Throw
-              it.
+              <strong>3 Crak</strong> — the left player has been dumping Craks
+              all game. Nobody wants them.{" "}
+              <strong className="text-[var(--color-green)]">Safe.</strong>
             </li>
           </ul>
 
           <Callout variant="tip">
-            <strong>Answer:</strong> 3 Crak is the safest — Craks are clearly
-            unwanted. The Red Dragon is also a reasonable discard since 3 of the
-            4 are already exposed. The 6 Dot is the one to avoid — it could
-            complete someone&apos;s hand.
+            <strong>Answer:</strong>{" "}Avoid the <strong>6 Dot</strong> — it
+            could complete someone&apos;s hand. The 3 Crak is safest, and the
+            Red Dragon is also fine since 3 are already out.
           </Callout>
         </LessonScreen>
 
