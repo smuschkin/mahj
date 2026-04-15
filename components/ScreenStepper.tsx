@@ -66,7 +66,7 @@ export function ScreenStepper({
   return (
     <div>
       {/* Step 1: full header (Cover + SectionHeader + MetaBox) */}
-      {header && current === 0 && <div className="mb-6">{header}</div>}
+      {header && current === 0 && <div className="mb-3">{header}</div>}
 
       {/* Steps 2+: compact cover */}
       {coverProps && current > 0 && (

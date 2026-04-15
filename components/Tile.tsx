@@ -859,10 +859,10 @@ const SEASON_SVGS = [SpringSVG, SummerSVG, AutumnSVG, WinterSVG];
 /* ───── Joker ───── */
 // Joker = "JOKER" red wordmark on top + ornate "J" letter inside a starburst.
 function JokerArt({ size }: { size: { w: number; h: number } }) {
-  const wordH = Math.round(size.h * 0.18);
-  const starSize = Math.round(size.w * 0.75);
+  const wordH = Math.round(size.h * 0.12);
+  const starSize = Math.round(size.w * 0.55);
   return (
-    <div className="flex flex-col items-center justify-center" style={{ gap: 1 }}>
+    <div className="flex flex-col items-center justify-center" style={{ gap: 0 }}>
       {/* "JOKER" wordmark in red */}
       <svg
         viewBox="0 0 80 18"

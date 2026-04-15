@@ -68,89 +68,91 @@ export default function Module5CharlestonStrategy() {
           </Callout>
         </LessonScreen>
 
-        {/* ── 2. Pass 1: First Right — decision-making ── */}
-        <LessonScreen title="👉 Pass 1: First Right — What to Pass?">
+        {/* ── 2. Organizing your tiles ── */}
+        <LessonScreen title="🗂️ Organize Your Tiles First">
           <p>
-            The Charleston starts. You look at your 13 tiles and need to pick{" "}
-            <strong>3 to give away</strong>. Here&apos;s how to think about it:
+            Before you pass anything, <strong>sort your rack</strong>. This
+            takes 10 seconds and makes every decision easier.
+          </p>
+          <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
+            <li>
+              <strong>Group by suit</strong> — put all your Bams together,
+              Craks together, Dots together
+            </li>
+            <li>
+              <strong>Order by number</strong> within each suit — low to high
+            </li>
+            <li>
+              <strong>Put Winds, Dragons, and Flowers</strong> on one end
+            </li>
+            <li>
+              <strong>Jokers</strong> on the other end — keep them visible
+            </li>
+          </ol>
+          <p className="mt-3">
+            Now you can see at a glance: which suit do I have the most of?
+            Do I have pairs? Are any tiles completely isolated?
+          </p>
+          <Callout variant="tip">
+            Get in the habit of sorting <strong>every time</strong> you pick
+            up tiles — after the deal, after each Charleston pass, and
+            during play. It becomes automatic fast.
+          </Callout>
+        </LessonScreen>
+
+        {/* ── 3. Pass 1: First Right — decision-making ── */}
+        <LessonScreen title="👉 Pass 1: First Right">
+          <p>
+            Your tiles are sorted. Now pick <strong>3 to pass</strong>.
+            The rule is simple: <strong>tiles that have friends stay.
+            Tiles that are alone go.</strong>
           </p>
 
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            Step 1: Group your tiles
-          </h4>
-          <p>
-            Sort your tiles mentally into groups: pairs, matching suits,
-            consecutive numbers, and Lonely tiles that don&apos;t connect to
-            anything.
-          </p>
-
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            Step 2: Identify your junk
-          </h4>
-          <p>
-            Look for tiles that are <strong>isolated</strong> — single tiles
-            with no partner, no matching suit nearby, or numbers far from your
-            other tiles in the same suit. Those are your pass candidates.
-          </p>
-
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            Step 3: Worked example
-          </h4>
-
-          <TileRow caption="Dashed tiles below would be passed. Why those three?">
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={3} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="crack" value={5} size="sm" />
-            <Tile type="crack" value={5} size="sm" />
-            <Tile type="dot" value={7} size="sm" />
-            <Tile type="dot" value={8} size="sm" />
-            <Tile type="wind" value="E" size="sm" />
-            <Tile type="wind" value="N" size="sm" />
-            <Tile type="dragon" value="green" size="sm" />
-            <Tile type="crack" value={1} size="sm" marked />
-            <Tile type="dot" value={9} size="sm" marked />
-            <Tile type="wind" value="W" size="sm" marked />
+          <TileRow caption="Your sorted rack (13 tiles) — which 3 would you pass?">
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex flex-wrap justify-center gap-1">
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="crack" value={1} size="sm" marked />
+                <Tile type="crack" value={5} size="sm" />
+                <Tile type="crack" value={5} size="sm" />
+                <Tile type="dot" value={7} size="sm" />
+              </div>
+              <div className="flex flex-wrap justify-center gap-1">
+                <Tile type="dot" value={8} size="sm" />
+                <Tile type="dot" value={9} size="sm" marked />
+                <Tile type="wind" value="W" size="sm" marked />
+                <Tile type="dragon" value="green" size="sm" />
+                <Tile type="joker" size="sm" />
+                <Tile type="flower" value={1} size="sm" />
+              </div>
+            </div>
           </TileRow>
 
-          <div className="my-3 grid gap-2 sm:grid-cols-2">
-            <div className="rounded-md border-l-4 border-[var(--color-green)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">
-                ✅ Keep — 2-3-4 Bam
-              </div>
-              These fit many &quot;consecutive number&quot; hands on the card.
-              Keep tiles that work together.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-green)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">
-                ✅ Keep — pair of 5 Craks
-              </div>
-              Pairs are valuable — they can grow into groups of 3 or stay as
-              the final pair.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">
-                ❌ Pass — Lone 1 Crak
-              </div>
-              Isolated, far from your other Craks. Hard to use.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">
-                ❌ Pass — Lone 9 Dot
-              </div>
-              Sits at the edge of your 7-8 Dot pair. Sacrifice it.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px] sm:col-span-2">
-              <div className="font-black text-[var(--color-mid)]">
-                ❌ Pass — Lone West Wind
-              </div>
-              A single Wind or Dragon by itself is dead weight unless it pairs up.
-            </div>
-          </div>
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
+            Tiles with friends (keep)
+          </h4>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li><strong>2-3-4 Bam</strong> — three in a row, fits consecutive hands</li>
+            <li><strong>5-5 Crak</strong> — a pair, always useful</li>
+            <li><strong>7-8 Dot</strong> — two in a row, could become a group</li>
+            <li><strong>Green Dragon</strong> — matches with your Bams (Green → Bams)</li>
+          </ul>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-red)]">
+            Tiles alone (pass these)
+          </h4>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li><strong>1 Crak</strong> — far from your 5-5 Crak pair, no connection</li>
+            <li><strong>9 Dot</strong> — doesn&apos;t connect, 7-8 work together without it</li>
+            <li><strong>West Wind</strong> — a lone wind with no pair is dead weight</li>
+          </ul>
+
 
           <Callout variant="warn">
-            <strong>Never pass a Joker.</strong> Jokers are gold — you&apos;d be
-            giving away your single most valuable tile.
+            <strong>Never pass a Joker or Flower.</strong>{" "}Jokers are your
+            most valuable tile, and Flowers fit into many hands.
           </Callout>
         </LessonScreen>
 
@@ -171,16 +173,16 @@ export default function Module5CharlestonStrategy() {
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>Did the new tiles help?</strong> If you got tiles in the
+              <strong>Did the new tiles help?</strong>{" "}If you got tiles in the
               same suit you&apos;re collecting, great — double down on that
               direction.
             </li>
             <li>
-              <strong>Still have orphans?</strong> Pass them. Tiles that didn&apos;t
+              <strong>Still have loners?</strong>{" "}Pass them. Tiles that didn&apos;t
               connect to anything before the first pass probably won&apos;t connect now.
             </li>
             <li>
-              <strong>You can re-pass tiles you just received.</strong> If the
+              <strong>You can re-pass tiles you just received.</strong>{" "}If the
               tiles from the right don&apos;t help your hand, send them across.
               No rule against it.
             </li>
