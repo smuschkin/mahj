@@ -170,7 +170,7 @@ const SCENARIOS: Scenario[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Full defense.</strong> 3 exposures means Player A is one tile
+        <strong>Full defense.</strong>{" "}3 exposures means Player A is one tile
         from Mahjong. They&apos;re all-Dots. Stop building your hand — discard
         only Bams, Craks, and honors you&apos;re sure they can&apos;t use.
         Break your own pairs if needed. Surviving without paying is a win.
@@ -297,7 +297,7 @@ const SCENARIOS: Scenario[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Build + defend.</strong> 2 exposures is serious but not
+        <strong>Build + defend.</strong>{" "}2 exposures is serious but not
         &quot;fold everything.&quot; You&apos;re 4 tiles away with half the
         wall left — still viable. The key: avoid Craks (Player B&apos;s suit)
         and use safe tiles where you have options. Full fold comes at 3+
