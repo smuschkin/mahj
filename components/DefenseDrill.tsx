@@ -118,12 +118,13 @@ const SCENARIOS: Scenario[] = [
     prompt: "Three 6 Dots are in the discard pile. Is it safe to throw the 4th?",
     exposures: [],
     discardInfo: "Three 6 Dots already discarded.",
-    options: ["Safe — nobody can use it", "Dangerous — someone might need it"],
+    options: ["Very safe — almost nobody can use it", "Dangerous — someone might need it"],
     correctIndex: 0,
     explanation: (
       <>
-        <strong>Safe.</strong>{" "}3 of 4 copies are visible. Nobody can make a
-        group with real tiles. The 4th is safe to throw.
+        <strong>Very safe.</strong>{" "}3 of 4 copies are visible. Nobody can
+        make a group with real tiles alone. Still technically possible with
+        jokers, but very unlikely.
       </>
     ),
   },
