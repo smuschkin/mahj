@@ -197,33 +197,15 @@ export default function Module7Defense() {
         </LessonScreen>
 
         {/* ── 3. Read the discards too ── */}
-        <LessonScreen title="🗑️ The Discard Pile Is a Second Tell">
-          <p>
-            Exposures tell you what an opponent <em>wants</em>. The discard pile tells
-            you what they <em>don&apos;t</em>.
-          </p>
-          <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>What is each player throwing?</strong>{" "}If a player has discarded
-              three Craks in a row, Craks are probably safe to throw at them.
-            </li>
-            <li>
-              <strong>What are they NOT throwing?</strong>{" "}A player who hasn&apos;t
-              discarded a single Bam all game is probably collecting Bams.
-            </li>
-            <li>
-              <strong>Track the &quot;hot&quot; suit.</strong>{" "}The suit nobody is
-              discarding is the one someone is hoarding. Avoid feeding it.
-            </li>
-            <li>
-              <strong>Honors are early reads.</strong>{" "}If a player throws their Winds
-              and Dragons in the first 3 turns, they&apos;re NOT on a winds-and-dragons
-              hand. You can throw honors at them safely.
-            </li>
+        <LessonScreen title="🗑️ Reading the Discard Pile">
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Throwing lots of one suit?</strong>{" "}That suit is safe to throw at them.</li>
+            <li><strong>Not throwing a suit at all?</strong>{" "}They&apos;re probably collecting it. Avoid feeding it.</li>
+            <li><strong>Dumping Winds and Dragons early?</strong>{" "}They&apos;re not on a Winds/Dragons hand — safe to throw honors at them.</li>
           </ul>
           <Callout variant="tip">
-            You don&apos;t have to memorize every tile. Just notice <em>patterns</em> and <em>absences</em>. &quot;What hasn&apos;t been discarded?&quot; is the
-            single most useful defensive question.
+            The best defensive question:{" "}
+            <strong>&quot;What hasn&apos;t been discarded?&quot;</strong>
           </Callout>
         </LessonScreen>
 
