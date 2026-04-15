@@ -245,6 +245,11 @@ export default function Module7Defense() {
 
         {/* ── 5. Danger zone: middle suits and honors near pairs ── */}
         <LessonScreen title="🔥 Tiles That Are Usually Dangerous">
+          <p className="text-[14px] text-zinc-600">
+            &quot;Dangerous&quot; doesn&apos;t mean &quot;never throw.&quot;{" "}
+            Defense is about <em>choosing the least dangerous option</em>,
+            not freezing up.
+          </p>
 
           <div className="my-3 grid gap-3 sm:grid-cols-2">
             <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-4">
@@ -273,12 +278,6 @@ export default function Module7Defense() {
             </div>
           </div>
 
-          <Callout variant="tip">
-            &quot;Dangerous&quot; isn&apos;t the same as &quot;never throw.&quot;
-            Sometimes you have to throw a live tile to keep your own hand alive.
-            Defense is about <em>choosing the least dangerous option</em>, not freezing
-            up.
-          </Callout>
         </LessonScreen>
 
         {/* ── 6. Threat levels: how many exposures? ── */}
