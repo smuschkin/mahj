@@ -327,7 +327,7 @@ export default function Module5JokersCalling() {
             <li><strong>Discarded Jokers are dead</strong> — no one can call or pick them up</li>
             <li><strong>Expose immediately</strong> — the called group goes face-up on your rack right away</li>
             <li><strong>Can&apos;t call a Joker</strong> — Jokers in the discard pile are always dead</li>
-            <li><strong>NEWS, year, 1122, and pairs</strong> — these can only be called to complete Mahjong, not for regular exposures</li>
+            <li><strong>Calls are for groups of 3+</strong> — the only exception is Mahjong, where you can call any tile that completes your hand</li>
             <li><strong>You can change an exposure</strong> — swap tiles in or out until you discard, then it&apos;s locked</li>
           </ul>
         </LessonScreen>
