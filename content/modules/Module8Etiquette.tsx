@@ -82,24 +82,14 @@ export default function Module8Etiquette() {
           </p>
           <p>
             Say the tile clearly: <strong>&quot;Four Bam.&quot;</strong>{" "}
-            <strong>&quot;Red Dragon.&quot;</strong>{" "}
+            <strong>&quot;Red.&quot;</strong>{" "}
             <strong>&quot;West.&quot;</strong>{" "}Then place it face-up where everyone can
             see.
           </p>
 
-          <DoDontRow
-            doText='Say the tile by name before or as it touches the table — "Six Crak."'
-            dontText="Slide a tile silently into the center. Other players may miss a tile they need."
-          />
-          <DoDontRow
-            doText="Place discards in an orderly pile so the discard history is readable."
-            dontText="Scatter discards or stack them where they can't be seen."
-          />
-
-          <Callout variant="info">
-            <strong>Why it&apos;s a rule:</strong>{" "}Players who want to call need to
-            hear what was thrown. A silent discard can rob someone of a legitimate
-            call.
+          <Callout variant="warn">
+            <strong>Never discard silently.</strong>{" "}Other players need to
+            hear what was thrown to decide if they want to call it.
           </Callout>
         </LessonScreen>
 
