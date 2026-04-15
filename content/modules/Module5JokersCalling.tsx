@@ -243,22 +243,12 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── 6. Joker Exchange ── */}
-        <LessonScreen title="🔄 The Joker Exchange (The Magic Move)">
+        <LessonScreen title="🔄 The Joker Exchange">
           <p>
-            Here&apos;s a rule unique to American Mahjong — and one of its coolest
-            features.
+            See a Joker in someone&apos;s exposed group? If you have the
+            real tile it&apos;s replacing, you can <strong>swap</strong>{" "}
+            and take the Joker for yourself.
           </p>
-          <p>
-            If <em>any player</em>{" "}(including you) has an exposed group containing a
-            joker, and <em>you</em>{" "}have the real tile that joker is standing in for,
-            you can <strong>swap</strong>{" "}your real tile for their joker. This happens
-            on <em>your turn</em>, after you draw from the wall and before you
-            discard. You can do multiple exchanges in a single turn.
-          </p>
-
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            Walk-through
-          </h4>
 
           <div className="my-3 rounded-xl border-2 border-dashed border-[var(--color-border)] bg-[var(--color-light)] p-5">
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -268,25 +258,22 @@ export default function Module5JokersCalling() {
                   <Tile type="bam" value={3} size="sm" />
                   <Tile type="joker" size="sm" />
                 </div>
-                <span className="text-[13px] font-bold uppercase tracking-wider text-zinc-600">
-                  Their exposed Pung
+                <span className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+                  Their exposed group
                 </span>
               </div>
-              <span className="text-3xl font-black text-[var(--color-red)]">⇄</span>
+              <span className="text-2xl font-black text-[var(--color-accent)]">⇄</span>
               <div className="flex flex-col items-center gap-2">
                 <Tile type="bam" value={3} size="sm" />
-                <span className="text-[13px] font-bold uppercase tracking-wider text-zinc-600">
+                <span className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
                   Your real 3 Bam
                 </span>
               </div>
             </div>
+            <p className="mt-3 text-center text-[13px] text-zinc-600">
+              You give the real tile, you get the Joker.
+            </p>
           </div>
-
-          <p className="text-[14px] text-zinc-600">
-            You hand them your <strong>real 3 Bam</strong>. They give you their{" "}
-            <strong>Joker</strong>. Now you have a Joker in your hand to use however you
-            want, and their Pung is now made of 3 real tiles.
-          </p>
 
           <Callout variant="tip">
             <strong>Why this is awesome:</strong>{" "}Jokers are the most powerful tile in
