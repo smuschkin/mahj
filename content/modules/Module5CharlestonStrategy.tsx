@@ -228,24 +228,12 @@ export default function Module5CharlestonStrategy() {
             </li>
           </ol>
 
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            Strategy tips
-          </h4>
-          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
-            <li>
-              <strong>By now you should be committed</strong>{" "}to 1-2 hands on
-              the card. Pass everything that doesn&apos;t fit.
-            </li>
-            <li>
-              <strong>Be more aggressive.</strong>{" "}You&apos;ve had 3 passes to
-              shape your hand — dump your remaining junk fast.
-            </li>
-            <li>
-              <strong>If your hand is strong, say &quot;stop&quot;</strong>{" "}
-              before the second Charleston starts. Don&apos;t give opponents
-              more chances to improve.
-            </li>
-          </ul>
+          <Callout variant="tip">
+            If your hand is already strong,{" "}
+            <strong>say &quot;stop&quot;</strong>{" "}before the second
+            Charleston starts. Don&apos;t give opponents more chances
+            to improve.
+          </Callout>
         </LessonScreen>
 
         {/* ── 6. Reading the passes ── */}
@@ -272,70 +260,42 @@ export default function Module5CharlestonStrategy() {
               passes too — avoid passing 3 tiles of the same suit.
             </li>
           </ul>
+          <Callout variant="info">
+            <strong>By now, commit to 1-2 hands</strong>{" "}on the card and
+            dump everything else. You&apos;ve had 6 passes to shape your
+            hand — no more holding onto maybes.
+          </Callout>
         </LessonScreen>
 
         {/* ── 7. Courtesy pass strategy ── */}
         <LessonScreen title="🤝 Courtesy Pass Strategy">
           <p>
-            After both Charlestons, you and the player across can do one last
-            optional trade: the <strong>courtesy</strong>. Here&apos;s how to
-            think about whether to use it.
+            One last optional trade with the player{" "}
+            <strong>across</strong>{" "}from you. You agree on how many
+            tiles to swap: <strong>1, 2, or 3</strong>{" "}(or 0 to skip).
           </p>
 
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            When to say yes
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
+            Trade when:
           </h4>
-          <p>
-            The courtesy is powerful when you&apos;re{" "}
-            <strong>one tile away</strong> from a specific shape:
-          </p>
-
-          <TileRow caption="Going for even-numbered Bams. You just need one more 8 Bam.">
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={6} size="sm" />
-            <Tile type="bam" value={6} size="sm" />
-            <Tile type="bam" value={8} size="sm" />
-            <Tile type="crack" value={2} size="sm" />
-            <Tile type="crack" value={4} size="sm" marked />
-            <Tile type="dot" value={6} size="sm" />
-            <Tile type="dragon" value="green" size="sm" />
-            <Tile type="dragon" value="green" size="sm" />
-            <Tile type="wind" value="E" size="sm" />
-          </TileRow>
-
-          <p className="text-[14px] text-zinc-600">
-            The player across has been discarding Craks all Charleston — they
-            probably don&apos;t want yours either. Ask for a 1-tile courtesy:
-            trade your useless 4 Crak for whatever they don&apos;t want. You
-            might get lucky.
-          </p>
-
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            When to skip it
-          </h4>
-          <p>
-            Say <strong>&quot;zero&quot;</strong> if:
-          </p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>You&apos;re not sure what hand you&apos;re building yet</li>
-            <li>You don&apos;t have any obvious junk left to trade</li>
-            <li>
-              The player across seems to know your hand too well (they&apos;ve
-              been passing you exactly what you need — suspicious)
-            </li>
-            <li>
-              You&apos;re new and overwhelmed — there&apos;s no shame in zero
-            </li>
+            <li>You have <strong>1-3 junk tiles</strong>{" "}you&apos;d love to swap out</li>
+            <li>You noticed the player across dumping a suit you don&apos;t need either — good chance to trade junk for junk</li>
+          </ul>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-red)]">
+            Say &quot;zero&quot; when:
+          </h4>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li>You&apos;re not sure what to give up</li>
+            <li>Your hand is already looking good</li>
+            <li>You&apos;re overwhelmed — &quot;zero&quot; is OK while you learn</li>
           </ul>
 
           <Callout variant="tip">
-            <strong>Permission to be cautious:</strong> &quot;Zero&quot; is the
-            right default for your first 5–10 games. You will not lose by
-            skipping the courtesy. You <em>can</em> lose by trading away a tile
-            you didn&apos;t realize you needed.
+            When in doubt, trade at least 1 tile — it&apos;s a free chance
+            to swap out junk. Only say &quot;zero&quot; if you truly have
+            nothing to give up.
           </Callout>
         </LessonScreen>
 
