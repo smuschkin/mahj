@@ -210,55 +210,55 @@ export default function Module7ScanningTheCard() {
             questions={[
               {
                 question:
-                  "What is the very first thing you should do after being dealt your 13 tiles?",
+                  "After the Charleston, what's the first step when scanning the card?",
                 options: [
-                  "Pick a hand from the card immediately",
-                  "Sort your rack by suit",
+                  "Pick a hand immediately",
+                  "Make sure your rack is sorted by suit",
                   "Start discarding tiles",
                   "Count your jokers",
                 ],
                 correct: 1,
                 explanation:
-                  "Always sort first — group Bams, Craks, Dots, honors, and flowers. This makes patterns visible so you can scan the card effectively.",
+                  "Make sure your rack is sorted — Bams, Craks, Dots grouped together, ordered by number. This makes patterns visible.",
               },
               {
                 question:
-                  "Why should you pick 2\u20133 candidate hands instead of committing to just 1?",
+                  "Why pick 2\u20133 candidate hands instead of just 1?",
                 options: [
-                  "It makes the game more fun",
                   "The rules require it",
                   "Almost every tile you draw will be useful for at least one candidate",
-                  "You can show off to other players",
+                  "It makes the game more fun",
+                  "So you can change your mind later",
                 ],
-                correct: 2,
+                correct: 1,
                 explanation:
                   "With 2\u20133 candidates, most tiles you draw are useful for something. Committing to 1 hand too early means every bad draw is a wasted turn.",
               },
               {
                 question:
-                  "When you find tiles that fit NONE of your candidate hands, what should you do with them?",
+                  "Tiles that fit NONE of your candidates should be:",
                 options: [
-                  "Hold them in case they become useful",
-                  "Trade them for jokers",
-                  "They become your first discards",
-                  "Put them at the front of your rack",
+                  "Held in case they become useful",
+                  "Your first discards",
+                  "Traded for jokers",
+                  "Kept on your rack for safety",
                 ],
-                correct: 2,
+                correct: 1,
                 explanation:
-                  "Tiles that fit none of your candidates have zero value to you. Tag them as your first discards \u2014 pass them in the Charleston or throw them early.",
+                  "Tiles that fit none of your candidates have zero value. Discard them first.",
               },
               {
                 question:
-                  "What is the strongest signal that a hand on the card is a good candidate for you?",
+                  "What's the strongest signal that a hand is a good candidate for you?",
                 options: [
-                  "It\u2019s worth the most points",
+                  "It's worth the most points",
                   "You already hold pairs or triples that the hand uses",
-                  "It\u2019s at the top of the card",
+                  "It's at the top of the card",
                   "Another player is going for it too",
                 ],
                 correct: 1,
                 explanation:
-                  "Pairs and triples you already hold are the strongest signals. A hand that uses tiles you already have is far more realistic than one where you need to find everything.",
+                  "Pairs and triples you already hold are the strongest signals. A hand that uses tiles you have is far more realistic.",
               },
             ]}
           />
