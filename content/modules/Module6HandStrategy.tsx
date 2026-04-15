@@ -73,11 +73,11 @@ function TreeStep({
 }
 
 export default function Module6HandStrategy() {
-  const adj = getAdjacentModules(6);
+  const adj = getAdjacentModules(8);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={6} coverProps={{ eyebrow: "MAHJ — Module 6", title: "Hand", highlight: "Strategy" }} header={<><Cover
-        eyebrow="MAHJ — Module 6"
+      <ScreenStepper moduleNum={8} coverProps={{ eyebrow: "MAHJ — Module 8", title: "Hand", highlight: "Strategy" }} header={<><Cover
+        eyebrow="MAHJ — Module 8"
         title="Hand"
         highlight="Strategy"
         subtitle='Picking a hand, staying flexible, and the all-important "what would you discard?"'
@@ -88,11 +88,11 @@ export default function Module6HandStrategy() {
           {
             label: "Goal",
             value:
-              "Learn how to read your card, pick 2–3 candidate hands, stay flexible early, commit later, and make sharper discard decisions every turn.",
+              "Stay flexible early, commit later, manage jokers wisely, and make sharper discard decisions every turn.",
           },
-          { label: "Estimated time", value: "9–12 minutes" },
-          { label: "Prerequisite", value: "Module 5 (Jokers & Calling)" },
-          { label: "Unlocks", value: "Module 7 (Defense & Wall Awareness)" },
+          { label: "Estimated time", value: "8–10 minutes" },
+          { label: "Prerequisite", value: "Module 7 (Scanning the Card)" },
+          { label: "Unlocks", value: "Module 9 (Defense)" },
           {
             label: "Why it matters",
             value:
@@ -100,62 +100,7 @@ export default function Module6HandStrategy() {
           },
         ]}
       /></>}>
-        {/* ── 1. Quick recap ── */}
-        <LessonScreen title="🎯 Quick Recap: The Card Is the Game">
-          <p>
-            In Module 2 you learned how to read the NMJL card — the colors, symbols,
-            groupings, and number patterns. Now it&apos;s time to put that knowledge
-            to work.
-          </p>
-          <p>
-            American Mahjong is a <strong>target-matching</strong>{" "}game. Your job
-            every turn is to ask:{" "}
-            <em>which hand on the card am I building, and is this tile getting me
-            closer or farther?</em>
-          </p>
-          <Callout variant="info">
-            <strong>Bring your own card.</strong>{" "}MAHJ teaches you the{" "}
-            <em>thinking</em>; it doesn&apos;t reproduce any year&apos;s official
-            hands. To play a real game you&apos;ll need the current card from nationalmahjonggleague.org.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 2. Pick 2–3 hands ── */}
-        <LessonScreen title="🎲 Right After the Deal: Pick 2–3 Hands">
-          <p>
-            As soon as you&apos;re dealt, sort your tiles on your rack and scan the
-            card. Don&apos;t commit to anything yet — instead, find the{" "}
-            <strong>2 or 3 hands you&apos;re closest to</strong>{" "}and treat them as
-            candidates.
-          </p>
-          <p>How to look quickly:</p>
-          <ol className="ml-6 list-decimal space-y-1 text-[14px]">
-            <li>
-              <strong>Count your suits.</strong>{" "}Are you heavy in one suit? Look at
-              same-suit hands first.
-            </li>
-            <li>
-              <strong>Spot pairs and triples.</strong>{" "}Two of the same tile is a
-              pung-in-progress; three of the same is gold.
-            </li>
-            <li>
-              <strong>Notice your honors.</strong>{" "}A few winds or dragons can point you
-              toward winds/dragons hands.
-            </li>
-            <li>
-              <strong>Check the year hand.</strong>{" "}If you have any of that year&apos;s
-              digits, it&apos;s often the easiest place to start.
-            </li>
-          </ol>
-          <Callout variant="warn">
-            <strong>Why 2–3, not 1?</strong>{" "}If you commit to one hand on Turn 1,
-            you&apos;ll fight every bad draw. With 2–3 candidates, almost every tile
-            you draw is useful for <em>something</em>. The Charleston will help you
-            narrow down further.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 4. Flexibility curve ── */}
+        {/* ── 1. Flexibility curve ── */}
         <LessonScreen title="📈 The Flexibility Curve">
           <p>
             Strategy in American Mahjong follows a curve: <strong>wide early</strong>,{" "}
@@ -485,8 +430,8 @@ export default function Module6HandStrategy() {
             5 quick questions. Get 4 right to pass.
           </p>
           <Quiz
-            moduleNum={6}
-            title="Module 6 Check"
+            moduleNum={8}
+            title="Module 8 Check"
             passThreshold={4}
             questions={[
               {
@@ -551,14 +496,14 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 6 Complete">
+        <LessonScreen title="🎉 Module 8 Complete">
           <p>
-            You now know how to think like an American Mahjong player: pick candidate
-            hands, stay flexible early, commit late, manage jokers, and use a discard
-            framework instead of guessing.
+            You now know how to think like an American Mahjong player: stay flexible
+            early, commit late, manage jokers, and use a discard framework instead of
+            guessing.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 7 covers <strong>Defense</strong>{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 9 covers <strong>Defense</strong>{" "}
             — how to read the discards and exposures coming from your opponents, and
             how to avoid feeding them the tile that wins them the game.
           </p>
@@ -566,7 +511,7 @@ export default function Module6HandStrategy() {
       </ScreenStepper>
 
       <ModuleNav
-        currentModuleNum={6}
+        currentModuleNum={8}
         prev={
           adj.prev && {
             href: adj.prev.href,

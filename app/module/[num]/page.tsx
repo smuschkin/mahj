@@ -10,15 +10,17 @@ import Module1TileTrainer from "@/content/modules/Module1TileTrainer";
 import Module2ReadingTheCard from "@/content/modules/Module2ReadingTheCard";
 import Module3SetupDealing from "@/content/modules/Module3SetupDealing";
 import Module4Charleston from "@/content/modules/Module4Charleston";
-import Module5JokersCalling from "@/content/modules/Module5JokersCalling";
-import Module6HandStrategy from "@/content/modules/Module6HandStrategy";
-import Module7Defense from "@/content/modules/Module7Defense";
-import Module8Etiquette from "@/content/modules/Module8Etiquette";
-import Module9Scoring from "@/content/modules/Module9Scoring";
-import Module10Mistakes from "@/content/modules/Module10Mistakes";
-import Module11Glossary from "@/content/modules/Module11Glossary";
-import Module12FirstGame from "@/content/modules/Module12FirstGame";
-import Module13Practice from "@/content/modules/Module13Practice";
+import Module5CharlestonStrategy from "@/content/modules/Module5CharlestonStrategy";
+import Module6JokersCalling from "@/content/modules/Module5JokersCalling";
+import Module7ScanningTheCard from "@/content/modules/Module7ScanningTheCard";
+import Module8HandStrategy from "@/content/modules/Module6HandStrategy";
+import Module9Defense from "@/content/modules/Module7Defense";
+import Module10Etiquette from "@/content/modules/Module8Etiquette";
+import Module11Scoring from "@/content/modules/Module9Scoring";
+import Module12Mistakes from "@/content/modules/Module10Mistakes";
+import Module13Glossary from "@/content/modules/Module11Glossary";
+import Module14FirstGame from "@/content/modules/Module12FirstGame";
+import Module15Practice from "@/content/modules/Module13Practice";
 
 const moduleComponents: Record<number, () => React.ReactNode> = {
   0: Module0Welcome,
@@ -26,15 +28,17 @@ const moduleComponents: Record<number, () => React.ReactNode> = {
   2: Module2ReadingTheCard,
   3: Module3SetupDealing,
   4: Module4Charleston,
-  5: Module5JokersCalling,
-  6: Module6HandStrategy,
-  7: Module7Defense,
-  8: Module8Etiquette,
-  9: Module9Scoring,
-  10: Module10Mistakes,
-  11: Module11Glossary,
-  12: Module12FirstGame,
-  13: Module13Practice,
+  5: Module5CharlestonStrategy,
+  6: Module6JokersCalling,
+  7: Module7ScanningTheCard,
+  8: Module8HandStrategy,
+  9: Module9Defense,
+  10: Module10Etiquette,
+  11: Module11Scoring,
+  12: Module12Mistakes,
+  13: Module13Glossary,
+  14: Module14FirstGame,
+  15: Module15Practice,
 };
 
 export default async function ModulePage({

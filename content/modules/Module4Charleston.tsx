@@ -8,9 +8,9 @@ import { Callout } from "@/components/Callout";
 import { ModuleNav } from "@/components/ModuleNav";
 import { Quiz } from "@/components/Quiz";
 import { Tile } from "@/components/Tile";
-import { TileRow } from "@/components/TileRow";
+
 import { CharlestonSim } from "@/components/CharlestonSim";
-import { CharlestonDrill } from "@/components/CharlestonDrill";
+
 import { CharlestonAnimation } from "@/components/CharlestonAnimation";
 import { getAdjacentModules } from "@/lib/modules";
 
@@ -111,11 +111,11 @@ export default function Module4Charleston() {
           {
             label: "Goal",
             value:
-              "Understand the full Charleston sequence, what to pass, and how to handle the tricky bits like blind passes and the courtesy.",
+              "Understand the full Charleston sequence — directions, blind passes, courtesy mechanics, and when you can declare Mahjong mid-Charleston.",
           },
-          { label: "Estimated time", value: "7–9 minutes" },
+          { label: "Estimated time", value: "5–7 minutes" },
           { label: "Prerequisite", value: "Module 3 (Setup & Dealing)" },
-          { label: "Unlocks", value: "Module 5 (Jokers & Calling)" },
+          { label: "Unlocks", value: "Module 5 (Charleston Strategy)" },
           {
             label: "Why it matters",
             value:
@@ -180,88 +180,25 @@ export default function Module4Charleston() {
           </Callout>
         </LessonScreen>
 
-        {/* ── 4. Pass 1 — First Right + worked example ── */}
-        <LessonScreen title="👉 Pass 1: First Right">
+        {/* ── 4. How each pass works ── */}
+        <LessonScreen title="👉 How Each Pass Works">
           <p>
-            The Charleston begins. Look at your 13 tiles and pick{" "}
-            <strong>3 you don&apos;t want</strong> — your &quot;junk.&quot;
+            Each pass is the same mechanic: pick{" "}
+            <strong>3 tiles you don&apos;t want</strong>, slide them{" "}
+            <strong>face-down</strong>{" "}to the designated player, and receive 3
+            face-down tiles in return. Add them to your hand.
           </p>
           <p>
-            Slide them <strong>face-down</strong>{" "}to the player on your right. At the
-            same time, the player on your <em>left</em>{" "}slides 3 face-down tiles to
-            you. Pick them up, look, and add them to your hand.
+            You can pass any tiles <em>except</em>{" "}jokers. You can also re-pass tiles
+            you just received from someone else.
           </p>
-
-          <TileRow caption="Dashed tiles below would be passed. Why those three?">
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={3} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="crack" value={5} size="sm" />
-            <Tile type="crack" value={5} size="sm" />
-            <Tile type="dot" value={7} size="sm" />
-            <Tile type="dot" value={8} size="sm" />
-            <Tile type="wind" value="E" size="sm" />
-            <Tile type="wind" value="N" size="sm" />
-            <Tile type="dragon" value="green" size="sm" />
-            <Tile type="crack" value={1} size="sm" marked />
-            <Tile type="dot" value={9} size="sm" marked />
-            <Tile type="wind" value="W" size="sm" marked />
-          </TileRow>
-
-          <div className="my-3 grid gap-2 sm:grid-cols-2">
-            <div className="rounded-md border-l-4 border-[var(--color-green)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">✅ Keep — 2-3-4 Bam</div>
-              These fit many &quot;consecutive number&quot; hands on the card. Keep tiles that work together.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-green)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">✅ Keep — pair of 5 Craks</div>
-              Pairs are valuable — they can grow into groups of 3 or stay as the final pair.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">❌ Pass — lone 1 Crak</div>
-              Isolated, far from your other Craks. Hard to use.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">❌ Pass — lone 9 Dot</div>
-              Sits at the edge of your 7-8 Dot pair. Sacrifice it.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px] sm:col-span-2">
-              <div className="font-black text-[var(--color-mid)]">❌ Pass — lone West Wind</div>
-              One honor by itself is dead weight unless it pairs up.
-            </div>
-          </div>
-
+          <Callout variant="info">
+            <strong>What should you keep vs. pass?</strong>{" "}You&apos;ll learn the
+            strategy for making smart passing decisions in Module 5.
+          </Callout>
           <Callout variant="warn">
             <strong>Never pass a Joker.</strong>{" "}Jokers are gold — you&apos;d be giving
             away your single most valuable tile.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 5. Pass 2 — First Across ── */}
-        <LessonScreen title="↔️ Pass 2: First Across">
-          <p>
-            Pass 3 more tiles — this time to the player <strong>across</strong>{" "}from
-            you. They pass 3 to you in return.
-          </p>
-          <p>
-            You can pass any 3 tiles, including ones you just received from the right.
-            The only hard rule: <strong>no jokers</strong>.
-          </p>
-          <Callout variant="tip">
-            By now you may be starting to see what hand-shape your tiles support. Use
-            this pass to dump tiles that don&apos;t fit.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 6. Pass 3 — First Left ── */}
-        <LessonScreen title="👈 Pass 3: First Left">
-          <p>
-            Pass 3 to the player on your <strong>left</strong>. This completes the{" "}
-            <em>first</em>{" "}Charleston.
-          </p>
-          <Callout variant="tip">
-            By now you may be starting to see what hand-shape your tiles support. Use
-            this pass to dump tiles that don&apos;t fit.
           </Callout>
         </LessonScreen>
 
@@ -417,35 +354,6 @@ export default function Module4Charleston() {
           </Callout>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            Worked example — when to actually use it
-          </h4>
-          <p>
-            The courtesy is powerful when you&apos;re <strong>one tile away</strong> from a specific shape:
-          </p>
-
-          <TileRow caption="Going for even-numbered Bams. You just need one more 8 Bam.">
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={6} size="sm" />
-            <Tile type="bam" value={6} size="sm" />
-            <Tile type="bam" value={8} size="sm" />
-            <Tile type="crack" value={2} size="sm" />
-            <Tile type="crack" value={4} size="sm" marked />
-            <Tile type="dot" value={6} size="sm" />
-            <Tile type="dragon" value="green" size="sm" />
-            <Tile type="dragon" value="green" size="sm" />
-            <Tile type="wind" value="E" size="sm" />
-          </TileRow>
-
-          <p className="text-[14px] text-zinc-600">
-            The player across has been discarding Craks all Charleston — they probably
-            don&apos;t want yours either. Ask for a 1-tile courtesy: trade your useless
-            4 Crak for whatever they don&apos;t want. You might get lucky.
-          </p>
-
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
             Rules to remember
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
@@ -464,25 +372,9 @@ export default function Module4Charleston() {
             </li>
           </ul>
 
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            When to skip it
-          </h4>
-          <p>Say <strong>&quot;zero&quot;</strong>{" "}if:</p>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>You&apos;re not sure what hand you&apos;re building yet</li>
-            <li>You don&apos;t have any obvious junk left to trade</li>
-            <li>
-              The player across has been making lots of exposures (they may know your
-              tiles too well)
-            </li>
-            <li>You&apos;re new and overwhelmed — there&apos;s no shame in zero</li>
-          </ul>
-
-          <Callout variant="tip">
-            <strong>Permission to be cautious:</strong> &quot;Zero&quot; is the right
-            default for your first 5–10 games. You will not lose by skipping the
-            courtesy. You <em>can</em>{" "}lose by trading away a tile you didn&apos;t
-            realize you needed.
+          <Callout variant="info">
+            <strong>When should you use it?</strong>{" "}Module 5 covers courtesy
+            strategy — including when to trade, when to say zero, and worked examples.
           </Callout>
         </LessonScreen>
 
@@ -501,15 +393,6 @@ export default function Module4Charleston() {
             Don&apos;t pass tiles before checking your hand against the card.
             A free Mahjong is the easiest win in the game.
           </Callout>
-        </LessonScreen>
-
-        {/* ── Practice drill ── */}
-        <LessonScreen title="🔄 Practice: Pick Your Passes">
-          <p>
-            Time to practice. We&apos;ll show you 4 hands with a target — pick the
-            3 tiles you&apos;d pass in the Charleston.
-          </p>
-          <CharlestonDrill />
         </LessonScreen>
 
         {/* ── Quiz ── */}
@@ -585,12 +468,13 @@ export default function Module4Charleston() {
         <LessonScreen title="🎉 Module 4 Complete">
           <p>
             You now understand the Charleston — the trading ritual that makes American
-            Mahjong unique. You know what to pass, how to pass, and when to stop.
+            Mahjong unique. You know the directions, blind passes, the courtesy, and
+            when you can stop.
           </p>
           <p>
             <strong>What&apos;s next:</strong>{" "}Module 5 covers{" "}
-            <strong>Jokers &amp; Calling</strong> — when you can grab a discarded tile,
-            expose tiles to the table, and use those precious jokers to your advantage.
+            <strong>Charleston Strategy</strong> — what to keep, what to pass, and how
+            to use each pass to shape your hand.
           </p>
         </LessonScreen>
       </ScreenStepper>

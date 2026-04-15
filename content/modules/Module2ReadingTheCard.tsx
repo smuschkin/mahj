@@ -635,53 +635,11 @@ export default function Module2ReadingTheCard() {
           <Callout variant="tip">
             <strong>Keep 2–3 candidate hands in mind</strong>{" "}as you play.
             You don&apos;t have to commit to one right away — more on this
-            in Module 6 (Hand Strategy).
+            in Module 8 (Hand Strategy).
           </Callout>
         </LessonScreen>
 
-        {/* ── 9. How to scan the card ── */}
-        <LessonScreen title="👀 How to Scan the Card with Your Tiles">
-          <p>
-            You&apos;ve just been dealt 13 tiles and you&apos;re staring at the
-            card. Here&apos;s a practical scanning method:
-          </p>
-          <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>Sort your rack by suit</strong> — group all your Bams together,
-              all your Craks, all your Dots. Put honors (winds, dragons) and
-              flowers on one end.
-            </li>
-            <li>
-              <strong>Look at your biggest cluster.</strong>{" "}Got four Bams? Start
-              with categories that use a lot of one suit. Got mostly even numbers?
-              Check 2468.
-            </li>
-            <li>
-              <strong>Spot pairs and triples.</strong>{" "}Two of the same tile is
-              a pair; three is a pung-in-progress. Hands that use those numbers are
-              good candidates.
-            </li>
-            <li>
-              <strong>Check the year hand.</strong>{" "}If you happen to have tiles
-              matching this year&apos;s digits, it&apos;s often one of the easiest
-              places to start.
-            </li>
-            <li>
-              <strong>Pick 2–3 candidates</strong>{" "}and mentally note which tiles fit
-              all of them and which fit none. The ones that fit none are your first
-              discards.
-            </li>
-          </ol>
-
-          <Callout variant="tip">
-            <strong>Speed comes with practice.</strong>{" "}Your first few games,
-            scanning the card will feel painfully slow. By game 10, you&apos;ll
-            glance at your tiles and see candidates immediately. Don&apos;t rush
-            yourself early on — the table will wait.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 10. Common beginner misreads ── */}
+        {/* ── 9. Common beginner misreads ── */}
         <LessonScreen title="⚠️ Common Beginner Misreads">
           <p>
             Almost every new player makes these mistakes. Knowing them in advance

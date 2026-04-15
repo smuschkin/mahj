@@ -72,11 +72,11 @@ function DecisionBox({
 }
 
 export default function Module5JokersCalling() {
-  const adj = getAdjacentModules(5);
+  const adj = getAdjacentModules(6);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={5} coverProps={{ eyebrow: "MAHJ — Module 5", title: "Jokers &", highlight: "Calling", subtitle: "Grabbing tiles, exposing groups, and using your wild cards" }} header={<><Cover
-        eyebrow="MAHJ — Module 5"
+      <ScreenStepper moduleNum={6} coverProps={{ eyebrow: "MAHJ — Module 6", title: "Jokers &", highlight: "Calling", subtitle: "Grabbing tiles, exposing groups, and using your wild cards" }} header={<><Cover
+        eyebrow="MAHJ — Module 6"
         title="Jokers &"
         highlight="Calling"
         subtitle="Grabbing tiles, exposing groups, and using your wild cards"
@@ -90,8 +90,8 @@ export default function Module5JokersCalling() {
               "Know when you can grab a discarded tile, what you must do when you grab one, and how jokers really work — including the joker exchange.",
           },
           { label: "Estimated time", value: "8–10 minutes" },
-          { label: "Prerequisite", value: "Module 4 (The Charleston)" },
-          { label: "Unlocks", value: "Module 6 (Hand Strategy)" },
+          { label: "Prerequisite", value: "Module 5 (Charleston Strategy)" },
+          { label: "Unlocks", value: "Module 7 (Scanning the Card)" },
           {
             label: "Why it matters",
             value:
@@ -437,8 +437,8 @@ export default function Module5JokersCalling() {
             5 quick questions. Get 4 right to pass.
           </p>
           <Quiz
-            moduleNum={5}
-            title="Module 5 Check"
+            moduleNum={6}
+            title="Module 6 Check"
             passThreshold={4}
             questions={[
               {
@@ -507,15 +507,15 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 5 Complete">
+        <LessonScreen title="🎉 Module 6 Complete">
           <p>
             You now know the trickiest mechanical rules in American Mahjong: calling,
             exposing, and the joker exchange. These are the rules that separate
             confident players from nervous ones.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 6 covers{" "}
-            <strong>Hand Strategy</strong> — picking which hand to build toward,
+            <strong>What&apos;s next:</strong>{" "}Module 7 covers{" "}
+            <strong>Scanning the Card</strong> — picking which hand to build toward,
             staying flexible, and the all-important &quot;what would you discard?&quot;
             thinking.
           </p>
@@ -526,7 +526,7 @@ export default function Module5JokersCalling() {
       <CallingDrill />
 
       <ModuleNav
-        currentModuleNum={5}
+        currentModuleNum={6}
         prev={
           adj.prev && {
             href: adj.prev.href,

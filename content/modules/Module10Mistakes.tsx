@@ -54,11 +54,11 @@ function MistakeCard({
 }
 
 export default function Module10Mistakes() {
-  const adj = getAdjacentModules(10);
+  const adj = getAdjacentModules(12);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={10} coverProps={{ eyebrow: "MAHJ — Module 10", title: "Common Mistakes &", highlight: "Recovery", subtitle: "The dozen errors every beginner makes — and how to handle them gracefully" }} header={<><Cover
-        eyebrow="MAHJ — Module 10"
+      <ScreenStepper moduleNum={12} coverProps={{ eyebrow: "MAHJ — Module 12", title: "Common Mistakes &", highlight: "Recovery", subtitle: "The dozen errors every beginner makes — and how to handle them gracefully" }} header={<><Cover
+        eyebrow="MAHJ — Module 12"
         title="Common Mistakes &"
         highlight="Recovery"
         subtitle="The dozen errors every beginner makes — and how to handle them gracefully"
@@ -72,8 +72,8 @@ export default function Module10Mistakes() {
               "Recognize the most common beginner mistakes before they happen, and know exactly what to do when they happen anyway.",
           },
           { label: "Estimated time", value: "8–10 minutes" },
-          { label: "Prerequisite", value: "Module 9 (Scoring & Payouts)" },
-          { label: "Unlocks", value: "Module 11 (Glossary)" },
+          { label: "Prerequisite", value: "Module 11 (Scoring & Payouts)" },
+          { label: "Unlocks", value: "Module 13 (Glossary)" },
           {
             label: "Why it matters",
             value:
@@ -304,7 +304,7 @@ export default function Module10Mistakes() {
             what={
               <>
                 You announced a tile by the wrong name as you placed it. (Covered in
-                full in Module 8 — NMJL Article 67.)
+                full in Module 10 — NMJL Article 67.)
               </>
             }
             cost={
@@ -439,7 +439,7 @@ export default function Module10Mistakes() {
             </li>
             <li>
               <strong>Passing on a tile you could call.</strong>{" "}Just because you{" "}
-              <em>can</em>{" "}call doesn&apos;t mean you should. Module 5 covered this.
+              <em>can</em>{" "}call doesn&apos;t mean you should. Module 6 covered this.
             </li>
             <li>
               <strong>Changing your target hand mid-game.</strong>{" "}Flexibility is
@@ -462,8 +462,8 @@ export default function Module10Mistakes() {
             5 quick questions. Get 4 right to pass.
           </p>
           <Quiz
-            moduleNum={10}
-            title="Module 10 Check"
+            moduleNum={12}
+            title="Module 12 Check"
             passThreshold={4}
             questions={[
               {
@@ -536,7 +536,7 @@ export default function Module10Mistakes() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 10 Complete">
+        <LessonScreen title="🎉 Module 12 Complete">
           <p>
             You now know the most common errors that derail beginners — and exactly
             what happens when each one occurs. More importantly, you know the 4-step
@@ -544,7 +544,7 @@ export default function Module10Mistakes() {
             decide.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 11 is the{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 13 is the{" "}
             <strong>Glossary</strong> — every term you&apos;ve learned, defined and
             cross-linked, always one tap away from any screen in the app.
           </p>
@@ -552,7 +552,7 @@ export default function Module10Mistakes() {
       </ScreenStepper>
 
       <ModuleNav
-        currentModuleNum={10}
+        currentModuleNum={12}
         prev={
           adj.prev && {
             href: adj.prev.href,

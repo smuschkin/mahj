@@ -77,7 +77,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         The <strong>9 Dot</strong>{" "}is the only tile that fits neither of your forming
-        suits. Module 6: discard tiles that fit none of your candidate hands first.
+        suits. Module 8: discard tiles that fit none of your candidate hands first.
         It&apos;s isolated and useless to you.
       </>
     ),
@@ -151,7 +151,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         <strong>Red Dragon</strong>{" "}is completely safe. Three are already in the
-        discard pile, so no one can ever Pung or Kong the 4th — Module 7&apos;s
+        discard pile, so no one can ever Pung or Kong the 4th — Module 9&apos;s
         3-of-a-tile safe rule. The Bams are dangerous (player across is on Bams).
         East Wind is dangerous too (right player is on winds-and-dragons).
       </>
@@ -209,7 +209,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Jokers can substitute in any group of <strong>3 or more identical tiles</strong>{" "}
         — so either of the Pungs-in-progress works, completing them at 3 tiles. Jokers{" "}
-        <strong>can never</strong>{" "}be used in a pair, full stop. Module 5&apos;s pair
+        <strong>can never</strong>{" "}be used in a pair, full stop. Module 6&apos;s pair
         rule.
       </>
     ),
@@ -281,7 +281,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         Yes — perfectly legal. A Pung is 3 of a kind, and Jokers can substitute in
-        any group of 3+ identical tiles (Pungs, Kongs, Quints). Module 5. The only
+        any group of 3+ identical tiles (Pungs, Kongs, Quints). Module 6. The only
         place a Joker <em>cannot</em>{" "}go is a pair or single.
       </>
     ),
@@ -310,7 +310,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        Module 5 + 6: calling commits you. Once the Pung is exposed, you can&apos;t
+        Module 6 + 8: calling commits you. Once the Pung is exposed, you can&apos;t
         rebuild toward a hand that doesn&apos;t use 5 Crak. Early in the game,
         flexibility beats commitment. Wait until you&apos;ve narrowed down to one
         primary candidate before calling.
@@ -340,7 +340,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        Module 10&apos;s 4-step recovery: <strong>stop, speak up immediately, describe
+        Module 12&apos;s 4-step recovery: <strong>stop, speak up immediately, describe
         factually</strong>. If you correct it before any player acts on the wrong
         name, you usually escape clean. Hiding it risks the misnamed-discard
         penalty (NMJL Article 67) — the most expensive mistake in the game if Mahjong
@@ -416,7 +416,7 @@ const PUZZLES: Puzzle[] = [
         <strong>North Wind</strong>{" "}is safest. Player A is on a like-numbers 5s
         hand — 5 Bam is extremely dangerous. Player B has dragons exposed — Red
         Dragon could help them. 8 Bam has 2 discarded but 2 still live. North
-        Wind hasn&apos;t appeared in any exposure or pattern. Module 7: read
+        Wind hasn&apos;t appeared in any exposure or pattern. Module 9: read
         what&apos;s <em>not</em>{" "}being collected.
       </>
     ),
@@ -463,7 +463,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Self-draw = all three opponents pay <strong>double</strong>{" "}the hand value.
         25¢ × 2 = 50¢ each. Jokerless bonus does NOT apply because you have jokers.
-        Module 9.
+        Module 11.
       </>
     ),
   },
@@ -499,7 +499,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         The <strong>6 Dot</strong>{" "}is 100% safe. Three copies are already in the
-        discard pile, so no one can ever Pung or Kong it. Module 7: once 3 of a
+        discard pile, so no one can ever Pung or Kong it. Module 9: once 3 of a
         tile are visible, the 4th is always safe.
       </>
     ),
@@ -536,7 +536,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Yes — all conditions are met: it&apos;s your turn, you have the exact
         real tile the Joker is standing for, and you haven&apos;t discarded yet.
-        Hand the 8 Bam to the opponent and take the Joker. Module 5.
+        Hand the 8 Bam to the opponent and take the Joker. Module 6.
       </>
     ),
   },
@@ -558,7 +558,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Late-game calling is completely different from early-game. You&apos;re
         already committed to a hand and the wall is running out. Passing on a
-        tile you need now could mean never seeing it again. Module 5 + 6:
+        tile you need now could mean never seeing it again. Module 6 + 8:
         <em> wide early, narrow late</em>.
       </>
     ),
@@ -582,7 +582,7 @@ const PUZZLES: Puzzle[] = [
         3 exposures = full defense mode. Stop trying to win and start
         discarding only guaranteed-safe tiles. Break your own forming groups
         if needed — your pairs are now a source of safe discards, not future
-        Pungs. <strong>Never</strong>{" "}discard a Joker. Module 7.
+        Pungs. <strong>Never</strong>{" "}discard a Joker. Module 9.
       </>
     ),
   },
@@ -643,7 +643,7 @@ const PUZZLES: Puzzle[] = [
       <>
         The pause before racking is critical etiquette. Once your tile is
         racked, the previous discard can no longer be called. Counting to 3
-        gives everyone time to react. Module 8.
+        gives everyone time to react. Module 10.
       </>
     ),
   },
@@ -666,7 +666,7 @@ const PUZZLES: Puzzle[] = [
         The suit nobody is discarding is the <strong>hot suit</strong> —
         someone is collecting it. Discarding Dots is risky because you could
         be feeding that player exactly what they need. Craks are the cold
-        suit: everyone is dumping them, so they&apos;re safer. Module 7.
+        suit: everyone is dumping them, so they&apos;re safer. Module 9.
       </>
     ),
   },
@@ -683,7 +683,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Discard win = discarder pays 2×. Jokerless = doubles again.
         25¢ × 2 (discard) × 2 (jokerless) = <strong>$1.00</strong>.
-        The other two players pay 50¢ each (1× × 2 for jokerless). Module 9.
+        The other two players pay 50¢ each (1× × 2 for jokerless). Module 11.
       </>
     ),
   },
@@ -715,7 +715,7 @@ const PUZZLES: Puzzle[] = [
         <strong>Never discard a Joker.</strong>{" "}A discarded Joker is dead —
         no one can call it, no one can use it. It&apos;s the most valuable tile
         in the game, always. Even when you&apos;re folding, even when you&apos;re
-        frustrated. Module 5 + 6 discard priority: Jokers are permanently at
+        frustrated. Module 6 + 8 discard priority: Jokers are permanently at
         the bottom of the list.
       </>
     ),
@@ -738,7 +738,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Mahjong is the one exception to the &quot;calls are for groups of 3+&quot;
         rule. If that one tile completes your <em>entire</em>{" "}winning hand — even
-        if it&apos;s just completing a pair — you can call it. Module 5.
+        if it&apos;s just completing a pair — you can call it. Module 6.
       </>
     ),
   },
@@ -761,7 +761,7 @@ const PUZZLES: Puzzle[] = [
         1 exposure = they&apos;ve committed to a direction. You can start reading
         their hand family (same-suit? like-numbers? dragons?). Avoid tiles that
         obviously match, but don&apos;t go full defense yet — that&apos;s for 3+
-        exposures. Module 7.
+        exposures. Module 9.
       </>
     ),
   },
@@ -848,7 +848,7 @@ const PUZZLES: Puzzle[] = [
         Dead hands keep playing. You draw, you discard, you name your tiles.
         You just can&apos;t win. Many experienced players use dead hands for
         <strong> pure defense</strong> — discarding only safe tiles since
-        there&apos;s nothing left to build. Module 9 + 10.
+        there&apos;s nothing left to build. Module 11 + 12.
       </>
     ),
   },
@@ -889,7 +889,7 @@ const PUZZLES: Puzzle[] = [
         the discard pile (only 2 remain), and the threat player is on Bams —
         they have zero interest in Craks. Any Bam is extremely dangerous.
         The 8 Dot has only 1 copy discarded (3 still live). The honors are
-        unknown. Module 7: combine &quot;already discarded&quot; with
+        unknown. Module 9: combine &quot;already discarded&quot; with
         &quot;wrong suit for the threat.&quot;
       </>
     ),
@@ -912,7 +912,7 @@ const PUZZLES: Puzzle[] = [
       <>
         <strong>No.</strong>{" "}The pair rule is absolute: Jokers can never
         substitute in a pair. You need <em>two real</em> 9 Dots. This is
-        the #1 Joker mistake beginners make. Module 5.
+        the #1 Joker mistake beginners make. Module 6.
       </>
     ),
   },
@@ -925,7 +925,7 @@ const PUZZLES: Puzzle[] = [
 type Phase = "intro" | "playing" | "complete";
 
 export default function Module13Practice() {
-  const adj = getAdjacentModules(13);
+  const adj = getAdjacentModules(15);
   const total = PUZZLES.length;
   const passThreshold = Math.ceil(total * 0.7); // 70% to "pass"
 
@@ -959,7 +959,7 @@ export default function Module13Practice() {
   return (
     <PageWrap>
       <Cover
-        eyebrow="MAHJ — Module 13"
+        eyebrow="MAHJ — Module 15"
         title="Practice Hands"
         highlight="Library"
         subtitle="Now you make the calls. Real puzzles, instant feedback."
@@ -1044,7 +1044,7 @@ export default function Module13Practice() {
       </Callout>
 
       <ModuleNav
-        currentModuleNum={13}
+        currentModuleNum={15}
         prev={
           adj.prev && {
             href: adj.prev.href,

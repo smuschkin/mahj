@@ -79,11 +79,11 @@ function ThreatStage({
 }
 
 export default function Module7Defense() {
-  const adj = getAdjacentModules(7);
+  const adj = getAdjacentModules(9);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={7} coverProps={{ eyebrow: "MAHJ — Module 7", title: "Defense &", highlight: "Wall Awareness", subtitle: "Reading the table, tracking discards, and not feeding the win" }} header={<><Cover
-        eyebrow="MAHJ — Module 7"
+      <ScreenStepper moduleNum={9} coverProps={{ eyebrow: "MAHJ — Module 9", title: "Defense &", highlight: "Wall Awareness", subtitle: "Reading the table, tracking discards, and not feeding the win" }} header={<><Cover
+        eyebrow="MAHJ — Module 9"
         title="Defense &"
         highlight="Wall Awareness"
         subtitle="Reading the table, tracking discards, and not feeding the win"
@@ -97,8 +97,8 @@ export default function Module7Defense() {
               "Learn to read opponents' exposures and discards, identify hot vs. safe tiles, and know when to switch from offense to defense.",
           },
           { label: "Estimated time", value: "9–11 minutes" },
-          { label: "Prerequisite", value: "Module 6 (Hand Strategy)" },
-          { label: "Unlocks", value: "Module 8 (Etiquette)" },
+          { label: "Prerequisite", value: "Module 8 (Hand Strategy)" },
+          { label: "Unlocks", value: "Module 10 (Table Etiquette)" },
           {
             label: "Why it matters",
             value:
@@ -109,7 +109,7 @@ export default function Module7Defense() {
         {/* ── 1. What is defense? ── */}
         <LessonScreen title="🛡️ What Does Defense Even Mean?">
           <p>
-            In Module 6 you learned <strong>offense</strong> — how to pick a hand and
+            In Module 8 you learned <strong>offense</strong> — how to pick a hand and
             build toward it. Defense is the other half of the game:{" "}
             <strong>not feeding the win</strong>.
           </p>
@@ -133,7 +133,7 @@ export default function Module7Defense() {
         <LessonScreen title="👁️ Every Exposure Is a Tell">
           <p>
             When an opponent calls a tile, they have to <strong>expose</strong>{" "}the
-            whole group face-up. That&apos;s the law (you learned this in Module 5).
+            whole group face-up. That&apos;s the law (you learned this in Module 6).
             For you, it&apos;s a free peek into their hand.
           </p>
           <p>
@@ -510,8 +510,8 @@ export default function Module7Defense() {
             5 quick questions. Get 4 right to pass.
           </p>
           <Quiz
-            moduleNum={7}
-            title="Module 7 Check"
+            moduleNum={9}
+            title="Module 9 Check"
             passThreshold={4}
             questions={[
               {
@@ -575,14 +575,14 @@ export default function Module7Defense() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 7 Complete">
+        <LessonScreen title="🎉 Module 9 Complete">
           <p>
             You can now read the table — exposures, discards, and the wall. You know
             when a tile is safe, when an opponent is dangerous, and when to fold
             instead of fight. That makes you a real defensive player.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 8 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Module 10 covers{" "}
             <strong>Etiquette &amp; Table Culture</strong> — the unwritten rules that
             make you welcome at any mahjong table: how to call your discards, how to
             keep pace, and the social customs that turn a game into a tradition.
@@ -595,7 +595,7 @@ export default function Module7Defense() {
       <TileCountingDrill />
 
       <ModuleNav
-        currentModuleNum={7}
+        currentModuleNum={9}
         prev={
           adj.prev && {
             href: adj.prev.href,
