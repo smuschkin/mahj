@@ -78,7 +78,7 @@ const SCENARIOS: Scenario[] = [
       { type: "dragon", value: "red" },
       { type: "joker" },
     ],
-    context: "Turn 1. You haven't committed to any hand yet — your tiles are scattered across all three suits.",
+    context: "Turn 1. Your tiles are scattered across all three suits. You haven't committed to a hand yet.",
     correct: "pass",
     explanation: (
       <>
@@ -140,7 +140,7 @@ const SCENARIOS: Scenario[] = [
       { type: "bam", value: 4 },
       { type: "bam", value: 4 },
     ],
-    context: "This is the tile that completes your hand. 13 tiles + this discard = 14.",
+    context: "You have 13 tiles. This 2 Bam completes your Kong and your entire hand.",
     correct: "mahjong",
     explanation: (
       <>
@@ -157,7 +157,6 @@ const SCENARIOS: Scenario[] = [
     tag: "Beginner",
     discard: { type: "dragon", value: "green" },
     hand: [
-      { type: "dragon", value: "green" },
       { type: "bam", value: 2 },
       { type: "bam", value: 4 },
       { type: "bam", value: 6 },
@@ -169,9 +168,10 @@ const SCENARIOS: Scenario[] = [
       { type: "dot", value: 4 },
       { type: "dot", value: 6 },
       { type: "wind", value: "W" },
+      { type: "dragon", value: "green" },
       { type: "joker" },
     ],
-    context: "You only have ONE Green Dragon in your hand.",
+    context: "You only have 1 Green Dragon. You need 2 in your hand to call for a 3rd.",
     correct: "pass",
     explanation: (
       <>
@@ -189,8 +189,6 @@ const SCENARIOS: Scenario[] = [
     tag: "Medium",
     discard: { type: "wind", value: "E" },
     hand: [
-      { type: "wind", value: "E" },
-      { type: "wind", value: "E" },
       { type: "bam", value: 3 },
       { type: "bam", value: 3 },
       { type: "bam", value: 5 },
@@ -201,10 +199,12 @@ const SCENARIOS: Scenario[] = [
       { type: "crack", value: 4 },
       { type: "dot", value: 6 },
       { type: "dot", value: 6 },
+      { type: "wind", value: "E" },
+      { type: "wind", value: "E" },
       { type: "joker" },
     ],
     context:
-      "Turn 3. You're eyeing an all-Bam hand OR a winds-and-dragons hand. You haven't committed yet.",
+      "Turn 3. You're considering an all-Bam hand or a Winds & Dragons hand. You haven't committed yet.",
     correct: "pass",
     explanation: (
       <>
@@ -253,21 +253,21 @@ const SCENARIOS: Scenario[] = [
     tag: "Medium",
     discard: { type: "crack", value: 6 },
     hand: [
+      { type: "crack", value: 2 },
+      { type: "crack", value: 2 },
+      { type: "crack", value: 2 },
+      { type: "crack", value: 4 },
+      { type: "crack", value: 4 },
+      { type: "crack", value: 4 },
       { type: "crack", value: 6 },
       { type: "crack", value: 6 },
-      { type: "crack", value: 2 },
-      { type: "crack", value: 2 },
-      { type: "crack", value: 2 },
-      { type: "crack", value: 4 },
-      { type: "crack", value: 4 },
-      { type: "crack", value: 4 },
       { type: "crack", value: 8 },
       { type: "crack", value: 8 },
       { type: "bam", value: 9 },
       { type: "joker" },
       { type: "joker" },
     ],
-    context: "Turn 12 (late game). You're fully committed to Craks. Your hand needs a Pung of 6 Crak.",
+    context: "Turn 12 (late game). You need a third 6 Crak for a Pung. The wall is running low.",
     correct: "call",
     explanation: (
       <>
@@ -284,22 +284,22 @@ const SCENARIOS: Scenario[] = [
     tag: "Advanced",
     discard: { type: "dot", value: 7 },
     hand: [
-      { type: "dot", value: 7 },
-      { type: "dot", value: 7 },
-      { type: "dot", value: 3 },
-      { type: "dot", value: 3 },
-      { type: "dot", value: 3 },
-      { type: "dot", value: 5 },
-      { type: "dot", value: 5 },
-      { type: "dot", value: 5 },
-      { type: "dot", value: 9 },
-      { type: "dot", value: 9 },
-      { type: "dot", value: 9 },
       { type: "dot", value: 1 },
+      { type: "dot", value: 3 },
+      { type: "dot", value: 3 },
+      { type: "dot", value: 3 },
+      { type: "dot", value: 5 },
+      { type: "dot", value: 5 },
+      { type: "dot", value: 5 },
+      { type: "dot", value: 7 },
+      { type: "dot", value: 7 },
+      { type: "dot", value: 9 },
+      { type: "dot", value: 9 },
+      { type: "dot", value: 9 },
       { type: "joker" },
     ],
     context:
-      'Your target hand is marked "C" (concealed) on the card. You have two 7 Dots and someone discards the third.',
+      'Your hand is marked "C" (concealed) on the card. You have two 7 Dots and need a third — but concealed means no calling.',
     correct: "pass",
     explanation: (
       <>
