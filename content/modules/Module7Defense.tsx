@@ -436,6 +436,15 @@ export default function Module7Defense() {
           </Callout>
         </LessonScreen>
 
+        {/* ── Practice ── */}
+        <LessonScreen title="">
+          <DefenseDrill />
+        </LessonScreen>
+
+        <LessonScreen title="">
+          <TileCountingDrill />
+        </LessonScreen>
+
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
@@ -519,9 +528,6 @@ export default function Module7Defense() {
         </LessonScreen>
       </ScreenStepper>
 
-      <SectionHeader>Practice</SectionHeader>
-      <DefenseDrill />
-      <TileCountingDrill />
 
       <ModuleNav
         currentModuleNum={10}
