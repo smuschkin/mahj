@@ -323,12 +323,12 @@ export default function Module5JokersCalling() {
         {/* ── 8. Three rules beginners forget ── */}
         <LessonScreen title="🚨 Rules to Remember">
           <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
-            <li><strong>Bad call can = dead hand</strong> — but check if your exposure fits another hand first</li>
-            <li><strong>Discarded Jokers are dead</strong> — no one can call them</li>
-            <li><strong>Expose immediately</strong> — face-up on your rack</li>
-            <li><strong>Can&apos;t call a Joker</strong> for Mahjong</li>
-            <li><strong>NEWS, year, 1122 tiles</strong> — Mahjong only, not regular calls</li>
-            <li><strong>You can fix an exposure</strong> until you discard</li>
+            <li><strong>Bad call can = dead hand</strong> — but check if your exposure fits another hand on the card first</li>
+            <li><strong>Discarded Jokers are dead</strong> — no one can call or pick them up</li>
+            <li><strong>Expose immediately</strong> — the called group goes face-up on your rack right away</li>
+            <li><strong>Can&apos;t call a Joker</strong> — Jokers in the discard pile are always dead</li>
+            <li><strong>NEWS, year, 1122 tiles</strong> — these can only be called to complete Mahjong, not for regular exposures</li>
+            <li><strong>You can change an exposure</strong> — swap tiles in or out until you discard, then it&apos;s locked</li>
           </ul>
         </LessonScreen>
 
