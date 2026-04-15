@@ -159,7 +159,7 @@ export default function Module10Mistakes() {
             num={8}
             title="Misnaming a discard"
             what="You said the wrong tile name."
-            cost="See Lesson 12 (Etiquette) — Article 67 penalties apply."
+            cost="The tile can&apos;t be claimed until correctly named. If someone calls Mahjong on your misnamed tile, you pay for all three losers."
             recover="Look at the tile, say its name, then let go."
           />
 
