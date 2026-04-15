@@ -106,7 +106,7 @@ export default function Module3SetupDealing() {
             Build the bottom row first, then stack the top row directly on top. Tiles
             should be touching, but not crooked.
           </Callout>
-          <Callout variant="info">
+          <Callout variant="note">
             <strong>Coming from Riichi or Asian mahjong?</strong>{" "}American Mahjong
             has <strong>no dead wall</strong> — every tile in the wall is playable.
             You deal and draw until the wall is empty or someone wins.
@@ -116,10 +116,11 @@ export default function Module3SetupDealing() {
         {/* ── 4. Pick Dealer (East) — optional ── */}
         <LessonScreen title="🎲 Step 3: Pick the Dealer (Optional)">
           <p>
-            <strong>The Dealer (East) deals first</strong>{" "}and is the most important
-            seat. The <strong>NMJL standard</strong>{" "}is to{" "}
-            <strong>roll dice to pick East</strong> — each player throws, and
-            the highest roll becomes the Dealer (re-roll any ties).
+            The <strong>East seat is always the first Dealer</strong>{" "}when
+            beginning to play. To decide who sits East, the{" "}
+            <strong>NMJL standard</strong>{" "}is to{" "}
+            <strong>roll dice</strong> — each player throws, and
+            the highest roll takes the East seat and deals first (re-roll any ties).
           </p>
           <p>
             Some casual groups use a house shortcut: &quot;the host of the
@@ -162,10 +163,9 @@ export default function Module3SetupDealing() {
           <Callout variant="tip">
             The Dealer (East) has the best odds of winning the first hand, so it&apos;s
             worth picking fairly when there&apos;s no natural host. After each{" "}
-            <strong>hand</strong>, the Dealer position passes to the next player
-            counter-clockwise — <em>unless</em>{" "}the Dealer wins or the hand ends
-            in a wall game (no one wins), in which case the Dealer stays for the
-            next hand.
+            <strong>hand</strong>, the Dealer position rotates{" "}
+            <strong>clockwise</strong>{" "}to the next player — every hand,
+            regardless of who wins.
           </Callout>
         </LessonScreen>
 
@@ -201,37 +201,39 @@ export default function Module3SetupDealing() {
           </h4>
           <ol className="ml-6 list-decimal space-y-2 text-[15px]">
             <li>
-              <strong>The Dealer rolls 2 dice</strong>{" "}and adds them up
+              The Dealer <strong>rolls 2 dice</strong> and adds them up
               (example: 4 + 3 = 7).
             </li>
             <li>
-              <strong>Count that many stacks from the right end</strong>{" "}of the
+              <strong>Count</strong> that many stacks from the right end of the
               Dealer&apos;s wall.
             </li>
             <li>
-              <strong>Push those counted stacks forward</strong>{" "}toward the
-              center of the table, out of the way.
+              <strong>Push out</strong> the remaining stacks to the right of
+              where you stopped counting — move your rack over to push them
+              toward the center of the table (e.g. if you rolled 7, push out
+              starting at stack 8).
             </li>
             <li>
-              <strong>Start dealing from the left side of the gap</strong>{" "}you
-              just made. The pushed-out tiles stay in the wall and get dealt
-              last.
+              <strong>Deal</strong> starting from where you stopped counting
+              (stack 7), going left. The pushed-out tiles get dealt last.
             </li>
           </ol>
 
           <DicePair values={[4, 3]} />
           <p className="mt-2 text-center text-[13px] italic text-zinc-600">
-            Example: rolled a 7. Count 7 stacks from the right, push them
-            forward, deal from the left of the gap.
+            Example: rolled a 7. Count 7 stacks from the right, push out
+            everything after stack 7, deal starting from stack 7 going left.
           </p>
 
           <h4 className="mt-5 font-serif text-base font-black text-[var(--color-mid)]">
             Pushing your wall out
           </h4>
           <p>
-            When it&apos;s time to deal from your wall (whether from a dice break
-            or because the previous wall ran out), push it toward the center so
-            the Dealer can reach it.
+            When it&apos;s time to deal from your wall, push it out{" "}
+            <strong>diagonally</strong> — the left end stays closer to your
+            rack, and the right end angles toward the center of the table.
+            This makes it easy for the Dealer to reach the tiles they need.
           </p>
 
           <WallPushAnimation />
@@ -261,23 +263,13 @@ export default function Module3SetupDealing() {
             </li>
           </ul>
 
-          <DealingAnimation />
-
-          <Callout variant="warn">
-            <strong>You&apos;ll run out of tiles mid-deal — that&apos;s normal.</strong> Each player&apos;s wall only holds <strong>38 tiles</strong>{" "}(19 stacks × 2
-            high), but the deal hands out <strong>53 tiles</strong>{" "}total. When you
-            exhaust the wall you&apos;re dealing from, the{" "}
-            <strong>next player to the left</strong>{" "}physically{" "}
-            <strong>pushes their own wall forward</strong>{" "}toward the center of the
-            table — this is called <strong>&quot;curtsying&quot; the wall</strong> —
-            and dealing continues from there.
-          </Callout>
-
           <Callout variant="tip">
-            <strong>When a wall runs out:</strong>{" "}the next player to the left
-            pushes their wall toward the center of the table. Keep dealing from
-            there. This keeps happening around the table until the deal is done.
+            <strong>You&apos;ll run out of tiles mid-deal — that&apos;s normal.</strong>{" "}
+            When a wall runs out, the next player to the left pushes their wall
+            toward the center. Keep dealing from there until the deal is done.
           </Callout>
+
+          <DealingAnimation />
 
           <h4 className="mt-5 font-serif text-base font-black text-[var(--color-mid)]">
             🪄 The &quot;1st and 3rd&quot; rule
@@ -443,11 +435,6 @@ export default function Module3SetupDealing() {
             </p>
           </div>
 
-          <Callout variant="tip">
-            At the end: 3 players have <strong>13 tiles</strong>, the Dealer (East) has{" "}
-            <strong>14</strong>. Everyone places their tiles on their rack, hidden from
-            other players.
-          </Callout>
         </LessonScreen>
 
         {/* ── 8. You're set up ── */}

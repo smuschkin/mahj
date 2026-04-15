@@ -109,7 +109,12 @@ export default function Module2ReadingTheCard() {
           </p>
           <Callout variant="info">
             <strong>The card changes every April</strong>
-            {" (typically the second Tuesday). Last year's hands are no longer legal — you'll buy a fresh card each spring from the NMJL for about $15. Think of it like a new season in a video game."}
+            {" (typically the second Tuesday). You'll buy a fresh card each spring from the NMJL for about $15. Think of it like a new season in a video game."}
+          </Callout>
+          <Callout variant="tip">
+            You don&apos;t have to play the current year&apos;s card — but{" "}
+            <strong>everyone at the table must be playing the same card</strong>.
+            Most groups use the latest one.
           </Callout>
         </LessonScreen>
 
@@ -120,7 +125,7 @@ export default function Module2ReadingTheCard() {
             left side. Each category groups hands that share a theme:
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li><strong>2025</strong> — built around the digits of the current year</li>
+            <li><strong>2026</strong> — built around the digits of the current year</li>
             <li><strong>2468</strong> — even-numbered tiles only</li>
             <li><strong>Any Like Numbers</strong> — same number across suits</li>
             <li><strong>Quints</strong> — groups of 5 identical tiles</li>
@@ -326,56 +331,85 @@ export default function Module2ReadingTheCard() {
             important part.
           </p>
 
-          <div className="my-3 space-y-2">
+          <h4 className="mt-3 mb-2 font-serif text-sm font-black text-[var(--color-mid)]">
+            How many suits?
+          </h4>
+          <div className="space-y-1.5">
             <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                <strong>&quot;Any 2 or 3 Suits&quot;</strong> — use tiles
-                from 2 or 3 different suits (you pick which)
+                <strong>&quot;Any 1 Suit&quot;</strong> — all tiles from one suit (you pick which)
               </p>
             </div>
             <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                <strong>&quot;Any 1 Suit&quot;</strong> — the entire hand
-                must be built from a single suit
+                <strong>&quot;Any 2 Suits&quot;</strong> or{" "}
+                <strong>&quot;Any 2 or 3 Suits&quot;</strong> — spread across multiple suits
               </p>
             </div>
             <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                <strong>&quot;These Nos. Only&quot;</strong> — use the exact
-                numbers shown on the card, no substituting
+                <strong>&quot;Any 3 Suits&quot;</strong> — must use all three suits (Bams, Craks, Dots)
+              </p>
+            </div>
+          </div>
+
+          <h4 className="mt-3 mb-2 font-serif text-sm font-black text-[var(--color-mid)]">
+            Which numbers?
+          </h4>
+          <div className="space-y-1.5">
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
+              <p className="text-[13px] text-zinc-700">
+                <strong>&quot;These Nos. Only&quot;</strong> — use the exact numbers shown, no substituting
               </p>
             </div>
             <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                <strong>&quot;Any 3 Consec. Nos.&quot;</strong> — pick any
-                3 numbers in a row (like 3-4-5 or 6-7-8)
+                <strong>&quot;Any 3 Consec. Nos.&quot;</strong> or{" "}
+                <strong>&quot;Any 4 Consec. Nos.&quot;</strong> — pick consecutive numbers (like 3-4-5)
               </p>
             </div>
             <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                <strong>&quot;Like Pungs Any Even No.&quot;</strong> — groups
-                of 3 matching tiles, using any even numbers (2, 4, 6, or 8)
+                <strong>&quot;Any Like Odd Nos.&quot;</strong> or{" "}
+                <strong>&quot;Any Like Even Nos.&quot;</strong> — pick from odd (1,3,5,7,9) or even (2,4,6,8)
+              </p>
+            </div>
+          </div>
+
+          <h4 className="mt-3 mb-2 font-serif text-sm font-black text-[var(--color-mid)]">
+            Dragons &amp; special rules
+          </h4>
+          <div className="space-y-1.5">
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
+              <p className="text-[13px] text-zinc-700">
+                <strong>&quot;Any Dragon&quot;</strong> — use any dragon (Red, Green, or Soap)
               </p>
             </div>
             <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                <strong>&quot;Any Dragon&quot;</strong> or{" "}
-                <strong>&quot;Matching Dragons&quot;</strong> — use any dragon
-                tile(s), or dragons that match the suit(s) in your hand
+                <strong>&quot;Matching Dragons&quot;</strong> or{" "}
+                <strong>&quot;w Matching Dragon&quot;</strong> — dragon must match
+                the suit (Red→Craks, Green→Bams, Soap→Dots)
               </p>
             </div>
             <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <p className="text-[13px] text-zinc-700">
-                <strong>&quot;Pairs Must Be Same Suit&quot;</strong> — both
-                tiles in the pair must come from the same suit
+                <strong>&quot;Opp. Dragon&quot;</strong> — use the dragon from
+                the <em>opposite</em>{" "}suit
+              </p>
+            </div>
+            <div className="rounded-lg border border-zinc-200 bg-white p-3">
+              <p className="text-[13px] text-zinc-700">
+                <strong>&quot;Kongs Match Pair&quot;</strong> — the groups of 4
+                must be the same suit as the pair
               </p>
             </div>
           </div>
 
           <Callout variant="tip">
             Always read the parenthetical <strong>before</strong>{" "}you
-            start building the hand. It tells you how many suits to use,
-            whether numbers are flexible, and any special constraints.
+            start building the hand. It answers three questions: how many
+            suits, which numbers, and any special rules.
           </Callout>
         </LessonScreen>
 
@@ -427,9 +461,9 @@ export default function Module2ReadingTheCard() {
                 <div>
                   <p className="mb-1 font-bold text-zinc-600">Year hand:</p>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">2025</span>
+                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">2026</span>
                     <span className="text-zinc-400">→</span>
-                    <span className="font-bold text-[var(--color-red)]">2 · 0 · 2 · 5</span>
+                    <span className="font-bold text-[var(--color-red)]">2 · 0 · 2 · 6</span>
                     <span className="text-zinc-500">(exactly)</span>
                   </div>
                   <p className="mt-1 text-zinc-500">
@@ -696,6 +730,92 @@ export default function Module2ReadingTheCard() {
           </div>
         </LessonScreen>
 
+        {/* ── C, X, and Hand Values ── */}
+        <LessonScreen title="💰 C, X, and Hand Values">
+          <p>
+            Every hand on the card ends with a letter and a number —
+            like <strong>X 25</strong> or <strong>C 30</strong>. Here&apos;s
+            what they mean.
+          </p>
+
+          <div className="my-3 grid gap-3 sm:grid-cols-2">
+            <div className="rounded-lg border-l-4 border-[var(--color-green)] bg-white p-4">
+              <h4 className="mb-1 font-serif text-lg font-black text-[var(--color-mid)]">
+                X = Exposed
+              </h4>
+              <p className="text-[13px] text-zinc-700">
+                You <strong>can call tiles</strong>{" "}from other players&apos;
+                discards. Easier to complete because you have more ways to
+                get the tiles you need.
+              </p>
+            </div>
+            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-white p-4">
+              <h4 className="mb-1 font-serif text-lg font-black text-[var(--color-mid)]">
+                C = Concealed
+              </h4>
+              <p className="text-[13px] text-zinc-700">
+                You <strong>cannot call any tiles</strong>. Every tile must
+                come from the wall or the Charleston. Harder — but worth more.
+              </p>
+            </div>
+          </div>
+
+          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
+            The number = the hand&apos;s value
+          </h4>
+          <p className="text-[14px] text-zinc-700">
+            The number after C or X is how much the hand is worth in cents.
+            Higher value = harder hand = bigger payout.
+          </p>
+
+          <div className="my-3 overflow-hidden rounded-lg border border-zinc-200">
+            <table className="w-full text-sm">
+              <thead className="bg-[var(--color-mid)] text-white">
+                <tr>
+                  <th className="px-3 py-2 text-left text-[13px] uppercase tracking-wider">Hand</th>
+                  <th className="px-3 py-2 text-left text-[13px] uppercase tracking-wider">Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-zinc-100">
+                  <td className="px-3 py-2 font-bold">X 25</td>
+                  <td className="px-3 py-2 text-[13px] text-zinc-700">Exposed, 25¢ — most common, easiest</td>
+                </tr>
+                <tr className="border-b border-zinc-100">
+                  <td className="px-3 py-2 font-bold">X 30</td>
+                  <td className="px-3 py-2 text-[13px] text-zinc-700">Exposed, 30¢</td>
+                </tr>
+                <tr className="border-b border-zinc-100">
+                  <td className="px-3 py-2 font-bold">X 40</td>
+                  <td className="px-3 py-2 text-[13px] text-zinc-700">Exposed, 40¢ — Quints</td>
+                </tr>
+                <tr className="border-b border-zinc-100">
+                  <td className="px-3 py-2 font-bold">X 45</td>
+                  <td className="px-3 py-2 text-[13px] text-zinc-700">Exposed, 45¢ — Quints</td>
+                </tr>
+                <tr className="border-b border-zinc-100">
+                  <td className="px-3 py-2 font-bold">C 30</td>
+                  <td className="px-3 py-2 text-[13px] text-zinc-700">Concealed, 30¢ — no calling allowed</td>
+                </tr>
+                <tr className="border-b border-zinc-100">
+                  <td className="px-3 py-2 font-bold">C 50</td>
+                  <td className="px-3 py-2 text-[13px] text-zinc-700">Concealed, 50¢ — Singles and Pairs</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-bold">C 75</td>
+                  <td className="px-3 py-2 text-[13px] text-zinc-700">Concealed, 75¢ — hardest, biggest payout</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <Callout variant="tip">
+            As a beginner, start with <strong>X 25</strong>{" "}hands — they&apos;re
+            the easiest to complete since you can call tiles. You&apos;ll
+            learn more about payouts in Module 11 (Scoring).
+          </Callout>
+        </LessonScreen>
+
         {/* ── Quiz ── */}
         <LessonScreen title="🎯 Confidence Check">
           <p className="text-sm text-zinc-600">
@@ -734,16 +854,16 @@ export default function Module2ReadingTheCard() {
               },
               {
                 question:
-                  "In a \"consecutive run\" category, the card shows 11 222 3333. What numbers could you actually use?",
+                  "A consecutive run hand shows FF 11 222 333 4444 (Any 1 Suit, Any 3 Consec. Nos.). What numbers could you use?",
                 options: [
-                  "Only 1, 2, and 3",
-                  "Any three consecutive numbers (like 5, 6, 7)",
-                  "Any three numbers",
+                  "Only 1, 2, 3, and 4",
+                  "Any four consecutive numbers (like 4, 5, 6, 7)",
+                  "Any four numbers",
                   "Only even numbers",
                 ],
                 correct: 1,
                 explanation:
-                  "In a consecutive run, the numbers on the card represent a pattern. 1-2-3 means \"three in a row\" — so 5-6-7, 3-4-5, or any other consecutive set works.",
+                  "The parenthetical says \"Any 3 Consec. Nos.\" — meaning the numbers are a pattern. 1-2-3-4 could be 4-5-6-7, 5-6-7-8, or any other consecutive set. One suit only.",
               },
               {
                 question:

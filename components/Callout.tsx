@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
 
-type Variant = "tip" | "warn" | "info";
+type Variant = "tip" | "warn" | "info" | "note";
 
 const styles: Record<Variant, { bg: string; border: string; icon: string }> = {
   tip: { bg: "bg-[#E8F5E9]", border: "border-[var(--color-green)]", icon: "💡" },
   warn: { bg: "bg-[#FDECEA]", border: "border-[var(--color-red)]", icon: "⚠️" },
   info: { bg: "bg-[#E8F5EC]", border: "border-[var(--color-accent)]", icon: "ℹ️" },
+  note: { bg: "bg-[#EEF2FF]", border: "border-[#6366F1]", icon: "📝" },
 };
 
 export function Callout({

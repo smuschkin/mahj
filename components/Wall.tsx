@@ -16,15 +16,15 @@
 export function Wall() {
   return (
     <div
-      className="my-5 rounded-xl p-6"
+      className="my-5 overflow-x-auto rounded-xl p-3 sm:p-6"
       style={{ background: "linear-gradient(135deg, #1A4D2E, #0F3320)" }}
     >
-      <div className="mx-auto" style={{ width: "fit-content" }}>
+      <div className="mx-auto" style={{ width: "fit-content", maxWidth: "100%" }}>
         <div
           className="grid"
           style={{
-            gridTemplateColumns: "16px 10px 266px 10px 16px",
-            gridTemplateRows: "16px 10px 266px 10px 16px",
+            gridTemplateColumns: "14px 8px 200px 8px 14px",
+            gridTemplateRows: "14px 8px 200px 8px 14px",
           }}
         >
           {/* Row 1: empty | empty | S rack | empty | empty */}
