@@ -63,20 +63,14 @@ export default function Module8Etiquette() {
         {/* ── 1. Why etiquette ── */}
         <LessonScreen title="🤝 Why Etiquette Matters">
           <p>
-            American Mahjong is a deeply <strong>social</strong>{" "}game. People play in
-            the same groups for years — sometimes decades. Etiquette isn&apos;t
-            optional polish; it&apos;s the reason people enjoy the game enough to come
-            back.
+            Etiquette isn&apos;t about being formal — it&apos;s about not
+            slowing down the game and not making others uncomfortable.
           </p>
           <p>
-            A few of the things in this module are <strong>official NMJL rules</strong> with real penalties. Most are <strong>customs</strong>{" "}that vary slightly
-            from group to group. We&apos;ll mark which is which.
+            Some of these are <strong>official NMJL rules</strong>{" "}with
+            real penalties. Others are <strong>customs</strong>{" "}that vary
+            by group.
           </p>
-          <Callout variant="tip">
-            <strong>Reframe:</strong>{" "}Etiquette in mahjong isn&apos;t about being
-            formal. It&apos;s about not slowing down the game and not making other
-            players uncomfortable. Both come naturally once you know the basics.
-          </Callout>
         </LessonScreen>
 
         {/* ── 2. Naming your discard ── */}
