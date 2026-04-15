@@ -100,54 +100,19 @@ export default function Module6HandStrategy() {
           },
         ]}
       /></>}>
-        {/* ── 1. Flexibility curve ── */}
-        <LessonScreen title="📈 The Flexibility Curve">
+        {/* ── 1. From scanning to playing ── */}
+        <LessonScreen title="📈 From Scanning to Playing">
           <p>
-            Strategy in American Mahjong follows a curve: <strong>wide early</strong>,{" "}
-            <strong>narrow late</strong>. If you stay too wide too long, you never
-            finish anything. If you commit too early, the wall punishes you.
+            In Lesson 8 you learned to scan your tiles and pick 2–3
+            candidate hands. Now the game begins — and every turn is a
+            decision: <strong>what to keep, what to discard, and where
+            to use your jokers.</strong>
           </p>
-
-          <div className="my-4 grid gap-2 sm:grid-cols-3">
-            <div className="rounded-lg border-2 border-[var(--color-green)] bg-[#F4FBF6] p-3 text-center">
-              <div className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-green)]">
-                After the deal
-              </div>
-              <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
-                3 hands
-              </div>
-              <div className="text-[12px] text-zinc-600">
-                Stay open. Pass tiles that fit none of them.
-              </div>
-            </div>
-            <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-3 text-center">
-              <div className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
-                After Charleston
-              </div>
-              <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
-                2 hands
-              </div>
-              <div className="text-[12px] text-zinc-600">
-                Drop the weakest candidate. Keep one backup.
-              </div>
-            </div>
-            <div className="rounded-lg border-2 border-[var(--color-red)] bg-[#FFF6F4] p-3 text-center">
-              <div className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-red)]">
-                After 5–6 draws
-              </div>
-              <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
-                1 hand
-              </div>
-              <div className="text-[12px] text-zinc-600">
-                Commit. Discard tiles from your other candidate.
-              </div>
-            </div>
-          </div>
-
           <Callout variant="tip">
-            Indecision is the #1 killer of beginner hands. By the middle of the game,
-            you must <em>pick a lane</em>. The other players are committing too — if
-            you&apos;re still browsing the card on Turn 12, you&apos;ve already lost.
+            By the middle of the game, you need to{" "}
+            <strong>commit to one hand</strong>. The other players are
+            committing too — if you&apos;re still undecided on Turn 12,
+            you&apos;ve already lost.
           </Callout>
         </LessonScreen>
 
