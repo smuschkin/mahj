@@ -79,12 +79,12 @@ function StepDots({
           key={i}
           type="button"
           onClick={() => onJump(i)}
-          className={`h-2 rounded-full transition-all ${
+          className={`h-2.5 rounded-full transition-all outline-none focus:ring-0 ${
             i === current
-              ? "w-6 bg-[#C8A951]"
+              ? "w-8 bg-[#C8A951]"
               : i < current
-                ? "w-2 bg-[#2D8B5E]"
-                : "w-2 bg-white/20"
+                ? "w-2.5 bg-[#1A4D2E]"
+                : "w-2.5 bg-[#D6CFB8]"
           }`}
           aria-label={`Go to step ${i + 1}`}
         />
