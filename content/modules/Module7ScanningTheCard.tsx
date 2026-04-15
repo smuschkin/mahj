@@ -154,36 +154,20 @@ export default function Module7ScanningTheCard() {
         </LessonScreen>
 
         {/* ── 7. Step 5 — Pick 2–3 candidates ── */}
-        <LessonScreen title="🎲 Step 5: Pick 2–3 Candidate Hands">
+        <LessonScreen title="🎲 Step 5: Pick 2–3 Candidates">
           <p>
-            After sorting, spotting clusters, and checking pairs and triples,
-            you should be able to identify <strong>2 or 3 hands on the card</strong>{" "}
-            that your tiles are closest to. These are your <em>candidates</em>.
+            Find <strong>2 or 3 hands</strong>{" "}on the card that your tiles
+            are closest to. For each one, ask:
           </p>
-          <p>
-            For each candidate, mentally note:
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>How many tiles do I already have</strong>{" "}for this hand?</li>
+            <li><strong>How many do I still need?</strong>{" "}Fewer = better.</li>
+            <li><strong>Do my candidates share tiles?</strong>{" "}Overlapping tiles let you stay flexible longer.</li>
+          </ul>
+          <p className="mt-3 text-[14px] text-zinc-700">
+            Tiles that fit <strong>none</strong>{" "}of your candidates are your
+            first discards.
           </p>
-          <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>How many tiles do I already have?</strong>{" "}The more
-              tiles you already hold, the stronger the candidate.
-            </li>
-            <li>
-              <strong>How many tiles do I still need?</strong>{" "}Fewer is
-              better. A hand where you need 4 tiles is much more realistic
-              than one where you need 9.
-            </li>
-            <li>
-              <strong>Which tiles overlap?</strong>{" "}If two candidate hands
-              both use your pair of 6 Bams, you can keep that pair no matter
-              which hand you commit to. Overlapping tiles are your friends.
-            </li>
-          </ol>
-          <Callout variant="tip">
-            <strong>Tiles that fit none of your candidates</strong>{" "}are your
-            first discards. Mentally tag them now — you&apos;ll throw them
-            during the Charleston or your first few turns.
-          </Callout>
         </LessonScreen>
 
         {/* ── 8. Don't commit too early ── */}
