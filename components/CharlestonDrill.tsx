@@ -180,7 +180,7 @@ export function CharlestonDrill() {
             🔄 Charleston Pass Picker
           </h3>
           <p className="mb-5 text-sm text-zinc-300">
-            {ROUND_COUNT} hands with a target hand. Pick the 3 tiles
+            {ROUND_COUNT}{" "}hands with a target hand. Pick the 3 tiles
             you&apos;d pass in the Charleston.
           </p>
           <button

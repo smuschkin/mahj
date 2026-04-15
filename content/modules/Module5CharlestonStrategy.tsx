@@ -300,11 +300,7 @@ export default function Module5CharlestonStrategy() {
         </LessonScreen>
 
         {/* ── 7. Practice drill ── */}
-        <LessonScreen title="🔄 Practice: Pick Your Passes">
-          <p>
-            Time to practice. We&apos;ll show you 4 hands with a target — pick
-            the 3 tiles you&apos;d pass in the Charleston.
-          </p>
+        <LessonScreen title="">
           <CharlestonDrill />
         </LessonScreen>
 
