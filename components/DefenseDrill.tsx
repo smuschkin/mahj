@@ -243,7 +243,7 @@ const SCENARIOS: Scenario[] = [
   {
     id: "d8",
     tag: "Advanced",
-    prompt: "Player C has 0 exposures but hasn't discarded any Dots all game. They just drew and smiled. What should you avoid discarding?",
+    prompt: "Player C has no exposures but hasn't discarded any Dots all game. They just drew and smiled. What should you avoid discarding?",
     exposures: [],
     discardInfo:
       "Player C's discards: EW, SW, NW, GD, RD, 1B, 5B, 7C. Zero Dots.",
@@ -251,12 +251,12 @@ const SCENARIOS: Scenario[] = [
       "Bams — they discarded some",
       "Dots — they've discarded zero, likely hoarding them (possibly concealed hand)",
       "Winds — they already dumped theirs",
-      "It doesn't matter — 0 exposures means no info",
+      "It doesn't matter — no exposures means no info",
     ],
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Avoid Dots.</strong> 0 exposures doesn&apos;t mean no info —
+        <strong>Avoid Dots.</strong> No exposures doesn&apos;t mean no info —
         their <em>discards</em>{" "}are a tell. They&apos;ve dumped every suit
         except Dots, plus all their honors. They&apos;re almost certainly on
         a concealed Dots hand. The smile confirms it. Track what&apos;s{" "}
