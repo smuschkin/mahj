@@ -310,31 +310,6 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── 10. Closing principles ── */}
-        <LessonScreen title="🧭 Five Principles to Take with You">
-          <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>Target a hand, don&apos;t collect tiles.</strong>{" "}Every tile is
-              either getting you closer to a specific hand on the card, or it&apos;s
-              not.
-            </li>
-            <li>
-              <strong>Wide early, narrow late.</strong> 3 → 2 → 1 candidates.
-            </li>
-            <li>
-              <strong>Read the wall.</strong>{" "}Track which tiles are gone. Safe
-              discards come from awareness.
-            </li>
-            <li>
-              <strong>Jokers are for hard-to-find tiles.</strong>{" "}Not for tiles
-              you&apos;ll naturally draw.
-            </li>
-            <li>
-              <strong>When in doubt, don&apos;t call.</strong>{" "}Concealed flexibility
-              beats exposed commitment.
-            </li>
-          </ol>
-        </LessonScreen>
-
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
