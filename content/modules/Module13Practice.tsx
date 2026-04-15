@@ -77,7 +77,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         The <strong>9 Dot</strong>{" "}is the only tile that fits neither of your forming
-        suits. Lesson 9: discard tiles that fit none of your candidate hands first.
+        suits. Lesson 10: discard tiles that fit none of your candidate hands first.
         It&apos;s isolated and useless to you.
       </>
     ),
@@ -151,7 +151,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         <strong>Red Dragon</strong>{" "}is completely safe. Three are already in the
-        discard pile, so no one can ever Pung or Kong the 4th — Lesson 10&apos;s
+        discard pile, so no one can ever Pung or Kong the 4th — Lesson 11&apos;s
         3-of-a-tile safe rule. The Bams are dangerous (player across is on Bams).
         East Wind is dangerous too (right player is on winds-and-dragons).
       </>
@@ -340,7 +340,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        Lesson 13&apos;s 4-step recovery: <strong>stop, speak up immediately, describe
+        Lesson 14&apos;s 4-step recovery: <strong>stop, speak up immediately, describe
         factually</strong>. If you correct it before any player acts on the wrong
         name, you usually escape clean. Hiding it risks the misnamed-discard
         penalty (NMJL Article 67) — the most expensive mistake in the game if Mahjong
@@ -416,7 +416,7 @@ const PUZZLES: Puzzle[] = [
         <strong>North Wind</strong>{" "}is safest. Player A is on a like-numbers 5s
         hand — 5 Bam is extremely dangerous. Player B has dragons exposed — Red
         Dragon could help them. 8 Bam has 2 discarded but 2 still live. North
-        Wind hasn&apos;t appeared in any exposure or pattern. Lesson 10: read
+        Wind hasn&apos;t appeared in any exposure or pattern. Lesson 11: read
         what&apos;s <em>not</em>{" "}being collected.
       </>
     ),
@@ -463,7 +463,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Self-draw = all three opponents pay <strong>double</strong>{" "}the hand value.
         25¢ × 2 = 50¢ each. Jokerless bonus does NOT apply because you have jokers.
-        Lesson 12.
+        Lesson 13.
       </>
     ),
   },
@@ -499,7 +499,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         The <strong>6 Dot</strong>{" "}is 100% safe. Three copies are already in the
-        discard pile, so no one can ever Pung or Kong it. Lesson 10: once 3 of a
+        discard pile, so no one can ever Pung or Kong it. Lesson 11: once 3 of a
         tile are visible, the 4th is always safe.
       </>
     ),
@@ -582,7 +582,7 @@ const PUZZLES: Puzzle[] = [
         3 exposures = full defense mode. Stop trying to win and start
         discarding only guaranteed-safe tiles. Break your own forming groups
         if needed — your pairs are now a source of safe discards, not future
-        Pungs. <strong>Never</strong>{" "}discard a Joker. Lesson 10.
+        Pungs. <strong>Never</strong>{" "}discard a Joker. Lesson 11.
       </>
     ),
   },
@@ -643,7 +643,7 @@ const PUZZLES: Puzzle[] = [
       <>
         The pause before racking is critical etiquette. Once your tile is
         racked, the previous discard can no longer be called. Counting to 3
-        gives everyone time to react. Lesson 11.
+        gives everyone time to react. Lesson 12.
       </>
     ),
   },
@@ -666,7 +666,7 @@ const PUZZLES: Puzzle[] = [
         The suit nobody is discarding is the <strong>hot suit</strong> —
         someone is collecting it. Discarding Dots is risky because you could
         be feeding that player exactly what they need. Craks are the cold
-        suit: everyone is dumping them, so they&apos;re safer. Lesson 10.
+        suit: everyone is dumping them, so they&apos;re safer. Lesson 11.
       </>
     ),
   },
@@ -683,7 +683,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Discard win = discarder pays 2×. Jokerless = doubles again.
         25¢ × 2 (discard) × 2 (jokerless) = <strong>$1.00</strong>.
-        The other two players pay 50¢ each (1× × 2 for jokerless). Lesson 12.
+        The other two players pay 50¢ each (1× × 2 for jokerless). Lesson 13.
       </>
     ),
   },
@@ -761,7 +761,7 @@ const PUZZLES: Puzzle[] = [
         1 exposure = they&apos;ve committed to a direction. You can start reading
         their hand family (same-suit? like-numbers? dragons?). Avoid tiles that
         obviously match, but don&apos;t go full defense yet — that&apos;s for 3+
-        exposures. Lesson 10.
+        exposures. Lesson 11.
       </>
     ),
   },
@@ -848,7 +848,7 @@ const PUZZLES: Puzzle[] = [
         Dead hands keep playing. You draw, you discard, you name your tiles.
         You just can&apos;t win. Many experienced players use dead hands for
         <strong> pure defense</strong> — discarding only safe tiles since
-        there&apos;s nothing left to build. Lesson 12 + 12.
+        there&apos;s nothing left to build. Lesson 13 + 14.
       </>
     ),
   },
@@ -889,7 +889,7 @@ const PUZZLES: Puzzle[] = [
         the discard pile (only 2 remain), and the threat player is on Bams —
         they have zero interest in Craks. Any Bam is extremely dangerous.
         The 8 Dot has only 1 copy discarded (3 still live). The honors are
-        unknown. Lesson 10: combine &quot;already discarded&quot; with
+        unknown. Lesson 11: combine &quot;already discarded&quot; with
         &quot;wrong suit for the threat.&quot;
       </>
     ),
@@ -925,7 +925,7 @@ const PUZZLES: Puzzle[] = [
 type Phase = "intro" | "playing" | "complete";
 
 export default function Module13Practice() {
-  const adj = getAdjacentModules(15);
+  const adj = getAdjacentModules(16);
   const total = PUZZLES.length;
   const passThreshold = Math.ceil(total * 0.7); // 70% to "pass"
 
@@ -959,7 +959,7 @@ export default function Module13Practice() {
   return (
     <PageWrap>
       <Cover
-        eyebrow="MAHJ — Lesson 16"
+        eyebrow="MAHJ — Lesson 17"
         title="Practice Hands"
         highlight="Library"
         subtitle="Now you make the calls. Real puzzles, instant feedback."
@@ -1044,7 +1044,7 @@ export default function Module13Practice() {
       </Callout>
 
       <ModuleNav
-        currentModuleNum={15}
+        currentModuleNum={16}
         prev={
           adj.prev && {
             href: adj.prev.href,

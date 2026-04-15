@@ -38,7 +38,7 @@ export default function Module7ScanningTheCard() {
                 },
                 { label: "Estimated time", value: "5\u20137 minutes" },
                 { label: "Prerequisite", value: "Lesson 7 (Jokers & Calling)" },
-                { label: "Unlocks", value: "Lesson 9 (Hand Strategy)" },
+                { label: "Unlocks", value: "Lesson 9 (Starting the Game)" },
               ]}
             />
           </>
@@ -274,9 +274,8 @@ export default function Module7ScanningTheCard() {
           </p>
           <p>
             <strong>What&apos;s next:</strong>{" "}Lesson 9 covers{" "}
-            <strong>Hand Strategy</strong> — how to narrow your candidates as
-            the game progresses, when to commit, and how to make smart discard
-            decisions every turn.
+            <strong>Starting the Game</strong> — what happens after the
+            Charleston ends and actual play begins.
           </p>
         </LessonScreen>
       </ScreenStepper>

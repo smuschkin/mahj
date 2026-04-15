@@ -13,14 +13,15 @@ import Module4Charleston from "@/content/modules/Module4Charleston";
 import Module5CharlestonStrategy from "@/content/modules/Module5CharlestonStrategy";
 import Module6JokersCalling from "@/content/modules/Module5JokersCalling";
 import Module7ScanningTheCard from "@/content/modules/Module7ScanningTheCard";
-import Module8HandStrategy from "@/content/modules/Module6HandStrategy";
-import Module9Defense from "@/content/modules/Module7Defense";
-import Module10Etiquette from "@/content/modules/Module8Etiquette";
-import Module11Scoring from "@/content/modules/Module9Scoring";
-import Module12Mistakes from "@/content/modules/Module10Mistakes";
-import Module13Glossary from "@/content/modules/Module11Glossary";
-import Module14FirstGame from "@/content/modules/Module12FirstGame";
-import Module15Practice from "@/content/modules/Module13Practice";
+import Module8StartingTheGame from "@/content/modules/Module8StartingTheGame";
+import Module9HandStrategy from "@/content/modules/Module6HandStrategy";
+import Module10Defense from "@/content/modules/Module7Defense";
+import Module11Etiquette from "@/content/modules/Module8Etiquette";
+import Module12Scoring from "@/content/modules/Module9Scoring";
+import Module13Mistakes from "@/content/modules/Module10Mistakes";
+import Module14Glossary from "@/content/modules/Module11Glossary";
+import Module15FirstGame from "@/content/modules/Module12FirstGame";
+import Module16Practice from "@/content/modules/Module13Practice";
 
 const moduleComponents: Record<number, () => React.ReactNode> = {
   0: Module0Welcome,
@@ -31,14 +32,15 @@ const moduleComponents: Record<number, () => React.ReactNode> = {
   5: Module5CharlestonStrategy,
   6: Module6JokersCalling,
   7: Module7ScanningTheCard,
-  8: Module8HandStrategy,
-  9: Module9Defense,
-  10: Module10Etiquette,
-  11: Module11Scoring,
-  12: Module12Mistakes,
-  13: Module13Glossary,
-  14: Module14FirstGame,
-  15: Module15Practice,
+  8: Module8StartingTheGame,
+  9: Module9HandStrategy,
+  10: Module10Defense,
+  11: Module11Etiquette,
+  12: Module12Scoring,
+  13: Module13Mistakes,
+  14: Module14Glossary,
+  15: Module15FirstGame,
+  16: Module16Practice,
 };
 
 export default async function ModulePage({

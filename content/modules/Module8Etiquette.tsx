@@ -33,11 +33,11 @@ function DoDontRow({
 }
 
 export default function Module8Etiquette() {
-  const adj = getAdjacentModules(10);
+  const adj = getAdjacentModules(11);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={10} coverProps={{ eyebrow: "MAHJ — Lesson 11", title: "Etiquette &", highlight: "Table Culture", subtitle: "The unwritten (and a few written) rules that make you welcome at any mahjong table" }} header={<><Cover
-        eyebrow="MAHJ — Lesson 11"
+      <ScreenStepper moduleNum={11} coverProps={{ eyebrow: "MAHJ — Lesson 12", title: "Etiquette &", highlight: "Table Culture", subtitle: "The unwritten (and a few written) rules that make you welcome at any mahjong table" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 12"
         title="Etiquette &"
         highlight="Table Culture"
         subtitle="The unwritten (and a few written) rules that make you welcome at any mahjong table"
@@ -51,8 +51,8 @@ export default function Module8Etiquette() {
               "Learn the announcing rules, the official misnamed-tile penalty, the pause-before-racking convention, and the social customs that make mahjong fun for everyone.",
           },
           { label: "Estimated time", value: "6–8 minutes" },
-          { label: "Prerequisite", value: "Lesson 10 (Defense & Wall Awareness)" },
-          { label: "Unlocks", value: "Lesson 12 (Scoring & Payouts)" },
+          { label: "Prerequisite", value: "Lesson 11 (Defense & Wall Awareness)" },
+          { label: "Unlocks", value: "Lesson 13 (Scoring & Payouts)" },
           {
             label: "Why it matters",
             value:
@@ -310,8 +310,8 @@ export default function Module8Etiquette() {
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
-            moduleNum={10}
-            title="Lesson 11 Check"
+            moduleNum={11}
+            title="Lesson 12 Check"
             passThreshold={4}
             questions={[
               {
@@ -383,7 +383,7 @@ export default function Module8Etiquette() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Lesson 11 Complete">
+        <LessonScreen title="🎉 Lesson 12 Complete">
           <p>
             You now know the table customs that separate a guest who gets invited back
             from one who doesn&apos;t. You know the official rules with teeth (naming
@@ -391,7 +391,7 @@ export default function Module8Etiquette() {
             ones that just make the game pleasant.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 12 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 13 covers{" "}
             <strong>Scoring &amp; Payouts</strong> — how the money actually moves at
             the end of a hand: who pays whom, how doubles work, what concealed hands
             are worth, and the dead-hand penalty.
@@ -400,7 +400,7 @@ export default function Module8Etiquette() {
       </ScreenStepper>
 
       <ModuleNav
-        currentModuleNum={10}
+        currentModuleNum={11}
         prev={
           adj.prev && {
             href: adj.prev.href,

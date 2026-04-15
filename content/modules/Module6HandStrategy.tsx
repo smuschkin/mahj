@@ -73,11 +73,11 @@ function TreeStep({
 }
 
 export default function Module6HandStrategy() {
-  const adj = getAdjacentModules(8);
+  const adj = getAdjacentModules(9);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={8} coverProps={{ eyebrow: "MAHJ — Lesson 9", title: "Hand", highlight: "Strategy" }} header={<><Cover
-        eyebrow="MAHJ — Lesson 9"
+      <ScreenStepper moduleNum={9} coverProps={{ eyebrow: "MAHJ — Lesson 10", title: "Hand", highlight: "Strategy" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 10"
         title="Hand"
         highlight="Strategy"
         subtitle='Picking a hand, staying flexible, and the all-important "what would you discard?"'
@@ -91,8 +91,8 @@ export default function Module6HandStrategy() {
               "Stay flexible early, commit later, manage jokers wisely, and make sharper discard decisions every turn.",
           },
           { label: "Estimated time", value: "8–10 minutes" },
-          { label: "Prerequisite", value: "Lesson 8 (Scanning the Card)" },
-          { label: "Unlocks", value: "Lesson 10 (Defense)" },
+          { label: "Prerequisite", value: "Lesson 9 (Starting the Game)" },
+          { label: "Unlocks", value: "Lesson 11 (Defense)" },
           {
             label: "Why it matters",
             value:
@@ -338,8 +338,8 @@ export default function Module6HandStrategy() {
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
-            moduleNum={8}
-            title="Lesson 9 Check"
+            moduleNum={9}
+            title="Lesson 10 Check"
             passThreshold={4}
             questions={[
               {
@@ -404,14 +404,14 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Lesson 9 Complete">
+        <LessonScreen title="🎉 Lesson 10 Complete">
           <p>
             You now know how to think like an American Mahjong player: stay flexible
             early, commit late, manage jokers, and use a discard framework instead of
             guessing.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 10 covers <strong>Defense</strong>{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 11 covers <strong>Defense</strong>{" "}
             — how to read the discards and exposures coming from your opponents, and
             how to avoid feeding them the tile that wins them the game.
           </p>
@@ -419,7 +419,7 @@ export default function Module6HandStrategy() {
       </ScreenStepper>
 
       <ModuleNav
-        currentModuleNum={8}
+        currentModuleNum={9}
         prev={
           adj.prev && {
             href: adj.prev.href,

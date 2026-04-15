@@ -14,14 +14,15 @@ const MODULE_ICONS: Record<number, string> = {
   5: "\u{1F9E0}",
   6: "\u{1F0CF}",
   7: "\u{1F50D}",
-  8: "\u{1F3AF}",
-  9: "\u{1F6E1}\uFE0F",
-  10: "\u{1F91D}",
-  11: "\u{1F4B0}",
-  12: "\u{26A0}\uFE0F",
-  13: "\u{1F4D6}",
-  14: "\u{1F3C6}",
-  15: "\u{1F9E9}",
+  8: "\u{1F3AC}",
+  9: "\u{1F3AF}",
+  10: "\u{1F6E1}\uFE0F",
+  11: "\u{1F91D}",
+  12: "\u{1F4B0}",
+  13: "\u{26A0}\uFE0F",
+  14: "\u{1F4D6}",
+  15: "\u{1F3C6}",
+  16: "\u{1F9E9}",
 };
 
 export function ModuleList() {

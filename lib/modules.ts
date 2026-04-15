@@ -15,14 +15,15 @@ export const modules: ModuleInfo[] = [
   { num: 5, slug: "charleston-strategy", name: "Charleston Strategy", hook: "What to keep, what to pass, and why", href: "/module/5" },
   { num: 6, slug: "jokers-calling", name: "Jokers & Calling", hook: "When and how to use jokers and call tiles", href: "/module/6" },
   { num: 7, slug: "scanning-the-card", name: "Scanning the Card", hook: "How to match your tiles to hands on the card", href: "/module/7" },
-  { num: 8, slug: "hand-strategy", name: "Hand Strategy", hook: "Pick the right hand and know what to keep", href: "/module/8" },
-  { num: 9, slug: "defense", name: "Defense", hook: "Read the table and avoid feeding other players", href: "/module/9" },
-  { num: 10, slug: "etiquette", name: "Table Etiquette", hook: "The unwritten rules every player should know", href: "/module/10" },
-  { num: 11, slug: "scoring", name: "Scoring & Payouts", hook: "Who pays whom and how much", href: "/module/11" },
-  { num: 12, slug: "mistakes", name: "Common Mistakes", hook: "What to do when something goes wrong", href: "/module/12" },
-  { num: 13, slug: "glossary", name: "Glossary", hook: "Every term you'll hear at the table", href: "/module/13" },
-  { num: 14, slug: "first-game", name: "Your First Full Game", hook: "A complete walkthrough from start to finish", href: "/module/14" },
-  { num: 15, slug: "puzzles", name: "Practice Hands Library", hook: "Test yourself with real hand scenarios", href: "/module/15" },
+  { num: 8, slug: "starting-the-game", name: "Starting the Game", hook: "What happens each turn once play begins", href: "/module/8" },
+  { num: 9, slug: "hand-strategy", name: "Hand Strategy", hook: "Pick the right hand and know what to keep", href: "/module/9" },
+  { num: 10, slug: "defense", name: "Defense", hook: "Read the table and avoid feeding other players", href: "/module/10" },
+  { num: 11, slug: "etiquette", name: "Table Etiquette", hook: "The unwritten rules every player should know", href: "/module/11" },
+  { num: 12, slug: "scoring", name: "Scoring & Payouts", hook: "Who pays whom and how much", href: "/module/12" },
+  { num: 13, slug: "mistakes", name: "Common Mistakes", hook: "What to do when something goes wrong", href: "/module/13" },
+  { num: 14, slug: "glossary", name: "Glossary", hook: "Every term you'll hear at the table", href: "/module/14" },
+  { num: 15, slug: "first-game", name: "Your First Full Game", hook: "A complete walkthrough from start to finish", href: "/module/15" },
+  { num: 16, slug: "puzzles", name: "Practice Hands Library", hook: "Test yourself with real hand scenarios", href: "/module/16" },
 ];
 
 export function getModule(num: number) {

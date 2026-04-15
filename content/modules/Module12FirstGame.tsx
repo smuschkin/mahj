@@ -56,13 +56,13 @@ function HandState({
 }
 
 export default function Module12FirstGame() {
-  const adj = getAdjacentModules(14);
+  const adj = getAdjacentModules(15);
   return (
     <PageWrap>
       <SectionHeader>Walkthrough</SectionHeader>
 
-      <ScreenStepper moduleNum={14} coverProps={{ eyebrow: "MAHJ — Lesson 15", title: "Your First", highlight: "Game", subtitle: "A complete guided walkthrough — from the deal to Mahjong" }} header={<><Cover
-        eyebrow="MAHJ — Lesson 15"
+      <ScreenStepper moduleNum={15} coverProps={{ eyebrow: "MAHJ — Lesson 16", title: "Your First", highlight: "Game", subtitle: "A complete guided walkthrough — from the deal to Mahjong" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 16"
         title="Your First"
         highlight="Game"
         subtitle="A complete guided walkthrough — from the deal to Mahjong"
@@ -73,11 +73,11 @@ export default function Module12FirstGame() {
           {
             label: "Goal",
             value:
-              "Watch a full hand of American Mahjong play out from start to finish, with every concept from Modules 0–13 applied at the right moment.",
+              "Watch a full hand of American Mahjong play out from start to finish, with every concept from Modules 0–14 applied at the right moment.",
           },
           { label: "Estimated time", value: "12–15 minutes" },
-          { label: "Prerequisite", value: "Modules 0–13 (everything before this)" },
-          { label: "Unlocks", value: "Lesson 16 (Practice Hands Library)" },
+          { label: "Prerequisite", value: "Modules 0–14 (everything before this)" },
+          { label: "Unlocks", value: "Lesson 17 (Practice Hands Library)" },
           {
             label: "Why it matters",
             value:
@@ -179,7 +179,7 @@ export default function Module12FirstGame() {
           </p>
 
           <Callout variant="tip">
-            Sara&apos;s rule of thumb from Lesson 9: pass tiles that fit{" "}
+            Sara&apos;s rule of thumb from Lesson 10: pass tiles that fit{" "}
             <em>none</em>{" "}of your candidate hands first. The 5 Crak, 9 Dot, and Green
             Dragon don&apos;t fit any all-Bam hand on the card.
           </Callout>
@@ -259,7 +259,7 @@ export default function Module12FirstGame() {
           <p className="text-[14px] text-zinc-700">
             She announces clearly:{" "}
             <strong>&quot;Six Crak.&quot;</strong> — and places it face-up in the
-            center. Then she pauses (Lesson 11) before her hand returns to her rack.
+            center. Then she pauses (Lesson 12) before her hand returns to her rack.
           </p>
         </LessonScreen>
 
@@ -367,7 +367,7 @@ export default function Module12FirstGame() {
             Sara announces clearly:{" "}
             <em>&quot;Joker exchange — I&apos;ll trade my 3 Bam for the Joker in
             your group.&quot;</em>{" "}She hands her real 3 Bam <strong>to the player
-            whose rack holds the joker</strong>{" "}(Lesson 11 etiquette: never reach onto
+            whose rack holds the joker</strong>{" "}(Lesson 12 etiquette: never reach onto
             someone else&apos;s rack). They make the swap and hand her the Joker.
           </p>
           <p>
@@ -428,7 +428,7 @@ export default function Module12FirstGame() {
 
           <Callout variant="tip">
             Sara could have used the extra 4 Bam in a Quint (5 of a kind) on a
-            different hand, but her current hand doesn&apos;t call for it. Lesson 9
+            different hand, but her current hand doesn&apos;t call for it. Lesson 10
             principle: <em>discard tiles that fit none of your committed hand</em>.
           </Callout>
         </LessonScreen>
@@ -554,7 +554,7 @@ export default function Module12FirstGame() {
         {/* ── 11. The payout ── */}
         <LessonScreen title="💰 The Payout">
           <p>
-            Time to do the math from Lesson 12. Suppose Sara&apos;s practice hand is
+            Time to do the math from Lesson 13. Suppose Sara&apos;s practice hand is
             worth <strong>30¢</strong>{" "}on the card (a moderate value).
           </p>
 
@@ -628,7 +628,7 @@ export default function Module12FirstGame() {
           <ol className="ml-6 list-decimal space-y-3 text-[14px] text-zinc-700">
             <li>
               <strong>Committed to a hand early.</strong>{" "}She picked her all-Bam
-              candidate during the deal and never wavered. Lesson 9.
+              candidate during the deal and never wavered. Lesson 10.
             </li>
             <li>
               <strong>Passed her junk in the Charleston.</strong>{" "}She got rid of
@@ -647,7 +647,7 @@ export default function Module12FirstGame() {
             <li>
               <strong>Named every discard out loud, paused before racking</strong>,
               and called &quot;Mahjong!&quot; the instant the winning tile appeared.
-              Lesson 11.
+              Lesson 12.
             </li>
           </ol>
 
@@ -657,7 +657,7 @@ export default function Module12FirstGame() {
             other players&apos; exposures. By Turn 7 she would have noted that the
             player to her right was building Craks (so Crak discards were safe to
             them) while the player across had a Dragons hand (so dragon discards were
-            dangerous). Lesson 10.
+            dangerous). Lesson 11.
           </Callout>
 
           <Callout variant="tip">
@@ -670,8 +670,8 @@ export default function Module12FirstGame() {
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
-            moduleNum={14}
-            title="Lesson 15 Check"
+            moduleNum={15}
+            title="Lesson 16 Check"
             passThreshold={4}
             questions={[
               {
@@ -706,7 +706,7 @@ export default function Module12FirstGame() {
                 options: ["30¢", "60¢", "$1.20", "$2.40"],
                 correct: 1,
                 explanation:
-                  "Standard discard win = 2× hand value. 30¢ × 2 = 60¢. Jokerless bonus does NOT apply because she had Jokers in her final hand. Lesson 12.",
+                  "Standard discard win = 2× hand value. 30¢ × 2 = 60¢. Jokerless bonus does NOT apply because she had Jokers in her final hand. Lesson 13.",
               },
               {
                 question:
@@ -719,7 +719,7 @@ export default function Module12FirstGame() {
                 ],
                 correct: 1,
                 explanation:
-                  "Lesson 9 priority: discard tiles that fit none of your committed hand. The extra 4-Bam had no value to her current hand, so it goes.",
+                  "Lesson 10 priority: discard tiles that fit none of your committed hand. The extra 4-Bam had no value to her current hand, so it goes.",
               },
               {
                 question:
@@ -732,14 +732,14 @@ export default function Module12FirstGame() {
                 ],
                 correct: 2,
                 explanation:
-                  "Hand commitment is the foundation of every other decision. Without picking a target, the discard, call, and joker decisions become impossible. Lesson 9.",
+                  "Hand commitment is the foundation of every other decision. Without picking a target, the discard, call, and joker decisions become impossible. Lesson 10.",
               },
             ]}
           />
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Lesson 15 Complete">
+        <LessonScreen title="🎉 Lesson 16 Complete">
           <p>
             You just watched a full hand of American Mahjong play out — from the deal
             through the Charleston, through a Kong call, a joker exchange, and a
@@ -747,7 +747,7 @@ export default function Module12FirstGame() {
             module in this app.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 16 is the{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 17 is the{" "}
             <strong>Practice Hands Library</strong>. Now you sit in Sara&apos;s seat.
             You get a hand, you make the calls, and the app tells you whether you
             chose the best move and why.
@@ -756,7 +756,7 @@ export default function Module12FirstGame() {
       </ScreenStepper>
 
       <ModuleNav
-        currentModuleNum={14}
+        currentModuleNum={15}
         prev={
           adj.prev && {
             href: adj.prev.href,
