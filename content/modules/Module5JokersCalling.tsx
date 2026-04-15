@@ -275,12 +275,6 @@ export default function Module5JokersCalling() {
             </p>
           </div>
 
-          <Callout variant="tip">
-            <strong>Why this is awesome:</strong>{" "}Jokers are the most powerful tile in
-            the game. Stealing one from another player is one of the best moves you can
-            make.
-          </Callout>
-
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
             How to exchange
           </h4>
