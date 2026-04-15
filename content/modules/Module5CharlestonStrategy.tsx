@@ -52,7 +52,7 @@ export default function Module5CharlestonStrategy() {
         {/* ── 1. Strategy overview ── */}
         <LessonScreen title="🧠 Thinking Through the Charleston">
           <p>
-            Lesson 5 taught you <em>how</em>{" "}the Charleston works — the
+            Lesson 5 taught you <em>how </em>the Charleston works — the
             directions, the rules, the blind pass. Now we&apos;ll focus on the
             part that wins games:{" "}
             <strong>what to keep, what to pass, and why</strong>.
@@ -157,114 +157,124 @@ export default function Module5CharlestonStrategy() {
         </LessonScreen>
 
         {/* ── 3. Pass 2: First Across — strategy ── */}
-        <LessonScreen title="↔️ Pass 2: First Across — Narrowing Your Focus">
+        <LessonScreen title="↔️ Pass 2: First Across">
           <p>
-            You&apos;ve passed 3 tiles right and received 3 new ones. Now pass 3
-            to the player <strong>across</strong> from you.
+            You got 3 new tiles from the right. Re-sort, then pass 3{" "}
+            <strong>across</strong>. Your hand should be getting clearer now.
           </p>
-          <p>
-            This is where strategy starts to sharpen. After receiving your first
-            set of new tiles, you should have a better sense of which suits and
-            numbers are clustering in your hand.
-          </p>
-
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            What to think about
-          </h4>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
             <li>
-              <strong>Did the new tiles help?</strong>{" "}If you got tiles in the
-              same suit you&apos;re collecting, great — double down on that
-              direction.
+              <strong>Did the new tiles help?</strong>{" "}Double down on that suit.
             </li>
             <li>
-              <strong>Still have loners?</strong>{" "}Pass them. Tiles that didn&apos;t
-              connect to anything before the first pass probably won&apos;t connect now.
+              <strong>Still have loners?</strong>{" "}Pass them — they won&apos;t
+              magically connect.
             </li>
             <li>
-              <strong>You can re-pass tiles you just received.</strong>{" "}If the
-              tiles from the right don&apos;t help your hand, send them across.
-              No rule against it.
+              <strong>You can re-pass received tiles.</strong>{" "}If they
+              don&apos;t help your hand, send them across.
+            </li>
+            <li>
+              <strong>Start glancing at the card</strong>{" "}— which hands match
+              your strongest suit?
             </li>
           </ul>
-
-          <Callout variant="tip">
-            By now you may be starting to see what hand-shape your tiles
-            support. Start glancing at the card to find hands that match your
-            strongest suit or number pattern.
-          </Callout>
         </LessonScreen>
 
         {/* ── 4. Pass 3: First Left — strategy ── */}
-        <LessonScreen title="👈 Pass 3: First Left — Last Chance to Clean Up">
+        <LessonScreen title="👈 Pass 3: First Left">
           <p>
-            Pass 3 to the player on your <strong>left</strong>. This completes
-            the first Charleston.
+            Last pass of the first Charleston — pass 3 to your{" "}
+            <strong>left</strong>. Time to commit to a direction.
           </p>
-          <p>
-            By now you should be committing to a direction. If you&apos;ve been
-            collecting Bams, pass away your leftover Craks and Dots. If you have
-            a strong pair-based hand, shed your Lonely singles.
-          </p>
-
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            The &quot;two-hand&quot; trick
-          </h4>
-          <p>
-            Try to keep tiles that fit <strong>at least two possible hands</strong>{" "}
-            on the card. You don&apos;t need to lock in one specific hand yet —
-            flexibility is power. Pass tiles that only work for hands you&apos;ve
-            already abandoned.
-          </p>
-
-          <Callout variant="tip">
-            Remember: the first left is one of the two passes where a{" "}
-            <strong>blind pass</strong> is allowed. If you don&apos;t have 3
-            tiles to spare, you can pass along some of the tiles you just
-            received from the right without looking at them.
-          </Callout>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li>
+              <strong>Dump your weakest suit.</strong>{" "}If you&apos;re building
+              Bams, pass leftover Craks and Dots.
+            </li>
+            <li>
+              <strong>Stay flexible.</strong>{" "}Keep tiles that fit 2+ hands
+              on the card — don&apos;t lock in yet.
+            </li>
+            <li>
+              <strong>Blind pass is allowed here.</strong>{" "}If you don&apos;t
+              have 3 tiles to spare, pass some received tiles without looking.
+            </li>
+          </ul>
         </LessonScreen>
 
-        {/* ── 5. Reading the passes ── */}
+        {/* ── 5. Second Charleston strategy ── */}
+        <LessonScreen title="🔁 Second Charleston: Left, Across, Last Right">
+          <p>
+            If the table agrees to continue, the second Charleston goes in{" "}
+            <strong>reverse</strong>: left → across → last right.
+          </p>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
+            How to pass each one
+          </h4>
+          <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
+            <li>
+              <strong>Second Left</strong> — pass 3 face down in a{" "}
+              <strong>pyramid</strong>{" "}(1 on top, 2 on bottom) to your left.
+              This signals it&apos;s the second Charleston.
+            </li>
+            <li>
+              <strong>Second Across</strong> — pass 3 face down in a row across.
+            </li>
+            <li>
+              <strong>Last Right</strong> — pass 3 face down in a row to your
+              right. Blind pass is allowed on this one.
+            </li>
+          </ol>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
+            Strategy tips
+          </h4>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li>
+              <strong>By now you should be committed</strong>{" "}to 1-2 hands on
+              the card. Pass everything that doesn&apos;t fit.
+            </li>
+            <li>
+              <strong>Be more aggressive.</strong>{" "}You&apos;ve had 3 passes to
+              shape your hand — dump your remaining junk fast.
+            </li>
+            <li>
+              <strong>If your hand is strong, say &quot;stop&quot;</strong>{" "}
+              before the second Charleston starts. Don&apos;t give opponents
+              more chances to improve.
+            </li>
+          </ul>
+        </LessonScreen>
+
+        {/* ── 6. Reading the passes ── */}
         <LessonScreen title="👀 Reading What Comes Back">
           <p>
-            The tiles you <em>receive</em> during the Charleston are clues about
-            what other players don&apos;t want. Pay attention.
+            The tiles you <em>receive </em>during the Charleston are clues
+            about what others don&apos;t want.
           </p>
-
-          <div className="my-3 grid gap-2 sm:grid-cols-2">
-            <div className="rounded-md border-l-4 border-[var(--color-green)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">
-                📥 Getting lots of one suit?
-              </div>
-              Nobody else wants it — that&apos;s actually good news for you if
-              it&apos;s the suit you&apos;re collecting.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
-              <div className="font-black text-[var(--color-mid)]">
-                📥 Not seeing a suit at all?
-              </div>
-              Someone is hoarding it. Avoid building a hand that depends on
-              those tiles — they&apos;re spoken for.
-            </div>
-            <div className="rounded-md border-l-4 border-[var(--color-border)] bg-white p-3 text-[13px] sm:col-span-2">
-              <div className="font-black text-[var(--color-mid)]">
-                📥 Receiving Winds and Dragons?
-              </div>
-              Honor tiles being passed around often means nobody is going for a
-              Winds or Dragons hand. You can probably pass yours safely too.
-            </div>
-          </div>
-
-          <Callout variant="info">
-            <strong>Information goes both ways.</strong> Just as you&apos;re
-            reading their passes, they&apos;re reading yours. Be aware that
-            passing 3 tiles of the same suit tells your opponents exactly what
-            you&apos;re <em>not</em> building.
-          </Callout>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li>
+              <strong>Getting lots of one suit?</strong>{" "}Nobody wants it —
+              good news if it&apos;s the suit you&apos;re collecting.
+            </li>
+            <li>
+              <strong>Not seeing a suit at all?</strong>{" "}Someone is hoarding
+              it. Don&apos;t build a hand that needs those tiles.
+            </li>
+            <li>
+              <strong>Receiving Winds and Dragons?</strong>{" "}Nobody is going
+              for a Winds/Dragons hand. You can safely pass yours too.
+            </li>
+            <li>
+              <strong>It goes both ways.</strong>{" "}They&apos;re reading your
+              passes too — avoid passing 3 tiles of the same suit.
+            </li>
+          </ul>
         </LessonScreen>
 
-        {/* ── 6. Courtesy pass strategy ── */}
+        {/* ── 7. Courtesy pass strategy ── */}
         <LessonScreen title="🤝 Courtesy Pass Strategy">
           <p>
             After both Charlestons, you and the player across can do one last
