@@ -433,7 +433,7 @@ export function CallingDrill() {
           <button
             type="button"
             onClick={start}
-            className="mt-3 rounded-md bg-[var(--color-mid)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+            className="mt-3 rounded-md bg-[var(--color-accent)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
           >
             Play again
           </button>
@@ -554,9 +554,9 @@ function ScenarioView({
             <button
               type="button"
               onClick={onNext}
-              className="rounded-md bg-[var(--color-mid)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+              className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
             >
-              {index + 1 >= total ? "See results →" : "Next scenario →"}
+              {index + 1 >= total ? "See results →" : "Next →"}
             </button>
           </div>
         </div>
