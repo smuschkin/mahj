@@ -292,42 +292,31 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── 7. When to call — courtesy-style judgment ── */}
-        <LessonScreen title="🤔 When SHOULD You Call? (The Judgment Call)">
+        <LessonScreen title="🤔 When to Call">
           <p>
-            Just because you <em>can</em>{" "}call doesn&apos;t mean you should. Calling
-            has real costs.
+            Just because you <em>can </em>call doesn&apos;t mean you should.
           </p>
 
-          <DecisionBox title="✅ Good reasons to call">
-            <ul className="ml-5 list-disc space-y-1">
-              <li>The tile completes a group you actually need for your target hand</li>
-              <li>It&apos;s late in the game and you&apos;re racing to finish</li>
-              <li>
-                You&apos;re calling for Mahjong — the discard wins you the
-                game (always call!)
-              </li>
-            </ul>
-          </DecisionBox>
+          <h4 className="mt-3 font-serif text-sm font-black text-[var(--color-accent)]">
+            ✅ Call when:
+          </h4>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li>The tile completes a group you need for your target hand</li>
+            <li>It&apos;s late in the game and you&apos;re racing to finish</li>
+            <li>It&apos;s Mahjong — always call!</li>
+          </ul>
 
-          <DecisionBox title="❌ Bad reasons to call" bad>
-            <ul className="ml-5 list-disc space-y-1">
-              <li>You &quot;might&quot; need it eventually — wait until you&apos;re committed</li>
-              <li>It commits you to a hand you&apos;re not sure about (exposing locks you in and lets opponents read what you&apos;re building)</li>
-              <li>You&apos;re early in the game and still flexible — keep your options open</li>
-              <li>Your hand is <strong>concealed (C)</strong> — concealed hands cannot call at all (except for Mahjong on the final tile)</li>
-            </ul>
-          </DecisionBox>
+          <h4 className="mt-3 font-serif text-sm font-black text-[var(--color-red)]">
+            ❌ Don&apos;t call when:
+          </h4>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li>You&apos;re not committed to a hand yet — stay flexible</li>
+            <li>Exposing would reveal your strategy to opponents</li>
+            <li>Your hand is <strong>concealed (C)</strong> — no calling allowed</li>
+          </ul>
 
-          <Callout variant="warn">
-            <strong>The hidden cost of calling:</strong>{" "}Once you expose tiles, you
-            can&apos;t change which hand you&apos;re building toward. Some hands require{" "}
-            <em>concealed</em>{" "}tiles (no calls). Calling early can lock you out of
-            better options later.
-          </Callout>
           <Callout variant="tip">
-            <strong>Permission to be cautious:</strong>{" "}When in doubt, don&apos;t call.
-            Beginners almost always over-call. Pass on the tile, draw next turn, and
-            keep your options open.
+            When in doubt, don&apos;t call. Beginners almost always over-call.
           </Callout>
         </LessonScreen>
 
