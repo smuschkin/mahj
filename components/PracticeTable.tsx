@@ -20,10 +20,9 @@ type Step = {
 const STEPS: Step[] = [
   {
     id: "intro",
-    title: "Welcome to the Table",
-    subtitle: "Let\u2019s walk through a full round of American Mahjong",
-    coaching:
-      "A round has a clear rhythm: wash the tiles, build your walls, deal, pass tiles in the Charleston, then play. We\u2019ll walk through each step so you know exactly what to expect when you sit down at a real table.",
+    title: "The Round Flow",
+    subtitle: "Wash \u2192 Wall \u2192 Deal \u2192 Charleston \u2192 Play",
+    coaching: "",
   },
   {
     id: "wash",
@@ -131,11 +130,13 @@ export function PracticeTable() {
           {step.title}
         </h2>
         <p className="mt-1 text-sm italic text-zinc-500">{step.subtitle}</p>
-        <div className="mt-4 rounded-lg border-l-4 border-[#C8A951] bg-white px-5 py-4 shadow-sm">
-          <p className="text-sm leading-relaxed text-zinc-600">
-            {step.coaching}
-          </p>
-        </div>
+        {step.coaching && (
+          <div className="mt-4 rounded-lg border-l-4 border-[#C8A951] bg-white px-5 py-4 shadow-sm">
+            <p className="text-sm leading-relaxed text-zinc-600">
+              {step.coaching}
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Interactive content area */}
@@ -199,34 +200,24 @@ export function PracticeTable() {
 
 function IntroCard() {
   return (
-    <div className="rounded-2xl bg-gradient-to-br from-[#1A4D2E] via-[#1F5A35] to-[#0F3320] p-6 text-center text-white shadow-lg">
-      {/* Decorative mini tiles */}
-      <div className="mb-4 flex items-center justify-center gap-2">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <div
-            key={i}
-            className="h-8 w-5 rounded-sm bg-[#FAF7EC]/20 shadow-inner"
-            style={{ transform: `rotate(${(i - 3) * 5}deg)` }}
-          />
-        ))}
-      </div>
-      <h3 className="font-serif text-xl font-black text-[#C8A951]">
-        Your First Round
-      </h3>
-      <p className="mt-2 text-sm text-emerald-200/70">
-        We&apos;ll walk you through every step of setting up and starting an
-        American Mahjong round &mdash; from washing the tiles to completing the
-        Charleston.
-      </p>
-      <div className="mt-4 flex flex-wrap justify-center gap-3 text-[13px] font-bold uppercase tracking-wider text-white/50">
-        <span>Wash</span>
-        <span>&rarr;</span>
-        <span>Wall</span>
-        <span>&rarr;</span>
-        <span>Deal</span>
-        <span>&rarr;</span>
-        <span>Charleston</span>
-      </div>
+    <div className="grid grid-cols-2 gap-3">
+      {[
+        { emoji: "🌊", label: "Wash", desc: "Mix tiles face-down" },
+        { emoji: "🧱", label: "Wall", desc: "Build 19 stacks high" },
+        { emoji: "🎲", label: "Deal", desc: "East deals to everyone" },
+        { emoji: "🔄", label: "Charleston", desc: "Pass tiles you don\u2019t want" },
+      ].map((s) => (
+        <div
+          key={s.label}
+          className="rounded-lg border border-[#C8A951]/30 bg-white p-3 text-center shadow-sm"
+        >
+          <div className="text-2xl">{s.emoji}</div>
+          <div className="mt-1 font-serif text-sm font-black text-[var(--color-mid)]">
+            {s.label}
+          </div>
+          <div className="text-[12px] text-zinc-500">{s.desc}</div>
+        </div>
+      ))}
     </div>
   );
 }
