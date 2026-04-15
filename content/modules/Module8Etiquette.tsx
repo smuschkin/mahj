@@ -124,37 +124,17 @@ export default function Module8Etiquette() {
         </LessonScreen>
 
         {/* ── 5. Calling Mahjong + the window ── */}
-        <LessonScreen title='🏆 Calling Mahjong — The Window'>
+        <LessonScreen title="🏆 Calling Mahjong">
           <p>
-            When the tile that completes your hand is drawn or discarded, say{" "}
-            <strong>&quot;wait&quot;</strong>{" "}first to pause the game so the next
-            player doesn&apos;t draw. Take a second to verify your hand against the
-            card, and then call <strong>&quot;Mahjong&quot;</strong>{" "}to claim the
-            win.
+            Say <strong>&quot;wait&quot;</strong>{" "}the instant you see
+            your winning tile. Verify against the card, then call{" "}
+            <strong>&quot;Mahjong.&quot;</strong>
           </p>
-          <p>
-            The window for claiming a discard is the same as for any other call: you
-            must speak up <strong>before the next player has racked</strong>{" "}their
-            drawn tile. Once that tile is racked, the discard is gone forever — so
-            the &quot;wait&quot; needs to come out the moment you see the winning
-            tile.
-          </p>
-
-          <DoDontRow
-            doText='Say "wait" the instant you see your winning tile, verify, then call Mahjong and expose your hand.'
-            dontText="Hesitate silently, second-guess, then try to claim it after the next player has racked. The win is forfeited."
-          />
-
-          <Callout variant="warn">
-            <strong>Don&apos;t false-call.</strong>{" "}If you call &quot;Mahjong&quot; and
-            your hand turns out not to be valid, your hand is dead — you keep
-            playing but can&apos;t win. Some groups add an extra penalty, but
-            per NMJL rules you just pay the eventual winner like any other
-            loser. Always check before you call.
-          </Callout>
-          <Callout variant="info">
-            <strong>Don&apos;t throw in your hand until Mahjong is verified.</strong>{" "}When someone calls Mahjong, keep your tiles on your rack until the table confirms the winning hand is valid. If the call was wrong, play continues — but only if everyone&apos;s hand is still intact.
-          </Callout>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Verify first</strong> — a false call makes your hand dead</li>
+            <li><strong>Don&apos;t hesitate</strong> — once the next player racks, it&apos;s too late</li>
+            <li><strong>Keep your tiles on the rack</strong>{" "}until the table confirms the win is valid</li>
+          </ul>
         </LessonScreen>
 
         {/* ── 6. Pace of play ── */}
