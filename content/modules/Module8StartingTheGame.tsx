@@ -206,12 +206,12 @@ export default function Module8StartingTheGame() {
                 options: [
                   "Place it silently",
                   "Show it to the player on your right first",
-                  "Say its name out loud",
+                  "Say its name out loud and place it face-up in the center",
                   "Flip it face-down",
                 ],
                 correct: 2,
                 explanation:
-                  "Name every discard out loud — it's an official NMJL rule. This gives other players a chance to call.",
+                  "Name every discard out loud and place it face-up in the middle of the table. This is an official NMJL rule — it gives other players a chance to call.",
               },
               {
                 question:
