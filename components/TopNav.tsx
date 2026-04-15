@@ -47,16 +47,14 @@ export function TopNav() {
               Lessons
             </Link>
           )}
-          <Link
-            href="/play"
-            className={`rounded-md px-2 py-2 text-[13px] font-bold uppercase tracking-wider transition hover:bg-white/60 sm:px-2.5 ${
-              pathname === "/play"
-                ? "text-[var(--color-mid)]"
-                : "text-zinc-500"
-            }`}
-          >
-            Practice
-          </Link>
+          {pathname !== "/play" && (
+            <Link
+              href="/play"
+              className="rounded-md px-2 py-2 text-[13px] font-bold uppercase tracking-wider text-zinc-500 transition hover:bg-white/60 sm:px-2.5"
+            >
+              Practice
+            </Link>
+          )}
         </div>
       </div>
     </nav>
