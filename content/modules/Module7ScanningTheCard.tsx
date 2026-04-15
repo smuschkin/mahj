@@ -82,33 +82,15 @@ export default function Module7ScanningTheCard() {
         </LessonScreen>
 
         {/* ── 3. Step 1 — Sort your rack ── */}
-        <LessonScreen title="📐 Step 1: Sort Your Rack by Suit">
+        <LessonScreen title="📐 Step 1: Sort Your Rack">
           <p>
-            Before you even look at the card, organize what you have. Group all
-            your tiles on the rack by type:
+            You learned this in Lesson 6 — sort by suit, then by number
+            within each suit. Winds, Dragons, Flowers, and Jokers on the ends.
           </p>
-          <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>Bams</strong> together, <strong>Craks</strong> together,{" "}
-              <strong>Dots</strong> together.
-            </li>
-            <li>
-              <strong>Honors</strong> (winds and dragons) on one end of the
-              rack.
-            </li>
-            <li>
-              <strong>Flowers</strong> on the other end.
-            </li>
-            <li>
-              <strong>Jokers</strong> set apart — they&apos;re wild cards and
-              will fit wherever you need them.
-            </li>
-          </ul>
-          <Callout variant="tip">
-            <strong>Within each suit, sort by number.</strong>{" "}If you have 2
-            Bam, 5 Bam, 5 Bam, 8 Bam — put them in that order. This makes
-            pairs and triples jump out at you immediately.
-          </Callout>
+          <p>
+            Your rack should already be sorted from the Charleston. If not,
+            take 10 seconds to organize before scanning the card.
+          </p>
         </LessonScreen>
 
         {/* ── 4. Step 2 — Find your biggest cluster ── */}
