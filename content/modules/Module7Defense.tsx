@@ -245,10 +245,6 @@ export default function Module7Defense() {
 
         {/* ── 5. Danger zone: middle suits and honors near pairs ── */}
         <LessonScreen title="🔥 Tiles That Are Usually Dangerous">
-          <p>
-            Some tiles are statistically more likely to win someone the game. When
-            you&apos;re unsure, default to throwing safer ones.
-          </p>
 
           <div className="my-3 grid gap-3 sm:grid-cols-2">
             <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-4">
