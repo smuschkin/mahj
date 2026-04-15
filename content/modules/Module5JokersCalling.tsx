@@ -286,8 +286,9 @@ export default function Module5JokersCalling() {
           </h4>
           <ol className="ml-6 list-decimal space-y-1 text-[14px] text-zinc-700">
             <li>Draw from the wall (it must be <strong>your turn</strong>)</li>
-            <li>Place a <strong>real matching tile</strong> on the exposed group</li>
-            <li>Take the <strong>Joker</strong> into your hand</li>
+            <li><strong>Announce</strong>{" "}the exchange out loud</li>
+            <li>Place a <strong>real matching tile</strong>{" "}on the exposed group</li>
+            <li>Take the <strong>Joker</strong>{" "}into your hand</li>
             <li>Discard as normal</li>
           </ol>
           <Callout variant="info">
