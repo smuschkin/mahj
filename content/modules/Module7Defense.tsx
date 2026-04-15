@@ -236,7 +236,7 @@ export default function Module7Defense() {
               label="3 visible"
               count="Safe"
               status="Throw it"
-              what="No one can ever Pung or Kong it. Completely safe."
+              what="No one can Pung with real tiles. Still possible with jokers, but very unlikely."
               tone="calm"
             />
           </div>
