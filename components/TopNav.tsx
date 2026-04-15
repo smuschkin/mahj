@@ -57,16 +57,6 @@ export function TopNav() {
           >
             Practice
           </Link>
-          <Link
-            href="/calculator"
-            className={`rounded-md px-2 py-2 text-[13px] font-bold uppercase tracking-wider transition hover:bg-white/60 sm:px-2.5 ${
-              pathname === "/calculator"
-                ? "text-[var(--color-mid)]"
-                : "text-zinc-500"
-            }`}
-          >
-            Calculator
-          </Link>
         </div>
       </div>
     </nav>
