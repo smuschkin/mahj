@@ -183,7 +183,7 @@ export default function Module10Mistakes() {
         {/* ── 6. The "things you don't have to recover from" screen ── */}
         <LessonScreen title="🧊 Things That Feel Like Mistakes but Aren&apos;t">
           <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
-            <li>Using zero on the courtesy pass</li>
+            <li>Passing zero on the courtesy</li>
             <li>Stopping the second Charleston</li>
             <li>Passing on a tile you could call</li>
             <li>Changing your target hand mid-game</li>
