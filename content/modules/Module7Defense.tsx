@@ -123,14 +123,9 @@ export default function Module7Defense() {
         {/* ── 2. Exposures are tells ── */}
         <LessonScreen title="👁️ Every Exposure Is a Tell">
           <p>
-            When an opponent calls a tile, they have to <strong>expose</strong>{" "}the
-            whole group face-up. That&apos;s the law (you learned this in Lesson 7).
-            For you, it&apos;s a free peek into their hand.
-          </p>
-          <p>
-            Read every exposure like a sentence. It tells you their{" "}
-            <strong>suit focus</strong>, their <strong>number focus</strong>, and often
-            which <em>family</em>{" "}of hands they&apos;re building.
+            Read every exposure like a sentence — it tells you their{" "}
+            <strong>suit</strong>, their <strong>numbers</strong>, and
+            which hands they&apos;re likely building.
           </p>
 
           <ReadCard
