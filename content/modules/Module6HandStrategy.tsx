@@ -248,15 +248,14 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── 8. Worked example ── */}
-        <LessonScreen title="🧠 Worked Example: What Would You Discard?">
+        <LessonScreen title="🧠 Worked Example">
           <p>
-            You just drew your 14th tile. Your candidate hands are{" "}
-            <strong>&quot;Even Bams&quot;</strong>{" "}(a practice hand: pairs and pungs of
-            2-4-6-8 Bam) and a <strong>backup Dragons</strong>{" "}hand. Here&apos;s your
-            rack:
+            You have 14 tiles. You&apos;re building{" "}
+            <strong>Even Bams</strong>{" "}(2-4-6-8) with a{" "}
+            <strong>Dragons backup</strong>. Which tile goes?
           </p>
 
-          <TileRow caption="Your 14 tiles after the draw. Which one goes?">
+          <TileRow caption="Which one would you discard?">
             <Tile type="bam" value={2} size="sm" />
             <Tile type="bam" value={2} size="sm" />
             <Tile type="bam" value={4} size="sm" />
@@ -273,34 +272,16 @@ export default function Module6HandStrategy() {
             <Tile type="wind" value="N" size="sm" />
           </TileRow>
 
-          <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            Walking through the tree
-          </h4>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>
-              <strong>5 Crak</strong> — fits neither candidate. Wrong suit for Even
-              Bams, wrong tile for Dragons. <strong>Step 1 says discard.</strong>
-            </li>
-            <li>
-              <strong>North Wind</strong> — also fits neither. Honors are
-              usually a fine discard, but dump the 5 Crak first — middle-suit
-              tiles are live for more opponents, so you want it gone before
-              someone can call it.
-            </li>
-            <li>
-              <strong>Red Dragon</strong> — this is the key trap. It&apos;s only 1 of 4
-              and your backup hand needs it. Don&apos;t discard it yet — wait until
-              you&apos;ve fully committed to Even Bams.
-            </li>
-            <li>
-              <strong>Joker</strong> — never. Save it for the hardest tile to find.
-            </li>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>5 Crak</strong> — fits neither hand. Discard this.</li>
+            <li><strong>North Wind</strong> — also junk, but discard the 5 Crak first (middle tiles are riskier to hold)</li>
+            <li><strong>Red Dragon</strong> — keep it, your backup hand needs it</li>
+            <li><strong>Joker</strong> — never discard</li>
           </ul>
 
           <Callout variant="tip">
-            <strong>The answer:</strong>{" "}discard the <strong>5 Crak</strong>. It fits
-            no candidate hand, and it&apos;s the tile that costs you the least to lose.
-            The marked tile in the rack above is the one to throw.
+            <strong>Answer: 5 Crak.</strong>{" "}It fits no candidate and
+            it&apos;s the most dangerous tile to hold.
           </Callout>
         </LessonScreen>
 
