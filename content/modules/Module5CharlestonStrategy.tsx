@@ -52,7 +52,7 @@ export default function Module5CharlestonStrategy() {
         {/* ── 1. Strategy overview ── */}
         <LessonScreen title="🧠 Thinking Through the Charleston">
           <p>
-            Module 4 taught you <em>how</em> the Charleston works — the
+            Module 4 taught you <em>how</em>{" "}the Charleston works — the
             directions, the rules, the blind pass. Now we&apos;ll focus on the
             part that wins games:{" "}
             <strong>what to keep, what to pass, and why</strong>.
