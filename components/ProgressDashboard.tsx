@@ -32,7 +32,7 @@ export function ProgressDashboard() {
             Your progress
           </p>
           <p className="font-serif text-2xl font-black text-[var(--color-mid)]">
-            {completed} <span className="text-base text-zinc-400">/ {total} modules</span>
+            {completed} <span className="text-base text-zinc-400">/ {total} lessons</span>
           </p>
         </div>
         <div className="font-serif text-3xl font-black text-[#C8A951]">
@@ -62,7 +62,7 @@ export function ProgressDashboard() {
             <div
               key={m.num}
               className={`h-2 flex-1 rounded-full ${bg} transition-colors`}
-              title={`Module ${m.num}: ${m.name} — ${s ?? "not started"}`}
+              title={`Lesson ${m.num + 1}: ${m.name} — ${s ?? "not started"}`}
             />
           );
         })}
@@ -73,14 +73,14 @@ export function ProgressDashboard() {
         <p className="mt-3 text-sm text-zinc-500">
           Up next:{" "}
           <span className="font-bold text-[var(--color-mid)]">
-            Module {nextModule.num}: {nextModule.name}
+            Lesson {nextModule.num + 1}: {nextModule.name}
           </span>
         </p>
       )}
 
       {completed === total && (
         <p className="mt-3 text-center text-sm font-bold text-[#2D8B5E]">
-          You completed every module — nice work!
+          You completed every lesson — nice work!
         </p>
       )}
     </div>

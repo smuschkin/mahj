@@ -31,7 +31,7 @@ export function TopNav() {
         {/* Center: Current location — hidden on very small screens */}
         <div className="hidden sm:block text-center text-[13px] font-bold uppercase tracking-wider text-zinc-400">
           {isHome && "Home"}
-          {moduleNum !== null && `Module ${moduleNum}`}
+          {moduleNum !== null && `Lesson ${moduleNum + 1}`}
           {pathname === "/play" && "Practice"}
           {pathname === "/calculator" && "Calculator"}
           {pathname === "/cheatsheet" && "Cheat Sheet"}
@@ -44,7 +44,7 @@ export function TopNav() {
               href="/"
               className="rounded-md px-2 py-2 text-[13px] font-bold uppercase tracking-wider text-[var(--color-mid)] transition hover:bg-white/60 sm:px-2.5"
             >
-              Modules
+              Lessons
             </Link>
           )}
           <Link

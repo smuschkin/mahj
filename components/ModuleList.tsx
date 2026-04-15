@@ -49,7 +49,7 @@ export function ModuleList() {
                 <p className="text-[13px] text-zinc-400">{m.hook}</p>
               </div>
               <span className="shrink-0 text-[13px] text-zinc-400">
-                Complete Module {m.num - 1} first
+                Complete Lesson {m.num} first
               </span>
             </div>
           );
