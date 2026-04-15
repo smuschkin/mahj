@@ -573,7 +573,7 @@ function ScenarioView({
               onClick={onNext}
               className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
             >
-              {index + 1 >= total ? "See results →" : "Next scenario →"}
+              {index + 1 >= total ? "See results →" : "Next →"}
             </button>
           </div>
         </div>
