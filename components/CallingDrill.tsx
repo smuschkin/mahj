@@ -171,14 +171,14 @@ const SCENARIOS: Scenario[] = [
       { type: "dragon", value: "green" },
       { type: "joker" },
     ],
-    context: "You only have 1 Green Dragon. You need 2 in your hand to call for a 3rd.",
+    context: "You have 1 Green Dragon and a Joker. Your hand is scattered across all three suits with no clear direction.",
     correct: "pass",
     explanation: (
       <>
-        <strong>Pass.</strong>{" "}You only have one Green Dragon. To call a Pung you
-        need <em>two</em>{" "}already in your hand (plus the discarded 3rd). One tile
-        isn&apos;t enough — that&apos;s just a pair, and you can&apos;t call for
-        a pair (unless it completes Mahjong).
+        <strong>Pass.</strong>{" "}You could technically call using your Joker as the
+        second Green Dragon — but your hand has no direction. Exposing a Pung
+        of Green Dragons locks you in and wastes your Joker early. Stay
+        flexible and keep the Joker for later.
       </>
     ),
   },
