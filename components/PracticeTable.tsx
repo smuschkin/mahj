@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Cover } from "@/components/Cover";
 import { WashAnimation } from "@/components/WashAnimation";
 import { WallPushAnimation } from "@/components/WallPushAnimation";
 import { DealingAnimation } from "@/components/DealingAnimation";
@@ -105,29 +106,23 @@ export function PracticeTable() {
 
   return (
     <div className="mx-auto max-w-[820px] px-4 py-8 sm:px-7">
-      {/* Header */}
-      <div className="mb-6 flex items-center justify-between">
-        <Link
-          href="/"
-          className="rounded-md px-2 py-1 text-sm text-[#2D8B5E] transition hover:underline"
-        >
-          &larr; Home
-        </Link>
-        <span className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
-          Practice Round
-        </span>
-        <span className="text-[13px] text-zinc-400">
-          {stepIndex + 1} / {STEPS.length}
-        </span>
-      </div>
+      <Cover
+        eyebrow="Setup Walkthrough"
+        title="Practice"
+        highlight="Round"
+        subtitle="Walk through the setup of a full round of American Mahjong"
+      />
 
       {/* Progress dots */}
-      <div className="mb-6">
+      <div className="mb-4">
         <StepDots
           current={stepIndex}
           total={STEPS.length}
           onJump={setStepIndex}
         />
+        <p className="mt-1 text-center text-[13px] text-zinc-400">
+          Step {stepIndex + 1} of {STEPS.length}
+        </p>
       </div>
 
       {/* Step title + coaching */}
