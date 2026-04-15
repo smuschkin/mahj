@@ -333,7 +333,7 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── Practice ── */}
-        <LessonScreen title="🔔 Practice: Can You Call This?">
+        <LessonScreen title="">
           <CallingDrill />
         </LessonScreen>
 

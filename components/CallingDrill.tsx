@@ -396,9 +396,9 @@ export function CallingDrill() {
           <button
             type="button"
             onClick={start}
-            className="rounded-md bg-[var(--color-mid)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+            className="rounded-md bg-[var(--color-accent)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
           >
-            Start drill →
+            Start →
           </button>
         </div>
       )}
