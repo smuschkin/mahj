@@ -366,36 +366,36 @@ export default function Module7Defense() {
             three opponents:
           </p>
 
-          <div className="my-3 space-y-3">
-            <div className="rounded-lg border border-zinc-200 bg-white p-3">
-              <div className="mb-1 text-[12px] font-bold uppercase tracking-wider text-zinc-500">
-                Player on your right — 2 exposures
+          <div className="my-3 rounded-lg border border-zinc-200 bg-white p-4 space-y-3">
+            <div>
+              <div className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+                Right — 2 exposures
               </div>
-              <TileRow background="felt">
+              <div className="mt-1 flex flex-wrap items-center gap-1">
                 <Tile type="dot" value={2} size="sm" />
                 <Tile type="dot" value={2} size="sm" />
                 <Tile type="dot" value={2} size="sm" />
-                <span className="mx-2" />
+                <span className="mx-1" />
                 <Tile type="dot" value={4} size="sm" />
                 <Tile type="dot" value={4} size="sm" />
                 <Tile type="dot" value={4} size="sm" />
-              </TileRow>
+              </div>
             </div>
-            <div className="rounded-lg border border-zinc-200 bg-white p-3">
-              <div className="mb-1 text-[12px] font-bold uppercase tracking-wider text-zinc-500">
-                Player across — 1 exposure
+            <div className="border-t border-zinc-100 pt-3">
+              <div className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+                Across — 1 exposure
               </div>
-              <TileRow background="felt">
+              <div className="mt-1 flex flex-wrap items-center gap-1">
                 <Tile type="dragon" value="red" size="sm" />
                 <Tile type="dragon" value="red" size="sm" />
                 <Tile type="dragon" value="red" size="sm" />
-              </TileRow>
+              </div>
             </div>
-            <div className="rounded-lg border border-zinc-200 bg-white p-3">
-              <div className="mb-1 text-[12px] font-bold uppercase tracking-wider text-zinc-500">
-                Player on your left — 0 exposures
+            <div className="border-t border-zinc-100 pt-3">
+              <div className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+                Left — 0 exposures
               </div>
-              <p className="text-[12px] italic text-zinc-500">
+              <p className="mt-1 text-[12px] italic text-zinc-500">
                 Nothing to read. Discards have been mostly Craks.
               </p>
             </div>
