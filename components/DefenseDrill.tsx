@@ -414,20 +414,12 @@ export function DefenseDrill() {
       {/* ── INTRO ── */}
       {phase === "intro" && (
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Interactive Drill
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black text-[var(--color-mid)]">
+          <h3 className="mb-3 font-serif text-xl font-black text-[var(--color-mid)]">
             🛡️ Read the Table
           </h3>
-          <p className="mb-2 text-sm text-zinc-600">
-            See opponents&apos; exposures and the discard pile. Decide which
-            tile is safest to throw — or whether to fold entirely.
-          </p>
-          <p className="mb-5 text-xs italic text-zinc-500">
-            {total} scenarios from beginner to advanced. Covers same-suit
-            reads, like-numbers, hot suits, cross-reading two threats, and
-            fold-vs-fight decisions.
+          <p className="mb-5 text-sm text-zinc-600">
+            {total} scenarios. Read exposures and discards, then pick the
+            safest tile to throw — or fold.
           </p>
           <button
             type="button"

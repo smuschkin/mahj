@@ -139,15 +139,9 @@ export default function Module8Etiquette() {
             </ul>
           </div>
 
-          <Callout variant="warn">
-            <strong>Translation for beginners:</strong>{" "}Slow down and name your
-            discards correctly. Misnaming a tile that someone else uses to win the game
-            is the single most expensive mistake in American Mahjong — you pay for
-            everyone.
-          </Callout>
           <Callout variant="tip">
-            <strong>Beginner habit to build:</strong>{" "}Look at the tile, say its name,{" "}
-            <em>then</em>{" "}let go. Never the other way around.
+            <strong>Beginner habit:</strong>{" "}Look at the tile, say its name,{" "}
+            <em>then</em>{" "}let go.
           </Callout>
         </LessonScreen>
 
@@ -243,10 +237,7 @@ export default function Module8Etiquette() {
           </p>
 
           <Callout variant="tip">
-            <strong>Permission to be slow at first:</strong>{" "}For your first 5 games,
-            you will be the slow one. That&apos;s fine. Tell your group at the
-            start — &quot;I&apos;m new, I&apos;ll be slow today&quot; — and almost
-            every group will be patient. Most mahjong players love teaching beginners.
+            For your first few games, tell your group &quot;I&apos;m new, I&apos;ll be slow today&quot; — almost every table will be patient.
           </Callout>
         </LessonScreen>
 
@@ -314,12 +305,6 @@ export default function Module8Etiquette() {
             </li>
           </ul>
 
-          <Callout variant="tip">
-            <strong>The single best etiquette move</strong>{" "}for a new player: say{" "}
-            <em>&quot;I&apos;m still learning — please tell me if I do something
-            wrong.&quot;</em>{" "}at the start of your first game with any group. People
-            will love you for it.
-          </Callout>
         </LessonScreen>
 
         {/* ── Quiz ── */}

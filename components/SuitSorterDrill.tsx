@@ -55,13 +55,9 @@ export function SuitSorterDrill() {
     return (
       <DrillShell>
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Practice Drill
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black">🎯 Suit Sorter</h3>
+          <h3 className="mb-3 font-serif text-xl font-black">🎯 Suit Sorter</h3>
           <p className="mb-5 text-sm text-zinc-300">
-            We&apos;ll show you 5 tiles, one at a time. Tell us which suit each one is.
-            Get 4 out of 5 to pass.
+            5 tiles, one at a time. Tell us which suit each one belongs to.
           </p>
           <button
             type="button"

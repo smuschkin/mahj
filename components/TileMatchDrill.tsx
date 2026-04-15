@@ -154,20 +154,9 @@ export function TileMatchDrill() {
     return (
       <DrillShell>
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Practice Drill
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black">🃏 Tile Match</h3>
-          <p className="mb-2 text-sm text-zinc-300">
-            We&apos;ll show you 10 tiles, each with a name. Tell us if the name
-            matches the tile.
-          </p>
-          <p className="mb-5 hidden sm:block text-xs text-zinc-400">
-            You can also use{" "}
-            <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[13px]">←</kbd>{" "}
-            and{" "}
-            <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[13px]">→</kbd>{" "}
-            on your keyboard.
+          <h3 className="mb-3 font-serif text-xl font-black">🃏 Tile Match</h3>
+          <p className="mb-5 text-sm text-zinc-300">
+            10 tiles, each with a name. Tell us if the name matches the tile.
           </p>
           <button
             type="button"

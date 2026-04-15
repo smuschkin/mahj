@@ -274,19 +274,12 @@ export function TileCountingDrill() {
     <div className="my-6 rounded-xl border-2 border-[var(--color-accent)] bg-white p-5 shadow-[0_4px_16px_rgba(0,0,0,0.06)] sm:p-8">
       {phase === "intro" && (
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Interactive Drill
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black text-[var(--color-mid)]">
+          <h3 className="mb-3 font-serif text-xl font-black text-[var(--color-mid)]">
             🧮 Tile Counting Trainer
           </h3>
-          <p className="mb-2 text-sm text-zinc-600">
-            See what&apos;s visible on the table — discards and exposures. Count
-            how many copies of a specific tile are still <strong>unseen</strong>.
-          </p>
-          <p className="mb-5 text-xs italic text-zinc-500">
-            {total} scenarios. Remember: most tiles have 4 copies total. Jokers
-            in exposed groups count as the tile they represent, not as a real copy.
+          <p className="mb-5 text-sm text-zinc-600">
+            {total} scenarios. Count how many copies of a tile are still
+            unseen based on discards and exposures.
           </p>
           <button
             type="button"

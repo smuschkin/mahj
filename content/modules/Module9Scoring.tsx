@@ -254,11 +254,6 @@ export default function Module9Scoring() {
             </table>
           </div>
 
-          <Callout variant="tip">
-            <strong>The pattern is simple:</strong>{" "}start with the hand value.
-            Discarder pays 2×, self-draw means everyone pays 2×, jokerless
-            doubles everything again. That&apos;s it.
-          </Callout>
         </LessonScreen>
 
         {/* ── 6. Concealed is NOT a multiplier ── */}
@@ -306,9 +301,7 @@ export default function Module9Scoring() {
             Misnamed discard (Article 67)
           </h4>
           <p className="text-[14px] text-zinc-700">
-            If you announce a tile by the wrong name and someone wins off it,
-            the win is valid and <strong>you alone pay what all three losers
-            would have paid combined</strong>. The other two players pay nothing.
+            Same rule covered in Module 10: the win is valid and the misnamer alone pays for all three losers.
           </p>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">

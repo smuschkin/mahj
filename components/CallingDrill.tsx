@@ -386,20 +386,12 @@ export function CallingDrill() {
       {/* ── INTRO ── */}
       {phase === "intro" && (
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Interactive Drill
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black text-[var(--color-mid)]">
+          <h3 className="mb-3 font-serif text-xl font-black text-[var(--color-mid)]">
             🔔 Can You Call This?
           </h3>
-          <p className="mb-2 text-sm text-zinc-600">
-            A tile just hit the table. You see your hand. Decide:{" "}
-            <strong>Call</strong>, <strong>Mahjong</strong>, or{" "}
-            <strong>Pass</strong>?
-          </p>
-          <p className="mb-5 text-xs italic text-zinc-500">
-            {total} scenarios — beginners to advanced. Includes trick scenarios where
-            calling is tempting but wrong.
+          <p className="mb-5 text-sm text-zinc-600">
+            {total} scenarios. A tile hits the table — decide whether to
+            Call, Mahjong, or Pass.
           </p>
           <button
             type="button"

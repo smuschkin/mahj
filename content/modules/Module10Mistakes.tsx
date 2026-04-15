@@ -411,13 +411,9 @@ export default function Module10Mistakes() {
 
           <Callout variant="tip">
             <strong>The honesty rule:</strong>{" "}A mistake you reported yourself will
-            almost always be handled gracefully. A mistake you tried to hide and got
-            caught on will not. Mahjong groups remember which one you are.
-          </Callout>
-          <Callout variant="warn">
-            <strong>One thing NOT to do:</strong>{" "}Don&apos;t apologize ten times.
-            One brief &quot;sorry, my fault&quot; is plenty. Excessive apologizing
-            slows the game down more than the original mistake did.
+            almost always be handled gracefully. A mistake you tried to hide will not.
+            One brief &quot;sorry, my fault&quot; is plenty — excessive apologizing slows
+            the game down more than the original mistake did.
           </Callout>
         </LessonScreen>
 

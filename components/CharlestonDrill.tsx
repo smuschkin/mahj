@@ -176,19 +176,12 @@ export function CharlestonDrill() {
     return (
       <DrillShell>
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Practice Drill
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black">
+          <h3 className="mb-3 font-serif text-xl font-black">
             🔄 Charleston Pass Picker
           </h3>
-          <p className="mb-2 text-sm text-zinc-300">
-            We&apos;ll show you {ROUND_COUNT}{" "}hands with 13 tiles each and a
-            target hand. Pick the 3 tiles you&apos;d pass in the Charleston.
-          </p>
-          <p className="mb-5 text-xs text-zinc-400">
-            Get {PASS_THRESHOLD} out of {ROUND_COUNT} right to pass. You need at
-            least 2 of 3 correct picks per round.
+          <p className="mb-5 text-sm text-zinc-300">
+            {ROUND_COUNT} hands with a target hand. Pick the 3 tiles
+            you&apos;d pass in the Charleston.
           </p>
           <button
             type="button"

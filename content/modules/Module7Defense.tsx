@@ -273,13 +273,6 @@ export default function Module7Defense() {
             />
           </div>
 
-          <Callout variant="warn">
-            <strong>The 3-copies rule is your best friend.</strong>{" "}Once 3 of a tile
-            are visible — in discards, in exposed groups, or both — the 4th copy is{" "}
-            <em>always</em>{" "}safe to discard. Train yourself to notice this. Players who
-            track it carefully discard with confidence in the late game; players who
-            don&apos;t end up frozen.
-          </Callout>
         </LessonScreen>
 
         {/* ── 5. Danger zone: middle suits and honors near pairs ── */}
@@ -411,12 +404,6 @@ export default function Module7Defense() {
             </li>
           </ol>
 
-          <Callout variant="tip">
-            <strong>Permission to be cautious:</strong>{" "}Folding feels like giving up.
-            It isn&apos;t. A round where you didn&apos;t win <em>but didn&apos;t pay
-            anyone</em>{" "}is a tie — and ties are a great outcome when you were
-            outplayed. Beginners almost always under-fold and over-pay.
-          </Callout>
           <Callout variant="warn">
             One opponent winning costs you a single payment. <em>You</em>{" "}being the one
             who discards their winning tile is much worse — in most house rules, the

@@ -216,18 +216,12 @@ export function TileIDDrill() {
     return (
       <DrillShell>
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Practice Drill
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black">
+          <h3 className="mb-3 font-serif text-xl font-black">
             🀄 Name That Tile
           </h3>
-          <p className="mb-2 text-sm text-zinc-300">
-            We&apos;ll show you {ROUND_COUNT} tiles one at a time. Pick the
-            correct name from 4 choices.
-          </p>
-          <p className="mb-5 text-xs text-zinc-500">
-            Get {PASS_THRESHOLD} out of {ROUND_COUNT} right to pass.
+          <p className="mb-5 text-sm text-zinc-300">
+            {ROUND_COUNT} tiles, one at a time. Pick the correct name
+            from 4 choices.
           </p>
           <button
             type="button"
