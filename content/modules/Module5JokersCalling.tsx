@@ -124,23 +124,13 @@ export default function Module5JokersCalling() {
             matching tiles</strong> — never a sequence like 1-2-3.
           </p>
 
-          <div className="my-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <CallCard num="3" title="PUNG">
-              You have 2 of a tile. Someone discards a 3rd.
-            </CallCard>
-            <CallCard num="4" title="KONG">
-              You have 3 of a tile. Someone discards a 4th.
-            </CallCard>
-            <CallCard num="5" title="QUINT">
-              You have 4 of a tile (using jokers). Someone discards a 5th.
-            </CallCard>
-            <CallCard num="6" title="SEXTET">
-              You have 5 of a tile (using jokers). Someone discards a 6th. Rare!
-            </CallCard>
-            <CallCard num="14" title="MAHJONG" highlight>
-              The discard completes your <em>entire</em>{" "}hand — you win the round.
-            </CallCard>
-          </div>
+          <ul className="my-3 ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Pung (3)</strong> — you have 2, someone discards a 3rd</li>
+            <li><strong>Kong (4)</strong> — you have 3, someone discards a 4th</li>
+            <li><strong>Quint (5)</strong> — you have 4 (with jokers), someone discards a 5th</li>
+            <li><strong>Sextet (6)</strong> — you have 5 (with jokers), someone discards a 6th</li>
+            <li><strong>Mahjong!</strong> — the discard completes your entire winning hand</li>
+          </ul>
 
         </LessonScreen>
 
