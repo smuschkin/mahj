@@ -26,11 +26,11 @@ type Scenario = {
 };
 
 const SCENARIOS: Scenario[] = [
-  // ── 1. Basic: 3-copies safe ──
+  // ── 1. Beginner: suit read ──
   {
     id: "d1",
     tag: "Beginner",
-    prompt: "Which tile is 100% safe to discard?",
+    prompt: "Player A has a Bam exposure. Which is safer to throw?",
     exposures: [
       {
         player: "Player A",
@@ -41,93 +41,47 @@ const SCENARIOS: Scenario[] = [
         ],
       },
     ],
-    discardInfo: "Discard pile: two 6 Dots, one 9 Crak, one West Wind.",
-    options: ["5 Bam", "6 Dot", "9 Crak", "West Wind"],
+    options: ["5 Bam", "7 Crak"],
     correctIndex: 1,
     explanation: (
       <>
-        <strong>6 Dot</strong> is safest — 2 copies are already in the discard
-        pile, so fewer remain. Player A is building Bams, so avoid Bams.
-        The 9 Crak and West Wind only have 1 copy visible each.
+        <strong>7 Crak.</strong>{" "}Player A is collecting Bams — throwing
+        a Bam feeds them. Craks are a different suit entirely.
       </>
     ),
   },
 
-  // ── 2. Same-suit read ──
+  // ── 2. Beginner: honors read ──
   {
     id: "d2",
     tag: "Beginner",
-    prompt: "Player A has two Bam exposures. Which discard is safest?",
+    prompt: "Player B exposed Red Dragons and North Winds. Which is safer?",
     exposures: [
       {
-        player: "Player A",
+        player: "Player B",
         tiles: [
-          { type: "bam", value: 2 },
-          { type: "bam", value: 2 },
-          { type: "bam", value: 2 },
-        ],
-      },
-      {
-        player: "Player A",
-        tiles: [
-          { type: "bam", value: 8 },
-          { type: "bam", value: 8 },
-          { type: "bam", value: 8 },
+          { type: "dragon", value: "red" },
+          { type: "dragon", value: "red" },
+          { type: "dragon", value: "red" },
         ],
       },
     ],
-    options: ["4 Bam", "7 Crak", "6 Bam", "1 Bam"],
+    options: ["South Wind", "4 Dot"],
     correctIndex: 1,
     explanation: (
       <>
-        <strong>7 Crak</strong> — Player A is clearly on an all-Bam hand.
-        Every Bam you throw is a gift. Craks are a different suit entirely
-        and no one has shown interest in them.
+        <strong>4 Dot.</strong>{" "}Player B is building a Winds &amp; Dragons
+        hand. Throwing another Wind is dangerous. Dots are safe — they
+        don&apos;t want them.
       </>
     ),
   },
 
-  // ── 3. Winds-and-dragons read ──
+  // ── 3. Beginner: like numbers ──
   {
     id: "d3",
-    tag: "Medium",
-    prompt: "Which discard is safest?",
-    exposures: [
-      {
-        player: "Player B",
-        tiles: [
-          { type: "dragon", value: "red" },
-          { type: "dragon", value: "red" },
-          { type: "dragon", value: "red" },
-        ],
-      },
-      {
-        player: "Player B",
-        tiles: [
-          { type: "wind", value: "N" },
-          { type: "wind", value: "N" },
-          { type: "wind", value: "N" },
-        ],
-      },
-    ],
-    discardInfo: "Player B has discarded several Bams and Dots early.",
-    options: ["South Wind", "Green Dragon", "3 Bam", "5 Dot"],
-    correctIndex: 2,
-    explanation: (
-      <>
-        <strong>3 Bam</strong> — Player B is on a winds-and-dragons hand (Red
-        Dragon + North Wind exposed). They&apos;ve been dumping Bams and Dots —
-        those suits are cold for them. South Wind and Green Dragon are
-        extremely dangerous (they likely need more honors).
-      </>
-    ),
-  },
-
-  // ── 4. Like-numbers read ──
-  {
-    id: "d4",
-    tag: "Medium",
-    prompt: "Player C exposed Pung of 5 Crak and Pung of 5 Dot. Which tile is the most dangerous to discard?",
+    tag: "Beginner",
+    prompt: "Player C has Pungs of 5 Crak and 5 Dot. Which is more dangerous?",
     exposures: [
       {
         player: "Player C",
@@ -146,14 +100,30 @@ const SCENARIOS: Scenario[] = [
         ],
       },
     ],
-    options: ["5 Bam", "2 Crak", "8 Dot", "East Wind"],
+    options: ["5 Bam", "8 Dot"],
     correctIndex: 0,
     explanation: (
       <>
-        <strong>5 Bam</strong>{" "}is extremely dangerous. Player C has Pungs of 5
-        Crak and 5 Dot — they&apos;re almost certainly on a like-numbers hand
-        built around 5s. The missing group is probably 5 Bam. Feeding them
-        a 5 Bam could hand them Mahjong.
+        <strong>5 Bam</strong>{" "}is dangerous. They have 5 Craks and 5 Dots —
+        they&apos;re building around 5s. The 5 Bam is probably what they need
+        next.
+      </>
+    ),
+  },
+
+  // ── 4. Beginner: 3 copies visible ──
+  {
+    id: "d4",
+    tag: "Beginner",
+    prompt: "Three 6 Dots are in the discard pile. Is it safe to throw the 4th?",
+    exposures: [],
+    discardInfo: "Three 6 Dots already discarded.",
+    options: ["Safe — nobody can use it", "Dangerous — someone might need it"],
+    correctIndex: 0,
+    explanation: (
+      <>
+        <strong>Safe.</strong>{" "}3 of 4 copies are visible. Nobody can make a
+        group with real tiles. The 4th is safe to throw.
       </>
     ),
   },
