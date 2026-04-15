@@ -107,25 +107,16 @@ export default function Module7Defense() {
         ]}
       /></>}>
         {/* ── 1. What is defense? ── */}
-        <LessonScreen title="🛡️ What Does Defense Even Mean?">
+        <LessonScreen title="🛡️ What Is Defense?">
           <p>
-            In Lesson 10 you learned <strong>offense</strong> — how to pick a hand and
-            build toward it. Defense is the other half of the game:{" "}
-            <strong>not feeding the win</strong>.
-          </p>
-          <p>
-            In American Mahjong, opponents win by completing a 14-tile hand. They get
-            tiles two ways: drawing from the wall, or <em>calling tiles you discard</em>.
-            That second part is where you have power.
-          </p>
-          <p>
-            Every discard is a small gift to the table. Your job is to make sure your
-            gifts go to people who can&apos;t use them.
+            Opponents can call tiles <strong>you discard</strong>. Defense
+            means making sure you don&apos;t throw the tile that wins
+            someone else the game.
           </p>
           <Callout variant="tip">
-            <strong>Beginner reframe:</strong>{" "}Don&apos;t think of defense as
-            &quot;playing scared.&quot; Think of it as <em>not paying</em>{" "}the player
-            across from you because you discarded their winning tile.
+            Defense isn&apos;t playing scared — it&apos;s{" "}
+            <strong>not paying</strong>{" "}the player who wins because you
+            fed them the winning tile.
           </Callout>
         </LessonScreen>
 
