@@ -322,30 +322,13 @@ export default function Module5JokersCalling() {
 
         {/* ── 8. Three rules beginners forget ── */}
         <LessonScreen title="🚨 Rules to Remember">
-          <ul className="space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>Bad call = dead hand.</strong>{" "}If your call doesn&apos;t
-              lead to a valid hand, you can&apos;t win the round.
-            </li>
-            <li>
-              <strong>Discarded Jokers are dead.</strong>{" "}No one can call them.
-            </li>
-            <li>
-              <strong>Expose immediately.</strong>{" "}Tiles go face-up on your rack
-              right away.
-            </li>
-            <li>
-              <strong>Can&apos;t call a Joker for Mahjong.</strong>{" "}Any other
-              tile is fair game.
-            </li>
-            <li>
-              <strong>NEWS, year, and 1122 tiles</strong>{" "}can only be called
-              for Mahjong, not regular exposures.
-            </li>
-            <li>
-              <strong>You can fix an exposure</strong>{" "}until you discard — then
-              it&apos;s locked.
-            </li>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Bad call = dead hand</strong></li>
+            <li><strong>Discarded Jokers are dead</strong> — no one can call them</li>
+            <li><strong>Expose immediately</strong> — face-up on your rack</li>
+            <li><strong>Can&apos;t call a Joker</strong> for Mahjong</li>
+            <li><strong>NEWS, year, 1122 tiles</strong> — Mahjong only, not regular calls</li>
+            <li><strong>You can fix an exposure</strong> until you discard</li>
           </ul>
         </LessonScreen>
 
