@@ -104,7 +104,7 @@ export function PracticeTable() {
   const isCharleston = step.id === "charleston";
 
   return (
-    <div className="mx-auto max-w-[820px] px-4 py-8 sm:px-7">
+    <div className="mx-auto max-w-[820px] px-4 py-6 sm:px-7">
       <Cover
         eyebrow="Setup Walkthrough"
         title="Practice"
@@ -113,7 +113,7 @@ export function PracticeTable() {
       />
 
       {/* Progress dots */}
-      <div className="mb-1">
+      <div className="-mt-4 mb-1">
         <StepDots
           current={stepIndex}
           total={STEPS.length}
