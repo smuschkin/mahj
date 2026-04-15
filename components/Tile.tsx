@@ -583,8 +583,8 @@ function DragonArt({ value, size }: { value: string; size: { w: number; h: numbe
   }
 
   // Match the visible content height of other tiles for consistent alignment
-  const dragonW = Math.round(size.w * 0.8);
-  const dragonH = Math.round(size.h * 0.8);
+  const dragonW = Math.round(size.w * 0.7);
+  const dragonH = Math.round(size.h * 0.7);
 
   return (
     <img
