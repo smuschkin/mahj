@@ -280,6 +280,11 @@ export default function Module4Charleston() {
             <strong>What should you keep vs. pass?</strong>{" "}You&apos;ll learn
             passing strategy in Lesson 6 (Charleston Strategy).
           </Callout>
+          <Callout variant="tip">
+            <strong>Wrong tile count?</strong>{" "}If anyone notices a wrong
+            number of tiles during the Charleston, all tiles go back in
+            and the hand is redealt — no penalty.
+          </Callout>
         </LessonScreen>
 
         {/* ── 7. Second Charleston ── */}
