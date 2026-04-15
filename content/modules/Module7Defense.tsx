@@ -297,8 +297,8 @@ export default function Module7Defense() {
                 read. Normal play.
               </p>
             </div>
-            <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-3">
-              <div className="font-serif text-sm font-black text-[var(--color-accent)]">
+            <div className="rounded-lg border-2 border-[#C8A951] bg-[#FFFBEB] p-3">
+              <div className="font-serif text-sm font-black text-[#C8A951]">
                 1 exposure
               </div>
               <p className="text-[13px] text-zinc-600">
@@ -306,8 +306,8 @@ export default function Module7Defense() {
                 obviously matching tiles.
               </p>
             </div>
-            <div className="rounded-lg border-2 border-[var(--color-red)] bg-[#FFF6F4] p-3">
-              <div className="font-serif text-sm font-black text-[var(--color-red)]">
+            <div className="rounded-lg border-2 border-[#E67E22] bg-[#FFF5EB] p-3">
+              <div className="font-serif text-sm font-black text-[#E67E22]">
                 2 exposures
               </div>
               <p className="text-[13px] text-zinc-600">
