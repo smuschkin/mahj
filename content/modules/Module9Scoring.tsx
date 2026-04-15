@@ -349,10 +349,7 @@ export default function Module9Scoring() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            5 quick questions. Get 4 right to pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={11}
             title="Module 11 Check"

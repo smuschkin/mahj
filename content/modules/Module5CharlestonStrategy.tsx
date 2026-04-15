@@ -10,6 +10,7 @@ import { Quiz } from "@/components/Quiz";
 import { Tile } from "@/components/Tile";
 import { TileRow } from "@/components/TileRow";
 import { CharlestonDrill } from "@/components/CharlestonDrill";
+import { CharlestonSim } from "@/components/CharlestonSim";
 import { getAdjacentModules } from "@/lib/modules";
 
 export default function Module5CharlestonStrategy() {
@@ -79,7 +80,7 @@ export default function Module5CharlestonStrategy() {
           </h4>
           <p>
             Sort your tiles mentally into groups: pairs, matching suits,
-            consecutive numbers, and lonely tiles that don&apos;t connect to
+            consecutive numbers, and Lonely tiles that don&apos;t connect to
             anything.
           </p>
 
@@ -129,21 +130,21 @@ export default function Module5CharlestonStrategy() {
             </div>
             <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
               <div className="font-black text-[var(--color-mid)]">
-                ❌ Pass — lone 1 Crak
+                ❌ Pass — Lone 1 Crak
               </div>
               Isolated, far from your other Craks. Hard to use.
             </div>
             <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px]">
               <div className="font-black text-[var(--color-mid)]">
-                ❌ Pass — lone 9 Dot
+                ❌ Pass — Lone 9 Dot
               </div>
               Sits at the edge of your 7-8 Dot pair. Sacrifice it.
             </div>
             <div className="rounded-md border-l-4 border-[var(--color-red)] bg-white p-3 text-[13px] sm:col-span-2">
               <div className="font-black text-[var(--color-mid)]">
-                ❌ Pass — lone West Wind
+                ❌ Pass — Lone West Wind
               </div>
-              One honor by itself is dead weight unless it pairs up.
+              A single Wind or Dragon by itself is dead weight unless it pairs up.
             </div>
           </div>
 
@@ -201,7 +202,7 @@ export default function Module5CharlestonStrategy() {
           <p>
             By now you should be committing to a direction. If you&apos;ve been
             collecting Bams, pass away your leftover Craks and Dots. If you have
-            a strong pair-based hand, shed your lonely singles.
+            a strong pair-based hand, shed your Lonely singles.
           </p>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
@@ -336,10 +337,7 @@ export default function Module5CharlestonStrategy() {
         </LessonScreen>
 
         {/* ── 8. Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            5 quick questions on Charleston strategy. Get 4 right to pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={5}
             title="Module 5 Check"
@@ -347,7 +345,7 @@ export default function Module5CharlestonStrategy() {
             questions={[
               {
                 question:
-                  "You have a pair of 5 Craks and a lone 1 Crak. What should you do with the 1 Crak?",
+                  "You have a pair of 5 Craks and a Lone 1 Crak. What should you do with the 1 Crak?",
                 options: [
                   "Keep it — same suit as the pair",
                   "Pass it — it's too far from the 5s to be useful",
@@ -356,7 +354,7 @@ export default function Module5CharlestonStrategy() {
                 ],
                 correct: 1,
                 explanation:
-                  "A lone 1 Crak is far from a pair of 5 Craks. It's isolated and unlikely to help. Pass it and keep tiles that connect.",
+                  "A Lone 1 Crak is far from a pair of 5 Craks. It's isolated and unlikely to help. Pass it and keep tiles that connect.",
               },
               {
                 question:
@@ -428,6 +426,9 @@ export default function Module5CharlestonStrategy() {
           </p>
         </LessonScreen>
       </ScreenStepper>
+
+      <SectionHeader>Practice</SectionHeader>
+      <CharlestonSim />
 
       <ModuleNav
         currentModuleNum={5}

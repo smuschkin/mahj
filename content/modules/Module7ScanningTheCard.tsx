@@ -337,10 +337,7 @@ export default function Module7ScanningTheCard() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            4 quick questions. Get 3 right to pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={7}
             title="Module 7 Check"

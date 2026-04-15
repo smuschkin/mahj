@@ -33,9 +33,9 @@ const SCENARIOS: Scenario[] = [
       { type: "crack", value: 7 }, { type: "dot", value: 3 }, { type: "wind", value: "N" },
       { type: "dragon", value: "white" },
     ],
-    bestPasses: [9, 10, 11], // 7 Crak, 3 Dot, North
+    bestPasses: [9, 10, 11, 12], // 7 Crak, 3 Dot, North, Soap
     explanation:
-      "The 7 Crak, 3 Dot, and North Wind fit nothing in an all-Bam hand. The White Dragon (Soap) also doesn't fit, but passing it is riskier — it could help an opponent's year hand. Any 3 of those 4 is a good pass.",
+      "The 7 Crak, 3 Dot, North Wind, and Soap all fit nothing in an all-Bam hand. Any 3 of those 4 are a good pass.",
   },
   {
     handHint: "Going for Winds & Dragons (pungs of winds + pair of Red Dragons)",
@@ -89,9 +89,9 @@ const SCENARIOS: Scenario[] = [
       { type: "crack", value: 7 }, { type: "bam", value: 3 },
       { type: "dot", value: 9 }, { type: "wind", value: "N" },
     ],
-    bestPasses: [9, 10, 11], // 7 Crak, 3 Bam, 9 Dot
+    bestPasses: [9, 10, 11, 12], // 7 Crak, 3 Bam, 9 Dot, North Wind
     explanation:
-      "The 7 Crak, 3 Bam, and 9 Dot don't match any digit in 2026. The North Wind also doesn't fit, but honors are usually safer to hold. Pass the suited junk first.",
+      "The 7 Crak, 3 Bam, 9 Dot, and North Wind don't match any digit in 2026. Any 3 of those 4 are a good pass — keep your 2s, Soaps, 6s, and joker.",
   },
 ];
 
@@ -183,7 +183,7 @@ export function CharlestonDrill() {
             🔄 Charleston Pass Picker
           </h3>
           <p className="mb-2 text-sm text-zinc-300">
-            We&apos;ll show you {ROUND_COUNT} hands with 13 tiles each and a
+            We&apos;ll show you {ROUND_COUNT}{" "}hands with 13 tiles each and a
             target hand. Pick the 3 tiles you&apos;d pass in the Charleston.
           </p>
           <p className="mb-5 text-xs text-zinc-400">

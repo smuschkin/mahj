@@ -505,10 +505,7 @@ export default function Module7Defense() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            5 quick questions. Get 4 right to pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={9}
             title="Module 9 Check"

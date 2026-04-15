@@ -143,64 +143,47 @@ export default function Module5JokersCalling() {
           </div>
 
           <Callout variant="tip">
-            For all of these, just say <strong>&quot;Call!&quot;</strong>{" "}(or{" "}
-            <strong>&quot;Mahjong!&quot;</strong>{" "}if it wins). You don&apos;t
-            need to say &quot;Pung&quot; or &quot;Kong&quot; — the exposure
-            shows what you made.
+            Just say <strong>&quot;Call!&quot;</strong>{" "}(or{" "}
+            <strong>&quot;Mahjong!&quot;</strong>{" "}if it wins). Anyone can
+            call on anyone&apos;s turn — but you must call{" "}
+            <strong>before</strong>{" "}the next player picks up a tile, or
+            it&apos;s too late.
           </Callout>
-
-          <Callout variant="warn">
-            <strong>Anyone</strong>{" "}can call a Pung or Kong, no matter whose turn it
-            is — calling skips the turn order. But you must call <em>before</em>{" "}the
-            next player picks up a tile from the wall, or it&apos;s too late.
-          </Callout>
-          <Callout variant="tip">
-            <strong>One special case:</strong>{" "}a <strong>Mahjong</strong>{" "}call is the
-            <em>only</em>{" "}time you can claim a discard for a <strong>pair</strong>{" "}or a{" "}
-            <strong>single</strong> — and only if that one tile completes your entire
-            winning hand. Otherwise, calls are always for groups of 3 or more.
+          <Callout variant="info">
+            <strong>Mahjong is the only time</strong>{" "}you can claim a
+            discard for a pair or single tile. All other calls require
+            groups of 3 or more.
           </Callout>
         </LessonScreen>
 
         {/* ── 3. How a call works ── */}
         <LessonScreen title="🗣️ How a Call Works">
-          <p>A call has a few quick steps:</p>
           <ol className="ml-6 list-decimal space-y-2 text-[15px]">
             <li>
-              <strong>Say &quot;wait.&quot;</strong>{" "}The instant a discard hits the
-              table that you might want, just say <strong>&quot;wait&quot;</strong> —
-              that pauses the game so the next player doesn&apos;t draw. Take a few
-              seconds to think it through.
+              Say <strong>&quot;wait&quot;</strong> to pause the game
             </li>
             <li>
-              <strong>Then call if you want it.</strong>{" "}If you decide to take the
-              tile, take it and say <strong>&quot;Call!&quot;</strong>{" "}(or{" "}
-              <strong>&quot;Mahjong!&quot;</strong>{" "}if it completes your hand). You
-              don&apos;t need to say &quot;Pung&quot; or &quot;Kong&quot; — the
-              exposure shows what you made. If you decide you don&apos;t want it
-              after all, just say so and play continues.
+              Say <strong>&quot;Call!&quot;</strong> (or <strong>&quot;Mahjong!&quot;</strong>)
+              and take the tile
             </li>
             <li>
-              <strong>Expose your group.</strong>{" "}If you took it for a Pung or Kong,
-              lay all the matching tiles face-up at the front of your rack so
-              everyone can see them.
+              <strong>Expose</strong> the group face-up on your rack
             </li>
             <li>
-              <strong>Discard one tile</strong>{" "}from your hand to keep your tile count
-              correct. Then play continues with the player to your right.
+              <strong>Discard</strong> one tile, play continues to your right
             </li>
           </ol>
           <Callout variant="tip">
-            <strong>&quot;Wait&quot; is the most useful word at the table.</strong> You don&apos;t have to commit the instant a tile lands. Pause the game,
-            think, and then decide. Nobody will rush you as long as you said
-            &quot;wait&quot; first.
+            <strong>&quot;Wait&quot;</strong>{" "}is the most useful word at the
+            table. You don&apos;t have to commit instantly — pause, think,
+            then decide.
           </Callout>
         </LessonScreen>
 
         {/* ── 4. Exposing ── */}
         <LessonScreen title="👀 Exposing: Showing Your Tiles">
           <p>
-            When you call a Pung or Kong, you have to <strong>expose</strong>{" "}the
+            When you call a tile, you have to <strong>expose</strong>{" "}the
             group — lay all the matching tiles face-up at the front of your rack.
           </p>
           <p>
@@ -209,14 +192,20 @@ export default function Module5JokersCalling() {
             hand.
           </p>
 
-          <TileRow
-            background="felt"
-            caption="Example: an exposed Pung of 5 Bam — laid face-up where everyone can see it"
-          >
-            <Tile type="bam" value={5} size="md" highlighted />
-            <Tile type="bam" value={5} size="md" highlighted />
-            <Tile type="bam" value={5} size="md" highlighted />
-          </TileRow>
+          <div className="my-4 rounded-lg border-2 border-[#C9BC8A] bg-[var(--color-light)] p-4">
+            <p className="mb-2 text-center text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+              Exposed on your rack
+            </p>
+            <div className="flex items-end justify-center gap-1.5">
+              <Tile type="bam" value={5} size="md" highlighted />
+              <Tile type="bam" value={5} size="md" highlighted />
+              <Tile type="bam" value={5} size="md" highlighted />
+            </div>
+            <div className="mt-2 h-2 rounded-sm bg-gradient-to-r from-[#8B5A2B] to-[#6B3F1A]" />
+            <p className="mt-2 text-center text-[13px] italic text-zinc-600">
+              3 tiles of 5 Bam — face-up so everyone can see
+            </p>
+          </div>
 
           <Callout variant="warn">
             Once a group is exposed, you <strong>can&apos;t take it back</strong>. Make
@@ -266,7 +255,7 @@ export default function Module5JokersCalling() {
 
           <Callout variant="warn">
             <strong>The pair rule trips everyone up.</strong>{" "}If your hand needs a pair
-            of 5 Craks, you need <em>two real</em> 5 Craks. A joker won&apos;t work.
+            of 5 Craks, you need <em>two real</em>{" "}5 Craks. A joker won&apos;t work.
           </Callout>
         </LessonScreen>
 
@@ -323,33 +312,19 @@ export default function Module5JokersCalling() {
           </Callout>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
-            Rules for the exchange
+            How to exchange
           </h4>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>
-              Only on <strong>your turn</strong> — after drawing from the wall
-              and before you discard
-            </li>
-            <li>
-              You can exchange with <strong>any player&apos;s exposed group</strong>,
-              including your own
-            </li>
-            <li>You must give a <strong>real tile</strong> — not another joker</li>
-            <li>
-              You can do <strong>multiple exchanges</strong>{" "}on the same turn if you
-              have the right tiles
-            </li>
-            <li>
-              You <strong>cannot</strong>{" "}exchange with tiles still in someone&apos;s
-              hand — only exposed groups
-            </li>
-            <li>
-              If you <em>called</em>{" "}a discard this turn, the called exposure itself
-              must be completed from tiles already in your hand —{" "}
-              <strong>you can&apos;t use a joker exchange to make the call legal</strong>.
-              You can still do an exchange afterward, though.
-            </li>
-          </ul>
+          <ol className="ml-6 list-decimal space-y-1 text-[14px] text-zinc-700">
+            <li>Draw from the wall (it must be <strong>your turn</strong>)</li>
+            <li>Place a <strong>real matching tile</strong> on the exposed group</li>
+            <li>Take the <strong>Joker</strong> into your hand</li>
+            <li>Discard as normal</li>
+          </ol>
+          <Callout variant="info">
+            You can exchange from <strong>any</strong>{" "}player&apos;s exposed
+            group — even your own. Multiple exchanges per turn are allowed.
+            You must give a real tile, never another joker.
+          </Callout>
         </LessonScreen>
 
         {/* ── 7. When to call — courtesy-style judgment ── */}
@@ -393,49 +368,41 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── 8. Three rules beginners forget ── */}
-        <LessonScreen title="🚨 Rules Beginners Forget">
-          <p>
-            These are the calling/joker mistakes that trip up almost everyone in their
-            first 10 games. Burn them in:
-          </p>
+        <LessonScreen title="🚨 Rules to Remember">
+          <ul className="space-y-2 text-[14px] text-zinc-700">
+            <li>
+              <strong>Bad call = dead hand.</strong>{" "}If your call doesn&apos;t
+              lead to a valid hand, you can&apos;t win the round.
+            </li>
+            <li>
+              <strong>Discarded Jokers are dead.</strong>{" "}No one can call them.
+            </li>
+            <li>
+              <strong>Expose immediately.</strong>{" "}Tiles go face-up on your rack
+              right away.
+            </li>
+            <li>
+              <strong>Can&apos;t call a Joker for Mahjong.</strong>{" "}Any other
+              tile is fair game.
+            </li>
+            <li>
+              <strong>NEWS, year, and 1122 tiles</strong>{" "}can only be called
+              for Mahjong, not regular exposures.
+            </li>
+            <li>
+              <strong>You can fix an exposure</strong>{" "}until you discard — then
+              it&apos;s locked.
+            </li>
+          </ul>
+        </LessonScreen>
 
-          <DecisionBox title="1. You can't call a tile you don't actually need" bad>
-            If you call but realize you can&apos;t actually complete a valid
-            hand, your hand becomes <strong>&quot;dead&quot;</strong> — you keep
-            playing (you must still discard each turn) but you can&apos;t win.
-            You still pay the winner at the end like any other loser. Some
-            groups add an extra penalty, but that&apos;s a house rule.{" "}
-            <strong>Always</strong>{" "}check before you call.
-          </DecisionBox>
-
-          <DecisionBox title="2. Jokers CANNOT be called from the discard pile" bad>
-            If someone (foolishly) discards a joker, no one can grab it. The joker is
-            dead. This is why nobody discards jokers. When you discard a joker, you can name it &quot;Joker,&quot; &quot;same,&quot; or the name of the previous discard.
-          </DecisionBox>
-
-          <DecisionBox title="3. You have to expose your call IMMEDIATELY" bad>
-            Don&apos;t grab the tile and slide it into your rack — that&apos;s not
-            allowed. The whole group goes face-up at the front of your rack right away.
-          </DecisionBox>
-
-          <DecisionBox title="4. Any tile EXCEPT a Joker can be called for Mahjong" bad>
-            You can call any discarded tile to complete your winning hand — except a Joker. Jokers in the discard pile are always dead.
-          </DecisionBox>
-
-          <DecisionBox title="5. Some tiles can ONLY be called for Mahjong" bad>
-            Tiles in groupings like NEWS, 1122, or year digits (e.g. 2-0-2-6) can only be called to complete Mahjong — not for regular exposures.
-          </DecisionBox>
-
-          <DecisionBox title="6. You can change an exposure until you discard" bad>
-            If you called a tile and exposed a group, you can still change the number and type of tiles in that exposure — but only before you discard. Once you discard, it&apos;s locked in.
-          </DecisionBox>
+        {/* ── Practice ── */}
+        <LessonScreen title="🔔 Practice: Can You Call This?">
+          <CallingDrill />
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            5 quick questions. Get 4 right to pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={6}
             title="Module 6 Check"
@@ -521,9 +488,6 @@ export default function Module5JokersCalling() {
           </p>
         </LessonScreen>
       </ScreenStepper>
-
-      <SectionHeader>Practice</SectionHeader>
-      <CallingDrill />
 
       <ModuleNav
         currentModuleNum={6}

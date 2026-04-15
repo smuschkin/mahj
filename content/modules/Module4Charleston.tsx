@@ -9,7 +9,6 @@ import { ModuleNav } from "@/components/ModuleNav";
 import { Quiz } from "@/components/Quiz";
 import { Tile } from "@/components/Tile";
 
-import { CharlestonSim } from "@/components/CharlestonSim";
 
 import { CharlestonAnimation } from "@/components/CharlestonAnimation";
 import { getAdjacentModules } from "@/lib/modules";
@@ -183,22 +182,27 @@ export default function Module4Charleston() {
         {/* ── 4. How each pass works ── */}
         <LessonScreen title="👉 How Each Pass Works">
           <p>
-            Each pass is the same mechanic: pick{" "}
-            <strong>3 tiles you don&apos;t want</strong>, slide them{" "}
-            <strong>face-down</strong>{" "}to the designated player, and receive 3
-            face-down tiles in return. Add them to your hand.
+            Each pass is the same: pick <strong>3 tiles</strong>, place them{" "}
+            <strong>face-down in a row</strong>, and slide them to the
+            designated player. You receive 3 face-down tiles back.
           </p>
-          <p>
-            You can pass any tiles <em>except</em>{" "}jokers. You can also re-pass tiles
-            you just received from someone else.
+
+          <div className="my-4 flex justify-center gap-2">
+            <div className="h-[48px] w-[36px] rounded-md bg-[#1A4D2E] shadow-sm" />
+            <div className="h-[48px] w-[36px] rounded-md bg-[#1A4D2E] shadow-sm" />
+            <div className="h-[48px] w-[36px] rounded-md bg-[#1A4D2E] shadow-sm" />
+          </div>
+          <p className="text-center text-[12px] italic text-zinc-500">
+            3 tiles, face-down, in a row
+          </p>
+
+          <p className="mt-3">
+            You can pass any tiles <em>except</em>{" "}jokers. You can also
+            re-pass tiles you just received from someone else.
           </p>
           <Callout variant="info">
-            <strong>What should you keep vs. pass?</strong>{" "}You&apos;ll learn the
-            strategy for making smart passing decisions in Module 5.
-          </Callout>
-          <Callout variant="warn">
-            <strong>Never pass a Joker.</strong>{" "}Jokers are gold — you&apos;d be giving
-            away your single most valuable tile.
+            <strong>What should you keep vs. pass?</strong>{" "}You&apos;ll learn
+            passing strategy in Module 5 (Charleston Strategy).
           </Callout>
         </LessonScreen>
 
@@ -214,9 +218,9 @@ export default function Module4Charleston() {
             second Charleston in reverse order:
           </p>
           <ol className="ml-6 list-decimal space-y-1 text-[15px]">
-            <li><strong>Second Left</strong> — pass 3 to your left</li>
-            <li><strong>Second Across</strong> — pass 3 across</li>
-            <li><strong>Second Right</strong> — pass 3 to your right</li>
+            <li><strong>Second Left</strong> — pass 3 face down in a <strong>pyramid</strong> (2 on bottom, 1 on top) to your left — this signals it&apos;s the second Charleston</li>
+            <li><strong>Second Across</strong> — pass 3 face down in a row across</li>
+            <li><strong>Last Right</strong> — pass 3 face down in a row to your right</li>
           </ol>
           <Callout variant="warn">
             <strong>Once the second Charleston starts, you must finish all 3
@@ -231,94 +235,7 @@ export default function Module4Charleston() {
           </Callout>
         </LessonScreen>
 
-        {/* ── 8. Blind pass ── */}
-        <LessonScreen title="🙈 The Blind Pass">
-          <p>
-            Sometimes by the late passes you don&apos;t have 3 tiles you want to
-            give up. A <strong>blind pass</strong>{" "}lets you pass along tiles you
-            just received from another player <em>without looking at them</em>.
-          </p>
-
-          <Callout variant="warn">
-            <strong>When can you blind pass?</strong>{" "}Only on two specific passes:
-            <ul className="mt-1 ml-5 list-disc space-y-0.5">
-              <li>The <strong>first left</strong>{" "}(pass 3 — the last pass of the first Charleston)</li>
-              <li>The <strong>last right</strong>{" "}(pass 6 — the last pass of the second Charleston)</li>
-            </ul>
-            You <strong>cannot</strong>{" "}blind pass on any other pass, including the courtesy.
-          </Callout>
-
-          <p>Here&apos;s how it works:</p>
-          <ol className="ml-6 list-decimal space-y-1 text-[14px] text-zinc-700">
-            <li>
-              When you receive tiles from another player, <strong>don&apos;t look
-              at them yet</strong>
-            </li>
-            <li>
-              Decide how many of your <em>own</em>{" "}tiles you want to pass (0, 1,
-              2, or 3)
-            </li>
-            <li>
-              Pass your chosen tiles plus enough unseen tiles to make 3 total
-            </li>
-            <li>
-              <em>Then</em>{" "}look at whatever unseen tiles you kept
-            </li>
-          </ol>
-
-          <Callout variant="info">
-            <strong>No peeking.</strong>{" "}You must decide before looking. Peeking
-            at the incoming tiles and then deciding to pass them is cheating.
-          </Callout>
-
-          <div className="my-4 rounded-xl border-2 border-dashed border-[var(--color-border)] bg-[var(--color-light)] p-5">
-            <p className="mb-3 text-center text-[13px] font-bold uppercase tracking-wider text-zinc-600">
-              Three valid blind-pass examples
-            </p>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-              <div className="rounded-md bg-white p-3 text-center">
-                <div className="mb-1 flex items-end justify-center gap-1">
-                  <Tile type="bam" value={2} size="sm" />
-                  <Tile type="crack" value={5} size="sm" />
-                  <BlindTile />
-                </div>
-                <p className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
-                  2 yours + 1 blind
-                </p>
-              </div>
-              <div className="rounded-md bg-white p-3 text-center">
-                <div className="mb-1 flex items-end justify-center gap-1">
-                  <Tile type="dot" value={7} size="sm" />
-                  <BlindTile />
-                  <BlindTile />
-                </div>
-                <p className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
-                  1 yours + 2 blind
-                </p>
-              </div>
-              <div className="rounded-md bg-white p-3 text-center">
-                <div className="mb-1 flex items-end justify-center gap-1">
-                  <BlindTile />
-                  <BlindTile />
-                  <BlindTile />
-                </div>
-                <p className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
-                  all 3 blind
-                </p>
-              </div>
-            </div>
-            <p className="mt-3 text-center text-[13px] italic text-zinc-600">
-              All three are legal — you can pass anywhere from 1 to 3 tiles blind.
-            </p>
-          </div>
-
-          <Callout variant="tip">
-            Blind passes are a normal, accepted move. You&apos;re not
-            &quot;cheating&quot; — everyone does it eventually.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 9. The Courtesy — courtesy-style deep dive ── */}
+        {/* ── 8. The Courtesy ── */}
         <LessonScreen title="🤝 The Courtesy Pass (Optional)">
           <p>
             After both Charlestons, you and the player <strong>across</strong>{" "}from
@@ -378,6 +295,51 @@ export default function Module4Charleston() {
           </Callout>
         </LessonScreen>
 
+        {/* ── 9. Blind pass (advanced) ── */}
+        <LessonScreen title="🙈 The Blind Pass (Advanced)">
+          <p>
+            This is a more advanced move — don&apos;t worry about it for your
+            first few games.
+          </p>
+          <p>
+            Sometimes by the late passes you don&apos;t have 3 tiles you want to
+            give up. A <strong>blind pass</strong>{" "}lets you pass along tiles you
+            just received from another player <em>without looking at them</em>.
+          </p>
+
+          <Callout variant="warn">
+            <strong>When can you blind pass?</strong>{" "}Only on two specific passes:
+            <ul className="mt-1 ml-5 list-disc space-y-0.5">
+              <li>The <strong>first left</strong>{" "}(last pass of the first Charleston)</li>
+              <li>The <strong>last right</strong>{" "}(last pass of the second Charleston)</li>
+            </ul>
+            You <strong>cannot</strong>{" "}blind pass on any other pass, including the courtesy.
+          </Callout>
+
+          <p>Here&apos;s how it works:</p>
+          <ol className="ml-6 list-decimal space-y-1 text-[14px] text-zinc-700">
+            <li>
+              When you receive tiles from another player, <strong>don&apos;t look
+              at them yet</strong>
+            </li>
+            <li>
+              Decide how many of your <em>own</em>{" "}tiles you want to pass (0, 1,
+              2, or 3)
+            </li>
+            <li>
+              Pass your chosen tiles plus enough unseen tiles to make 3 total
+            </li>
+            <li>
+              <em>Then</em>{" "}look at whatever unseen tiles you kept
+            </li>
+          </ol>
+
+          <Callout variant="tip">
+            <strong>No peeking.</strong>{" "}You must decide before looking.
+            Blind passes are a normal, accepted move — everyone does it eventually.
+          </Callout>
+        </LessonScreen>
+
         {/* ── Mahjong during the Charleston ── */}
         <LessonScreen title="🏆 Mahjong During the Charleston">
           <p>
@@ -396,10 +358,7 @@ export default function Module4Charleston() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            5 quick questions. Get 4 right to pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={4}
             title="Module 4 Check"
@@ -413,16 +372,16 @@ export default function Module4Charleston() {
                   "Every Charleston pass is exactly 3 tiles, traded face-down with another player.",
               },
               {
-                question: "What's the order of the FIRST Charleston?",
+                question: "What is the full order of passes in the Charleston?",
                 options: [
-                  "Left, across, right",
-                  "Right, across, left",
-                  "Across, right, left",
-                  "Random",
+                  "Right, across, left — then left, across, right",
+                  "Left, across, right — then right, across, left",
+                  "Across, right, left — then left, right, across",
+                  "Right, left, across — then across, left, right",
                 ],
-                correct: 1,
+                correct: 0,
                 explanation:
-                  "First Charleston goes right → across → left. The second Charleston reverses it: left → across → right.",
+                  "First Charleston: right → across → left. Second Charleston (optional): left → across → last right. Then the courtesy pass with the player across.",
               },
               {
                 question: "Can you pass a joker?",
@@ -478,9 +437,6 @@ export default function Module4Charleston() {
           </p>
         </LessonScreen>
       </ScreenStepper>
-
-      <SectionHeader>Practice</SectionHeader>
-      <CharlestonSim />
 
       <ModuleNav
         currentModuleNum={4}

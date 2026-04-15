@@ -383,11 +383,7 @@ export default function Module1TileTrainer() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            Time to lock in what you&apos;ve learned. 6 quick questions — get 4 right to
-            pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={1}
             title="Module 1 Check"

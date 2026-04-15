@@ -450,14 +450,11 @@ export default function Module3SetupDealing() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            5 quick questions. Get 4 right to pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={3}
             title="Module 3 Check"
-            passThreshold={4}
+            passThreshold={5}
             questions={[
               {
                 question: "How many tiles long is each player's wall?",
@@ -503,6 +500,18 @@ export default function Module3SetupDealing() {
                 correct: 3,
                 explanation:
                   "The Dealer (East) rolls the dice. The total tells the Dealer where in their own wall to break.",
+              },
+              {
+                question: "When a wall runs out of tiles during the deal, whose wall is next?",
+                options: [
+                  "The Dealer's wall again",
+                  "The player across",
+                  "The next player to the left",
+                  "Any player can offer their wall",
+                ],
+                correct: 2,
+                explanation:
+                  "When a wall runs out, the next player to the left pushes their wall toward the center. Dealing continues from there.",
               },
             ]}
           />

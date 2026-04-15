@@ -11,15 +11,17 @@ const MODULE_ICONS: Record<number, string> = {
   2: "\u{1F4CB}",
   3: "\u{1F3B2}",
   4: "\u{1F500}",
-  5: "\u{1F0CF}",
-  6: "\u{1F9E0}",
-  7: "\u{1F6E1}\uFE0F",
-  8: "\u{1F91D}",
-  9: "\u{1F4B0}",
-  10: "\u{26A0}\uFE0F",
-  11: "\u{1F4D6}",
-  12: "\u{1F3C6}",
-  13: "\u{1F9E9}",
+  5: "\u{1F9E0}",
+  6: "\u{1F0CF}",
+  7: "\u{1F50D}",
+  8: "\u{1F3AF}",
+  9: "\u{1F6E1}\uFE0F",
+  10: "\u{1F91D}",
+  11: "\u{1F4B0}",
+  12: "\u{26A0}\uFE0F",
+  13: "\u{1F4D6}",
+  14: "\u{1F3C6}",
+  15: "\u{1F9E9}",
 };
 
 export function ModuleList() {
@@ -42,7 +44,7 @@ export function ModuleList() {
               </span>
               <div className="min-w-0 flex-1">
                 <span className="font-serif text-[15px] font-bold text-zinc-400">
-                  {m.name}
+                  {m.num + 1}. {m.name}
                 </span>
                 <p className="text-[13px] text-zinc-400">{m.hook}</p>
               </div>
@@ -64,7 +66,7 @@ export function ModuleList() {
             </span>
             <div className="min-w-0 flex-1">
               <span className="font-serif text-[15px] font-bold text-[var(--color-dark)]">
-                {m.name}
+                {m.num + 1}. {m.name}
               </span>
               <p className="text-[13px] text-zinc-500">{m.hook}</p>
             </div>

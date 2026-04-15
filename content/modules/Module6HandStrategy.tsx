@@ -154,33 +154,24 @@ export default function Module6HandStrategy() {
         {/* ── 5. Joker strategy ── */}
         <LessonScreen title="⭐ Joker Strategy">
           <p>
-            You already know the joker <em>rules</em>{" "}from Module 5. Strategy is about
-            where to actually <em>spend</em>{" "}them.
+            You know the joker rules — here&apos;s how to use them smartly.
           </p>
           <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
             <li>
-              <strong>Save jokers for the hardest-to-find tiles.</strong>{" "}Say
-              your hand needs a pung of 7 Craks and a pung of 3 Bams. Two
-              3-Bams have already been discarded, so only two remain in the
-              wall — use the joker there, not on the 7 Craks that nobody has
-              touched yet.
+              <strong>Save jokers for hard-to-find tiles</strong> — not ones
+              you&apos;ll easily draw
             </li>
             <li>
-              <strong>Don&apos;t waste a joker on a tile you&apos;ll easily draw.</strong> Common middle-suit tiles (4s, 5s, 6s) come around often.
+              <strong>Hold jokers as long as possible</strong> — once exposed,
+              opponents can exchange them away
             </li>
             <li>
-              <strong>Hold jokers as long as possible.</strong>{" "}An unspent joker keeps
-              your options open. The moment you expose it, opponents can try to
-              exchange it away from you.
+              <strong>Never use a joker for a pair</strong> — pairs require
+              two real tiles
             </li>
             <li>
-              <strong>Never plan around a joker for a pair.</strong>{" "}If your target
-              hand has a pair, you need <em>two real tiles</em>{" "}for it — full stop.
-            </li>
-            <li>
-              <strong>Scan exposed groups every turn</strong>{" "}for a joker you could
-              exchange for. Beginners forget this rule constantly. It&apos;s free
-              value.
+              <strong>Scan exposures every turn</strong> — look for jokers
+              you can exchange for. Free value!
             </li>
           </ul>
         </LessonScreen>
@@ -280,54 +271,44 @@ export default function Module6HandStrategy() {
           <div className="my-3 space-y-2">
             <PriorityRow
               rank="1st"
-              what="Tiles in NONE of your candidate hands"
-              why="Zero value to you — no matter which candidate you commit to, you won't need these tiles. Get rid of them first."
+              what="Tiles that fit NONE of your hands"
+              why="No value to you — dump them first"
             />
             <PriorityRow
               rank="2nd"
               what="Tiles already in the discard pile"
-              why='"Safe" discards — fewer can complete a group with them.'
+              why="Safe — fewer players can use them"
             />
             <PriorityRow
               rank="3rd"
-              what="Honors (winds/dragons) you don't need"
-              why="Opponents often don't need them either."
+              what="Winds/Dragons you don't need"
+              why="Usually safe — others often don't need them either"
               tone="danger"
             />
             <PriorityRow
               rank="4th"
               what="Tiles from your weaker backup hand"
-              why="Time to commit to your primary."
+              why="Time to commit to your primary"
               tone="danger"
             />
             <PriorityRow
               rank="Last"
-              what="Tiles your opponents seem to need"
-              why="Last resort. Be strategic — sometimes you have no choice."
+              what="Tiles opponents seem to need"
+              why="Only if you have no other choice"
               tone="danger"
             />
             <PriorityRow
               rank="Never"
               what="Jokers"
-              why="Always useful. Hold them until the very end."
+              why="Always keep them"
               tone="never"
             />
           </div>
 
           <Callout variant="tip">
-            <strong>Example:</strong>{" "}You&apos;re eyeing two candidate hands — one
-            uses Bams and Craks, the other uses Bams and Winds. You have a{" "}
-            <strong>6 Dot</strong>{" "}sitting on your rack. Neither candidate needs
-            Dots, so the 6 Dot is &quot;in none of your candidate hands.&quot;
-            Discard it first — you&apos;re giving up nothing no matter which hand
-            you end up choosing.
-          </Callout>
-
-          <Callout variant="warn">
-            <strong>Read the wall.</strong>{" "}Once <strong>3 of a tile</strong>{" "}are in
-            the discard pile or in exposed groups, no one can ever make a Pung or Kong
-            of it again. That tile is now <em>completely safe</em>{" "}to discard. Train
-            yourself to notice this.
+            <strong>Safe tile tip:</strong>{" "}If 3 copies of a tile are already
+            visible (discards + exposures), it&apos;s completely safe to throw —
+            no one can use it.
           </Callout>
         </LessonScreen>
 
@@ -425,10 +406,7 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── Quiz ── */}
-        <LessonScreen title="🎯 Confidence Check">
-          <p className="text-sm text-zinc-600">
-            5 quick questions. Get 4 right to pass.
-          </p>
+        <LessonScreen title="🎯 Quiz">
           <Quiz
             moduleNum={8}
             title="Module 8 Check"
