@@ -163,53 +163,23 @@ export default function Module7ScanningTheCard() {
           </p>
         </LessonScreen>
 
-        {/* ── 8. Don't commit too early ── */}
-        <LessonScreen title="⚠️ Don&apos;t Commit Too Early">
+        {/* ── 8. When to narrow down ── */}
+        <LessonScreen title="⚠️ When to Narrow Down">
           <p>
-            One of the most common beginner mistakes is locking into a single
-            hand right after the deal. Here&apos;s why that hurts you:
+            You&apos;ve picked 2–3 candidates. Now the question is:{" "}
+            <strong>when do you commit to one?</strong>
           </p>
-          <ul className="ml-6 list-disc space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>Every bad draw stings.</strong>{" "}If you&apos;re only
-              targeting one hand and you draw a tile that doesn&apos;t fit,
-              you&apos;ve wasted a turn. With 2–3 candidates, almost every
-              tile is useful for <em>something</em>.
-            </li>
-            <li>
-              <strong>The Charleston changes everything.</strong>{" "}You&apos;re
-              about to pass 9 tiles and receive 9 new ones. Your hand will
-              look completely different afterward. Don&apos;t decide before
-              the Charleston.
-            </li>
-            <li>
-              <strong>Flexibility is power.</strong>{" "}The longer you stay
-              flexible, the more options you have. Commit too early and
-              you&apos;re stuck. Commit too late and you never finish.
-            </li>
-          </ul>
 
-          <div className="my-4 grid gap-2 sm:grid-cols-3">
-            <div className="rounded-lg border-2 border-[var(--color-green)] bg-[#F4FBF6] p-3 text-center">
-              <div className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-green)]">
-                After the deal
-              </div>
-              <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
-                3 hands
-              </div>
-              <div className="text-[12px] text-zinc-600">
-                Stay open. Pass tiles that fit none of them.
-              </div>
-            </div>
+          <div className="my-4 grid gap-2 sm:grid-cols-2">
             <div className="rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-3 text-center">
               <div className="text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
-                After Charleston
+                Right now
               </div>
               <div className="my-1 font-serif text-2xl font-black text-[var(--color-mid)]">
-                2 hands
+                2–3 hands
               </div>
               <div className="text-[12px] text-zinc-600">
-                Drop the weakest candidate. Keep one backup.
+                Stay flexible. Discard tiles that fit none.
               </div>
             </div>
             <div className="rounded-lg border-2 border-[var(--color-red)] bg-[#FFF6F4] p-3 text-center">
@@ -220,56 +190,14 @@ export default function Module7ScanningTheCard() {
                 1 hand
               </div>
               <div className="text-[12px] text-zinc-600">
-                Commit. Discard tiles from your other candidate.
+                Commit. Dump tiles from your other candidates.
               </div>
             </div>
           </div>
 
           <Callout variant="tip">
-            <strong>Speed comes with practice.</strong>{" "}Your first few games,
-            scanning the card will feel painfully slow. By game 10, you&apos;ll
-            glance at your tiles and see candidates immediately. Don&apos;t
-            rush yourself early on — the table will wait.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 9. Putting it all together ── */}
-        <LessonScreen title="🧩 Putting It All Together">
-          <p>
-            Here&apos;s the full scanning method in one quick checklist. Run
-            through these steps every time you&apos;re dealt in:
-          </p>
-          <ol className="ml-6 list-decimal space-y-2 text-[14px] text-zinc-700">
-            <li>
-              <strong>Sort your rack by suit</strong> — Bams, Craks, Dots,
-              honors, flowers, jokers.
-            </li>
-            <li>
-              <strong>Find your biggest cluster</strong> — which suit or number
-              range dominates?
-            </li>
-            <li>
-              <strong>Spot pairs and triples</strong> — duplicates are your
-              strongest leads.
-            </li>
-            <li>
-              <strong>Check the year hand</strong> — do your tiles match this
-              year&apos;s digits?
-            </li>
-            <li>
-              <strong>Pick 2–3 candidates</strong> — note which tiles overlap
-              and which fit nothing.
-            </li>
-            <li>
-              <strong>Tag your dead tiles</strong> — tiles that fit no candidate
-              are your first discards.
-            </li>
-          </ol>
-          <Callout variant="info">
-            <strong>This gets faster.</strong>{" "}Right now, each step might
-            take a minute. After a few games, the whole process takes 30
-            seconds. Your brain starts pattern-matching before you even finish
-            sorting.
+            Scanning gets faster with practice. Your first few games will
+            feel slow — that&apos;s normal. The table will wait.
           </Callout>
         </LessonScreen>
 
