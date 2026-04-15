@@ -108,9 +108,8 @@ export default function Module12FirstGame() {
         {/* ── 2. The deal ── */}
         <LessonScreen title="🎴 The Deal — Sara Picks Up 13 Tiles">
           <p>
-            The wall is broken, the deal happens (counter-clockwise, 4-4-4-1 — see
-            Lesson 4 if you need a refresher), and Sara picks up her 13 tiles. Here
-            they are, sorted on her rack:
+            The wall is broken, the deal happens (counter-clockwise, 4-4-4-1),
+            and Sara picks up her 13 tiles. Here they are, sorted on her rack:
           </p>
 
           <TileRow caption="Sara's starting 13 tiles">
@@ -174,12 +173,11 @@ export default function Module12FirstGame() {
           <p className="text-[14px] text-zinc-700">
             She&apos;s keeping the East Wind <em>for now</em> — she has only one of
             them, but honors can occasionally pair up. If they don&apos;t, she&apos;ll
-            ditch it on the next pass. (See Lesson 5 for the Charleston decision
-            framework.)
+            ditch it on the next pass.
           </p>
 
           <Callout variant="tip">
-            Sara&apos;s rule of thumb from Lesson 10: pass tiles that fit{" "}
+            Pass tiles that fit{" "}
             <em>none</em>{" "}of your candidate hands first. The 5 Crak, 9 Dot, and Green
             Dragon don&apos;t fit any all-Bam hand on the card.
           </Callout>
@@ -259,7 +257,7 @@ export default function Module12FirstGame() {
           <p className="text-[14px] text-zinc-700">
             She announces clearly:{" "}
             <strong>&quot;Six Crak.&quot;</strong> — and places it face-up in the
-            center. Then she pauses (Lesson 12) before her hand returns to her rack.
+            center. Then she pauses before her hand returns to her rack.
           </p>
         </LessonScreen>
 
@@ -276,7 +274,7 @@ export default function Module12FirstGame() {
           </p>
           <p>
             That single word pauses the game so the next player won&apos;t draw. Now
-            she has a few seconds to do the mental check from Lesson 7:{" "}
+            she has a few seconds to do the mental check:{" "}
             <em>&quot;If I take this and expose four 1-Bams, can my remaining tiles
             still complete a valid hand on the card?&quot;</em>{" "}Yes — her all-Bam hand
             is still very much alive. Safe to take.
@@ -326,8 +324,7 @@ export default function Module12FirstGame() {
             <TurnBadge label="Sara's turn 5" />
             Sara&apos;s turn comes around. Before she draws, she does what every
             experienced player does: she{" "}
-            <strong>scans every exposed group on the table</strong>{" "}for jokers (the
-            Lesson 7 habit).
+            <strong>scans every exposed group on the table</strong>{" "}for jokers.
           </p>
           <p>
             She spots one. The player across the table has an exposed Pung that looks
@@ -345,30 +342,8 @@ export default function Module12FirstGame() {
             Sara has two real 3-Bams in her rack. She could swap one for the Joker.
           </p>
 
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            Should she do it?
-          </h4>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>
-              If she gives away a 3-Bam, she&apos;ll have only one real 3-Bam left.
-              She still needs three for the Pung.
-            </li>
-            <li>
-              But she gains a <strong>second Joker</strong>. With two Jokers, she now
-              has flexible coverage for any of the missing Bams.
-            </li>
-            <li>
-              Net result: she trades one specific tile (3-Bam) for one universal tile
-              (Joker). For her late-game flexibility, that&apos;s a clear win.
-            </li>
-          </ul>
-
           <p>
-            Sara announces clearly:{" "}
-            <em>&quot;Joker exchange — I&apos;ll trade my 3 Bam for the Joker in
-            your group.&quot;</em>{" "}She hands her real 3 Bam <strong>to the player
-            whose rack holds the joker</strong>{" "}(Lesson 12 etiquette: never reach onto
-            someone else&apos;s rack). They make the swap and hand her the Joker.
+            She trades one specific tile for one universal tile — clear win. She announces the exchange, hands her 3 Bam to the player, and receives the Joker.
           </p>
           <p>
             Then she draws from the wall as her normal turn — and gets a useless 9
@@ -401,45 +376,17 @@ export default function Module12FirstGame() {
           />
         </LessonScreen>
 
-        {/* ── 8. Turn 7 — middle game ── */}
-        <LessonScreen title="🎲 Turn 7: One More 2-Bam Needed">
+        {/* ── 8. Turns 7–9 — getting close ── */}
+        <LessonScreen title="🎲 Turns 7–9: Getting Close">
           <p>
-            <TurnBadge label="Sara's turn 7" />
-            A few uneventful turns pass. The wall is shrinking. Sara still needs:
+            A few uneventful turns pass. The wall is shrinking. Sara still needs
+            just <strong>one more 2 Bam</strong> for her Kong. She has 2 Jokers
+            covering the 3-Bams, and her 4-Bam Pung is already complete.
           </p>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>One more <strong>2 Bam</strong>{" "}for her Kong (she has 3 of 4)</li>
-            <li>Two more <strong>3 Bams</strong>{" "}for her Pung — but she has 2 Jokers</li>
-            <li>4-Bam Pung is already complete (3 of 3)</li>
-            <li>1-Bam Kong is already exposed and complete</li>
-          </ul>
           <p>
-            With both Jokers in play as 3-Bams, she only actually needs to draw{" "}
-            <strong>one more 2 Bam</strong>{" "}to complete the entire hand.
-          </p>
-
-          <p>
-            On Turn 7 she draws — and gets a <strong>4 Bam</strong>. That&apos;s a
-            fourth 4-Bam! She doesn&apos;t need it; her 4-Bam Pung only needs three.
-            She could think about whether to keep it as a defensive tile, but
-            it&apos;s a hot tile in the all-Bam suit, so she discards it cleanly:{" "}
-            <strong>&quot;Four Bam.&quot;</strong>
-          </p>
-
-          <Callout variant="tip">
-            Sara could have used the extra 4 Bam in a Quint (5 of a kind) on a
-            different hand, but her current hand doesn&apos;t call for it. Lesson 10
-            principle: <em>discard tiles that fit none of your committed hand</em>.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 9. Turn 9 — one tile away ── */}
-        <LessonScreen title="🔥 Turn 9: One Tile from Mahjong">
-          <p>
-            <TurnBadge label="Sara's turn 9" />
-            Sara draws — nothing useful, a 9 Bam she doesn&apos;t need (her hand
-            doesn&apos;t use 9s). She discards it. She is now <strong>exactly one
-            tile</strong>{" "}from Mahjong.
+            Along the way she draws tiles she doesn&apos;t need — including a fourth
+            4-Bam and a 9 Bam — and discards them cleanly. Discard tiles that fit
+            none of your committed hand.
           </p>
 
           <HandState
@@ -554,7 +501,7 @@ export default function Module12FirstGame() {
         {/* ── 11. The payout ── */}
         <LessonScreen title="💰 The Payout">
           <p>
-            Time to do the math from Lesson 13. Suppose Sara&apos;s practice hand is
+            Time to do the math. Suppose Sara&apos;s practice hand is
             worth <strong>30¢</strong>{" "}on the card (a moderate value).
           </p>
 
@@ -618,55 +565,6 @@ export default function Module12FirstGame() {
           </Callout>
         </LessonScreen>
 
-        {/* ── 12. Key takeaways ── */}
-        <LessonScreen title="🎓 What Sara Did Right">
-          <p>
-            Look back at the whole hand. Sara executed a near-textbook beginner game
-            by doing five specific things:
-          </p>
-
-          <ol className="ml-6 list-decimal space-y-3 text-[14px] text-zinc-700">
-            <li>
-              <strong>Committed to a hand early.</strong>{" "}She picked her all-Bam
-              candidate during the deal and never wavered. Lesson 10.
-            </li>
-            <li>
-              <strong>Passed her junk in the Charleston.</strong>{" "}She got rid of
-              tiles that fit zero of her candidates and held the East Wind one extra
-              pass &quot;just in case,&quot; which is exactly the right caution level.
-              Lesson 5.
-            </li>
-            <li>
-              <strong>Said &quot;wait,&quot; thought it through, then called</strong> when the right tile came along — but not before doing the 2-second
-              &quot;can I still finish a valid hand?&quot; check. Lesson 7.
-            </li>
-            <li>
-              <strong>Spotted and executed the joker exchange.</strong>{" "}Most beginners
-              forget exposed jokers exist. Sara scanned every turn. Modules 6 + 12.
-            </li>
-            <li>
-              <strong>Named every discard out loud, paused before racking</strong>,
-              and called &quot;Mahjong!&quot; the instant the winning tile appeared.
-              Lesson 12.
-            </li>
-          </ol>
-
-          <Callout variant="info">
-            <strong>What about defense?</strong>{" "}This walkthrough focused on offense
-            for clarity, but in a real game Sara would also have been reading the
-            other players&apos; exposures. By Turn 7 she would have noted that the
-            player to her right was building Craks (so Crak discards were safe to
-            them) while the player across had a Dragons hand (so dragon discards were
-            dangerous). Lesson 11.
-          </Callout>
-
-          <Callout variant="tip">
-            <strong>Your turn next.</strong>{" "}The next module — Practice Hands Library
-            — gives you puzzles where <em>you</em>{" "}make the calls Sara made here.
-            That&apos;s where the real learning sticks.
-          </Callout>
-        </LessonScreen>
-
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
@@ -685,7 +583,7 @@ export default function Module12FirstGame() {
                 ],
                 correct: 1,
                 explanation:
-                  "Always do the 2-second mental check before calling. A bad call kills your hand for the round. Lesson 7.",
+                  "Always do the 2-second mental check before calling. A bad call kills your hand for the round.",
               },
               {
                 question:
@@ -698,7 +596,7 @@ export default function Module12FirstGame() {
                 ],
                 correct: 1,
                 explanation:
-                  "Joker exchanges trade specificity for flexibility. With a Joker she can fill in any missing tile in a group of 3+. Lesson 7 strategy.",
+                  "Joker exchanges trade specificity for flexibility. With a Joker she can fill in any missing tile in a group of 3+.",
               },
               {
                 question:
@@ -706,11 +604,11 @@ export default function Module12FirstGame() {
                 options: ["30¢", "60¢", "$1.20", "$2.40"],
                 correct: 1,
                 explanation:
-                  "Standard discard win = 2× hand value. 30¢ × 2 = 60¢. Jokerless bonus does NOT apply because she had Jokers in her final hand. Lesson 13.",
+                  "Standard discard win = 2× hand value. 30¢ × 2 = 60¢. Jokerless bonus does NOT apply because she had Jokers in her final hand.",
               },
               {
                 question:
-                  "On Turn 7 Sara drew a 4-Bam she didn't need (her 4-Bam Pung was already complete). What did she do?",
+                  "During Turns 7–9, Sara drew tiles she didn't need (like a 4th 4-Bam). What did she do?",
                 options: [
                   "Held it as a defensive tile",
                   "Discarded it cleanly, naming it out loud",
@@ -719,7 +617,7 @@ export default function Module12FirstGame() {
                 ],
                 correct: 1,
                 explanation:
-                  "Lesson 10 priority: discard tiles that fit none of your committed hand. The extra 4-Bam had no value to her current hand, so it goes.",
+                  "Discard tiles that fit none of your committed hand. The extra 4-Bam had no value to her current hand, so it goes.",
               },
               {
                 question:
@@ -732,7 +630,7 @@ export default function Module12FirstGame() {
                 ],
                 correct: 2,
                 explanation:
-                  "Hand commitment is the foundation of every other decision. Without picking a target, the discard, call, and joker decisions become impossible. Lesson 10.",
+                  "Hand commitment is the foundation of every other decision. Without picking a target, the discard, call, and joker decisions become impossible.",
               },
             ]}
           />
@@ -743,8 +641,7 @@ export default function Module12FirstGame() {
           <p>
             You just watched a full hand of American Mahjong play out — from the deal
             through the Charleston, through a Kong call, a joker exchange, and a
-            winning discard. Every decision Sara made connects back to a specific
-            module in this app.
+            winning discard.
           </p>
           <p>
             <strong>What&apos;s next:</strong>{" "}Lesson 16 is the{" "}
