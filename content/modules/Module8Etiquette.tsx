@@ -94,36 +94,16 @@ export default function Module8Etiquette() {
         </LessonScreen>
 
         {/* ── 3. Misnamed discard rule ── */}
-        <LessonScreen title="⚠️ The Misnamed-Discard Rule (Official Penalty)">
+        <LessonScreen title="⚠️ The Misnamed-Discard Rule">
           <p>
-            This is an actual NMJL rule with teeth. Read it twice — it&apos;s the
-            etiquette rule with the biggest financial consequence in the entire game.
+            If you say the wrong name when discarding, there are real
+            consequences (NMJL Article 67):
           </p>
-
-          <div className="my-3 rounded-xl border-2 border-[var(--color-red)] bg-[#FFF6F4] p-4">
-            <h4 className="mb-2 font-serif text-base font-black text-[var(--color-red)]">
-              Article 67 — Misnamed Discards (NMJL)
-            </h4>
-            <ul className="ml-5 list-disc space-y-1 text-[13px] text-zinc-700">
-              <li>
-                <strong>A tile cannot be claimed until it is correctly named.</strong> If a player calls it based on the wrong name, the call is invalid.
-              </li>
-              <li>
-                If another player makes an <strong>exposure</strong>{" "}(Pung/Kong) based
-                on a misnamed tile, <strong>that player&apos;s hand is dead</strong>.
-                The misnamer is <em>not</em>{" "}penalized — the error belongs to whoever
-                called.
-              </li>
-              <li>
-                If a player calls <strong>Mahjong</strong>{" "}on a misnamed tile, the
-                Mahjong claim is <strong>still valid</strong> — and the misnamer pays
-                the winner the <strong>full amount all three losers would
-                have paid combined</strong>. The other two players don&apos;t pay
-                anything.
-              </li>
-            </ul>
-          </div>
-
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>A tile can&apos;t be claimed</strong>{" "}until it&apos;s correctly named</li>
+            <li>If someone <strong>calls based on the wrong name</strong>, their call is invalid</li>
+            <li>If someone calls <strong>Mahjong</strong>{" "}on a misnamed tile, the misnamer pays for all three losers</li>
+          </ul>
           <Callout variant="tip">
             <strong>Beginner habit:</strong>{" "}Look at the tile, say its name,{" "}
             <em>then</em>{" "}let go.
