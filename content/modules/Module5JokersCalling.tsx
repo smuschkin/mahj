@@ -328,7 +328,7 @@ export default function Module5JokersCalling() {
             <li><strong>Expose immediately after you call</strong> — the group goes face-up on your rack right away</li>
             <li><strong>Can&apos;t call a Joker</strong> — Jokers in the discard pile are always dead</li>
             <li><strong>Calls are for groups of 3+</strong> — the only exception is Mahjong, where you can call any tile that completes your hand</li>
-            <li><strong>You can change an exposure</strong> — if you made a mistake, you can fix the tiles in your exposed group before you discard. Once you discard, it&apos;s locked</li>
+            <li><strong>Exposures are permanent</strong> — once you call and expose, you can&apos;t change it</li>
           </ul>
         </LessonScreen>
 
