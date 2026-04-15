@@ -256,7 +256,7 @@ const SCENARIOS: Scenario[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>Avoid Dots.</strong> No exposures doesn&apos;t mean no info —
+        <strong>Avoid Dots.</strong>{" "}No exposures doesn&apos;t mean no info —
         their <em>discards</em>{" "}are a tell. They&apos;ve dumped every suit
         except Dots, plus all their honors. They&apos;re almost certainly on
         a concealed Dots hand. The smile confirms it. Track what&apos;s{" "}
