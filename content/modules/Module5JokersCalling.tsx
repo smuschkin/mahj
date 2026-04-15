@@ -90,8 +90,8 @@ export default function Module5JokersCalling() {
               "Know when you can grab a discarded tile, what you must do when you grab one, and how jokers really work — including the joker exchange.",
           },
           { label: "Estimated time", value: "8–10 minutes" },
-          { label: "Prerequisite", value: "Module 5 (Charleston Strategy)" },
-          { label: "Unlocks", value: "Module 7 (Scanning the Card)" },
+          { label: "Prerequisite", value: "Lesson 6 (Charleston Strategy)" },
+          { label: "Unlocks", value: "Lesson 8 (Scanning the Card)" },
           {
             label: "Why it matters",
             value:
@@ -216,7 +216,7 @@ export default function Module5JokersCalling() {
         {/* ── 5. Jokers — where they CAN go ── */}
         <LessonScreen title="⭐ Jokers: Where They CAN Go">
           <p>
-            You met jokers in Module 1 — the gold wild-card tiles. Now let&apos;s get
+            You met jokers in Lesson 2 — the gold wild-card tiles. Now let&apos;s get
             specific about what they can and can&apos;t do.
           </p>
 
@@ -405,7 +405,7 @@ export default function Module5JokersCalling() {
         <LessonScreen title="">
           <Quiz
             moduleNum={6}
-            title="Module 6 Check"
+            title="Lesson 7 Check"
             passThreshold={4}
             questions={[
               {
@@ -474,14 +474,14 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 6 Complete">
+        <LessonScreen title="🎉 Lesson 7 Complete">
           <p>
             You now know the trickiest mechanical rules in American Mahjong: calling,
             exposing, and the joker exchange. These are the rules that separate
             confident players from nervous ones.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 7 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 8 covers{" "}
             <strong>Scanning the Card</strong> — picking which hand to build toward,
             staying flexible, and the all-important &quot;what would you discard?&quot;
             thinking.

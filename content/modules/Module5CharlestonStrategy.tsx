@@ -42,8 +42,8 @@ export default function Module5CharlestonStrategy() {
                     "Learn how to decide what to keep, what to pass, and how to use each Charleston pass strategically.",
                 },
                 { label: "Estimated time", value: "5–7 minutes" },
-                { label: "Prerequisite", value: "Module 4 (The Charleston)" },
-                { label: "Unlocks", value: "Module 6" },
+                { label: "Prerequisite", value: "Lesson 5 (The Charleston)" },
+                { label: "Unlocks", value: "Lesson 7" },
               ]}
             />
           </>
@@ -52,7 +52,7 @@ export default function Module5CharlestonStrategy() {
         {/* ── 1. Strategy overview ── */}
         <LessonScreen title="🧠 Thinking Through the Charleston">
           <p>
-            Module 4 taught you <em>how</em>{" "}the Charleston works — the
+            Lesson 5 taught you <em>how</em>{" "}the Charleston works — the
             directions, the rules, the blind pass. Now we&apos;ll focus on the
             part that wins games:{" "}
             <strong>what to keep, what to pass, and why</strong>.
@@ -340,7 +340,7 @@ export default function Module5CharlestonStrategy() {
         <LessonScreen title="">
           <Quiz
             moduleNum={5}
-            title="Module 5 Check"
+            title="Lesson 6 Check"
             passThreshold={4}
             questions={[
               {
@@ -413,14 +413,14 @@ export default function Module5CharlestonStrategy() {
         </LessonScreen>
 
         {/* ── 9. Completion ── */}
-        <LessonScreen title="🎉 Module 5 Complete">
+        <LessonScreen title="🎉 Lesson 6 Complete">
           <p>
             You now have a strategic framework for the Charleston. You know how
             to group your tiles, identify junk, read what comes back, and decide
             when the courtesy is worth it.
           </p>
           <p>
-            <strong>What&apos;s next:</strong> Module 6 takes you deeper into
+            <strong>What&apos;s next:</strong> Lesson 7 takes you deeper into
             the game itself — building your hand, reading the card, and making
             smart choices during play.
           </p>

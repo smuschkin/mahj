@@ -51,8 +51,8 @@ export default function Module8Etiquette() {
               "Learn the announcing rules, the official misnamed-tile penalty, the pause-before-racking convention, and the social customs that make mahjong fun for everyone.",
           },
           { label: "Estimated time", value: "6–8 minutes" },
-          { label: "Prerequisite", value: "Module 9 (Defense & Wall Awareness)" },
-          { label: "Unlocks", value: "Module 11 (Scoring & Payouts)" },
+          { label: "Prerequisite", value: "Lesson 10 (Defense & Wall Awareness)" },
+          { label: "Unlocks", value: "Lesson 12 (Scoring & Payouts)" },
           {
             label: "Why it matters",
             value:
@@ -311,7 +311,7 @@ export default function Module8Etiquette() {
         <LessonScreen title="">
           <Quiz
             moduleNum={10}
-            title="Module 10 Check"
+            title="Lesson 11 Check"
             passThreshold={4}
             questions={[
               {
@@ -383,7 +383,7 @@ export default function Module8Etiquette() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 10 Complete">
+        <LessonScreen title="🎉 Lesson 11 Complete">
           <p>
             You now know the table customs that separate a guest who gets invited back
             from one who doesn&apos;t. You know the official rules with teeth (naming
@@ -391,7 +391,7 @@ export default function Module8Etiquette() {
             ones that just make the game pleasant.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 11 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 12 covers{" "}
             <strong>Scoring &amp; Payouts</strong> — how the money actually moves at
             the end of a hand: who pays whom, how doubles work, what concealed hands
             are worth, and the dead-hand penalty.

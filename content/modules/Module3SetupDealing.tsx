@@ -34,8 +34,8 @@ export default function Module3SetupDealing() {
               "Confidently set up a fresh game from scratch — wash, build the wall, roll for East, take seats, break the wall, and deal.",
           },
           { label: "Estimated time", value: "7–9 minutes" },
-          { label: "Prerequisite", value: "Module 2 (Reading the Card)" },
-          { label: "Unlocks", value: "Module 4 (The Charleston)" },
+          { label: "Prerequisite", value: "Lesson 3 (Reading the Card)" },
+          { label: "Unlocks", value: "Lesson 5 (The Charleston)" },
           {
             label: "Why it matters",
             value:
@@ -445,7 +445,7 @@ export default function Module3SetupDealing() {
           </p>
           <p>
             Next comes the <strong>Charleston</strong> — the unique trading ritual that
-            happens before any play begins. We&apos;ll cover that in Module 4.
+            happens before any play begins. We&apos;ll cover that in Lesson 5.
           </p>
         </LessonScreen>
 
@@ -453,7 +453,7 @@ export default function Module3SetupDealing() {
         <LessonScreen title="">
           <Quiz
             moduleNum={3}
-            title="Module 3 Check"
+            title="Lesson 4 Check"
             passThreshold={5}
             questions={[
               {
@@ -518,13 +518,13 @@ export default function Module3SetupDealing() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 3 Complete">
+        <LessonScreen title="🎉 Lesson 4 Complete">
           <p>
             You can now set up a fresh game of American Mahjong from scratch — something
             most apps don&apos;t even try to teach.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 4 covers the{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 5 covers the{" "}
             <strong>Charleston</strong> — the unique tile-trading ritual that happens{" "}
             <em>before</em>{" "}the game really starts.
           </p>

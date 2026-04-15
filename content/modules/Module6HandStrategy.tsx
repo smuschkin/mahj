@@ -91,8 +91,8 @@ export default function Module6HandStrategy() {
               "Stay flexible early, commit later, manage jokers wisely, and make sharper discard decisions every turn.",
           },
           { label: "Estimated time", value: "8–10 minutes" },
-          { label: "Prerequisite", value: "Module 7 (Scanning the Card)" },
-          { label: "Unlocks", value: "Module 9 (Defense)" },
+          { label: "Prerequisite", value: "Lesson 8 (Scanning the Card)" },
+          { label: "Unlocks", value: "Lesson 10 (Defense)" },
           {
             label: "Why it matters",
             value:
@@ -374,7 +374,7 @@ export default function Module6HandStrategy() {
         <LessonScreen title="">
           <Quiz
             moduleNum={8}
-            title="Module 8 Check"
+            title="Lesson 9 Check"
             passThreshold={4}
             questions={[
               {
@@ -439,14 +439,14 @@ export default function Module6HandStrategy() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 8 Complete">
+        <LessonScreen title="🎉 Lesson 9 Complete">
           <p>
             You now know how to think like an American Mahjong player: stay flexible
             early, commit late, manage jokers, and use a discard framework instead of
             guessing.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 9 covers <strong>Defense</strong>{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 10 covers <strong>Defense</strong>{" "}
             — how to read the discards and exposures coming from your opponents, and
             how to avoid feeding them the tile that wins them the game.
           </p>

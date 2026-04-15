@@ -189,8 +189,8 @@ export default function Module4Charleston() {
               "Understand the full Charleston sequence — directions, blind passes, courtesy mechanics, and when you can declare Mahjong mid-Charleston.",
           },
           { label: "Estimated time", value: "5–7 minutes" },
-          { label: "Prerequisite", value: "Module 3 (Setup & Dealing)" },
-          { label: "Unlocks", value: "Module 5 (Charleston Strategy)" },
+          { label: "Prerequisite", value: "Lesson 4 (Setup & Dealing)" },
+          { label: "Unlocks", value: "Lesson 6 (Charleston Strategy)" },
           {
             label: "Why it matters",
             value:
@@ -278,7 +278,7 @@ export default function Module4Charleston() {
           </p>
           <Callout variant="info">
             <strong>What should you keep vs. pass?</strong>{" "}You&apos;ll learn
-            passing strategy in Module 5 (Charleston Strategy).
+            passing strategy in Lesson 6 (Charleston Strategy).
           </Callout>
         </LessonScreen>
 
@@ -435,7 +435,7 @@ export default function Module4Charleston() {
         <LessonScreen title="">
           <Quiz
             moduleNum={4}
-            title="Module 4 Check"
+            title="Lesson 5 Check"
             passThreshold={4}
             questions={[
               {
@@ -498,14 +498,14 @@ export default function Module4Charleston() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 4 Complete">
+        <LessonScreen title="🎉 Lesson 5 Complete">
           <p>
             You now understand the Charleston — the trading ritual that makes American
             Mahjong unique. You know the directions, blind passes, the courtesy, and
             when you can stop.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 5 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 6 covers{" "}
             <strong>Charleston Strategy</strong> — what to keep, what to pass, and how
             to use each pass to shape your hand.
           </p>

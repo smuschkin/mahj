@@ -86,8 +86,8 @@ export default function Module2ReadingTheCard() {
               "Understand every symbol, color, and pattern on the NMJL card so you can scan it confidently during a real game.",
           },
           { label: "Estimated time", value: "7–10 minutes" },
-          { label: "Prerequisite", value: "Module 1 (Tile Trainer)" },
-          { label: "Unlocks", value: "Module 3 (Setup & Dealing)" },
+          { label: "Prerequisite", value: "Lesson 2 (Tile Trainer)" },
+          { label: "Unlocks", value: "Lesson 4 (Setup & Dealing)" },
           {
             label: "Why it matters",
             value:
@@ -318,7 +318,7 @@ export default function Module2ReadingTheCard() {
             <strong>Jokers</strong>{" "}can substitute for any tile in a group of{" "}
             <strong>3 or more</strong>{" "}(pungs, kongs, quints, sextets). They{" "}
             <strong>cannot</strong>{" "}substitute in pairs or singles. You&apos;ll learn
-            more about jokers in Module 5.
+            more about jokers in Lesson 6.
           </Callout>
         </LessonScreen>
 
@@ -669,7 +669,7 @@ export default function Module2ReadingTheCard() {
           <Callout variant="tip">
             <strong>Keep 2–3 candidate hands in mind</strong>{" "}as you play.
             You don&apos;t have to commit to one right away — more on this
-            in Module 8 (Hand Strategy).
+            in Lesson 9 (Hand Strategy).
           </Callout>
         </LessonScreen>
 
@@ -812,7 +812,7 @@ export default function Module2ReadingTheCard() {
           <Callout variant="tip">
             As a beginner, start with <strong>X 25</strong>{" "}hands — they&apos;re
             the easiest to complete since you can call tiles. You&apos;ll
-            learn more about payouts in Module 11 (Scoring).
+            learn more about payouts in Lesson 12 (Scoring).
           </Callout>
         </LessonScreen>
 
@@ -820,7 +820,7 @@ export default function Module2ReadingTheCard() {
         <LessonScreen title="">
           <Quiz
             moduleNum={2}
-            title="Module 2 Check"
+            title="Lesson 3 Check"
             passThreshold={4}
             questions={[
               {
@@ -882,13 +882,13 @@ export default function Module2ReadingTheCard() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 2 Complete">
+        <LessonScreen title="🎉 Lesson 3 Complete">
           <p>
             You can now pick up an NMJL card and actually read it — the colors, the
             symbols, the patterns, the groupings. That&apos;s a huge step.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 3 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 4 covers{" "}
             <strong>Setup &amp; Dealing</strong> — how to build the walls, pick the
             dealer, and deal tiles so you can start playing.
           </p>

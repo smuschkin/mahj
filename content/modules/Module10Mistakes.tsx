@@ -72,8 +72,8 @@ export default function Module10Mistakes() {
               "Recognize the most common beginner mistakes before they happen, and know exactly what to do when they happen anyway.",
           },
           { label: "Estimated time", value: "8–10 minutes" },
-          { label: "Prerequisite", value: "Module 11 (Scoring & Payouts)" },
-          { label: "Unlocks", value: "Module 13 (Glossary)" },
+          { label: "Prerequisite", value: "Lesson 12 (Scoring & Payouts)" },
+          { label: "Unlocks", value: "Lesson 14 (Glossary)" },
           {
             label: "Why it matters",
             value:
@@ -304,7 +304,7 @@ export default function Module10Mistakes() {
             what={
               <>
                 You announced a tile by the wrong name as you placed it. (Covered in
-                full in Module 10 — NMJL Article 67.)
+                full in Lesson 11 — NMJL Article 67.)
               </>
             }
             cost={
@@ -435,7 +435,7 @@ export default function Module10Mistakes() {
             </li>
             <li>
               <strong>Passing on a tile you could call.</strong>{" "}Just because you{" "}
-              <em>can</em>{" "}call doesn&apos;t mean you should. Module 6 covered this.
+              <em>can</em>{" "}call doesn&apos;t mean you should. Lesson 7 covered this.
             </li>
             <li>
               <strong>Changing your target hand mid-game.</strong>{" "}Flexibility is
@@ -456,7 +456,7 @@ export default function Module10Mistakes() {
         <LessonScreen title="">
           <Quiz
             moduleNum={12}
-            title="Module 12 Check"
+            title="Lesson 13 Check"
             passThreshold={4}
             questions={[
               {
@@ -529,7 +529,7 @@ export default function Module10Mistakes() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 12 Complete">
+        <LessonScreen title="🎉 Lesson 13 Complete">
           <p>
             You now know the most common errors that derail beginners — and exactly
             what happens when each one occurs. More importantly, you know the 4-step
@@ -537,7 +537,7 @@ export default function Module10Mistakes() {
             decide.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 13 is the{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 14 is the{" "}
             <strong>Glossary</strong> — every term you&apos;ve learned, defined and
             cross-linked, always one tap away from any screen in the app.
           </p>

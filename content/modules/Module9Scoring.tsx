@@ -92,8 +92,8 @@ export default function Module9Scoring() {
               "Know exactly who pays whom after every hand. Once you see the pattern, it's easy.",
           },
           { label: "Estimated time", value: "6–8 minutes" },
-          { label: "Prerequisite", value: "Module 10 (Etiquette)" },
-          { label: "Unlocks", value: "Module 12 (Common Mistakes & Recovery)" },
+          { label: "Prerequisite", value: "Lesson 11 (Etiquette)" },
+          { label: "Unlocks", value: "Lesson 13 (Common Mistakes & Recovery)" },
         ]}
       /></>}>
         {/* ── 1. The big picture ── */}
@@ -301,7 +301,7 @@ export default function Module9Scoring() {
             Misnamed discard (Article 67)
           </h4>
           <p className="text-[14px] text-zinc-700">
-            Same rule covered in Module 10: the win is valid and the misnamer alone pays for all three losers.
+            Same rule covered in Lesson 11: the win is valid and the misnamer alone pays for all three losers.
           </p>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
@@ -345,7 +345,7 @@ export default function Module9Scoring() {
         <LessonScreen title="">
           <Quiz
             moduleNum={11}
-            title="Module 11 Check"
+            title="Lesson 12 Check"
             passThreshold={4}
             questions={[
               {
@@ -402,7 +402,7 @@ export default function Module9Scoring() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 11 Complete">
+        <LessonScreen title="🎉 Lesson 12 Complete">
           <p>
             You now know exactly who pays whom and how much. The pattern is
             simple: start with the hand value, double for discarder or
@@ -410,7 +410,7 @@ export default function Module9Scoring() {
             situations.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 12 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 13 covers{" "}
             <strong>Common Mistakes</strong> — the errors every beginner
             makes, and how to recover from them gracefully.
           </p>

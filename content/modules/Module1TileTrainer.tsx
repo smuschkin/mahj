@@ -33,8 +33,8 @@ export default function Module1TileTrainer() {
               "Recognize all 152 tiles and name each category confidently.",
           },
           { label: "Estimated time", value: "6–8 minutes" },
-          { label: "Prerequisite", value: "Module 0 (Welcome)" },
-          { label: "Unlocks", value: "Module 2 (Reading the Card)" },
+          { label: "Prerequisite", value: "Lesson 1 (Welcome)" },
+          { label: "Unlocks", value: "Lesson 3 (Reading the Card)" },
         ]}
       /></>}>
         {/* ── Intro ── */}
@@ -288,7 +288,7 @@ export default function Module1TileTrainer() {
           <p>
             There are <strong>8 Jokers</strong>. They can substitute for any tile
             in a group of 3 or more — but never in pairs. You&apos;ll learn the
-            full joker rules in Module 5.
+            full joker rules in Lesson 6.
           </p>
           <TileRow caption="The 8 Jokers">
             <div className="flex flex-wrap justify-center gap-2">
@@ -403,7 +403,7 @@ export default function Module1TileTrainer() {
         <LessonScreen title="">
           <Quiz
             moduleNum={1}
-            title="Module 1 Check"
+            title="Lesson 2 Check"
             passThreshold={4}
             questions={[
               {
@@ -458,13 +458,13 @@ export default function Module1TileTrainer() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 1 Complete">
+        <LessonScreen title="🎉 Lesson 2 Complete">
           <p>
             You can now recognize all 152 tiles in an American Mahjong set. That&apos;s the
             foundation everything else is built on.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}in Module 2, you&apos;ll learn how to{" "}
+            <strong>What&apos;s next:</strong>{" "}in Lesson 3, you&apos;ll learn how to{" "}
             <strong>read the NMJL card</strong> — the blueprint for every winning hand,
             including the symbols, colors, and patterns you&apos;ll use every game.
           </p>

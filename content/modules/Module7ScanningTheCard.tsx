@@ -37,8 +37,8 @@ export default function Module7ScanningTheCard() {
                     "Learn to quickly scan your tiles against the card and identify 2\u20133 candidate hands.",
                 },
                 { label: "Estimated time", value: "5\u20137 minutes" },
-                { label: "Prerequisite", value: "Module 6 (Jokers & Calling)" },
-                { label: "Unlocks", value: "Module 8 (Hand Strategy)" },
+                { label: "Prerequisite", value: "Lesson 7 (Jokers & Calling)" },
+                { label: "Unlocks", value: "Lesson 9 (Hand Strategy)" },
               ]}
             />
           </>
@@ -340,7 +340,7 @@ export default function Module7ScanningTheCard() {
         <LessonScreen title="">
           <Quiz
             moduleNum={7}
-            title="Module 7 Check"
+            title="Lesson 8 Check"
             passThreshold={3}
             questions={[
               {
@@ -400,7 +400,7 @@ export default function Module7ScanningTheCard() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Module 7 Complete">
+        <LessonScreen title="🎉 Lesson 8 Complete">
           <p>
             You now have a repeatable method for scanning your tiles against
             the card. Sort, cluster, spot duplicates, check the year hand,
@@ -408,7 +408,7 @@ export default function Module7ScanningTheCard() {
             nature.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Module 8 covers{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 9 covers{" "}
             <strong>Hand Strategy</strong> — how to narrow your candidates as
             the game progresses, when to commit, and how to make smart discard
             decisions every turn.

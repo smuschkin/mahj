@@ -23,10 +23,10 @@ export default function Module0Welcome() {
       <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
-          { label: "Goal", value: "Set expectations and get you ready for Module 1." },
+          { label: "Goal", value: "Set expectations and get you ready for Lesson 2." },
           { label: "Estimated time", value: "3–4 minutes" },
           { label: "Prerequisite", value: "None — start here" },
-          { label: "Unlocks", value: "Module 1 (Tile Trainer)" },
+          { label: "Unlocks", value: "Lesson 2 (Tile Trainer)" },
         ]}
       /></>}>
         <LessonScreen title="👋 Welcome to MAHJ">
@@ -172,7 +172,7 @@ export default function Module0Welcome() {
         <LessonScreen title="🎉 You're Ready">
           <p>
             That&apos;s everything you need to know before we start. Next up is{" "}
-            <strong>Module 1</strong>, where you&apos;ll learn to recognize all 152 tiles
+            <strong>Lesson 2</strong>, where you&apos;ll learn to recognize all 152 tiles
             in an American Mahjong set — organized into 5 simple groups.
           </p>
           <p>It takes about 6–8 minutes. Let&apos;s go.</p>
