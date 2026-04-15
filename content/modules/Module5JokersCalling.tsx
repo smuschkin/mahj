@@ -394,16 +394,16 @@ export default function Module5JokersCalling() {
               },
               {
                 question:
-                  "What happens if you call a Pung but can't complete a valid hand?",
+                  "You called a Pung but realize it doesn't fit your target hand. What do you do?",
                 options: [
-                  "You lose the tile",
-                  "Nothing",
-                  "Your hand is 'dead' — keep playing but you can't win",
+                  "Your hand is automatically dead",
+                  "Check if the exposure fits a different hand on the card",
+                  "Put the tiles back and pretend it didn't happen",
                   "You start over",
                 ],
-                correct: 2,
+                correct: 1,
                 explanation:
-                  "A bad call kills your hand. You finish the round, can't win, and still pay the winner at the end. Always check before you call.",
+                  "Don't panic — your exposure might fit a different hand on the card. Your hand is only dead if the exposed group doesn't work for ANY valid hand. Always look for alternatives before giving up.",
               },
             ]}
           />
