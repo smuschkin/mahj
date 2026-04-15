@@ -34,10 +34,10 @@ const SCENARIOS: Scenario[] = [
     tag: "Beginner",
     discard: { type: "bam", value: 5 },
     hand: [
-      { type: "bam", value: 5 },
-      { type: "bam", value: 5 },
       { type: "bam", value: 3 },
       { type: "bam", value: 3 },
+      { type: "bam", value: 5 },
+      { type: "bam", value: 5 },
       { type: "bam", value: 7 },
       { type: "bam", value: 7 },
       { type: "bam", value: 9 },
@@ -48,7 +48,7 @@ const SCENARIOS: Scenario[] = [
       { type: "dot", value: 6 },
       { type: "joker" },
     ],
-    context: "Mid-game. You're committed to an all-Bam hand.",
+    context: "Mid-game. You're building an all-Bam hand and need a third 5 Bam for a Pung.",
     correct: "call",
     explanation: (
       <>
