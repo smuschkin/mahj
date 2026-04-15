@@ -54,13 +54,13 @@ function ThreatStage({
     tone === "alarm"
       ? "border-[var(--color-red)] bg-[#FFF6F4]"
       : tone === "alert"
-        ? "border-[var(--color-accent)] bg-[#E8F5EC]"
+        ? "border-[#C8A951] bg-[#FFFBEB]"
         : "border-[var(--color-green)] bg-[#F4FBF6]";
   const labelColor =
     tone === "alarm"
       ? "text-[var(--color-red)]"
       : tone === "alert"
-        ? "text-[var(--color-accent)]"
+        ? "text-[#C8A951]"
         : "text-[var(--color-green)]";
   return (
     <div className={`rounded-lg border-2 p-3 text-center ${colors}`}>
