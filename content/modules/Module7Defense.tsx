@@ -268,7 +268,7 @@ export default function Module7Defense() {
                 <li>The 4th copy when 3 are visible (always safe)</li>
                 <li>Tiles in a suit a player has been dumping</li>
                 <li>Honors that were thrown early by everyone</li>
-                <li>Edge numbers (1, 9) when no edge-hand exposures exist</li>
+                <li>Edge numbers (1, 9) are generally safer</li>
               </ul>
             </div>
           </div>
