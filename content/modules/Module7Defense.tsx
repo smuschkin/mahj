@@ -406,9 +406,9 @@ export default function Module7Defense() {
             <strong>Which one should you avoid discarding?</strong>
           </p>
           <TileRow caption="Which tile is the most dangerous?">
-            <Tile type="dot" value={6} size="sm" showLabel />
-            <Tile type="dragon" value="red" size="sm" showLabel />
-            <Tile type="crack" value={3} size="sm" showLabel />
+            <Tile type="dot" value={6} size="sm" />
+            <Tile type="dragon" value="red" size="sm" />
+            <Tile type="crack" value={3} size="sm" />
           </TileRow>
 
           <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
