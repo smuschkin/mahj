@@ -45,23 +45,16 @@ export default function Module7ScanningTheCard() {
         }
       >
         {/* ── 1. The moment after the deal ── */}
-        <LessonScreen title="🃏 The Moment After the Deal">
+        <LessonScreen title="🃏 After the Charleston">
           <p>
-            You&apos;ve just been dealt 13 tiles. The card is sitting in front
-            of you with dozens of possible hands. Where do you even start?
+            The Charleston is done. You have your final 13 tiles, sorted on
+            your rack. Now it&apos;s time to look at the card and figure out
+            which hands you&apos;re going for.
           </p>
           <p>
-            This module teaches you a <strong>repeatable scanning method</strong>{" "}
-            — a step-by-step way to look at your tiles, look at the card, and
-            quickly narrow down which hands are realistic. This is the single
-            most important skill for getting faster at American Mahjong.
+            This lesson teaches you a <strong>simple scanning method</strong>{" "}
+            — a step-by-step way to match your tiles to hands on the card.
           </p>
-          <Callout variant="info">
-            <strong>Bring your own card.</strong>{" "}MAHJ teaches you the{" "}
-            <em>thinking</em>; it doesn&apos;t reproduce any year&apos;s
-            official hands. To play a real game you&apos;ll need the current
-            card from nationalmahjonggleague.org.
-          </Callout>
         </LessonScreen>
 
         {/* ── 2. The card is the game ── */}
