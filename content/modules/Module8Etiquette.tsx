@@ -113,32 +113,14 @@ export default function Module8Etiquette() {
         {/* ── 4. Pause before racking ── */}
         <LessonScreen title="⏸️ The Pause Before Racking">
           <p>
-            When it&apos;s your turn, you draw a tile from the wall. Before you place
-            it on the sloped part of your rack, <strong>pause</strong>. Count to three
-            in your head.
+            After you draw from the wall,{" "}
+            <strong>pause 2–3 seconds before racking</strong>. This
+            gives other players time to call the previous discard.
           </p>
           <p>
-            That pause is the window where any other player can call the{" "}
-            <em>previous</em>{" "}player&apos;s discard. The official rule:{" "}
-            <strong>once a tile is racked, the previous discard can no longer be
-            called.</strong>{" "}Racking too quickly can rob a player of a legitimate call
-            — and you&apos;ll annoy your table fast.
+            Once you rack your tile, the previous discard is gone —
+            no one can call it anymore. Don&apos;t rush.
           </p>
-
-          <Callout variant="info">
-            <strong>The official definition:</strong>{" "}A tile is &quot;racked&quot; when
-            it&apos;s placed on the sloped part of your rack with your other tiles.
-            Just touching or tapping the rack doesn&apos;t count.
-          </Callout>
-
-          <DoDontRow
-            doText="Draw → pause 2–3 seconds → look around → then rack. Give people time to call."
-            dontText="Snatch a tile from the wall and slam it onto the rack. Calls die in your hand."
-          />
-          <DoDontRow
-            doText="If a player is reaching for the discard and clearly thinking, wait."
-            dontText="Race to rack to deny someone a call. This is rude and against the spirit of the game."
-          />
         </LessonScreen>
 
         {/* ── 5. Calling Mahjong + the window ── */}
