@@ -21,7 +21,6 @@ const MODULE_ICONS: Record<number, string> = {
   12: "\u{26A0}\uFE0F",
   13: "\u{1F4B0}",
   14: "\u{1F3C6}",
-  15: "\u{1F9E9}",
 };
 
 export function ModuleList() {

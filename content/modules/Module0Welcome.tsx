@@ -43,7 +43,7 @@ export default function Module0Welcome() {
             <strong>No experience needed. We start from zero.</strong>
           </p>
           <Callout variant="tip">
-            There are 16 lessons — that&apos;s because mahjong is a rich,
+            There are 15 lessons — that&apos;s because mahjong is a rich,
             layered game. Don&apos;t be intimidated. Take it one lesson at a
             time. Most people are ready to play after the first 9.
           </Callout>

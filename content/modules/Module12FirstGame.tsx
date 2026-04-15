@@ -637,17 +637,23 @@ export default function Module12FirstGame() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Lesson 15 Complete">
+        <LessonScreen title="🎉 You Did It!">
           <p>
             You just watched a full hand of American Mahjong play out — from the deal
             through the Charleston, through a Kong call, a joker exchange, and a
             winning discard.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 16 is the{" "}
-            <strong>Practice Hands Library</strong>. Now you sit in Sara&apos;s seat.
-            You get a hand, you make the calls, and the app tells you whether you
-            chose the best move and why.
+            <strong>You&apos;ve completed all 15 lessons.</strong>{" "}You know
+            the tiles, the card, the Charleston, calling, jokers, strategy,
+            defense, etiquette, scoring, and now the full flow of a game.
+          </p>
+          <p>
+            Ready to test yourself? Try the{" "}
+            <a href="/play" className="font-bold text-[var(--color-accent)] underline">
+              Practice Hands Library
+            </a>{" "}
+            — 16 real decision puzzles with instant feedback.
           </p>
         </LessonScreen>
       </ScreenStepper>

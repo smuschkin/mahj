@@ -20,7 +20,6 @@ import Module11Etiquette from "@/content/modules/Module8Etiquette";
 import Module12Mistakes from "@/content/modules/Module10Mistakes";
 import Module13Scoring from "@/content/modules/Module9Scoring";
 import Module14FirstGame from "@/content/modules/Module12FirstGame";
-import Module15Practice from "@/content/modules/Module13Practice";
 import ModuleGlossary from "@/content/modules/Module11Glossary";
 
 const moduleComponents: Record<number, () => React.ReactNode> = {
@@ -39,7 +38,6 @@ const moduleComponents: Record<number, () => React.ReactNode> = {
   12: Module12Mistakes,
   13: Module13Scoring,
   14: Module14FirstGame,
-  15: Module15Practice,
 };
 
 export default async function ModulePage({
