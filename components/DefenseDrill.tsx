@@ -46,13 +46,9 @@ const SCENARIOS: Scenario[] = [
     correctIndex: 1,
     explanation: (
       <>
-        <strong>6 Dot</strong> — two in the discard pile plus you&apos;re holding
-        the 3rd (or the 4th). Actually only 2 are visible here. Let&apos;s
-        re-check: 2 in the discard pile + if you hold the 3rd, only 1 remains.
-        But <strong>9 Crak</strong>{" "}only has 1 discarded. <strong>Wait —</strong> none of these are 3-visible yet. The safest choice is{" "}
-        <strong>6 Dot</strong>{" "}because 2 are already gone (fewest remain) and
-        no player has shown Dot exposures. Player A is on Bams — any Bam is
-        dangerous.
+        <strong>6 Dot</strong> is safest — 2 copies are already in the discard
+        pile, so fewer remain. Player A is building Bams, so avoid Bams.
+        The 9 Crak and West Wind only have 1 copy visible each.
       </>
     ),
   },
