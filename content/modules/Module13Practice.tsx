@@ -925,7 +925,7 @@ const PUZZLES: Puzzle[] = [
 type Phase = "intro" | "playing" | "complete";
 
 export default function Module13Practice() {
-  const adj = getAdjacentModules(16);
+  const adj = getAdjacentModules(15);
   const total = PUZZLES.length;
   const passThreshold = Math.ceil(total * 0.7); // 70% to "pass"
 
@@ -959,7 +959,7 @@ export default function Module13Practice() {
   return (
     <PageWrap>
       <Cover
-        eyebrow="MAHJ — Lesson 17"
+        eyebrow="MAHJ — Lesson 16"
         title="Practice Hands"
         highlight="Library"
         subtitle="Now you make the calls. Real puzzles, instant feedback."
@@ -1044,7 +1044,7 @@ export default function Module13Practice() {
       </Callout>
 
       <ModuleNav
-        currentModuleNum={16}
+        currentModuleNum={15}
         prev={
           adj.prev && {
             href: adj.prev.href,

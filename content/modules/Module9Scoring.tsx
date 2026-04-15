@@ -93,7 +93,7 @@ export default function Module9Scoring() {
           },
           { label: "Estimated time", value: "6–8 minutes" },
           { label: "Prerequisite", value: "Lesson 13 (Common Mistakes)" },
-          { label: "Unlocks", value: "Lesson 15 (Glossary)" },
+          { label: "Unlocks", value: "Lesson 15 (Your First Full Game)" },
         ]}
       /></>}>
         {/* ── 1. The big picture ── */}
@@ -410,9 +410,9 @@ export default function Module9Scoring() {
             situations.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 15 is the{" "}
-            <strong>Glossary</strong> — every term you&apos;ve learned, defined and
-            cross-linked, always one tap away from any screen in the app.
+            <strong>What&apos;s next:</strong>{" "}Lesson 15 is{" "}
+            <strong>Your First Full Game</strong> — a complete guided walkthrough
+            from the deal to Mahjong, with every concept applied at the right moment.
           </p>
         </LessonScreen>
       </ScreenStepper>

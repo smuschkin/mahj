@@ -56,13 +56,13 @@ function HandState({
 }
 
 export default function Module12FirstGame() {
-  const adj = getAdjacentModules(15);
+  const adj = getAdjacentModules(14);
   return (
     <PageWrap>
       <SectionHeader>Walkthrough</SectionHeader>
 
-      <ScreenStepper moduleNum={15} coverProps={{ eyebrow: "MAHJ — Lesson 16", title: "Your First", highlight: "Game", subtitle: "A complete guided walkthrough — from the deal to Mahjong" }} header={<><Cover
-        eyebrow="MAHJ — Lesson 16"
+      <ScreenStepper moduleNum={14} coverProps={{ eyebrow: "MAHJ — Lesson 15", title: "Your First", highlight: "Game", subtitle: "A complete guided walkthrough — from the deal to Mahjong" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 15"
         title="Your First"
         highlight="Game"
         subtitle="A complete guided walkthrough — from the deal to Mahjong"
@@ -76,8 +76,8 @@ export default function Module12FirstGame() {
               "Watch a full hand of American Mahjong play out from start to finish, with every concept from Modules 0–14 applied at the right moment.",
           },
           { label: "Estimated time", value: "12–15 minutes" },
-          { label: "Prerequisite", value: "Modules 0–14 (everything before this)" },
-          { label: "Unlocks", value: "Lesson 17 (Practice Hands Library)" },
+          { label: "Prerequisite", value: "Lesson 14 (Scoring & Payouts)" },
+          { label: "Unlocks", value: "Lesson 16 (Practice Hands Library)" },
           {
             label: "Why it matters",
             value:
@@ -670,8 +670,8 @@ export default function Module12FirstGame() {
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
-            moduleNum={15}
-            title="Lesson 16 Check"
+            moduleNum={14}
+            title="Lesson 15 Check"
             passThreshold={4}
             questions={[
               {
@@ -739,7 +739,7 @@ export default function Module12FirstGame() {
         </LessonScreen>
 
         {/* ── Completion ── */}
-        <LessonScreen title="🎉 Lesson 16 Complete">
+        <LessonScreen title="🎉 Lesson 15 Complete">
           <p>
             You just watched a full hand of American Mahjong play out — from the deal
             through the Charleston, through a Kong call, a joker exchange, and a
@@ -747,7 +747,7 @@ export default function Module12FirstGame() {
             module in this app.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 17 is the{" "}
+            <strong>What&apos;s next:</strong>{" "}Lesson 16 is the{" "}
             <strong>Practice Hands Library</strong>. Now you sit in Sara&apos;s seat.
             You get a hand, you make the calls, and the app tells you whether you
             chose the best move and why.
@@ -756,7 +756,7 @@ export default function Module12FirstGame() {
       </ScreenStepper>
 
       <ModuleNav
-        currentModuleNum={15}
+        currentModuleNum={14}
         prev={
           adj.prev && {
             href: adj.prev.href,

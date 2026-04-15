@@ -21,9 +21,8 @@ export const modules: ModuleInfo[] = [
   { num: 11, slug: "etiquette", name: "Table Etiquette", hook: "The unwritten rules every player should know", href: "/module/11" },
   { num: 12, slug: "mistakes", name: "Common Mistakes", hook: "What to do when something goes wrong", href: "/module/12" },
   { num: 13, slug: "scoring", name: "Scoring & Payouts", hook: "Who pays whom and how much", href: "/module/13" },
-  { num: 14, slug: "glossary", name: "Glossary", hook: "Every term you'll hear at the table", href: "/module/14" },
-  { num: 15, slug: "first-game", name: "Your First Full Game", hook: "A complete walkthrough from start to finish", href: "/module/15" },
-  { num: 16, slug: "puzzles", name: "Practice Hands Library", hook: "Test yourself with real hand scenarios", href: "/module/16" },
+  { num: 14, slug: "first-game", name: "Your First Full Game", hook: "A complete walkthrough from start to finish", href: "/module/14" },
+  { num: 15, slug: "puzzles", name: "Practice Hands Library", hook: "Test yourself with real hand scenarios", href: "/module/15" },
 ];
 
 export function getModule(num: number) {
