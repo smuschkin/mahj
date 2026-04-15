@@ -140,31 +140,15 @@ export default function Module8Etiquette() {
         {/* ── 6. Pace of play ── */}
         <LessonScreen title="⏱️ Pace of Play">
           <p>
-            Mahjong has a rhythm. Beginners are usually slower than the table — that
-            is normal and forgiven. What is <em>not</em>{" "}forgiven is people who never
-            speed up.
+            Being slow as a beginner is normal. But try to keep up:
           </p>
-
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            Charleston pace
-          </h4>
-          <p className="text-[14px] text-zinc-700">
-            The Charleston is meant to be <strong>brisk</strong>. Pick your three
-            tiles, pass them, repeat. Don&apos;t agonize. Each pass should take seconds,
-            not minutes. The whole Charleston should be done in under 2 minutes.
-          </p>
-
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
-            Turn pace
-          </h4>
-          <p className="text-[14px] text-zinc-700">
-            Once play begins, your turn is: draw → think briefly → discard → name it.
-            Aim for 5–10 seconds per turn once you have rhythm. If three other players
-            are routinely waiting on you, you&apos;re too slow.
-          </p>
-
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Charleston</strong> — each pass should take seconds, not minutes</li>
+            <li><strong>Your turn</strong> — draw, think briefly, discard. Aim for 5–10 seconds.</li>
+          </ul>
           <Callout variant="tip">
-            For your first few games, tell your group &quot;I&apos;m new, I&apos;ll be slow today&quot; — almost every table will be patient.
+            Tell your group <strong>&quot;I&apos;m new&quot;</strong>{" "}—
+            almost every table will be patient.
           </Callout>
         </LessonScreen>
 
