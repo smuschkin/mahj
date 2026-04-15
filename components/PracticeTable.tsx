@@ -113,7 +113,7 @@ export function PracticeTable() {
       />
 
       {/* Progress dots */}
-      <div className="mb-4">
+      <div className="mb-1">
         <StepDots
           current={stepIndex}
           total={STEPS.length}
@@ -125,7 +125,7 @@ export function PracticeTable() {
       </div>
 
       {/* Step title + coaching */}
-      <div className="mb-6 animate-fade-in" key={step.id}>
+      <div className="mb-4 animate-fade-in" key={step.id}>
         <h2 className="font-serif text-2xl font-black text-[var(--color-dark)] md:text-3xl">
           {step.title}
         </h2>
