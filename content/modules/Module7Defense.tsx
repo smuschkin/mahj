@@ -366,36 +366,36 @@ export default function Module7Defense() {
             three opponents:
           </p>
 
-          <div className="my-3 rounded-lg border border-zinc-200 bg-white p-4 space-y-3">
+          <div className="my-3 rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-4 space-y-4">
             <div>
-              <div className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[#C8A951]">
                 Right — 2 exposures
               </div>
-              <div className="mt-1 flex flex-wrap items-center gap-1">
+              <div className="mt-2 flex flex-wrap items-center gap-1">
                 <Tile type="dot" value={2} size="sm" />
                 <Tile type="dot" value={2} size="sm" />
                 <Tile type="dot" value={2} size="sm" />
-                <span className="mx-1" />
+                <span className="mx-1.5" />
                 <Tile type="dot" value={4} size="sm" />
                 <Tile type="dot" value={4} size="sm" />
                 <Tile type="dot" value={4} size="sm" />
               </div>
             </div>
-            <div className="border-t border-zinc-100 pt-3">
-              <div className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+            <div className="border-t border-white/10 pt-3">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[#C8A951]">
                 Across — 1 exposure
               </div>
-              <div className="mt-1 flex flex-wrap items-center gap-1">
+              <div className="mt-2 flex flex-wrap items-center gap-1">
                 <Tile type="dragon" value="red" size="sm" />
                 <Tile type="dragon" value="red" size="sm" />
                 <Tile type="dragon" value="red" size="sm" />
               </div>
             </div>
-            <div className="border-t border-zinc-100 pt-3">
-              <div className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
+            <div className="border-t border-white/10 pt-3">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[#C8A951]">
                 Left — 0 exposures
               </div>
-              <p className="mt-1 text-[12px] italic text-zinc-500">
+              <p className="mt-1 text-[12px] italic text-white/50">
                 Nothing to read. Discards have been mostly Craks.
               </p>
             </div>
