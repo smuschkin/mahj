@@ -392,7 +392,7 @@ export default function Module7Defense() {
             </div>
             <div className="rounded-lg border border-zinc-200 bg-white p-3">
               <div className="mb-1 text-[12px] font-bold uppercase tracking-wider text-zinc-500">
-                Player on your left — 0 exposures (concealed?)
+                Player on your left — 0 exposures
               </div>
               <p className="text-[12px] italic text-zinc-500">
                 Nothing to read. Discards have been mostly Craks.
