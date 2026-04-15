@@ -63,8 +63,9 @@ export default function Module8Etiquette() {
         {/* ── 1. Why etiquette ── */}
         <LessonScreen title="🤝 Why Etiquette Matters">
           <p>
-            Etiquette isn&apos;t about being formal — it&apos;s about not
-            slowing down the game and not making others uncomfortable.
+            Mahjong is a social game — etiquette isn&apos;t about being
+            formal, it&apos;s about not slowing down the game and not
+            making others uncomfortable.
           </p>
           <p>
             Some of these are <strong>official NMJL rules</strong>{" "}with
