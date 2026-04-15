@@ -4,6 +4,7 @@ import { MetaBox } from "@/components/MetaBox";
 import { SectionHeader } from "@/components/SectionHeader";
 import { LessonScreen } from "@/components/LessonScreen";
 import { ScreenStepper } from "@/components/ScreenStepper";
+import { Callout } from "@/components/Callout";
 import { WinningHandTeaser } from "@/components/WinningHandTeaser";
 import { ModuleNav } from "@/components/ModuleNav";
 import { getAdjacentModules } from "@/lib/modules";

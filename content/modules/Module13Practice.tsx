@@ -77,7 +77,7 @@ const PUZZLES: Puzzle[] = [
     explanation: (
       <>
         The <strong>9 Dot</strong>{" "}is the only tile that fits neither of your forming
-        suits. Lesson 10: discard tiles that fit none of your candidate hands first.
+        suits. Discard tiles that fit none of your candidate hands first.
         It&apos;s isolated and useless to you.
       </>
     ),
@@ -119,41 +119,6 @@ const PUZZLES: Puzzle[] = [
         a Bam hand. Discard the East Wind first (lone honors are dangerous to hold),
         then the Craks over the next turns. The Green Dragon pair has potential
         (dragons pair with suits). The Joker is <strong>never</strong>{" "}a discard.
-      </>
-    ),
-  },
-
-  // ── 3 — Safest discard (defense, multi-choice) ──
-  {
-    kind: "choice",
-    id: "p3",
-    tag: "Defense · Reading the table",
-    prompt: "Which of these is the SAFEST tile to discard?",
-    context: (
-      <>
-        <p>Mid-game. The table situation:</p>
-        <ul className="ml-5 list-disc space-y-1 text-[13px] text-zinc-700">
-          <li>
-            <strong>Player across:</strong>{" "}Pung of 3 Bam + Pung of 6 Bam exposed
-          </li>
-          <li>
-            <strong>Player on your right:</strong>{" "}Pung of West Wind exposed
-          </li>
-          <li>
-            <strong>The discard pile</strong>{" "}already contains{" "}
-            <strong>three Red Dragons</strong>{" "}from earlier turns
-          </li>
-        </ul>
-      </>
-    ),
-    options: ["4 Bam", "Red Dragon", "East Wind", "5 Bam"],
-    correctIndex: 1,
-    explanation: (
-      <>
-        <strong>Red Dragon</strong>{" "}is completely safe. Three are already in the
-        discard pile, so no one can ever Pung or Kong the 4th — Lesson 11&apos;s
-        3-of-a-tile safe rule. The Bams are dangerous (player across is on Bams).
-        East Wind is dangerous too (right player is on winds-and-dragons).
       </>
     ),
   },
@@ -209,7 +174,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Jokers can substitute in any group of <strong>3 or more identical tiles</strong>{" "}
         — so either of the Pungs-in-progress works, completing them at 3 tiles. Jokers{" "}
-        <strong>can never</strong>{" "}be used in a pair, full stop. Lesson 7&apos;s pair
+        <strong>can never</strong>{" "}be used in a pair, full stop. That&apos;s the pair
         rule.
       </>
     ),
@@ -255,38 +220,6 @@ const PUZZLES: Puzzle[] = [
     ),
   },
 
-  // ── 6 — Joker pung legality ──
-  {
-    kind: "choice",
-    id: "p6",
-    tag: "Calling · Joker rules",
-    prompt: "Is this a valid exposed Pung?",
-    context: (
-      <>
-        <p>A player just called a discard and exposed this Pung:</p>
-        <TileRow background="felt">
-          <Tile type="bam" value={5} size="sm" highlighted />
-          <Tile type="bam" value={5} size="sm" highlighted />
-          <Tile type="joker" size="sm" highlighted />
-        </TileRow>
-      </>
-    ),
-    options: [
-      "Yes — Jokers can substitute in any group of 3 or more",
-      "No — you can't have a Joker in an exposed group",
-      "No — you need 3 real tiles for a Pung",
-      "Only if it's your turn",
-    ],
-    correctIndex: 0,
-    explanation: (
-      <>
-        Yes — perfectly legal. A Pung is 3 of a kind, and Jokers can substitute in
-        any group of 3+ identical tiles (Pungs, Kongs, Quints). Lesson 7. The only
-        place a Joker <em>cannot</em>{" "}go is a pair or single.
-      </>
-    ),
-  },
-
   // ── 7 — Call decision (early game) ──
   {
     kind: "choice",
@@ -310,7 +243,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        Lesson 7 + 8: calling commits you. Once the Pung is exposed, you can&apos;t
+        Calling commits you. Once the Pung is exposed, you can&apos;t
         rebuild toward a hand that doesn&apos;t use 5 Crak. Early in the game,
         flexibility beats commitment. Wait until you&apos;ve narrowed down to one
         primary candidate before calling.
@@ -340,7 +273,7 @@ const PUZZLES: Puzzle[] = [
     correctIndex: 1,
     explanation: (
       <>
-        Lesson 14&apos;s 4-step recovery: <strong>stop, speak up immediately, describe
+        The 4-step recovery: <strong>stop, speak up immediately, describe
         factually</strong>. If you correct it before any player acts on the wrong
         name, you usually escape clean. Hiding it risks the misnamed-discard
         penalty (NMJL Article 67) — the most expensive mistake in the game if Mahjong
@@ -388,40 +321,6 @@ const PUZZLES: Puzzle[] = [
     ),
   },
 
-  // ── 10 — Defense: reading two opponents ──
-  {
-    kind: "choice",
-    id: "p10",
-    tag: "Defense · Two threats",
-    prompt: "Which discard is safest?",
-    context: (
-      <>
-        <p>Late game. Two opponents have exposures:</p>
-        <ul className="ml-5 list-disc space-y-1 text-[13px] text-zinc-700">
-          <li><strong>Player A:</strong>{" "}Pung of 5 Crak + Pung of 5 Dot exposed</li>
-          <li><strong>Player B:</strong>{" "}Pung of Green Dragon exposed</li>
-          <li><strong>Discard pile:</strong>{" "}two 8 Bams already discarded</li>
-        </ul>
-      </>
-    ),
-    options: [
-      "5 Bam (Player A probably wants it for like-numbers)",
-      "Red Dragon (Player B might need it for dragons hand)",
-      "8 Bam (two already discarded — only 2 remain)",
-      "North Wind (nobody has shown interest in winds)",
-    ],
-    correctIndex: 3,
-    explanation: (
-      <>
-        <strong>North Wind</strong>{" "}is safest. Player A is on a like-numbers 5s
-        hand — 5 Bam is extremely dangerous. Player B has dragons exposed — Red
-        Dragon could help them. 8 Bam has 2 discarded but 2 still live. North
-        Wind hasn&apos;t appeared in any exposure or pattern. Lesson 11: read
-        what&apos;s <em>not</em>{" "}being collected.
-      </>
-    ),
-  },
-
   // ── 11 — Charleston: what NOT to pass ──
   {
     kind: "choice",
@@ -446,61 +345,7 @@ const PUZZLES: Puzzle[] = [
       <>
         <strong>Never pass a Joker.</strong>{" "}Jokers are the most valuable tiles in
         the game and cannot legally be passed in the Charleston. The North Wind and
-        9 Dot are both fine junk to pass. Lesson 5.
-      </>
-    ),
-  },
-
-  // ── 12 — Scoring: self-draw calculation ──
-  {
-    kind: "choice",
-    id: "p12",
-    tag: "Scoring · Self-draw",
-    prompt: "You self-drew Mahjong on a hand worth 25¢ (with jokers in your hand). How much does EACH opponent pay?",
-    options: ["25¢", "50¢", "75¢", "$1.00"],
-    correctIndex: 1,
-    explanation: (
-      <>
-        Self-draw = all three opponents pay <strong>double</strong>{" "}the hand value.
-        25¢ × 2 = 50¢ each. Jokerless bonus does NOT apply because you have jokers.
-        Lesson 13.
-      </>
-    ),
-  },
-
-  // ── 13 — Defense: 3-of-tile rule applied ──
-  {
-    kind: "tile-pick",
-    id: "p13",
-    tag: "Defense · Safe discard",
-    prompt: "The discard pile has 3 of the 6 Dot. You're holding the 4th. Is it safe? Tap the safest discard.",
-    context: (
-      <p>
-        Your hand — you must discard one. The 4th 6 Dot is guaranteed safe
-        because 3 are already visible.
-      </p>
-    ),
-    tiles: [
-      { type: "bam", value: 3 },
-      { type: "bam", value: 5 },
-      { type: "bam", value: 7 },
-      { type: "crack", value: 2 },
-      { type: "crack", value: 4 },
-      { type: "crack", value: 6 },
-      { type: "dot", value: 1 },
-      { type: "dot", value: 3 },
-      { type: "dot", value: 5 },
-      { type: "dot", value: 6 },
-      { type: "dragon", value: "red" },
-      { type: "dragon", value: "red" },
-      { type: "joker" },
-    ],
-    correctIndex: 9,
-    explanation: (
-      <>
-        The <strong>6 Dot</strong>{" "}is 100% safe. Three copies are already in the
-        discard pile, so no one can ever Pung or Kong it. Lesson 11: once 3 of a
-        tile are visible, the 4th is always safe.
+        9 Dot are both fine junk to pass.
       </>
     ),
   },
@@ -536,7 +381,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Yes — all conditions are met: it&apos;s your turn, you have the exact
         real tile the Joker is standing for, and you haven&apos;t discarded yet.
-        Hand the 8 Bam to the opponent and take the Joker. Lesson 7.
+        Hand the 8 Bam to the opponent and take the Joker.
       </>
     ),
   },
@@ -558,7 +403,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Late-game calling is completely different from early-game. You&apos;re
         already committed to a hand and the wall is running out. Passing on a
-        tile you need now could mean never seeing it again. Lesson 7 + 8:
+        tile you need now could mean never seeing it again. The principle:
         <em> wide early, narrow late</em>.
       </>
     ),
@@ -582,68 +427,7 @@ const PUZZLES: Puzzle[] = [
         3 exposures = full defense mode. Stop trying to win and start
         discarding only guaranteed-safe tiles. Break your own forming groups
         if needed — your pairs are now a source of safe discards, not future
-        Pungs. <strong>Never</strong>{" "}discard a Joker. Lesson 11.
-      </>
-    ),
-  },
-
-  // ── 17 — Which junk to drop first ──
-  {
-    kind: "choice",
-    id: "p17",
-    tag: "Discard · Junk tiles",
-    prompt: "Your hand has 2 junk tiles — a lone Soap and a lone 8 Crak. Which do you discard first?",
-    context: (
-      <div className="flex flex-wrap items-end justify-center gap-1.5">
-        <Tile type="bam" value={2} size="sm" />
-        <Tile type="bam" value={2} size="sm" />
-        <Tile type="bam" value={4} size="sm" />
-        <Tile type="bam" value={4} size="sm" />
-        <Tile type="bam" value={6} size="sm" />
-        <Tile type="bam" value={6} size="sm" />
-        <Tile type="dot" value={3} size="sm" />
-        <Tile type="dot" value={3} size="sm" />
-        <Tile type="dot" value={5} size="sm" />
-        <Tile type="crack" value={8} size="sm" marked />
-        <Tile type="dragon" value="white" size="sm" marked />
-        <Tile type="joker" size="sm" />
-        <Tile type="joker" size="sm" />
-      </div>
-    ),
-    options: [
-      "Soap first — lone honors are more dangerous to hold (someone might need it for a dragons hand)",
-      "8 Crak first — middle numbers are hotter",
-      "Either one — doesn't matter",
-      "Neither — keep them both as defense",
-    ],
-    correctIndex: 0,
-    explanation: (
-      <>
-        <strong>Soap first.</strong>{" "}Both are junk, but a lone honor is more
-        dangerous to hold — someone building a winds-and-dragons hand could call
-        it. The 8 Crak goes next turn. Both need to go, but order matters.
-      </>
-    ),
-  },
-
-  // ── 18 — Etiquette: racking timing ──
-  {
-    kind: "choice",
-    id: "p18",
-    tag: "Etiquette · Racking",
-    prompt: "You just drew a tile from the wall. What should you do BEFORE placing it on your rack?",
-    options: [
-      "Look at it, then rack immediately",
-      "Pause 2–3 seconds so other players can call the previous discard",
-      "Show it to the player on your right",
-      "Announce what you drew",
-    ],
-    correctIndex: 1,
-    explanation: (
-      <>
-        The pause before racking is critical etiquette. Once your tile is
-        racked, the previous discard can no longer be called. Counting to 3
-        gives everyone time to react. Lesson 12.
+        Pungs. <strong>Never</strong>{" "}discard a Joker.
       </>
     ),
   },
@@ -666,57 +450,7 @@ const PUZZLES: Puzzle[] = [
         The suit nobody is discarding is the <strong>hot suit</strong> —
         someone is collecting it. Discarding Dots is risky because you could
         be feeding that player exactly what they need. Craks are the cold
-        suit: everyone is dumping them, so they&apos;re safer. Lesson 11.
-      </>
-    ),
-  },
-
-  // ── 20 — Scoring: jokerless discard win ──
-  {
-    kind: "choice",
-    id: "p20",
-    tag: "Scoring · Jokerless bonus",
-    prompt: "You win on a discard with a 25¢ hand and NO jokers. What does the discarder pay?",
-    options: ["25¢", "50¢", "$1.00", "$2.00"],
-    correctIndex: 2,
-    explanation: (
-      <>
-        Discard win = discarder pays 2×. Jokerless = doubles again.
-        25¢ × 2 (discard) × 2 (jokerless) = <strong>$1.00</strong>.
-        The other two players pay 50¢ each (1× × 2 for jokerless). Lesson 13.
-      </>
-    ),
-  },
-
-  // ── 21 — Tile-pick: the Joker trap ──
-  {
-    kind: "tile-pick",
-    id: "p21",
-    tag: "Discard · Never discard",
-    prompt: "You're frustrated and want to dump something. Which tile should you NEVER discard?",
-    tiles: [
-      { type: "crack", value: 1 },
-      { type: "crack", value: 9 },
-      { type: "dot", value: 2 },
-      { type: "dot", value: 8 },
-      { type: "wind", value: "W" },
-      { type: "wind", value: "N" },
-      { type: "dragon", value: "white" },
-      { type: "bam", value: 4 },
-      { type: "bam", value: 6 },
-      { type: "bam", value: 7 },
-      { type: "bam", value: 8 },
-      { type: "bam", value: 9 },
-      { type: "joker" },
-    ],
-    correctIndex: 12,
-    explanation: (
-      <>
-        <strong>Never discard a Joker.</strong>{" "}A discarded Joker is dead —
-        no one can call it, no one can use it. It&apos;s the most valuable tile
-        in the game, always. Even when you&apos;re folding, even when you&apos;re
-        frustrated. Lesson 7 + 8 discard priority: Jokers are permanently at
-        the bottom of the list.
+        suit: everyone is dumping them, so they&apos;re safer.
       </>
     ),
   },
@@ -738,30 +472,7 @@ const PUZZLES: Puzzle[] = [
       <>
         Mahjong is the one exception to the &quot;calls are for groups of 3+&quot;
         rule. If that one tile completes your <em>entire</em>{" "}winning hand — even
-        if it&apos;s just completing a pair — you can call it. Lesson 7.
-      </>
-    ),
-  },
-
-  // ── 23 — Defense: counting exposures ──
-  {
-    kind: "choice",
-    id: "p23",
-    tag: "Defense · Threat level",
-    prompt: "An opponent has exactly 1 exposure. How threatened should you feel?",
-    options: [
-      "Full defense — discard only safe tiles",
-      "Moderate — they've committed to a direction. Avoid obviously matching tiles.",
-      "Not at all — 1 exposure means nothing",
-      "Panic and fold immediately",
-    ],
-    correctIndex: 1,
-    explanation: (
-      <>
-        1 exposure = they&apos;ve committed to a direction. You can start reading
-        their hand family (same-suit? like-numbers? dragons?). Avoid tiles that
-        obviously match, but don&apos;t go full defense yet — that&apos;s for 3+
-        exposures. Lesson 11.
+        if it&apos;s just completing a pair — you can call it.
       </>
     ),
   },
@@ -807,29 +518,6 @@ const PUZZLES: Puzzle[] = [
     ),
   },
 
-  // ── 25 — Charleston: courtesy decision ──
-  {
-    kind: "choice",
-    id: "p25",
-    tag: "Charleston · Courtesy",
-    prompt: "It's the courtesy pass. You're not sure what hand you're building yet. What do you say?",
-    options: [
-      "Three — trade as many as possible",
-      "Two — compromise",
-      "One — just in case",
-      "Zero — you're not ready to trade strategically yet",
-    ],
-    correctIndex: 3,
-    explanation: (
-      <>
-        <strong>Zero is the right default</strong>{" "}when you&apos;re unsure.
-        The courtesy is a tool for when you&apos;re one specific tile away
-        from a shape. If you don&apos;t know what you need, trading blindly
-        could give away something you&apos;ll regret. Lesson 5.
-      </>
-    ),
-  },
-
   // ── 26 — Dead hand: what happens next ──
   {
     kind: "choice",
@@ -848,49 +536,7 @@ const PUZZLES: Puzzle[] = [
         Dead hands keep playing. You draw, you discard, you name your tiles.
         You just can&apos;t win. Many experienced players use dead hands for
         <strong> pure defense</strong> — discarding only safe tiles since
-        there&apos;s nothing left to build. Lesson 13 + 14.
-      </>
-    ),
-  },
-
-  // ── 27 — Tile-pick: advanced — sacrifice for defense ──
-  {
-    kind: "tile-pick",
-    id: "p27",
-    tag: "Defense · Advanced sacrifice",
-    prompt: "Player across has 3 Bam exposures — one tile from Mahjong. You're folding. Which tile is safest to discard?",
-    context: (
-      <>
-        <p>Their exposures are all Bams. You need to discard something safe.</p>
-        <p className="mt-1 text-[12px] italic text-zinc-500">
-          The discard pile already has: two 4 Craks and one 8 Dot.
-        </p>
-      </>
-    ),
-    tiles: [
-      { type: "bam", value: 2 },
-      { type: "bam", value: 6 },
-      { type: "crack", value: 4 },
-      { type: "crack", value: 7 },
-      { type: "dot", value: 1 },
-      { type: "dot", value: 3 },
-      { type: "dot", value: 5 },
-      { type: "dot", value: 8 },
-      { type: "dragon", value: "green" },
-      { type: "wind", value: "S" },
-      { type: "wind", value: "W" },
-      { type: "joker" },
-      { type: "joker" },
-    ],
-    correctIndex: 2,
-    explanation: (
-      <>
-        The <strong>4 Crak</strong>{" "}is the safest choice. Two are already in
-        the discard pile (only 2 remain), and the threat player is on Bams —
-        they have zero interest in Craks. Any Bam is extremely dangerous.
-        The 8 Dot has only 1 copy discarded (3 still live). The honors are
-        unknown. Lesson 11: combine &quot;already discarded&quot; with
-        &quot;wrong suit for the threat.&quot;
+        there&apos;s nothing left to build.
       </>
     ),
   },
@@ -912,7 +558,7 @@ const PUZZLES: Puzzle[] = [
       <>
         <strong>No.</strong>{" "}The pair rule is absolute: Jokers can never
         substitute in a pair. You need <em>two real</em> 9 Dots. This is
-        the #1 Joker mistake beginners make. Lesson 7.
+        the #1 Joker mistake beginners make.
       </>
     ),
   },
