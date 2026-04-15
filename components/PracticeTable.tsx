@@ -21,7 +21,7 @@ const STEPS: Step[] = [
   {
     id: "intro",
     title: "The Round Flow",
-    subtitle: "Wash \u2192 Wall \u2192 Deal \u2192 Charleston \u2192 Play",
+    subtitle: "Walk through each step of setting up a game",
     coaching: "",
   },
   {
