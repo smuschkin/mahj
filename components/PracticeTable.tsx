@@ -202,10 +202,10 @@ function IntroCard() {
   return (
     <div className="grid grid-cols-2 gap-3">
       {[
-        { emoji: "🌊", label: "Wash", desc: "Mix tiles face-down" },
-        { emoji: "🧱", label: "Wall", desc: "Build 19 stacks high" },
-        { emoji: "🎲", label: "Deal", desc: "East deals to everyone" },
-        { emoji: "🔄", label: "Charleston", desc: "Pass tiles you don\u2019t want" },
+        { num: 1, emoji: "🌊", label: "Wash", desc: "Mix tiles face-down" },
+        { num: 2, emoji: "🧱", label: "Wall", desc: "Build 19 stacks high" },
+        { num: 3, emoji: "🎲", label: "Deal", desc: "East deals to everyone" },
+        { num: 4, emoji: "🔄", label: "Charleston", desc: "Pass tiles you don\u2019t want" },
       ].map((s) => (
         <div
           key={s.label}
@@ -213,7 +213,7 @@ function IntroCard() {
         >
           <div className="text-2xl">{s.emoji}</div>
           <div className="mt-1 font-serif text-sm font-black text-[var(--color-mid)]">
-            {s.label}
+            {s.num}. {s.label}
           </div>
           <div className="text-[12px] text-zinc-500">{s.desc}</div>
         </div>
