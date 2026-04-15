@@ -136,8 +136,8 @@ export default function Module8StartingTheGame() {
             decide if they want to call.
           </p>
           <p>
-            Once the next player picks up a tile from the wall, the
-            discard is gone — no one can call it anymore.
+            Once the next player picks up a tile from the wall and
+            racks it, the discard is gone — no one can call it anymore.
           </p>
           <Callout variant="tip">
             Don&apos;t rush. A quick grab from the wall can steal
