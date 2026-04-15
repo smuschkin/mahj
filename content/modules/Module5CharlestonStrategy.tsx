@@ -20,7 +20,7 @@ export default function Module5CharlestonStrategy() {
       <ScreenStepper
         moduleNum={5}
         coverProps={{
-          eyebrow: "MAHJ — Module 5",
+          eyebrow: "MAHJ — Lesson 6",
           title: "Charleston",
           highlight: "Strategy",
           subtitle: "What to keep, what to pass, and reading what comes back",
@@ -28,7 +28,7 @@ export default function Module5CharlestonStrategy() {
         header={
           <>
             <Cover
-              eyebrow="MAHJ — Module 5"
+              eyebrow="MAHJ — Lesson 6"
               title="Charleston"
               highlight="Strategy"
               subtitle="What to keep, what to pass, and reading what comes back"

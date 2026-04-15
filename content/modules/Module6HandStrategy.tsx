@@ -76,8 +76,8 @@ export default function Module6HandStrategy() {
   const adj = getAdjacentModules(8);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={8} coverProps={{ eyebrow: "MAHJ — Module 8", title: "Hand", highlight: "Strategy" }} header={<><Cover
-        eyebrow="MAHJ — Module 8"
+      <ScreenStepper moduleNum={8} coverProps={{ eyebrow: "MAHJ — Lesson 9", title: "Hand", highlight: "Strategy" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 9"
         title="Hand"
         highlight="Strategy"
         subtitle='Picking a hand, staying flexible, and the all-important "what would you discard?"'

@@ -36,8 +36,8 @@ export default function Module8Etiquette() {
   const adj = getAdjacentModules(10);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={10} coverProps={{ eyebrow: "MAHJ — Module 10", title: "Etiquette &", highlight: "Table Culture", subtitle: "The unwritten (and a few written) rules that make you welcome at any mahjong table" }} header={<><Cover
-        eyebrow="MAHJ — Module 10"
+      <ScreenStepper moduleNum={10} coverProps={{ eyebrow: "MAHJ — Lesson 11", title: "Etiquette &", highlight: "Table Culture", subtitle: "The unwritten (and a few written) rules that make you welcome at any mahjong table" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 11"
         title="Etiquette &"
         highlight="Table Culture"
         subtitle="The unwritten (and a few written) rules that make you welcome at any mahjong table"

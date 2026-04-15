@@ -959,7 +959,7 @@ export default function Module13Practice() {
   return (
     <PageWrap>
       <Cover
-        eyebrow="MAHJ — Module 15"
+        eyebrow="MAHJ — Lesson 16"
         title="Practice Hands"
         highlight="Library"
         subtitle="Now you make the calls. Real puzzles, instant feedback."

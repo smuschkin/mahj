@@ -16,14 +16,14 @@ export default function Module7ScanningTheCard() {
       <ScreenStepper
         moduleNum={7}
         coverProps={{
-          eyebrow: "MAHJ — Module 7",
+          eyebrow: "MAHJ — Lesson 8",
           title: "Scanning the",
           highlight: "Card",
         }}
         header={
           <>
             <Cover
-              eyebrow="MAHJ — Module 7"
+              eyebrow="MAHJ — Lesson 8"
               title="Scanning the"
               highlight="Card"
               subtitle="How to match your tiles to hands on the card"

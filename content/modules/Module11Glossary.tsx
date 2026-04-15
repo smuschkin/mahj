@@ -825,7 +825,7 @@ export default function Module11Glossary() {
   return (
     <PageWrap>
       <Cover
-        eyebrow="MAHJ — Module 13"
+        eyebrow="MAHJ — Lesson 14"
         title="Glossary &"
         highlight="Quick Reference"
         subtitle="Every term, defined and cross-linked. Always one tap away."

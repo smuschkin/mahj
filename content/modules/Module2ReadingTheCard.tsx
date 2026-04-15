@@ -71,8 +71,8 @@ export default function Module2ReadingTheCard() {
   const adj = getAdjacentModules(2);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={2} coverProps={{ eyebrow: "MAHJ — Module 2", title: "Reading the", highlight: "Card", subtitle: "How to decode the NMJL card — the blueprint for every winning hand" }} header={<><Cover
-        eyebrow="MAHJ — Module 2"
+      <ScreenStepper moduleNum={2} coverProps={{ eyebrow: "MAHJ — Lesson 3", title: "Reading the", highlight: "Card", subtitle: "How to decode the NMJL card — the blueprint for every winning hand" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 3"
         title="Reading the"
         highlight="Card"
         subtitle="How to decode the NMJL card — the blueprint for every winning hand"

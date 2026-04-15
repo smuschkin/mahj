@@ -14,8 +14,8 @@ export default function Module0Welcome() {
     <PageWrap>
       <SectionHeader>Welcome</SectionHeader>
 
-      <ScreenStepper moduleNum={0} coverProps={{ eyebrow: "MAHJ — Module 0", title: "Welcome to", highlight: "MAHJ", subtitle: "Your path from absolute beginner to your first real game" }} header={<><Cover
-        eyebrow="MAHJ — Module 0"
+      <ScreenStepper moduleNum={0} coverProps={{ eyebrow: "MAHJ — Lesson 1", title: "Welcome to", highlight: "MAHJ", subtitle: "Your path from absolute beginner to your first real game" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 1"
         title="Welcome to"
         highlight="MAHJ"
         subtitle="Your path from absolute beginner to your first real game"

@@ -19,8 +19,8 @@ export default function Module3SetupDealing() {
   const adj = getAdjacentModules(3);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={3} coverProps={{ eyebrow: "MAHJ — Module 3", title: "Setup &", highlight: "Dealing" }} header={<><Cover
-        eyebrow="MAHJ — Module 3"
+      <ScreenStepper moduleNum={3} coverProps={{ eyebrow: "MAHJ — Lesson 4", title: "Setup &", highlight: "Dealing" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 4"
         title="Setup &"
         highlight="Dealing"
         subtitle='From a pile of tiles to "Charleston, ready?"'

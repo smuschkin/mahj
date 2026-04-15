@@ -174,8 +174,8 @@ export default function Module4Charleston() {
   const adj = getAdjacentModules(4);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={4} coverProps={{ eyebrow: "MAHJ — Module 4", title: "The", highlight: "Charleston", subtitle: "The trading ritual that makes American Mahjong unique" }} header={<><Cover
-        eyebrow="MAHJ — Module 4"
+      <ScreenStepper moduleNum={4} coverProps={{ eyebrow: "MAHJ — Lesson 5", title: "The", highlight: "Charleston", subtitle: "The trading ritual that makes American Mahjong unique" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 5"
         title="The"
         highlight="Charleston"
         subtitle="The trading ritual that makes American Mahjong unique"

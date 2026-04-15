@@ -75,8 +75,8 @@ export default function Module5JokersCalling() {
   const adj = getAdjacentModules(6);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={6} coverProps={{ eyebrow: "MAHJ — Module 6", title: "Jokers &", highlight: "Calling", subtitle: "Grabbing tiles, exposing groups, and using your wild cards" }} header={<><Cover
-        eyebrow="MAHJ — Module 6"
+      <ScreenStepper moduleNum={6} coverProps={{ eyebrow: "MAHJ — Lesson 7", title: "Jokers &", highlight: "Calling", subtitle: "Grabbing tiles, exposing groups, and using your wild cards" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 7"
         title="Jokers &"
         highlight="Calling"
         subtitle="Grabbing tiles, exposing groups, and using your wild cards"

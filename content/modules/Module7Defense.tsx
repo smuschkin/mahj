@@ -82,8 +82,8 @@ export default function Module7Defense() {
   const adj = getAdjacentModules(9);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={9} coverProps={{ eyebrow: "MAHJ — Module 9", title: "Defense &", highlight: "Wall Awareness", subtitle: "Reading the table, tracking discards, and not feeding the win" }} header={<><Cover
-        eyebrow="MAHJ — Module 9"
+      <ScreenStepper moduleNum={9} coverProps={{ eyebrow: "MAHJ — Lesson 10", title: "Defense &", highlight: "Wall Awareness", subtitle: "Reading the table, tracking discards, and not feeding the win" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 10"
         title="Defense &"
         highlight="Wall Awareness"
         subtitle="Reading the table, tracking discards, and not feeding the win"

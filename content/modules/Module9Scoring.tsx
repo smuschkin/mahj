@@ -77,8 +77,8 @@ export default function Module9Scoring() {
   const adj = getAdjacentModules(11);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={11} coverProps={{ eyebrow: "MAHJ — Module 11", title: "Scoring &", highlight: "Payouts", subtitle: "Who pays whom and how much — made simple" }} header={<><Cover
-        eyebrow="MAHJ — Module 11"
+      <ScreenStepper moduleNum={11} coverProps={{ eyebrow: "MAHJ — Lesson 12", title: "Scoring &", highlight: "Payouts", subtitle: "Who pays whom and how much — made simple" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 12"
         title="Scoring &"
         highlight="Payouts"
         subtitle="Who pays whom and how much — made simple"

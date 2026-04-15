@@ -61,8 +61,8 @@ export default function Module12FirstGame() {
     <PageWrap>
       <SectionHeader>Walkthrough</SectionHeader>
 
-      <ScreenStepper moduleNum={14} coverProps={{ eyebrow: "MAHJ — Module 14", title: "Your First", highlight: "Game", subtitle: "A complete guided walkthrough — from the deal to Mahjong" }} header={<><Cover
-        eyebrow="MAHJ — Module 14"
+      <ScreenStepper moduleNum={14} coverProps={{ eyebrow: "MAHJ — Lesson 15", title: "Your First", highlight: "Game", subtitle: "A complete guided walkthrough — from the deal to Mahjong" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 15"
         title="Your First"
         highlight="Game"
         subtitle="A complete guided walkthrough — from the deal to Mahjong"

@@ -57,8 +57,8 @@ export default function Module10Mistakes() {
   const adj = getAdjacentModules(12);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={12} coverProps={{ eyebrow: "MAHJ — Module 12", title: "Common Mistakes &", highlight: "Recovery", subtitle: "The dozen errors every beginner makes — and how to handle them gracefully" }} header={<><Cover
-        eyebrow="MAHJ — Module 12"
+      <ScreenStepper moduleNum={12} coverProps={{ eyebrow: "MAHJ — Lesson 13", title: "Common Mistakes &", highlight: "Recovery", subtitle: "The dozen errors every beginner makes — and how to handle them gracefully" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 13"
         title="Common Mistakes &"
         highlight="Recovery"
         subtitle="The dozen errors every beginner makes — and how to handle them gracefully"

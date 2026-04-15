@@ -18,8 +18,8 @@ export default function Module1TileTrainer() {
   const adj = getAdjacentModules(1);
   return (
     <PageWrap>
-      <ScreenStepper moduleNum={1} coverProps={{ eyebrow: "MAHJ — Module 1", title: "Tile", highlight: "Trainer", subtitle: "Recognize all 152 tiles in an American Mahjong set" }} header={<><Cover
-        eyebrow="MAHJ — Module 1"
+      <ScreenStepper moduleNum={1} coverProps={{ eyebrow: "MAHJ — Lesson 2", title: "Tile", highlight: "Trainer", subtitle: "Recognize all 152 tiles in an American Mahjong set" }} header={<><Cover
+        eyebrow="MAHJ — Lesson 2"
         title="Tile"
         highlight="Trainer"
         subtitle="Recognize all 152 tiles in an American Mahjong set"
