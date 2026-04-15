@@ -325,7 +325,7 @@ export default function Module5JokersCalling() {
           <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
             <li><strong>Bad call can = dead hand</strong> — but check if your exposure fits another hand on the card first</li>
             <li><strong>Discarded Jokers are dead</strong> — no one can call or pick them up</li>
-            <li><strong>Expose immediately</strong> — the called group goes face-up on your rack right away</li>
+            <li><strong>Expose immediately after you call</strong> — the group goes face-up on your rack right away</li>
             <li><strong>Can&apos;t call a Joker</strong> — Jokers in the discard pile are always dead</li>
             <li><strong>Calls are for groups of 3+</strong> — the only exception is Mahjong, where you can call any tile that completes your hand</li>
             <li><strong>You can change an exposure</strong> — swap tiles in or out until you discard, then it&apos;s locked</li>
