@@ -129,7 +129,7 @@ export default function Module10Mistakes() {
             num={5}
             title="Calling Mahjong when your hand isn&apos;t actually valid"
             what="You called Mahjong but your hand doesn&apos;t match the card."
-            cost="Didn&apos;t expose yet? No penalty — take it back. Exposed your hand? Dead hand. Other players exposed because of your call? You pay double to anyone still intact."
+            cost="Didn&apos;t expose yet? No penalty — take it back. Exposed your hand? Dead hand. If other players also exposed because of your call, you owe them."
             recover="Verify tile by tile before calling. Don&apos;t throw in hands until Mahjong is confirmed."
           />
         </LessonScreen>
