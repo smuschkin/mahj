@@ -283,24 +283,17 @@ export function CharlestonSim({
       {/* ── INTRO ── */}
       {s.phase === "intro" && (
         <div className="text-center">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-            Interactive Practice
-          </p>
-          <h3 className="mb-3 font-serif text-2xl font-black text-[var(--color-mid)]">
+          <h3 className="mb-3 font-serif text-xl font-black text-[var(--color-mid)]">
             🔄 Charleston Simulator
           </h3>
-          <p className="mb-2 text-sm text-zinc-600">
-            You&apos;ve been dealt 13 tiles. Walk through the full Charleston —
-            pick 3 tiles to pass on each round, see what comes back, and watch
-            your hand improve.
-          </p>
-          <p className="mb-5 text-xs italic text-zinc-500">
-            Remember: never pass a Joker.
+          <p className="mb-5 text-sm text-zinc-600">
+            Walk through a full Charleston — pick 3 tiles to pass each round
+            and see what comes back.
           </p>
           <button
             type="button"
             onClick={startPicking}
-            className="rounded-md bg-[var(--color-mid)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+            className="rounded-md bg-[var(--color-accent)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
           >
             Start Charleston →
           </button>

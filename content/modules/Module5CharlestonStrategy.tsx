@@ -425,10 +425,11 @@ export default function Module5CharlestonStrategy() {
             smart choices during play.
           </p>
         </LessonScreen>
-      </ScreenStepper>
 
-      <SectionHeader>Practice</SectionHeader>
-      <CharlestonSim />
+        <LessonScreen title="">
+          <CharlestonSim />
+        </LessonScreen>
+      </ScreenStepper>
 
       <ModuleNav
         currentModuleNum={5}
