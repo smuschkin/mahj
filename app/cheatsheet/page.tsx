@@ -123,7 +123,7 @@ export default function CheatSheet() {
 
         {/* ── SIDE 2: Strategy, defense, and reference ── */}
         <div className="mt-8 side-two">
-          <header className="mb-3 border-b-2 border-[var(--color-mid)] pb-2 text-center print-only-header">
+          <header className="mb-3 hidden border-b-2 border-[var(--color-mid)] pb-2 text-center print:block">
             <h2 className="font-serif text-xl font-black text-[var(--color-mid)]">
               MAHJ — Cheat Sheet (side 2)
             </h2>
@@ -157,7 +157,7 @@ export default function CheatSheet() {
             {/* DEFENSE */}
             <Section title="Defense — Read the Table">
               <ul className="ml-4 list-disc space-y-0.5">
-                <li><B>3 copies visible</B> of a tile → 4th is 100% safe to discard</li>
+                <li><B>3 copies visible</B> of a tile → 4th is very safe to discard</li>
                 <li><B>Watch exposures:</B></li>
               </ul>
               <div className="ml-6 mt-0.5 grid grid-cols-2 gap-x-2 gap-y-0 text-[13px]">
@@ -206,7 +206,7 @@ export default function CheatSheet() {
             {/* ETIQUETTE */}
             <Section title="Table Etiquette">
               <ul className="ml-4 list-disc space-y-0.5">
-                <li><B>Name every discard</B> (&quot;Four Bam&quot;, &quot;Red Dragon&quot;)</li>
+                <li><B>Name every discard</B> (&quot;Four Bam&quot;, &quot;Red&quot;, &quot;Soap&quot;)</li>
                 <li><B>Pause before racking</B> — give others time to call</li>
                 <li>Don&apos;t touch other players&apos; racks</li>
                 <li>Joker exchange: hand the tile to them, let <em>them</em> swap</li>
