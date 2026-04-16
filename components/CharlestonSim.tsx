@@ -356,7 +356,7 @@ export function CharlestonSim({
               disabled={!canConfirm}
               className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5 disabled:opacity-40 disabled:hover:translate-y-0"
             >
-              Pass {currentPass.direction} →
+              {currentPass.direction === "Left" ? "← " : ""}Pass {currentPass.direction}{currentPass.direction !== "Left" ? " →" : ""}
             </button>
           </div>
         </>
