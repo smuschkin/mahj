@@ -78,13 +78,8 @@ workflows:
       - name: Upload to App Store Connect
         script: |
           APP_FILE=$(find $CM_BUILD_DIR/build/ios/ipa -name "*.ipa")
-          # Debug: check what version is in the IPA
-          unzip -p "$APP_FILE" Payload/App.app/Info.plist > /tmp/info.plist || true
-          plutil -p /tmp/info.plist | grep -i version || true
-          # Upload only (don't auto-submit)
           app-store-connect publish \
-            --path "$APP_FILE" \
-            --app-version "1.1"
+            --path "$APP_FILE"
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
