@@ -68,8 +68,8 @@ export default function ScoringCalculator() {
                 }}
                 className={`rounded-full border-2 px-4 py-1.5 text-sm font-bold transition ${
                   !customValue && handValue === v
-                    ? "border-[var(--color-mid)] bg-[var(--color-mid)] text-white"
-                    : "border-zinc-300 bg-white text-zinc-600 hover:border-[var(--color-mid)]"
+                    ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-white"
+                    : "border-zinc-300 bg-white text-zinc-600 hover:border-[var(--color-accent)]"
                 }`}
               >
                 {fmt(v)}
@@ -103,8 +103,8 @@ export default function ScoringCalculator() {
                 onClick={() => setWinType(opt.value)}
                 className={`flex-1 rounded-lg border-2 px-4 py-3 text-center text-sm font-bold transition ${
                   winType === opt.value
-                    ? "border-[var(--color-mid)] bg-[var(--color-mid)] text-white"
-                    : "border-zinc-300 bg-white text-zinc-600 hover:border-[var(--color-mid)]"
+                    ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-white"
+                    : "border-zinc-300 bg-white text-zinc-600 hover:border-[var(--color-accent)]"
                 }`}
               >
                 <span className="mr-1">{opt.icon}</span> {opt.label}
@@ -119,7 +119,7 @@ export default function ScoringCalculator() {
             Bonuses
           </legend>
           <div className="space-y-2">
-            <label className="flex items-center gap-3 rounded-lg border-2 border-zinc-200 px-4 py-3 transition hover:border-[var(--color-mid)]">
+            <label className="flex items-center gap-3 rounded-lg border-2 border-zinc-200 px-4 py-3 transition hover:border-[var(--color-accent)]">
               <input
                 type="checkbox"
                 checked={jokerless}
@@ -138,7 +138,7 @@ export default function ScoringCalculator() {
                 </div>
               </div>
             </label>
-            <label className="flex items-center gap-3 rounded-lg border-2 border-zinc-200 px-4 py-3 transition hover:border-[var(--color-mid)]">
+            <label className="flex items-center gap-3 rounded-lg border-2 border-zinc-200 px-4 py-3 transition hover:border-[var(--color-accent)]">
               <input
                 type="checkbox"
                 checked={singlesAndPairs}
@@ -218,7 +218,7 @@ export default function ScoringCalculator() {
             <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
               Winner collects
             </div>
-            <div className="font-serif text-3xl font-black text-[var(--color-mid)]">
+            <div className="font-serif text-3xl font-black text-[var(--color-accent)]">
               {fmt(totalCollected)}
             </div>
           </div>
