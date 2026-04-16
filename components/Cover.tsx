@@ -23,7 +23,7 @@ export function Cover({
 }) {
   if (compact) {
     return (
-      <header className="relative -mt-4 mb-2 overflow-hidden rounded-xl bg-gradient-to-br from-[#1A4D2E] via-[#1F5A35] to-[#0F3320] px-4 py-2.5 sm:px-6 sm:py-3 text-center text-white shadow-sm">
+      <header className="relative mb-2 overflow-hidden rounded-xl bg-gradient-to-br from-[#1A4D2E] via-[#1F5A35] to-[#0F3320] px-4 py-2.5 sm:px-6 sm:py-3 text-center text-white shadow-sm">
         {eyebrow && (
           <div className="mb-1 text-[11px] sm:text-[12px] font-bold uppercase tracking-[3px] text-[#C8A951]">
             {eyebrow}
