@@ -113,7 +113,7 @@ export function PracticeTable() {
       />
 
       {/* Progress dots */}
-      <div className="-mt-4 mb-1">
+      <div className="mb-1">
         <StepDots
           current={stepIndex}
           total={STEPS.length}
