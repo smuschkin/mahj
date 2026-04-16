@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Cover } from "@/components/Cover";
 import { PrintButton } from "@/components/PrintButton";
 
 export const metadata: Metadata = {
@@ -10,18 +11,14 @@ export default function CheatSheet() {
   return (
     <>
       {/* Screen-only header */}
-      <div className="mx-auto max-w-3xl px-6 py-10 print:hidden">
-        <p className="mb-1 text-center text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-          MAHJ Tool
-        </p>
-        <h1 className="mb-2 text-center font-serif text-3xl font-black text-[var(--color-mid)]">
-          Game Night <span className="text-[var(--color-accent)]">Cheat Sheet</span>
-        </h1>
-        <p className="mb-6 text-center text-sm text-zinc-600">
-          Print this page (Ctrl/Cmd+P) and bring it to your first game.
-          Designed for front &amp; back of one sheet.
-        </p>
-        <div className="text-center">
+      <div className="mx-auto max-w-3xl px-4 py-4 sm:px-6 print:hidden">
+        <Cover
+          eyebrow="MAHJ Tool"
+          title="Game Night"
+          highlight="Cheat Sheet"
+          subtitle="Print this and bring it to your first game"
+        />
+        <div className="-mt-4 text-center">
           <PrintButton />
         </div>
       </div>
