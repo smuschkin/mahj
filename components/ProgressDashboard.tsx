@@ -68,15 +68,6 @@ export function ProgressDashboard() {
         })}
       </div>
 
-      {/* Next up */}
-      {nextModule && completed < total && (
-        <a href={nextModule.href} className="mt-3 block text-sm text-zinc-500 hover:text-zinc-700 transition">
-          Up next:{" "}
-          <span className="font-bold text-[var(--color-accent)] underline">
-            Lesson {nextModule.num + 1}: {nextModule.name}
-          </span>
-        </a>
-      )}
 
       {completed === total && (
         <div className="mt-4 rounded-lg bg-gradient-to-r from-[#E8F5EC] to-[#D0E8D6] p-4 text-center">
