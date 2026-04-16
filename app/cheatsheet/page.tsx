@@ -27,7 +27,7 @@ export default function CheatSheet() {
       <div className="cheatsheet mx-auto max-w-3xl px-6 pb-12 print:max-w-none print:px-0 print:pb-0">
         {/* ── SIDE 1: The essentials you need every turn ── */}
         <div className="side-one">
-          <header className="mb-3 border-b-2 border-[var(--color-mid)] pb-2 text-center">
+          <header className="mb-3 hidden border-b-2 border-[var(--color-mid)] pb-2 text-center print:block">
             <h2 className="font-serif text-xl font-black text-[var(--color-mid)]">
               MAHJ — Game Night Cheat Sheet
             </h2>
