@@ -40,95 +40,85 @@ export default function CheatSheet() {
           </header>
 
           <div className="grid grid-cols-1 gap-3 text-[13px] leading-snug text-zinc-800 sm:grid-cols-2">
-            {/* YOUR TURN */}
-            <Section title="Your Turn (repeat every turn)" accent>
+            {/* GAME SETUP */}
+            <Section title="Game Setup" accent>
               <ol className="ml-4 list-decimal space-y-0.5">
-                <li><B>Draw</B> one tile from the wall (right end of your row)</li>
-                <li><B>Look</B> at your hand — does this help any candidate hand?</li>
-                <li><B>Discard</B> one tile face-up in the center, <B>name it out loud</B></li>
-                <li><B>Pause 2–3 seconds</B> so others can call</li>
+                <li><B>Pick East:</B> everyone rolls dice, highest roll is East (Dealer)</li>
+                <li><B>Wash:</B> all 152 tiles face-down, everyone swirls to shuffle</li>
+                <li><B>Build walls:</B> each player makes a row of 19 stacks, 2 tiles high</li>
+                <li><B>Roll &amp; break:</B> East rolls dice, counts from right, pushes out tiles after the count</li>
+                <li><B>Deal:</B> 3 rounds of 4 tiles each, then East takes 2 more, others take 1</li>
               </ol>
-              <Tip>East starts with 14 tiles and discards first (no draw). Everyone else has 13.</Tip>
-            </Section>
-
-            {/* WHEN SOMEONE DISCARDS */}
-            <Section title="When Someone Else Discards" accent>
-              <ul className="ml-4 list-disc space-y-0.5">
-                <li><B>Can you use it?</B> Check if it completes a group in your hand</li>
-                <li>If yes → say <B>&quot;Call&quot;</B> (or <B>&quot;Mahjong!&quot;</B> to win)</li>
-                <li>Expose the completed group face-up on your rack</li>
-                <li>Then discard one tile to get back to the right count</li>
-                <li>If no → do nothing, wait for your turn</li>
-              </ul>
-              <Warn>Concealed (C) hands: you can ONLY call for Mahjong, nothing else.</Warn>
-            </Section>
-
-            {/* READING THE CARD */}
-            <Section title="Reading the Card (Notation Key)">
-              <div className="grid grid-cols-2 gap-x-3 gap-y-0.5">
-                <div><B>F</B> = Flower (any of the 8)</div>
-                <div><B>D</B> = Dragon (Red, Green, or Soap)</div>
-                <div><B>N E S W</B> = Wind tiles</div>
-                <div><B>0</B> = White Dragon (Soap)</div>
-                <div><B>Numbers (1–9)</B> = tile values</div>
-                <div><B>Same color</B> = same suit</div>
-                <div><B>Diff color</B> = different suits</div>
-                <div><B>C</B> = Concealed / <B>X</B> = Exposed</div>
-              </div>
-              <div className="mt-1.5 rounded border border-zinc-200 bg-zinc-50 px-2 py-1">
-                <span className="text-[13px] font-bold text-zinc-500">GROUP SIZES: </span>
-                <span className="text-[13px]">
-                  Pair = 2 &nbsp;|&nbsp; Pung = 3 &nbsp;|&nbsp; Kong = 4 &nbsp;|&nbsp; Quint = 5
-                </span>
-              </div>
-              <Tip>The card shows PATTERNS, not specific suits. You choose which suit goes where.</Tip>
+              <Tip>East starts with 14 tiles, everyone else has 13. Dealer rotates clockwise every hand.</Tip>
             </Section>
 
             {/* CHARLESTON */}
-            <Section title="The Charleston (before play starts)">
+            <Section title="The Charleston" accent>
               <div className="mb-1 text-[13px] font-bold text-zinc-500">
                 1ST CHARLESTON (mandatory):
               </div>
               <ol className="ml-4 list-decimal space-y-0">
-                <li><B>Right</B> → pass 3 tiles</li>
-                <li><B>Across</B> ↑ pass 3 tiles</li>
-                <li><B>Left</B> ← pass 3 tiles (can &quot;blind pass&quot;)</li>
+                <li><B>Right</B> → pass 3 face-down</li>
+                <li><B>Across</B> ↑ pass 3 face-down</li>
+                <li><B>Left</B> ← pass 3 face-down (blind pass OK)</li>
               </ol>
               <div className="mt-1 mb-1 text-[13px] font-bold text-zinc-500">
                 2ND CHARLESTON (optional — any player can stop):
               </div>
               <ol className="ml-4 list-decimal space-y-0" start={4}>
-                <li><B>Left</B> ← pass 3</li>
+                <li><B>Left</B> ← pass 3 in pyramid shape</li>
                 <li><B>Across</B> ↑ pass 3</li>
-                <li><B>Right</B> → pass 3</li>
+                <li><B>Last Right</B> → pass 3 (blind pass OK)</li>
               </ol>
               <div className="mt-1 text-[13px]">
-                Then: <B>Courtesy pass</B> — trade 0–3 tiles with player across (both agree on count)
+                <B>Courtesy pass</B> — trade 0–3 tiles across (always available, even if Charleston was stopped)
               </div>
-              <Warn>NEVER pass a Joker.</Warn>
+              <Warn>NEVER pass a Joker or Flower.</Warn>
             </Section>
 
-            {/* CALLING PRIORITY */}
-            <Section title="Calling Priority (highest wins)">
+            {/* YOUR TURN */}
+            <Section title="Your Turn (every turn)">
               <ol className="ml-4 list-decimal space-y-0.5">
-                <li><B>Mahjong</B> — always wins over any other call</li>
-                <li><B>Kong / Pung</B> — out-of-turn call beats in-turn draw</li>
+                <li><B>Draw</B> one tile from the wall</li>
+                <li><B>Decide</B> — does this help your hand?</li>
+                <li><B>Discard</B> one tile face-up, <B>name it out loud</B></li>
+                <li><B>Pause</B> 2–3 seconds so others can call</li>
               </ol>
-              <div className="mt-1.5 rounded border border-zinc-200 bg-zinc-50 px-2 py-1 text-[13px]">
-                <B>Can I call this?</B> Only if the tile completes a group of 3+ identical tiles
-                in your target hand. You cannot call to make a pair (except for Mahjong).
+            </Section>
+
+            {/* CALLING */}
+            <Section title="Calling">
+              <ul className="ml-4 list-disc space-y-0.5">
+                <li>Say <B>&quot;Call!&quot;</B> to grab a discard for a group of 3+</li>
+                <li>Say <B>&quot;Mahjong!&quot;</B> if it completes your hand (can call for pairs too)</li>
+                <li>Expose the group face-up, then discard one tile</li>
+                <li>Mahjong beats all other calls</li>
+              </ul>
+              <Warn>Concealed (C) hands: ONLY call for Mahjong.</Warn>
+            </Section>
+
+            {/* READING THE CARD */}
+            <Section title="Reading the Card">
+              <div className="grid grid-cols-2 gap-x-3 gap-y-0.5">
+                <div><B>F</B> = Flower (any of 8)</div>
+                <div><B>D</B> = Dragon (Red, Green, Soap)</div>
+                <div><B>N E S W</B> = Wind tiles</div>
+                <div><B>O</B> = Soap (zero)</div>
+                <div><B>Same color</B> = same suit</div>
+                <div><B>C</B> = Concealed / <B>X</B> = Exposed</div>
+              </div>
+              <div className="mt-1.5 rounded border border-zinc-200 bg-zinc-50 px-2 py-1">
+                Pair = 2 &nbsp;|&nbsp; Pung = 3 &nbsp;|&nbsp; Kong = 4 &nbsp;|&nbsp; Quint = 5
               </div>
             </Section>
 
             {/* JOKER RULES */}
             <Section title="Joker Rules">
               <ul className="ml-4 list-disc space-y-0.5">
-                <li>Substitute in groups of <B>3+ identical tiles</B> only</li>
-                <li><B>NEVER</B> in a pair or single tile</li>
+                <li>Substitute in groups of <B>3+</B> only — <B>NEVER</B> in pairs</li>
                 <li>Cannot be passed in the Charleston</li>
                 <li>Cannot be called from the discard pile</li>
-                <li><B>Joker exchange:</B> on your turn, you can swap a natural tile
-                  for a Joker in any exposed group (yours or opponents&apos;)</li>
+                <li><B>Exchange:</B> on your turn, hand a real tile to any player with an exposed Joker — they swap it</li>
               </ul>
             </Section>
           </div>
