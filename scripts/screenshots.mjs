@@ -10,7 +10,7 @@
 import { chromium } from "playwright";
 import { mkdir } from "fs/promises";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
 const OUTPUT_DIR = "./screenshots";
 
 // Apple App Store screenshot sizes — all actual pixel dimensions
@@ -20,12 +20,14 @@ const SIZES = [
   { name: "6.9-inch", cssWidth: 430, cssHeight: 932, scale: 3 }, // 1290x2796
   { name: "6.5-inch", cssWidth: 414, cssHeight: 896, scale: 3 }, // 1242x2688
   { name: "5.5-inch", cssWidth: 414, cssHeight: 736, scale: 3 }, // 1242x2208
+  // iPad Pro 13" (6th gen) — 2064x2752
+  { name: "13-inch", cssWidth: 1032, cssHeight: 1376, scale: 2 }, // 2064x2752
 ];
 
 const SCREENS = [
   { name: "01-homepage", url: "/", wait: 1000 },
-  { name: "02-tile-trainer", url: "/module/1", wait: 1500 },
-  { name: "03-charleston", url: "/module/4", wait: 1500 },
+  { name: "02-tile-trainer", url: "/lesson/2", wait: 1500 },
+  { name: "03-charleston", url: "/lesson/5", wait: 1500 },
   { name: "04-cheatsheet", url: "/cheatsheet", wait: 1000 },
   { name: "05-calculator", url: "/calculator", wait: 1000 },
   { name: "06-practice", url: "/play", wait: 1500 },
@@ -52,10 +54,21 @@ async function main() {
 
     const page = await context.newPage();
 
+    // Unlock all lessons by setting progress in localStorage
+    await page.goto(`${BASE_URL}/`, { waitUntil: "domcontentloaded" });
+    await page.evaluate(() => {
+      const progress = {};
+      for (let i = 0; i < 15; i++) {
+        progress[i] = { status: "completed", completedAt: Date.now() };
+      }
+      localStorage.setItem("mahj-progress-v1", JSON.stringify(progress));
+    });
+    await page.waitForTimeout(500);
+
     for (const screen of SCREENS) {
       try {
-        await page.goto(`${BASE_URL}${screen.url}`, { waitUntil: "networkidle" });
-        await page.waitForTimeout(screen.wait);
+        await page.goto(`${BASE_URL}${screen.url}`, { waitUntil: "load" });
+        await page.waitForTimeout(screen.wait + 500);
         const path = `${dir}/${screen.name}.png`;
         await page.screenshot({ path, fullPage: false });
         console.log(`  ✓ ${screen.name}.png`);
