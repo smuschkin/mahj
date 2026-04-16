@@ -72,8 +72,8 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* ── App Store ── */}
-      <div className="mb-9 rounded-xl border-2 border-[#C8A951]/30 bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-6 text-center shadow-sm">
+      {/* ── App Store — hidden in standalone/app mode via CSS ── */}
+      <div className="mb-9 hidden-in-app rounded-xl border-2 border-[#C8A951]/30 bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-6 text-center shadow-sm">
         <p className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
           Also available on
         </p>
