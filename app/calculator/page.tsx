@@ -225,16 +225,6 @@ export default function ScoringCalculator() {
         </div>
       </div>
 
-      <Callout variant="info">
-        This calculator uses standard NMJL payout rules. Your group may have
-        house variations — always confirm with your table before the first hand.
-      </Callout>
-
-      <Callout variant="tip">
-        <strong>Quick reference:</strong> Discard win = discarder 2×, others 1×.
-        Self-draw = everyone 2×. Jokerless = double everything (except Singles
-        &amp; Pairs, which already have it baked in).
-      </Callout>
 
     </PageWrap>
   );
