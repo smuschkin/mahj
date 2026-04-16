@@ -122,7 +122,7 @@ export default function CheatSheet() {
         </div>
 
         {/* ── SIDE 2: Strategy, defense, and reference ── */}
-        <div className="mt-8 side-two">
+        <div className="mt-3 side-two">
           <header className="mb-3 hidden border-b-2 border-[var(--color-mid)] pb-2 text-center print:block">
             <h2 className="font-serif text-xl font-black text-[var(--color-mid)]">
               MAHJ — Cheat Sheet (side 2)
