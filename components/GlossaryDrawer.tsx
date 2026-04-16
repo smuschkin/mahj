@@ -66,7 +66,7 @@ export function GlossaryDrawer() {
         type="button"
         onClick={toggle}
         aria-label={open ? "Close glossary" : "Open glossary"}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-mid)] text-2xl text-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition hover:scale-105 hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] active:scale-95"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1A6B42] text-2xl text-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition hover:scale-105 hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] active:scale-95"
       >
         {open ? "✕" : "📖"}
       </button>
@@ -134,10 +134,6 @@ export function GlossaryDrawer() {
           )}
         </div>
 
-        {/* Footer */}
-        <div className="border-t border-zinc-100 px-5 py-2 text-center text-[13px] text-zinc-400">
-          Full glossary available here
-        </div>
       </div>
     </>
   );
@@ -162,10 +158,10 @@ function EntryCard({ entry }: { entry: GlossaryEntry }) {
         {entry.modules.map((m) => (
           <a
             key={m}
-            href={`/module/${m}`}
+            href={`/lesson/${m + 1}`}
             className="rounded border border-zinc-200 px-1 py-0.5 font-bold text-[var(--color-mid)] hover:border-[var(--color-mid)]"
           >
-            M{m}
+            {m + 1}
           </a>
         ))}
       </div>

@@ -274,6 +274,13 @@ export default function CheatSheet() {
           }
         }
       `}</style>
+
+      {/* Back link — screen only */}
+      <div className="mx-auto max-w-3xl px-4 py-6 text-center print:hidden">
+        <a href="/" className="text-sm font-bold text-[var(--color-accent)] hover:underline">
+          ← Back to Home
+        </a>
+      </div>
     </>
   );
 }

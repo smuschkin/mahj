@@ -414,6 +414,16 @@ export default function Module9Scoring() {
             <strong>Your First Full Game</strong> — a complete guided walkthrough
             from the deal to Mahjong, with every concept applied at the right moment.
           </p>
+          <a
+            href="/calculator"
+            className="mt-3 flex items-center gap-3 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] px-4 py-3 transition hover:-translate-y-0.5"
+          >
+            <span className="text-2xl">{"\u{1F4B0}"}</span>
+            <div>
+              <div className="font-serif text-sm font-black text-[var(--color-accent)]">Scoring Calculator</div>
+              <div className="text-[13px] text-zinc-500">Plug in any hand and see who pays what</div>
+            </div>
+          </a>
         </LessonScreen>
       </ScreenStepper>
 

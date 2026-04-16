@@ -300,15 +300,6 @@ export function DailyPuzzle() {
 
   return (
     <div className="rounded-xl border-2 border-[var(--color-accent)] bg-white p-5 shadow-sm">
-      <div className="mb-3 flex items-center justify-between">
-        <span className="text-[13px] font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-          Daily Puzzle
-        </span>
-        <span className="text-[13px] text-zinc-400">
-          {new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" })}
-        </span>
-      </div>
-
       <h3 className="mb-3 font-serif text-lg font-black text-[var(--color-mid)]">
         {puzzle.prompt}
       </h3>

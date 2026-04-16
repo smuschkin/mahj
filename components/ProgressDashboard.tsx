@@ -70,18 +70,23 @@ export function ProgressDashboard() {
 
       {/* Next up */}
       {nextModule && completed < total && (
-        <p className="mt-3 text-sm text-zinc-500">
+        <a href={nextModule.href} className="mt-3 block text-sm text-zinc-500 hover:text-zinc-700 transition">
           Up next:{" "}
-          <span className="font-bold text-[var(--color-mid)]">
+          <span className="font-bold text-[var(--color-accent)] underline">
             Lesson {nextModule.num + 1}: {nextModule.name}
           </span>
-        </p>
+        </a>
       )}
 
       {completed === total && (
-        <p className="mt-3 text-center text-sm font-bold text-[#2D8B5E]">
-          You completed every lesson — nice work!
-        </p>
+        <div className="mt-4 rounded-lg bg-gradient-to-r from-[#E8F5EC] to-[#D0E8D6] p-4 text-center">
+          <p className="font-serif text-lg font-black text-[var(--color-accent)]">
+            You did it!
+          </p>
+          <p className="mt-1 text-sm text-zinc-600">
+            All 15 lessons complete. You&apos;re ready for game night.
+          </p>
+        </div>
       )}
     </div>
   );

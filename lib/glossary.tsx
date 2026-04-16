@@ -23,7 +23,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Article 67",
     category: "Etiquette",
-    modules: [8],
+    modules: [11, 13],
     definition: (
       <>
         The official NMJL rule covering misnamed discards. If a player calls Mahjong
@@ -36,7 +36,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Jokerless bonus rule",
     category: "Scoring",
-    modules: [9],
+    modules: [13],
     definition: (
       <>
         The official NMJL rule covering the jokerless bonus: a winning hand
@@ -63,7 +63,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Bettor",
     category: "Etiquette",
-    modules: [8, 9],
+    modules: [11],
     definition: (
       <>
         An optional fifth player who sits out a hand and bets on which of the four
@@ -75,7 +75,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Blind pass",
     category: "Charleston",
-    modules: [4],
+    modules: [4, 5],
     definition: (
       <>
         A move on the first left (pass 3) or the last right (pass 6) where
@@ -102,7 +102,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Calling",
     category: "Calling",
-    modules: [5],
+    modules: [6],
     definition: (
       <>
         Claiming another player&apos;s discarded tile to complete a Pung, Kong, or
@@ -115,7 +115,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Candidate hand",
     category: "Strategy",
-    modules: [6],
+    modules: [7, 9],
     definition: (
       <>
         One of the 2–3 hands on the card you&apos;re building toward early in the
@@ -127,7 +127,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Card (NMJL Card)",
     category: "Strategy",
-    modules: [6],
+    modules: [2],
     definition: (
       <>
         The annual card published by the National Mah Jongg League listing every
@@ -152,7 +152,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Concealed hand (C)",
     category: "Calling",
-    modules: [5, 9],
+    modules: [6, 13],
     definition: (
       <>
         A hand marked &quot;C&quot; on the card. You cannot call any tiles during
@@ -167,7 +167,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Courtesy pass",
     category: "Charleston",
-    modules: [4],
+    modules: [4, 5],
     definition: (
       <>
         After both Charlestons, you and the player across may agree to trade 0–3
@@ -205,7 +205,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Dead hand",
     category: "Mistakes",
-    modules: [5, 9, 10],
+    modules: [6, 12, 13],
     definition: (
       <>
         A hand that can no longer reach a valid winning position (because of an
@@ -230,7 +230,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Discard",
     category: "Calling",
-    modules: [5, 8],
+    modules: [6, 8],
     definition: (
       <>
         A tile placed face-up in the center of the table at the end of a turn. You
@@ -242,7 +242,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Discarder pays double",
     category: "Scoring",
-    modules: [9],
+    modules: [13],
     definition: (
       <>
         When a player wins on a discard, the discarder pays the winner 2× the hand
@@ -289,7 +289,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Expose (Exposure)",
     category: "Calling",
-    modules: [5],
+    modules: [6],
     definition: (
       <>
         Laying a called group face-up at the front of your rack so all players can
@@ -301,7 +301,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Exposed hand (X)",
     category: "Calling",
-    modules: [5, 9],
+    modules: [6, 13],
     definition: (
       <>
         A hand marked &quot;X&quot; on the card. You may call tiles and expose groups
@@ -315,7 +315,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "False Mahjong",
     category: "Mistakes",
-    modules: [9, 10],
+    modules: [12, 13],
     definition: (
       <>
         Calling Mahjong when your hand isn&apos;t actually valid. Per NMJL rules,
@@ -328,7 +328,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "First Charleston",
     category: "Charleston",
-    modules: [4],
+    modules: [4, 5],
     definition: (
       <>
         The mandatory first three passes: right → across → left. Everyone must do all
@@ -352,7 +352,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Fold (Folding)",
     category: "Strategy",
-    modules: [7],
+    modules: [10],
     definition: (
       <>
         Shifting from playing to win to playing to <em>not lose</em>. You keep
@@ -377,7 +377,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Hot suit",
     category: "Strategy",
-    modules: [7],
+    modules: [10],
     definition: (
       <>
         A suit that nobody at the table is discarding. Usually means at least one
@@ -390,7 +390,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Joker",
     category: "Tiles",
-    modules: [1, 5],
+    modules: [1, 6],
     definition: (
       <>
         The wild-card tile. There are 8 in the set. Jokers may substitute in any
@@ -403,7 +403,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Joker exchange",
     category: "Calling",
-    modules: [5, 10],
+    modules: [6, 11, 12],
     definition: (
       <>
         On your turn, if any exposed group contains a joker and you have the real
@@ -416,7 +416,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Jokerless bonus",
     category: "Scoring",
-    modules: [9],
+    modules: [13],
     definition: (
       <>
         A winning hand with no jokers pays double. Stacks with the discarder /
@@ -431,7 +431,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Kong",
     category: "Calling",
-    modules: [5],
+    modules: [6],
     definition: (
       <>
         Four identical tiles. Can be made by drawing all four yourself, or by calling
@@ -444,7 +444,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Like-numbers hand",
     category: "Strategy",
-    modules: [6, 7],
+    modules: [2, 10],
     definition: (
       <>
         A hand category built around the same number across multiple suits (e.g.
@@ -458,7 +458,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Mahjong (call)",
     category: "Calling",
-    modules: [5, 8],
+    modules: [6, 8],
     definition: (
       <>
         The win declaration. You say &quot;Mahjong!&quot; the moment your 14 tiles
@@ -470,7 +470,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Misnamed discard",
     category: "Etiquette",
-    modules: [8, 10],
+    modules: [11, 12],
     definition: (
       <>
         Announcing a discarded tile by the wrong name. Covered by NMJL Article 67 —
@@ -485,7 +485,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Name your discard",
     category: "Etiquette",
-    modules: [8],
+    modules: [8, 11],
     definition: (
       <>
         Official NMJL rule: every discard must be announced out loud as it&apos;s
@@ -496,7 +496,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "NMJL",
     category: "Strategy",
-    modules: [0, 6],
+    modules: [0, 2],
     definition: (
       <>
         The National Mah Jongg League — the organization that publishes the official
@@ -509,7 +509,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Pair",
     category: "Calling",
-    modules: [5],
+    modules: [6],
     definition: (
       <>
         Two identical tiles. Cannot be formed by calling (except as the final tile of
@@ -520,7 +520,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Pause before racking",
     category: "Etiquette",
-    modules: [8],
+    modules: [8, 11],
     definition: (
       <>
         Etiquette convention: after you draw a tile, count to about 3 before placing
@@ -533,7 +533,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Picking ahead",
     category: "Mistakes",
-    modules: [10],
+    modules: [12],
     definition: (
       <>
         Drawing a tile from the wall before it&apos;s your turn. Treated as a serious
@@ -546,7 +546,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Pung",
     category: "Calling",
-    modules: [5],
+    modules: [6],
     definition: (
       <>
         Three identical tiles. Can be made by drawing them yourself or by calling a
@@ -559,7 +559,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Quint",
     category: "Calling",
-    modules: [5],
+    modules: [6],
     definition: (
       <>
         Five identical tiles — yes, that exists in some hands on the card. Built with
@@ -573,7 +573,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Rack",
     category: "Tiles",
-    modules: [1, 8],
+    modules: [1, 3],
     definition: (
       <>
         The wooden tile holder in front of each player. Has a sloped front face
@@ -585,7 +585,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Reading the wall",
     category: "Strategy",
-    modules: [6, 7],
+    modules: [9, 10],
     definition: (
       <>
         Tracking which tiles have been discarded or exposed so you know what&apos;s
@@ -609,7 +609,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Same-suit hand",
     category: "Strategy",
-    modules: [6, 7],
+    modules: [2, 10],
     definition: (
       <>
         A hand category that requires all groups to be in a single suit (all Bams,
@@ -621,7 +621,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Second Charleston",
     category: "Charleston",
-    modules: [4],
+    modules: [4, 5],
     definition: (
       <>
         The optional second round of three passes (left → across → right) that
@@ -633,7 +633,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Self-draw (Self-pick)",
     category: "Scoring",
-    modules: [9],
+    modules: [13],
     definition: (
       <>
         Drawing your winning tile from the wall yourself, with no discard involved.
@@ -645,7 +645,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Sextet",
     category: "Calling",
-    modules: [5],
+    modules: [6],
     definition: (
       <>
         Six of a kind. Appears on some NMJL hand patterns. Like Quints, jokers
@@ -656,7 +656,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Singles & Pairs",
     category: "Strategy",
-    modules: [5, 6, 9],
+    modules: [2, 6, 13],
     definition: (
       <>
         A hand category made entirely of pairs and single tiles. <strong>Jokers
@@ -671,7 +671,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Tells (Reading exposures)",
     category: "Strategy",
-    modules: [7],
+    modules: [10],
     definition: (
       <>
         The information leak when an opponent calls and exposes. Every exposure tells
@@ -696,7 +696,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Wall game",
     category: "Scoring",
-    modules: [9],
+    modules: [8, 13],
     definition: (
       <>
         A hand where the wall runs out before anyone calls Mahjong. <strong>No
@@ -732,7 +732,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: "Year hand",
     category: "Strategy",
-    modules: [6],
+    modules: [2, 7],
     definition: (
       <>
         A hand built around the digits of the current year (e.g. 2-0-2-6 for 2026).

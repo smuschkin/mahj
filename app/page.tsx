@@ -14,16 +14,8 @@ export default function Home() {
         eyebrow="Learn American Mahjong"
         title="Welcome to"
         highlight="MAHJ"
-        subtitle="Your path from absolute beginner to your first real game"
+        subtitle="Your path from beginner to your first real game"
       />
-
-      <div className="mb-9 rounded-lg border-l-4 border-[#2D8B5E] bg-white px-4 py-4 sm:px-6 sm:py-5 shadow-sm">
-        <p className="text-[15px] leading-relaxed text-zinc-600">
-          Learn everything you need to sit down and play American Mahjong
-          with confidence.{" "}
-          <strong className="text-[var(--color-mid)]">No experience needed.</strong>
-        </p>
-      </div>
 
       <ProgressDashboard />
 
@@ -32,7 +24,8 @@ export default function Home() {
       <ModuleList />
 
       {/* ── Daily Puzzle ── */}
-      <div className="mt-9 mb-9">
+      <SectionHeader>Daily Challenge</SectionHeader>
+      <div className="mb-9">
         <DailyPuzzle />
       </div>
 
@@ -45,7 +38,7 @@ export default function Home() {
           className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
         >
           <span className="text-2xl">{"\u{1F5A8}\uFE0F"}</span>
-          <span className="font-serif text-sm font-black text-[var(--color-mid)]">
+          <span className="font-serif text-sm font-black text-[var(--color-accent)]">
             Print Cheat Sheet
           </span>
           <span className="text-[13px] text-zinc-500">Bring to game night</span>
@@ -55,8 +48,8 @@ export default function Home() {
           className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
         >
           <span className="text-2xl">{"\u{1F3B2}"}</span>
-          <span className="font-serif text-sm font-black text-[var(--color-mid)]">
-            Setup Walkthrough
+          <span className="font-serif text-sm font-black text-[var(--color-accent)]">
+            Practice Table
           </span>
           <span className="text-[13px] text-zinc-500">Learn the flow</span>
         </Link>
@@ -65,7 +58,7 @@ export default function Home() {
           className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
         >
           <span className="text-2xl">{"\u{1F4B0}"}</span>
-          <span className="font-serif text-sm font-black text-[var(--color-mid)]">
+          <span className="font-serif text-sm font-black text-[var(--color-accent)]">
             Scoring Calculator
           </span>
           <span className="text-[13px] text-zinc-500">Who pays what?</span>
@@ -100,6 +93,10 @@ export default function Home() {
       <div className="mt-4 flex justify-center gap-4 text-center">
         <ResetProgressButton />
       </div>
+
+      <p className="mt-6 mb-2 text-center text-[13px] text-zinc-400">
+        Made with ♥
+      </p>
     </PageWrap>
   );
 }

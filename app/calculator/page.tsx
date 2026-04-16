@@ -225,6 +225,11 @@ export default function ScoringCalculator() {
         </div>
       </div>
 
+      <div className="mt-6 text-center">
+        <a href="/" className="text-sm font-bold text-[var(--color-accent)] hover:underline">
+          ← Back to Home
+        </a>
+      </div>
 
     </PageWrap>
   );

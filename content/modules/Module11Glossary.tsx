@@ -912,10 +912,10 @@ export default function Module11Glossary() {
                     {e.modules.map((m) => (
                       <a
                         key={m}
-                        href={`/module/${m}`}
+                        href={`/lesson/${m + 1}`}
                         className="rounded border border-zinc-300 bg-zinc-50 px-1.5 py-0.5 font-bold text-[var(--color-mid)] hover:border-[var(--color-mid)]"
                       >
-                        Module {m}
+                        Lesson {m + 1}
                       </a>
                     ))}
                   </footer>

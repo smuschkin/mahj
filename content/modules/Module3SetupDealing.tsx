@@ -528,6 +528,16 @@ export default function Module3SetupDealing() {
             <strong>Charleston</strong> — the unique tile-trading ritual that happens{" "}
             <em>before</em>{" "}the game really starts.
           </p>
+          <a
+            href="/play"
+            className="mt-3 flex items-center gap-3 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] px-4 py-3 transition hover:-translate-y-0.5"
+          >
+            <span className="text-2xl">{"\u{1F3B2}"}</span>
+            <div>
+              <div className="font-serif text-sm font-black text-[var(--color-accent)]">Practice Table</div>
+              <div className="text-[13px] text-zinc-500">Walk through setup step by step</div>
+            </div>
+          </a>
         </LessonScreen>
       </ScreenStepper>
 
