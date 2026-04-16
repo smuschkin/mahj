@@ -781,11 +781,9 @@ function NothingToPassHint({ hand }: { hand: TileData[] }) {
 
   return (
     <Callout variant="info">
-      <strong>Tough hand to pass from!</strong> You don&apos;t have many obvious
-      throwaway tiles. When this happens at the table, consider passing your{" "}
-      <em>least useful</em> pairs (you only need one pair for your final hand) or
-      tiles from your second-best suit. Don&apos;t agonize — even experienced
-      players sometimes have to pass decent tiles.
+      <strong>Tough hand to pass from!</strong>{" "}You don&apos;t have many obvious
+      throwaway tiles. Consider passing your{" "}
+      <em>least useful</em>{" "}pairs or tiles from your second-best suit.
     </Callout>
   );
 }
