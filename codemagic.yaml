@@ -50,15 +50,20 @@ workflows:
 
           # 4. Apply profiles to the Xcode project
           xcode-project use-profiles
-      - name: Set build number
+      - name: Set build number and version
         script: |
           cd ios/App
           agvtool new-version -all $(($BUILD_NUMBER + 100))
-          # Force marketing version to 1.1
+          # Force marketing version in pbxproj
           sed -i '' 's/MARKETING_VERSION = [^;]*/MARKETING_VERSION = 1.1/' App.xcodeproj/project.pbxproj
-          echo "=== Verify versions ==="
+          # Force version directly in Info.plist (in case pbxproj variable doesn't resolve)
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString 1.1" App/Info.plist
+          # Verify
+          echo "=== pbxproj ==="
           grep MARKETING_VERSION App.xcodeproj/project.pbxproj
-          grep CURRENT_PROJECT_VERSION App.xcodeproj/project.pbxproj
+          echo "=== Info.plist ==="
+          /usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" App/Info.plist
+          /usr/libexec/PlistBuddy -c "Print :CFBundleVersion" App/Info.plist
       - name: Build ipa
         script: |
           xcode-project build-ipa \
