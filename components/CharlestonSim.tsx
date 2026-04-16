@@ -354,7 +354,7 @@ export function CharlestonSim({
               type="button"
               onClick={confirmPass}
               disabled={!canConfirm}
-              className="rounded-md bg-[var(--color-mid)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5 disabled:opacity-40 disabled:hover:translate-y-0"
+              className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5 disabled:opacity-40 disabled:hover:translate-y-0"
             >
               Pass {currentPass.direction} →
             </button>
@@ -398,7 +398,7 @@ export function CharlestonSim({
             <button
               type="button"
               onClick={nextPass}
-              className="rounded-md bg-[var(--color-mid)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+              className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
             >
               {s.passIndex < 2
                 ? "Next pass →"
@@ -426,14 +426,14 @@ export function CharlestonSim({
             <button
               type="button"
               onClick={() => decideSecond(true)}
-              className="rounded-md bg-[var(--color-mid)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+              className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
             >
               Continue (2nd Charleston) →
             </button>
             <button
               type="button"
               onClick={() => decideSecond(false)}
-              className="rounded-md border-2 border-[var(--color-mid)] bg-white px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-[var(--color-mid)] transition hover:-translate-y-0.5"
+              className="rounded-md border-2 border-[var(--color-accent)] bg-white px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-[var(--color-accent)] transition hover:-translate-y-0.5"
             >
               Stop here
             </button>
@@ -495,7 +495,7 @@ export function CharlestonSim({
               type="button"
               onClick={executeCourtesy}
               disabled={!courtesyCanConfirm}
-              className="rounded-md bg-[var(--color-mid)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5 disabled:opacity-40 disabled:hover:translate-y-0"
+              className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5 disabled:opacity-40 disabled:hover:translate-y-0"
             >
               {s.courtesyCount === 0 ? "Skip courtesy → Done" : "Trade across → Done"}
             </button>
@@ -519,7 +519,7 @@ export function CharlestonSim({
             <button
               type="button"
               onClick={() => onComplete(s.hand, s.pool)}
-              className="rounded-md bg-[var(--color-mid)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+              className="rounded-md bg-[var(--color-accent)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
             >
               Pick a hand →
             </button>
@@ -571,7 +571,7 @@ export function CharlestonSim({
             <button
               type="button"
               onClick={restart}
-              className="rounded-md bg-[var(--color-mid)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+              className="rounded-md bg-[var(--color-accent)] px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
             >
               Deal again →
             </button>
