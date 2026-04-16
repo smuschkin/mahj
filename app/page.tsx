@@ -97,7 +97,7 @@ export default function Home() {
         </a>
       </div>
 
-      <div className="mt-8 text-center">
+      <div className="mt-4 flex justify-center gap-4 text-center">
         <ResetProgressButton />
       </div>
     </PageWrap>

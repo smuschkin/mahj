@@ -80,6 +80,20 @@ export function resetProgress(): void {
   }
 }
 
+export function unlockAllModules(): void {
+  if (typeof window === "undefined") return;
+  try {
+    const p = readProgress();
+    // Mark modules 0-14 as completed
+    for (let i = 0; i <= 14; i++) {
+      p[i] = { ...(p[i] ?? {}), status: "completed", completedAt: Date.now() };
+    }
+    writeProgress(p);
+  } catch {
+    // ignore
+  }
+}
+
 /* ───── Module locking ───── */
 
 /** Module 0 is always unlocked. Every other module requires the previous one to be completed. */
