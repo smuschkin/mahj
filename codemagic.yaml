@@ -54,7 +54,11 @@ workflows:
         script: |
           cd ios/App
           agvtool new-version -all $(($BUILD_NUMBER + 100))
-          agvtool new-marketing-version 1.1
+          # Force marketing version to 1.1
+          sed -i '' 's/MARKETING_VERSION = [^;]*/MARKETING_VERSION = 1.1/' App.xcodeproj/project.pbxproj
+          echo "=== Verify versions ==="
+          grep MARKETING_VERSION App.xcodeproj/project.pbxproj
+          grep CURRENT_PROJECT_VERSION App.xcodeproj/project.pbxproj
       - name: Build ipa
         script: |
           xcode-project build-ipa \
@@ -64,7 +68,8 @@ workflows:
         script: |
           APP_FILE=$(find $CM_BUILD_DIR/build/ios/ipa -name "*.ipa")
           app-store-connect publish \
-            --path "$APP_FILE"
+            --path "$APP_FILE" \
+            --whats-new "Improved glossary accuracy, cleaner home page, lesson URLs, contextual tool links, and completion celebration."
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
