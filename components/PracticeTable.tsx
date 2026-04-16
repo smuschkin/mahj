@@ -109,6 +109,7 @@ export function PracticeTable() {
         title="Practice"
         highlight="Round"
         subtitle="Walk through the setup of a full round of American Mahjong"
+        compact={stepIndex > 0}
       />
 
       {/* Progress dots */}
