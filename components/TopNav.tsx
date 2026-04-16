@@ -7,7 +7,7 @@ export function TopNav() {
   const pathname = usePathname();
   const isHome = pathname === "/";
 
-  const moduleMatch = pathname.match(/^\/module\/(\d+)/);
+  const moduleMatch = pathname.match(/^\/module\/(\d+)/) || pathname.match(/^\/lesson\/(\d+)/);
   const moduleNum = moduleMatch ? parseInt(moduleMatch[1], 10) : null;
 
   return (
@@ -31,10 +31,11 @@ export function TopNav() {
         {/* Center: Current location — hidden on very small screens */}
         <div className="hidden sm:block text-center text-[13px] font-bold uppercase tracking-wider text-zinc-400">
           {isHome && "Home"}
-          {moduleNum !== null && `Lesson ${moduleNum + 1}`}
+          {moduleNum !== null && `Lesson ${pathname.startsWith("/lesson/") ? moduleNum : moduleNum + 1}`}
           {pathname === "/play" && "Practice"}
           {pathname === "/calculator" && "Calculator"}
           {pathname === "/cheatsheet" && "Cheat Sheet"}
+          {pathname === "/gear" && "Gear Guide"}
         </div>
 
         {/* Right: Quick links */}

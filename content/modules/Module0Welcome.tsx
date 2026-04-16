@@ -182,6 +182,16 @@ export default function Module0Welcome() {
             in an American Mahjong set — organized into 5 simple groups.
           </p>
           <p>It takes about 6–8 minutes. Let&apos;s go.</p>
+          <a
+            href="/gear"
+            className="mt-3 flex items-center gap-3 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] px-4 py-3 transition hover:-translate-y-0.5"
+          >
+            <span className="text-2xl">{"\u{1F3B0}"}</span>
+            <div>
+              <div className="font-serif text-sm font-black text-[var(--color-accent)]">Gear Guide</div>
+              <div className="text-[13px] text-zinc-500">Need tiles? See our recommended sets</div>
+            </div>
+          </a>
         </LessonScreen>
       </ScreenStepper>
 
