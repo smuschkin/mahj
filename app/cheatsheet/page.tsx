@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Cover } from "@/components/Cover";
 import { PrintButton } from "@/components/PrintButton";
 
@@ -277,9 +278,9 @@ export default function CheatSheet() {
 
       {/* Back link — screen only */}
       <div className="mx-auto max-w-3xl px-4 py-6 text-center print:hidden">
-        <a href="/" className="text-sm font-bold text-[var(--color-accent)] hover:underline">
+        <Link href="/" className="text-sm font-bold text-[var(--color-accent)] hover:underline">
           ← Back to Home
-        </a>
+        </Link>
       </div>
     </>
   );
@@ -289,7 +290,7 @@ export default function CheatSheet() {
 
 function Section({ title, children, accent }: { title: string; children: React.ReactNode; accent?: boolean }) {
   return (
-    <div className={`rounded-lg border p-2.5 ${accent ? "border-[var(--color-accent)]/30 bg-[#E8F5EC]/30" : "border-zinc-200"}`}>
+    <div className={`rounded-lg border p-2.5 ${accent ? "border-[var(--color-accent)]/30 bg-white" : "border-zinc-200 bg-white"}`}>
       <h3 className="mb-1 border-b border-zinc-100 pb-0.5 font-serif text-[12px] font-black text-[var(--color-mid)]">
         {title}
       </h3>

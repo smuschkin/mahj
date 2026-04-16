@@ -43,10 +43,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable} h-full antialiased`}>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#1A4D2E" />
         <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
       <body className="min-h-full flex flex-col overflow-x-clip">
+        <script dangerouslySetInnerHTML={{ __html: `if(window.Capacitor)document.documentElement.classList.add('capacitor')` }} />
         <TopNav />
         <main className="flex-1">{children}</main>
         <Disclaimer />

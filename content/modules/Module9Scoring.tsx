@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -414,7 +415,7 @@ export default function Module9Scoring() {
             <strong>Your First Full Game</strong> — a complete guided walkthrough
             from the deal to Mahjong, with every concept applied at the right moment.
           </p>
-          <a
+          <Link
             href="/calculator"
             className="mt-3 flex items-center gap-3 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] px-4 py-3 transition hover:-translate-y-0.5"
           >
@@ -423,7 +424,7 @@ export default function Module9Scoring() {
               <div className="font-serif text-sm font-black text-[var(--color-accent)]">Scoring Calculator</div>
               <div className="text-[13px] text-zinc-500">Plug in any hand and see who pays what</div>
             </div>
-          </a>
+          </Link>
         </LessonScreen>
       </ScreenStepper>
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -650,12 +651,12 @@ export default function Module12FirstGame() {
           </p>
           <p>
             Ready to test yourself? Try the{" "}
-            <a href="/play" className="font-bold text-[var(--color-accent)] underline">
+            <Link href="/play" className="font-bold text-[var(--color-accent)] underline">
               Practice Hands Library
-            </a>{" "}
+            </Link>{" "}
             — 16 real decision puzzles with instant feedback.
           </p>
-          <a
+          <Link
             href="/cheatsheet"
             className="mt-3 flex items-center gap-3 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] px-4 py-3 transition hover:-translate-y-0.5"
           >
@@ -664,7 +665,7 @@ export default function Module12FirstGame() {
               <div className="font-serif text-sm font-black text-[var(--color-accent)]">Print Cheat Sheet</div>
               <div className="text-[13px] text-zinc-500">Bring it to your first game night</div>
             </div>
-          </a>
+          </Link>
         </LessonScreen>
       </ScreenStepper>
 

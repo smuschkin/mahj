@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { Callout } from "@/components/Callout";
@@ -226,9 +227,9 @@ export default function ScoringCalculator() {
       </div>
 
       <div className="mt-6 text-center">
-        <a href="/" className="text-sm font-bold text-[var(--color-accent)] hover:underline">
+        <Link href="/" className="text-sm font-bold text-[var(--color-accent)] hover:underline">
           ← Back to Home
-        </a>
+        </Link>
       </div>
 
     </PageWrap>
