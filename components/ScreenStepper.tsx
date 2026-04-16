@@ -123,16 +123,23 @@ export function ScreenStepper({
             onClick={() => router.push(nextModule.href)}
             className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-5 py-3 sm:px-6 text-[15px] font-bold uppercase tracking-wider text-[#C8A951] shadow-sm transition hover:-translate-y-0.5"
           >
-            Next Module &rarr;
+            Next Lesson &rarr;
+          </button>
+        ) : isLast ? (
+          <button
+            type="button"
+            onClick={() => router.push("/")}
+            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-5 py-3 sm:px-6 text-[15px] font-bold uppercase tracking-wider text-[#C8A951] shadow-sm transition hover:-translate-y-0.5"
+          >
+            Done &mdash; Back to Home
           </button>
         ) : (
           <button
             type="button"
             onClick={() => setCurrent((c) => Math.min(total - 1, c + 1))}
-            disabled={isLast}
-            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-5 py-3 sm:px-6 text-[15px] font-bold uppercase tracking-wider text-white shadow-sm transition disabled:cursor-not-allowed disabled:opacity-50 enabled:hover:-translate-y-0.5"
+            className="rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-5 py-3 sm:px-6 text-[15px] font-bold uppercase tracking-wider text-white shadow-sm transition hover:-translate-y-0.5"
           >
-            {isLast ? "Done \u2713" : "Next \u2192"}
+            Next &rarr;
           </button>
         )}
       </div>
