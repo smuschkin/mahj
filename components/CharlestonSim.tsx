@@ -25,12 +25,12 @@ type PassDef = {
 };
 
 const PASSES: PassDef[] = [
-  { num: 1, name: "First Right", direction: "→ Right", isSecondCharleston: false },
-  { num: 2, name: "First Across", direction: "↑ Across", isSecondCharleston: false },
-  { num: 3, name: "First Left", direction: "← Left", isSecondCharleston: false },
-  { num: 4, name: "Second Left", direction: "← Left", isSecondCharleston: true },
-  { num: 5, name: "Second Across", direction: "↑ Across", isSecondCharleston: true },
-  { num: 6, name: "Second Right", direction: "→ Right", isSecondCharleston: true },
+  { num: 1, name: "First Right", direction: "Right", isSecondCharleston: false },
+  { num: 2, name: "First Across", direction: "Across", isSecondCharleston: false },
+  { num: 3, name: "First Left", direction: "Left", isSecondCharleston: false },
+  { num: 4, name: "Second Left", direction: "Left", isSecondCharleston: true },
+  { num: 5, name: "Second Across", direction: "Across", isSecondCharleston: true },
+  { num: 6, name: "Second Right", direction: "Right", isSecondCharleston: true },
 ];
 
 /* ────────────────────────────────────────────────────────────────
