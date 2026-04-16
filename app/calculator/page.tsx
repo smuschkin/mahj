@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { PageWrap } from "@/components/PageWrap";
+import { Cover } from "@/components/Cover";
 import { Callout } from "@/components/Callout";
 
 type WinType = "discard" | "self-draw";
@@ -43,19 +44,14 @@ export default function ScoringCalculator() {
 
   return (
     <PageWrap>
-      <div className="text-center">
-        <p className="mb-1 text-xs font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-          MAHJ Tool
-        </p>
-        <h1 className="mb-2 font-serif text-3xl font-black text-[var(--color-mid)] sm:text-4xl">
-          Scoring <span className="text-[var(--color-accent)]">Calculator</span>
-        </h1>
-        <p className="text-sm text-zinc-600">
-          Pick the hand value and how you won. See who pays what.
-        </p>
-      </div>
+      <Cover
+        eyebrow="MAHJ Tool"
+        title="Scoring"
+        highlight="Calculator"
+        subtitle="Pick the hand value and how you won. See who pays what."
+      />
 
-      <div className="mt-8 rounded-xl border-2 border-[var(--color-border)] bg-white p-6 shadow-sm sm:p-8">
+      <div className="rounded-xl border-2 border-[var(--color-border)] bg-white p-6 shadow-sm sm:p-8">
         {/* ── Hand value ── */}
         <fieldset className="mb-6">
           <legend className="mb-2 text-[13px] font-bold uppercase tracking-wider text-zinc-500">
