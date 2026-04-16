@@ -232,7 +232,7 @@ export default function CheatSheet() {
           </div>
 
           {/* Footer */}
-          <div className="mt-4 border-t border-zinc-200 pt-2 text-center text-[8px] text-zinc-400">
+          <div className="mt-4 hidden border-t border-zinc-200 pt-2 text-center text-[8px] text-zinc-400 print:block">
             MAHJ is an independent educational tool. Not affiliated with, endorsed by, or
             sponsored by the National Mah Jongg League (NMJL). To play official American Mahjong,
             purchase the current year&apos;s card at nationalmahjonggleague.org.
