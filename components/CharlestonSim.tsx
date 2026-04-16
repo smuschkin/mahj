@@ -428,7 +428,7 @@ export function CharlestonSim({
               onClick={() => decideSecond(true)}
               className="rounded-md bg-[var(--color-accent)] px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
             >
-              Continue (2nd Charleston) →
+              Continue (2nd Charleston)
             </button>
             <button
               type="button"
