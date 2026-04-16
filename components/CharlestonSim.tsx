@@ -403,7 +403,7 @@ export function CharlestonSim({
               {s.passIndex < 2
                 ? "Next pass"
                 : s.passIndex >= 5
-                  ? "Courtesy pass →"
+                  ? "Courtesy pass"
                   : "Continue"}
             </button>
           </div>
