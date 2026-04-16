@@ -29,35 +29,35 @@ const STEPS: Step[] = [
     title: "Step 1: Wash the Tiles",
     subtitle: "Everyone mixes the tiles face-down",
     coaching:
-      "All 152 tiles start face-down in the center of the table. Everyone reaches in and swirls them around to shuffle. This is called \u201Cwashing.\u201D It\u2019s noisy, fun, and the sound of tiles clacking is part of the experience.",
+      "All 152 tiles start face-down in the center. Everyone swirls them around to shuffle.",
   },
   {
     id: "wall",
     title: "Step 2: Build Your Wall",
-    subtitle: "Each player builds a wall of tiles in front of their rack",
+    subtitle: "Each player builds a wall in front of their rack",
     coaching:
-      "Each player picks up tiles (still face-down) and lines them up in a row of 19 stacks, 2 tiles high \u2014 that\u2019s 38 tiles per wall, 152 total. The wall sits against your rack. When it\u2019s time to deal from your wall, you\u2019ll push it toward the center.",
+      "Line up 19 stacks, 2 tiles high. That\u2019s 38 tiles per wall, 152 total.",
   },
   {
     id: "deal",
     title: "Step 3: The Deal",
-    subtitle: "East rolls the dice and deals tiles to each player",
+    subtitle: "East deals tiles to each player",
     coaching:
-      "East (the dealer) rolls the dice to determine where to break the wall. Then tiles are dealt in groups of 4, going around the table 3 times (that\u2019s 12 tiles each). Finally, East picks 2 more tiles and everyone else picks 1 \u2014 so East starts with 14 and everyone else has 13.",
+      "East rolls the dice, breaks the wall, then deals in groups of 4. Everyone gets 13 tiles, East gets 14.",
   },
   {
     id: "charleston",
     title: "Step 4: The Charleston",
-    subtitle: "Pass tiles you don\u2019t want \u2014 get tiles you might need",
+    subtitle: "Pass tiles you don\u2019t want",
     coaching:
-      "This is unique to American Mahjong! Before play begins, you pass 3 tiles at a time in a specific pattern: Right, Across, Left (1st Charleston), then Left, Across, Right (2nd Charleston), then an optional courtesy pass across. This is your chance to dump tiles that don\u2019t fit your hand and hopefully get ones that do.",
+      "Pass 3 tiles at a time: Right, Across, Left (1st Charleston), then reverse (2nd Charleston), then an optional courtesy across.",
   },
   {
     id: "done",
     title: "You\u2019re Ready!",
-    subtitle: "You just walked through the setup of a full round",
+    subtitle: "Setup complete \u2014 time to play",
     coaching:
-      "After the Charleston, play begins \u2014 East discards first, then players take turns drawing and discarding. But the setup you just practiced is what trips up most beginners. Now you know the flow: wash, wall, deal, Charleston. Go try it at a real table!",
+      "East discards first, then players take turns drawing and discarding. You know the flow!",
   },
 ];
 
@@ -253,7 +253,7 @@ function DoneCard({ onRestart }: { onRestart: () => void }) {
           href="/"
           className="rounded-xl border-2 border-white/30 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10"
         >
-          Back to Modules
+          Back to Lessons
         </Link>
       </div>
     </div>
