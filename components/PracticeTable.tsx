@@ -56,8 +56,7 @@ const STEPS: Step[] = [
     id: "done",
     title: "You\u2019re Ready!",
     subtitle: "Setup complete \u2014 time to play",
-    coaching:
-      "East discards first, then players take turns drawing and discarding. You know the flow!",
+    coaching: "",
   },
 ];
 
@@ -227,27 +226,20 @@ function IntroCard() {
 function DoneCard({ onRestart }: { onRestart: () => void }) {
   return (
     <div className="rounded-2xl bg-gradient-to-br from-[#1A4D2E] via-[#1F5A35] to-[#0F3320] p-6 text-center text-white shadow-lg">
-      <div className="mb-3 text-4xl">&#127942;</div>
+      <div className="mb-3 text-4xl">🏆</div>
       <h3 className="font-serif text-xl font-black text-[#C8A951]">
         Nice Work!
       </h3>
-      <p className="mt-2 text-sm text-emerald-200/70">
-        You walked through the full setup of an American Mahjong round.
-        Ready to play a practice game with bots?
+      <p className="mt-2 text-sm text-white/70">
+        You know the setup flow. Now go try it at a real table!
       </p>
       <div className="mt-5 flex flex-wrap justify-center gap-3">
-        <Link
-          href="/play?mode=game"
-          className="rounded-xl bg-[#C8A951] px-5 py-2.5 text-sm font-bold text-[#0F3320] shadow-lg transition hover:bg-[#B89840] active:scale-[0.98]"
-        >
-          Play a Practice Game
-        </Link>
         <button
           type="button"
           onClick={onRestart}
-          className="rounded-xl border-2 border-white/30 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10"
+          className="rounded-xl bg-[#C8A951] px-5 py-2.5 text-sm font-bold text-[#0F3320] shadow-lg transition hover:bg-[#B89840] active:scale-[0.98]"
         >
-          Review Setup Again
+          Review Again
         </button>
         <Link
           href="/"
