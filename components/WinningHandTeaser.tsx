@@ -40,7 +40,7 @@ export function WinningHandTeaser() {
 
       <p className="mt-3 text-center text-xs italic text-[#7D6608]">
         Four groups of three identical tiles, plus one pair. We&apos;ll dive into the
-        details in Module 6.
+        details in the Hand Strategy lesson.
       </p>
     </div>
   );

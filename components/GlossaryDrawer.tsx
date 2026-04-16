@@ -136,7 +136,7 @@ export function GlossaryDrawer() {
 
         {/* Footer */}
         <div className="border-t border-zinc-100 px-5 py-2 text-center text-[13px] text-zinc-400">
-          Full glossary in Module 11
+          Full glossary available here
         </div>
       </div>
     </>

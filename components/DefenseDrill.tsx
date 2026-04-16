@@ -423,7 +423,7 @@ export function DefenseDrill() {
           <p className="mb-2 text-base">
             {score >= Math.ceil(total * 0.7)
               ? "🎉 Solid defensive instincts — you read exposures, track discards, and know when to fold."
-              : "Defense takes practice. Re-read Module 7 and try again — the patterns will click."}
+              : "Defense takes practice. Review the defense lesson and try again — the patterns will click."}
           </p>
           <button
             type="button"

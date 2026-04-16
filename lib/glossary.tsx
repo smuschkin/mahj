@@ -183,7 +183,7 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     definition: (
       <>
         Pushing the next wall forward and slightly diagonal so it can be dealt
-        from when the current wall runs out. Used in Module 3.
+        from when the current wall runs out.
       </>
     ),
     aliases: ["curtsying"],
