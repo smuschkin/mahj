@@ -370,6 +370,7 @@ export default function Module4Charleston() {
               <li><strong>No jokers</strong> — same as every pass</li>
               <li>It&apos;s a <strong>blind trade</strong> — you can&apos;t see what they send until yours is sent</li>
               <li><strong>&quot;Zero&quot; is fine</strong> — most beginners say zero their first few games</li>
+              <li><strong>Always available</strong> — even if someone stopped the Charleston after the first round, you can still do the courtesy</li>
             </ul>
           </div>
         </LessonScreen>
