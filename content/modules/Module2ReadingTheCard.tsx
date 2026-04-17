@@ -768,8 +768,10 @@ export default function Module2ReadingTheCard() {
                 Miscounting to 14
               </h4>
               <p className="text-[13px] text-zinc-700">
-                If your tiles don&apos;t add up to 14, you&apos;ve misread a group.
-                Re-check the spacing between clusters on the card.
+                Every hand on the card adds up to 14 tiles. If yours doesn&apos;t,
+                re-check the spacing between clusters. And always count your
+                rack — you should have 13 tiles at all times, except when you
+                have Mahjong (14).
               </p>
             </div>
           </div>
