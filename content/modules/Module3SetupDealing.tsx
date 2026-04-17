@@ -205,8 +205,8 @@ export default function Module3SetupDealing() {
               (example: 4 + 3 = 7).
             </li>
             <li>
-              <strong>Count</strong>{" "}that many pairs of tiles (top + bottom) from the right end of the
-              Dealer&apos;s wall.
+              <strong>Count</strong>{" "}that many top tiles from the right end of the
+              Dealer&apos;s wall (the bottom tile comes with it).
             </li>
             <li>
               <strong>Keep the counted tiles against your rack</strong>, and
