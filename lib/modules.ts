@@ -10,7 +10,7 @@ export const modules: ModuleInfo[] = [
   { num: 0, slug: "welcome", name: "Welcome", hook: "What is American Mahjong and what makes it special", href: "/lesson/1" },
   { num: 1, slug: "tile-trainer", name: "Tile Trainer", hook: "Learn to recognize all 152 tiles by sight", href: "/lesson/2" },
   { num: 2, slug: "reading-the-card", name: "Reading the Card", hook: "How to read the hands on the NMJL card", href: "/lesson/3" },
-  { num: 3, slug: "setup-dealing", name: "Setup & Dealing", hook: "Washing, building walls, and the deal", href: "/lesson/4" },
+  { num: 3, slug: "setup-dealing", name: "Setup & Dealing", hook: "Mixing, building walls, and the deal", href: "/lesson/4" },
   { num: 4, slug: "charleston", name: "The Charleston", hook: "How the tile-trading ritual works", href: "/lesson/5" },
   { num: 5, slug: "charleston-strategy", name: "Charleston Strategy", hook: "What to keep, what to pass, and why", href: "/lesson/6" },
   { num: 6, slug: "jokers-calling", name: "Jokers & Calling", hook: "When and how to use jokers and call tiles", href: "/lesson/7" },
