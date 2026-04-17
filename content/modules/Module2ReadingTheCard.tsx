@@ -740,8 +740,8 @@ export default function Module2ReadingTheCard() {
                 Treating pattern numbers as literal
               </h4>
               <p className="text-[13px] text-zinc-700">
-                The card shows &quot;111 222&quot; and you think you <em>must</em> use 1s and 2s. You don&apos;t — those numbers represent a pattern.
-                Read the category name to know if the numbers are flexible.
+                The card shows &quot;111 222&quot; and you think you <em>must</em>{" "}use 1s and 2s. You don&apos;t — those numbers represent a pattern.
+                Read the category name and the rules in parentheses to know.
               </p>
             </div>
             <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
