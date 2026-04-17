@@ -60,7 +60,7 @@ export function ModuleList() {
             href={m.href}
             className="flex items-center gap-3 rounded-lg border-l-4 border-[#C8A951] bg-white px-4 py-4 shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(200,169,81,0.15)]"
           >
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-mid)] text-sm">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1A4D2E] text-sm">
               {MODULE_ICONS[m.num] ?? m.num}
             </span>
             <div className="min-w-0 flex-1">
