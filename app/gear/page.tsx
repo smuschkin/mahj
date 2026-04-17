@@ -23,8 +23,8 @@ const MUST_HAVE: GearItem[] = [
   {
     name: "NMJL Official Card (2026)",
     description:
-      "You need this to play. The National Mah Jongg League releases a new card every year with the official hands. This is the one thing you cannot play without.",
-    href: "https://www.amazon.com/dp/B0GWCVL23K?tag=welcome2mahj-20",
+      "You need this to play. The National Mah Jongg League releases a new card every year with the official hands. This is the one thing you cannot play without. Buy directly from the NMJL.",
+    href: "https://www.nationalmahjonggleague.org/store.aspx",
     tag: "Essential",
   },
 ];
@@ -150,7 +150,7 @@ function GearCard({ item }: { item: GearItem }) {
         {item.description}
       </p>
       <div className="mt-3 text-[13px] font-bold text-[var(--color-accent)]">
-        View on Amazon &rarr;
+        Shop now &rarr;
       </div>
     </a>
   );
