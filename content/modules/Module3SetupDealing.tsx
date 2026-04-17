@@ -248,6 +248,26 @@ export default function Module3SetupDealing() {
             top + 2 on bottom, taken together). From the Dealer&apos;s perspective,
             the order is:
           </p>
+
+          {/* Visual: what a group of 4 looks like */}
+          <div className="my-3 flex items-center justify-center gap-4">
+            <div className="text-center">
+              <div className="inline-flex flex-col items-center rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-3">
+                <div className="flex gap-0.5">
+                  <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">top</span>
+                  <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">top</span>
+                </div>
+                <div className="flex gap-0.5 -mt-px">
+                  <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">btm</span>
+                  <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">btm</span>
+                </div>
+              </div>
+              <p className="mt-1 text-[12px] font-bold text-[var(--color-accent)]">= 4 tiles per group</p>
+            </div>
+          </div>
+
+          <p>
+          </p>
           <p className="my-3 text-center font-serif text-[15px] font-bold text-[var(--color-mid)]">
             Dealer → Right → Across → Left
           </p>
