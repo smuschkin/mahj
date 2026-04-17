@@ -275,9 +275,8 @@ export default function Module3SetupDealing() {
           </h4>
           <p>
             After everyone has 12 tiles, there&apos;s one final round. The Dealer
-            skips ahead and grabs the <strong>1st and 3rd</strong> top tiles from
-            the wall (leapfrogging over the 2nd). Then each other player takes
-            one tile.
+            grabs the <strong>1st and 3rd</strong> top tiles from the wall
+            (leapfrogging over the 2nd). Then each other player takes one tile.
           </p>
           <p>
             <strong>Result:</strong> the Dealer ends up with{" "}
