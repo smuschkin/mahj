@@ -655,8 +655,9 @@ export default function Module2ReadingTheCard() {
                 C = Concealed
               </h4>
               <p className="text-[13px] text-zinc-700">
-                You <strong>cannot call any tiles</strong>. Every tile must
-                come from the wall or the Charleston. Harder — but worth more.
+                You <strong>cannot call any tiles except for Mahjong</strong> (the
+                final winning tile). Every other tile must come from the wall
+                or the Charleston. Harder — but worth more.
               </p>
             </div>
           </div>
