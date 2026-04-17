@@ -271,39 +271,22 @@ export default function Module3SetupDealing() {
           <DealingAnimation />
 
           <h4 className="mt-5 font-serif text-base font-black text-[var(--color-mid)]">
-            🪄 The &quot;1st and 3rd&quot; rule
+            🪄 The last round: Dealer takes 2 extra
           </h4>
           <p>
-            For the final round, the Dealer (East) takes{" "}
-            <strong>two</strong>{" "}tiles first in a special leapfrog pattern. From
-            the next 3 positions on the wall:
-          </p>
-          <ul className="ml-6 list-disc space-y-1 text-[15px]">
-            <li>
-              <strong>Tile 1</strong>{" "}(top of position 1) → the Dealer
-            </li>
-            <li>
-              <strong>Tile 2</strong>{" "}(top of position 3) → the Dealer <em>again</em>{" "}
-              — leapfrogging over position 2
-            </li>
-            <li>
-              <strong>Tile 3</strong>{" "}(bottom of position 1) → the player on the right
-            </li>
-            <li>
-              <strong>Tile 4</strong>{" "}(top of position 2) → the player across
-            </li>
-            <li>
-              <strong>Tile 5</strong>{" "}(bottom of position 2) → the player on the left
-            </li>
-          </ul>
-          <p className="text-[14px] text-zinc-600">
-            The bottom of position 3 stays in the wall — it&apos;s the first tile
-            drawn during play.
+            After everyone has 12 tiles, there&apos;s one final round. The Dealer
+            skips ahead and grabs the <strong>1st and 3rd</strong> top tiles from
+            the wall (leapfrogging over the 2nd). Then each other player takes
+            one tile.
           </p>
           <p>
-            Now the Dealer (East) has <strong>14 tiles</strong>{" "}(12 + 2), and the other
-            three players each have <strong>13 tiles</strong>{" "}(12 + 1).
+            <strong>Result:</strong> the Dealer ends up with{" "}
+            <strong>14 tiles</strong>, everyone else has <strong>13</strong>.
           </p>
+          <Callout variant="tip">
+            Don&apos;t worry about memorizing this — the Dealer just grabs two tiles
+            instead of one in the last round. The diagram below shows exactly how.
+          </Callout>
 
           {/* Inline 1st-and-3rd diagram — 3 stacks, dealer leapfrogs across stack 2 */}
           <div className="my-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-5">
