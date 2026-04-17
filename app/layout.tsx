@@ -50,7 +50,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col overflow-x-clip">
         <script dangerouslySetInnerHTML={{ __html: `if(window.Capacitor)document.documentElement.classList.add('capacitor')` }} />
         <TopNav />
-        <main className="flex-1">{children}</main>
+        <main>{children}</main>
         <Disclaimer />
         <GlossaryDrawer />
         <ServiceWorkerRegister />
