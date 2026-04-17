@@ -147,7 +147,40 @@ export default function Module2ReadingTheCard() {
           </Callout>
         </LessonScreen>
 
-        {/* ── 3. Colors = suits ── */}
+        {/* ── 3. Symbols reference ── */}
+        <LessonScreen title="🔤 Symbol Reference">
+          <p>
+            Here&apos;s every symbol you&apos;ll see on the card and what it means:
+          </p>
+
+          <div className="my-3 overflow-x-auto rounded-lg border border-[var(--color-border)]">
+            <table className="w-full text-left text-[13px]">
+              <thead className="bg-[var(--color-light)]">
+                <tr>
+                  <th className="px-3 py-2 font-black text-[var(--color-mid)]">Symbol</th>
+                  <th className="px-3 py-2 font-black text-[var(--color-mid)]">Meaning</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[var(--color-border)]">
+                <SymbolRow symbol="1–9" meaning="A tile's face value in that suit" />
+                <SymbolRow symbol="F" meaning="Flower — any of the 8 flower tiles (all interchangeable)" />
+                <SymbolRow symbol="D" meaning="Dragon — Red, Green, or White (context tells you which)" />
+                <SymbolRow symbol="O" meaning='White Dragon ("Soap") — the zero/blank tile' />
+                <SymbolRow symbol="N E W S" meaning="Wind tiles — North, East, West, South" />
+                <SymbolRow symbol="C" meaning="Concealed — no calling allowed; every tile must come from the wall or Charleston" />
+                <SymbolRow symbol="X" meaning="Exposed — you may call tiles from other players' discards" />
+              </tbody>
+            </table>
+          </div>
+
+          <Callout variant="tip">
+            <strong>C vs. X is critical.</strong>{" "}If a hand is marked C (concealed),
+            you cannot call a single tile for it — everything must be self-drawn.
+            Concealed hands are harder but usually worth more points.
+          </Callout>
+        </LessonScreen>
+
+        {/* ── 4. Colors = suits ── */}
         <LessonScreen title="🎨 Colors = Suits">
           <p>
             Tiles on the card are printed in <strong>three colors</strong> — one
@@ -231,39 +264,6 @@ export default function Module2ReadingTheCard() {
             blue &quot;3&quot; on the card doesn&apos;t mean &quot;3 Bam.&quot; It
             means &quot;a 3 in whichever suit you assigned to blue.&quot; This trips
             up every beginner at first.
-          </Callout>
-        </LessonScreen>
-
-        {/* ── 4. Symbols reference ── */}
-        <LessonScreen title="🔤 Symbol Reference">
-          <p>
-            Here&apos;s every symbol you&apos;ll see on the card and what it means:
-          </p>
-
-          <div className="my-3 overflow-x-auto rounded-lg border border-[var(--color-border)]">
-            <table className="w-full text-left text-[13px]">
-              <thead className="bg-[var(--color-light)]">
-                <tr>
-                  <th className="px-3 py-2 font-black text-[var(--color-mid)]">Symbol</th>
-                  <th className="px-3 py-2 font-black text-[var(--color-mid)]">Meaning</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[var(--color-border)]">
-                <SymbolRow symbol="1–9" meaning="A tile's face value in that suit" />
-                <SymbolRow symbol="F" meaning="Flower — any of the 8 flower tiles (all interchangeable)" />
-                <SymbolRow symbol="D" meaning="Dragon — Red, Green, or White (context tells you which)" />
-                <SymbolRow symbol="O" meaning='White Dragon ("Soap") — the zero/blank tile' />
-                <SymbolRow symbol="N E W S" meaning="Wind tiles — North, East, West, South" />
-                <SymbolRow symbol="C" meaning="Concealed — no calling allowed; every tile must come from the wall or Charleston" />
-                <SymbolRow symbol="X" meaning="Exposed — you may call tiles from other players' discards" />
-              </tbody>
-            </table>
-          </div>
-
-          <Callout variant="tip">
-            <strong>C vs. X is critical.</strong>{" "}If a hand is marked C (concealed),
-            you cannot call a single tile for it — everything must be self-drawn.
-            Concealed hands are harder but usually worth more points.
           </Callout>
         </LessonScreen>
 
