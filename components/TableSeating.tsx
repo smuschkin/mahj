@@ -48,7 +48,7 @@ export function TableSeating({
         return (
           <div
             key={seat}
-            className={`absolute flex h-16 w-[74px] flex-col items-center justify-center rounded-xl border-2 shadow-[0_3px_8px_rgba(0,0,0,0.15)] ${positions[seat]} ${
+            className={`absolute flex h-16 w-[90px] flex-col items-center justify-center rounded-xl border-2 text-center shadow-[0_3px_8px_rgba(0,0,0,0.15)] ${positions[seat]} ${
               isHighlight
                 ? "border-[var(--color-accent)] bg-[#E8F5EC]"
                 : "border-[var(--color-mid)] bg-[#FAF7EC]"
