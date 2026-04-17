@@ -765,13 +765,12 @@ export default function Module2ReadingTheCard() {
             </div>
             <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-[#FFF6F4] p-3">
               <h4 className="font-serif text-sm font-black text-[var(--color-red)]">
-                Miscounting to 14
+                Always count your tiles
               </h4>
               <p className="text-[13px] text-zinc-700">
-                Every hand on the card adds up to 14 tiles. If yours doesn&apos;t,
-                re-check the spacing between clusters. And always count your
-                rack — you should have 13 tiles at all times, except when you
-                have Mahjong (14).
+                You should always have <strong>13 tiles</strong> in your hand,
+                and <strong>14 when you have Mahjong</strong>. If your count
+                is off, something went wrong.
               </p>
             </div>
           </div>
