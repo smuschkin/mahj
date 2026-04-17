@@ -205,7 +205,7 @@ export default function Module3SetupDealing() {
               (example: 4 + 3 = 7).
             </li>
             <li>
-              <strong>Count</strong> that many stacks from the right end of the
+              <strong>Count</strong>{" "}that many stacks (each stack is 2 tiles high) from the right end of the
               Dealer&apos;s wall.
             </li>
             <li>
