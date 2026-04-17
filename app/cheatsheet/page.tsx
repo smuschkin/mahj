@@ -42,7 +42,7 @@ export default function CheatSheet() {
             <Section title="Game Setup" accent>
               <ol className="ml-4 list-decimal space-y-0.5">
                 <li><B>Pick East:</B> everyone rolls dice, highest roll is East (Dealer)</li>
-                <li><B>Wash:</B> all 152 tiles face-down, everyone swirls to shuffle</li>
+                <li><B>Mix:</B> all 152 tiles face-down, everyone swirls to shuffle</li>
                 <li><B>Build walls:</B> each player makes a row of 19 stacks, 2 tiles high</li>
                 <li><B>Roll &amp; break:</B> East rolls dice, counts from right, pushes out tiles after the count</li>
                 <li><B>Deal:</B> 3 rounds of 4 tiles each, then East takes 2 more, others take 1</li>

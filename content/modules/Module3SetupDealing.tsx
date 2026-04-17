@@ -31,7 +31,7 @@ export default function Module3SetupDealing() {
           {
             label: "Goal",
             value:
-              "Confidently set up a fresh game from scratch — wash, build the wall, roll for East, take seats, break the wall, and deal.",
+              "Confidently set up a fresh game from scratch — mix the tiles, build the wall, roll for East, take seats, break the wall, and deal.",
           },
           { label: "Estimated time", value: "7–9 minutes" },
           { label: "Prerequisite", value: "Lesson 3 (Reading the Card)" },
@@ -48,7 +48,7 @@ export default function Module3SetupDealing() {
           <p>Before you can play a hand, four things have to happen:</p>
           <ol className="ml-6 list-decimal space-y-1 text-[15px]">
             <li>
-              <strong>Wash</strong> — mix all 152 tiles face-down
+              <strong>Mix</strong> — shuffle all 152 tiles face-down
             </li>
             <li>
               <strong>Build</strong> — stack the tiles into 4 walls
@@ -68,7 +68,7 @@ export default function Module3SetupDealing() {
         </LessonScreen>
 
         {/* ── 2. Wash ── */}
-        <LessonScreen title="🌀 Step 1: Wash the Tiles">
+        <LessonScreen title="🌀 Step 1: Mix the Tiles">
           <p>
             Put <strong>all 152 tiles face-down</strong>{" "}on the table and gently swirl
             them around with your hands.
@@ -83,7 +83,7 @@ export default function Module3SetupDealing() {
           </p>
           <WashAnimation />
           <Callout variant="tip">
-            Don&apos;t flip tiles face-up while washing — keep them all face-down so
+            Don&apos;t flip tiles face-up while mixing — keep them all face-down so
             nobody sees what&apos;s coming.
           </Callout>
         </LessonScreen>

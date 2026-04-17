@@ -202,7 +202,7 @@ function IntroCard() {
   return (
     <div className="grid grid-cols-2 gap-3">
       {[
-        { num: 1, emoji: "🌊", label: "Wash", desc: "Mix tiles face-down" },
+        { num: 1, emoji: "🌊", label: "Mix", desc: "Mix tiles face-down" },
         { num: 2, emoji: "🧱", label: "Wall", desc: "Build 19 stacks high" },
         { num: 3, emoji: "🎲", label: "Deal", desc: "East deals to everyone" },
         { num: 4, emoji: "🔄", label: "Charleston", desc: "Pass tiles you don\u2019t want" },
