@@ -19,7 +19,7 @@ export function ModuleNav({
   const nextLocked = next && currentModuleNum !== undefined && !isComplete;
 
   return (
-    <div className="mt-10 flex flex-col sm:flex-row justify-between gap-3 sm:gap-4">
+    <div className="mt-4 flex flex-col sm:flex-row justify-between gap-3 sm:gap-4">
       {prev ? (
         <Link
           href={prev.href}

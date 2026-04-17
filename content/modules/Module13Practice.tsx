@@ -651,7 +651,7 @@ export default function Module13Practice() {
             <p className="mb-2 text-base">
               {score >= passThreshold
                 ? "🎉 Strong work — you're table-ready."
-                : "Almost — review the modules you struggled with and try again."}
+                : "Almost — review the lessons you struggled with and try again."}
             </p>
             <p className="mb-5 text-sm italic text-zinc-500">
               {score >= passThreshold

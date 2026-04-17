@@ -12,7 +12,7 @@ export function LessonScreen({
   cta?: string;
 }) {
   return (
-    <div className="mb-6 rounded-xl border border-[#EFE8D6] bg-white p-8 md:p-9 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+    <div className="mb-4 rounded-xl border border-[#EFE8D6] bg-white p-5 md:p-6 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
       {tag && (
         <span className="mb-3 inline-block rounded bg-[var(--color-mid)] px-3 py-1 text-[13px] font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
           {tag}

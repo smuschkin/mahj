@@ -71,14 +71,14 @@ export default function Module12FirstGame() {
           {
             label: "Goal",
             value:
-              "Watch a full hand of American Mahjong play out from start to finish, with every concept from Modules 0–14 applied at the right moment.",
+              "Watch a full hand of American Mahjong play out from start to finish, with every concept from Lessons 1–14 applied at the right moment.",
           },
           { label: "Estimated time", value: "12–15 minutes" },
           { label: "Prerequisite", value: "Lesson 14 (Scoring & Payouts)" },
           {
             label: "Why it matters",
             value:
-              "Knowing the rules and seeing the rules played are different things. This module bridges the gap.",
+              "Knowing the rules and seeing the rules played are different things. This lesson bridges the gap.",
           },
         ]}
       /></>}>
@@ -86,7 +86,7 @@ export default function Module12FirstGame() {
         <LessonScreen title="👋 Meet Sara">
           <p>
             Sara is sitting down for a hand of American Mahjong. She&apos;s done all
-            the modules in this app, she has her card in front of her, and the wall is
+            the lessons in this app, she has her card in front of her, and the wall is
             built. The dealer is about to deal.
           </p>
           <p>

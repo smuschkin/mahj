@@ -94,7 +94,7 @@ export default function Module5JokersCalling() {
           {
             label: "Why it matters",
             value:
-              "Calling and joker rules are where most beginners get embarrassed at the table. After this module, you'll know when to speak up and when to stay quiet.",
+              "Calling and joker rules are where most beginners get embarrassed at the table. After this lesson, you'll know when to speak up and when to stay quiet.",
           },
         ]}
       /></>}>
@@ -155,7 +155,7 @@ export default function Module5JokersCalling() {
             <strong>before</strong>{" "}the next player picks up a tile, or
             it&apos;s too late.
           </Callout>
-          <Callout variant="info">
+          <Callout variant="warn">
             <strong>Mahjong is the only time</strong>{" "}you can claim a
             discard for a pair or single tile. All other calls require
             groups of 3 or more.

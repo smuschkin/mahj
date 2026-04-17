@@ -39,7 +39,7 @@ export default function Module3SetupDealing() {
           {
             label: "Why it matters",
             value:
-              "Setup is where new players feel the most lost. After this module you'll be able to set up the table — something even some intermediate players get wrong.",
+              "Setup is where new players feel the most lost. After this lesson you'll be able to set up the table — something even some intermediate players get wrong.",
           },
         ]}
       /></>}>
