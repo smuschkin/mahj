@@ -164,10 +164,10 @@ export default function Module2ReadingTheCard() {
               <tbody className="divide-y divide-[var(--color-border)]">
                 <SymbolRow symbol="1–9" meaning="A tile's face value in that suit" />
                 <SymbolRow symbol="F" meaning="Flower — any of the 8 flower tiles (all interchangeable)" />
-                <SymbolRow symbol="D" meaning="Dragon — Red, Green, or White (context tells you which)" />
+                <SymbolRow symbol="D" meaning="Dragon — Red, Green, or Soap (context tells you which)" />
                 <SymbolRow symbol="O" meaning='White Dragon ("Soap") — the zero/blank tile' />
                 <SymbolRow symbol="N E W S" meaning="Wind tiles — North, East, West, South" />
-                <SymbolRow symbol="C" meaning="Concealed — no calling allowed; every tile must come from the wall or Charleston" />
+                <SymbolRow symbol="C" meaning="Concealed — no calling allowed except for Mahjong (the final winning tile)" />
                 <SymbolRow symbol="X" meaning="Exposed — you may call tiles from other players' discards" />
               </tbody>
             </table>
@@ -175,8 +175,8 @@ export default function Module2ReadingTheCard() {
 
           <Callout variant="tip">
             <strong>C vs. X is critical.</strong>{" "}If a hand is marked C (concealed),
-            you cannot call a single tile for it — everything must be self-drawn.
-            Concealed hands are harder but usually worth more points.
+            you cannot call any tiles during play — except for Mahjong (the final
+            winning tile). Concealed hands are harder but usually worth more.
           </Callout>
         </LessonScreen>
 
@@ -275,6 +275,12 @@ export default function Module2ReadingTheCard() {
           </p>
 
           <div className="my-3 space-y-2">
+            <div className="grid grid-cols-[80px_1fr] items-center gap-3 rounded-md bg-[var(--color-light)] p-3">
+              <span className="font-serif text-lg font-black text-[var(--color-mid)]">1 tile</span>
+              <span className="text-[14px] text-zinc-700">
+                A <strong>single</strong> — one tile standing alone (used in Singles &amp; Pairs hands)
+              </span>
+            </div>
             <div className="grid grid-cols-[80px_1fr] items-center gap-3 rounded-md bg-[var(--color-light)] p-3">
               <span className="font-serif text-lg font-black text-[var(--color-mid)]">2 tiles</span>
               <span className="text-[14px] text-zinc-700">
@@ -406,86 +412,39 @@ export default function Module2ReadingTheCard() {
           </div>
 
           <Callout variant="tip">
-            Always read the parenthetical <strong>before</strong>{" "}you
+            Always read the rules in parentheses <strong>before</strong>{" "}you
             start building the hand. It answers three questions: how many
             suits, which numbers, and any special rules.
           </Callout>
         </LessonScreen>
 
         {/* ── 7. Numbers are patterns ── */}
-        <LessonScreen title="🔢 Numbers on the Card Are Flexible">
+        <LessonScreen title="🔢 Numbers on the Card">
           <p>
-            This confuses every beginner: the numbers on the card don&apos;t
-            always mean those <em>exact</em>{" "}tiles. The{" "}
-            <strong>category name</strong>{" "}tells you whether the numbers are
-            flexible or literal.
+            The numbers on the card don&apos;t always mean those exact tiles.
+            In some categories, you can pick different numbers — the{" "}
+            <strong>rules in parentheses</strong>{" "}next to each hand tell you
+            what&apos;s allowed.
           </p>
 
-          <div className="my-3 space-y-4">
-            <div className="rounded-lg border-l-4 border-[var(--color-accent)] bg-white p-4">
-              <h4 className="mb-2 font-serif text-sm font-black text-[var(--color-accent)]">
-                ✅ Flexible — you pick the numbers
-              </h4>
-              <div className="space-y-3 text-[13px]">
-                <div>
-                  <p className="mb-1 font-bold text-zinc-600">Like Numbers:</p>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">111 222</span>
-                    <span className="text-zinc-400">→</span>
-                    <span className="font-bold text-[var(--color-accent)]">333 444</span>
-                    <span className="text-zinc-400">or</span>
-                    <span className="font-bold text-[var(--color-accent)]">777 888</span>
-                  </div>
-                </div>
-                <div>
-                  <p className="mb-1 font-bold text-zinc-600">Consecutive Run:</p>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">11 222 333 44</span>
-                    <span className="text-zinc-400">→</span>
-                    <span className="font-bold text-[var(--color-accent)]">22 333 444 55</span>
-                  </div>
-                </div>
-                <p className="text-zinc-500">
-                  Most categories let you pick the numbers — check the
-                  parenthetical rules to know exactly what&apos;s allowed.
-                </p>
-              </div>
-            </div>
+          <p><strong>Categories where you can pick numbers:</strong></p>
+          <ul className="my-2 ml-5 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li><strong>Like Numbers</strong> — card shows 111, but you can use any number (222, 555, 888, etc.)</li>
+            <li><strong>Consecutive Run</strong> — card shows 1-2-3, but you can use any consecutive run (4-5-6, 7-8-9, etc.)</li>
+            <li><strong>Singles &amp; Pairs</strong> — numbers can vary per the rules in parentheses</li>
+            <li><strong>Quints</strong> — same idea, check the parentheses</li>
+            <li><strong>Winds/Dragons</strong> — the numbers paired with them can vary (sometimes any number, sometimes even or odd only — check the parentheses)</li>
+          </ul>
 
-            <div className="rounded-lg border-l-4 border-[var(--color-red)] bg-white p-4">
-              <h4 className="mb-2 font-serif text-sm font-black text-[var(--color-red)]">
-                🔒 Literal — use these exact numbers
-              </h4>
-              <div className="space-y-3 text-[13px]">
-                <div>
-                  <p className="mb-1 font-bold text-zinc-600">Year hand:</p>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">2026</span>
-                    <span className="text-zinc-400">→</span>
-                    <span className="font-bold text-[var(--color-red)]">2 · 0 · 2 · 6</span>
-                    <span className="text-zinc-500">(exactly)</span>
-                  </div>
-                  <p className="mt-1 text-zinc-500">
-                    0 = White Dragon (Soap). It can be used with any suit.
-                  </p>
-                </div>
-                <div>
-                  <p className="mb-1 font-bold text-zinc-600">&quot;These Nos. Only&quot;:</p>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded bg-zinc-100 px-2 py-1 font-mono font-bold">333 666 999</span>
-                    <span className="text-zinc-400">→</span>
-                    <span className="font-bold text-[var(--color-red)]">333 666 999</span>
-                    <span className="text-zinc-500">(no substituting)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p><strong>Categories where you use exact numbers:</strong></p>
+          <ul className="my-2 ml-5 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li><strong>Year hands (2026)</strong> — exactly 2, 0, 2, 6</li>
+            <li><strong>&quot;These Nos. Only&quot;</strong> — no substituting</li>
+          </ul>
 
           <Callout variant="tip">
-            <strong>When in doubt, read the category name first.</strong>{" "}
-            It tells you whether the numbers are a pattern you fill in
-            or the exact tiles you need.
+            <strong>Always read the rules in parentheses first.</strong>{" "}They tell you
+            which numbers you can use, how many suits, and any special rules.
           </Callout>
         </LessonScreen>
 
@@ -737,7 +696,7 @@ export default function Module2ReadingTheCard() {
                 </tr>
                 <tr className="border-b border-zinc-100">
                   <td className="px-3 py-2 font-bold">C 30</td>
-                  <td className="px-3 py-2 text-[13px] text-zinc-700">Concealed, 30¢ — no calling allowed</td>
+                  <td className="px-3 py-2 text-[13px] text-zinc-700">Concealed, 30¢ — no calling except for Mahjong</td>
                 </tr>
                 <tr className="border-b border-zinc-100">
                   <td className="px-3 py-2 font-bold">C 50</td>
@@ -859,7 +818,7 @@ export default function Module2ReadingTheCard() {
                 ],
                 correct: 1,
                 explanation:
-                  "The parenthetical says \"Any 3 Consec. Nos.\" — meaning the numbers are a pattern. 1-2-3-4 could be 4-5-6-7, 5-6-7-8, or any other consecutive set. One suit only.",
+                  "The rules in parentheses say \"Any 3 Consec. Nos.\" — meaning the numbers are a pattern. 1-2-3-4 could be 4-5-6-7, 5-6-7-8, or any other consecutive set. One suit only.",
               },
               {
                 question:

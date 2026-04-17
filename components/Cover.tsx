@@ -23,7 +23,7 @@ export function Cover({
 }) {
   if (compact) {
     return (
-      <header className="relative mb-2 overflow-hidden rounded-xl bg-gradient-to-br from-[#1A4D2E] via-[#1F5A35] to-[#0F3320] px-4 py-2.5 sm:px-6 sm:py-3 text-center text-white shadow-sm">
+      <header className="relative mb-2 overflow-hidden rounded-xl bg-gradient-to-br from-[#0F3320] via-[#143D26] to-[#0A2618] px-4 py-2.5 sm:px-6 sm:py-3 text-center text-white shadow-sm">
         {eyebrow && (
           <div className="mb-1 text-[11px] sm:text-[12px] font-bold uppercase tracking-[3px] text-[#C8A951]">
             {eyebrow}
@@ -36,7 +36,7 @@ export function Cover({
     );
   }
   return (
-    <header className="relative mb-8 sm:mb-10 overflow-hidden rounded-2xl bg-gradient-to-br from-[#1A4D2E] via-[#1F5A35] to-[#0F3320] px-4 py-8 sm:px-6 sm:py-14 md:py-16 text-center text-white shadow-[0_12px_40px_rgba(0,0,0,0.18)]">
+    <header className="relative mb-8 sm:mb-10 overflow-hidden rounded-2xl bg-gradient-to-br from-[#0F3320] via-[#143D26] to-[#0A2618] px-4 py-8 sm:px-6 sm:py-14 md:py-16 text-center text-white shadow-[0_12px_40px_rgba(0,0,0,0.18)]">
       {/* Subtle radial glow for depth */}
       <div
         className="pointer-events-none absolute inset-0"

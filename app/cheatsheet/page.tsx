@@ -108,6 +108,7 @@ export default function CheatSheet() {
               <div className="mt-1.5 rounded border border-zinc-200 bg-zinc-50 px-2 py-1">
                 Pair = 2 &nbsp;|&nbsp; Pung = 3 &nbsp;|&nbsp; Kong = 4 &nbsp;|&nbsp; Quint = 5
               </div>
+              <Tip>The 1 Bam (bird tile) looks like a Flower — if it has a bird, it&apos;s a 1 Bam.</Tip>
             </Section>
 
             {/* JOKER RULES */}

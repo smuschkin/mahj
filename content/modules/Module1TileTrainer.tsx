@@ -91,8 +91,10 @@ export default function Module1TileTrainer() {
             </div>
           </TileRow>
           <Callout variant="warn">
-            The <strong>1 Bam</strong>{" "}is special — it&apos;s almost always drawn as a{" "}
-            <strong>bird</strong>{" "}instead of a bamboo stalk. Don&apos;t let it fool you.
+            The <strong>1 Bam</strong>{" "}is special — it usually has a{" "}
+            <strong>bird</strong>{" "}instead of bamboo stalks, which can make it look
+            like a Flower tile. Look for the bird to tell them apart. Some beginners
+            call it &quot;1 Bird Bam&quot; until it clicks.
           </Callout>
         </LessonScreen>
 
@@ -227,6 +229,11 @@ export default function Module1TileTrainer() {
             paired with a suit — knowing which helps you spot patterns on the
             card faster.
           </p>
+          <Callout variant="tip">
+            The <strong>Soap</strong>{" "}(White Dragon) is just a blank or lightly
+            framed tile — it doesn&apos;t look like a bar of soap! The name is
+            just mahjong slang.
+          </Callout>
         </LessonScreen>
 
         {/* ── Mini quiz: Dragon-suit pairings ── */}
@@ -280,6 +287,10 @@ export default function Module1TileTrainer() {
               </div>
             </div>
           </TileRow>
+          <Callout variant="tip">
+            Don&apos;t confuse Flowers with the <strong>1 Bam</strong> — the bird
+            tile can look similar. If it has a bird, it&apos;s a 1 Bam, not a Flower.
+          </Callout>
         </LessonScreen>
 
         {/* ── Jokers ── */}

@@ -285,6 +285,13 @@ const POOL: DailyPuzzleData[] = [
     correctIndex: 1,
     explanation: "A dead hand can't win. This happens from wrong tile count, illegal exposure, or calling errors. You still play defense and must pay winners.",
   },
+  // ── Tile ID ──
+  {
+    prompt: "A tile has a bird on it. Is it a Flower or a 1 Bam?",
+    options: ["It's a Flower", "It's a 1 Bam", "It could be either", "It's a Dragon"],
+    correctIndex: 1,
+    explanation: "The 1 Bam almost always has a bird instead of bamboo stalks. It looks like a Flower, but if you see a bird, it's a 1 Bam.",
+  },
 ];
 
 export function DailyPuzzle() {
