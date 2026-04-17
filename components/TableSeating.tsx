@@ -25,13 +25,13 @@ export function TableSeating({
 }) {
   const positions: Record<Seat, string> = {
     south: "top-0 left-1/2 -translate-x-1/2",
-    east: "top-1/2 right-0 -translate-y-1/2",
+    east: "top-1/2 right-2 -translate-y-1/2",
     north: "bottom-0 left-1/2 -translate-x-1/2",
-    west: "top-1/2 left-0 -translate-y-1/2",
+    west: "top-1/2 left-2 -translate-y-1/2",
   };
 
   return (
-    <div className="relative mx-auto my-6 h-[260px] w-[280px] sm:h-[300px] sm:w-[320px]">
+    <div className="relative mx-auto my-6 h-[280px] w-[320px] sm:h-[320px] sm:w-[360px]">
       {/* Felt center */}
       <div
         className="absolute left-1/2 top-1/2 flex h-[160px] w-[160px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-center font-serif text-[13px] tracking-wider text-[var(--color-accent)] shadow-[inset_0_0_20px_rgba(0,0,0,0.4),0_6px_14px_rgba(0,0,0,0.2)]"
