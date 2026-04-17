@@ -215,7 +215,8 @@ export default function Module3SetupDealing() {
             </li>
             <li>
               <strong>Deal</strong> starting from where you stopped counting,
-              going left. The pushed-out tiles get dealt last.
+              starting from the right end of your wall, moving to the left.
+              The pushed-out tiles get dealt last.
             </li>
           </ol>
 
