@@ -303,7 +303,8 @@ export default function Module3SetupDealing() {
             grabs the <strong>1st and 3rd</strong> top tiles from the wall
             (leapfrogging over the 2nd). Then the Dealer continues passing
             out one tile to each player — bottom, top, bottom — until
-            everyone has their final tiles.
+            everyone has their final tiles. The last tile at the end of the
+            wall will be a single tile (just the bottom — the top was taken).
           </p>
           <p>
             <strong>Result:</strong> the Dealer ends up with{" "}
