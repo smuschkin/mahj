@@ -177,12 +177,12 @@ export function WallPushAnimation() {
       </svg>
 
       {/* Controls */}
-      <div className="mt-2 flex items-center justify-center gap-2">
+      <div className="flex items-center justify-center gap-2">
         {!auto ? (
           <button
             type="button"
             onClick={play}
-            className="rounded-md bg-[var(--color-accent)] px-5 py-2 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
+            className="rounded-md bg-[#1A4D2E] px-5 py-2 text-sm font-bold uppercase tracking-wider text-white transition hover:-translate-y-0.5"
           >
             Push it out
           </button>
