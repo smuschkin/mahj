@@ -165,7 +165,7 @@ export function PracticeTable() {
             <button
               type="button"
               onClick={() => setStepIndex((i) => i + 1)}
-              className="rounded-xl bg-[#2D8B5E] px-6 py-2.5 text-sm font-bold text-white shadow-lg transition hover:bg-[#247A50] hover:-translate-y-0.5 active:scale-[0.98]"
+              className="rounded-xl bg-[#1A4D2E] px-6 py-2.5 text-sm font-bold text-white shadow-lg transition hover:bg-[#0F3320] hover:-translate-y-0.5 active:scale-[0.98]"
             >
               Next Step &rarr;
             </button>

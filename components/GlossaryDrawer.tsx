@@ -70,7 +70,7 @@ export function GlossaryDrawer() {
           type="button"
           onClick={toggle}
           aria-label={open ? "Close glossary" : "Open glossary"}
-          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1A6B42] text-2xl text-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition hover:scale-105 hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] active:scale-95"
+          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1A4D2E] text-2xl text-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition hover:scale-105 hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] active:scale-95"
         >
           {open ? "✕" : "📖"}
         </button>
