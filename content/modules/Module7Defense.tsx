@@ -521,7 +521,7 @@ export default function Module7Defense() {
           </p>
           <p>
             <strong>What&apos;s next:</strong>{" "}Lesson 12 covers{" "}
-            <strong>Etiquette &amp; Table Culture</strong> — the unwritten rules that
+            <strong>Table Etiquette</strong> — the unwritten rules that
             make you welcome at any mahjong table: how to call your discards, how to
             keep pace, and the social customs that turn a game into a tradition.
           </p>

@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { LessonScreen } from "@/components/LessonScreen";
 import { ScreenStepper } from "@/components/ScreenStepper";
 import { Callout } from "@/components/Callout";
-import { WinningHandTeaser } from "@/components/WinningHandTeaser";
+
 import { ModuleNav } from "@/components/ModuleNav";
 import { getAdjacentModules } from "@/lib/modules";
 import Link from "next/link";
@@ -77,7 +77,7 @@ export default function Module0Welcome() {
             When you complete it, you call <strong>&quot;Mahjong!&quot;</strong>{" "}and you
             win the round.
           </p>
-          <WinningHandTeaser />
+
         </LessonScreen>
 
         <LessonScreen title="🛒 What You Need">
@@ -131,31 +131,13 @@ export default function Module0Welcome() {
           </p>
           <ul className="space-y-0">
             {[
-              [
-                "Your first few games will feel slow and confusing.",
-                "That's completely normal. Mahjong has a longer learning curve than most card games — and it gets fun fast.",
-              ],
-              [
-                "You probably won't win your first 3–5 games.",
-                "That's not failure — that's the learning curve. Even experienced players lose plenty. Trust the process.",
-              ],
-              [
-                "Don't try to memorize the card on day one.",
-                "Nobody does. You'll pick it up by playing. Most regulars take a whole season to get fast at reading the card.",
-              ],
-              [
-                "Mistakes are normal — and recoverable.",
-                "Every experienced player has knocked over the wall, called wrong, and forgotten the rules. The table will help you. Don't be afraid to ask.",
-              ],
-              [
-                "It's a social game first.",
-                "American Mahjong is about the people at the table as much as the tiles. Bring your patience and your sense of humor.",
-              ],
-              [
-                "This app teaches you the game, not the card.",
-                "When you're ready for real play, you'll buy the official card separately.",
-              ],
-            ].map(([title, body], i, arr) => (
+              "Your first few games will feel slow — that's normal and it gets fun fast.",
+              "You probably won't win your first 3–5 games. Trust the process.",
+              "Don't try to memorize the card on day one. You'll pick it up by playing.",
+              "Mistakes are normal. Every experienced player has been there.",
+              "It's a social game first. Bring your patience and your sense of humor.",
+              "This app teaches you the game, not the card. You'll buy the official card separately.",
+            ].map((text, i, arr) => (
               <li
                 key={i}
                 className={`flex items-start gap-3 py-3 text-sm ${
@@ -167,10 +149,7 @@ export default function Module0Welcome() {
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-sm font-black text-white">
                   ★
                 </span>
-                <div>
-                  <strong className="text-[var(--color-mid)]">{title}</strong>
-                  <span className="text-zinc-600"> {body}</span>
-                </div>
+                <span className="text-zinc-700">{text}</span>
               </li>
             ))}
           </ul>

@@ -43,7 +43,7 @@ export default function Module5CharlestonStrategy() {
                 },
                 { label: "Estimated time", value: "5–7 minutes" },
                 { label: "Prerequisite", value: "Lesson 5 (The Charleston)" },
-                { label: "Unlocks", value: "Lesson 7" },
+                { label: "Unlocks", value: "Lesson 7 (Jokers & Calling)" },
               ]}
             />
           </>

@@ -51,7 +51,7 @@ export default function Module8Etiquette() {
               "Learn the announcing rules, the official misnamed-tile penalty, the pause-before-racking convention, and the social customs that make mahjong fun for everyone.",
           },
           { label: "Estimated time", value: "6–8 minutes" },
-          { label: "Prerequisite", value: "Lesson 11 (Defense & Wall Awareness)" },
+          { label: "Prerequisite", value: "Lesson 11 (Defense)" },
           { label: "Unlocks", value: "Lesson 13 (Common Mistakes)" },
           {
             label: "Why it matters",
@@ -263,7 +263,7 @@ export default function Module8Etiquette() {
           </p>
           <p>
             <strong>What&apos;s next:</strong>{" "}Lesson 13 covers{" "}
-            <strong>Common Mistakes &amp; Recovery</strong> — the errors every beginner
+            <strong>Common Mistakes</strong> — the errors every beginner
             makes, and how to recover from them gracefully.
           </p>
         </LessonScreen>

@@ -275,9 +275,9 @@ export default function Module10Mistakes() {
             what happens when each one occurs.
           </p>
           <p>
-            <strong>What&apos;s next:</strong>{" "}Lesson 14 is the{" "}
-            <strong>Glossary</strong> — every term you&apos;ve learned, defined and
-            cross-linked, always one tap away from any screen in the app.
+            <strong>What&apos;s next:</strong>{" "}Lesson 14 covers{" "}
+            <strong>Scoring &amp; Payouts</strong> — who pays whom and how much
+            when someone wins.
           </p>
         </LessonScreen>
       </ScreenStepper>

@@ -78,7 +78,6 @@ export default function Module12FirstGame() {
           },
           { label: "Estimated time", value: "12–15 minutes" },
           { label: "Prerequisite", value: "Lesson 14 (Scoring & Payouts)" },
-          { label: "Unlocks", value: "Lesson 16 (Practice Hands Library)" },
           {
             label: "Why it matters",
             value:
