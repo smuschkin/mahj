@@ -293,8 +293,8 @@ export default function Module3SetupDealing() {
               The 13th-tile round — who takes which
             </p>
             <p className="mb-4 text-center text-[13px] italic text-zinc-600">
-              Numbers show the order tiles are dealt. The Dealer takes the top of positions
-              1 and 3 (the leapfrog), then dealing continues to the other players.
+              The Dealer takes the top 2 tiles (1st and 3rd, skipping the 2nd),
+              then each other player takes one.
             </p>
             <div className="flex flex-wrap items-start justify-center gap-3 sm:gap-4">
               {[
@@ -353,10 +353,10 @@ export default function Module3SetupDealing() {
               })}
             </div>
             <p className="mt-4 text-center text-[13px] italic text-zinc-600">
-              <strong>1</strong> + <strong>2</strong> = the Dealer&apos;s two leapfrog
-              tiles (top of positions 1 and 3). <strong>3</strong>, <strong>4</strong>,{" "}
+              <strong>1</strong> + <strong>2</strong> = the Dealer&apos;s two top
+              tiles. <strong>3</strong>, <strong>4</strong>,{" "}
               <strong>5</strong> = the other three players get one tile each. The
-              bottom of position 3 stays in the wall.
+              last bottom tile stays in the wall.
             </p>
           </div>
 
