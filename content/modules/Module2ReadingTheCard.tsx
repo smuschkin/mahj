@@ -787,13 +787,13 @@ export default function Module2ReadingTheCard() {
                   "On the NMJL card, what does a \"C\" next to a hand mean?",
                 options: [
                   "The hand uses Craks",
-                  "The hand is concealed — no calling allowed",
+                  "The hand is concealed — no calling allowed except for Mahjong",
                   "The hand is common and easy",
                   "The hand uses consecutive numbers",
                 ],
                 correct: 1,
                 explanation:
-                  "C means concealed. Every tile must come from the wall or Charleston — you cannot call any discards for this hand.",
+                  "C means concealed. You cannot call any discards during play — except for Mahjong (the final winning tile). Every other tile must come from the wall or Charleston.",
               },
               {
                 question:
