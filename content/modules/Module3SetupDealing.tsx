@@ -257,12 +257,12 @@ export default function Module3SetupDealing() {
             </div>
             <div className="inline-flex flex-col items-center rounded-lg border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-3">
               <div className="flex gap-1">
-                <span className="flex h-10 w-9 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC]" />
-                <span className="flex h-10 w-9 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC]" />
+                <span className="flex h-10 w-9 rounded-md border border-[#C9BC8A] bg-gradient-to-b from-[#FEFCF5] to-[#EDE8D5] shadow-[0_2px_4px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.8)]" />
+                <span className="flex h-10 w-9 rounded-md border border-[#C9BC8A] bg-gradient-to-b from-[#FEFCF5] to-[#EDE8D5] shadow-[0_2px_4px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.8)]" />
               </div>
-              <div className="flex gap-1 -mt-px">
-                <span className="flex h-10 w-9 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC]" />
-                <span className="flex h-10 w-9 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC]" />
+              <div className="flex gap-1 mt-0.5">
+                <span className="flex h-10 w-9 rounded-md border border-[#C9BC8A] bg-gradient-to-b from-[#FEFCF5] to-[#EDE8D5] shadow-[0_2px_4px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.8)]" />
+                <span className="flex h-10 w-9 rounded-md border border-[#C9BC8A] bg-gradient-to-b from-[#FEFCF5] to-[#EDE8D5] shadow-[0_2px_4px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.8)]" />
               </div>
             </div>
             <p className="text-[12px] font-bold text-[var(--color-accent)]">= 4 tiles</p>
