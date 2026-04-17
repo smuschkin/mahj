@@ -214,8 +214,8 @@ export default function Module3SetupDealing() {
               (e.g. if you rolled 7, keep 7 positions against your rack and push out the rest).
             </li>
             <li>
-              <strong>Deal</strong> starting from where you stopped counting
-              (position 7), going left. The pushed-out tiles get dealt last.
+              <strong>Deal</strong> starting from where you stopped counting,
+              going left. The pushed-out tiles get dealt last.
             </li>
           </ol>
 
