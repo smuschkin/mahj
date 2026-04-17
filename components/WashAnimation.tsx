@@ -88,7 +88,7 @@ export function WashAnimation() {
     <div className="my-4 rounded-xl border-2 border-[var(--color-border)] bg-white p-4">
       <div className="mb-2 flex items-center justify-between">
         <span className="text-[13px] font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-          Washing the Tiles
+          Mixing the Tiles
         </span>
         <button
           type="button"
@@ -169,7 +169,7 @@ export function WashAnimation() {
       </div>
 
       <p className="mt-2 text-center text-[12px] italic text-zinc-500">
-        Everyone reaches in and swirls the tiles face-down to mix them up.
+        Everyone reaches in and mixes the tiles face-down.
       </p>
     </div>
   );
