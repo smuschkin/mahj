@@ -70,7 +70,7 @@ export default function Module3SetupDealing() {
         {/* ── 2. Wash ── */}
         <LessonScreen title="🌀 Step 1: Mix the Tiles">
           <p>
-            Put <strong>all 152 tiles face-down</strong>{" "}on the table and gently swirl
+            Put <strong>all 152 tiles face-down</strong>{" "}on the table and gently mix
             them around with your hands.
           </p>
           <p>
