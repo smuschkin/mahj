@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   GLOSSARY_SORTED,
   CATEGORY_COLORS,
@@ -8,6 +9,8 @@ import {
 } from "@/lib/glossary";
 
 export function GlossaryDrawer() {
+  const pathname = usePathname();
+  const isLesson = pathname.startsWith("/lesson/") || pathname.startsWith("/module/");
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -61,15 +64,17 @@ export function GlossaryDrawer() {
 
   return (
     <>
-      {/* ── Floating button ── */}
-      <button
-        type="button"
-        onClick={toggle}
-        aria-label={open ? "Close glossary" : "Open glossary"}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1A6B42] text-2xl text-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition hover:scale-105 hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] active:scale-95"
-      >
-        {open ? "✕" : "📖"}
-      </button>
+      {/* ── Floating button (hidden inside lessons) ── */}
+      {(!isLesson || open) && (
+        <button
+          type="button"
+          onClick={toggle}
+          aria-label={open ? "Close glossary" : "Open glossary"}
+          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1A6B42] text-2xl text-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition hover:scale-105 hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] active:scale-95"
+        >
+          {open ? "✕" : "📖"}
+        </button>
+      )}
 
       {/* ── Backdrop ── */}
       {open && (

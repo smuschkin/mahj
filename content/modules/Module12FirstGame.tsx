@@ -113,19 +113,25 @@ export default function Module12FirstGame() {
           </p>
 
           <TileRow caption="Sara's starting 13 tiles">
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={3} size="sm" />
-            <Tile type="bam" value={3} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="crack" value={5} size="sm" />
-            <Tile type="dot" value={9} size="sm" />
-            <Tile type="wind" value="E" size="sm" />
-            <Tile type="dragon" value="green" size="sm" />
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex gap-0.5">
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+              </div>
+              <div className="flex gap-0.5">
+                <Tile type="crack" value={5} size="sm" />
+                <Tile type="dot" value={9} size="sm" />
+                <Tile type="wind" value="E" size="sm" />
+                <Tile type="dragon" value="green" size="sm" />
+              </div>
+            </div>
           </TileRow>
 
           <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
@@ -193,19 +199,25 @@ export default function Module12FirstGame() {
           </p>
 
           <TileRow caption="Sara's hand after the Charleston (13 tiles)">
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={3} size="sm" />
-            <Tile type="bam" value={3} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="joker" size="sm" />
-            <Tile type="crack" value={6} size="sm" />
-            <Tile type="crack" value={7} size="sm" />
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex gap-0.5">
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+              </div>
+              <div className="flex gap-0.5">
+                <Tile type="joker" size="sm" />
+                <Tile type="crack" value={6} size="sm" />
+                <Tile type="crack" value={7} size="sm" />
+              </div>
+            </div>
           </TileRow>
 
           <h4 className="mt-3 font-serif text-base font-black text-[var(--color-mid)]">
@@ -238,20 +250,26 @@ export default function Module12FirstGame() {
           </p>
 
           <TileRow caption="Sara's hand after drawing — the 6 Crak is going.">
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={1} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={2} size="sm" />
-            <Tile type="bam" value={3} size="sm" />
-            <Tile type="bam" value={3} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="bam" value={4} size="sm" />
-            <Tile type="joker" size="sm" />
-            <Tile type="crack" value={6} size="sm" marked />
-            <Tile type="crack" value={7} size="sm" />
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex gap-0.5">
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={1} size="sm" />
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+              </div>
+              <div className="flex gap-0.5">
+                <Tile type="joker" size="sm" />
+                <Tile type="crack" value={6} size="sm" marked />
+                <Tile type="crack" value={7} size="sm" />
+              </div>
+            </div>
           </TileRow>
 
           <p className="text-[14px] text-zinc-700">

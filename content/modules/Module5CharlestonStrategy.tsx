@@ -109,19 +109,27 @@ export default function Module5CharlestonStrategy() {
           </p>
 
           <TileRow caption="Your sorted rack (13 tiles) — which 3 would you pass?">
-            <div className="flex flex-col items-center gap-2">
-              <div className="flex flex-wrap justify-center gap-1">
+            <div className="flex flex-wrap justify-center gap-3">
+              {/* Bams */}
+              <div className="flex gap-0.5">
                 <Tile type="bam" value={2} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
                 <Tile type="bam" value={4} size="sm" />
+              </div>
+              {/* Craks */}
+              <div className="flex gap-0.5">
                 <Tile type="crack" value={1} size="sm" marked />
                 <Tile type="crack" value={5} size="sm" />
                 <Tile type="crack" value={5} size="sm" />
-                <Tile type="dot" value={7} size="sm" />
               </div>
-              <div className="flex flex-wrap justify-center gap-1">
+              {/* Dots */}
+              <div className="flex gap-0.5">
+                <Tile type="dot" value={7} size="sm" />
                 <Tile type="dot" value={8} size="sm" />
                 <Tile type="dot" value={9} size="sm" marked />
+              </div>
+              {/* Honors & special */}
+              <div className="flex gap-0.5">
                 <Tile type="wind" value="W" size="sm" marked />
                 <Tile type="dragon" value="green" size="sm" />
                 <Tile type="joker" size="sm" />
