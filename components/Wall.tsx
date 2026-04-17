@@ -23,8 +23,9 @@ export function Wall() {
         <div
           className="grid"
           style={{
-            gridTemplateColumns: "14px 8px 200px 8px 14px",
-            gridTemplateRows: "14px 8px 200px 8px 14px",
+            display: "inline-grid",
+            gridTemplateColumns: "14px 8px auto 8px 14px",
+            gridTemplateRows: "14px 8px auto 8px 14px",
           }}
         >
           {/* Row 1: empty | empty | S rack | empty | empty */}
@@ -90,14 +91,14 @@ export function Wall() {
 function TileH() {
   // 14 wide × 10 tall — "lying flat" in horizontal walls
   return (
-    <span className="block h-2.5 w-3.5 shrink-0 rounded-[1.5px] border border-[#C9BC8A] bg-[#FAF7EC] shadow-sm" />
+    <span className="block h-2 w-3 shrink-0 rounded-[1px] border border-[#C9BC8A] bg-[#FAF7EC] shadow-sm" />
   );
 }
 
 function TileV() {
   // 10 wide × 14 tall — "standing up" in vertical walls
   return (
-    <span className="block h-3.5 w-2.5 shrink-0 rounded-[1.5px] border border-[#C9BC8A] bg-[#FAF7EC] shadow-sm" />
+    <span className="block h-3 w-2 shrink-0 rounded-[1px] border border-[#C9BC8A] bg-[#FAF7EC] shadow-sm" />
   );
 }
 

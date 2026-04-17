@@ -25,11 +25,11 @@ const STEPS: Step[] = [
     coaching: "",
   },
   {
-    id: "wash",
-    title: "Step 1: Wash the Tiles",
+    id: "mix",
+    title: "Step 1: Mix the Tiles",
     subtitle: "Everyone mixes the tiles face-down",
     coaching:
-      "All 152 tiles start face-down in the center. Everyone swirls them around to shuffle.",
+      "All 152 tiles start face-down in the center. Everyone reaches in and mixes them around to shuffle.",
   },
   {
     id: "wall",
