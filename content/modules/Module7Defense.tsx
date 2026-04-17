@@ -88,7 +88,6 @@ export default function Module7Defense() {
         highlight="Wall Awareness"
         subtitle="Reading the table, tracking discards, and not feeding the win"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

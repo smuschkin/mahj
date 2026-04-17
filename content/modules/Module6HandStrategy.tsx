@@ -82,7 +82,6 @@ export default function Module6HandStrategy() {
         highlight="Strategy"
         subtitle='Picking a hand, staying flexible, and the all-important "what would you discard?"'
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

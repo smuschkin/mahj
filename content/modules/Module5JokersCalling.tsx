@@ -81,7 +81,6 @@ export default function Module5JokersCalling() {
         highlight="Calling"
         subtitle="Grabbing tiles, exposing groups, and using your wild cards"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

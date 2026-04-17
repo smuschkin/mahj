@@ -95,7 +95,7 @@ export function GlossaryDrawer() {
         {/* Header */}
         <div className="flex items-center gap-3 border-b border-zinc-200 px-5 py-4">
           <span className="text-xl">📖</span>
-          <h2 className="flex-1 font-serif text-lg font-black text-[var(--color-mid)]">
+          <h2 className="flex-1 font-serif text-lg font-black text-[var(--color-accent)]">
             Glossary
           </h2>
           <button
@@ -149,7 +149,7 @@ function EntryCard({ entry }: { entry: GlossaryEntry }) {
   return (
     <div className="rounded-lg border border-zinc-200 bg-white p-3 shadow-sm">
       <div className="mb-1 flex flex-wrap items-baseline gap-2">
-        <h3 className="font-serif text-[15px] font-black text-[var(--color-mid)]">
+        <h3 className="font-serif text-[15px] font-black text-[var(--color-accent)]">
           {entry.term}
         </h3>
         <span

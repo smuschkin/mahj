@@ -42,7 +42,6 @@ export default function Module8Etiquette() {
         highlight="Table Culture"
         subtitle="The unwritten (and a few written) rules that make you welcome at any mahjong table"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

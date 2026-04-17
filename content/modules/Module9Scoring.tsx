@@ -84,7 +84,6 @@ export default function Module9Scoring() {
         highlight="Payouts"
         subtitle="Who pays whom and how much — made simple"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

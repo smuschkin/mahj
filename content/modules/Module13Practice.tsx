@@ -4,7 +4,6 @@ import { useState } from "react";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
-import { SectionHeader } from "@/components/SectionHeader";
 import { Callout } from "@/components/Callout";
 import { ModuleNav } from "@/components/ModuleNav";
 import { Tile, TileType } from "@/components/Tile";
@@ -611,7 +610,6 @@ export default function Module13Practice() {
         subtitle="Now you make the calls. Real puzzles, instant feedback."
       />
 
-      <SectionHeader>Practice</SectionHeader>
 
       {phase === "intro" && (
         <PuzzleShell>

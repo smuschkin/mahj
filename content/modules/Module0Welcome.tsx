@@ -1,7 +1,6 @@
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
-import { SectionHeader } from "@/components/SectionHeader";
 import { LessonScreen } from "@/components/LessonScreen";
 import { ScreenStepper } from "@/components/ScreenStepper";
 import { Callout } from "@/components/Callout";
@@ -14,7 +13,6 @@ export default function Module0Welcome() {
   const adj = getAdjacentModules(0);
   return (
     <PageWrap>
-      <SectionHeader>Welcome</SectionHeader>
 
       <ScreenStepper moduleNum={0} coverProps={{ eyebrow: "MAHJ — Lesson 1", title: "Welcome to", highlight: "MAHJ", subtitle: "Your path from beginner to your first real game" }} header={<><Cover
         eyebrow="MAHJ — Lesson 1"
@@ -22,7 +20,6 @@ export default function Module0Welcome() {
         highlight="MAHJ"
         subtitle="Your path from beginner to your first real game"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           { label: "Goal", value: "Set expectations and get you ready for Lesson 2." },

@@ -28,7 +28,6 @@ export default function Module7ScanningTheCard() {
               highlight="Card"
               subtitle="How to match your tiles to hands on the card"
             />
-            <SectionHeader>Lesson</SectionHeader>
             <MetaBox
               items={[
                 {

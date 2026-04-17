@@ -29,7 +29,6 @@ export default function Module8StartingTheGame() {
               highlight="Game"
               subtitle="What happens each turn once play begins"
             />
-            <SectionHeader>Lesson</SectionHeader>
             <MetaBox
               items={[
                 {

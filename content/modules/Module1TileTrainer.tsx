@@ -24,7 +24,6 @@ export default function Module1TileTrainer() {
         highlight="Trainer"
         subtitle="Recognize all 152 tiles in an American Mahjong set"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

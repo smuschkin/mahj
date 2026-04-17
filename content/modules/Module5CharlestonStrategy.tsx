@@ -33,7 +33,6 @@ export default function Module5CharlestonStrategy() {
               highlight="Strategy"
               subtitle="What to keep, what to pass, and reading what comes back"
             />
-            <SectionHeader>Lesson</SectionHeader>
             <MetaBox
               items={[
                 {

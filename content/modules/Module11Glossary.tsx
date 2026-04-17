@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
-import { SectionHeader } from "@/components/SectionHeader";
 import { Callout } from "@/components/Callout";
 import { ModuleNav } from "@/components/ModuleNav";
 import { getAdjacentModules } from "@/lib/modules";
@@ -831,7 +830,6 @@ export default function Module11Glossary() {
         subtitle="Every term, defined and cross-linked. Always one tap away."
       />
 
-      <SectionHeader>Search & Browse</SectionHeader>
 
       {/* ── Search box ── */}
       <div className="my-4">

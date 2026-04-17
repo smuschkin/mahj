@@ -31,7 +31,7 @@ export function ProgressDashboard() {
           <p className="text-[13px] font-bold uppercase tracking-wider text-[#C8A951]">
             Your progress
           </p>
-          <p className="font-serif text-2xl font-black text-[var(--color-mid)]">
+          <p className="font-serif text-2xl font-black text-[var(--color-accent)]">
             {completed} <span className="text-base text-zinc-400">/ {total} lessons</span>
           </p>
         </div>

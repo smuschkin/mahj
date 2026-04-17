@@ -300,7 +300,7 @@ export function DailyPuzzle() {
 
   return (
     <div className="rounded-xl border-2 border-[var(--color-accent)] bg-white p-5 shadow-sm">
-      <h3 className="mb-3 font-serif text-lg font-black text-[var(--color-mid)]">
+      <h3 className="mb-3 font-serif text-lg font-black text-[var(--color-accent)]">
         {puzzle.prompt}
       </h3>
 

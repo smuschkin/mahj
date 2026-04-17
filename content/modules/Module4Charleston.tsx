@@ -180,7 +180,6 @@ export default function Module4Charleston() {
         highlight="Charleston"
         subtitle="The trading ritual that makes American Mahjong unique"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

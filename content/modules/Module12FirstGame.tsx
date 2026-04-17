@@ -2,7 +2,6 @@ import Link from "next/link";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
-import { SectionHeader } from "@/components/SectionHeader";
 import { LessonScreen } from "@/components/LessonScreen";
 import { ScreenStepper } from "@/components/ScreenStepper";
 import { Callout } from "@/components/Callout";
@@ -60,7 +59,6 @@ export default function Module12FirstGame() {
   const adj = getAdjacentModules(14);
   return (
     <PageWrap>
-      <SectionHeader>Walkthrough</SectionHeader>
 
       <ScreenStepper moduleNum={14} coverProps={{ eyebrow: "MAHJ — Lesson 15", title: "Your First", highlight: "Game", subtitle: "A complete guided walkthrough — from the deal to Mahjong" }} header={<><Cover
         eyebrow="MAHJ — Lesson 15"
@@ -68,7 +66,6 @@ export default function Module12FirstGame() {
         highlight="Game"
         subtitle="A complete guided walkthrough — from the deal to Mahjong"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

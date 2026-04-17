@@ -26,7 +26,6 @@ export default function Module3SetupDealing() {
         highlight="Dealing"
         subtitle='From a pile of tiles to "Charleston, ready?"'
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

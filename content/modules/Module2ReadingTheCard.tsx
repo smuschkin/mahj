@@ -77,7 +77,6 @@ export default function Module2ReadingTheCard() {
         highlight="Card"
         subtitle="How to decode the NMJL card — the blueprint for every winning hand"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {

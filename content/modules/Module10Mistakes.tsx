@@ -62,7 +62,6 @@ export default function Module10Mistakes() {
         highlight="Recovery"
         subtitle="The dozen errors every beginner makes — and how to handle them gracefully"
       />
-      <SectionHeader>Lesson</SectionHeader>
 <MetaBox
         items={[
           {
