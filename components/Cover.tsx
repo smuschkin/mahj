@@ -36,7 +36,7 @@ export function Cover({
     );
   }
   return (
-    <header className="relative mb-8 sm:mb-10 overflow-hidden rounded-2xl bg-gradient-to-br from-[#0F3320] via-[#143D26] to-[#0A2618] px-4 py-8 sm:px-6 sm:py-14 md:py-16 text-center text-white shadow-[0_12px_40px_rgba(0,0,0,0.18)]">
+    <header className="relative mb-4 sm:mb-6 overflow-hidden rounded-2xl bg-gradient-to-br from-[#0F3320] via-[#143D26] to-[#0A2618] px-4 py-8 sm:px-6 sm:py-14 md:py-16 text-center text-white shadow-[0_12px_40px_rgba(0,0,0,0.18)]">
       {/* Subtle radial glow for depth */}
       <div
         className="pointer-events-none absolute inset-0"
