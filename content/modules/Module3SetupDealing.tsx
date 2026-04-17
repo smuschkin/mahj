@@ -51,7 +51,7 @@ export default function Module3SetupDealing() {
               <strong>Mix</strong> — shuffle all 152 tiles face-down
             </li>
             <li>
-              <strong>Build</strong> — stack the tiles into 4 walls
+              <strong>Build</strong> — arrange the tiles into 4 walls
             </li>
             <li>
               <strong>Pick the Dealer (East)</strong>{" "}(optional) — usually the host is
@@ -205,25 +205,25 @@ export default function Module3SetupDealing() {
               (example: 4 + 3 = 7).
             </li>
             <li>
-              <strong>Count</strong>{" "}that many stacks from the right end of the
+              <strong>Count</strong>{" "}that many pairs of tiles (top + bottom) from the right end of the
               Dealer&apos;s wall.
             </li>
             <li>
-              <strong>Push out</strong> the remaining stacks to the right of
+              <strong>Push out</strong> the remaining tiles to the right of
               where you stopped counting — move your rack over to push them
               toward the center of the table (e.g. if you rolled 7, push out
-              starting at stack 8).
+              starting at position 8).
             </li>
             <li>
               <strong>Deal</strong> starting from where you stopped counting
-              (stack 7), going left. The pushed-out tiles get dealt last.
+              (position 7), going left. The pushed-out tiles get dealt last.
             </li>
           </ol>
 
           <DicePair values={[4, 3]} />
           <p className="mt-2 text-center text-[13px] italic text-zinc-600">
-            Example: rolled a 7. Count 7 stacks from the right, push out
-            everything after stack 7, deal starting from stack 7 going left.
+            Example: rolled a 7. Count 7 positions from the right, push out
+            everything after position 7, deal starting from position 7 going left.
           </p>
 
           <h4 className="mt-5 font-serif text-base font-black text-[var(--color-mid)]">
@@ -277,28 +277,28 @@ export default function Module3SetupDealing() {
           <p>
             For the final round, the Dealer (East) takes{" "}
             <strong>two</strong>{" "}tiles first in a special leapfrog pattern. From
-            the next 3 stacks on top of the wall:
+            the next 3 positions on the wall:
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[15px]">
             <li>
-              <strong>Tile 1</strong>{" "}(top of stack 1) → the Dealer
+              <strong>Tile 1</strong>{" "}(top of position 1) → the Dealer
             </li>
             <li>
-              <strong>Tile 2</strong>{" "}(top of stack 3) → the Dealer <em>again</em>{" "}
-              — leapfrogging over stack 2
+              <strong>Tile 2</strong>{" "}(top of position 3) → the Dealer <em>again</em>{" "}
+              — leapfrogging over position 2
             </li>
             <li>
-              <strong>Tile 3</strong>{" "}(bottom of stack 1) → the player on the right
+              <strong>Tile 3</strong>{" "}(bottom of position 1) → the player on the right
             </li>
             <li>
-              <strong>Tile 4</strong>{" "}(top of stack 2) → the player across
+              <strong>Tile 4</strong>{" "}(top of position 2) → the player across
             </li>
             <li>
-              <strong>Tile 5</strong>{" "}(bottom of stack 2) → the player on the left
+              <strong>Tile 5</strong>{" "}(bottom of position 2) → the player on the left
             </li>
           </ul>
           <p className="text-[14px] text-zinc-600">
-            The bottom of stack 3 stays in the wall — it&apos;s the first tile
+            The bottom of position 3 stays in the wall — it&apos;s the first tile
             drawn during play.
           </p>
           <p>
@@ -312,7 +312,7 @@ export default function Module3SetupDealing() {
               The 13th-tile round — who takes which
             </p>
             <p className="mb-4 text-center text-[13px] italic text-zinc-600">
-              Numbers show the order tiles are dealt. The Dealer takes the top of stacks
+              Numbers show the order tiles are dealt. The Dealer takes the top of positions
               1 and 3 (the leapfrog), then dealing continues to the other players.
             </p>
             <div className="flex flex-wrap items-start justify-center gap-3 sm:gap-4">
@@ -373,9 +373,9 @@ export default function Module3SetupDealing() {
             </div>
             <p className="mt-4 text-center text-[13px] italic text-zinc-600">
               <strong>1</strong> + <strong>2</strong> = the Dealer&apos;s two leapfrog
-              tiles (top of stacks 1 and 3). <strong>3</strong>, <strong>4</strong>,{" "}
+              tiles (top of positions 1 and 3). <strong>3</strong>, <strong>4</strong>,{" "}
               <strong>5</strong> = the other three players get one tile each. The
-              bottom of stack 3 stays in the wall.
+              bottom of position 3 stays in the wall.
             </p>
           </div>
 
