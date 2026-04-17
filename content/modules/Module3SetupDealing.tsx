@@ -374,7 +374,7 @@ export default function Module3SetupDealing() {
                       </div>
                     </div>
                     <span className="text-[12px] font-bold uppercase tracking-wider text-zinc-500">
-                      Stack {stack.col}
+                      Pair {stack.col}
                     </span>
                   </div>
                 );
