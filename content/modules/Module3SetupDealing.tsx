@@ -301,7 +301,7 @@ export default function Module3SetupDealing() {
           <p>
             After everyone has 12 tiles, there&apos;s one final round. The Dealer
             grabs the <strong>1st and 3rd</strong> top tiles from the wall
-            (leapfrogging over the 2nd). Then the Dealer continues passing
+            (skipping the 2nd). Then the Dealer continues passing
             out one tile to each player — bottom, top, bottom — until
             everyone has their final tiles. The last tile at the end of the
             wall will be a single tile (just the bottom — the top was taken).
