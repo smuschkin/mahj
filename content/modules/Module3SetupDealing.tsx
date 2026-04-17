@@ -209,10 +209,9 @@ export default function Module3SetupDealing() {
               Dealer&apos;s wall.
             </li>
             <li>
-              <strong>Push out</strong> the remaining tiles to the right of
-              where you stopped counting — move your rack over to push them
-              toward the center of the table (e.g. if you rolled 7, push out
-              starting at position 8).
+              <strong>Keep the counted tiles against your rack</strong>, and
+              push everything else out toward the center of the table
+              (e.g. if you rolled 7, keep 7 positions against your rack and push out the rest).
             </li>
             <li>
               <strong>Deal</strong> starting from where you stopped counting
