@@ -92,7 +92,8 @@ export default function Module3SetupDealing() {
         <LessonScreen title="🧱 Step 2: Build the Wall">
           <p>
             Each player builds a wall in front of themselves:{" "}
-            <strong>19 tiles long</strong>, stacked <strong>2 tiles high</strong>.
+            <strong>19 tiles long</strong> with a <strong>bottom tier</strong> and a{" "}
+            <strong>top tier</strong> (2 tiles high).
           </p>
           <p>
             4 players × 19 × 2 = <strong>152 tiles</strong> — exactly the whole set.
@@ -103,8 +104,8 @@ export default function Module3SetupDealing() {
           </p>
           <Wall />
           <Callout variant="tip">
-            Build the bottom row first, then stack the top row directly on top. Tiles
-            should be touching, but not crooked.
+            Build the bottom tier first (19 tiles in a row), then place the top tier
+            directly on top. Tiles should be touching, but not crooked.
           </Callout>
           <Callout variant="note">
             <strong>Coming from Riichi or Asian mahjong?</strong>{" "}American Mahjong
@@ -205,7 +206,7 @@ export default function Module3SetupDealing() {
               (example: 4 + 3 = 7).
             </li>
             <li>
-              <strong>Count</strong>{" "}that many stacks (or tiers — each is 2 tiles high) from the right end of the
+              <strong>Count</strong>{" "}that many stacks (top and bottom tier together = 1 stack) from the right end of the
               Dealer&apos;s wall.
             </li>
             <li>
@@ -277,28 +278,28 @@ export default function Module3SetupDealing() {
           <p>
             For the final round, the Dealer (East) takes{" "}
             <strong>two</strong>{" "}tiles first in a special leapfrog pattern. From
-            the next 3 stacks of 2 on top of the wall:
+            the next 3 stacks on top of the wall:
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[15px]">
             <li>
-              <strong>Tile 1</strong>{" "}(top of stack 1) → the Dealer
+              <strong>Tile 1</strong>{" "}(top tier of stack 1) → the Dealer
             </li>
             <li>
-              <strong>Tile 2</strong>{" "}(top of stack 3) → the Dealer <em>again</em>{" "}
+              <strong>Tile 2</strong>{" "}(top tier of stack 3) → the Dealer <em>again</em>{" "}
               — leapfrogging over stack 2
             </li>
             <li>
-              <strong>Tile 3</strong>{" "}(bottom of stack 1) → the player on the right
+              <strong>Tile 3</strong>{" "}(bottom tier of stack 1) → the player on the right
             </li>
             <li>
-              <strong>Tile 4</strong>{" "}(top of stack 2) → the player across
+              <strong>Tile 4</strong>{" "}(top tier of stack 2) → the player across
             </li>
             <li>
-              <strong>Tile 5</strong>{" "}(bottom of stack 2) → the player on the left
+              <strong>Tile 5</strong>{" "}(bottom tier of stack 2) → the player on the left
             </li>
           </ul>
           <p className="text-[14px] text-zinc-600">
-            The bottom of stack 3 stays in the wall — it&apos;s the first tile
+            The bottom tier of stack 3 stays in the wall — it&apos;s the first tile
             drawn during play.
           </p>
           <p>
@@ -461,14 +462,14 @@ export default function Module3SetupDealing() {
                 options: ["13", "19", "24", "36"],
                 correct: 1,
                 explanation:
-                  "Each wall is 19 tiles long and 2 tiles high. 4 walls × 19 × 2 = 152 tiles, exactly the whole set.",
+                  "Each wall is 19 tiles long with a top and bottom tier. 4 walls × 19 × 2 = 152 tiles, exactly the whole set.",
               },
               {
                 question: "How many tiles high is the wall?",
                 options: ["1", "2", "3", "4"],
                 correct: 1,
                 explanation:
-                  "Tiles are stacked 2 high. Build the bottom row first, then stack the top.",
+                  "Two tiers — a bottom tier and a top tier. Build the bottom tier first, then place the top tier on top.",
               },
               {
                 question: "Which direction does play and deal move around the table?",
