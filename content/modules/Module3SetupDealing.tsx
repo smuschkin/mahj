@@ -211,7 +211,7 @@ export default function Module3SetupDealing() {
             <li>
               <strong>Keep the counted tiles against your rack</strong>, and
               push everything else out toward the center of the table
-              (e.g. if you rolled 7, keep 7 positions against your rack and push out the rest).
+              (e.g. if you rolled 7, keep 7 pairs of tiles against your rack and push out the rest).
             </li>
             <li>
               <strong>Deal</strong> starting from where you stopped counting,
