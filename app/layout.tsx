@@ -47,7 +47,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1A4D2E" />
         <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
-      <body className="min-h-full flex flex-col overflow-x-clip">
+      <body className="overflow-x-clip">
         <script dangerouslySetInnerHTML={{ __html: `if(window.Capacitor)document.documentElement.classList.add('capacitor')` }} />
         <TopNav />
         <main>{children}</main>
