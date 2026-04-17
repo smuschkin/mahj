@@ -242,9 +242,10 @@ export default function Module3SetupDealing() {
         {/* ── 7. Deal ── */}
         <LessonScreen title="🃏 Step 6: Deal the Tiles">
           <p>
-            Starting from where you broke the wall, deal tiles{" "}
-            <strong>counter-clockwise</strong>{" "}in groups of 4 (2 on top + 2 on
-            bottom, taken together). From the Dealer&apos;s perspective, the order is:
+            Starting from the right end of the wall where you broke it,
+            deal tiles <strong>counter-clockwise</strong>{" "}in groups of 4 (2 on
+            top + 2 on bottom, taken together). From the Dealer&apos;s perspective,
+            the order is:
           </p>
           <p className="my-3 text-center font-serif text-[15px] font-bold text-[var(--color-mid)]">
             Dealer → Right → Across → Left
