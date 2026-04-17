@@ -258,8 +258,8 @@ export default function Module3SetupDealing() {
                   <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">top</span>
                 </div>
                 <div className="flex gap-0.5 -mt-px">
-                  <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">btm</span>
-                  <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">btm</span>
+                  <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">bottom
+                  <span className="flex h-8 w-7 items-center justify-center rounded-sm border border-[#C9BC8A] bg-[#FAF7EC] text-[11px] font-bold text-zinc-500">bottom
                 </div>
               </div>
               <p className="mt-1 text-[12px] font-bold text-[var(--color-accent)]">= 4 tiles per group</p>
