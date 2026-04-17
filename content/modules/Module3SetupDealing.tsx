@@ -222,8 +222,9 @@ export default function Module3SetupDealing() {
 
           <DicePair values={[4, 3]} />
           <p className="mt-2 text-center text-[13px] italic text-zinc-600">
-            Example: rolled a 7. Count 7 positions from the right, push out
-            everything after position 7, deal starting from position 7 going left.
+            Example: rolled a 7. Count 7 top tiles from the right, push out
+            everything to the left after the 7th tile. Start dealing from the
+            right side of the wall, moving to the left.
           </p>
 
           <h4 className="mt-5 font-serif text-base font-black text-[var(--color-mid)]">
