@@ -152,7 +152,7 @@ export default function Module12FirstGame() {
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>Nine Bams</strong> — three 1-Bams, two 2-Bams, two 3-Bams, two
+              <strong>9 Bam tiles</strong> — three 1-Bams, two 2-Bams, two 3-Bams, two
               4-Bams. That&apos;s a strong start toward an all-Bam hand.
             </li>
             <li>
