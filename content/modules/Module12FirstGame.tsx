@@ -467,7 +467,10 @@ export default function Module12FirstGame() {
 
         {/* ── 8. Verification ── */}
         <LessonScreen title="🏆 Mahjong Confirmed!">
-          <p>The table verifies her hand against the card:</p>
+          <p>
+            Sara lays her entire hand face-up on the table so everyone can see
+            it. The table verifies her hand against the card:
+          </p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
               <strong>Kong of 1 Bam</strong> — four real tiles (exposed)
