@@ -280,7 +280,7 @@ export default function Module12FirstGame() {
             in the center and says &quot;Six Crak.&quot;
           </p>
 
-          <TileRow caption="Sara's hand after drawing — the 6 Crak is going.">
+          <TileRow caption="Sara's hand after drawing — the 6 Crak is her discard.">
             <div className="flex flex-col items-center gap-1">
               <div className="flex gap-0.5">
                 <Tile type="bam" value={1} size="sm" />
