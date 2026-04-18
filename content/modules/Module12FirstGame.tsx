@@ -271,8 +271,10 @@ export default function Module12FirstGame() {
         <LessonScreen title="🎯 Turn 1: First Draw">
           <p>
             <TurnBadge label="Sara's turn 1" />
-            Sara draws from the wall and gets a <strong>3 Bam</strong>. Nice — that
-            completes her <strong>Pung of 3-Bams</strong>.
+            The Dealer (East) goes first — since they already have 14 tiles, they
+            just discard one without drawing. Then Sara draws from the wall and
+            gets a <strong>3 Bam</strong>. Nice — that completes her{" "}
+            <strong>Pung of 3-Bams</strong>.
           </p>
           <p>
             She has 14 tiles now and must discard one. Easy choice: the 6 Crak — it
