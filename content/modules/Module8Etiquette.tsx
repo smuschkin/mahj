@@ -161,6 +161,25 @@ export default function Module8Etiquette() {
           </ul>
         </LessonScreen>
 
+        {/* ── Table talk ── */}
+        <LessonScreen title="🤐 Table Talk Rules">
+          <p>
+            What you say (and don&apos;t say) during the game matters:
+          </p>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Don&apos;t ask</strong> &quot;Who needs Bams?&quot; or &quot;Anyone collecting Dots?&quot;</li>
+            <li><strong>Don&apos;t hint</strong> at your hand — &quot;I almost have Mahjong!&quot;</li>
+            <li><strong>Don&apos;t comment</strong> on someone&apos;s discard — &quot;Are you sure you want to throw that?&quot;</li>
+            <li><strong>Don&apos;t announce</strong> what tiles you&apos;ve seen — &quot;That&apos;s the third 5 Bam&quot;</li>
+          </ul>
+          <Callout variant="tip">
+            The only things you should say out loud: your discard name,
+            &quot;Wait,&quot; &quot;Call,&quot; &quot;Mahjong,&quot; and
+            &quot;I&apos;d like to exchange.&quot; Everything else is
+            between you and your rack.
+          </Callout>
+        </LessonScreen>
+
         {/* ── 8. Social customs ── */}
         <LessonScreen title="☕ Social Customs">
           <p>
