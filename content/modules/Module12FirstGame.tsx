@@ -426,19 +426,40 @@ export default function Module12FirstGame() {
               </>
             }
             rack={
-              <>
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="joker" size="sm" />
-                <Tile type="joker" size="sm" />
-              </>
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="flex gap-0.5">
+                    <Tile type="bam" value={2} size="sm" />
+                    <Tile type="bam" value={2} size="sm" />
+                    <Tile type="bam" value={2} size="sm" />
+                  </div>
+                  <span className="text-[10px] font-bold text-zinc-400">need 1 more</span>
+                </div>
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="flex gap-0.5">
+                    <Tile type="bam" value={3} size="sm" />
+                    <Tile type="bam" value={3} size="sm" />
+                    <Tile type="bam" value={3} size="sm" />
+                  </div>
+                  <span className="text-[10px] font-bold text-[var(--color-accent)]">&#10003; done</span>
+                </div>
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="flex gap-0.5">
+                    <Tile type="bam" value={4} size="sm" />
+                    <Tile type="bam" value={4} size="sm" />
+                    <Tile type="bam" value={4} size="sm" />
+                  </div>
+                  <span className="text-[10px] font-bold text-[var(--color-accent)]">&#10003; done</span>
+                </div>
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="flex gap-0.5">
+                    <Tile type="joker" size="sm" />
+                  </div>
+                  <span className="text-[10px] font-bold text-[#C8A951]">wild</span>
+                </div>
+              </div>
             }
-            caption="Two jokers now. One real 3-Bam left in her rack."
+            caption="Need 1 more 2-Bam. Joker can fill any gap in a group of 3+."
           />
         </LessonScreen>
 
@@ -446,8 +467,8 @@ export default function Module12FirstGame() {
         <LessonScreen title="🎲 Turns 7–9: Getting Close">
           <p>
             A few uneventful turns pass. The wall is shrinking. Sara still needs
-            just <strong>one more 2 Bam</strong> for her Kong. She has 2 Jokers
-            covering the 3-Bams, and her 4-Bam Pung is already complete.
+            just <strong>one more 2 Bam</strong> for her Kong. She has a Joker
+            that can fill any gap, and her 3-Bam and 4-Bam groups are complete.
           </p>
           <p>
             Along the way she draws tiles she doesn&apos;t need — including a fourth
