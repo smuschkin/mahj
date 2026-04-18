@@ -276,7 +276,7 @@ export default function Module12FirstGame() {
           </p>
           <p>
             She draws a <strong>3 Bam</strong> — completing her Pung of 3-Bams!
-            She discards the <strong>6 Crak</strong> (junk) — places it face-up
+            She discards the <strong>6 Crak</strong>{" "}(junk) — places it face-up
             in the center and says &quot;Six Crak.&quot;
           </p>
 
