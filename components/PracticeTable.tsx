@@ -139,7 +139,7 @@ export function PracticeTable() {
       </div>
 
       {/* Interactive content area */}
-      <div className="mb-3">
+      <div className="mb-5">
         {step.id === "intro" && <IntroCard />}
         {step.id === "mix" && <WashAnimation />}
         {step.id === "wall" && <WallPushAnimation />}
