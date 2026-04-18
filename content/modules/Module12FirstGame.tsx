@@ -412,8 +412,8 @@ export default function Module12FirstGame() {
 
           <p>
             Sara has the real tile that Joker is standing in for — a North! She
-            announces the exchange, hands her North to the player, and takes
-            the Joker.
+            announces the exchange, hands her North to the player, and the
+            player hands her the Joker.
           </p>
           <p>
             Wait — with the Joker, she now has 14 tiles that match her hand!
