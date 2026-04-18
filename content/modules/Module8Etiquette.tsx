@@ -132,7 +132,9 @@ export default function Module8Etiquette() {
           <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
             <li><strong>Verify first</strong> — a false call makes your hand dead</li>
             <li><strong>Don&apos;t hesitate</strong> — once the next player racks, it&apos;s too late</li>
-            <li><strong>Keep your tiles on the rack</strong>{" "}until the table confirms the win is valid</li>
+            <li><strong>Expose your entire hand</strong> face-up on your rack so everyone can verify it against the card</li>
+            <li><strong>You should have no discards</strong> — all 14 tiles should be on your rack</li>
+            <li><strong>Other players: keep your tiles on your rack</strong>{" "}until the win is confirmed</li>
           </ul>
         </LessonScreen>
 
