@@ -372,6 +372,19 @@ export default function Module12FirstGame() {
             caption="Kong of 1-Bam: done. Need 1 more 2-Bam for the Kong."
           />
 
+          <div className="mt-2 rounded-md bg-white border border-zinc-200 px-3 py-2">
+            <p className="mb-1 text-[11px] font-bold uppercase tracking-wider text-zinc-400">Her target on the card:</p>
+            <div className="flex flex-wrap items-center justify-center gap-1 font-mono text-base font-black tracking-widest text-blue-600">
+              <span>1111</span>
+              <span className="text-zinc-300">·</span>
+              <span>2222</span>
+              <span className="text-zinc-300">·</span>
+              <span>333</span>
+              <span className="text-zinc-300">·</span>
+              <span>444</span>
+            </div>
+          </div>
+
           <Callout variant="warn">
             <strong>The exposure is locked.</strong>{" "}Sara can still switch to a
             different hand — as long as it uses a Kong of 1-Bams. But now every
