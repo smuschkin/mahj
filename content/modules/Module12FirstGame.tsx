@@ -184,22 +184,22 @@ export default function Module12FirstGame() {
               <div className="flex gap-0.5">
                 <Tile type="crack" value={5} size="sm" marked />
                 <Tile type="dot" value={9} size="sm" marked />
-                <Tile type="wind" value="E" size="sm" />
-                <Tile type="dragon" value="green" size="sm" marked />
+                <Tile type="wind" value="E" size="sm" marked />
+                <Tile type="dragon" value="green" size="sm" />
               </div>
             </div>
           </TileRow>
 
           <p className="text-[14px] text-zinc-700">
-            She&apos;s keeping the East Wind <em>for now</em> — she has only one of
-            them, but honors can occasionally pair up. If they don&apos;t, she&apos;ll
-            ditch it on the next pass.
+            She&apos;s keeping the Green Dragon <em>for now</em> — dragons
+            pair with suits (Green goes with Bams), so it could fit an all-Bam
+            hand. If it doesn&apos;t work out, she&apos;ll ditch it on the next pass.
           </p>
 
           <Callout variant="tip">
             Pass tiles that fit{" "}
-            <em>none</em>{" "}of your candidate hands first. The 5 Crak, 9 Dot, and Green
-            Dragon don&apos;t fit any all-Bam hand on the card.
+            <em>none</em>{" "}of your candidate hands first. The 5 Crak, 9 Dot, and East Wind
+            don&apos;t fit any all-Bam hand on the card.
           </Callout>
         </LessonScreen>
 
@@ -207,7 +207,7 @@ export default function Module12FirstGame() {
         <LessonScreen title="✨ After the Full Charleston">
           <p>
             Sara does all 6 passes (right, across, left, then left, across, right).
-            By the end of the Charleston she dropped the East Wind and 9 Dot,
+            By the end of the Charleston she dropped the Green Dragon,
             picked up an extra 4-Bam and a 2-Bam, and ended up with two filler
             tiles she didn&apos;t want (a 6 Crak and a 7 Crak).
           </p>
