@@ -74,14 +74,14 @@ export function ScreenStepper({
       )}
 
       {/* Progress dots */}
-      <div className="mb-1 flex items-center justify-center gap-1">
+      <div className="flex items-center justify-center gap-1">
         {screens.map((_, i) => (
           <button
             key={i}
             type="button"
             aria-label={`Go to step ${i + 1}`}
             onClick={() => setCurrent(i)}
-            className="flex items-center justify-center py-3"
+            className="flex items-center justify-center py-1.5"
           >
             <span
               className={`block h-2.5 rounded-full transition-all ${
@@ -97,7 +97,7 @@ export function ScreenStepper({
       </div>
 
       {/* Step indicator */}
-      <p className="mb-3 text-center text-[13px] uppercase tracking-[2px] text-zinc-500 font-bold">
+      <p className="mb-2 text-center text-[12px] uppercase tracking-[2px] text-zinc-400 font-bold">
         Step {current + 1} of {total}
       </p>
 
