@@ -30,7 +30,7 @@ type TileProps = {
 };
 
 const SIZES: Record<TileSize, { w: number; h: number; pad: number; cornerSize: number }> = {
-  sm: { w: 36, h: 48, pad: 3, cornerSize: 12 },
+  sm: { w: 44, h: 58, pad: 4, cornerSize: 13 },
   md: { w: 60, h: 80, pad: 6, cornerSize: 17 },
   lg: { w: 90, h: 120, pad: 9, cornerSize: 22 },
 };
