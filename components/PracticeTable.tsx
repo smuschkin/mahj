@@ -27,7 +27,7 @@ const STEPS: Step[] = [
   {
     id: "mix",
     title: "Step 1: Mix the Tiles",
-    subtitle: "Everyone mixes the tiles face-down",
+    subtitle: "",
     coaching: "",
   },
   {
