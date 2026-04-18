@@ -100,11 +100,11 @@ export default function Home() {
         </a>
       </div>
 
-      <div className="mt-4 flex justify-center gap-4 text-center">
+      <div className="mt-3 flex justify-center gap-4 text-center">
         <ResetProgressButton />
       </div>
 
-      <p className="mt-6 mb-2 text-center text-[13px] text-zinc-400">
+      <p className="mt-3 mb-1 text-center text-[13px] text-zinc-400">
         Made with ♥
       </p>
     </PageWrap>
