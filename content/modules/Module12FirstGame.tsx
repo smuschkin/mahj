@@ -152,16 +152,10 @@ export default function Module12FirstGame() {
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>Bam tiles</strong> — three 1-Bams, two 2-Bams, two 3-Bams, two
-              4-Bams. That&apos;s a strong start toward an all-Bam hand.
+              <strong>9 of her 13 tiles are Bams</strong> — a strong start toward an all-Bam hand.
             </li>
             <li>
-              <strong>Four junk tiles</strong> — 5 Crak, 9 Dot, East Wind, Green
-              Dragon. None of them fit her target.
-            </li>
-            <li>
-              The all-Bam consecutive-runs hand on the card looks like a real candidate
-              already. She&apos;ll narrow down further during the Charleston.
+              <strong>4 junk tiles</strong> (5 Crak, 9 Dot, East Wind, Green Dragon) — none fit her target. These will go in the Charleston.
             </li>
           </ul>
         </LessonScreen>
