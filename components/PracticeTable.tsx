@@ -124,13 +124,13 @@ export function PracticeTable() {
       </div>
 
       {/* Step title + coaching */}
-      <div className="mb-4 animate-fade-in" key={step.id}>
+      <div className="mb-3 animate-fade-in" key={step.id}>
         <h2 className="font-serif text-2xl font-black text-[var(--color-dark)] md:text-3xl">
           {step.title}
         </h2>
         <p className="mt-1 text-sm italic text-zinc-500">{step.subtitle}</p>
         {step.coaching && (
-          <div className="mt-4 rounded-lg border-l-4 border-[#C8A951] bg-white px-5 py-4 shadow-sm">
+          <div className="mt-3 rounded-lg border-l-4 border-[#C8A951] bg-white px-5 py-4 shadow-sm">
             <p className="text-sm leading-relaxed text-zinc-600">
               {step.coaching}
             </p>
@@ -139,7 +139,7 @@ export function PracticeTable() {
       </div>
 
       {/* Interactive content area */}
-      <div className="mb-5">
+      <div className="mb-4">
         {step.id === "intro" && <IntroCard />}
         {step.id === "mix" && <WashAnimation />}
         {step.id === "wall" && <WallPushAnimation />}

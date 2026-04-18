@@ -105,7 +105,7 @@ export function ScreenStepper({
       <div className="animate-fade-in">{screens[current]}</div>
 
       {/* Prev / Next */}
-      <div className="mt-3 flex items-center justify-between gap-3">
+      <div className="flex items-center justify-between gap-3">
         <button
           type="button"
           onClick={() => setCurrent((c) => Math.max(0, c - 1))}
