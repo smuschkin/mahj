@@ -130,15 +130,18 @@ export default function Module7Defense() {
           <ReadCard
             title="Two pungs of Bams exposed"
             exposure={
-              <>
-                <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={3} size="sm" />
-                <span className="mx-2 text-zinc-400">•</span>
-                <Tile type="bam" value={6} size="sm" />
-                <Tile type="bam" value={6} size="sm" />
-                <Tile type="bam" value={6} size="sm" />
-              </>
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex gap-0.5">
+                  <Tile type="bam" value={3} size="sm" />
+                  <Tile type="bam" value={3} size="sm" />
+                  <Tile type="bam" value={3} size="sm" />
+                </div>
+                <div className="flex gap-0.5">
+                  <Tile type="bam" value={6} size="sm" />
+                  <Tile type="bam" value={6} size="sm" />
+                  <Tile type="bam" value={6} size="sm" />
+                </div>
+              </div>
             }
             tells={
               <>
@@ -153,15 +156,18 @@ export default function Module7Defense() {
           <ReadCard
             title="A Pung of Greens + a Pung of West"
             exposure={
-              <>
-                <Tile type="dragon" value="green" size="sm" />
-                <Tile type="dragon" value="green" size="sm" />
-                <Tile type="dragon" value="green" size="sm" />
-                <span className="mx-2 text-zinc-400">•</span>
-                <Tile type="wind" value="W" size="sm" />
-                <Tile type="wind" value="W" size="sm" />
-                <Tile type="wind" value="W" size="sm" />
-              </>
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex gap-0.5">
+                  <Tile type="dragon" value="green" size="sm" />
+                  <Tile type="dragon" value="green" size="sm" />
+                  <Tile type="dragon" value="green" size="sm" />
+                </div>
+                <div className="flex gap-0.5">
+                  <Tile type="wind" value="W" size="sm" />
+                  <Tile type="wind" value="W" size="sm" />
+                  <Tile type="wind" value="W" size="sm" />
+                </div>
+              </div>
             }
             tells={
               <>
@@ -175,15 +181,18 @@ export default function Module7Defense() {
           <ReadCard
             title="Pung of 5 Crak + Pung of 5 Dot"
             exposure={
-              <>
-                <Tile type="crack" value={5} size="sm" />
-                <Tile type="crack" value={5} size="sm" />
-                <Tile type="crack" value={5} size="sm" />
-                <span className="mx-2 text-zinc-400">•</span>
-                <Tile type="dot" value={5} size="sm" />
-                <Tile type="dot" value={5} size="sm" />
-                <Tile type="dot" value={5} size="sm" />
-              </>
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex gap-0.5">
+                  <Tile type="crack" value={5} size="sm" />
+                  <Tile type="crack" value={5} size="sm" />
+                  <Tile type="crack" value={5} size="sm" />
+                </div>
+                <div className="flex gap-0.5">
+                  <Tile type="dot" value={5} size="sm" />
+                  <Tile type="dot" value={5} size="sm" />
+                  <Tile type="dot" value={5} size="sm" />
+                </div>
+              </div>
             }
             tells={
               <>
