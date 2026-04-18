@@ -346,10 +346,10 @@ export default function Module12FirstGame() {
                 <Tile type="bam" value={2} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
                 <Tile type="bam" value={4} size="sm" />
                 <Tile type="bam" value={4} size="sm" />
                 <Tile type="bam" value={4} size="sm" />
-                <Tile type="joker" size="sm" />
               </>
             }
             caption="Sara is now all-in on her all-Bam hand. The Kong is committed."
