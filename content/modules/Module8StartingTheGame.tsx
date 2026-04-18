@@ -179,6 +179,21 @@ export default function Module8StartingTheGame() {
           </Callout>
         </LessonScreen>
 
+        {/* ── Between hands ── */}
+        <LessonScreen title="🔄 Between Hands">
+          <p>After a hand ends (someone wins or the wall runs out):</p>
+          <ol className="ml-6 list-decimal space-y-1.5 text-[14px] text-zinc-700">
+            <li><strong>Pay up</strong> — settle the score for that hand</li>
+            <li><strong>Dealer rotates clockwise</strong> — the next player becomes East</li>
+            <li><strong>Mix the tiles</strong> — everyone pushes all tiles face-down to the center and mixes</li>
+            <li><strong>Build new walls</strong> and deal again</li>
+          </ol>
+          <Callout variant="tip">
+            <strong>Exception:</strong> if the Dealer (East) wins or the hand
+            ends in a wall game, the Dealer stays East for the next hand.
+          </Callout>
+        </LessonScreen>
+
         {/* ── Quiz ── */}
         <LessonScreen title="">
           <Quiz
