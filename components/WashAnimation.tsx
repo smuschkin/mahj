@@ -86,10 +86,7 @@ export function WashAnimation() {
 
   return (
     <div className="my-4 rounded-xl border-2 border-[var(--color-border)] bg-white p-4">
-      <div className="mb-2 flex items-center justify-between">
-        <span className="text-[13px] font-bold uppercase tracking-[2px] text-[var(--color-accent)]">
-          Mixing the Tiles
-        </span>
+      <div className="mb-2 flex items-center justify-end">
         <button
           type="button"
           onClick={() => setWashing((w) => !w)}
