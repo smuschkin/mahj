@@ -504,7 +504,7 @@ export default function Module12FirstGame() {
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
               <strong>Self-draw</strong> — yes! She completed her hand on her own
-              turn (via Joker exchange). All three players pay double.
+              turn, not from someone&apos;s discard. All three players pay double.
             </li>
             <li>
               <strong>Jokerless bonus</strong> — no. Her hand contains 1 Joker.
