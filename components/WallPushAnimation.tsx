@@ -130,7 +130,7 @@ export function WallPushAnimation() {
         {/* Rack — stays put */}
         <rect x={14} y={68} width={190} height={6} rx={2} fill="#8B5A2B" stroke="#5C3A1A" strokeWidth={0.5} />
         <text x={110} y={88} textAnchor="middle" fontSize="8" fill="#71717a" fontFamily="sans-serif">
-          your rack (stays put)
+          your rack
         </text>
 
         {/* Arrow showing push direction */}
@@ -169,7 +169,7 @@ export function WallPushAnimation() {
           fill={phase === "pushed" ? "#27AE60" : phase === "pushing" ? "#5A9E72" : "#71717a"}
         >
           {phase === "waiting" || phase === "resetting"
-            ? "Wall sitting against your rack"
+            ? "Your rack pushes the wall out"
             : phase === "pushing"
               ? "Pushing out..."
               : "Ready to deal from!"}

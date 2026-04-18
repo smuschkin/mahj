@@ -35,7 +35,7 @@ const STEPS: Step[] = [
     title: "Step 2: Build Your Wall",
     subtitle: "Each player builds a wall in front of their rack",
     coaching:
-      "Line up 19 stacks, 2 tiles high. That\u2019s 38 tiles per wall, 152 total.",
+      "Line up 19 tiles long, 2 tiles high. That\u2019s 38 tiles per wall, 152 total.",
   },
   {
     id: "deal",
@@ -202,7 +202,7 @@ function IntroCard() {
     <div className="grid grid-cols-2 gap-3">
       {[
         { num: 1, emoji: "🌊", label: "Mix", desc: "Mix tiles face-down" },
-        { num: 2, emoji: "🧱", label: "Wall", desc: "Build 19 stacks high" },
+        { num: 2, emoji: "🧱", label: "Wall", desc: "Build 19 tiles long, 2 high" },
         { num: 3, emoji: "🎲", label: "Deal", desc: "East deals to everyone" },
         { num: 4, emoji: "🔄", label: "Charleston", desc: "Pass tiles you don\u2019t want" },
       ].map((s) => (
