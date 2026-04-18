@@ -173,7 +173,7 @@ export default function Module12FirstGame() {
           </p>
 
           <TileRow caption="The 3 marked tiles are heading to her right.">
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-col items-center gap-1">
               <div className="flex gap-0.5">
                 <Tile type="bam" value={1} size="sm" />
                 <Tile type="bam" value={1} size="sm" />
@@ -182,10 +182,10 @@ export default function Module12FirstGame() {
                 <Tile type="bam" value={2} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
               </div>
               <div className="flex gap-0.5">
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
                 <Tile type="crack" value={5} size="sm" marked />
                 <Tile type="dot" value={9} size="sm" marked />
                 <Tile type="wind" value="E" size="sm" marked />
