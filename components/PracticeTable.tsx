@@ -112,13 +112,13 @@ export function PracticeTable() {
       />
 
       {/* Progress dots */}
-      <div className="mb-1">
+      <div>
         <StepDots
           current={stepIndex}
           total={STEPS.length}
           onJump={setStepIndex}
         />
-        <p className="mt-1 text-center text-[13px] text-zinc-400">
+        <p className="mb-2 text-center text-[12px] uppercase tracking-[2px] text-zinc-400 font-bold">
           Step {stepIndex + 1} of {STEPS.length}
         </p>
       </div>
