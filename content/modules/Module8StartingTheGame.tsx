@@ -188,10 +188,6 @@ export default function Module8StartingTheGame() {
             <li><strong>Mix the tiles</strong> — everyone pushes all tiles face-down to the center and mixes</li>
             <li><strong>Build new walls</strong> and deal again</li>
           </ol>
-          <Callout variant="tip">
-            <strong>Exception:</strong> if the Dealer (East) wins or the hand
-            ends in a wall game, the Dealer stays East for the next hand.
-          </Callout>
         </LessonScreen>
 
         {/* ── Quiz ── */}
