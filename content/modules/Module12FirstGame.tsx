@@ -95,10 +95,14 @@ export default function Module12FirstGame() {
             you what she&apos;s thinking and why.
           </p>
           <Callout variant="info">
-            <strong>Sara&apos;s target hand</strong> — a practice hand built from all
-            Bams: <strong>Kong of 1-Bam + Kong of 2-Bam + Pung of 3-Bam + Pung of
-            4-Bam</strong>. That&apos;s 4 + 4 + 3 + 3 = 14 tiles, all in one suit.
-            Fictional, used here for teaching only.
+            <strong>Sara&apos;s target hand</strong> (fictional, for teaching only):
+            <ul className="mt-2 ml-4 list-disc space-y-0.5 text-[14px]">
+              <li>Kong of 1-Bam (4 tiles)</li>
+              <li>Kong of 2-Bam (4 tiles)</li>
+              <li>Pung of 3-Bam (3 tiles)</li>
+              <li>Pung of 4-Bam (3 tiles)</li>
+            </ul>
+            <p className="mt-1 text-[13px]">= 14 tiles, all Bams, one suit.</p>
           </Callout>
         </LessonScreen>
 
