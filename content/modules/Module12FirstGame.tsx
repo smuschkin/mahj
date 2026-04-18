@@ -308,7 +308,7 @@ export default function Module12FirstGame() {
           <p className="text-[14px] text-zinc-700">
             She announces clearly:{" "}
             <strong>&quot;Six Crak.&quot;</strong> — and places it face-up in the
-            center. Then she pauses before her hand returns to her rack.
+            center. Then she pauses to give other players a chance to call it.
           </p>
         </LessonScreen>
 
