@@ -11,7 +11,7 @@ export function TopNav() {
   const moduleNum = moduleMatch ? parseInt(moduleMatch[1], 10) : null;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 border-b border-[#C8A951]/20 bg-[var(--color-ivory)]" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
+    <nav className="sticky top-0 z-40 border-b border-[#C8A951]/20 bg-[var(--color-ivory)]" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
       <div className="mx-auto flex max-w-[820px] items-center justify-between px-3 py-2 sm:px-5 sm:py-2.5">
         {/* Left: Home link */}
         <Link

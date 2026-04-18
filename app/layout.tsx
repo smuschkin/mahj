@@ -50,7 +50,7 @@ export default function RootLayout({
       <body className="overflow-x-clip">
         <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')){document.documentElement.classList.add('capacitor')}})()` }} />
         <TopNav />
-        <main style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 48px)" }}>{children}</main>
+        <main>{children}</main>
         <Disclaimer />
         <GlossaryDrawer />
         <ServiceWorkerRegister />
