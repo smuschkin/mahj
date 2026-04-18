@@ -211,7 +211,7 @@ export default function GearPage() {
         ))}
       </div>
 
-      <div className="mt-8 rounded-xl bg-zinc-50 p-6 text-center">
+      <div className="mt-6 rounded-xl bg-zinc-50 p-6 text-center">
         <p className="text-[14px] text-zinc-500">
           MAHJ is a participant in the Amazon Associates Program. As an Amazon
           Associate, we earn from qualifying purchases. This doesn&apos;t affect

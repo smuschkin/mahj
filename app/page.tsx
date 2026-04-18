@@ -25,14 +25,14 @@ export default function Home() {
 
       {/* ── Daily Puzzle ── */}
       <SectionHeader>Daily Challenge</SectionHeader>
-      <div className="mb-9">
+      <div className="mb-6">
         <DailyPuzzle />
       </div>
 
       {/* ── Quick Tools ── */}
       <SectionHeader>Quick Tools</SectionHeader>
 
-      <div className="mb-9 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Link
           href="/cheatsheet"
           className="flex flex-col items-center gap-1.5 rounded-xl border-2 border-[#C8A951]/30 bg-white px-4 py-4 text-center shadow-sm transition hover:-translate-y-0.5"
@@ -76,7 +76,7 @@ export default function Home() {
       </div>
 
       {/* ── App Store — hidden in standalone/app mode via CSS ── */}
-      <div className="mb-9 hidden-in-app rounded-xl border-2 border-[#C8A951]/30 bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-6 text-center shadow-sm">
+      <div className="mb-6 hidden-in-app rounded-xl border-2 border-[#C8A951]/30 bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-6 text-center shadow-sm">
         <p className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
           Also available on
         </p>
