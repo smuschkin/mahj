@@ -103,6 +103,18 @@ export default function Module12FirstGame() {
               <li>Pung of 4-Bam (3 tiles)</li>
             </ul>
             <p className="mt-1 text-[13px]">= 14 tiles, all Bams, one suit.</p>
+            <div className="mt-3 rounded-md bg-white/80 px-3 py-2">
+              <p className="mb-1 text-[11px] font-bold uppercase tracking-wider text-zinc-400">How it might look on the card:</p>
+              <div className="flex flex-wrap items-center justify-center gap-1 font-mono text-base font-black tracking-widest text-blue-600">
+                <span>1111</span>
+                <span className="text-zinc-300">·</span>
+                <span>2222</span>
+                <span className="text-zinc-300">·</span>
+                <span>333</span>
+                <span className="text-zinc-300">·</span>
+                <span>444</span>
+              </div>
+            </div>
           </Callout>
         </LessonScreen>
 
