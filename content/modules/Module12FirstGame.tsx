@@ -342,19 +342,34 @@ export default function Module12FirstGame() {
               </>
             }
             rack={
-              <>
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-              </>
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="flex gap-0.5">
+                    <Tile type="bam" value={2} size="sm" />
+                    <Tile type="bam" value={2} size="sm" />
+                    <Tile type="bam" value={2} size="sm" />
+                  </div>
+                  <span className="text-[10px] font-bold text-zinc-400">need 1 more</span>
+                </div>
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="flex gap-0.5">
+                    <Tile type="bam" value={3} size="sm" />
+                    <Tile type="bam" value={3} size="sm" />
+                    <Tile type="bam" value={3} size="sm" />
+                  </div>
+                  <span className="text-[10px] font-bold text-[var(--color-accent)]">&#10003; done</span>
+                </div>
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="flex gap-0.5">
+                    <Tile type="bam" value={4} size="sm" />
+                    <Tile type="bam" value={4} size="sm" />
+                    <Tile type="bam" value={4} size="sm" />
+                  </div>
+                  <span className="text-[10px] font-bold text-[var(--color-accent)]">&#10003; done</span>
+                </div>
+              </div>
             }
-            caption="Sara is now all-in on her all-Bam hand. The Kong is committed."
+            caption="Kong of 1-Bam: done. Need 1 more 2-Bam for the Kong."
           />
 
           <Callout variant="warn">
