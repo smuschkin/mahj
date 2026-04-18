@@ -249,8 +249,21 @@ export default function Module12FirstGame() {
             <li>Junk: 6 Crak, 7 Crak (will be discarded over the next few turns)</li>
           </ul>
 
+          <div className="mt-3 rounded-md bg-white border border-zinc-200 px-3 py-2">
+            <p className="mb-1 text-[11px] font-bold uppercase tracking-wider text-zinc-400">Her target on the card:</p>
+            <div className="flex flex-wrap items-center justify-center gap-1 font-mono text-base font-black tracking-widest text-blue-600">
+              <span>1111</span>
+              <span className="text-zinc-300">·</span>
+              <span>2222</span>
+              <span className="text-zinc-300">·</span>
+              <span>333</span>
+              <span className="text-zinc-300">·</span>
+              <span>444</span>
+            </div>
+          </div>
+
           <Callout variant="tip">
-            <strong>She needs 4 more meaningful tiles + the Joker substitution.</strong> She&apos;s in great shape. Time to play.
+            <strong>She needs 3 more Bam tiles.</strong>{" "}She&apos;s in great shape. Time to play.
           </Callout>
         </LessonScreen>
 
