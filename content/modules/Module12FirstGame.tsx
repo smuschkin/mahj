@@ -272,8 +272,9 @@ export default function Module12FirstGame() {
           <p>
             <TurnBadge label="Sara's turn 1" />
             The Dealer (East) goes first — since they already have 14 tiles, they
-            just discard one without drawing. Then Sara draws from the wall and
-            gets a <strong>3 Bam</strong>. Nice — that completes her{" "}
+            just discard one without drawing. Sara is sitting to the right of the
+            Dealer, so she goes next. She draws from the wall and gets a{" "}
+            <strong>3 Bam</strong>. Nice — that completes her{" "}
             <strong>Pung of 3-Bams</strong>.
           </p>
           <p>
