@@ -202,7 +202,7 @@ export default function Module12FirstGame() {
 
           <Callout variant="tip">
             Pass tiles that fit{" "}
-            <em>none</em>{" "}of your candidate hands first. The 5 Crak, 9 Dot, and East Wind
+            <em>none</em>{" "}of your candidate hands first. The 5 Crak, 9 Dot, and East
             don&apos;t fit any all-Bam hand on the card.
           </Callout>
         </LessonScreen>
