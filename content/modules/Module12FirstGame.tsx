@@ -217,7 +217,7 @@ export default function Module12FirstGame() {
           </p>
 
           <TileRow caption="Sara's hand after the Charleston (13 tiles)">
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-col items-center gap-1">
               <div className="flex gap-0.5">
                 <Tile type="bam" value={1} size="sm" />
                 <Tile type="bam" value={1} size="sm" />
@@ -226,12 +226,12 @@ export default function Module12FirstGame() {
                 <Tile type="bam" value={2} size="sm" />
                 <Tile type="bam" value={2} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
               </div>
               <div className="flex gap-0.5">
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
+                <Tile type="bam" value={4} size="sm" />
                 <Tile type="crack" value={6} size="sm" />
                 <Tile type="crack" value={7} size="sm" />
               </div>
