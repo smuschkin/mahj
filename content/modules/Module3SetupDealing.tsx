@@ -91,10 +91,10 @@ export default function Module3SetupDealing() {
         {/* ── 3. Build the wall ── */}
         <LessonScreen title="🧱 Step 2: Build the Wall">
           <Callout variant="info">
-            <strong>What&apos;s a rack?</strong>{" "}Each player has a wooden tile
-            holder called a rack. It has a sloped front (where your tiles sit,
-            hidden from others) and a flat top edge (where exposed groups go
-            when you call).
+            <strong>What&apos;s a rack?</strong>{" "}Each player has a tile holder
+            called a rack. It has a ledge where your tiles sit facing you
+            (hidden from others) and a flat top area where exposed groups
+            go when you call.
           </Callout>
           <p>
             Each player builds a wall in front of their rack:{" "}
