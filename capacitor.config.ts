@@ -10,6 +10,7 @@ const config: CapacitorConfig = {
     contentInset: "automatic",
     preferredContentMode: "mobile",
     scheme: "MAHJ",
+    backgroundColor: "#FDF6E3",
   },
   plugins: {
     SplashScreen: {

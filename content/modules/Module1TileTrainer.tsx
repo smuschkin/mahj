@@ -230,9 +230,9 @@ export default function Module1TileTrainer() {
             card faster.
           </p>
           <Callout variant="tip">
-            The <strong>Soap</strong>{" "}(White Dragon) is just a blank or lightly
-            framed tile — it doesn&apos;t look like a bar of soap! The name is
-            just mahjong slang.
+            The <strong>Soap</strong>{" "}(White Dragon) is a blank or lightly
+            framed tile. Some people remember it because it looks like a bar
+            of soap — that&apos;s actually how the nickname stuck!
           </Callout>
         </LessonScreen>
 
