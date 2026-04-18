@@ -356,10 +356,10 @@ export default function Module12FirstGame() {
           />
 
           <Callout variant="warn">
-            <strong>The exposure is irreversible.</strong>{" "}From this moment on, Sara
-            cannot switch to a different hand category. Every other player at the
-            table can see she&apos;s building a Bam-heavy hand. They will start
-            withholding Bams from her.
+            <strong>The exposure is locked.</strong>{" "}Sara can still switch to a
+            different hand — as long as it uses a Kong of 1-Bams. But now every
+            other player can see she&apos;s building a Bam-heavy hand. They may
+            start withholding Bams from her.
           </Callout>
         </LessonScreen>
 
