@@ -548,10 +548,9 @@ export default function Module12FirstGame() {
           </p>
 
           <Callout variant="tip">
-            <strong>What if Sara had self-drawn instead?</strong>{" "}All three other
-            <strong>What if her hand had been jokerless?</strong>{" "}Double again:
-            $1.20 each × 3 = $3.60 total. Sara&apos;s win is solid — and
-            that&apos;s a great result for a beginner game.
+            <strong>What if her hand had been jokerless?</strong>{" "}All payments
+            double again: $1.20 each × 3 = $3.60 total. The jokerless bonus
+            is a big deal!
           </Callout>
         </LessonScreen>
 
