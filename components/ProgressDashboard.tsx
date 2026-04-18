@@ -25,7 +25,7 @@ export function ProgressDashboard() {
   if (completed === 0 && inProgress === 0) return null;
 
   return (
-    <div className="mb-6 rounded-xl border-2 border-[#C8A951]/30 bg-white p-5 shadow-sm">
+    <div className="mb-3 rounded-xl border-2 border-[#C8A951]/30 bg-white p-5 shadow-sm">
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="text-[13px] font-bold uppercase tracking-wider text-[#C8A951]">
