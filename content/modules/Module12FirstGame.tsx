@@ -395,32 +395,25 @@ export default function Module12FirstGame() {
         <LessonScreen title="🔄 Turn 5: A Joker Exchange Opportunity">
           <p>
             <TurnBadge label="Sara's turn 5" />
-            Sara&apos;s turn comes around. Before she draws, she does what every
-            experienced player does: she{" "}
-            <strong>scans every exposed group on the table</strong>{" "}for jokers.
+            Sara draws from the wall and gets a <strong>North</strong> — useless
+            for her all-Bam hand. But before she discards, she{" "}
+            <strong>scans every exposed group on the table</strong>{" "}for Jokers.
           </p>
           <p>
-            She spots one. The player across the table has an exposed Pung that looks
-            like this:
+            She spots one! The player across has an exposed Pung of Norths with a
+            Joker:
           </p>
 
           <TileRow background="felt" caption="Across player's exposed Pung — Joker is on the right.">
-            <Tile type="bam" value={3} size="sm" highlighted />
-            <Tile type="bam" value={3} size="sm" highlighted />
+            <Tile type="wind" value="N" size="sm" highlighted />
+            <Tile type="wind" value="N" size="sm" highlighted />
             <Tile type="joker" size="sm" highlighted />
           </TileRow>
 
           <p>
-            The Joker in their group is standing in for a <strong>3 Bam</strong>.
-            Sara has two real 3-Bams in her rack. She could swap one for the Joker.
-          </p>
-
-          <p>
-            She trades one specific tile for one universal tile — clear win. She announces the exchange, hands her 3 Bam to the player, and receives the Joker.
-          </p>
-          <p>
-            Then she draws from the wall as her normal turn — and gets a useless 9
-            Dot. She discards it cleanly: <strong>&quot;Nine Dot.&quot;</strong>
+            Sara has the real tile that Joker is standing in for — a North! She
+            announces the exchange, hands her North to the player, and takes
+            the Joker. Now she discards a junk tile instead.
           </p>
 
           <HandState
