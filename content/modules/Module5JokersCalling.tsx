@@ -329,6 +329,15 @@ export default function Module5JokersCalling() {
             <li><strong>Calls are for groups of 3+</strong> — the only exception is Mahjong, where you can call any tile that completes your hand</li>
             <li><strong>Exposures are permanent</strong> — once you call and expose, you can&apos;t change it</li>
           </ul>
+
+          <Callout variant="warn">
+            <strong>What&apos;s a dead hand?</strong>{" "}If you make an illegal
+            call or exposure that doesn&apos;t fit any hand on the card, your
+            hand is &quot;dead.&quot; You keep playing — drawing and
+            discarding every turn — but you can&apos;t win. You still pay
+            the winner at the end. It&apos;s not the end of the world — it
+            happens to everyone.
+          </Callout>
         </LessonScreen>
 
         {/* ── Practice ── */}
