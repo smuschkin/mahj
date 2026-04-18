@@ -276,11 +276,9 @@ export default function Module12FirstGame() {
           </p>
           <p>
             She draws a <strong>3 Bam</strong> — completing her Pung of 3-Bams!
-            She discards the <strong>6 Crak</strong>{" "}(junk) — places it face-up
-            in the center and says &quot;Six Crak.&quot;
           </p>
 
-          <TileRow caption="Sara's hand after drawing — the 6 Crak is her discard.">
+          <TileRow caption="Sara's 14 tiles after drawing — the 6 Crak is her discard.">
             <div className="flex flex-col items-center gap-1">
               <div className="flex gap-0.5">
                 <Tile type="bam" value={1} size="sm" />
@@ -303,6 +301,10 @@ export default function Module12FirstGame() {
             </div>
           </TileRow>
 
+          <p>
+            She discards the <strong>6 Crak</strong>{" "}(junk) — places it face-up
+            in the center and says &quot;Six Crak.&quot;
+          </p>
         </LessonScreen>
 
         {/* ── 6. Turn 3 — the KONG call ── */}
