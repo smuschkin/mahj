@@ -314,19 +314,12 @@ export default function Module12FirstGame() {
             <strong>three 1-Bams</strong>. That fourth one would complete her Kong.
           </p>
           <p className="font-serif text-[16px] font-black text-[var(--color-red)]">
-            Sara says: &quot;Wait.&quot;
+            Sara says: &quot;Call!&quot;
           </p>
           <p>
-            That single word pauses the game so the next player won&apos;t draw. Now
-            she has a few seconds to do the mental check:{" "}
-            <em>&quot;If I take this and expose four 1-Bams, can my remaining tiles
-            still complete a valid hand on the card?&quot;</em>{" "}Yes — her all-Bam hand
-            is still very much alive. Safe to take.
-          </p>
-          <p>
-            She decides — yes. She says <strong>&quot;Call!&quot;</strong>, takes
-            the 1 Bam, and lays all four 1-Bams face-up at the front of her rack, and discards her remaining junk:{" "}
-            <strong>7 Crak</strong>.
+            She takes the 1 Bam, lays all four 1-Bams face-up at the front of
+            her rack (this is an <strong>exposure</strong>), and discards her
+            remaining junk: <strong>7 Crak</strong>.
           </p>
 
           <HandState
