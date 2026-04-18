@@ -413,7 +413,14 @@ export default function Module12FirstGame() {
           <p>
             Sara has the real tile that Joker is standing in for — a North! She
             announces the exchange, hands her North to the player, and takes
-            the Joker. Now she discards a junk tile instead.
+            the Joker.
+          </p>
+          <p>
+            Wait — with the Joker, she now has 14 tiles that match her hand!
+            The Joker fills in as her 4th 2-Bam.
+          </p>
+          <p className="font-serif text-[18px] font-black text-[var(--color-red)]">
+            &quot;Mahjong!&quot;
           </p>
 
           <HandState
@@ -432,8 +439,9 @@ export default function Module12FirstGame() {
                     <Tile type="bam" value={2} size="sm" />
                     <Tile type="bam" value={2} size="sm" />
                     <Tile type="bam" value={2} size="sm" />
+                    <Tile type="joker" size="sm" highlighted />
                   </div>
-                  <span className="text-[10px] font-bold text-zinc-400">need 1 more</span>
+                  <span className="text-[10px] font-bold text-[var(--color-accent)]">&#10003; Joker = 4th 2B</span>
                 </div>
                 <div className="flex flex-col items-center gap-0.5">
                   <div className="flex gap-0.5">
@@ -450,133 +458,28 @@ export default function Module12FirstGame() {
                     <Tile type="bam" value={4} size="sm" />
                   </div>
                   <span className="text-[10px] font-bold text-[var(--color-accent)]">&#10003; done</span>
-                </div>
-                <div className="flex flex-col items-center gap-0.5">
-                  <div className="flex gap-0.5">
-                    <Tile type="joker" size="sm" />
-                  </div>
-                  <span className="text-[10px] font-bold text-[#C8A951]">wild</span>
                 </div>
               </div>
             }
-            caption="Need 1 more 2-Bam. Joker can fill any gap in a group of 3+."
+            caption="14 tiles. Kong 1B + Kong 2B (Joker) + Pung 3B + Pung 4B. Mahjong!"
           />
         </LessonScreen>
 
-        {/* ── 8. Turns 7–9 — getting close ── */}
-        <LessonScreen title="🎲 Turns 7–9: Getting Close">
-          <p>
-            A few uneventful turns pass. The wall is shrinking. Sara still needs
-            just <strong>one more 2 Bam</strong> for her Kong. She has a Joker
-            that can fill any gap, and her 3-Bam and 4-Bam groups are complete.
-          </p>
-          <p>
-            Along the way she draws tiles she doesn&apos;t need — including a fourth
-            4-Bam and a 9 Bam — and discards them cleanly. Discard tiles that fit
-            none of your committed hand.
-          </p>
-
-          <HandState
-            exposed={
-              <>
-                <Tile type="bam" value={1} size="sm" highlighted />
-                <Tile type="bam" value={1} size="sm" highlighted />
-                <Tile type="bam" value={1} size="sm" highlighted />
-                <Tile type="bam" value={1} size="sm" highlighted />
-              </>
-            }
-            rack={
-              <>
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={2} size="sm" />
-                <Tile type="bam" value={3} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="bam" value={4} size="sm" />
-                <Tile type="joker" size="sm" />
-                <Tile type="joker" size="sm" />
-              </>
-            }
-            caption="13 tiles. The only tile that finishes the hand is a 4th 2-Bam."
-          />
-
-          <p>
-            She quietly checks her position against the card one more time:
-          </p>
-          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
-            <li>Kong of 1-Bam ✓ (exposed)</li>
-            <li>Kong of 2-Bam — needs <strong>one more 2-Bam</strong></li>
-            <li>Pung of 3-Bam — Joker + Joker + real 3-Bam = ✓</li>
-            <li>Pung of 4-Bam ✓ (concealed)</li>
-          </ul>
-
-          <p>
-            <strong>That&apos;s it.</strong>{" "}Any 2 Bam — drawn or discarded — is the
-            winning tile. She quietly mouths the words to make sure she&apos;ll be
-            ready: <em>&quot;Mahjong.&quot;</em>
-          </p>
-        </LessonScreen>
-
-        {/* ── 10. Turn 11 — MAHJONG ── */}
-        <LessonScreen title="🏆 Turn 11: MAHJONG!">
-          <p>
-            <TurnBadge label="The next loop" />
-            The player across from Sara discards a tile, names it clearly:{" "}
-            <strong>&quot;Two Bam.&quot;</strong>
-          </p>
-          <p>
-            Sara&apos;s eyes lock onto the tile. She says <strong>&quot;wait&quot;</strong> to pause the game, takes one more second to verify against the card —
-            yes, every group is accounted for — and then:
-          </p>
-          <p className="font-serif text-2xl font-black text-[var(--color-red)]">
-            &quot;MAHJONG!&quot;
-          </p>
-          <p>
-            She takes the discarded 2 Bam and lays her complete hand face-up:
-          </p>
-
-          <HandState
-            exposed={
-              <>
-                <Tile type="bam" value={1} size="sm" highlighted />
-                <Tile type="bam" value={1} size="sm" highlighted />
-                <Tile type="bam" value={1} size="sm" highlighted />
-                <Tile type="bam" value={1} size="sm" highlighted />
-              </>
-            }
-            rack={
-              <>
-                <Tile type="bam" value={2} size="sm" highlighted />
-                <Tile type="bam" value={2} size="sm" highlighted />
-                <Tile type="bam" value={2} size="sm" highlighted />
-                <Tile type="bam" value={2} size="sm" highlighted />
-                <Tile type="bam" value={3} size="sm" highlighted />
-                <Tile type="joker" size="sm" highlighted />
-                <Tile type="joker" size="sm" highlighted />
-                <Tile type="bam" value={4} size="sm" highlighted />
-                <Tile type="bam" value={4} size="sm" highlighted />
-                <Tile type="bam" value={4} size="sm" highlighted />
-              </>
-            }
-            caption="14 tiles. Kong 1B + Kong 2B + Pung 3B (with two Jokers) + Pung 4B."
-          />
-
-          <p>The table verifies her hand against the card. It checks out:</p>
+        {/* ── 8. Verification ── */}
+        <LessonScreen title="🏆 Mahjong Confirmed!">
+          <p>The table verifies her hand against the card:</p>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>Kong of 1 Bam</strong> — four real tiles, exposed
+              <strong>Kong of 1 Bam</strong> — four real tiles (exposed)
             </li>
             <li>
-              <strong>Kong of 2 Bam</strong> — four real tiles (the 4th called from the
-              discard)
+              <strong>Kong of 2 Bam</strong> — three real tiles + Joker (concealed)
             </li>
             <li>
-              <strong>Pung of 3 Bam</strong> — one real 3 Bam + two Jokers (legal:
-              Jokers can substitute in groups of 3+)
+              <strong>Pung of 3 Bam</strong> — three real tiles (concealed)
             </li>
             <li>
-              <strong>Pung of 4 Bam</strong> — three real tiles, concealed
+              <strong>Pung of 4 Bam</strong> — three real tiles (concealed)
             </li>
           </ul>
 
@@ -597,58 +500,55 @@ export default function Module12FirstGame() {
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>
-              <strong>Win on a discard</strong> — yes. The discarder pays double.
+              <strong>Self-draw</strong> — yes! She completed her hand on her own
+              turn (via Joker exchange). All three players pay double.
             </li>
             <li>
-              <strong>Self-draw bonus</strong> — no. She won by calling a discard.
-            </li>
-            <li>
-              <strong>Jokerless bonus</strong> — no. Her hand contains 2 Jokers.
+              <strong>Jokerless bonus</strong> — no. Her hand contains 1 Joker.
             </li>
           </ul>
 
-          <p>So the payout is the standard discard-win pattern:</p>
+          <p>So the payout is the self-draw pattern:</p>
 
           <div className="my-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
             <div className="rounded-md border-2 border-[var(--color-red)] bg-[#FFF6F4] p-2 text-center">
               <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
-                Discarder
+                Player A
               </div>
               <div className="font-serif text-lg font-black text-[var(--color-red)]">
                 60¢
               </div>
               <div className="text-[13px] italic text-zinc-500">2× hand value</div>
             </div>
-            <div className="rounded-md border-2 border-[var(--color-mid)] bg-white p-2 text-center">
+            <div className="rounded-md border-2 border-[var(--color-red)] bg-[#FFF6F4] p-2 text-center">
               <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
-                Other player
+                Player B
               </div>
-              <div className="font-serif text-lg font-black text-[var(--color-mid)]">
-                30¢
+              <div className="font-serif text-lg font-black text-[var(--color-red)]">
+                60¢
               </div>
-              <div className="text-[13px] italic text-zinc-500">1× hand value</div>
+              <div className="text-[13px] italic text-zinc-500">2× hand value</div>
             </div>
-            <div className="rounded-md border-2 border-[var(--color-mid)] bg-white p-2 text-center">
+            <div className="rounded-md border-2 border-[var(--color-red)] bg-[#FFF6F4] p-2 text-center">
               <div className="text-[13px] font-bold uppercase tracking-wider text-zinc-500">
-                Other player
+                Player C
               </div>
-              <div className="font-serif text-lg font-black text-[var(--color-mid)]">
-                30¢
+              <div className="font-serif text-lg font-black text-[var(--color-red)]">
+                60¢
               </div>
-              <div className="text-[13px] italic text-zinc-500">1× hand value</div>
+              <div className="text-[13px] italic text-zinc-500">2× hand value</div>
             </div>
           </div>
 
-          <p className="text-center font-serif text-base font-black text-[var(--color-mid)]">
-            Sara collects $1.20 total
+          <p className="text-center font-serif text-base font-black text-[var(--color-accent)]">
+            Sara collects $1.80 total
           </p>
 
           <Callout variant="tip">
             <strong>What if Sara had self-drawn instead?</strong>{" "}All three other
-            players would pay 60¢ each = $1.80 total. <strong>What if her hand had
-            also been jokerless?</strong>{" "}Double again: $1.20 each × 3 = $3.60
-            total. Sara&apos;s win is solid but not spectacular — and that&apos;s
-            totally normal for a beginner game.
+            <strong>What if her hand had been jokerless?</strong>{" "}Double again:
+            $1.20 each × 3 = $3.60 total. Sara&apos;s win is solid — and
+            that&apos;s a great result for a beginner game.
           </Callout>
         </LessonScreen>
 
