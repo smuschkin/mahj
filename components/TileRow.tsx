@@ -17,7 +17,7 @@ export function TileRow({
     <div className={`my-4 rounded-lg ${bg} p-4`}>
       <div className="flex flex-wrap items-end justify-center gap-1.5 sm:gap-3">{children}</div>
       {caption && (
-        <p className="mt-3 text-center text-[13px] italic text-zinc-600">{caption}</p>
+        <p className={`mt-3 text-center text-[13px] italic ${background === "felt" ? "text-white/70" : "text-zinc-600"}`}>{caption}</p>
       )}
     </div>
   );
