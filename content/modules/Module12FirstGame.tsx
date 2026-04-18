@@ -314,7 +314,7 @@ export default function Module12FirstGame() {
             <strong>three 1-Bams</strong>. That fourth one would complete her Kong.
           </p>
           <p className="font-serif text-[16px] font-black text-[var(--color-red)]">
-            Sara says: &quot;Call!&quot;
+            Sara says: &quot;Wait... Call!&quot;
           </p>
           <p>
             She takes the 1 Bam, lays all four 1-Bams face-up at the front of
