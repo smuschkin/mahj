@@ -589,24 +589,24 @@ export default function Module12FirstGame() {
               },
               {
                 question:
-                  "Sara's winning hand contained 2 Jokers. The hand value was 30¢ and she won on a discard. What does the discarder pay her?",
-                options: ["30¢", "60¢", "$1.20", "$2.40"],
+                  "Sara won by completing her hand on her own turn (self-draw). The hand value is 30¢. How much does each other player pay her?",
+                options: ["30¢", "60¢", "$1.20", "$1.80"],
                 correct: 1,
                 explanation:
-                  "Standard discard win = 2× hand value. 30¢ × 2 = 60¢. Jokerless bonus does NOT apply because she had Jokers in her final hand.",
+                  "Self-draw = all three players pay 2× hand value. 30¢ × 2 = 60¢ each. Sara collects $1.80 total.",
               },
               {
                 question:
-                  "During Turns 7–9, Sara drew tiles she didn't need (like a 4th 4-Bam). What did she do?",
+                  "Can a Joker be used in a pair?",
                 options: [
-                  "Held it as a defensive tile",
-                  "Discarded it cleanly, naming it out loud",
-                  "Used it as a Joker substitute",
-                  "Passed it to the player across",
+                  "Yes — Jokers work anywhere",
+                  "No — Jokers only work in groups of 3 or more",
+                  "Only if the hand is concealed",
+                  "Only in Singles & Pairs hands",
                 ],
                 correct: 1,
                 explanation:
-                  "Discard tiles that fit none of your committed hand. The extra 4-Bam had no value to her current hand, so it goes.",
+                  "Jokers can NEVER be used in singles or pairs — only in Pungs (3), Kongs (4), Quints (5), or Sextets (6).",
               },
               {
                 question:
