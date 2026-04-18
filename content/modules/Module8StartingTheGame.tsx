@@ -70,7 +70,7 @@ export default function Module8StartingTheGame() {
           <ol className="ml-6 list-decimal space-y-2 text-[15px]">
             <li>
               <strong>Draw</strong> — take the next tile from the wall
-              and add it to your rack
+              and add it to your rack (this is called <strong>racking</strong>)
             </li>
             <li>
               <strong>Decide</strong> — does this tile help any of your
