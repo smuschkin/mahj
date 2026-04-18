@@ -206,9 +206,9 @@ export default function Module12FirstGame() {
         <LessonScreen title="✨ After the Full Charleston">
           <p>
             Sara does all 6 passes (right, across, left, then left, across, right).
-            By the end of the Charleston she also dropped the East Wind, picked up an
-            extra 4-Bam, gained a <strong>Joker</strong>{" "}(gold!), and ended up with
-            two filler tiles she didn&apos;t want (a 6 Crak and a 7 Crak).
+            By the end of the Charleston she dropped the East Wind and 9 Dot,
+            picked up an extra 4-Bam and a 2-Bam, and ended up with two filler
+            tiles she didn&apos;t want (a 6 Crak and a 7 Crak).
           </p>
 
           <TileRow caption="Sara's hand after the Charleston (13 tiles)">
@@ -219,6 +219,7 @@ export default function Module12FirstGame() {
                 <Tile type="bam" value={1} size="sm" />
                 <Tile type="bam" value={2} size="sm" />
                 <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={2} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
                 <Tile type="bam" value={4} size="sm" />
@@ -226,7 +227,6 @@ export default function Module12FirstGame() {
                 <Tile type="bam" value={4} size="sm" />
               </div>
               <div className="flex gap-0.5">
-                <Tile type="joker" size="sm" />
                 <Tile type="crack" value={6} size="sm" />
                 <Tile type="crack" value={7} size="sm" />
               </div>
@@ -238,10 +238,9 @@ export default function Module12FirstGame() {
           </h4>
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>1-Bam: 3 of 4 needed for the Kong (need 1 more)</li>
-            <li>2-Bam: 2 of 4 needed for the Kong (need 2 more)</li>
+            <li>2-Bam: 3 of 4 needed for the Kong (need 1 more)</li>
             <li>3-Bam: 2 of 3 needed for the Pung (need 1 more)</li>
             <li>4-Bam: 3 of 3 needed for the Pung (✓ done!)</li>
-            <li>Joker: can substitute for any 1 missing Bam in a Pung or Kong</li>
             <li>Junk: 6 Crak, 7 Crak (will be discarded over the next few turns)</li>
           </ul>
 
@@ -254,8 +253,8 @@ export default function Module12FirstGame() {
         <LessonScreen title="🎯 Turn 1: First Draw">
           <p>
             <TurnBadge label="Sara's turn 1" />
-            Sara draws from the wall and gets a <strong>2 Bam</strong>. Beautiful — that&apos;s
-            now <strong>three 2-Bams</strong>, getting closer to her Kong.
+            Sara draws from the wall and gets a <strong>3 Bam</strong>. Nice — that
+            completes her <strong>Pung of 3-Bams</strong>.
           </p>
           <p>
             She has 14 tiles now and must discard one. Easy choice: the 6 Crak — it
@@ -273,12 +272,12 @@ export default function Module12FirstGame() {
                 <Tile type="bam" value={2} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
                 <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
                 <Tile type="bam" value={4} size="sm" />
                 <Tile type="bam" value={4} size="sm" />
                 <Tile type="bam" value={4} size="sm" />
               </div>
               <div className="flex gap-0.5">
-                <Tile type="joker" size="sm" />
                 <Tile type="crack" value={6} size="sm" marked />
                 <Tile type="crack" value={7} size="sm" />
               </div>
