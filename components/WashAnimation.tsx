@@ -85,7 +85,7 @@ export function WashAnimation() {
   const rightAngle = Math.cos(t * 0.55) * 25 + 10;
 
   return (
-    <div className="my-4 rounded-xl border-2 border-[var(--color-border)] bg-white p-4">
+    <div className="my-3 rounded-xl border-2 border-[var(--color-border)] bg-white p-4">
       <div className="mb-2 flex items-center justify-end">
         <button
           type="button"

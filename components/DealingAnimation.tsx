@@ -184,7 +184,7 @@ export function DealingAnimation() {
   };
 
   return (
-    <div className="my-6 rounded-xl border-2 border-[var(--color-border)] bg-white p-3 sm:p-5 shadow-sm">
+    <div className="my-3 rounded-xl border-2 border-[var(--color-border)] bg-white p-3 sm:p-5 shadow-sm">
       <p className="mb-1 text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
         Dealing Flow
       </p>
