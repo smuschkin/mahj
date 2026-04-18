@@ -161,10 +161,21 @@ export default function Module8StartingTheGame() {
               start a new hand.
             </li>
           </ul>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
+            When someone calls Mahjong:
+          </h4>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li>The winner <strong>exposes their entire hand</strong> face-up on their rack</li>
+            <li>Everyone verifies the hand matches a line on the card</li>
+            <li>The winner should have <strong>no discards left</strong> — all 14 tiles should be on the rack</li>
+            <li>Don&apos;t throw in your hand until Mahjong is confirmed</li>
+          </ul>
+
           <Callout variant="warn">
-            <strong>Don&apos;t throw in your hand</strong>{" "}until
-            Mahjong is verified. Keep your tiles on your rack until the
-            table confirms the win is valid.
+            <strong>If the hand doesn&apos;t match the card</strong>, it&apos;s
+            a false Mahjong — the caller&apos;s hand is dead for the rest
+            of the round.
           </Callout>
         </LessonScreen>
 
