@@ -271,15 +271,12 @@ export default function Module12FirstGame() {
         <LessonScreen title="🎯 Turn 1: First Draw">
           <p>
             <TurnBadge label="Sara's turn 1" />
-            The Dealer (East) goes first — since they already have 14 tiles, they
-            just discard one without drawing. Sara is sitting to the right of the
-            Dealer, so she goes next. She draws from the wall and gets a{" "}
-            <strong>3 Bam</strong>. Nice — that completes her{" "}
-            <strong>Pung of 3-Bams</strong>.
+            The Dealer (East) discards first (they already have 14 tiles).
+            Sara sits to the Dealer&apos;s right, so she goes next.
           </p>
           <p>
-            She has 14 tiles now and must discard one. Easy choice: the 6 Crak — it
-            fits no candidate hand.
+            She draws a <strong>3 Bam</strong> — completing her Pung of 3-Bams!
+            Now she discards the <strong>6 Crak</strong> (junk).
           </p>
 
           <TileRow caption="Sara's hand after drawing — the 6 Crak is going.">
@@ -305,11 +302,6 @@ export default function Module12FirstGame() {
             </div>
           </TileRow>
 
-          <p className="text-[14px] text-zinc-700">
-            She announces clearly:{" "}
-            <strong>&quot;Six Crak.&quot;</strong> — and places it face-up in the
-            center.
-          </p>
         </LessonScreen>
 
         {/* ── 6. Turn 3 — the KONG call ── */}
