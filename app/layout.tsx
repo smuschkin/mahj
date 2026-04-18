@@ -48,7 +48,7 @@ export default function RootLayout({
         <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
       <body className="overflow-x-clip">
-        <script dangerouslySetInnerHTML={{ __html: `if(window.Capacitor)document.documentElement.classList.add('capacitor')` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')){document.documentElement.classList.add('capacitor')}})()` }} />
         <TopNav />
         <main>{children}</main>
         <Disclaimer />
