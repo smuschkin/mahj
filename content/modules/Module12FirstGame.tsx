@@ -404,7 +404,7 @@ export default function Module12FirstGame() {
             Joker:
           </p>
 
-          <TileRow background="felt" caption="Across player's exposed Pung — Joker is on the right.">
+          <TileRow background="felt">
             <Tile type="wind" value="N" size="sm" highlighted />
             <Tile type="wind" value="N" size="sm" highlighted />
             <Tile type="joker" size="sm" highlighted />
