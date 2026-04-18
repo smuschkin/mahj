@@ -94,28 +94,6 @@ export default function Module12FirstGame() {
             all the way to Mahjong! At each decision point we&apos;ll pause and show
             you what she&apos;s thinking and why.
           </p>
-          <Callout variant="info">
-            <strong>Sara&apos;s target hand</strong> (fictional, for teaching only):
-            <ul className="mt-2 ml-4 list-disc space-y-0.5 text-[14px]">
-              <li>Kong of 1-Bam (4 tiles)</li>
-              <li>Kong of 2-Bam (4 tiles)</li>
-              <li>Pung of 3-Bam (3 tiles)</li>
-              <li>Pung of 4-Bam (3 tiles)</li>
-            </ul>
-            <p className="mt-1 text-[13px]">= 14 tiles, all Bams, one suit.</p>
-            <div className="mt-3 rounded-md bg-white/80 px-3 py-2">
-              <p className="mb-1 text-[11px] font-bold uppercase tracking-wider text-zinc-400">How it might look on the card:</p>
-              <div className="flex flex-wrap items-center justify-center gap-1 font-mono text-base font-black tracking-widest text-blue-600">
-                <span>1111</span>
-                <span className="text-zinc-300">·</span>
-                <span>2222</span>
-                <span className="text-zinc-300">·</span>
-                <span>333</span>
-                <span className="text-zinc-300">·</span>
-                <span>444</span>
-              </div>
-            </div>
-          </Callout>
         </LessonScreen>
 
         {/* ── 2. The deal ── */}
@@ -158,6 +136,32 @@ export default function Module12FirstGame() {
               <strong>4 junk tiles</strong> (5 Crak, 9 Dot, East Wind, Green Dragon) — none fit her target. These will go in the Charleston.
             </li>
           </ul>
+
+          <p className="mt-3">
+            She scans the card and picks her target (fictional, for teaching only):
+          </p>
+          <Callout variant="info">
+            <strong>Sara&apos;s target hand:</strong>
+            <ul className="mt-2 ml-4 list-disc space-y-0.5 text-[14px]">
+              <li>Kong of 1-Bam (4 tiles)</li>
+              <li>Kong of 2-Bam (4 tiles)</li>
+              <li>Pung of 3-Bam (3 tiles)</li>
+              <li>Pung of 4-Bam (3 tiles)</li>
+            </ul>
+            <p className="mt-1 text-[13px]">= 14 tiles, all Bams, one suit.</p>
+            <div className="mt-3 rounded-md bg-white/80 px-3 py-2">
+              <p className="mb-1 text-[11px] font-bold uppercase tracking-wider text-zinc-400">How it might look on the card:</p>
+              <div className="flex flex-wrap items-center justify-center gap-1 font-mono text-base font-black tracking-widest text-blue-600">
+                <span>1111</span>
+                <span className="text-zinc-300">·</span>
+                <span>2222</span>
+                <span className="text-zinc-300">·</span>
+                <span>333</span>
+                <span className="text-zinc-300">·</span>
+                <span>444</span>
+              </div>
+            </div>
+          </Callout>
         </LessonScreen>
 
         {/* ── 3. Charleston decision ── */}
