@@ -153,10 +153,10 @@ export default function Module10Mistakes() {
 
           <MistakeCard
             num={8}
-            title="Using a Joker in a pair"
-            what="You tried to use a Joker to complete a pair."
-            cost="Jokers can NEVER be used in pairs — only in groups of 3 or more (Pungs, Kongs, Quints)."
-            recover="Remember: pairs always need two real tiles. No exceptions."
+            title="Using a Joker in a single or pair"
+            what="You tried to use a Joker in a single or pair."
+            cost="Jokers can NEVER be used in singles or pairs — only in groups of 3 or more (Pungs, Kongs, Quints)."
+            recover="Remember: singles and pairs always need real tiles. No exceptions."
           />
         </LessonScreen>
 
