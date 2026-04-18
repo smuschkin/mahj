@@ -112,12 +112,21 @@ export default function Module10Mistakes() {
             recover="Watch every discard the moment it lands."
             costTone="warn"
           />
+
+          <MistakeCard
+            num={4}
+            title="Confusing the 1 Bam with a Flower"
+            what="The 1 Bam has a bird on it, which looks like a Flower tile."
+            cost="You might pass it in the Charleston or miscount your hand."
+            recover="If it has a bird, it&apos;s a 1 Bam. Flowers have plants or seasons on them."
+            costTone="warn"
+          />
         </LessonScreen>
 
         {/* ── 3. Mistakes 4–5 — calling errors ── */}
         <LessonScreen title="📣 Calling and Exposing Mistakes">
           <MistakeCard
-            num={4}
+            num={5}
             title="Calling a tile that breaks your hand"
             what="You called and exposed, but it doesn&apos;t fit any hand on the card."
             cost="Check if the exposure fits a different hand. If not, dead hand."
@@ -125,7 +134,7 @@ export default function Module10Mistakes() {
           />
 
           <MistakeCard
-            num={5}
+            num={6}
             title="Calling Mahjong when your hand isn&apos;t actually valid"
             what="You called Mahjong but your hand doesn&apos;t match the card."
             cost="Didn&apos;t expose yet? No penalty — take it back. Exposed your hand? Dead hand. If other players also exposed because of your call, you owe them."
@@ -136,7 +145,7 @@ export default function Module10Mistakes() {
         {/* ── 4. Mistakes 6–7 — joker errors ── */}
         <LessonScreen title="⭐ Joker Mistakes">
           <MistakeCard
-            num={6}
+            num={7}
             title="Discarding a Joker by accident"
             what="You accidentally threw a Joker."
             cost="It&apos;s dead. No one can call or exchange it."
@@ -144,7 +153,7 @@ export default function Module10Mistakes() {
           />
 
           <MistakeCard
-            num={7}
+            num={8}
             title="Joker exchange done silently"
             what="You placed a tile without announcing the exchange."
             cost="The tile becomes a regular discard."
@@ -152,7 +161,7 @@ export default function Module10Mistakes() {
           />
 
           <MistakeCard
-            num={8}
+            num={9}
             title="Using a Joker in a single or pair"
             what="You tried to use a Joker in a single or pair."
             cost="Jokers can NEVER be used in singles or pairs — only in groups of 3 or more (Pungs, Kongs, Quints)."
@@ -163,7 +172,7 @@ export default function Module10Mistakes() {
         {/* ── 5. Mistakes 8–10 — naming, missing, charleston ── */}
         <LessonScreen title="🗣️ Naming, Missing, and Charleston Mistakes">
           <MistakeCard
-            num={9}
+            num={10}
             title="Misnaming a discard"
             what="You said the wrong tile name."
             cost="The tile can&apos;t be claimed until correctly named. If someone calls Mahjong on your misnamed tile, you pay for all three losers."
@@ -171,7 +180,7 @@ export default function Module10Mistakes() {
           />
 
           <MistakeCard
-            num={10}
+            num={11}
             title="Missing your own Mahjong"
             what="You had the winning tile but didn&apos;t notice."
             cost="The moment passes. Your hand is still alive."
@@ -179,7 +188,7 @@ export default function Module10Mistakes() {
           />
 
           <MistakeCard
-            num={11}
+            num={12}
             title="Passing a Joker in the Charleston"
             what="Jokers can&apos;t be passed."
             cost="The pass must be redone."
