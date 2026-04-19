@@ -49,6 +49,7 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-clip">
         <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')){document.documentElement.classList.add('capacitor')}})()` }} />
+        <div className="safe-area-cover" />
         <TopNav />
         <main>{children}</main>
         <Disclaimer />
