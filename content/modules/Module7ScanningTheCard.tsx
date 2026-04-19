@@ -5,6 +5,8 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { LessonScreen } from "@/components/LessonScreen";
 import { ScreenStepper } from "@/components/ScreenStepper";
 import { Callout } from "@/components/Callout";
+import { Tile } from "@/components/Tile";
+import { TileRow } from "@/components/TileRow";
 import { ModuleNav } from "@/components/ModuleNav";
 import { Quiz } from "@/components/Quiz";
 import { getAdjacentModules } from "@/lib/modules";
@@ -76,9 +78,32 @@ export default function Module7ScanningTheCard() {
         {/* ── 3. Step 1 — Sort your rack ── */}
         <LessonScreen title="📐 Step 1: Sort Your Rack">
           <p>
-            You learned this in Lesson 6 — sort by suit, then by number
-            within each suit. Winds, Dragons, Flowers, and Jokers on the ends.
+            Sort by suit, then by number within each suit. Winds, Dragons,
+            Flowers, and Jokers on the ends.
           </p>
+
+          <TileRow caption="Example: a sorted rack — Bams, Craks, Dots, then honors">
+            <div className="flex flex-col items-center gap-1">
+              <div className="flex gap-0.5">
+                <Tile type="bam" value={2} size="sm" />
+                <Tile type="bam" value={3} size="sm" />
+                <Tile type="bam" value={5} size="sm" />
+                <Tile type="crack" value={1} size="sm" />
+                <Tile type="crack" value={4} size="sm" />
+                <Tile type="crack" value={4} size="sm" />
+                <Tile type="dot" value={7} size="sm" />
+              </div>
+              <div className="flex gap-0.5">
+                <Tile type="dot" value={7} size="sm" />
+                <Tile type="dot" value={9} size="sm" />
+                <Tile type="wind" value="N" size="sm" />
+                <Tile type="dragon" value="red" size="sm" />
+                <Tile type="flower" value={1} size="sm" />
+                <Tile type="joker" size="sm" />
+              </div>
+            </div>
+          </TileRow>
+
           <p>
             Your rack should already be sorted from the Charleston. If not,
             take 10 seconds to organize before scanning the card.
