@@ -50,6 +50,23 @@ export default function Module1TileTrainer() {
             You don&apos;t need to memorize anything. Just look and recognize. We&apos;ll
             quiz you gently at the end.
           </Callout>
+
+          <p className="mt-3"><strong>Here&apos;s one of each type:</strong></p>
+          <TileRow caption="Bam, Crak, Dot, Wind, Dragon, Flower, Joker">
+            <div className="flex flex-wrap justify-center gap-1.5">
+              <Tile type="bam" value={3} size="sm" />
+              <Tile type="crack" value={5} size="sm" />
+              <Tile type="dot" value={7} size="sm" />
+              <Tile type="wind" value="E" size="sm" />
+              <Tile type="dragon" value="red" size="sm" />
+              <Tile type="flower" value={1} size="sm" />
+              <Tile type="joker" size="sm" />
+            </div>
+          </TileRow>
+
+          <p className="text-[14px] text-zinc-600">
+            Let&apos;s learn each one.
+          </p>
         </LessonScreen>
 
         {/* ── 3 number suits intro ── */}
