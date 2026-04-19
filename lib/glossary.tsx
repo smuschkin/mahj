@@ -576,9 +576,21 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     modules: [1, 3],
     definition: (
       <>
-        The wooden tile holder in front of each player. Has a sloped front face
-        (where your hand sits, hidden from others) and a flat top edge (where
-        exposed groups go).
+        The tile holder in front of each player. Has a ledge where your tiles
+        sit facing you (hidden from others) and a flat top area where exposed
+        groups go when you call.
+      </>
+    ),
+  },
+  {
+    term: "Racking",
+    category: "Setup",
+    modules: [8],
+    definition: (
+      <>
+        Placing a drawn tile onto your rack. After someone discards, the next
+        player should pause briefly before racking to give others a chance to
+        call.
       </>
     ),
   },
@@ -705,15 +717,16 @@ export const GLOSSARY_ENTRIES: GlossaryEntry[] = [
     ),
   },
   {
-    term: "Wash",
+    term: "Mix (Wash)",
     category: "Setup",
     modules: [3],
     definition: (
       <>
-        The shuffle. All 152 tiles are placed face-down and mixed by hand before
-        building the wall.
+        The shuffle. All 152 tiles are placed face-down and mixed around by
+        hand before building the wall. Also called &quot;washing.&quot;
       </>
     ),
+    aliases: ["wash", "washing"],
   },
   {
     term: "Wind",
