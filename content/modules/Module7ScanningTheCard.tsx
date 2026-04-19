@@ -161,12 +161,21 @@ export default function Module7ScanningTheCard() {
         {/* ── 6. Step 4 — Check the year hand ── */}
         <LessonScreen title="📅 Step 4: Check the Year Hand">
           <p>
-            Quick check: do you have tiles matching this year&apos;s digits
-            (2, 0, 2, 6)? Remember, 0 = Soap (White Dragon).
+            Quick check: do you have tiles matching this year&apos;s digits?
           </p>
-          <p>
-            Year hands are popular but competitive — lots of players go for
-            them. Keep it as a candidate, not your only option.
+
+          <TileRow caption="2026 = these tiles in any suit">
+            <div className="flex gap-1">
+              <Tile type="crack" value={2} size="sm" />
+              <Tile type="dragon" value="white" size="sm" />
+              <Tile type="crack" value={2} size="sm" />
+              <Tile type="crack" value={6} size="sm" />
+            </div>
+          </TileRow>
+
+          <p className="text-[14px] text-zinc-600">
+            Remember, 0 = Soap (White Dragon). Year hands are popular but
+            competitive — keep it as a candidate, not your only option.
           </p>
         </LessonScreen>
 
