@@ -75,30 +75,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* ── App Store — hidden in standalone/app mode via CSS ── */}
-      <div className="mb-6 hidden-in-app rounded-xl border-2 border-[#C8A951]/30 bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] p-6 text-center shadow-sm">
-        <p className="text-[13px] font-bold uppercase tracking-[3px] text-[#C8A951]">
-          Also available on
-        </p>
-        <h3 className="mt-2 font-serif text-xl font-black text-white">
-          Download MAHJ for iPhone
-        </h3>
-        <p className="mt-1 text-[14px] text-white/60">
-          Take your lessons offline. Same app, native experience.
-        </p>
-        <a
-          href="https://apps.apple.com/app/id6762031478"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-block"
-        >
-          <img
-            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-            alt="Download on the App Store"
-            className="h-12"
-          />
-        </a>
-      </div>
+
 
       <div className="mt-2 flex justify-center gap-4 text-center">
         <ResetProgressButton />
