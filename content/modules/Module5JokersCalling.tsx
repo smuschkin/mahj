@@ -202,8 +202,9 @@ export default function Module5JokersCalling() {
               Dragons (Kong) — identical tiles
             </li>
             <li>
-              <strong>Can&apos;t call:</strong>{" "}singles, pairs, N-E-W-S,
-              year groups like 2-0-2-6 — must be groups of 3+ identical tiles
+              <strong>Can&apos;t call:</strong>{" "}singles, pairs, or
+              non-identical groups like N-E-W-S or 2-0-2-6 (but you CAN
+              call for 3 Norths or 4 Easts — those are identical)
             </li>
           </ul>
           <p>
