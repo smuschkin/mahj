@@ -198,15 +198,21 @@ export default function Module5JokersCalling() {
         <LessonScreen title="🚫 What You Can&apos;t Call">
           <p>
             The calling rule only applies to groups of <strong>identical
-            tiles</strong>{" "}— like three 9 Dots (Pung) or four Red Dragons
-            (Kong). Since N, E, W, and S are all <em>different</em>{" "}tiles,
-            you can&apos;t call for any of them. You have to draw them from
-            the wall.
+            tiles</strong>. You can&apos;t call for non-identical groups.
           </p>
+          <ul className="my-3 ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li>
+              <strong>Can call:</strong>{" "}three 9 Dots (Pung), four Red
+              Dragons (Kong) — identical tiles
+            </li>
+            <li>
+              <strong>Can&apos;t call:</strong>{" "}N-E-W-S, year groups like
+              2-0-2-6 — these are all different tiles
+            </li>
+          </ul>
           <p>
-            This applies to any non-identical group on the card — NEWS, year
-            groups like 2-0-2-6, etc. If the tiles aren&apos;t identical,
-            you can&apos;t call. You have to get them the hard way.
+            If the tiles aren&apos;t identical, you have to draw them from
+            the wall. No shortcuts.
           </p>
         </LessonScreen>
 
