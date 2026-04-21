@@ -354,7 +354,7 @@ export default function Module5JokersCalling() {
             <li>Draw from the wall (it must be <strong>your turn</strong>)</li>
             <li><strong>Announce</strong>{" "}the exchange out loud</li>
             <li>Hand your <strong>real matching tile</strong>{" "}to the player — they swap it into their exposure and give you the <strong>Joker</strong></li>
-            <li>Discard as normal</li>
+            <li>Discard one tile — you must always have 13 tiles in your hand (14 only when you have Mahjong)</li>
           </ol>
           <Callout variant="info">
             You can exchange from <strong>any</strong>{" "}player&apos;s exposed
