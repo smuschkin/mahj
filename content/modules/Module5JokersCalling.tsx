@@ -152,7 +152,7 @@ export default function Module5JokersCalling() {
           </ol>
           <Callout variant="tip">
             Anyone can call on anyone&apos;s turn — but you must call{" "}
-            <strong>before</strong>{" "}the next player picks up a tile, or
+            <strong>before</strong>{" "}the next player racks their tile, or
             it&apos;s too late.
           </Callout>
           <Callout variant="warn">
