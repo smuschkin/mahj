@@ -128,7 +128,7 @@ export default function Module5JokersCalling() {
             <li><strong>Kong (4)</strong> — you have 3, someone discards a 4th</li>
             <li><strong>Quint (5)</strong> — you have 4 (with jokers), someone discards a 5th</li>
             <li><strong>Sextet (6)</strong> — you have 5 (with jokers), someone discards a 6th</li>
-            <li><strong>Mahjong!</strong> — the discard completes your entire winning hand</li>
+            <li><strong>Mahjong!</strong> — the discard completes your entire winning hand (this is the one exception — you can call any tile, even for a pair, single, or non-identical group)</li>
           </ul>
 
         </LessonScreen>
