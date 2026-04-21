@@ -175,8 +175,9 @@ export default function Module8StartingTheGame() {
 
           <Callout variant="warn">
             <strong>If the hand doesn&apos;t match the card</strong>, it&apos;s
-            a false Mahjong — the caller&apos;s hand is dead for the rest
-            of the round.
+            a false Mahjong — the caller&apos;s hand is dead. They keep
+            drawing and discarding but can&apos;t win. They still pay the
+            winner at the end.
           </Callout>
         </LessonScreen>
 
