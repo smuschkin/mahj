@@ -162,6 +162,39 @@ export default function Module5JokersCalling() {
           </Callout>
         </LessonScreen>
 
+        {/* ── Calling details ── */}
+        <LessonScreen title="⚡ Important Calling Rules">
+          <h4 className="font-serif text-base font-black text-[var(--color-accent)]">
+            Calling = immediate exposure
+          </h4>
+          <p>
+            When you call a tile, you <strong>must expose the entire group
+            immediately</strong> — face-up on the top of your rack. You can&apos;t
+            save it for later or hide it in your hand. Once it&apos;s exposed,
+            everyone can see it.
+          </p>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
+            You can only call for identical tiles
+          </h4>
+          <p>
+            Calling is for groups of <strong>matching tiles</strong> only — three
+            5-Bams, four Norths, etc. You <strong>cannot</strong>{" "}call to
+            build non-identical groups like N-E-W-S or 2-0-2-6. Those tiles
+            must come from the wall or the Charleston.
+          </p>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
+            The Mahjong exception
+          </h4>
+          <p>
+            The <strong>only</strong> time you can call a tile for a pair or
+            single is when it <strong>completes your entire hand</strong> —
+            that&apos;s Mahjong. Every other call requires a group of 3 or more
+            identical tiles.
+          </p>
+        </LessonScreen>
+
         {/* ── 4. Exposing ── */}
         <LessonScreen title="👀 Exposing: Showing Your Tiles">
           <p>
