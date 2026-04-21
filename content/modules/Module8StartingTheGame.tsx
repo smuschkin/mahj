@@ -78,7 +78,8 @@ export default function Module8StartingTheGame() {
             </li>
             <li>
               <strong>Discard</strong> — pick one tile to throw away,
-              say its name out loud, and place it face-up in the center
+              say its name out loud, and place it face-up in the center.
+              You must always have 13 tiles in your hand (14 only when you have Mahjong)
             </li>
           </ol>
           <p className="mt-3">
