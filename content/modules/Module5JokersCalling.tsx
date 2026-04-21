@@ -194,25 +194,43 @@ export default function Module5JokersCalling() {
           </p>
         </LessonScreen>
 
-        {/* ── Calling exceptions ── */}
-        <LessonScreen title="⭐ Calling Exceptions">
-          <h4 className="font-serif text-base font-black text-[var(--color-accent)]">
-            Mahjong
-          </h4>
+        {/* ── Non-identical groups ── */}
+        <LessonScreen title="🚫 What You Can&apos;t Call">
           <p>
-            You can call <strong>any tile</strong> that completes your entire
-            hand — even a single, a pair, or a non-identical group like NEWS
-            or 2026. This is the only exception to the &quot;groups of 3+&quot; rule.
+            The calling rule only applies to groups of <strong>identical
+            tiles</strong> — like three 9 Dots (Pung) or four Red Dragons
+            (Kong). Since N, E, W, and S are all <em>different</em> tiles,
+            you can&apos;t call for any of them. You have to draw them from
+            the wall.
+          </p>
+          <p>
+            This applies to any non-identical group on the card — NEWS, year
+            groups like 2-0-2-6, etc. If the tiles aren&apos;t identical,
+            you can&apos;t call. You have to get them the hard way.
           </p>
 
+          <Callout variant="warn">
+            <strong>Exception — Mahjong:</strong>{" "}if the tile is the very
+            last one you need to win, you CAN call it. You can call any tile
+            for Mahjong — singles, pairs, anything.
+          </Callout>
+
           <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
-            Jokers
+            Tips for non-identical groups:
           </h4>
-          <p>
-            Jokers count as matching tiles in identical groups. But they only
-            work in groups of 3+ — <strong>never</strong> in pairs, singles,
-            or non-identical groups like NEWS.
-          </p>
+          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+            <li>
+              Hands with NEWS or year groups are <strong>harder to
+              complete</strong> because you&apos;re relying entirely on the wall
+            </li>
+            <li>
+              If you don&apos;t already have most of those tiles after the
+              Charleston, consider pivoting to a different hand
+            </li>
+            <li>
+              Keep 2–3 candidate hands in mind so you have flexibility
+            </li>
+          </ul>
 
           <Callout variant="tip">
             Don&apos;t get discouraged — calling is the #1 thing beginners
