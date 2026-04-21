@@ -198,8 +198,8 @@ export default function Module5JokersCalling() {
         <LessonScreen title="🚫 What You Can&apos;t Call">
           <p>
             The calling rule only applies to groups of <strong>identical
-            tiles</strong> — like three 9 Dots (Pung) or four Red Dragons
-            (Kong). Since N, E, W, and S are all <em>different</em> tiles,
+            tiles</strong>{" "}— like three 9 Dots (Pung) or four Red Dragons
+            (Kong). Since N, E, W, and S are all <em>different</em>{" "}tiles,
             you can&apos;t call for any of them. You have to draw them from
             the wall.
           </p>
@@ -221,7 +221,7 @@ export default function Module5JokersCalling() {
           <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
             <li>
               Hands with NEWS or year groups are <strong>harder to
-              complete</strong> because you&apos;re relying entirely on the wall
+              complete</strong>{" "}because you&apos;re relying entirely on the wall
             </li>
             <li>
               If you don&apos;t already have most of those tiles after the
