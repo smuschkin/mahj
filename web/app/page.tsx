@@ -14,16 +14,12 @@ export default function Home() {
         eyebrow="Learn American Mahjong"
         title="Welcome to"
         highlight="MAHJ"
-        subtitle="Your path from absolute beginner to your first real game"
+        subtitle="Your path from beginner to your first real game"
       />
 
-      <div className="mb-9 rounded-lg border-l-4 border-[#2D8B5E] bg-white px-4 py-4 sm:px-6 sm:py-5 shadow-sm">
-        <p className="text-[15px] leading-relaxed text-zinc-600">
-          Learn everything you need to sit down and play American Mahjong
-          with confidence.{" "}
-          <strong className="text-[var(--color-mid)]">No experience needed.</strong>
-        </p>
-      </div>
+      <p className="mb-6 text-[15px] leading-relaxed text-zinc-500">
+        Try the first 3 lessons free on the web. Get all 15 lessons in the app.
+      </p>
 
       <ProgressDashboard />
 

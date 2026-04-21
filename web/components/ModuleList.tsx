@@ -22,14 +22,36 @@ const MODULE_ICONS: Record<number, string> = {
   13: "\u{1F9E9}",
 };
 
+const FREE_LESSONS = 3; // modules 0, 1, 2 (Lessons 1-3)
+
 export function ModuleList() {
   const { progress, mounted } = useProgress();
 
   return (
     <div className="grid grid-cols-1 gap-3">
       {modules.map((m) => {
+        const isFree = m.num < FREE_LESSONS;
         const unlocked =
-          !mounted || m.num === 0 || progress[m.num - 1]?.status === "completed";
+          isFree && (!mounted || m.num === 0 || progress[m.num - 1]?.status === "completed");
+
+        if (!isFree) {
+          return (
+            <div
+              key={m.num}
+              className="flex items-center gap-3 rounded-lg border-l-4 border-zinc-200 bg-zinc-50 px-4 py-4 opacity-50"
+            >
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-200 text-sm">
+                🔒
+              </span>
+              <div className="min-w-0 flex-1">
+                <span className="font-serif text-[15px] font-bold text-zinc-400">
+                  {m.num + 1}. {m.name}
+                </span>
+                <p className="text-[13px] text-zinc-400">Available in the app</p>
+              </div>
+            </div>
+          );
+        }
 
         if (!unlocked) {
           return (
@@ -42,13 +64,10 @@ export function ModuleList() {
               </span>
               <div className="min-w-0 flex-1">
                 <span className="font-serif text-[15px] font-bold text-zinc-400">
-                  {m.name}
+                  {m.num + 1}. {m.name}
                 </span>
-                <p className="text-[13px] text-zinc-400">{m.hook}</p>
+                <p className="text-[13px] text-zinc-400">Complete Lesson {m.num} first</p>
               </div>
-              <span className="shrink-0 text-[13px] text-zinc-400">
-                Complete Module {m.num - 1} first
-              </span>
             </div>
           );
         }
@@ -59,12 +78,12 @@ export function ModuleList() {
             href={m.href}
             className="flex items-center gap-3 rounded-lg border-l-4 border-[#C8A951] bg-white px-4 py-4 shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(200,169,81,0.15)]"
           >
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-mid)] text-sm">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1A4D2E] text-sm">
               {MODULE_ICONS[m.num] ?? m.num}
             </span>
             <div className="min-w-0 flex-1">
               <span className="font-serif text-[15px] font-bold text-[var(--color-dark)]">
-                {m.name}
+                {m.num + 1}. {m.name}
               </span>
               <p className="text-[13px] text-zinc-500">{m.hook}</p>
             </div>
@@ -72,6 +91,20 @@ export function ModuleList() {
           </Link>
         );
       })}
+
+      {/* App Store CTA after locked lessons */}
+      <a
+        href="https://apps.apple.com/app/id6762031478"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 flex items-center gap-3 rounded-xl bg-gradient-to-br from-[#1A4D2E] to-[#0F3320] px-5 py-4 text-white shadow-sm transition hover:-translate-y-0.5"
+      >
+        <span className="text-2xl">📱</span>
+        <div>
+          <div className="font-serif text-base font-black">Get all 15 lessons in the app</div>
+          <div className="text-[13px] text-white/70">Download MAHJ for iPhone — free</div>
+        </div>
+      </a>
     </div>
   );
 }
