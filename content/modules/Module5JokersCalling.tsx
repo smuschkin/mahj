@@ -147,18 +147,14 @@ export default function Module5JokersCalling() {
               <strong>Expose</strong>{" "}the group face-up on your rack
             </li>
             <li>
-              <strong>Discard</strong>{" "}one tile, play continues to your right
+              <strong>Discard</strong>{" "}one tile — you must always have 13
+              tiles in your hand (14 only when you have Mahjong)
             </li>
           </ol>
           <Callout variant="tip">
             Anyone can call on anyone&apos;s turn — but you must call{" "}
             <strong>before</strong>{" "}the next player racks their tile
             (places it on their rack), or it&apos;s too late.
-          </Callout>
-          <Callout variant="warn">
-            <strong>Mahjong is the only time</strong>{" "}you can claim a
-            discard for a pair or single tile. All other calls require
-            groups of 3 or more.
           </Callout>
         </LessonScreen>
 
