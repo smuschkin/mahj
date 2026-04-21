@@ -141,14 +141,15 @@ export default function Module5JokersCalling() {
             </li>
             <li>
               Say <strong>&quot;Call!&quot;</strong>{" "}(or <strong>&quot;Mahjong!&quot;</strong>)
-              and take the tile
+              and take the tile — you now have <strong>14 tiles</strong>
             </li>
             <li>
               <strong>Expose</strong>{" "}the group face-up on your rack
             </li>
             <li>
-              <strong>Discard</strong>{" "}one tile — you must always have 13
-              tiles in your hand (14 only when you have Mahjong)
+              <strong>Discard</strong>{" "}one tile to get back to{" "}
+              <strong>13</strong> (you must always have 13 unless
+              it&apos;s Mahjong)
             </li>
           </ol>
           <Callout variant="tip">
