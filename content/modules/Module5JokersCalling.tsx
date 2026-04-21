@@ -200,7 +200,6 @@ export default function Module5JokersCalling() {
             <li><strong>Can call:</strong>{" "}3 of the same tile (Pung) or 4 of the same tile (Kong)</li>
             <li><strong>Can&apos;t call:</strong>{" "}singles or pairs</li>
             <li><strong>Can&apos;t call:</strong>{" "}mixed groups like N-E-W-S or 2-0-2-6 — the tiles aren&apos;t identical</li>
-            <li><strong>Can call:</strong>{" "}3 Norths or 4 Easts — those ARE identical</li>
           </ul>
           <p>
             If the tiles aren&apos;t identical, you have to draw them from
