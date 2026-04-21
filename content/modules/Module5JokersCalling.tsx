@@ -197,15 +197,10 @@ export default function Module5JokersCalling() {
             tiles</strong>. You can&apos;t call for non-identical groups.
           </p>
           <ul className="my-3 ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
-            <li>
-              <strong>Can call:</strong>{" "}three 9 Dots (Pung), four Red
-              Dragons (Kong) — identical tiles
-            </li>
-            <li>
-              <strong>Can&apos;t call:</strong>{" "}singles, pairs, or
-              non-identical groups like N-E-W-S or 2-0-2-6 (but you CAN
-              call for 3 Norths or 4 Easts — those are identical)
-            </li>
+            <li><strong>Can call:</strong>{" "}3 of the same tile (Pung) or 4 of the same tile (Kong)</li>
+            <li><strong>Can&apos;t call:</strong>{" "}singles or pairs</li>
+            <li><strong>Can&apos;t call:</strong>{" "}mixed groups like N-E-W-S or 2-0-2-6 — the tiles aren&apos;t identical</li>
+            <li><strong>Can call:</strong>{" "}3 Norths or 4 Easts — those ARE identical</li>
           </ul>
           <p>
             If the tiles aren&apos;t identical, you have to draw them from
