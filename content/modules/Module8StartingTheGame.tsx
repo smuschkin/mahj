@@ -118,7 +118,7 @@ export default function Module8StartingTheGame() {
           <ol className="ml-6 list-decimal space-y-1.5 text-[14px] text-zinc-700">
             <li>Play pauses</li>
             <li>The caller takes the tile and exposes their group</li>
-            <li>The caller discards one tile</li>
+            <li>The caller discards one tile — you must always have 13 tiles in your hand (14 only when you have Mahjong)</li>
             <li>Play continues to the <strong>caller&apos;s right</strong></li>
           </ol>
           <Callout variant="info">
