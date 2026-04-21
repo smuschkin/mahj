@@ -152,8 +152,8 @@ export default function Module5JokersCalling() {
           </ol>
           <Callout variant="tip">
             Anyone can call on anyone&apos;s turn — but you must call{" "}
-            <strong>before</strong>{" "}the next player racks their tile, or
-            it&apos;s too late.
+            <strong>before</strong>{" "}the next player racks their tile
+            (places it on their rack), or it&apos;s too late.
           </Callout>
           <Callout variant="warn">
             <strong>Mahjong is the only time</strong>{" "}you can claim a
