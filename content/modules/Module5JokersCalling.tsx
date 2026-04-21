@@ -208,17 +208,17 @@ export default function Module5JokersCalling() {
             groups like 2-0-2-6, etc. If the tiles aren&apos;t identical,
             you can&apos;t call. You have to get them the hard way.
           </p>
+        </LessonScreen>
 
+        {/* ── Tips for non-identical groups ── */}
+        <LessonScreen title="💡 Tips for Non-Identical Groups">
           <Callout variant="warn">
             <strong>Exception — Mahjong:</strong>{" "}if the tile is the very
             last one you need to win, you CAN call it. You can call any tile
             for Mahjong — singles, pairs, anything.
           </Callout>
 
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
-            Tips for non-identical groups:
-          </h4>
-          <ul className="ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
+          <ul className="mt-3 ml-6 list-disc space-y-1.5 text-[14px] text-zinc-700">
             <li>
               Hands with NEWS or year groups are <strong>harder to
               complete</strong>{" "}because you&apos;re relying entirely on the wall
