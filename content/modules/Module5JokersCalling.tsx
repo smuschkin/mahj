@@ -148,7 +148,7 @@ export default function Module5JokersCalling() {
             </li>
             <li>
               <strong>Discard</strong>{" "}one tile to get back to{" "}
-              <strong>13</strong> (you must always have 13 unless
+              <strong>13</strong>{" "}(you must always have 13 unless
               it&apos;s Mahjong)
             </li>
           </ol>
