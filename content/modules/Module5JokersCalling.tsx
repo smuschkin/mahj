@@ -163,36 +163,61 @@ export default function Module5JokersCalling() {
         </LessonScreen>
 
         {/* ── Calling details ── */}
-        <LessonScreen title="⚡ Important Calling Rules">
+        <LessonScreen title="⚡ The Calling Rule">
+          <p>
+            You can only call a tile if it <strong>immediately completes a
+            group of 3 or more identical tiles</strong> that you can expose
+            right now.
+          </p>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
+            For a Pung (3 of a kind):
+          </h4>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li>You need at least 2 in your hand to call the 3rd</li>
+            <li>Or 1 real + 1 Joker to call the 3rd</li>
+          </ul>
+
+          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
+            For a Kong (4 of a kind):
+          </h4>
+          <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
+            <li>You need at least 3 in your hand to call the 4th</li>
+            <li>Or 2 real + 1 Joker to call the 4th</li>
+            <li>Or 1 real + 2 Jokers to call the 4th</li>
+          </ul>
+
+          <p className="mt-3">
+            You <strong>can&apos;t call a tile just to save it for later</strong> —
+            it has to complete a group the moment you take it. When you call,
+            you immediately expose that group face-up on your rack.
+          </p>
+        </LessonScreen>
+
+        {/* ── Calling exceptions ── */}
+        <LessonScreen title="⭐ Calling Exceptions">
           <h4 className="font-serif text-base font-black text-[var(--color-accent)]">
-            Calling = immediate exposure
+            Mahjong
           </h4>
           <p>
-            When you call a tile, you <strong>must expose the entire group
-            immediately</strong> — face-up on the top of your rack. You can&apos;t
-            save it for later or hide it in your hand. Once it&apos;s exposed,
-            everyone can see it.
+            You can call <strong>any tile</strong> that completes your entire
+            hand — even a single, a pair, or a non-identical group like NEWS
+            or 2026. This is the only exception to the &quot;groups of 3+&quot; rule.
           </p>
 
           <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
-            You can only call for identical tiles
+            Jokers
           </h4>
           <p>
-            Calling is for groups of <strong>matching tiles</strong> only — three
-            5-Bams, four Norths, etc. You <strong>cannot</strong>{" "}call to
-            build non-identical groups like N-E-W-S or 2-0-2-6. Those tiles
-            must come from the wall or the Charleston.
+            Jokers count as matching tiles in identical groups. But they only
+            work in groups of 3+ — <strong>never</strong> in pairs, singles,
+            or non-identical groups like NEWS.
           </p>
 
-          <h4 className="mt-3 font-serif text-base font-black text-[var(--color-accent)]">
-            The Mahjong exception
-          </h4>
-          <p>
-            The <strong>only</strong> time you can call a tile for a pair or
-            single is when it <strong>completes your entire hand</strong> —
-            that&apos;s Mahjong. Every other call requires a group of 3 or more
-            identical tiles.
-          </p>
+          <Callout variant="tip">
+            Don&apos;t get discouraged — calling is the #1 thing beginners
+            struggle with. Once it clicks, it clicks for good.
+          </Callout>
         </LessonScreen>
 
         {/* ── 4. Exposing ── */}
