@@ -63,15 +63,17 @@ html, body {
 /* Capacitor adds this class to html element */
 html.capacitor .hidden-in-app { display: none !important; }
 
-/* Fixed safe-area cover behind status bar */
-.safe-area-cover {
+/* Fixed safe-area cover behind status bar — only in Capacitor */
+html.capacitor .safe-area-cover {
+  display: block !important;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: env(safe-area-inset-top, 0px);
+  height: env(safe-area-inset-top, 47px);
   background: var(--color-ivory);
   z-index: 41;
+  pointer-events: none;
 }
 
 @keyframes fade-in {
