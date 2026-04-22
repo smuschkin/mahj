@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import { Disclaimer } from "@/components/Disclaimer";
@@ -17,6 +17,12 @@ const lato = Lato({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: "MAHJ — Learn American Mahjong",
@@ -43,13 +49,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable} h-full antialiased`}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#1A4D2E" />
         <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
       <body className="overflow-x-clip">
         <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')){document.documentElement.classList.add('capacitor')}})()` }} />
-        <div className="safe-area-cover hidden" />
+        <div className="safe-area-cover" />
         <TopNav />
         <main>{children}</main>
         <Disclaimer />
