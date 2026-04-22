@@ -48,7 +48,7 @@ export default function RootLayout({
         <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
       <body className="overflow-x-clip">
-        <script dangerouslySetInnerHTML={{ __html: `(function(){function c(){document.documentElement.classList.add('capacitor')}var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')||navigator.standalone===true||window.matchMedia('(display-mode:standalone)').matches){c()}else{setTimeout(function(){if(window.Capacitor){c()}},500)}})()` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){function c(){document.documentElement.classList.add('capacitor')}var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')||navigator.standalone===true||window.matchMedia('(display-mode:standalone)').matches){c()}if(window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.StatusBar){window.Capacitor.Plugins.StatusBar.setOverlaysWebView({overlay:false})}else{setTimeout(function(){if(window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.StatusBar){window.Capacitor.Plugins.StatusBar.setOverlaysWebView({overlay:false})}},1000)}})()` }} />
         <TopNav />
         <main>{children}</main>
         <Disclaimer />
