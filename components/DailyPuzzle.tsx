@@ -292,6 +292,13 @@ const POOL: DailyPuzzleData[] = [
     correctIndex: 1,
     explanation: "The 1 Bam almost always has a bird instead of bamboo stalks. It looks like a Flower, but if you see a bird, it's a 1 Bam.",
   },
+  // ── Defense ──
+  {
+    prompt: "You're folding and every tile in your hand could feed an opponent. What's the safest discard?",
+    options: ["A wind tile", "A Joker", "A flower", "A 1 Dot"],
+    correctIndex: 1,
+    explanation: "A Joker is the safest discard in the game — nobody can call it. When you're out of safe tiles and folding, the Joker is your best option.",
+  },
 ];
 
 export function DailyPuzzle() {

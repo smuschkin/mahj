@@ -153,7 +153,7 @@ export default function CheatSheet() {
                 <li>Tiles from your weaker backup hand</li>
                 <li>Last resort: tiles that might help opponents</li>
               </ol>
-              <Warn>NEVER discard a Joker. NEVER discard a Flower unless your hand doesn&apos;t use them.</Warn>
+              <Warn>Avoid discarding a Joker — unless you&apos;re folding and have no safe tiles (nobody can call a Joker). NEVER discard a Flower unless your hand doesn&apos;t use them.</Warn>
             </Section>
 
             {/* DEFENSE */}
