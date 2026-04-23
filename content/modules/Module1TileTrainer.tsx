@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -478,6 +479,7 @@ export default function Module1TileTrainer() {
             <strong>read the NMJL card</strong> — the blueprint for every winning hand,
             including the symbols, colors, and patterns you&apos;ll use every game.
           </p>
+          <LessonComplete lessonNum={1} />
         </LessonScreen>
       </ScreenStepper>
 

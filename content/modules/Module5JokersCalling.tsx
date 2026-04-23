@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -504,6 +505,7 @@ export default function Module5JokersCalling() {
             staying flexible, and the all-important &quot;what would you discard?&quot;
             thinking.
           </p>
+          <LessonComplete lessonNum={6} />
         </LessonScreen>
       </ScreenStepper>
 

@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import Link from "next/link";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
@@ -553,6 +554,7 @@ export default function Module3SetupDealing() {
               <div className="text-[13px] text-zinc-500">Walk through setup step by step</div>
             </div>
           </Link>
+          <LessonComplete lessonNum={3} />
         </LessonScreen>
       </ScreenStepper>
 

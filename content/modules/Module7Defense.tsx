@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -533,6 +534,7 @@ export default function Module7Defense() {
             make you welcome at any mahjong table: how to call your discards, how to
             keep pace, and the social customs that turn a game into a tradition.
           </p>
+          <LessonComplete lessonNum={10} />
         </LessonScreen>
       </ScreenStepper>
 

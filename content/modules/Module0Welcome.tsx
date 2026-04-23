@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -169,6 +170,7 @@ export default function Module0Welcome() {
               <div className="text-[13px] text-zinc-500">Need tiles? See our recommended sets</div>
             </div>
           </Link>
+          <LessonComplete lessonNum={0} />
         </LessonScreen>
       </ScreenStepper>
 

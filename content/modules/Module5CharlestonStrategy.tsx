@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -403,6 +404,7 @@ export default function Module5CharlestonStrategy() {
             the game itself — building your hand, reading the card, and making
             smart choices during play.
           </p>
+          <LessonComplete lessonNum={5} />
         </LessonScreen>
       </ScreenStepper>
 

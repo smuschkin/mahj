@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import Link from "next/link";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
@@ -424,6 +425,7 @@ export default function Module9Scoring() {
               <div className="text-[13px] text-zinc-500">Plug in any hand and see who pays what</div>
             </div>
           </Link>
+          <LessonComplete lessonNum={13} />
         </LessonScreen>
       </ScreenStepper>
 

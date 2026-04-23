@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -852,6 +853,7 @@ export default function Module2ReadingTheCard() {
             <strong>Setup &amp; Dealing</strong> — how to build the walls, pick the
             dealer, and deal tiles so you can start playing.
           </p>
+          <LessonComplete lessonNum={2} />
         </LessonScreen>
       </ScreenStepper>
 

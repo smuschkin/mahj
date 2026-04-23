@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -370,6 +371,7 @@ export default function Module6HandStrategy() {
             — how to read the discards and exposures coming from your opponents, and
             how to avoid feeding them the tile that wins them the game.
           </p>
+          <LessonComplete lessonNum={9} />
         </LessonScreen>
       </ScreenStepper>
 

@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -310,6 +311,7 @@ export default function Module7ScanningTheCard() {
             <strong>Starting the Game</strong> — what happens after the
             Charleston ends and actual play begins.
           </p>
+          <LessonComplete lessonNum={7} />
         </LessonScreen>
       </ScreenStepper>
 

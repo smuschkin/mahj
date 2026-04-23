@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -295,6 +296,7 @@ export default function Module10Mistakes() {
             <strong>Scoring &amp; Payouts</strong> — who pays whom and how much
             when someone wins.
           </p>
+          <LessonComplete lessonNum={12} />
         </LessonScreen>
       </ScreenStepper>
 

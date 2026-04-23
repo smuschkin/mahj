@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import Link from "next/link";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
@@ -654,6 +655,7 @@ export default function Module12FirstGame() {
               <div className="text-[13px] text-zinc-500">Bring it to your first game night</div>
             </div>
           </Link>
+          <LessonComplete lessonNum={14} />
         </LessonScreen>
       </ScreenStepper>
 

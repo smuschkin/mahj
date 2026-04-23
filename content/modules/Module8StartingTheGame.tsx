@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -265,6 +266,7 @@ export default function Module8StartingTheGame() {
             <strong>hand strategy</strong> — how to decide what to keep,
             what to throw, and where to use your jokers.
           </p>
+          <LessonComplete lessonNum={8} />
         </LessonScreen>
       </ScreenStepper>
 

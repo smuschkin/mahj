@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -514,6 +515,7 @@ export default function Module4Charleston() {
             <strong>Charleston Strategy</strong> — what to keep, what to pass, and how
             to use each pass to shape your hand.
           </p>
+          <LessonComplete lessonNum={4} />
         </LessonScreen>
       </ScreenStepper>
 

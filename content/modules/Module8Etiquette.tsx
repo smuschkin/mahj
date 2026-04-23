@@ -1,3 +1,4 @@
+import { LessonComplete } from "@/components/LessonComplete";
 import { PageWrap } from "@/components/PageWrap";
 import { Cover } from "@/components/Cover";
 import { MetaBox } from "@/components/MetaBox";
@@ -286,6 +287,7 @@ export default function Module8Etiquette() {
             <strong>Common Mistakes</strong> — the errors every beginner
             makes, and how to recover from them gracefully.
           </p>
+          <LessonComplete lessonNum={11} />
         </LessonScreen>
       </ScreenStepper>
 
