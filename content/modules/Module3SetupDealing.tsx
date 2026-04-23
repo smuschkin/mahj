@@ -291,7 +291,7 @@ export default function Module3SetupDealing() {
             touch another player&apos;s tiles or rack.
           </Callout>
 
-          <Callout variant="tip">
+          <Callout variant="note">
             <strong>You&apos;ll run out of tiles mid-deal — that&apos;s normal.</strong>{" "}
             When a wall runs out, the next player to the left pushes their wall
             toward the center. Keep taking tiles from there.
