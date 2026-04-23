@@ -470,7 +470,7 @@ export default function Module2ReadingTheCard() {
             </li>
             <li>
               <strong>Check the parentheses</strong> — &quot;(Any 1 Suit,
-              Any 3 Consec. Nos.)&quot; → one suit, pick any 3 consecutive numbers.
+              Any 4 Consec. Nos.)&quot; → one suit, pick any 4 consecutive numbers.
             </li>
             <li>
               <strong>FF</strong> = Flowers. The rest are consecutive
@@ -812,7 +812,7 @@ export default function Module2ReadingTheCard() {
               },
               {
                 question:
-                  "A consecutive run hand shows FF 11 222 333 4444 (Any 1 Suit, Any 3 Consec. Nos.). What numbers could you use?",
+                  "A consecutive run hand shows FF 11 222 333 4444 (Any 1 Suit, Any 4 Consec. Nos.). What numbers could you use?",
                 options: [
                   "Only 1, 2, 3, and 4",
                   "Any four consecutive numbers (like 4, 5, 6, 7)",
@@ -821,7 +821,7 @@ export default function Module2ReadingTheCard() {
                 ],
                 correct: 1,
                 explanation:
-                  "The rules in parentheses say \"Any 3 Consec. Nos.\" — meaning the numbers are a pattern. 1-2-3-4 could be 4-5-6-7, 5-6-7-8, or any other consecutive set. One suit only.",
+                  "The rules in parentheses say \"Any 4 Consec. Nos.\" — meaning the numbers are a pattern. 1-2-3-4 could be 4-5-6-7, 5-6-7-8, or any other consecutive set. One suit only.",
               },
               {
                 question:
