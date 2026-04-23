@@ -6,47 +6,56 @@
 MAHJ — Learn American Mahjong
 
 ### Subtitle (30 chars max)
-From first tile to first game
+Beginner lessons, rules & tips
 
 ### Promotional Text (170 chars, can be updated without review)
-Learn American Mahjong at your own pace. Interactive lessons, practice games with smart bots, and a printable cheat sheet for game night.
+Learn American Mahjong step by step. 15 interactive lessons, practice drills, a scoring calculator, and a printable cheat sheet for game night.
 
 ### Description (4000 chars max)
-MAHJ teaches you American Mahjong from absolute beginner to your first real game — no experience needed.
+MAHJ teaches you American Mahjong from beginner to your first real game — no experience needed.
 
-**14 INTERACTIVE LESSONS**
-Walk through everything step by step: tiles, setup, the Charleston, calling, jokers, hand strategy, defense, scoring, etiquette, and more. Each lesson includes interactive drills and quizzes so you learn by doing, not just reading.
+**15 INTERACTIVE LESSONS**
+Walk through everything step by step: tiles, setup, dealing, the Charleston, calling, jokers, hand strategy, scanning the card, defense, scoring, etiquette, common mistakes, and a full guided game walkthrough. Each lesson includes interactive drills and quizzes so you learn by doing, not just reading.
 
-**PRACTICE GAME WITH SMART BOTS**
-Play full rounds against 3 AI opponents who pursue real hand patterns and make strategic calls. The game walks you through the complete American Mahjong flow:
-- The Charleston (tile passing)
-- Picking a target hand from practice patterns
-- Drawing, discarding, and calling
-- Joker swaps, self-draw wins, and scoring
-
-**24 PRACTICE HAND PATTERNS**
-Learn the types of hands that appear on the NMJL card across 9 categories: 2468, 13579, Consecutive Run, Like Numbers, 369, Winds & Dragons, Singles & Pairs, Quints, and Addition. Original practice patterns designed for learning — not reproductions of the official card.
+Lessons cover:
+- Recognizing all 152 tiles
+- Reading the NMJL card
+- Setup, mixing, building walls, and dealing
+- The Charleston (tile passing ritual)
+- Charleston strategy
+- Jokers, calling rules, and exposing
+- Scanning the card to pick your hand
+- Starting the game — draw, decide, discard
+- Hand strategy and when to commit
+- Defense and reading opponents
+- Table etiquette and table talk rules
+- Common mistakes and dead hands
+- Scoring and payouts
+- A complete guided first game
 
 **GAME NIGHT CHEAT SHEET**
-Print a two-page quick reference to bring to your first game. Covers your turn, calling rules, the Charleston, reading the card, joker rules, strategy, defense, payouts, and etiquette.
+A printable quick reference to bring to your first game. Covers setup, the Charleston, your turn, calling rules, joker rules, strategy, defense, payouts, and etiquette.
 
 **SCORING CALCULATOR**
-Enter the hand value and win type, and instantly see who pays what.
+Enter the hand value and how you won. Instantly see who pays what.
 
-**90+ TERM GLOSSARY**
+**GEAR GUIDE**
+Recommended tiles, cards, and accessories to get started — with links to buy.
+
+**GLOSSARY**
 Searchable reference for every American Mahjong term you'll hear at the table.
 
 **DESIGNED FOR BEGINNERS**
-- Short, focused lessons (5-10 minutes each)
+- 15 short lessons (5-10 minutes each)
 - Interactive drills with instant feedback
-- Educational bot insights during practice games
-- Progressive unlock — each module builds on the last
+- Progress tracking across all lessons
+- Quizzes at the end of each lesson
 - Works offline after download
 
 MAHJ is an independent educational tool. It is not affiliated with, endorsed by, or sponsored by the National Mah Jongg League (NMJL). To play official American Mahjong, purchase the current year's card from nationalmahjonggleague.org.
 
 ### Keywords (100 chars, comma-separated)
-mahjong,mahjongg,american mahjong,mah jongg,learn,tutorial,tiles,card game,NMJL,practice
+mahjong,mah jongg,american mahjong,learn,beginner,how to play,rules,tiles,scoring,charleston,NMJL
 
 ### Category
 Primary: Education
