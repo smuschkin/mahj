@@ -9,6 +9,17 @@ export function ServiceWorkerRegister() {
         // Service worker registration failed — not critical
       });
     }
+
+    // Capgo OTA updates — notify app is ready
+    async function initCapgo() {
+      try {
+        const { CapacitorUpdater } = await import("@capgo/capacitor-updater");
+        await CapacitorUpdater.notifyAppReady();
+      } catch {
+        // Not in Capacitor or plugin not available — ignore
+      }
+    }
+    initCapgo();
   }, []);
   return null;
 }
