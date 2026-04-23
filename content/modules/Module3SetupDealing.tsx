@@ -59,7 +59,7 @@ export default function Module3SetupDealing() {
               the Dealer by default; otherwise roll dice
             </li>
             <li>
-              <strong>Break &amp; Deal</strong> — open the wall and deal tiles (13 each, 14 for the Dealer)
+              <strong>Break &amp; Deal</strong> — open the wall, each player takes tiles (13 each, 14 for East)
             </li>
           </ol>
           <p>
@@ -250,10 +250,9 @@ export default function Module3SetupDealing() {
         <LessonScreen title="🃏 Step 6: Deal the Tiles">
           <p>
             Starting from the right end of the Dealer&apos;s wall (or from
-            where you broke it, if your group does that), deal tiles{" "}
-            <strong>counter-clockwise</strong>{" "}in groups of 4 (2 on
-            top + 2 on bottom, taken together). From the Dealer&apos;s perspective,
-            the order is:
+            where you broke it, if your group does that), each player takes
+            tiles in groups of 4 (2 on top + 2 on bottom, taken together).
+            East goes first, then the player to East&apos;s right, and so on:
           </p>
 
           {/* Visual: what a group of 4 looks like */}
@@ -496,7 +495,7 @@ export default function Module3SetupDealing() {
                 ],
                 correct: 1,
                 explanation:
-                  "Both play and deal move to the right (counter-clockwise). The Dealer deals to themselves, then Right, Across, Left. Turns follow the same order. The next player is always the person on your right.",
+                  "Both play and deal move to the right (counter-clockwise). East takes tiles first, then the player to East's right, then across, then left. Each player takes their own tiles from the wall.",
               },
               {
                 question: "How many tiles does the Dealer (East) start with?",

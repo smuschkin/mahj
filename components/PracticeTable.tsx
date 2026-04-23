@@ -40,9 +40,9 @@ const STEPS: Step[] = [
   {
     id: "deal",
     title: "Step 3: The Deal",
-    subtitle: "East deals tiles to each player",
+    subtitle: "Everyone takes tiles from the wall",
     coaching:
-      "East rolls the dice, breaks the wall, then deals in groups of 4. Everyone gets 13 tiles, East gets 14.",
+      "East rolls the dice and breaks the wall. Starting with East, each player takes 4 tiles from the wall, going to the right. Repeat until everyone has 12, then the final round.",
   },
   {
     id: "charleston",
@@ -203,7 +203,7 @@ function IntroCard() {
       {[
         { num: 1, emoji: "🌊", label: "Mix", desc: "Mix tiles face-down" },
         { num: 2, emoji: "🧱", label: "Wall", desc: "Build 19 tiles long, 2 high" },
-        { num: 3, emoji: "🎲", label: "Deal", desc: "East deals to everyone" },
+        { num: 3, emoji: "🎲", label: "Deal", desc: "Each player takes tiles" },
         { num: 4, emoji: "🔄", label: "Charleston", desc: "Pass tiles you don\u2019t want" },
       ].map((s) => (
         <div
