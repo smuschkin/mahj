@@ -281,17 +281,21 @@ export default function Module3SetupDealing() {
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[15px]">
             <li>
-              <strong>Round 1:</strong> 4 tiles to the Dealer, then to the right,
-              across, and left
+              <strong>Round 1:</strong> East takes 4 tiles, then the player to
+              East&apos;s right takes 4, then across, then left
             </li>
             <li>
-              <strong>Round 2:</strong>{" "}Another 4 tiles to each
+              <strong>Round 2:</strong>{" "}Each player takes another 4
             </li>
             <li>
-              <strong>Round 3:</strong>{" "}Another 4 to each — everyone now has{" "}
+              <strong>Round 3:</strong>{" "}Another 4 each — everyone now has{" "}
               <strong>12 tiles</strong>
             </li>
           </ul>
+          <Callout variant="tip">
+            Each player takes their own tiles — don&apos;t touch another
+            player&apos;s tiles or rack.
+          </Callout>
 
           <Callout variant="tip">
             <strong>You&apos;ll run out of tiles mid-deal — that&apos;s normal.</strong>{" "}
