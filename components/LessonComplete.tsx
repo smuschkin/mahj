@@ -9,11 +9,8 @@ export function LessonComplete({ lessonNum }: { lessonNum: number }) {
 
   return (
     <div className="mt-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-4">
-      <p className="text-center text-[13px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
-        Lesson {lessonNum + 1} complete!
-      </p>
-      <p className="mt-1 text-center font-serif text-lg font-black text-[var(--color-accent)]">
-        {lessonNum + 1} of {total} lessons
+      <p className="text-center font-serif text-lg font-black text-[var(--color-accent)]">
+        {lessonNum + 1} of {total} lessons done
       </p>
 
       {/* Progress bar */}
