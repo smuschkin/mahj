@@ -274,15 +274,12 @@ export default function Module3SetupDealing() {
             <p className="text-[12px] font-bold text-[var(--color-accent)]">= 4 tiles</p>
           </div>
 
-          <p>
-          </p>
           <p className="my-3 text-center font-serif text-[15px] font-bold text-[var(--color-mid)]">
-            Dealer → Right → Across → Left
+            East → Right → Across → Left
           </p>
           <ul className="ml-6 list-disc space-y-1 text-[15px]">
             <li>
-              <strong>Round 1:</strong> East takes 4 tiles, then the player to
-              East&apos;s right takes 4, then across, then left
+              <strong>Round 1:</strong>{" "}East takes 4, then right, across, left
             </li>
             <li>
               <strong>Round 2:</strong>{" "}Each player takes another 4
