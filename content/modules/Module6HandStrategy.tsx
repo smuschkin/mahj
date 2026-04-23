@@ -238,7 +238,7 @@ export default function Module6HandStrategy() {
             <li><strong>Winds/Dragons you don&apos;t need</strong> — usually safe</li>
             <li><strong>Tiles from your backup hand</strong> — time to commit</li>
             <li><strong>Tiles opponents seem to need</strong> — last resort</li>
-            <li><strong>Jokers</strong> — never discard</li>
+            <li><strong>Jokers</strong> — almost never discard (safest throw if you&apos;re desperate, but hold if you have other safe options)</li>
           </ol>
 
           <Callout variant="tip">
@@ -276,7 +276,7 @@ export default function Module6HandStrategy() {
             <li><strong>5 Crak</strong> — fits neither hand. Discard this.</li>
             <li><strong>North Wind</strong> — also junk, but discard the 5 Crak first (middle tiles are riskier to hold)</li>
             <li><strong>Red Dragon</strong> — keep it, your backup hand needs it</li>
-            <li><strong>Joker</strong> — never discard</li>
+            <li><strong>Joker</strong> — hold it (unless you&apos;re folding and have no safe tiles)</li>
           </ul>
 
           <Callout variant="tip">

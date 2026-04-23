@@ -359,7 +359,7 @@ export default function Module7Defense() {
             <li><strong>Stop calling</strong> — don&apos;t expose anything</li>
             <li><strong>Discard the safest tiles</strong> — tiles they&apos;ve been dumping, 4th copies</li>
             <li><strong>Break your own groups</strong>{" "}if needed for safe discards</li>
-            <li><strong>Never discard a Joker</strong> — even when folding</li>
+            <li><strong>Jokers are the safest discard</strong> — nobody can call one. If every other tile in your hand is dangerous, the Joker is your safest throw. But if you still have safe tiles to discard, hold the Joker — it might help you later</li>
           </ul>
 
           <Callout variant="warn">
