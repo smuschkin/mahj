@@ -10,7 +10,7 @@ export function LessonComplete({ lessonNum }: { lessonNum: number }) {
   return (
     <div className="mt-4 rounded-xl border-2 border-[var(--color-accent)] bg-[#E8F5EC] p-4">
       <p className="text-center font-serif text-lg font-black text-[var(--color-accent)]">
-        {lessonNum + 1} of {total} lessons done
+        {lessonNum + 1} of {total} lessons done!
       </p>
 
       {/* Progress bar */}
