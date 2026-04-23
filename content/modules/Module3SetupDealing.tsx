@@ -210,7 +210,7 @@ export default function Module3SetupDealing() {
             </li>
             <li>
               Starting from the right, <strong>count</strong>{" "}that number along
-              the Dealer&apos;s wall.
+              East&apos;s wall.
             </li>
             <li>
               <strong>Keep the counted tiles against your rack</strong>, and
@@ -246,10 +246,9 @@ export default function Module3SetupDealing() {
         {/* ── 7. Deal ── */}
         <LessonScreen title="🃏 Step 6: Deal the Tiles">
           <p>
-            Starting from the right end of the Dealer&apos;s wall (or from
-            where you broke it, if your group does that), each player takes
-            tiles in groups of 4 (2 on top + 2 on bottom, taken together).
-            East goes first, then the player to East&apos;s right, and so on:
+            Starting from where you broke the wall, each player takes
+            tiles in groups of 4 (2 on top + 2 on bottom). East goes first,
+            then right, across, left:
           </p>
 
           {/* Visual: what a group of 4 looks like */}
@@ -520,7 +519,7 @@ export default function Module3SetupDealing() {
               {
                 question: "When a wall runs out of tiles during the deal, whose wall is next?",
                 options: [
-                  "The Dealer's wall again",
+                  "East's wall again",
                   "The player across",
                   "The next player to the left",
                   "Any player can offer their wall",
