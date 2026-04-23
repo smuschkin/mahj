@@ -37,11 +37,14 @@ export function GlossaryDrawer() {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
+      document.body.style.overflowX = "hidden";
     } else {
       document.body.style.overflow = "";
+      document.body.style.overflowX = "clip";
     }
     return () => {
       document.body.style.overflow = "";
+      document.body.style.overflowX = "clip";
     };
   }, [open]);
 
@@ -87,10 +90,11 @@ export function GlossaryDrawer() {
 
       {/* ── Drawer panel ── */}
       <div
-        className={`fixed right-0 top-0 z-50 flex h-full w-full sm:max-w-md flex-col bg-white shadow-2xl transition-transform duration-300 ease-in-out ${
-          open ? "translate-x-0" : "translate-x-full pointer-events-none"
+        className={`fixed right-0 top-0 z-50 flex h-full w-full sm:max-w-md flex-col bg-white shadow-2xl transition-all duration-300 ease-in-out ${
+          open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none invisible"
         }`}
         style={{ maxWidth: "100vw" }}
+        aria-hidden={!open}
       >
         {/* Header */}
         <div className="flex items-center gap-3 border-b border-zinc-200 px-5 py-4" style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 16px)" }}>
