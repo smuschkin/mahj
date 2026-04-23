@@ -300,7 +300,7 @@ export default function Module3SetupDealing() {
           <Callout variant="tip">
             <strong>You&apos;ll run out of tiles mid-deal — that&apos;s normal.</strong>{" "}
             When a wall runs out, the next player to the left pushes their wall
-            toward the center. Keep dealing from there until the deal is done.
+            toward the center. Keep taking tiles from there.
           </Callout>
 
           <DealingAnimation />
@@ -309,20 +309,23 @@ export default function Module3SetupDealing() {
             🪄 The last round: Dealer takes 2 extra
           </h4>
           <p>
-            After everyone has 12 tiles, there&apos;s one final round. The Dealer
-            grabs the <strong>1st and 3rd</strong> top tiles from the wall
-            (skipping the 2nd). Then the Dealer continues passing
-            out one tile to each player — bottom, top, bottom — until
-            everyone has their final tiles. The last tile at the end of the
-            wall will be a single tile (just the bottom — the top was taken).
+            After everyone has 12 tiles, there&apos;s one final round. East
+            takes the <strong>1st and 3rd</strong> top tiles from the wall
+            (skipping the 2nd). Then each other player takes one tile
+            in order (right, across, left).
           </p>
           <p>
-            <strong>Result:</strong> the Dealer ends up with{" "}
+            <strong>Result:</strong> East ends up with{" "}
             <strong>14 tiles</strong>, everyone else has <strong>13</strong>.
           </p>
           <Callout variant="tip">
-            Don&apos;t worry about memorizing this — the Dealer just grabs two tiles
+            Don&apos;t worry about memorizing this — East just takes two tiles
             instead of one in the last round. The diagram below shows exactly how.
+          </Callout>
+          <Callout variant="note">
+            <strong>Group variation:</strong>{" "}in some groups, one person
+            deals all the tiles instead of each player taking their own.
+            Both ways work — just follow your table&apos;s style.
           </Callout>
 
           {/* Inline 1st-and-3rd diagram — 3 stacks, dealer leapfrogs across stack 2 */}
