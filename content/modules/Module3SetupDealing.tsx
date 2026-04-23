@@ -190,17 +190,14 @@ export default function Module3SetupDealing() {
         </LessonScreen>
 
         {/* ── 6. Break the wall ── */}
-        <LessonScreen title="🔨 Step 5: Break the Wall (Optional)">
+        <LessonScreen title="🔨 Step 5: Break the Wall">
           <p>
-            Some groups have the Dealer roll dice and &quot;break&quot; the wall
-            to randomize where the deal starts. <strong>This step is optional</strong>{" "}
-            — many casual groups skip it entirely and just start dealing from the
-            right end of the Dealer&apos;s wall.
+            Per NMJL rules, East rolls the dice and &quot;breaks&quot; the wall
+            to randomize where the deal starts.
           </p>
-          <Callout variant="tip">
-            <strong>First time playing?</strong>{" "}Skip the wall break. Just start
-            dealing from the right end of the Dealer&apos;s wall. You can always
-            add it later.
+          <Callout variant="note">
+            <strong>Some casual groups skip this step</strong>{" "}and just start
+            from the right end of East&apos;s wall. Follow your table&apos;s style.
           </Callout>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">
