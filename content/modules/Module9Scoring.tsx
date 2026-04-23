@@ -295,7 +295,7 @@ export default function Module9Scoring() {
           <p className="text-[14px] text-zinc-700">
             If the wall runs out and nobody called Mahjong,{" "}
             <strong>nobody pays anything</strong>. Reshuffle and redeal. The
-            Dealer position rotates clockwise to the next player as usual.
+            East rotates to the right as usual.
           </p>
 
           <h4 className="mt-4 font-serif text-base font-black text-[var(--color-mid)]">

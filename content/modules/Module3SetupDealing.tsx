@@ -168,11 +168,10 @@ export default function Module3SetupDealing() {
             the Dealer (East)
           </p>
           <Callout variant="tip">
-            The Dealer (East) has the best odds of winning the first hand, so it&apos;s
+            East has the best odds of winning the first hand, so it&apos;s
             worth picking fairly when there&apos;s no natural host. After each{" "}
-            <strong>hand</strong>, the Dealer position rotates{" "}
-            <strong>clockwise</strong>{" "}to the next player — every hand,
-            regardless of who wins.
+            <strong>hand</strong>, East rotates to the{" "}
+            <strong>right</strong>{" "}(counter-clockwise, same direction as play).
           </Callout>
         </LessonScreen>
 
