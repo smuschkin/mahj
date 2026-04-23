@@ -154,9 +154,10 @@ export default function Module5JokersCalling() {
             </li>
           </ol>
           <Callout variant="tip">
-            Anyone can call on anyone&apos;s turn — but you must call{" "}
-            <strong>before</strong>{" "}the next player racks their tile
-            (places it on their rack), or it&apos;s too late.
+            You can only call the <strong>most recently discarded
+            tile</strong>. You must call <strong>before</strong>{" "}the next
+            player racks their tile (places it on their rack), or it&apos;s
+            too late.
           </Callout>
         </LessonScreen>
 
@@ -386,7 +387,7 @@ export default function Module5JokersCalling() {
           <ul className="ml-6 list-disc space-y-1 text-[14px] text-zinc-700">
             <li>You&apos;re not committed to a hand yet — stay flexible</li>
             <li>Exposing would reveal your strategy to opponents</li>
-            <li>Your hand is <strong>concealed (C)</strong> — no calling allowed</li>
+            <li>Your hand is <strong>concealed (C)</strong> — no calling allowed except for Mahjong</li>
           </ul>
 
           <Callout variant="tip">
