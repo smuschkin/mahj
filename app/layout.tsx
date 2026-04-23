@@ -52,7 +52,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1A4D2E" />
         <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
-      <body className="overflow-x-clip">
+      <body className="overflow-x-hidden">
         <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')){document.documentElement.classList.add('capacitor')}})()` }} />
         <div className="safe-area-cover" />
         <TopNav />
