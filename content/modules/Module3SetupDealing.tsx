@@ -293,8 +293,8 @@ export default function Module3SetupDealing() {
             </li>
           </ul>
           <Callout variant="tip">
-            Each player takes their own tiles — don&apos;t touch another
-            player&apos;s tiles or rack.
+            Per NMJL rules, each player takes their own tiles — don&apos;t
+            touch another player&apos;s tiles or rack.
           </Callout>
 
           <Callout variant="tip">
