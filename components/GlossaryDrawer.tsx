@@ -93,7 +93,7 @@ export function GlossaryDrawer() {
         style={{ maxWidth: "100vw" }}
       >
         {/* Header */}
-        <div className="flex items-center gap-3 border-b border-zinc-200 px-5 py-4">
+        <div className="flex items-center gap-3 border-b border-zinc-200 px-5 py-4" style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 16px)" }}>
           <span className="text-xl">📖</span>
           <h2 className="flex-1 font-serif text-lg font-black text-[var(--color-accent)]">
             Glossary
@@ -101,7 +101,7 @@ export function GlossaryDrawer() {
           <button
             type="button"
             onClick={toggle}
-            className="rounded-md p-1 text-zinc-400 hover:text-zinc-700"
+            className="rounded-md p-2 text-lg text-zinc-500 hover:text-zinc-700"
             aria-label="Close glossary"
           >
             ✕
