@@ -159,6 +159,13 @@ export default function Module5JokersCalling() {
             player racks their tile (places it on their rack), or it&apos;s
             too late.
           </Callout>
+
+          <Callout variant="warn">
+            <strong>What if two players call the same tile?</strong>{" "}
+            Mahjong always wins — even if someone already started exposing
+            tiles for a regular call. If two players both want it for
+            Mahjong, the player whose turn is next gets priority.
+          </Callout>
         </LessonScreen>
 
         {/* ── Calling details ── */}

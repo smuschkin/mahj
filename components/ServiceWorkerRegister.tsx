@@ -10,16 +10,16 @@ export function ServiceWorkerRegister() {
       });
     }
 
-    // Capgo OTA updates — notify app is ready
-    async function initCapgo() {
-      try {
-        const { CapacitorUpdater } = await import("@capgo/capacitor-updater");
-        await CapacitorUpdater.notifyAppReady();
-      } catch {
-        // Not in Capacitor or plugin not available — ignore
+    // Capgo OTA updates — notify app is ready via the Capacitor bridge
+    try {
+      const win = window as any;
+      if (win.Capacitor?.isNativePlatform?.()) {
+        // Use the Capacitor bridge directly
+        win.Capacitor.Plugins?.CapacitorUpdater?.notifyAppReady?.();
       }
+    } catch {
+      // Not in Capacitor — ignore
     }
-    initCapgo();
   }, []);
   return null;
 }

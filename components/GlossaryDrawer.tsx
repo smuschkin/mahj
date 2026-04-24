@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import {
   GLOSSARY_SORTED,
@@ -13,16 +13,6 @@ export function GlossaryDrawer() {
   const isLesson = pathname.startsWith("/lesson/") || pathname.startsWith("/module/");
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  // Focus the search input when the drawer opens
-  useEffect(() => {
-    if (open) {
-      // Small delay so the slide-in animation doesn't fight focus
-      const t = setTimeout(() => inputRef.current?.focus(), 150);
-      return () => clearTimeout(t);
-    }
-  }, [open]);
 
   // Close on Escape
   useEffect(() => {
@@ -31,18 +21,6 @@ export function GlossaryDrawer() {
     }
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, [open]);
-
-  // Prevent body scroll when drawer is open
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
   }, [open]);
 
   const filtered = useMemo(() => {
@@ -62,85 +40,127 @@ export function GlossaryDrawer() {
     if (open) setQuery("");
   }, [open]);
 
+  if (!open) {
+    // Only show the open button (hidden inside lessons)
+    if (isLesson) return null;
+    return (
+      <button
+        type="button"
+        onClick={toggle}
+        aria-label="Open glossary"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1A4D2E] text-2xl text-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] active:scale-95"
+      >
+        📖
+      </button>
+    );
+  }
+
+  // When open: full-screen takeover — no fixed positioning tricks
   return (
-    <>
-      {/* ── Floating button (hidden inside lessons) ── */}
-      {(!isLesson || open) && (
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 9999,
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#fff",
+      }}
+    >
+      {/* Header */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          borderBottom: "1px solid #e4e4e7",
+          padding: "16px 20px",
+          paddingTop: `calc(env(safe-area-inset-top, 0px) + 16px)`,
+          flexShrink: 0,
+        }}
+      >
+        <span style={{ fontSize: "20px" }}>📖</span>
+        <h2
+          style={{
+            flex: 1,
+            fontFamily: "var(--font-playfair), serif",
+            fontSize: "18px",
+            fontWeight: 900,
+            color: "var(--color-accent)",
+            margin: 0,
+          }}
+        >
+          Glossary
+        </h2>
         <button
           type="button"
           onClick={toggle}
-          aria-label={open ? "Close glossary" : "Open glossary"}
-          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1A4D2E] text-2xl text-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition hover:scale-105 hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)] active:scale-95"
+          style={{
+            padding: "8px 12px",
+            fontSize: "16px",
+            fontWeight: "bold",
+            color: "#71717a",
+            background: "#f4f4f5",
+            border: "1px solid #d4d4d8",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+          aria-label="Close glossary"
         >
-          {open ? "✕" : "📖"}
+          ✕ Close
         </button>
-      )}
-
-      {/* ── Backdrop ── */}
-      {open && (
-        <div
-          className="fixed inset-0 z-40 bg-black/30 transition-opacity"
-          onClick={toggle}
-          aria-hidden
-        />
-      )}
-
-      {/* ── Drawer panel — only rendered when open ── */}
-      {open && (
-      <div
-        className="fixed right-0 top-0 z-50 flex h-full w-full sm:max-w-md flex-col bg-white shadow-2xl"
-        style={{ maxWidth: "100vw" }}
-      >
-        {/* Header */}
-        <div className="flex items-center gap-3 border-b border-zinc-200 px-5 py-4" style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 16px)" }}>
-          <span className="text-xl">📖</span>
-          <h2 className="flex-1 font-serif text-lg font-black text-[var(--color-accent)]">
-            Glossary
-          </h2>
-          <button
-            type="button"
-            onClick={toggle}
-            className="rounded-md p-2 text-lg text-zinc-500 hover:text-zinc-700"
-            aria-label="Close glossary"
-          >
-            ✕
-          </button>
-        </div>
-
-        {/* Search */}
-        <div className="border-b border-zinc-100 px-5 py-3">
-          <input
-            ref={inputRef}
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search terms…"
-            className="w-full rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 text-sm focus:border-[var(--color-accent)] focus:outline-none"
-          />
-          <p className="mt-1 text-[13px] text-zinc-400">
-            {filtered.length} term{filtered.length === 1 ? "" : "s"}
-            {query && ` matching "${query}"`}
-          </p>
-        </div>
-
-        {/* Scrollable entry list */}
-        <div className="flex-1 overflow-y-auto px-5 py-3">
-          {filtered.length === 0 ? (
-            <p className="py-8 text-center text-sm italic text-zinc-400">
-              No terms match. Try a different search.
-            </p>
-          ) : (
-            <div className="space-y-3">
-              {filtered.map((entry) => (
-                <EntryCard key={entry.term} entry={entry} />
-              ))}
-            </div>
-          )}
-        </div>
-
       </div>
-      )}
-    </>
+
+      {/* Search */}
+      <div style={{ borderBottom: "1px solid #f4f4f5", padding: "12px 20px", flexShrink: 0 }}>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search terms…"
+          style={{
+            width: "100%",
+            borderRadius: "8px",
+            border: "1px solid #d4d4d8",
+            backgroundColor: "#fafafa",
+            padding: "8px 12px",
+            fontSize: "16px",
+            outline: "none",
+            WebkitAppearance: "none",
+          }}
+        />
+        <p style={{ marginTop: "4px", fontSize: "13px", color: "#a1a1aa" }}>
+          {filtered.length} term{filtered.length === 1 ? "" : "s"}
+          {query && ` matching "${query}"`}
+        </p>
+      </div>
+
+      {/* Scrollable entry list */}
+      <div
+        style={{
+          flex: 1,
+          overflowY: "auto",
+          WebkitOverflowScrolling: "touch",
+          padding: "12px 20px",
+          paddingBottom: `calc(env(safe-area-inset-bottom, 0px) + 12px)`,
+        }}
+      >
+        {filtered.length === 0 ? (
+          <p style={{ padding: "32px 0", textAlign: "center", fontSize: "14px", fontStyle: "italic", color: "#a1a1aa" }}>
+            No terms match. Try a different search.
+          </p>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            {filtered.map((entry) => (
+              <EntryCard key={entry.term} entry={entry} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 

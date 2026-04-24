@@ -36,14 +36,8 @@
   --font-sans: var(--font-lato), -apple-system, sans-serif;
 }
 
-html {
-  overflow: clip;
-}
-
 body {
-  overflow-x: clip;
-  max-width: 100vw;
-  position: relative;
+  -webkit-text-size-adjust: 100%;
 }
 
 html, body {
