@@ -53,7 +53,7 @@ export default function RootLayout({
         <meta name="apple-itunes-app" content="app-id=6762031478" />
       </head>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')){document.documentElement.classList.add('capacitor')}})()` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.protocol;if(window.Capacitor||p==='capacitor:'||p==='mahj:'||!p.startsWith('http')){document.documentElement.classList.add('capacitor');document.addEventListener('gesturestart',function(e){e.preventDefault()},{passive:false})}})()` }} />
         <div className="safe-area-cover" />
         <TopNav />
         <main>{children}</main>
