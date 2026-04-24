@@ -1,82 +1,116 @@
 /**
- * Generate social media post images matching the original MAHJ style.
- * Uses sharp to composite green-tinted tiles in a circle on dark/light backgrounds.
+ * Master script to generate ALL MAHJ social media post images.
+ * Uses sharp for image processing — same tool that made the originals.
+ *
+ * Usage: node scripts/generate-social-posts.mjs
+ *
+ * To regenerate a single post, edit the `posts` array at the bottom.
  */
 
 import sharp from "sharp";
-import { readFileSync, mkdirSync, existsSync } from "fs";
+import { readFileSync, mkdirSync, existsSync, readdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 const socialDir = join(root, "..", "social media");
-const tileImgDir = join(socialDir, "tile-images");
+const tileDir = join(socialDir, "tile-images");
 
 const W = 1080;
 const H = 1350;
 
-// ── TILE CAPTURE IMAGES (captured from live app on #FAF7EC background) ──
-const tileFiles = {
-  dot5: join(tileImgDir, "5-of-dots.png"),
-  dragon: join(tileImgDir, "red-dragon.png"),
-  crack1: join(tileImgDir, "1-of-characters.png"),
-  bam8: join(tileImgDir, "8-of-bamboo.png"),
-  joker: join(tileImgDir, "joker.png"),
+// ── TILE IMAGES ──
+// Green-tinted tiles for dark background, tan-tinted for light background
+const darkTileDir = join(tileDir, "dark");
+const lightTileDir = join(tileDir, "light");
+
+const tileNames = {
+  dot5: "5-of-dots.png",
+  dragon: "red-dragon.png",
+  crack1: "1-of-characters.png",
+  bam8: "8-of-bamboo.png",
+  joker: "joker.png",
 };
 
-// ── CIRCLE POSITIONS ──
-// 6 tiles arranged in a circle around center
-function getCirclePositions(cx, cy, radius, tileW, tileH) {
-  const angles = [-120, -45, 30, 85, 145, -160]; // degrees
+// ── CIRCLE LAYOUT ──
+function getCirclePositions(tileW, tileH) {
+  const cx = W / 2;
+  const cy = H * 0.40;
+  const radius = 420;
+  // 6 positions around circle — avoiding text zone in center
+  const angles = [-125, -45, 30, 85, 150, -165];
+
   return angles.map((deg) => {
     const rad = (deg * Math.PI) / 180;
     return {
       x: Math.round(cx + radius * Math.cos(rad) - tileW / 2),
       y: Math.round(cy + radius * Math.sin(rad) - tileH / 2),
-      angle: Math.round(deg * 0.15), // gentle rotation
+      rotation: Math.round(deg * 0.18),
     };
   });
 }
 
-// ── TINT A TILE IMAGE ──
-async function tintTile(tilePath, tintColor, tileW, tileH, angle) {
-  // Resize tile to target size
-  let tile = sharp(tilePath).resize(tileW, tileH, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } });
+// ── PREPARE A TILE ──
+async function prepareTile(tilePath, tileW, tileH, rotation) {
+  let buf = await sharp(tilePath)
+    .resize(tileW, tileH, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .png()
+    .toBuffer();
 
-  // Apply green or tan tint by overlaying a colored rectangle with multiply blend
-  const tintOverlay = Buffer.from(
-    `<svg width="${tileW}" height="${tileH}">
-      <rect width="${tileW}" height="${tileH}" fill="${tintColor}" opacity="0.6"/>
-    </svg>`
-  );
-
-  tile = tile.composite([{ input: tintOverlay, blend: "multiply" }]);
-
-  // Rotate
-  if (angle !== 0) {
-    tile = tile.rotate(angle, { background: { r: 0, g: 0, b: 0, alpha: 0 } });
+  if (rotation !== 0) {
+    buf = await sharp(buf)
+      .rotate(rotation, { background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .png()
+      .toBuffer();
   }
 
-  return tile.png().toBuffer();
+  return buf;
 }
 
-// ── CREATE A POST ──
-async function createPost({ filename, label, headline, subtitle, isDark, tileKeys }) {
-  const bgColor = isDark ? "#1A4D2E" : "#EBE2C8";
-  const bgColorEnd = isDark ? "#0A2616" : "#CCBF8F";
-  const tintColor = isDark ? "#2a5e3a" : "#b5a888";
+// ── DARK GREEN BACKGROUND SVG ──
+function darkBgSvg() {
+  return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="bg" cx="50%" cy="42%" r="55%">
+        <stop offset="0%" stop-color="#2a6e4a"/>
+        <stop offset="55%" stop-color="#1a5535"/>
+        <stop offset="100%" stop-color="#0F3320"/>
+      </radialGradient>
+    </defs>
+    <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  </svg>`;
+}
+
+// ── BEIGE BACKGROUND SVG ──
+function lightBgSvg() {
+  return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#EBE2C8"/>
+        <stop offset="50%" stop-color="#E2D8B5"/>
+        <stop offset="100%" stop-color="#CCBF8F"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="50%" cy="40%" r="35%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+        <stop offset="60%" stop-color="#FAF5E5" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#FAF5E5" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="${W}" height="${H}" fill="url(#bg)"/>
+    <rect width="${W}" height="${H}" fill="url(#glow)"/>
+  </svg>`;
+}
+
+// ── TEXT OVERLAY SVG ──
+function textSvg({ label, headline, subtitle, isDark }) {
   const textColor = isDark ? "white" : "#0F3320";
   const labelColor = isDark ? "#C8A951" : "#1A4D2E";
-  const subColor = isDark
-    ? "rgba(255,255,255,0.55)"
-    : "rgba(15,51,32,0.45)";
-  const footerColor = isDark
-    ? "rgba(255,255,255,0.25)"
-    : "rgba(15,51,32,0.18)";
+  const subColor = isDark ? "rgba(255,255,255,0.55)" : "rgba(15,51,32,0.45)";
+  const footerColor = isDark ? "rgba(255,255,255,0.25)" : "rgba(15,51,32,0.18)";
 
-  // Wrap headline text
-  const maxChars = 18;
+  // Wrap headline
+  const maxChars = 20;
   const words = headline.split(" ");
   const lines = [];
   let current = "";
@@ -94,81 +128,105 @@ async function createPost({ filename, label, headline, subtitle, isDark, tileKey
   const totalTextH = (lines.length - 1) * lineHeight;
   const centerY = Math.round(H * 0.46);
   const labelY = centerY - totalTextH / 2 - 50;
-  const headStartY = centerY - totalTextH / 2 + 20;
+  const headY = centerY - totalTextH / 2 + 20;
   const subY = centerY + totalTextH / 2 + lineHeight + 10;
 
-  // Build headline tspans
-  const headlineSvg = lines
-    .map(
-      (line, i) =>
-        `<tspan x="${W / 2}" dy="${i === 0 ? 0 : lineHeight}">${escXml(line)}</tspan>`
-    )
+  const tspans = lines
+    .map((line, i) => `<tspan x="${W/2}" dy="${i === 0 ? 0 : lineHeight}">${esc(line)}</tspan>`)
     .join("");
 
-  // Create background + text SVG
-  const bgSvg = `
-    <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="bg" cx="50%" cy="46%" r="55%">
-          <stop offset="0%" stop-color="${isDark ? '#2a6e4a' : '#F0EACD'}"/>
-          <stop offset="60%" stop-color="${isDark ? '#1a5535' : '#E2D8B5'}"/>
-          <stop offset="100%" stop-color="${bgColorEnd}"/>
-        </radialGradient>
-      </defs>
-      <rect width="${W}" height="${H}" fill="url(#bg)"/>
-      ${label ? `<text x="${W / 2}" y="${labelY}" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="5" fill="${labelColor}">${escXml(label)}</text>` : ""}
-      <text x="${W / 2}" y="${headStartY}" text-anchor="middle" font-family="Georgia,serif" font-size="62" font-weight="900" fill="${textColor}">
-        ${headlineSvg}
-      </text>
-      <text x="${W / 2}" y="${subY}" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="28" font-weight="300" fill="${subColor}">${escXml(subtitle)}</text>
-      <text x="${W / 2}" y="${H - 60}" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="20" fill="${footerColor}">welcome2mahj.com</text>
-    </svg>
-  `;
+  return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+    ${label ? `<text x="${W/2}" y="${labelY}" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="5" fill="${labelColor}">${esc(label)}</text>` : ""}
+    <text x="${W/2}" y="${headY}" text-anchor="middle" font-family="Georgia,serif" font-size="62" font-weight="900" fill="${textColor}">
+      ${tspans}
+    </text>
+    <text x="${W/2}" y="${subY}" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="28" font-weight="300" fill="${subColor}">${esc(subtitle)}</text>
+    <text x="${W/2}" y="${H - 60}" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" fill="${footerColor}">welcome2mahj.com</text>
+  </svg>`;
+}
 
-  // Start with background
-  let image = sharp(Buffer.from(bgSvg)).png();
-  let bgBuffer = await image.toBuffer();
+function esc(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&apos;").replace(/"/g, "&quot;");
+}
 
-  // Composite tiles in a circle
-  const tileW = 130;
-  const tileH = 170;
-  const positions = getCirclePositions(W / 2, H * 0.46, 420, tileW, tileH);
+// ── CREATE A POST ──
+async function createPost(post) {
+  const { filename, label, headline, subtitle, isDark, tileKeys, screenshotPath } = post;
+
+  // 1. Create background
+  const bgBuffer = await sharp(Buffer.from(isDark ? darkBgSvg() : lightBgSvg()))
+    .png()
+    .toBuffer();
+
+  // 2. Prepare tile composites
+  const tileW = 120;
+  const tileH = 160;
+  const positions = getCirclePositions(tileW, tileH);
   const keys = tileKeys || ["dot5", "dragon", "crack1", "bam8", "joker", "dot5"];
+  const tileSrcDir = isDark ? darkTileDir : lightTileDir;
 
   const composites = [];
-  for (let i = 0; i < 6; i++) {
-    const pos = positions[i];
-    const key = keys[i % keys.length];
-    const tilePath = tileFiles[key];
-    if (!tilePath || !existsSync(tilePath)) continue;
 
-    const tinted = await tintTile(tilePath, tintColor, tileW, tileH, pos.angle);
-    composites.push({
-      input: tinted,
-      left: Math.max(0, pos.x),
-      top: Math.max(0, pos.y),
-    });
+  for (let i = 0; i < 6; i++) {
+    const key = keys[i % keys.length];
+    const tilePath = join(tileSrcDir, tileNames[key]);
+    if (!existsSync(tilePath)) {
+      console.log(`    Warning: tile not found: ${tilePath}`);
+      continue;
+    }
+
+    const pos = positions[i];
+    const tileBuf = await prepareTile(tilePath, tileW, tileH, pos.rotation);
+
+    // Get the actual size after rotation (rotation changes dimensions)
+    const meta = await sharp(tileBuf).metadata();
+    const finalX = Math.max(0, Math.min(pos.x, W - meta.width));
+    const finalY = Math.max(0, Math.min(pos.y, H - meta.height));
+
+    composites.push({ input: tileBuf, left: finalX, top: finalY });
   }
 
-  // Composite all tiles onto background
-  const final = sharp(bgBuffer).composite(composites);
-  await final.png().toFile(join(socialDir, filename));
+  // 3. Add text overlay
+  const textBuf = await sharp(Buffer.from(textSvg({ label, headline, subtitle, isDark })))
+    .png()
+    .toBuffer();
+
+  composites.push({ input: textBuf, left: 0, top: 0 });
+
+  // 4. Add screenshot if provided
+  if (screenshotPath && existsSync(screenshotPath)) {
+    const screenshot = await sharp(screenshotPath)
+      .resize(860, 860, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .png()
+      .toBuffer();
+    composites.push({ input: screenshot, left: 110, top: 340 });
+  }
+
+  // 5. Composite everything
+  await sharp(bgBuffer)
+    .composite(composites)
+    .png()
+    .toFile(join(socialDir, filename));
+
   console.log(`  ✓ ${filename}`);
 }
 
-function escXml(s) {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
-}
-
-// ── POSTS TO GENERATE ──
+// ── ALL POSTS ──
+const screenshotDir = join(root, "screenshots", "6.9-inch");
 
 const posts = [
-  // Community posts (new)
+  // Original launch posts (01-26)
+  { filename: "01-welcome.png", label: "", headline: "Welcome to MAHJ", subtitle: "Learn American Mahjong from scratch", isDark: true },
+  { filename: "02-homepage.png", label: "", headline: "14 Interactive Lessons", subtitle: "Start at zero. Build to confidence.", isDark: false, screenshotPath: join(screenshotDir, "01-homepage.png") },
+  { filename: "03-tiles.png", label: "", headline: "All 152 Tiles", subtitle: "Bams, Craks, Dots, Winds, Dragons, Jokers", isDark: true },
+  { filename: "04-charleston.png", label: "", headline: "Master the Charleston", subtitle: "The 6-pass tile trade, step by step", isDark: false, screenshotPath: join(screenshotDir, "03-charleston.png") },
+  { filename: "05-cheatsheet.png", label: "", headline: "Bring to Game Night", subtitle: "A printable cheat sheet for your first game", isDark: true },
+  { filename: "06-calculator.png", label: "", headline: "Who Pays What?", subtitle: "Instant scoring with all the bonuses", isDark: false, screenshotPath: join(screenshotDir, "05-calculator.png") },
+  { filename: "07-daily-puzzle.png", label: "", headline: "Daily Puzzle", subtitle: "A new scenario every day", isDark: true },
+  { filename: "08-defense.png", label: "", headline: "Read the Table", subtitle: "Learn defense so you stop feeding winners", isDark: false },
+  { filename: "09-free-app.png", label: "", headline: "100% Free", subtitle: "No ads. No accounts. Just learn.", isDark: false },
+
+  // Community posts (27-38)
   { filename: "27-ig-real-talk-1.png", label: "REAL TALK", headline: "Your Next Hobby Is Waiting at a Table", subtitle: "Not a screen. A real table. With real people.", isDark: true },
   { filename: "28-ig-community-2.png", label: "COMMUNITY", headline: "Nobody Learns Mahjong Alone", subtitle: "That's the whole point.", isDark: false },
   { filename: "29-ig-did-you-know-3.png", label: "DID YOU KNOW", headline: "Mahjong Groups Are Popping Up Everywhere", subtitle: "Libraries. Coffee shops. Living rooms.", isDark: true },
@@ -181,14 +239,23 @@ const posts = [
   { filename: "36-ig-pro-tip-10.png", label: "PRO TIP", headline: "The Secret to a Great Game Night", subtitle: "It was never about the game.", isDark: false },
   { filename: "37-ig-did-you-know-11.png", label: "DID YOU KNOW", headline: "100 Years of Bringing People Together", subtitle: "Your turn.", isDark: true },
   { filename: "38-ig-real-talk-12.png", label: "REAL TALK", headline: "Stop Saying We Should Hang Out", subtitle: "Pick a night. Learn Mahjong. Actually do it.", isDark: false },
-  // Fix 03-tiles with Craks
-  { filename: "03-tiles.png", label: "", headline: "All 152 Tiles", subtitle: "Bams, Craks, Dots, Winds, Dragons, Jokers", isDark: true },
 ];
 
-console.log("Generating social media posts with sharp...\n");
+// ── RUN ──
+// To regenerate specific posts, comment out the ones you don't need
 
-for (const post of posts) {
+const args = process.argv.slice(2);
+let toGenerate = posts;
+
+if (args.length > 0) {
+  // If filenames passed as args, only generate those
+  toGenerate = posts.filter(p => args.some(a => p.filename.includes(a)));
+}
+
+console.log(`Generating ${toGenerate.length} posts...\n`);
+
+for (const post of toGenerate) {
   await createPost(post);
 }
 
-console.log(`\nDone! ${posts.length} posts generated.`);
+console.log(`\nDone!`);

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAHJ — Social Media Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --felt-dark: #0F3320;
+    --felt: #1A4D2E;
+    --jade: #2D8B5E;
+    --gold: #C8A951;
+    --gold-light: #F5E6B8;
+    --ivory: #FDF6E3;
+    --light: #F5F0E8;
+    --dark: #1E293B;
+    --mid: #334155;
+    --border: #A3C4A9;
+    --red: #DC5044;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lato', -apple-system, sans-serif;
+    background: var(--ivory);
+    color: var(--dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  header {
+    background: linear-gradient(135deg, var(--felt-dark), var(--felt));
+    color: white;
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  header h1 span { color: var(--gold); }
+  header p {
+    font-family: 'Lato', sans-serif;
+    margin-top: 0.5rem;
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  /* ── Tab Nav ── */
+  .tab-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--felt-dark);
+    padding: 0 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .tab-btn {
+    font-family: 'Lato', sans-serif;
+    padding: 0.85rem 1.1rem;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+  }
+  .tab-btn:hover { color: rgba(255,255,255,0.85); }
+  .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* ── Content ── */
+  .tab-content { display: none; padding: 2rem 1rem; max-width: 1200px; margin: 0 auto; }
+  .tab-content.active { display: block; }
+
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--felt-dark);
+    margin: 2.5rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .section-desc {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.85rem;
+    color: var(--mid);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  /* ── Hashtag bar ── */
+  .hashtag-bar {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 2rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.82rem;
+    color: var(--jade);
+    cursor: pointer;
+    position: relative;
+  }
+  .hashtag-bar strong { color: var(--felt-dark); font-weight: 700; }
+  .hashtag-bar .copy-hint {
+    position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+    font-size: 0.72rem; color: #aaa; font-weight: 400;
+  }
+
+  /* ── Post Grid ── */
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* ── Post Card ── */
+  .post-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(163,196,169,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .post-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+  .post-card img { width: 100%; display: block; }
+
+  /* Posted badge */
+  .post-card.posted { opacity: 0.6; position: relative; }
+  .post-card.posted::after {
+    content: 'POSTED';
+    position: absolute; top: 12px; right: 12px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+    background: var(--jade); color: white;
+    padding: 0.2rem 0.6rem; border-radius: 4px;
+  }
+
+  /* ── Mock post visuals ── */
+  .mock-post {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .mock-post.dark {
+    background: radial-gradient(ellipse at center, #1e5c3a 0%, var(--felt-dark) 70%);
+    color: white;
+  }
+  .mock-post.light {
+    background: linear-gradient(180deg, var(--gold-light) 0%, #efe0b8 100%);
+    color: var(--felt-dark);
+  }
+  .mock-post.twitter {
+    background: linear-gradient(135deg, #15202b, #1a2d40);
+    color: white;
+    min-height: 220px; padding: 2rem 1.8rem;
+    text-align: left; align-items: flex-start;
+  }
+  .mock-post.reddit {
+    background: linear-gradient(135deg, #1a1a1b, #2d2d2e);
+    color: white;
+    min-height: 220px; padding: 2rem 1.8rem;
+    text-align: left; align-items: flex-start;
+  }
+  .mock-post.facebook {
+    background: linear-gradient(135deg, #1877f2, #0d5bc6);
+    color: white;
+    min-height: 220px; padding: 2rem 1.8rem;
+    text-align: left; align-items: flex-start;
+  }
+  .mock-post.pinterest {
+    background: linear-gradient(135deg, #e60023, #ad081b);
+    color: white;
+  }
+
+  /* ── Floating tiles ── */
+  .tile-deco {
+    position: absolute;
+    width: 38px; height: 52px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    z-index: 0;
+  }
+  .mock-post.light .tile-deco {
+    background: rgba(45,139,94,0.06);
+    border-color: rgba(45,139,94,0.08);
+  }
+  .tile-deco::after {
+    content: attr(data-char);
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    opacity: 0.5;
+    font-family: serif;
+    font-weight: 700;
+  }
+  .mock-post.light .tile-deco::after { opacity: 0.3; }
+  .tile-deco.t1 { top: 8%; left: 6%; transform: rotate(-20deg); }
+  .tile-deco.t2 { top: 5%; right: 8%; transform: rotate(15deg); }
+  .tile-deco.t3 { top: 40%; right: 4%; transform: rotate(25deg); }
+  .tile-deco.t4 { bottom: 8%; right: 10%; transform: rotate(-10deg); }
+  .tile-deco.t5 { bottom: 10%; left: 8%; transform: rotate(12deg); }
+  .tile-deco.t6 { top: 42%; left: 3%; transform: rotate(-18deg); }
+
+  .post-order {
+    display: none;
+  }
+  .post-card > .post-order-img {
+    display: none;
+  }
+
+  .mock-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .mock-post.dark .mock-label { color: var(--gold); }
+  .mock-post.light .mock-label { color: var(--felt); }
+  .mock-post.twitter .mock-label { color: #1d9bf0; }
+  .mock-post.reddit .mock-label { color: #ff4500; }
+  .mock-post.facebook .mock-label { color: rgba(255,255,255,0.7); }
+  .mock-post.pinterest .mock-label { color: rgba(255,255,255,0.8); }
+
+  .mock-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 900;
+    line-height: 1.25;
+    max-width: 290px;
+  }
+  .mock-post.twitter .mock-headline,
+  .mock-post.reddit .mock-headline,
+  .mock-post.facebook .mock-headline {
+    font-size: 1.15rem; max-width: 100%;
+  }
+
+  .mock-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    opacity: 0.7;
+    max-width: 270px;
+  }
+  .mock-post.twitter .mock-subtitle,
+  .mock-post.reddit .mock-subtitle,
+  .mock-post.facebook .mock-subtitle {
+    max-width: 100%; font-size: 0.8rem;
+  }
+
+  .mock-footer {
+    font-family: 'Lato', sans-serif;
+    margin-top: auto;
+    padding-top: 1rem;
+    font-size: 0.68rem;
+    font-weight: 400;
+    opacity: 0.35;
+    letter-spacing: 1px;
+  }
+
+  /* ── Caption area ── */
+  .post-caption {
+    padding: 1.1rem 1.3rem;
+    border-top: 1px solid var(--light);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .post-label {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+  }
+  .label-instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+  .label-tiktok { background: #000; color: white; }
+  .label-ig-community { background: linear-gradient(135deg, var(--jade), var(--felt)); color: white; }
+  .label-twitter { background: #1d9bf0; color: white; }
+  .label-reddit { background: #ff4500; color: white; }
+  .label-facebook { background: #1877f2; color: white; }
+  .label-pinterest { background: #e60023; color: white; }
+  .label-both { background: var(--felt); color: white; }
+
+  .caption-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--felt-dark);
+    margin-bottom: 0.35rem;
+  }
+  .caption-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.83rem;
+    color: var(--mid);
+    white-space: pre-line;
+    line-height: 1.55;
+    font-weight: 400;
+  }
+  .caption-text.collapsed {
+    max-height: 75px; overflow: hidden; position: relative;
+  }
+  .caption-text.collapsed::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 30px;
+    background: linear-gradient(transparent, white);
+  }
+  .read-more {
+    font-family: 'Lato', sans-serif;
+    display: inline-block; margin-top: 0.3rem; font-size: 0.78rem;
+    color: var(--jade); cursor: pointer; font-weight: 700;
+    border: none; background: none;
+  }
+  .copy-btn {
+    font-family: 'Lato', sans-serif;
+    display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.5rem;
+    padding: 0.3rem 0.7rem; font-size: 0.72rem; font-weight: 700;
+    color: var(--felt); background: var(--light); border: 1px solid var(--border);
+    border-radius: 6px; cursor: pointer; transition: all 0.2s;
+    align-self: flex-start;
+  }
+  .copy-btn:hover { background: #e8e4d8; }
+  .copy-btn.copied { background: var(--felt); color: white; border-color: var(--felt); }
+
+  /* ── Stats bar ── */
+  .stats-bar {
+    display: flex; gap: 1.2rem; justify-content: center; padding: 1.4rem 1rem;
+    background: white; border-radius: 10px; margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04); flex-wrap: wrap;
+    border: 1px solid rgba(163,196,169,0.3);
+  }
+  .stat { text-align: center; min-width: 60px; }
+  .stat-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7rem; font-weight: 900; color: var(--felt-dark);
+  }
+  .stat-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.65rem; color: var(--mid); text-transform: uppercase;
+    letter-spacing: 1px; font-weight: 700;
+  }
+
+  /* ── Platform note ── */
+  .platform-note {
+    background: white; border: 1px solid var(--border); border-radius: 10px;
+    padding: 1rem 1.3rem; margin-bottom: 1.5rem;
+    font-family: 'Lato', sans-serif; font-size: 0.83rem; color: var(--mid);
+    line-height: 1.55;
+  }
+  .platform-note strong { color: var(--felt-dark); font-weight: 700; }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .post-grid { grid-template-columns: 1fr; }
+    .tab-btn { padding: 0.6rem 0.6rem; font-size: 0.72rem; }
+    header h1 { font-size: 1.8rem; }
+    .stat-num { font-size: 1.3rem; }
+    .stats-bar { gap: 0.6rem; padding: 1rem 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MAHJ <span>Social Hub</span></h1>
+  <p>All posts across every platform — ready to copy and post</p>
+</header>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('all')">All Posts</button>
+  <button class="tab-btn" onclick="showTab('instagram')">Instagram</button>
+  <button class="tab-btn" onclick="showTab('tiktok')">TikTok</button>
+  <button class="tab-btn" onclick="showTab('twitter')">X / Twitter</button>
+  <button class="tab-btn" onclick="showTab('reddit')">Reddit</button>
+  <button class="tab-btn" onclick="showTab('facebook')">Facebook</button>
+  <button class="tab-btn" onclick="showTab('pinterest')">Pinterest</button>
+  <button class="tab-btn" onclick="showTab('series')">Series Ideas</button>
+  <button class="tab-btn" onclick="showTab('schedule')">Posting Schedule</button>
+</nav>
+
+<!-- ALL POSTS -->
+<div id="tab-all" class="tab-content active">
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-num">30</div><div class="stat-label">Instagram</div></div>
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">TikTok</div></div>
+    <div class="stat"><div class="stat-num">15</div><div class="stat-label">X / Twitter</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Reddit</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Facebook</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Pinterest</div></div>
+    <div class="stat"><div class="stat-num">79</div><div class="stat-label">Total</div></div>
+  </div>
+  <h2 class="section-title">Instagram</h2>
+  <p class="section-desc">Numbered in posting order — community, features, and modules mixed together</p>
+  <div class="post-grid" id="ig-all-grid-all"></div>
+  <h2 class="section-title">TikTok</h2>
+  <p class="section-desc">Targeting people looking for real-life hobbies and social connection</p>
+  <div class="post-grid" id="tt-grid-all"></div>
+  <h2 class="section-title">X / Twitter</h2>
+  <p class="section-desc">Short punchy takes, threads, and engagement</p>
+  <div class="post-grid" id="tw-grid-all"></div>
+  <h2 class="section-title">Reddit</h2>
+  <p class="section-desc">Value-first posts for relevant subreddits</p>
+  <div class="post-grid" id="rd-grid-all"></div>
+  <h2 class="section-title">Facebook</h2>
+  <p class="section-desc">Groups, personal posts, and shareable content</p>
+  <div class="post-grid" id="fb-grid-all"></div>
+  <h2 class="section-title">Pinterest</h2>
+  <p class="section-desc">Evergreen pins that drive traffic to welcome2mahj.com</p>
+  <div class="post-grid" id="pin-grid-all"></div>
+</div>
+
+<!-- INSTAGRAM -->
+<div id="tab-instagram" class="tab-content">
+  <div class="hashtag-bar" onclick="copyHashtags(this)">
+    <strong>Hashtags (click to copy):</strong> #americanmahjong #mahjong #mahj #newhobby #gamenight #learnmahjong #mahjonglife #charleston #mahjongtiles #learnsomethingnew #irl #community #girlsnight #adulthobbies #weeklyrituals
+    <span class="copy-hint">Click to copy</span>
+  </div>
+  <div class="post-grid" id="ig-all-grid"></div>
+</div>
+
+<!-- TIKTOK -->
+<div id="tab-tiktok" class="tab-content">
+  <div class="hashtag-bar" onclick="copyHashtags(this)">
+    <strong>Hashtags (click to copy):</strong> #americanmahjong #mahjong #mahj #newhobby #gamenight #learnmahjong #irl #touchgrass #adulthobbies #thingstodo #girlsnight #learnsomethingnew #mahjongtok
+    <span class="copy-hint">Click to copy</span>
+  </div>
+  <div class="post-grid" id="tt-grid"></div>
+</div>
+
+<!-- X / TWITTER -->
+<div id="tab-twitter" class="tab-content">
+  <div class="platform-note">
+    <strong>X / Twitter strategy:</strong> Short punchy takes, one-liner hooks, threads for deeper content. Engage with #gamenight, #newhobby, #mahjong conversations. Quote-tweet relatable "I need a hobby" posts with a Mahj angle.
+  </div>
+  <div class="post-grid" id="tw-grid"></div>
+</div>
+
+<!-- REDDIT -->
+<div id="tab-reddit" class="tab-content">
+  <div class="platform-note">
+    <strong>Reddit strategy:</strong> Value first, promotion last. Be genuinely helpful. Redditors hate ads — share real knowledge and only mention the app when it's natural. Best subreddits: r/mahjong, r/boardgames, r/Hobbies, r/socialskills, r/makingfriends, r/AskWomenOver30, r/CasualConversation
+  </div>
+  <div class="post-grid" id="rd-grid"></div>
+</div>
+
+<!-- FACEBOOK -->
+<div id="tab-facebook" class="tab-content">
+  <div class="platform-note">
+    <strong>Facebook strategy:</strong> The Mahjong community on Facebook is huge — join groups like "American Mahjong Players," "National Mah Jongg League," "Mahjong Newbies." Share value, answer questions, become a trusted resource. Post in your own feed too for friends and family.
+  </div>
+  <div class="post-grid" id="fb-grid"></div>
+</div>
+
+<!-- PINTEREST -->
+<div id="tab-pinterest" class="tab-content">
+  <div class="platform-note">
+    <strong>Pinterest strategy:</strong> Pinterest posts live forever — people search "how to play mahjong" and "game night ideas" constantly. Create pins that link to welcome2mahj.com. Use keyword-rich descriptions. Boards: "Learn American Mahjong," "Game Night Ideas," "New Hobbies for Adults."
+  </div>
+  <div class="platform-note" style="border-left: 3px solid var(--gold); background: #fffef8;">
+    <strong>Note:</strong> Pinterest is 100% visual — every pin needs an image. Use your MAHJ brand templates in Canva to create tall pins (1000x1500px). The text below goes in the pin title and description fields, not on the image itself. The image should be eye-catching with minimal text (headline + maybe subtitle).
+  </div>
+  <div class="post-grid" id="pin-grid"></div>
+</div>
+
+<!-- SERIES -->
+<div id="tab-series" class="tab-content">
+  <h2 class="section-title">Recurring Series Ideas</h2>
+  <p class="section-desc">Use across all platforms — adjust format per platform</p>
+  <div class="post-grid">
+    <div class="post-card">
+      <div class="mock-post dark">
+        <div class="mock-label">Mahj Term of the Day</div>
+        <div class="mock-headline">Charleston</div>
+        <div class="mock-subtitle">The 6-pass tile trade before play begins</div>
+        <div class="mock-footer">welcome2mahj.com</div>
+      </div>
+      <div class="post-caption">
+        <span class="post-label label-both">All Platforms</span>
+        <div class="caption-title">Mahj Term of the Day</div>
+        <div class="caption-text">Daily post — one term, one definition. Builds curiosity with non-players and gives followers a reason to come back.
+
+Rotate through: Charleston, Pung, Kong, Exposure, Dead Hand, Hot Suit, Joker, Wall, Crak, Bam, Dot, Calling, Wash, Rack, Self-Draw</div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="mock-post light">
+        <div class="mock-label">This or That</div>
+        <div class="mock-headline">Game Night In</div>
+        <div class="mock-subtitle">or going out?</div>
+        <div class="mock-footer">welcome2mahj.com</div>
+      </div>
+      <div class="post-caption">
+        <span class="post-label label-both">All Platforms</span>
+        <div class="caption-title">This or That (engagement series)</div>
+        <div class="caption-text">Poll-style posts that drive comments.
+
+- Game night in OR going out?
+- Learn a new hobby OR rewatch the same show?
+- Phone at the table OR tiles in your hand?
+- Teach a friend OR play with pros?
+- Snacks at Mahj night: sweet OR savory?</div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="mock-post dark">
+        <div class="mock-label">Tag a Friend</div>
+        <div class="mock-headline">Who Needs a New Hobby?</div>
+        <div class="mock-subtitle">Tag them. You might start something.</div>
+        <div class="mock-footer">welcome2mahj.com</div>
+      </div>
+      <div class="post-caption">
+        <span class="post-label label-both">IG / TikTok / Facebook</span>
+        <div class="caption-title">Tag Someone</div>
+        <div class="caption-text">Engagement magnet. People love tagging friends.
+
+- "Tag someone who'd dominate at Mahjong"
+- "Tag your future 4th player"
+- "Tag someone who needs to get off their phone"</div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="mock-post light">
+        <div class="mock-label">Mahj Night Check-In</div>
+        <div class="mock-headline">Show Us Your Table</div>
+        <div class="mock-subtitle">Repost your game night setup</div>
+        <div class="mock-footer">welcome2mahj.com</div>
+      </div>
+      <div class="post-caption">
+        <span class="post-label label-both">All Platforms</span>
+        <div class="caption-title">Mahj Night Check-In</div>
+        <div class="caption-text">Encourage followers to post their game night setups and tag @welcome2mahj. Repost the best ones.
+
+Builds community and shows real people playing. User-generated content is the best content.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POSTING SCHEDULE -->
+<div id="tab-schedule" class="tab-content">
+  <h2 class="section-title">4-Week Launch Schedule</h2>
+  <p class="section-desc">Post 1-2x per day across platforms. Stagger similar content so followers on multiple platforms don't see the same thing back-to-back.</p>
+
+  <div class="platform-note">
+    <strong>General tips:</strong> Post Instagram and TikTok between 11am-1pm or 7-9pm for best engagement. Reddit is best early morning (6-8am) or Sunday evenings. Facebook groups are active mid-morning. Reply to every comment in the first hour — the algorithm rewards early engagement.
+  </div>
+
+  <div style="display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+
+    <div class="post-card" style="padding:1.5rem;">
+      <div style="font-family:'Playfair Display',serif; font-weight:900; font-size:1.1rem; color:var(--felt-dark); margin-bottom:0.8rem; border-bottom:2px solid var(--gold); padding-bottom:0.4rem;">Week 1 — Hook</div>
+      <div style="font-family:'Lato',sans-serif; font-size:0.82rem; color:var(--mid); line-height:1.7;">
+        <strong style="color:var(--felt-dark);">Tue:</strong> IG — "Your Next Hobby Doesn't Need WiFi"<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — hobby pitch tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "Hobbies Tier List" video<br/>
+        <strong style="color:var(--felt-dark);">Thu:</strong> IG — "4 Players. 1 Table. Zero Screens."<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — game night tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "Girls night expectations vs reality"<br/>
+        <strong style="color:var(--felt-dark);">Sat:</strong> IG — "152 Tiles. 20 Minutes."<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — tile stat tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "Things that sound hard but aren't"
+      </div>
+    </div>
+
+    <div class="post-card" style="padding:1.5rem;">
+      <div style="font-family:'Playfair Display',serif; font-weight:900; font-size:1.1rem; color:var(--felt-dark); margin-bottom:0.8rem; border-bottom:2px solid var(--gold); padding-bottom:0.4rem;">Week 2 — Engage</div>
+      <div style="font-family:'Lato',sans-serif; font-size:0.82rem; color:var(--mid); line-height:1.7;">
+        <strong style="color:var(--felt-dark);">Tue:</strong> IG — "Can You Use a Joker in a Pair?" quiz<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — Joker poll<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "Things Mahj players say that sound unhinged"<br/>
+        <strong style="color:var(--felt-dark);">Thu:</strong> IG — "5 Signs You Need a New Hobby" carousel<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — "signs you need a hobby" tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "POV: You learn Mahjong" glow-up<br/>
+        <strong style="color:var(--felt-dark);">Sat:</strong> IG — "Put the Phone Down. Pick Up Tiles."<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — screen-free angle tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "Put the phone down challenge"
+      </div>
+    </div>
+
+    <div class="post-card" style="padding:1.5rem;">
+      <div style="font-family:'Playfair Display',serif; font-weight:900; font-size:1.1rem; color:var(--felt-dark); margin-bottom:0.8rem; border-bottom:2px solid var(--gold); padding-bottom:0.4rem;">Week 3 — Community</div>
+      <div style="font-family:'Lato',sans-serif; font-size:0.82rem; color:var(--mid); line-height:1.7;">
+        <strong style="color:var(--felt-dark);">Tue:</strong> IG — "Text 3 Friends. Learn Together."<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — "send the text" tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "How to start a Mahj group in 60 seconds"<br/>
+        <strong style="color:var(--felt-dark);">Thu:</strong> IG — "Tag Someone Who Needs This"<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — tag a friend tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "What I thought Mahj was vs what it actually is"<br/>
+        <strong style="color:var(--felt-dark);">Sat:</strong> IG — "Mahj Term: The Charleston"<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — Mahj vocabulary tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "Mahj vocabulary that sounds unhinged pt. 2"
+      </div>
+    </div>
+
+    <div class="post-card" style="padding:1.5rem;">
+      <div style="font-family:'Playfair Display',serif; font-weight:900; font-size:1.1rem; color:var(--felt-dark); margin-bottom:0.8rem; border-bottom:2px solid var(--gold); padding-bottom:0.4rem;">Week 4 — Convert</div>
+      <div style="font-family:'Lato',sans-serif; font-size:0.82rem; color:var(--mid); line-height:1.7;">
+        <strong style="color:var(--felt-dark);">Tue:</strong> IG — "Everything You Need" app features<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — app features list tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "App walkthrough in 60 seconds"<br/>
+        <strong style="color:var(--felt-dark);">Thu:</strong> IG — "First Game Night Checklist" carousel<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — checklist tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "I hosted my first Mahj night"<br/>
+        <strong style="color:var(--felt-dark);">Sat:</strong> IG — Repost "Your Next Hobby" with fresh caption<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X — "this is your sign" tweet<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TikTok — "Things to do this weekend"
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">After Week 4</h2>
+  <p class="section-desc">Switch to recurring series + remaining launch posts. Keep momentum with 3-5 posts per week.</p>
+  <div class="platform-note">
+    <strong>Ongoing cadence:</strong><br/>
+    - <strong>Monday:</strong> Mahj Term of the Day (IG + TikTok)<br/>
+    - <strong>Wednesday:</strong> This or That / Quick Quiz (IG + TikTok + X)<br/>
+    - <strong>Friday:</strong> Community post or module spotlight (IG + Facebook)<br/>
+    - <strong>Sunday:</strong> Tag a Friend / Mahj Night Check-In (IG + Facebook)<br/>
+    - <strong>Ongoing:</strong> Pin 1-2 new Pinterest pins per week. Post remaining launch posts (modules 1-13) as filler throughout.
+    Reddit: 1-2 posts per week max. Engage in comments on other people's posts too — don't just post and leave.
+  </div>
+</div>
+
+<script>
+// ══════════ DATA ══════════
+
+const igPosts = [
+  // ── Feature Posts (new template) ──
+  { img: "39-welcome.png", title: "Welcome to MAHJ", caption: `I was completely lost at my first American Mahjong game.\n\nSo I built MAHJ — the app I wish someone had handed me before I sat down at that table.\n\n15 lessons that take you from "what are all these tiles?" to actually playing with confidence. Plus a printable cheat sheet you can bring to game night (this alone is worth it).\n\nDownload MAHJ free — link in bio` },
+  { img: "40-lessons.png", title: "15 Lessons. Zero Experience.", caption: `15 lessons. Start at zero. Build to confidence.\n\nEach module unlocks as you complete the last one — so you're never overwhelmed, and you never skip ahead before you're ready.\n\nBy the end, you'll know:\n- Every tile in the set\n- How the Charleston works\n- When to call, when to pass\n- How to read the table\n- How scoring works\n\nLink in bio — start with Module 0` },
+  { img: "41-tiles.png", title: "152 Tiles. 20 Minutes.", caption: `152 tiles. 20 minutes.\n\nThat's all it takes to learn them all.\n\n3 suits (Bam, Crak, Dot) x 9 values x 4 copies = 108\n4 Winds x 4 = 16\n3 Dragons x 4 = 12\n8 Flowers = 8\n8 Jokers = 8\nTotal: 152\n\nModule 1 teaches you to recognize every single one by sight. Most people get it in about 20 minutes.\n\nDownload MAHJ free — link in bio` },
+  { img: "42-charleston.png", title: "The Charleston Isn't a Dance Move", caption: `The Charleston is what makes American Mahjong different from every other version.\n\nBefore play begins, you pass tiles you don't want and (hopefully) get tiles you need. It goes: Right, Across, Left — then back: Left, Across, Right — then an optional courtesy pass.\n\nIt sounds complicated. It's not. MAHJ walks you through every pass, step by step, with practice drills.\n\nDownload MAHJ free — link in bio` },
+  { img: "43-cheatsheet.png", title: "Bring This to Game Night", caption: `This is the one thing you actually want at your first game night.\n\nA printable cheat sheet with:\n- The Charleston pass order\n- When you can (and can't) call\n- Joker rules\n- Scoring and who pays what\n- Common mistakes to avoid\n- Table etiquette basics\n\nPrint it. Fold it. Bring it. Nobody will judge you.\n\nFree at welcome2mahj.com/cheatsheet` },
+  { img: "44-calculator.png", title: "Who Pays What?", caption: `"Who pays what?" — the question that stops every game.\n\nMAHJ's scoring calculator handles it all:\n- Discard win vs. self-draw\n- Jokerless bonus (double everything!)\n- Singles & Pairs exceptions\n- Exact dollar amounts for each player\n\nNo more arguing. No more guessing.\n\nDownload MAHJ free — link in bio` },
+  { img: "45-puzzle.png", title: "A New Puzzle. Every Day.", caption: `Pop quiz: 3 copies of the 5 Bam are already visible in the discard pile. Is the 4th safe to discard?\n\n(Answer: Yes — 100% safe. Nobody can Pung or Kong it.)\n\nMAHJ has a new puzzle like this every single day. Open the app, test yourself, stay sharp between game nights.\n\nDownload MAHJ free — link in bio` },
+  { img: "46-defense.png", title: "Read the Table. Stop Feeding Winners.", caption: `Offense gets you points. Defense keeps you from paying everyone else.\n\nHere's one tip that changed how I play: if nobody is discarding a particular suit, that's the "hot suit." Someone at the table is collecting it. Stop throwing those tiles.\n\nModule 7 teaches you how to read the table, count visible tiles, and know when to fold.\n\nDownload MAHJ free — link in bio` },
+  // ── Hook Posts ──
+  { img: "47-hobby-wifi.png", title: "Your Next Hobby Doesn't Need WiFi", caption: `When's the last time you picked up a hobby that didn't involve a screen?\n\nAmerican Mahjong is 4 players, one table, and zero WiFi required. Just tiles, snacks, and the kind of conversation that actually happens when nobody's scrolling.\n\nThe basics take about an hour. Your first real game? A week. Your new favorite night of the week? Forever.\n\nLink in bio to start learning.` },
+  { img: "48-gamenight.png", title: "4 Players. 1 Table. Zero Screens.", caption: `4 players. 1 table. Zero screens.\n\nNo reservations. No overpriced drinks. No trying to talk over loud music. Just tiles and actual conversation.\n\nMahjong night is the weekly tradition you didn't know you needed. And once you start, you'll wonder why you didn't sooner.\n\nLink in bio to learn.` },
+  { img: "49-phone-down.png", title: "Put the Phone Down. Pick Up Tiles.", caption: `Put the phone down. Pick up tiles.\n\nWhen's the last time you spent 2 hours with friends without anyone checking their phone? That's what Mahjong does. Your hands are literally full of tiles. You're focused. You're laughing. You're present.\n\nIt's not just a game — it's the excuse to actually be in the room with your people.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "50-quiz-joker.png", title: "Can You Use a Joker in a Pair?", caption: `Can you use a Joker in a pair?\n\nDrop your answer in the comments before reading further.\n\n.\n.\n.\n.\n.\n\nAnswer: NO. Jokers only work in groups of 3 or more. Pairs must always be two real, matching tiles. No exceptions.\n\nThis is the #1 rule beginners get wrong. Learn all the Joker rules — download MAHJ free — link in bio.` },
+  { img: "51-text-friends.png", title: "Text 3 Friends. Learn Together.", caption: `Text 3 friends. Learn together.\n\nHere's the secret: nobody in your group needs to already know how to play.\n\nThe best Mahjong groups all started the same way — someone sent a text, 3 people said yes, and they figured it out together.\n\nMAHJ teaches all of you from scratch. Send the text tonight.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "52-hobby-stick.png", title: "The Hobby You'll Actually Stick With", caption: `The hobby you'll actually stick with.\n\nEasy to learn. Impossible to get bored.\n\nThat's what makes Mahjong such a good hobby — you can play your first real game within a week, but you'll still be learning new strategy years later.\n\nIt's like chess, poker, and a social club had a baby.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "53-stop-scrolling.png", title: "Stop Scrolling. Start Playing.", caption: `Stop scrolling. Start playing.\n\n152 tiles > infinite scroll.\n\nYou could spend another hour on your phone, or you could learn the basics of a game that'll give you a weekly excuse to hang out with your favorite people.\n\nJust saying.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  // ── Community Posts ──
+  { img: "54-not-alone.png", title: "Nobody Learns Mahjong Alone", caption: `Here's what nobody tells you about Mahjong: the game is just the excuse.\n\nThe real thing is the table. The people around it. The inside jokes that form after three weeks. The friend who always takes forever during the Charleston. The one who gasps every time someone calls their tile.\n\nYou're not just learning a game. You're building a weekly tradition with your people.\n\nGrab 3 friends and start at welcome2mahj.com — download MAHJ free — link in bio.` },
+  { img: "55-popping-up.png", title: "Mahjong Groups Are Popping Up Everywhere", caption: `Something is happening and you might have missed it.\n\nAcross the country, women are starting Mahjong groups. Not online — in person. At kitchen tables, in community centers, at coffee shops after the kids are at school.\n\nThey're not lifelong players. Most of them started in the last year or two. They learned together, from scratch.\n\nYou could start your own group this week. All you need is 3 friends who are willing to try something new.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "56-hang-out.png", title: "Remember When We Used to Hang Out?", caption: `Not a group chat. Not a FaceTime. Not a "we should get together soon" that never happens.\n\nActual, regular, in-person time with friends.\n\nMahjong gives you a reason to make it happen every single week. It's a standing date nobody cancels because — honestly — it's the best part of everyone's week.\n\nSnacks on the table. Tiles in your hand. Friends across from you.\n\nLearn how to play — download MAHJ free — link in bio.` },
+  { img: "57-not-invited.png", title: "You Don't Need to Be Invited", caption: `Waiting for someone to invite you to their Mahjong group?\n\nHere's the thing — most groups exist because ONE person decided to start one. She didn't wait. She didn't know how to play yet either. She just texted 3 friends and said "want to learn Mahjong with me?"\n\nThat's it. That's the whole origin story of every Mahj group.\n\nBe that person. Your friends will thank you.\n\nLearn everything at welcome2mahj.com — download MAHJ free — link in bio.` },
+  { img: "58-5-steps.png", title: "Your First Mahj Night in 5 Steps", caption: `1. Text 3 friends: "Want to learn Mahjong with me?"\n2. Pick a night. Put it on the calendar. Make it recurring.\n3. Everyone goes through lessons 0-3 on MAHJ before the first night (takes about 30 min).\n4. Get a Mahjong set ($25-40 on Amazon). Print the cheat sheet from welcome2mahj.com/cheatsheet.\n5. Show up. Be terrible together. Laugh a lot. Get hooked.\n\nNo experience required. No expert needed. Just 4 people willing to try.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "59-phone-face-down.png", title: "The Phone Goes Face Down", caption: `There's no scrolling during Mahjong. Your hands are full of tiles. Your brain is full of strategy. Your attention is on the people across from you.\n\nWhen's the last time you spent 2 hours fully present with your friends?\n\nMahjong doesn't just give you a hobby. It gives you your attention back.\n\nLearn how to play — download MAHJ free — link in bio.` },
+  { img: "60-strangers.png", title: "4 Strangers Became Best Friends", caption: `The best part about starting a Mahjong group isn't the game. It's what happens around it.\n\nPeople who barely knew each other start showing up every week. The small talk turns into real talk. The game night becomes the thing everyone protects on their calendar.\n\nMahjong is how strangers become regulars, and regulars become friends.\n\nWant to start? Download MAHJ free — download MAHJ free — link in bio.` },
+  { img: "61-favorite-hobby.png", title: "What If Your Favorite Hobby Doesn't Exist Yet?", caption: `You've tried yoga. Book clubs. Painting classes. Running.\n\nSome stuck. Most didn't.\n\nHere's what's different about Mahjong:\n- It's social (you need 4 people — built-in accountability)\n- It's strategic (your brain actually has to work)\n- It's tactile (real tiles, real table, real sounds)\n- It's repeatable (you'll want to play every week)\n\nMost hobbies fade after a month. Mahjong players measure their time in years.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "62-secret.png", title: "The Secret to a Great Game Night", caption: `Good snacks. Good drinks. Good people.\n\nThat's it. That's the whole formula.\n\nMahjong just gives you the structure. Something to do with your hands while you catch up on each other's lives. A reason to keep showing up, week after week.\n\nThe game is fun. The company is the point.\n\nLearn how to host your first Mahj night — download MAHJ free — link in bio.` },
+  { img: "63-100-years.png", title: "100 Years of Bringing People Together", caption: `Mahjong arrived in America in the 1920s. For over a century, it's been the centerpiece of game nights, friendships, and communities.\n\nGrandmothers taught their daughters. Friends taught friends. Strangers became family around the table.\n\nThe game evolves every year (new hands, new cards), but the tradition stays the same: 4 people, 1 table, and a few hours of genuine connection.\n\nYour chapter starts now. Download MAHJ free — download MAHJ free — link in bio.` },
+  { img: "64-stop-saying.png", title: "Stop Saying 'We Should Hang Out'", caption: `You know the text. You've sent it a hundred times.\n\n"We should get together soon!"\n"Totally! Let's plan something!"\n\n...and then nothing happens.\n\nMahjong fixes this. It's a weekly commitment that's actually fun to keep. Nobody flakes on Mahj night because Mahj night is the highlight of the week.\n\nStop planning. Start playing.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "65-best-friend.png", title: "Your Next Best Friend Is at a Mahj Table", caption: `Your next best friend is at a Mahj table.\n\nAll it takes is one text and 3 yeses. Nobody needs to already know how to play. MAHJ teaches all of you from scratch.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "66-new-girls-night.png", title: "Mahjong Night Is the New Girls' Night", caption: `No reservations. No overpriced drinks. No trying to talk over loud music. Just snacks, tiles, and actual conversation.\n\nMahjong night is the weekly tradition you didn't know you needed. 4 friends, one table, and a game that's equal parts strategy and trash talk.\n\nThe best part? You can learn everything you need in a week. Download MAHJ free — download MAHJ free — link in bio.` },
+  { img: "67-one-afternoon.png", title: "You Can Learn in One Afternoon", caption: `The #1 thing that stops people from trying Mahjong: "it looks too complicated."\n\nHere's the truth — the basics take about an hour. Recognizing the tiles takes 20 minutes. Understanding the flow of the game takes one read-through.\n\nWill you be great on day one? No. Will you be able to sit down and play a real game? Absolutely.\n\nStop overthinking it. Start learning — download MAHJ free — link in bio.` },
+  { img: "68-fastest-growing.png", title: "The Fastest Growing Hobby for Women 20-45", caption: `It's not your grandma's game anymore (well, she can play too).\n\nWomen everywhere are picking up American Mahjong — not because it's trendy, but because it gives them something real. A weekly night with friends. A skill that actually challenges your brain. A reason to put the phone down.\n\nYour city probably has a group starting right now. Or you could be the one to start it.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+];
+
+// Old feature posts archived below (kept for reference, not displayed)
+const _oldIgArchived = [
+  { img: "02-homepage.png", title: "15 Lessons", caption: `15 lessons. Start at zero. Build to confidence.\n\nEach module unlocks as you complete the last one — so you're never overwhelmed, and you never skip ahead before you're ready.\n\nBy the end, you'll know:\n- Every tile in the set\n- How the Charleston works\n- When to call, when to pass\n- How to read the table\n- How scoring works\n\nLink in bio — start with Module 0` },
+  { img: "03-tiles.png", title: "152 Tiles", caption: `152 tiles. Can you name them all?\n\n3 suits (Bam, Crak, Dot) x 9 values x 4 copies = 108\n4 Winds x 4 copies = 16\n3 Dragons x 4 copies = 12\n4 Flowers + 4 Seasons = 8\n8 Jokers = 8\n\nTotal: 152\n\nModule 1 teaches you to recognize every single one by sight. Most people get it in about 20 minutes.\n\nDownload MAHJ free — link in bio` },
+  { img: "04-charleston.png", title: "The Charleston", caption: `The Charleston is what makes American Mahjong different from every other version.\n\nBefore play begins, you pass tiles you don't want and (hopefully) get tiles you need. It goes: Right, Across, Left — then back: Left, Across, Right — then an optional courtesy pass.\n\nIt sounds complicated. It's not. MAHJ walks you through every pass, step by step, with practice drills.\n\nDownload MAHJ free — link in bio` },
+  { img: "05-cheatsheet.png", title: "Cheat Sheet", caption: `This is the one thing you actually want at your first game night.\n\nA printable cheat sheet with:\n- The Charleston pass order\n- When you can (and can't) call\n- Joker rules\n- Scoring and who pays what\n- Common mistakes to avoid\n- Table etiquette basics\n\nPrint it. Fold it. Bring it. Nobody will judge you.\n\nFree at welcome2mahj.com/cheatsheet` },
+  { img: "06-calculator.png", title: "Scoring Calculator", caption: `"Who pays what?" — the question that stops every game.\n\nMAHJ's scoring calculator handles it all:\n- Discard win vs. self-draw\n- Jokerless bonus (double everything!)\n- Singles & Pairs exceptions\n- Exact dollar amounts for each player\n\nNo more arguing. No more guessing.\n\nDownload MAHJ free — link in bio` },
+  { img: "07-daily-puzzle.png", title: "Daily Puzzle", caption: `Pop quiz: 3 copies of the 5 Bam are already visible in the discard pile. Is the 4th safe to discard?\n\n(Answer: Yes — 100% safe. Nobody can Pung or Kong it.)\n\nMAHJ has a new puzzle like this every single day.\n\nDownload MAHJ free — link in bio` },
+  { img: "08-defense.png", title: "Defense", caption: `Offense gets you points. Defense keeps you from paying everyone else.\n\nHere's one tip that changed how I play: if nobody is discarding a particular suit, that's the "hot suit." Someone at the table is collecting it. Stop throwing those tiles.\n\nModule 7 teaches you how to read the table, count visible tiles, and know when to fold.\n\nDownload MAHJ free — link in bio` },
+  // Post 09 removed — conflicts with monetization plans
+  { img: "10-module-00.png", title: "Module 0: Welcome", caption: `What IS American Mahjong? How is it different from the version your grandma played? Why are there 152 tiles?\n\nThis 5-minute intro covers the basics before you touch a single tile.\n\nLink in bio — start here` },
+  { img: "11-module-01.png", title: "Module 1: Tile Trainer", caption: `Bams, Craks, Dots, Winds, Dragons, Flowers, Jokers.\n\nBy the end of this module, you'll recognize all 152 tiles on sight. Interactive drills help you practice until it's automatic.\n\nDownload MAHJ free — link in bio` },
+  { img: "12-module-02.png", title: "Module 2: Reading the Card", caption: `The NMJL card is the heart of American Mahjong — but it looks like hieroglyphics the first time you see it.\n\nThis module teaches you to decode the notation so you can actually read the hands.\n\nDownload MAHJ free — link in bio` },
+  { img: "13-module-03.png", title: "Module 3: Setup & Dealing", caption: `Washing. Building the wall. The dice roll. The deal.\n\nThere's a rhythm to setting up an American Mahjong game, and once you know it, you'll never feel lost at the table again.\n\nDownload MAHJ free — link in bio` },
+  { img: "14-module-04.png", title: "Module 4: The Charleston", caption: `Right. Across. Left. Left. Across. Right. Courtesy.\n\nThat's the Charleston — the 6-pass tile trade that's unique to American Mahjong. No other version has this.\n\nDownload MAHJ free — link in bio` },
+  { img: "15-module-05.png", title: "Module 5: Jokers & Calling", caption: `Two rules that trip up every beginner:\n\n1. Jokers can substitute in groups of 3 or more — but NEVER in a pair\n2. You can call a discard for Pung or Kong — but NEVER for a pair (unless it's Mahjong)\n\nDownload MAHJ free — link in bio` },
+  { img: "16-module-06.png", title: "Module 6: Hand Strategy", caption: `After the deal, you're staring at 13 tiles thinking "now what?"\n\nThis module teaches you to identify candidate hands, narrow down after the Charleston, and know when to commit.\n\nDownload MAHJ free — link in bio` },
+  { img: "17-module-07.png", title: "Module 7: Defense", caption: `When an opponent has 3 exposures, they're one tile from Mahjong. If you throw that tile, YOU pay double.\n\nThis module teaches you to count visible tiles, spot the hot suit, and know when to play safe.\n\nDownload MAHJ free — link in bio` },
+  { img: "18-module-08.png", title: "Module 8: Table Etiquette", caption: `The unwritten rules that nobody tells you before your first game:\n\n- Always announce your discard clearly\n- Pause before racking so others can call\n- Say "wait" if you need a moment\n- If you make a mistake, say so immediately\n\nDownload MAHJ free — link in bio` },
+  { img: "19-module-09.png", title: "Module 9: Scoring", caption: `Quick quiz: You win on someone's discard with a 50-cent hand. Who pays what?\n\nThe discarder pays double ($1.00). The other two pay face value (50 cents each). You collect $2.00.\n\nModule 9 breaks it all down.\n\nDownload MAHJ free — link in bio` },
+  { img: "20-module-10.png", title: "Module 10: Common Mistakes", caption: `Mistakes happen. What matters is how you handle them.\n\n- Accidentally exposed a tile? Your hand might be dead.\n- Called the wrong tile? Stop immediately.\n- Lost count of your tiles? It happens to everyone.\n\nDownload MAHJ free — link in bio` },
+  { img: "21-module-11.png", title: "Module 11: Glossary", caption: `"Pung." "Kong." "Charleston." "Exposure." "Dead hand." "Hot suit."\n\nAmerican Mahjong has its own language. MAHJ's glossary has every term you'll hear at the table.\n\nDownload MAHJ free — link in bio` },
+  { img: "22-module-12.png", title: "Module 12: Your First Full Game", caption: `A complete walkthrough from start to finish — washing, dealing, the Charleston, drawing, discarding, calling, defense, and scoring.\n\nBy the end, you'll know exactly what to expect at a real table.\n\nDownload MAHJ free — link in bio` },
+  { img: "23-module-13.png", title: "Module 13: Practice Hands", caption: `Real scenarios. Real decisions.\n\nThis module tests everything you've learned with hands you might actually see at the table.\n\nDownload MAHJ free — link in bio` },
+  { img: "24-did-you-know.png", title: "Did You Know: 8 Jokers", caption: `Did you know American Mahjong has 8 Jokers? Most other versions have zero.\n\nThey can substitute in any group of 3+ identical tiles. But NEVER in a pair. And you can never call a discarded Joker.\n\nLearn all the Joker rules in Module 5 — link in bio` },
+  { img: "25-tip.png", title: "Pro Tip: Keep 2-3 Candidates", caption: `After the deal, keep 2-3 candidate hands in mind — not just one.\n\nStay flexible. Look at your strongest suit. Count your pairs and triples. THEN narrow down after the Charleston.\n\nModule 6 teaches this in depth — link in bio` },
+  { img: "26-question.png", title: "Quick Quiz: Joker in a Pair?", caption: `Can you use a Joker to complete a pair?\n\nNO. Jokers only work in groups of 3 or more. Pairs must always be two real, matching tiles. No exceptions.\n\nThis is the #1 rule beginners get wrong. Module 5 — link in bio` },
+  // ── Series 2 — tile-border posts ──
+  { img: "39-hobby-wifi.png", title: "Your Next Hobby Doesn't Need WiFi", caption: `When's the last time you picked up a hobby that didn't involve a screen?\n\nAmerican Mahjong is 4 players, one table, and zero WiFi required. Just tiles, snacks, and the kind of conversation that actually happens when nobody's scrolling.\n\nThe basics take about an hour. Your first real game? A week. Your new favorite night of the week? Forever.\n\nLink in bio to start learning.` },
+  { img: "42-gamenight.png", title: "4 Players. 1 Table. Zero Screens.", caption: `4 players. 1 table. Zero screens.\n\nNo reservations. No overpriced drinks. No trying to talk over loud music. Just tiles and actual conversation.\n\nMahjong night is the weekly tradition you didn't know you needed. And once you start, you'll wonder why you didn't sooner.\n\nLink in bio to learn.` },
+  { img: "43-phone-down.png", title: "Put the Phone Down. Pick Up Tiles.", caption: `Put the phone down. Pick up tiles.\n\nWhen's the last time you spent 2 hours with friends without anyone checking their phone? That's what Mahjong does. Your hands are literally full of tiles. You're focused. You're laughing. You're present.\n\nIt's not just a game — it's the excuse to actually be in the room with your people.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "45-quiz-joker.png", title: "Can You Use a Joker in a Pair?", caption: `Can you use a Joker in a pair?\n\nDrop your answer in the comments before reading further.\n\n.\n.\n.\n.\n.\n\nAnswer: NO. Jokers only work in groups of 3 or more. Pairs must always be two real, matching tiles. No exceptions.\n\nThis is the #1 rule beginners get wrong. Learn all the Joker rules — download MAHJ free — link in bio.` },
+  { img: "49-152-tiles.png", title: "152 Tiles. 20 Minutes.", caption: `152 tiles. 20 minutes.\n\nThat's all it takes to learn them all.\n\n3 suits (Bam, Crak, Dot) x 9 values x 4 copies = 108\n4 Winds x 4 = 16\n3 Dragons x 4 = 12\n8 Flowers = 8\n8 Jokers = 8\nTotal: 152\n\nModule 1 teaches you to recognize every single one by sight. Most people get it in about 20 minutes.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { img: "50-text-friends.png", title: "Text 3 Friends. Learn Together.", caption: `Text 3 friends. Learn together.\n\nHere's the secret: nobody in your group needs to already know how to play.\n\nThe best Mahjong groups all started the same way — someone sent a text, 3 people said yes, and they figured it out together.\n\nMAHJ teaches all of you from scratch. Send the text tonight.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+];
+
+const igCommunityPosts = [
+  { theme: "dark", label: "REAL TALK", headline: "Your Next Hobby Is Waiting at a Table", subtitle: "Not a screen. A real table. With real people.", img: "27-ig-real-talk-1.png", caption: `You've been saying you want a new hobby.\n\nNot another streaming subscription. Not another app. Something you actually DO — with people, in person, using your hands and your brain.\n\nAmerican Mahjong is that hobby. It's strategic enough to challenge you, social enough to keep you coming back, and fun enough that you'll cancel other plans for it.\n\n4 players. 1 table. No phones needed.\n\nLink in bio to start learning today.` },
+  { theme: "light", label: "COMMUNITY", headline: "Nobody Learns Mahjong Alone", subtitle: "That's the whole point.", img: "28-ig-community-2.png", caption: `Here's what nobody tells you about Mahjong: the game is just the excuse.\n\nThe real thing is the table. The people around it. The inside jokes that form after three weeks. The friend who always takes forever during the Charleston. The one who gasps every time someone calls their tile.\n\nYou're not just learning a game. You're building a weekly tradition with your people.\n\nGrab 3 friends and start at welcome2mahj.com — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "DID YOU KNOW", headline: "Mahjong Groups Are Popping Up Everywhere", subtitle: "Libraries. Coffee shops. Living rooms. Maybe yours next.", img: "29-ig-did-you-know-3.png", caption: `Something is happening and you might have missed it.\n\nAcross the country, women are starting Mahjong groups. Not online — in person. At kitchen tables, in community centers, at coffee shops after the kids are at school.\n\nThey're not lifelong players. Most of them started in the last year or two. They learned together, from scratch.\n\nYou could start your own group this week. All you need is 3 friends who are willing to try something new.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { theme: "light", label: "REAL TALK", headline: "Remember When We Used to Hang Out?", subtitle: "Like actually hang out. In person.", img: "30-ig-real-talk-4.png", caption: `Not a group chat. Not a FaceTime. Not a "we should get together soon" that never happens.\n\nActual, regular, in-person time with friends.\n\nMahjong gives you a reason to make it happen every single week. It's a standing date nobody cancels because — honestly — it's the best part of everyone's week.\n\nSnacks on the table. Tiles in your hand. Friends across from you.\n\nLearn how to play — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "TRUTH", headline: "You Don't Need to Be Invited", subtitle: "Start the group yourself.", img: "31-ig-truth-5.png", caption: `Waiting for someone to invite you to their Mahjong group?\n\nHere's the thing — most groups exist because ONE person decided to start one. She didn't wait. She didn't know how to play yet either. She just texted 3 friends and said "want to learn Mahjong with me?"\n\nThat's it. That's the whole origin story of every Mahj group.\n\nBe that person. Your friends will thank you.\n\nLearn everything at welcome2mahj.com — download MAHJ free — link in bio.` },
+  { theme: "light", label: "HOW TO", headline: "Your First Mahj Night in 5 Steps", subtitle: "Easier than planning a dinner party.", img: "32-ig-how-to-6.png", caption: `1. Text 3 friends: "Want to learn Mahjong with me?"\n2. Pick a night. Put it on the calendar. Make it recurring.\n3. Everyone goes through lessons 0-3 on MAHJ before the first night (takes about 30 min).\n4. Get a Mahjong set ($25-40 on Amazon). Print the cheat sheet from welcome2mahj.com/cheatsheet.\n5. Show up. Be terrible together. Laugh a lot. Get hooked.\n\nNo experience required. No expert needed. Just 4 people willing to try.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "REAL TALK", headline: "The Phone Goes Face Down", subtitle: "That's the unspoken rule at every Mahj table.", img: "33-ig-real-talk-7.png", caption: `There's no scrolling during Mahjong. Your hands are full of tiles. Your brain is full of strategy. Your attention is on the people across from you.\n\nWhen's the last time you spent 2 hours fully present with your friends?\n\nMahjong doesn't just give you a hobby. It gives you your attention back.\n\nLearn how to play — download MAHJ free — link in bio.` },
+  { theme: "light", label: "COMMUNITY", headline: "4 Strangers Became Best Friends", subtitle: "All because one of them suggested Mahjong.", img: "34-ig-community-8.png", caption: `The best part about starting a Mahjong group isn't the game. It's what happens around it.\n\nPeople who barely knew each other start showing up every week. The small talk turns into real talk. The game night becomes the thing everyone protects on their calendar.\n\nMahjong is how strangers become regulars, and regulars become friends.\n\nWant to start? Download MAHJ free — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "QUESTION", headline: "What If Your Favorite Hobby Doesn't Exist Yet?", subtitle: "Because you haven't tried it.", img: "35-ig-question-9.png", caption: `You've tried yoga. Book clubs. Painting classes. Running.\n\nSome stuck. Most didn't.\n\nHere's what's different about Mahjong:\n- It's social (you need 4 people — built-in accountability)\n- It's strategic (your brain actually has to work)\n- It's tactile (real tiles, real table, real sounds)\n- It's repeatable (you'll want to play every week)\n\nMost hobbies fade after a month. Mahjong players measure their time in years.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { theme: "light", label: "PRO TIP", headline: "The Secret to a Great Game Night", subtitle: "It was never about the game.", img: "36-ig-pro-tip-10.png", caption: `Good snacks. Good drinks. Good people.\n\nThat's it. That's the whole formula.\n\nMahjong just gives you the structure. Something to do with your hands while you catch up on each other's lives. A reason to keep showing up, week after week.\n\nThe game is fun. The company is the point.\n\nLearn how to host your first Mahj night — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "DID YOU KNOW", headline: "Mahjong Has Been Bringing People Together for Over 100 Years", subtitle: "Your turn.", img: "37-ig-did-you-know-11.png", caption: `Mahjong arrived in America in the 1920s. For over a century, it's been the centerpiece of game nights, friendships, and communities.\n\nGrandmothers taught their daughters. Friends taught friends. Strangers became family around the table.\n\nThe game evolves every year (new hands, new cards), but the tradition stays the same: 4 people, 1 table, and a few hours of genuine connection.\n\nYour chapter starts now. Download MAHJ free — download MAHJ free — link in bio.` },
+  0 // end of archived posts
+];
+
+const ttPosts = [
+  { theme: "dark", label: "DID YOU KNOW", headline: "Mahjong Night Is the New Girls' Night", subtitle: "4 players. 1 table. zero screens.", img: "tt-01-did-you-know-1.png", caption: `No reservations. No overpriced drinks. No trying to talk over loud music. Just snacks, tiles, and actual conversation.\n\nMahjong night is the weekly tradition you didn't know you needed. 4 friends, one table, and a game that's equal parts strategy and trash talk.\n\nThe best part? You can learn everything you need in a week. Download MAHJ free — download MAHJ free — link in bio.` },
+  { theme: "light", label: "PRO TIP", headline: "Start a Mahj Group", subtitle: "You just need 3 friends and one text message", img: "tt-02-pro-tip-2.png", caption: `Here's the secret: nobody in your group needs to already know how to play.\n\nThe best Mahjong groups all started the same way — someone sent a text, 3 people said yes, and they learned together.\n\nMAHJ teaches all 4 of you from scratch. Free lessons, no experience needed. Send the text tonight — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "QUICK QUIZ", headline: "What's the Charleston?", subtitle: "Wrong answers welcome. Real answer in comments.", img: "tt-03-quick-quiz-3.png", caption: `No, it's not a dance (well, not in this context).\n\nThe Charleston is a tile-trading ritual that happens BEFORE the game even starts. You pass tiles you don't want and hopefully get ones you need. Right, Across, Left — then back again.\n\nIt's unique to American Mahjong and it's honestly one of the most fun parts.\n\nLearn the full Charleston in Module 4 — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "DID YOU KNOW", headline: "You Can Learn Mahjong in One Afternoon", subtitle: "not months. not years. one afternoon.", img: "tt-04-did-you-know-4.png", caption: `The #1 thing that stops people from trying Mahjong: "it looks too complicated."\n\nHere's the truth — the basics take about an hour. Recognizing the tiles takes 20 minutes. Understanding the flow of the game takes one read-through.\n\nWill you be great on day one? No. Will you be able to sit down and play a real game? Absolutely.\n\nStop overthinking it. Start learning — download MAHJ free — link in bio.` },
+  { theme: "light", label: "PRO TIP", headline: "Ditch the Screen", subtitle: "The best nights happen around a table", img: "tt-05-pro-tip-5.png", caption: `When's the last time you spent 2 hours with friends without anyone checking their phone?\n\nThat's what Mahjong does. Your hands are literally full of tiles. You're focused. You're laughing. You're present.\n\nIt's not just a game — it's the excuse to actually be in the room with your people.\n\nLearn how to play — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "QUICK QUIZ", headline: "How Many Tiles in a Set?", subtitle: "Take a guess. Answer in comments.", img: "tt-06-quick-quiz-6.png", caption: `If you guessed 152, you nailed it.\n\n3 suits x 9 tiles x 4 copies = 108\n4 Winds x 4 = 16\n3 Dragons x 4 = 12\n8 Flowers = 8\n8 Jokers = 8\nTotal: 152\n\nSounds like a lot? Module 1 teaches you to recognize every single one in about 20 minutes. Seriously.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "DID YOU KNOW", headline: "Mahjong Is the Fastest Growing Hobby for Women 20-45", subtitle: "and new groups are forming everywhere", img: "tt-07-did-you-know-7.png", caption: `It's not your grandma's game anymore (well, she can play too).\n\nWomen everywhere are picking up American Mahjong — not because it's trendy, but because it gives them something real. A weekly night with friends. A skill that actually challenges your brain. A reason to put the phone down.\n\nYour city probably has a group starting right now. Or you could be the one to start it.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { theme: "light", label: "PRO TIP", headline: "Host Your First Game Night", subtitle: "It's easier than you think", img: "tt-08-pro-tip-8.png", caption: `What you need:\n- A Mahjong set ($25-40 on Amazon)\n- 4 people\n- Snacks (non-negotiable)\n- The MAHJ cheat sheet printed out (free at welcome2mahj.com/cheatsheet)\n\nWhat you DON'T need:\n- Experience\n- A big space\n- Permission from anyone\n\nThat's it. Pick a night. Make it weekly. You'll wonder why you didn't start sooner.` },
+  { theme: "dark", label: "DID YOU KNOW", headline: "Mahjong Has Its Own Language", subtitle: "Pung. Kong. Charleston. Exposure. Dead hand.", img: "tt-09-did-you-know-9.png", caption: `"Things Mahjong players say that sound unhinged out of context:"\n\n- Crack my wall\n- I need a flower\n- Who's dead?\n- Give me your winds\n- I'm exposed\n\nDon't worry — it all makes sense once you play. The MAHJ glossary has every term you'll hear at the table.\n\nDownload MAHJ free — download MAHJ free — link in bio.` },
+  { theme: "dark", label: "QUICK QUIZ", headline: "Is Mahjong Hard to Learn?", subtitle: "Honest answer in the caption", img: "tt-10-quick-quiz-10.png", caption: `Honest answer: the basics are easy. Mastery takes a lifetime.\n\nThat's what makes it such a good hobby — you can play your first real game within a week, but you'll still be learning new strategy years later.\n\nIt's like chess, poker, and a social club had a baby. And it happens around a real table with real people.\n\nReady to start? Download MAHJ free — download MAHJ free — link in bio.` },
+];
+
+const twPosts = [
+  { theme: "twitter", label: "TWEET", headline: "the hobby pitch", subtitle: "", caption: `The best hobby I've picked up as an adult:\n\n- No screen required\n- Forces you to be present\n- Strategic enough to challenge your brain\n- Social enough to keep you coming back\n- You can learn the basics in one afternoon\n\nAmerican Mahjong. Seriously. https://apps.apple.com/us/app/mahj-learn-american-mahjong/id6762031478\n\n#mahjong #newhobby #gamenight` },
+  { theme: "twitter", label: "TWEET", headline: "the group chat text", subtitle: "", caption: `The text that changes everything:\n\n"Want to learn Mahjong with me?"\n\nThat's it. That's how every Mahj group starts. Nobody waits until they already know how to play. You learn together.\n\n#mahjong #gamenight #irl` },
+  { theme: "twitter", label: "TWEET", headline: "hot take", subtitle: "", caption: `Hot take: Mahjong night > wine night\n\nYou still get the wine. But you also get strategy, trash talk, and nobody checks their phone because their hands are full of tiles.\n\n#mahjong #gamenight #fridaynight` },
+  { theme: "twitter", label: "TWEET", headline: "things mahj players say", subtitle: "", caption: `Things Mahjong players say that sound absolutely unhinged out of context:\n\n- "Crack my wall"\n- "I need a flower"\n- "Who's dead?"\n- "Give me your winds"\n- "I'm exposed"\n- "I'm picking from the butt"\n\nThis game is wild. And I love it.\n\n#mahjong #americanmahjong #mahj` },
+  { theme: "twitter", label: "TWEET", headline: "the screen-free angle", subtitle: "", caption: `When's the last time you spent 2 hours with friends and nobody checked their phone once?\n\nThat's every Mahjong night. Your hands are literally full of tiles. You can't scroll even if you wanted to.\n\n#mahjong #touchgrass #gamenight` },
+  { theme: "twitter", label: "TWEET", headline: "myth busting", subtitle: "", caption: `"Mahjong is for old people"\n\nMahjong is for people who want:\n- A weekly reason to see friends\n- A game that takes 5 minutes to learn and years to master\n- An excuse to eat snacks at a table\n- To use their brain instead of their phone\n\nThat's... everyone?\n\n#mahjong #newhobby #irl` },
+  { theme: "twitter", label: "THREAD", headline: "learn in a week thread", subtitle: "Thread (1/5)", caption: `Thread: How to go from "what is Mahjong" to playing your first real game in 7 days\n\n1/5: Day 1-2 — Learn the tiles. There are 152 of them across suits (Bam, Crak, Dot), Winds, Dragons, Flowers, and Jokers. Takes about 20 minutes with the right tool.\n\n2/5: Day 3 — Learn the Charleston. Before play begins, you trade tiles with other players. Right, Across, Left, then back. It's unique to American Mahjong and honestly the most fun part.\n\n3/5: Day 4-5 — Learn calling, jokers, and basic strategy. When can you take someone's discard? When can you use a Joker? What hands should you aim for?\n\n4/5: Day 6 — Read through a full game walkthrough. Understand the flow from setup to scoring. Print a cheat sheet.\n\n5/5: Day 7 — Play. You'll be slow. You'll make mistakes. You'll check the cheat sheet every 30 seconds. And you'll have a blast.\n\nFree lessons at https://apps.apple.com/us/app/mahj-learn-american-mahjong/id6762031478\n\n#mahjong #learnmahjong #americanmahjong #gamenight` },
+  { theme: "twitter", label: "TWEET", headline: "the dare", subtitle: "", caption: `I dare you to learn one new thing this month. Not "save a tutorial." Actually learn it.\n\nAmerican Mahjong. One week. Free lessons.\n\nhttps://apps.apple.com/us/app/mahj-learn-american-mahjong/id6762031478\n\n#mahjong #newhobby #learnsomethingnew` },
+  { theme: "twitter", label: "TWEET", headline: "the 100-year tradition", subtitle: "", caption: `Mahjong has been bringing people together around a table since the 1920s.\n\n100 years. No wifi required. No updates. No subscription.\n\nJust 4 people, 152 tiles, and a few hours of being fully present with each other.\n\n#mahjong #community #irl` },
+  { theme: "twitter", label: "TWEET", headline: "hobby comparison", subtitle: "", caption: `Hobbies I've tried:\n\n- Running: quit after 3 weeks\n- Book club: quit after 2 months\n- Painting: quit after 1 class\n- Mahjong: going on 2 years, play every week, canceling plans if it conflicts\n\nSome hobbies stick. This one sticks.\n\n#mahjong #newhobby #adulthobbies` },
+  { theme: "twitter", label: "TWEET", headline: "friday night", subtitle: "", caption: `Friday night options:\n\n1. Scroll on the couch (free, lonely)\n2. Go out ($$$, loud, tired by 10pm)\n3. Mahjong night (snacks, friends, trash talk, no hangover)\n\nOption 3 wins. Every time.\n\n#mahjong #fridaynight #gamenight` },
+  { theme: "twitter", label: "TWEET", headline: "quick quiz", subtitle: "", caption: `Quick quiz: Can you use a Joker to complete a pair in American Mahjong?\n\nReply with your answer before reading below.\n\n.\n.\n.\n\nAnswer: No. Never. Jokers only work in groups of 3+. This is the #1 rule beginners get wrong.\n\n#mahjong #americanmahjong #mahj` },
+  { theme: "twitter", label: "TWEET", headline: "the confession", subtitle: "", caption: `Confession: I built an entire app because I was too embarrassed to show up to Mahjong night unprepared.\n\n15 lessons. Printable cheat sheet. Interactive drills.\n\nNow nobody has an excuse.\n\nhttps://apps.apple.com/us/app/mahj-learn-american-mahjong/id6762031478\n\n#mahjong #learnmahjong #gamenight` },
+  { theme: "twitter", label: "TWEET", headline: "the invitation", subtitle: "", caption: `You don't need to be:\n- Old\n- Asian\n- "Good at games"\n- Invited by someone\n\nYou just need to be willing to sit down, learn something new, and spend time with actual humans around an actual table.\n\nThat's Mahjong. Pull up a chair.\n\n#mahjong #newhobby #community` },
+  { theme: "twitter", label: "TWEET", headline: "engagement bait (good kind)", subtitle: "", caption: `Drop your city if you need a 4th player for Mahjong.\n\nLet's see how many groups we can start in the replies.\n\n#mahjong #americanmahjong #gamenight #irl` },
+];
+
+const rdPosts = [
+  { theme: "reddit", label: "r/Hobbies", headline: "I picked up American Mahjong 2 years ago and it's the best hobby decision I've made", subtitle: "Long post — but if you're looking for a new hobby, read this", caption: `I've tried a lot of hobbies as an adult. Running, painting, book clubs, cooking classes. Most lasted a few weeks.\n\nTwo years ago a friend convinced me to try American Mahjong. I was skeptical — I figured it was complicated, old-fashioned, and not for me.\n\nI was wrong about all three.\n\nHere's what makes it different from other hobbies:\n\n1. It's inherently social. You need exactly 4 players, so it forces you to actually coordinate and show up. Built-in accountability.\n\n2. It's easy to start, hard to master. The basics take an afternoon. But the strategy goes deep — reading other players' discards, knowing when to fold, managing risk. Two years in and I'm still learning.\n\n3. It's tactile. Real tiles. Real table. No screens. Your hands are busy, your brain is engaged, and you can't scroll even if you wanted to.\n\n4. It creates a ritual. We play every Thursday. It's the thing I protect on my calendar. The consistency is what makes it stick.\n\n5. It's cheap. A set costs $25-40. No ongoing fees. No equipment upgrades.\n\nIf you're looking for something new, I'd honestly recommend giving it a try. There's a free learning app called MAHJ (welcome2mahj.com) that takes you from zero to your first game. You don't need to know anyone who plays — just find 3 people willing to learn with you.\n\nHappy to answer any questions about getting started.` },
+  { theme: "reddit", label: "r/boardgames", headline: "American Mahjong is the most underrated game in this sub", subtitle: "", caption: `I know Mahjong gets mentioned here occasionally, but it's almost always the Riichi/Japanese version. American Mahjong deserves its own spotlight.\n\nWhat makes it different:\n- The NMJL card changes every year, so the meta is always fresh\n- The Charleston (a pre-game tile trading phase) adds a whole strategic layer\n- 8 Jokers as wild cards create interesting risk/reward decisions\n- It's purely 4-player, which makes scheduling manageable\n\nThe barrier to entry is lower than people think. You can learn the basics in a single sitting. The hard part is finding 3 other people — but honestly, most groups start with 4 beginners learning together.\n\nIf anyone's curious, there's a solid free web app at welcome2mahj.com that walks through everything from tile recognition to full game strategy. No account needed, no ads.\n\nAnyone else here play American Mahj? What's your group setup like?` },
+  { theme: "reddit", label: "r/socialskills", headline: "If you're struggling to maintain friendships as an adult, start a game night", subtitle: "", caption: `This might sound overly simple, but hear me out.\n\nThe reason adult friendships fade isn't because people stop caring. It's because there's no structure. In school you had classes. At work you have meetings. But friendships? You're just supposed to... text people and hope it happens?\n\nA recurring game night fixes this. It puts friendship on the calendar. Same night, same people, same activity. You don't have to plan it every time.\n\nMy group plays American Mahjong every week. We started as acquaintances. Now we're genuinely close friends. The game gives us something to do together, but the real value is the conversation that happens around it.\n\nYou don't need to play Mahjong specifically — any game works. But Mahjong is great because it's exactly 4 players (small, manageable), it takes about 2 hours (not all night), and it's engaging enough that you're not just sitting there making awkward small talk.\n\nGet 3 friends. Pick a night. Protect it. That's the whole formula.` },
+  { theme: "reddit", label: "r/AskWomenOver30", headline: "Started a Mahjong group 6 months ago — it's become the best part of my week", subtitle: "", caption: `I'm 34 and was feeling that classic "I never see my friends anymore" thing. We'd text "we should hang out!" and then nothing would happen for weeks.\n\nSix months ago I texted three friends: "Want to learn Mahjong with me? None of us need to know how to play."\n\nAll three said yes.\n\nWe learned together using a free app (welcome2mahj.com) and scheduled our first game night. We were terrible. We checked the cheat sheet constantly. It took us 3 hours to finish one game.\n\nBut we laughed the entire time. And we immediately scheduled the next one.\n\nNow it's every Tuesday. It's non-negotiable. We have snacks, we catch up on each other's weeks, and we play 2-3 games. Nobody cancels because it's genuinely the highlight of everyone's week.\n\nIf you're craving regular in-person time with friends, I can't recommend this enough. You don't need to be "good at games." You just need 3 other people willing to try something new.` },
+  { theme: "reddit", label: "r/mahjong", headline: "Built a free learning app for American Mahjong beginners — feedback welcome", subtitle: "", caption: `Hey everyone! I built a free web app called MAHJ specifically for people who want to learn American Mahjong from scratch.\n\nIt has 14 interactive modules covering:\n- Tile recognition (with drills)\n- How to read the NMJL card notation\n- Setup, dealing, and the Charleston\n- Joker rules and calling\n- Hand strategy and defense\n- Scoring calculator\n- Printable cheat sheet\n- Daily practice puzzles\n\nNo account required. No ads. No data collection. Works on desktop and mobile, and there's an iOS app too.\n\nI built it because I was completely lost at my first game and couldn't find a good beginner resource that actually walked through everything step by step.\n\nWould love any feedback from experienced players — especially on the strategy and defense modules. Is the advice solid? Anything I'm missing?\n\nwelcome2mahj.com` },
+  { theme: "reddit", label: "r/makingfriends", headline: "How I went from 'I have no friends in this city' to a weekly game night in 2 months", subtitle: "", caption: `Moved to a new city last year. Knew nobody. The usual advice is "join clubs" or "go to meetups" — and sure, those work, but they felt exhausting.\n\nHere's what actually worked for me: I posted in a local Facebook group asking if anyone wanted to learn American Mahjong. I was upfront — I didn't know how to play either. I just needed 3 other people willing to learn.\n\n4 people responded. We picked a date. We found some free lessons online and all learned the basics beforehand. Our first game was hilariously bad.\n\nTwo months later, it's a weekly thing. These people went from strangers to genuine friends. We have inside jokes. We have a group chat. We've hung out outside of game night.\n\nMahjong was just the excuse. The real thing was having a consistent, low-pressure reason to be in the same room as other humans every week.\n\n(If anyone wants the resource we used, happy to share in the comments.)` },
+  { theme: "reddit", label: "r/CasualConversation", headline: "Anyone else picked up a hobby that completely surprised them?", subtitle: "", caption: `I never in a million years thought I'd be into Mahjong. Like, it wasn't even on my radar.\n\nA friend dragged me to a game night, I was totally lost, went home and taught myself the basics online, and now I play every single week. It's been over a year.\n\nWhat surprised me most isn't the game itself — it's what it does for my social life. Having a weekly standing commitment with friends is something I didn't realize I was missing.\n\nAnyone else have a hobby they never expected to love?` },
+  { theme: "reddit", label: "r/Hobbies", headline: "Hobby starter guide: American Mahjong", subtitle: "Everything you need to know to go from zero to your first game", caption: `Seeing a lot of "I need a new hobby" posts, so here's a starter guide.\n\nWhat is it?\nAmerican Mahjong — a 4-player tile game with strategy, pattern matching, and a healthy dose of luck. Played with 152 tiles.\n\nWhy it's great as an adult hobby:\n- Social by design (exactly 4 players)\n- Easy to learn, deep strategy over time\n- No screens during play\n- Cheap to start ($25-40 for a set)\n- Creates a recurring weekly ritual\n\nHow to start:\n1. Find 3 people willing to learn (nobody needs to already know)\n2. Learn the basics together — there are great free resources online\n3. Buy a set on Amazon ($25-40)\n4. Pick a weekly night and protect it\n\nHow long to learn?\nBasics: one afternoon. Comfortable play: ~3 sessions. Strategy: months to years (that's the fun part).\n\nAny questions? Happy to help. I can share specific resources in the comments if anyone wants them.` },
+];
+
+const fbPosts = [
+  { theme: "facebook", label: "PERSONAL POST", headline: "Looking for a new hobby? Let me save you some time.", subtitle: "", caption: `I've been playing American Mahjong for a while now and I have to say — it's the best hobby I've picked up as an adult.\n\nHere's why:\n- It gets me off my phone and around a table with actual humans\n- It's strategic enough to keep my brain engaged\n- It gives me a weekly standing date with friends that nobody cancels\n- The learning curve is real but manageable — I learned the basics in an afternoon\n\nIf you've ever been curious, there's a free app that teaches everything from scratch: welcome2mahj.com\n\nNo experience needed. No account required. Just 15 lessons that take you from "what are all these tiles?" to playing your first real game.\n\nWho wants to start a group? I need 3 more people!` },
+  { theme: "facebook", label: "GROUP POST", headline: "New to American Mahjong — resource that helped me", subtitle: "For: American Mahjong groups", caption: `Hi everyone! I'm relatively new to American Mahjong and wanted to share a resource that really helped me get started.\n\nIt's a free web app called MAHJ (welcome2mahj.com) that walks through everything from tile recognition to the Charleston to scoring. It has interactive drills, a printable cheat sheet, and even a daily puzzle.\n\nI went from knowing absolutely nothing to feeling confident enough to join a group in about a week. The cheat sheet alone was a lifesaver at my first game night.\n\nHope this helps anyone else who's just starting out!` },
+  { theme: "facebook", label: "GROUP POST", headline: "How to start a Mahjong group from scratch", subtitle: "For: Local community groups, mom groups, hobby groups", caption: `Has anyone here ever thought about learning Mahjong?\n\nI started a group a few months ago and it's honestly become the highlight of my week. Here's how easy it was:\n\n1. I texted 3 friends: "Want to learn Mahjong together?"\n2. We all used this free app to learn the basics: welcome2mahj.com\n3. We bought a set on Amazon ($30)\n4. We picked a night and made it weekly\n\nThat's it. None of us knew how to play before. We learned together, we were terrible together, and now we're hooked.\n\nIf anyone wants to start a local group, I'm happy to share tips!` },
+  { theme: "facebook", label: "SHAREABLE", headline: "Tag 3 friends you'd start a Mahjong group with", subtitle: "", caption: `You need exactly 4 people for Mahjong. You're one of them.\n\nTag 3 friends and see what happens.\n\nNo experience needed. You learn together. That's literally how every Mahjong group starts.\n\nFree lessons at welcome2mahj.com` },
+  { theme: "facebook", label: "PERSONAL POST", headline: "The case for a weekly game night", subtitle: "", caption: `Can I be honest? The hardest part of being an adult isn't the responsibilities. It's maintaining friendships.\n\nEveryone's busy. Nobody makes plans. And when they do, someone cancels.\n\nThe fix that actually worked for me: a weekly Mahjong night.\n\nSame night. Same 4 people. Same table. Every week.\n\nNobody cancels Mahj night. Because Mahj night is the best night of the week.\n\nIf this sounds like something you need, start here: welcome2mahj.com` },
+  { theme: "facebook", label: "GROUP POST", headline: "Free printable Mahjong cheat sheet", subtitle: "For: Mahjong groups, game night groups", caption: `If anyone needs a quick reference for their next game, there's a free printable cheat sheet at welcome2mahj.com/cheatsheet\n\nIt covers:\n- Charleston pass order\n- Calling rules (when you can/can't)\n- Joker rules\n- Scoring and who pays what\n- Common mistakes to avoid\n- Table etiquette basics\n\nGreat for beginners to bring to game night!` },
+  { theme: "facebook", label: "EVENT", headline: "Starting a beginner Mahjong group!", subtitle: "Template for local events", caption: `Thinking about starting a Mahjong group!\n\nLooking for 3 other people who want to learn American Mahjong from scratch. No experience needed — we'll learn together.\n\nPlan:\n- Everyone learns the basics beforehand using this free app: welcome2mahj.com\n- We meet up weekly (day/time TBD based on who's interested)\n- Snacks provided (non-negotiable)\n- All you need to bring: yourself and a willingness to learn something new\n\nComment or DM if you're interested! Need exactly 3 more people.` },
+  { theme: "facebook", label: "SHAREABLE", headline: "Mahjong night vs. going out", subtitle: "", caption: `Going out:\n- Reservations\n- Overpriced drinks\n- Can't hear each other talk\n- Tired by 10pm\n- $80+ gone\n\nMahjong night:\n- Your living room\n- Snacks from Trader Joe's\n- Actual conversation\n- Energized by 10pm\n- $0 spent\n\nI know which one I'm choosing every time.\n\nLearn how to host your own: welcome2mahj.com` },
+];
+
+const pinPosts = [
+  { theme: "pinterest", label: "PIN", headline: "How to Learn American Mahjong in One Week", subtitle: "Free step-by-step guide for complete beginners", caption: `Pin Title: How to Learn American Mahjong in One Week — Free Beginner Guide\n\nPin Description: Learn American Mahjong from scratch with this free, step-by-step guide. 14 interactive lessons covering tiles, the Charleston, jokers, strategy, scoring, and more. No experience needed. Perfect for starting a game night group with friends.\n\nLink to: welcome2mahj.com\n\nBoard: Learn American Mahjong` },
+  { theme: "pinterest", label: "PIN", headline: "The Ultimate Game Night: How to Host a Mahjong Night", subtitle: "Everything you need for your first game", caption: `Pin Title: How to Host Your First American Mahjong Night — Complete Guide\n\nPin Description: Everything you need to host an American Mahjong game night: what to buy, how to learn, what snacks to serve, and a free printable cheat sheet to bring to the table. The perfect weekly ritual for friend groups.\n\nLink to: welcome2mahj.com/cheatsheet\n\nBoard: Game Night Ideas` },
+  { theme: "pinterest", label: "PIN", headline: "Free Printable Mahjong Cheat Sheet", subtitle: "Bring this to your first game night", caption: `Pin Title: Free Printable American Mahjong Cheat Sheet — Beginner Reference Card\n\nPin Description: Download and print this free American Mahjong cheat sheet. Covers Charleston pass order, calling rules, joker rules, scoring, common mistakes, and table etiquette. Perfect to bring to your first game night.\n\nLink to: welcome2mahj.com/cheatsheet\n\nBoard: Learn American Mahjong` },
+  { theme: "pinterest", label: "PIN", headline: "152 Mahjong Tiles Explained", subtitle: "Visual guide to every tile in the set", caption: `Pin Title: All 152 American Mahjong Tiles Explained — Visual Guide\n\nPin Description: Learn to recognize all 152 tiles in an American Mahjong set. 3 suits (Bam, Crak, Dot), Winds, Dragons, Flowers, Seasons, and Jokers. Interactive drills help you learn them in about 20 minutes.\n\nLink to: welcome2mahj.com\n\nBoard: Learn American Mahjong` },
+  { theme: "pinterest", label: "PIN", headline: "5 Steps to Start a Mahjong Group", subtitle: "No experience needed", caption: `Pin Title: How to Start a Mahjong Group From Scratch — 5 Easy Steps\n\nPin Description:\n1. Text 3 friends\n2. Learn the basics together (free at welcome2mahj.com)\n3. Buy a set ($25-40 on Amazon)\n4. Print the free cheat sheet\n5. Pick a weekly night\n\nThe best hobby for adults who want real in-person social time.\n\nLink to: welcome2mahj.com\n\nBoard: New Hobbies for Adults` },
+  { theme: "pinterest", label: "PIN", headline: "Best New Hobbies for Adults", subtitle: "Why American Mahjong is trending", caption: `Pin Title: Best New Hobbies for Adults — Why American Mahjong Is Trending\n\nPin Description: Looking for a new hobby? American Mahjong is the fastest-growing game for adults. It's social (4 players), strategic, screen-free, and creates a weekly ritual with friends. Learn for free at welcome2mahj.com.\n\nLink to: welcome2mahj.com\n\nBoard: New Hobbies for Adults` },
+  { theme: "pinterest", label: "PIN", headline: "The Charleston Explained", subtitle: "American Mahjong's unique tile-trading ritual", caption: `Pin Title: What Is the Charleston in American Mahjong? — Beginner Guide\n\nPin Description: The Charleston is a tile-trading phase unique to American Mahjong. Pass tiles Right, Across, Left — then back Left, Across, Right — plus an optional courtesy pass. Learn with interactive drills at welcome2mahj.com.\n\nLink to: welcome2mahj.com\n\nBoard: Learn American Mahjong` },
+  { theme: "pinterest", label: "PIN", headline: "Game Night Essentials Checklist", subtitle: "Everything you need for Mahjong night", caption: `Pin Title: Mahjong Game Night Essentials — What to Buy Checklist\n\nPin Description: Everything you need for your first American Mahjong night:\n- Mahjong set ($25-40 on Amazon)\n- NMJL card ($14 from nationalmahjonggleague.org)\n- Printed cheat sheet (free at welcome2mahj.com/cheatsheet)\n- Snacks and drinks\n- 3 friends\n\nLink to: welcome2mahj.com\n\nBoard: Game Night Ideas` },
+];
+
+// ══════════ RENDER ══════════
+
+// Tile characters for decorations
+const tileChars = ['J','N','五','喜','北','◎'];
+
+const igHashtags = '\\n\\n#americanmahjong #mahjong #mahj #newhobby #gamenight #learnmahjong #mahjonglife #charleston #mahjongtiles #learnsomethingnew #irl #community #girlsnight #adulthobbies';
+
+function tilesHTML() {
+  return '';
+}
+
+function addIGHashtags(caption) {
+  return caption + igHashtags;
+}
+
+function renderIGPost(post, idx) {
+  const id = 'cap-' + post.img.replace(/[^a-z0-9]/gi, '-');
+  const postedClass = post.posted ? ' posted' : '';
+  const num = idx + 1;
+  const captionWithTags = addIGHashtags(post.caption);
+  return `
+    <div class="post-card${postedClass}" style="position:relative;">
+
+      <img src="${post.img}" alt="${post.title}" loading="lazy" />
+      <div class="post-caption">
+        <span class="post-label label-instagram">Instagram</span>
+        <div class="caption-title">${post.title}</div>
+        <div class="caption-text collapsed" id="${id}">${captionWithTags}</div>
+        <button class="read-more" onclick="toggleCaption('${id}', this)">Read more</button>
+        <button class="copy-btn" onclick="copyText(this)">Copy caption</button>
+      </div>
+    </div>`;
+}
+
+function renderMockPost(post, idx, prefix, labelClass, labelText, mockClass) {
+  const id = prefix + '-' + idx;
+  const num = idx + 1;
+  return `
+    <div class="post-card">
+      <div class="mock-post ${mockClass}">
+        ${tilesHTML()}
+
+        <div class="mock-label">${post.label}</div>
+        <div class="mock-headline">${post.headline}</div>
+        ${post.subtitle ? `<div class="mock-subtitle">${post.subtitle}</div>` : ''}
+        <div class="mock-footer">welcome2mahj.com</div>
+      </div>
+      <div class="post-caption">
+        <span class="post-label ${labelClass}">${labelText}</span>
+        <div class="caption-title">${post.headline}</div>
+        <div class="caption-text collapsed" id="${id}">${post.caption}</div>
+        <button class="read-more" onclick="toggleCaption('${id}', this)">Read more</button>
+        <button class="copy-btn" onclick="copyText(this)">Copy caption</button>
+      </div>
+    </div>`;
+}
+
+// ══════════ MERGED INSTAGRAM LIST ══════════
+// Interleave community posts with launch posts in a good posting order:
+// Lead with the welcome (already posted), then alternate community hooks with feature/module posts
+
+// Actual colors of each original launch post:
+// 01-welcome: DARK    02-homepage: BEIGE    03-tiles: DARK
+// 04-charleston: BEIGE 05-cheatsheet: DARK  06-calculator: BEIGE
+// 07-daily-puzzle: DARK 08-defense: BEIGE   09-free-app: BEIGE
+// 10-module-00: BEIGE  24-did-you-know: DARK 25-tip: BEIGE  26-question: DARK
+// Community posts: 27,29,31,33,35,37=DARK  28,30,32,34,36,38=BEIGE
+
+// Mixed order: community + features + modules interleaved
+// Always alternating D(dark), L(light/beige)
+// Pattern: community hook, then lesson/feature, then module, repeat
+const igMerged = [
+  // 1  D — POSTED
+  igPosts[0],                                 // 01 Welcome to MAHJ (DARK)
+  // 2  L — community
+  { ...igCommunityPosts[1], _mock: true },   // 28 Nobody Learns Mahjong Alone (BEIGE)
+  // 3  D — feature
+  igPosts[2],                                 // 03 152 Tiles (DARK)
+  // 4  L — module
+  igPosts[10],                                // 11 Module 1: Tile Trainer (BEIGE)
+  // 5  D — community
+  { ...igCommunityPosts[0], _mock: true },   // 27 Your Next Hobby Is Waiting (DARK)
+  // 6  L — feature
+  igPosts[1],                                 // 02 15 Lessons (BEIGE)
+  // 7  D — module
+  igPosts[11],                                // 12 Module 2: Reading the Card (DARK)
+  // 8  L — community
+  { ...igCommunityPosts[3], _mock: true },   // 30 Remember When We Used to Hang Out (BEIGE)
+  // 9  D — feature
+  igPosts[4],                                 // 05 Cheat Sheet (DARK)
+  // 10 L — module
+  igPosts[12],                                // 13 Module 3: Setup & Dealing (BEIGE)
+  // 11 D — community
+  { ...igCommunityPosts[2], _mock: true },   // 29 Groups Popping Up Everywhere (DARK)
+  // 12 L — feature
+  igPosts[3],                                 // 04 Charleston (BEIGE)
+  // 13 D — module
+  igPosts[13],                                // 14 Module 4: The Charleston (DARK)
+  // 14 L — community
+  { ...igCommunityPosts[5], _mock: true },   // 32 First Mahj Night in 5 Steps (BEIGE)
+  // 15 D — feature
+  igPosts[6],                                 // 07 Daily Puzzle (DARK)
+  // 16 L — module
+  igPosts[14],                                // 15 Module 5: Jokers & Calling (BEIGE)
+  // 17 D — community
+  { ...igCommunityPosts[4], _mock: true },   // 31 You Don't Need to Be Invited (DARK)
+  // 18 L — feature
+  igPosts[5],                                 // 06 Scoring Calculator (BEIGE)
+  // 19 D — module
+  igPosts[15],                                // 16 Module 6: Hand Strategy (DARK)
+  // 20 L — community
+  { ...igCommunityPosts[7], _mock: true },   // 34 4 Strangers Became Best Friends (BEIGE)
+  // 21 D — feature
+  igPosts[23],                                // 24 Did You Know: 8 Jokers (DARK)
+  // 22 L — module
+  igPosts[16],                                // 17 Module 7: Defense (BEIGE)
+  // 23 D — community
+  { ...igCommunityPosts[6], _mock: true },   // 33 Phone Goes Face Down (DARK)
+  // 24 L — feature
+  igPosts[7],                                 // 08 Defense (BEIGE)
+  // 25 D — module
+  igPosts[17],                                // 18 Module 8: Table Etiquette (DARK)
+  // 26 L — community
+  { ...igCommunityPosts[9], _mock: true },   // 36 Secret to Great Game Night (BEIGE)
+  // 27 D — feature
+  igPosts[25],                                // 26 Quick Quiz: Joker in a Pair (DARK)
+  // 28 L — module
+  igPosts[18],                                // 19 Module 9: Scoring (BEIGE)
+  // 29 D — community
+  { ...igCommunityPosts[8], _mock: true },   // 35 Favorite Hobby Doesn't Exist Yet (DARK)
+  // 30 L — feature
+  igPosts[8],                                 // 09 Free App (BEIGE)
+  // 31 D — module
+  igPosts[19],                                // 20 Module 10: Common Mistakes (DARK)
+  // 32 L — community
+  { ...igCommunityPosts[11], _mock: true },  // 38 Stop Saying We Should Hang Out (BEIGE)
+  // 33 D — module
+  igPosts[20],                                // 21 Module 11: Glossary (DARK) — wait, glossary is BEIGE
+  // Actually let me just use the remaining ones
+  igPosts[24],                                // 25 Pro Tip (BEIGE)
+  // 34 D — community
+  { ...igCommunityPosts[10], _mock: true },  // 37 100 Years Together (DARK)
+  // 35 L — module
+  igPosts[9],                                 // 10 Module 0: Welcome (BEIGE)
+  // 36+ remaining modules
+  igPosts[20],                                // 21 Module 11: Glossary
+  igPosts[21],                                // 22 Module 12: Your First Full Game
+  igPosts[22],                                // 23 Module 13: Practice Hands
+];
+
+function renderIGMergedPost(post, idx) {
+  // Community posts now have img files — render as image posts
+  if (post._mock && post.img) {
+    const id = 'igm-' + idx;
+    const num = idx + 1;
+    const captionWithTags = addIGHashtags(post.caption);
+    return `
+    <div class="post-card" style="position:relative;">
+
+      <img src="${post.img}" alt="${post.headline}" loading="lazy" />
+      <div class="post-caption">
+        <span class="post-label label-instagram">Instagram</span>
+        <div class="caption-title">${post.headline}</div>
+        <div class="caption-text collapsed" id="${id}">${captionWithTags}</div>
+        <button class="read-more" onclick="toggleCaption('${id}', this)">Read more</button>
+        <button class="copy-btn" onclick="copyText(this)">Copy caption</button>
+      </div>
+    </div>`;
+  }
+  if (post._mock) {
+    return renderMockPost(post, idx, 'igm', 'label-instagram', 'Instagram', post.theme);
+  }
+  return renderIGPost(post, idx);
+}
+
+// Render TikTok posts with images
+function renderTTPost(post, idx) {
+  if (post.img) {
+    const id = 'tt-img-' + idx;
+    const num = idx + 1;
+    return `
+    <div class="post-card" style="position:relative;">
+
+      <img src="${post.img}" alt="${post.headline}" loading="lazy" />
+      <div class="post-caption">
+        <span class="post-label label-tiktok">TikTok</span>
+        <div class="caption-title">${post.headline}</div>
+        <div class="caption-text collapsed" id="${id}">${post.caption}</div>
+        <button class="read-more" onclick="toggleCaption('${id}', this)">Read more</button>
+        <button class="copy-btn" onclick="copyText(this)">Copy caption</button>
+      </div>
+    </div>`;
+  }
+  return renderMockPost(post, idx, 'tt', 'label-tiktok', 'TikTok', post.theme);
+}
+
+// ══════════ POPULATE ══════════
+
+const grids = {
+  'ig-all-grid-all': () => igMerged.map((p,i) => renderIGMergedPost(p,i)).join(''),
+  'ig-all-grid': () => igMerged.map((p,i) => renderIGMergedPost(p,i)).join(''),
+  'tt-grid-all': () => ttPosts.map((p,i) => renderTTPost(p,i)).join(''),
+  'tt-grid': () => ttPosts.map((p,i) => renderTTPost(p,i)).join(''),
+  'tw-grid-all': () => twPosts.map((p,i) => renderMockPost(p,i,'twa','label-twitter','X / Twitter','twitter')).join(''),
+  'tw-grid': () => twPosts.map((p,i) => renderMockPost(p,i,'tw','label-twitter','X / Twitter','twitter')).join(''),
+  'rd-grid-all': () => rdPosts.map((p,i) => renderMockPost(p,i,'rda','label-reddit','Reddit','reddit')).join(''),
+  'rd-grid': () => rdPosts.map((p,i) => renderMockPost(p,i,'rd','label-reddit','Reddit','reddit')).join(''),
+  'fb-grid-all': () => fbPosts.map((p,i) => renderMockPost(p,i,'fba','label-facebook','Facebook','facebook')).join(''),
+  'fb-grid': () => fbPosts.map((p,i) => renderMockPost(p,i,'fb','label-facebook','Facebook','facebook')).join(''),
+  'pin-grid-all': () => pinPosts.map((p,i) => renderMockPost(p,i,'pina','label-pinterest','Pinterest','pinterest')).join(''),
+  'pin-grid': () => pinPosts.map((p,i) => renderMockPost(p,i,'pin','label-pinterest','Pinterest','pinterest')).join(''),
+};
+
+Object.entries(grids).forEach(([id, fn]) => {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = fn();
+});
+
+// ══════════ INTERACTIONS ══════════
+
+function showTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function toggleCaption(id, btn) {
+  const el = document.getElementById(id);
+  el.classList.toggle('collapsed');
+  btn.textContent = el.classList.contains('collapsed') ? 'Read more' : 'Show less';
+}
+
+function copyText(btn) {
+  const card = btn.closest('.post-caption');
+  const text = card.querySelector('.caption-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.classList.add('copied');
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = 'Copy caption'; }, 2000);
+  });
+}
+
+function copyHashtags(el) {
+  const text = el.textContent.replace('Hashtags (click to copy):', '').replace('Click to copy', '').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const hint = el.querySelector('.copy-hint');
+    hint.textContent = 'Copied!';
+    setTimeout(() => { hint.textContent = 'Click to copy'; }, 2000);
+  });
+}
+</script>
+
+</body>
+</html>
