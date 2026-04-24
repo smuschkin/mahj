@@ -269,6 +269,14 @@ export default function Module9Scoring() {
             time</strong>. The higher value is already baked into the number on
             the card. Just use the printed number — don&apos;t double it again.
           </p>
+
+          <Callout variant="tip">
+            <strong>Why are Singles &amp; Pairs hands worth so much?</strong>{" "}
+            They can&apos;t use Jokers anywhere (no groups of 3+), and
+            they&apos;re always concealed — you have to draw every single tile
+            from the wall. That makes them the hardest hands on the card, so
+            the higher value reflects the difficulty.
+          </Callout>
         </LessonScreen>
 
         {/* ── 7. Dead hand ── */}
